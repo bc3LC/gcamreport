@@ -13,8 +13,8 @@ fillScaleSector
 \description{
 final filling color scale
 \dontrun{
- library(report);
- report::fillScaleSector
+ library(gcamreport);
+ gcamreport::fillScaleSector
 }
 }
 \keyword{datasets}

@@ -16,8 +16,8 @@ iea_capacity
 \description{
 iea 2019 capacity
 \dontrun{
- library(report);
- report::iea_capacity
+ library(gcamreport);
+ gcamreport::iea_capacity
 }
 }
 \keyword{datasets}

@@ -13,8 +13,8 @@ fig_dir
 \description{
 figures directory
 \dontrun{
- library(report);
- report::fig_dir
+ library(gcamreport);
+ gcamreport::fig_dir
 }
 }
 \keyword{datasets}

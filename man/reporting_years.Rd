@@ -13,8 +13,8 @@ reporting_years
 \description{
 reporting years
 \dontrun{
- library(report);
- report::reporting_years
+ library(gcamreport);
+ gcamreport::reporting_years
 }
 }
 \keyword{datasets}

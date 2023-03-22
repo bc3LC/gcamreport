@@ -13,8 +13,8 @@ long_columns
 \description{
 reporting columns
 \dontrun{
- library(report);
- report::long_columns
+ library(gcamreport);
+ gcamreport::long_columns
 }
 }
 \keyword{datasets}

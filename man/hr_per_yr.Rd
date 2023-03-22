@@ -13,8 +13,8 @@ hr_per_yr
 \description{
 units conversion
 \dontrun{
- library(report);
- report::hr_per_yr
+ library(gcamreport);
+ gcamreport::hr_per_yr
 }
 }
 \keyword{datasets}

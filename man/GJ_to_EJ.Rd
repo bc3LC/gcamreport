@@ -13,8 +13,8 @@ GJ_to_EJ
 \description{
 units conversion
 \dontrun{
- library(report);
- report::GJ_to_EJ
+ library(gcamreport);
+ gcamreport::GJ_to_EJ
 }
 }
 \keyword{datasets}

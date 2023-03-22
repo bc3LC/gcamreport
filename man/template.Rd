@@ -16,8 +16,8 @@ template
 \description{
 read in template
 \dontrun{
- library(report);
- report::template
+ library(gcamreport);
+ gcamreport::template
 }
 }
 \keyword{datasets}

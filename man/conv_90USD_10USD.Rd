@@ -13,8 +13,8 @@ conv_90USD_10USD
 \description{
 units conversion
 \dontrun{
- library(report);
- report::conv_90USD_10USD
+ library(gcamreport);
+ gcamreport::conv_90USD_10USD
 }
 }
 \keyword{datasets}

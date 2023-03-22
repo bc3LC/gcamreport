@@ -13,8 +13,8 @@ conv_C_CO2
 \description{
 units conversion
 \dontrun{
- library(report);
- report::conv_C_CO2
+ library(gcamreport);
+ gcamreport::conv_C_CO2
 }
 }
 \keyword{datasets}

@@ -16,8 +16,8 @@ transport_final_en_map
 \description{
 primary, secondary, final energy maps
 \dontrun{
- library(report);
- report::transport_final_en_map
+ library(gcamreport);
+ gcamreport::transport_final_en_map
 }
 }
 \keyword{datasets}

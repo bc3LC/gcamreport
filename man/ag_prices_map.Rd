@@ -16,8 +16,8 @@ ag_prices_map
 \description{
 ag maps
 \dontrun{
- library(report);
- report::ag_prices_map
+ library(gcamreport);
+ gcamreport::ag_prices_map
 }
 }
 \keyword{datasets}

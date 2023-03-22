@@ -13,8 +13,8 @@ map_dir
 \description{
 mapping directory
 \dontrun{
- library(report);
- report::map_dir
+ library(gcamreport);
+ gcamreport::map_dir
 }
 }
 \keyword{datasets}

@@ -13,8 +13,8 @@ vet_dir
 \description{
 vetting directory
 \dontrun{
- library(report);
- report::vet_dir
+ library(gcamreport);
+ gcamreport::vet_dir
 }
 }
 \keyword{datasets}

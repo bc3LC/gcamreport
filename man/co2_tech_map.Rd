@@ -16,8 +16,8 @@ co2_tech_map
 \description{
 emissions maps
 \dontrun{
- library(report);
- report::co2_tech_map
+ library(gcamreport);
+ gcamreport::co2_tech_map
 }
 }
 \keyword{datasets}

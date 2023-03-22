@@ -16,8 +16,8 @@ transport_en_service
 \description{
 energy services
 \dontrun{
- library(report);
- report::transport_en_service
+ library(gcamreport);
+ gcamreport::transport_en_service
 }
 }
 \keyword{datasets}

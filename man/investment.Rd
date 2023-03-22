@@ -16,8 +16,8 @@ investment
 \description{
 capital investment
 \dontrun{
- library(report);
- report::investment
+ library(gcamreport);
+ gcamreport::investment
 }
 }
 \keyword{datasets}

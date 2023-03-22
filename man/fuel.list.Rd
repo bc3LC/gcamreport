@@ -13,8 +13,8 @@ fuel.list
 \description{
 fuels list
 \dontrun{
- library(report);
- report::fuel.list
+ library(gcamreport);
+ gcamreport::fuel.list
 }
 }
 \keyword{datasets}

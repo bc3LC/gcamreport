@@ -13,8 +13,8 @@ state_names
 \description{
 state names
 \dontrun{
- library(report);
- report::state_names
+ library(gcamreport);
+ gcamreport::state_names
 }
 }
 \keyword{datasets}

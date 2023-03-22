@@ -16,8 +16,8 @@ CO2_market
 \description{
 new CO2 market
 \dontrun{
- library(report);
- report::CO2_market
+ library(gcamreport);
+ gcamreport::CO2_market
 }
 }
 \keyword{datasets}

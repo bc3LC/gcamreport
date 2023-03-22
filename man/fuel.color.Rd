@@ -13,8 +13,8 @@ fuel.color
 \description{
 fuels color
 \dontrun{
- library(report);
- report::fuel.color
+ library(gcamreport);
+ gcamreport::fuel.color
 }
 }
 \keyword{datasets}

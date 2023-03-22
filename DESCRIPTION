@@ -1,11 +1,11 @@
-Package: report
-Title: report
+Package: gcamreport
+Title: gcamreport
 Version: 0.1.0
-Authors@R: c(person("Zarrar", "Khan", email = "zarrar.khan@pnnl.gov", role = c("aut", "cre"),
-		   comment = c(ORCID ="0000-0002-8147-8553")))
-Description: Description of your R package report.
-URL: https://github.com/JGCRI/report
-BugReports: https://github.com/JGCRI/report/issues
+Authors@R: c(person("RodesBachs", "Claudia", email = "claudia.rodes@bc3research.org", role = c("aut", "cre"),
+		   comment = c(ORCID ="0000-0001-6696-7685")))
+Description: R package to produce standard IPCC reports from GCAM output.
+URL: https://github.com/JGCRI/gcamreport
+BugReports: https://github.com/JGCRI/gcamreport/issues
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
 Encoding: UTF-8

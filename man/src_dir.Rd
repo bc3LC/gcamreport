@@ -13,8 +13,8 @@ src_dir
 \description{
 source directory
 \dontrun{
- library(report);
- report::src_dir
+ library(gcamreport);
+ gcamreport::src_dir
 }
 }
 \keyword{datasets}

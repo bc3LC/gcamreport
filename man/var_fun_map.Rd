@@ -16,8 +16,8 @@ var_fun_map
 \description{
 mapping between variables, functions to load them, dependent variables, and availables verifications
 \dontrun{
- library(report);
- report::var_fun_map
+ library(gcamreport);
+ gcamreport::var_fun_map
 }
 }
 \keyword{datasets}

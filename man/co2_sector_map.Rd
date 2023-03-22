@@ -16,8 +16,8 @@ co2_sector_map
 \description{
 emissions maps
 \dontrun{
- library(report);
- report::co2_sector_map
+ library(gcamreport);
+ gcamreport::co2_sector_map
 }
 }
 \keyword{datasets}

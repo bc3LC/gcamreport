@@ -13,8 +13,8 @@ conv_million_billion
 \description{
 units conversion
 \dontrun{
- library(report);
- report::conv_million_billion
+ library(gcamreport);
+ gcamreport::conv_million_billion
 }
 }
 \keyword{datasets}

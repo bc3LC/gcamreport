@@ -13,8 +13,8 @@ fillScaleFuel
 \description{
 fuels color to fill
 \dontrun{
- library(report);
- report::fillScaleFuel
+ library(gcamreport);
+ gcamreport::fillScaleFuel
 }
 }
 \keyword{datasets}

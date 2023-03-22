@@ -13,8 +13,8 @@ tech.color
 \description{
 techology color
 \dontrun{
- library(report);
- report::tech.color
+ library(gcamreport);
+ gcamreport::tech.color
 }
 }
 \keyword{datasets}

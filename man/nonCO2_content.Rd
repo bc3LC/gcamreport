@@ -16,8 +16,8 @@ nonCO2_content
 \description{
 non CO2 content
 \dontrun{
- library(report);
- report::nonCO2_content
+ library(gcamreport);
+ gcamreport::nonCO2_content
 }
 }
 \keyword{datasets}

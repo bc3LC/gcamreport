@@ -16,8 +16,8 @@ ag_demand_map
 \description{
 ag maps
 \dontrun{
- library(report);
- report::ag_demand_map
+ library(gcamreport);
+ gcamreport::ag_demand_map
 }
 }
 \keyword{datasets}

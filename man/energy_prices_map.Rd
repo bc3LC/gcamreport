@@ -16,8 +16,8 @@ energy_prices_map
 \description{
 primary, secondary, final energy maps
 \dontrun{
- library(report);
- report::energy_prices_map
+ library(gcamreport);
+ gcamreport::energy_prices_map
 }
 }
 \keyword{datasets}

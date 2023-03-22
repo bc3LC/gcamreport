@@ -16,8 +16,8 @@ buildings_en_service
 \description{
 energy services
 \dontrun{
- library(report);
- report::buildings_en_service
+ library(gcamreport);
+ gcamreport::buildings_en_service
 }
 }
 \keyword{datasets}

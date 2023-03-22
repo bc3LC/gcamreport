@@ -16,8 +16,8 @@ capacity_map
 \description{
 primary, secondary, final energy maps
 \dontrun{
- library(report);
- report::capacity_map
+ library(gcamreport);
+ gcamreport::capacity_map
 }
 }
 \keyword{datasets}

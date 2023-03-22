@@ -13,8 +13,8 @@ EJ_to_GWh
 \description{
 units conversion
 \dontrun{
- library(report);
- report::EJ_to_GWh
+ library(gcamreport);
+ gcamreport::EJ_to_GWh
 }
 }
 \keyword{datasets}

@@ -13,8 +13,8 @@ bcm_to_EJ
 \description{
 units conversion
 \dontrun{
- library(report);
- report::bcm_to_EJ
+ library(gcamreport);
+ gcamreport::bcm_to_EJ
 }
 }
 \keyword{datasets}

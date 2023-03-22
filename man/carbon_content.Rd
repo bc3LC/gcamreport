@@ -16,8 +16,8 @@ carbon_content
 \description{
 carbon content
 \dontrun{
- library(report);
- report::carbon_content
+ library(gcamreport);
+ gcamreport::carbon_content
 }
 }
 \keyword{datasets}

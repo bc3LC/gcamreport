@@ -4,8 +4,8 @@
 #' @format .csv
 #' @description mapping between variables, functions to load them, dependent variables, and availables verifications
 #' \dontrun{
-#'  library(report);
-#'  report::var_fun_map
+#'  library(gcamreport);
+#'  gcamreport::var_fun_map
 #' }
 "var_fun_map"
 
@@ -15,8 +15,8 @@
 #' @format .csv
 #' @description read in template
 #' \dontrun{
-#'  library(report);
-#'  report::template
+#'  library(gcamreport);
+#'  gcamreport::template
 #' }
 "template"
 
@@ -26,8 +26,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::co2_sector_map
+#'  library(gcamreport);
+#'  gcamreport::co2_sector_map
 #' }
 "co2_sector_map"
 
@@ -37,8 +37,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::co2_tech_map
+#'  library(gcamreport);
+#'  gcamreport::co2_tech_map
 #' }
 "co2_tech_map"
 
@@ -48,8 +48,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::kyoto_sector_map
+#'  library(gcamreport);
+#'  gcamreport::kyoto_sector_map
 #' }
 "kyoto_sector_map"
 
@@ -59,8 +59,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::nonco2_emis_sector_map
+#'  library(gcamreport);
+#'  gcamreport::nonco2_emis_sector_map
 #' }
 "nonco2_emis_sector_map"
 
@@ -70,8 +70,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::nonco2_emis_resource_map
+#'  library(gcamreport);
+#'  gcamreport::nonco2_emis_resource_map
 #' }
 "nonco2_emis_resource_map"
 
@@ -81,8 +81,8 @@
 #' @format .csv
 #' @description emissions maps
 #' \dontrun{
-#'  library(report);
-#'  report::carbon_seq_tech_map
+#'  library(gcamreport);
+#'  gcamreport::carbon_seq_tech_map
 #' }
 "carbon_seq_tech_map"
 
@@ -92,8 +92,8 @@
 #' @format .csv
 #' @description ag maps
 #' \dontrun{
-#'  library(report);
-#'  report::ag_demand_map
+#'  library(gcamreport);
+#'  gcamreport::ag_demand_map
 #' }
 "ag_demand_map"
 
@@ -103,8 +103,8 @@
 #' @format .csv
 #' @description ag maps
 #' \dontrun{
-#'  library(report);
-#'  report::ag_prices_map
+#'  library(gcamreport);
+#'  gcamreport::ag_prices_map
 #' }
 "ag_prices_map"
 
@@ -114,8 +114,8 @@
 #' @format .csv
 #' @description ag maps
 #' \dontrun{
-#'  library(report);
-#'  report::land_use_map
+#'  library(gcamreport);
+#'  gcamreport::land_use_map
 #' }
 "land_use_map"
 
@@ -125,8 +125,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::primary_energy_map
+#'  library(gcamreport);
+#'  gcamreport::primary_energy_map
 #' }
 "primary_energy_map"
 
@@ -136,8 +136,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::production_map
+#'  library(gcamreport);
+#'  gcamreport::production_map
 #' }
 "production_map"
 
@@ -147,8 +147,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::elec_gen_map
+#'  library(gcamreport);
+#'  gcamreport::elec_gen_map
 #' }
 "elec_gen_map"
 
@@ -158,8 +158,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::capacity_map
+#'  library(gcamreport);
+#'  gcamreport::capacity_map
 #' }
 "capacity_map"
 
@@ -169,8 +169,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::cf_gcam
+#'  library(gcamreport);
+#'  gcamreport::cf_gcam
 #' }
 "cf_gcam"
 
@@ -180,8 +180,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::cf_rgn
+#'  library(gcamreport);
+#'  gcamreport::cf_rgn
 #' }
 "cf_rgn"
 
@@ -191,8 +191,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::se_gen_map
+#'  library(gcamreport);
+#'  gcamreport::se_gen_map
 #' }
 "se_gen_map"
 
@@ -202,8 +202,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::final_energy_map
+#'  library(gcamreport);
+#'  gcamreport::final_energy_map
 #' }
 "final_energy_map"
 
@@ -213,8 +213,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::transport_final_en_map
+#'  library(gcamreport);
+#'  gcamreport::transport_final_en_map
 #' }
 "transport_final_en_map"
 
@@ -224,8 +224,8 @@
 #' @format .csv
 #' @description primary, secondary, final energy maps
 #' \dontrun{
-#'  library(report);
-#'  report::energy_prices_map
+#'  library(gcamreport);
+#'  gcamreport::energy_prices_map
 #' }
 "energy_prices_map"
 
@@ -235,8 +235,8 @@
 #' @format .csv
 #' @description energy services
 #' \dontrun{
-#'  library(report);
-#'  report::transport_en_service
+#'  library(gcamreport);
+#'  gcamreport::transport_en_service
 #' }
 "transport_en_service"
 
@@ -246,8 +246,8 @@
 #' @format .csv
 #' @description energy services
 #' \dontrun{
-#'  library(report);
-#'  report::buildings_en_service
+#'  library(gcamreport);
+#'  gcamreport::buildings_en_service
 #' }
 "buildings_en_service"
 
@@ -257,8 +257,8 @@
 #' @format .csv
 #' @description capital update
 #' \dontrun{
-#'  library(report);
-#'  report::capital_gcam
+#'  library(gcamreport);
+#'  gcamreport::capital_gcam
 #' }
 "capital_gcam"
 
@@ -268,8 +268,8 @@
 #' @format .csv
 #' @description capital investment
 #' \dontrun{
-#'  library(report);
-#'  report::investment
+#'  library(gcamreport);
+#'  gcamreport::investment
 #' }
 "investment"
 
@@ -279,8 +279,8 @@
 #' @format .csv
 #' @description carbon content
 #' \dontrun{
-#'  library(report);
-#'  report::carbon_content
+#'  library(gcamreport);
+#'  gcamreport::carbon_content
 #' }
 "carbon_content"
 
@@ -290,8 +290,8 @@
 #' @format .csv
 #' @description non CO2 content
 #' \dontrun{
-#'  library(report);
-#'  report::nonCO2_content
+#'  library(gcamreport);
+#'  gcamreport::nonCO2_content
 #' }
 "nonCO2_content"
 
@@ -301,8 +301,8 @@
 #' @format .csv
 #' @description iea 2019 capacity
 #' \dontrun{
-#'  library(report);
-#'  report::iea_capacity
+#'  library(gcamreport);
+#'  gcamreport::iea_capacity
 #' }
 "iea_capacity"
 
@@ -312,8 +312,8 @@
 #' @format .csv
 #' @description new CO2 market
 #' \dontrun{
-#'  library(report);
-#'  report::CO2_market
+#'  library(gcamreport);
+#'  gcamreport::CO2_market
 #' }
 "CO2_market"
 
@@ -321,8 +321,8 @@
 #'
 #' @description cumulative emissions budget goals list
 #' \dontrun{
-#'  library(report);
-#'  report::CUMULATIVE_EMISSIONS_BUDGET_GOALS
+#'  library(gcamreport);
+#'  gcamreport::CUMULATIVE_EMISSIONS_BUDGET_GOALS
 #' }
 "CUMULATIVE_EMISSIONS_BUDGET_GOALS"
 
@@ -330,8 +330,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_thousand_million
+#'  library(gcamreport);
+#'  gcamreport::conv_thousand_million
 #' }
 "conv_thousand_million"
 
@@ -339,8 +339,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_million_billion
+#'  library(gcamreport);
+#'  gcamreport::conv_million_billion
 #' }
 "conv_million_billion"
 
@@ -348,8 +348,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_90USD_10USD
+#'  library(gcamreport);
+#'  gcamreport::conv_90USD_10USD
 #' }
 "conv_90USD_10USD"
 
@@ -357,8 +357,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_75USD_10USD
+#'  library(gcamreport);
+#'  gcamreport::conv_75USD_10USD
 #' }
 "conv_75USD_10USD"
 
@@ -366,8 +366,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_15USD_10USD
+#'  library(gcamreport);
+#'  gcamreport::conv_15USD_10USD
 #' }
 "conv_15USD_10USD"
 
@@ -375,8 +375,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_19USD_75USD
+#'  library(gcamreport);
+#'  gcamreport::conv_19USD_75USD
 #' }
 "conv_19USD_75USD"
 
@@ -384,8 +384,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::conv_C_CO2
+#'  library(gcamreport);
+#'  gcamreport::conv_C_CO2
 #' }
 "conv_C_CO2"
 
@@ -393,8 +393,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::hr_per_yr
+#'  library(gcamreport);
+#'  gcamreport::hr_per_yr
 #' }
 "hr_per_yr"
 
@@ -402,8 +402,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::EJ_to_GWh
+#'  library(gcamreport);
+#'  gcamreport::EJ_to_GWh
 #' }
 "EJ_to_GWh"
 
@@ -411,8 +411,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::bcm_to_EJ
+#'  library(gcamreport);
+#'  gcamreport::bcm_to_EJ
 #' }
 "bcm_to_EJ"
 
@@ -420,8 +420,8 @@
 #'
 #' @description units conversion
 #' \dontrun{
-#'  library(report);
-#'  report::GJ_to_EJ
+#'  library(gcamreport);
+#'  gcamreport::GJ_to_EJ
 #' }
 "GJ_to_EJ"
 
@@ -429,8 +429,8 @@
 #'
 #' @description ghg emission conversion
 #' \dontrun{
-#'  library(report);
-#'  report::F_GASES
+#'  library(gcamreport);
+#'  gcamreport::F_GASES
 #' }
 "F_GASES"
 
@@ -438,8 +438,8 @@
 #'
 #' @description ghg emission conversion
 #' \dontrun{
-#'  library(report);
-#'  report::GHG_gases
+#'  library(gcamreport);
+#'  gcamreport::GHG_gases
 #' }
 "GHG_gases"
 
@@ -447,8 +447,8 @@
 #'
 #' @description reporting years
 #' \dontrun{
-#'  library(report);
-#'  report::GCAM_years
+#'  library(gcamreport);
+#'  gcamreport::GCAM_years
 #' }
 "GCAM_years"
 
@@ -456,8 +456,8 @@
 #'
 #' @description reporting years
 #' \dontrun{
-#'  library(report);
-#'  report::reporting_years
+#'  library(gcamreport);
+#'  gcamreport::reporting_years
 #' }
 "reporting_years"
 
@@ -465,8 +465,8 @@
 #'
 #' @description reporting columns
 #' \dontrun{
-#'  library(report);
-#'  report::long_columns
+#'  library(gcamreport);
+#'  gcamreport::long_columns
 #' }
 "long_columns"
 
@@ -474,8 +474,8 @@
 #'
 #' @description reporting columns
 #' \dontrun{
-#'  library(report);
-#'  report::reporting_columns
+#'  library(gcamreport);
+#'  gcamreport::reporting_columns
 #' }
 "reporting_columns"
 
@@ -483,8 +483,8 @@
 #'
 #' @description state names
 #' \dontrun{
-#'  library(report);
-#'  report::state_names
+#'  library(gcamreport);
+#'  gcamreport::state_names
 #' }
 "state_names"
 
@@ -492,8 +492,8 @@
 #'
 #' @description techology color
 #' \dontrun{
-#'  library(report);
-#'  report::tech.color
+#'  library(gcamreport);
+#'  gcamreport::tech.color
 #' }
 "tech.color"
 
@@ -501,8 +501,8 @@
 #'
 #' @description techology painting color
 #' \dontrun{
-#'  library(report);
-#'  report::colScaleTech
+#'  library(gcamreport);
+#'  gcamreport::colScaleTech
 #' }
 "colScaleTech"
 
@@ -510,8 +510,8 @@
 #'
 #' @description techology filling color
 #' \dontrun{
-#'  library(report);
-#'  report::fillScaleTech
+#'  library(gcamreport);
+#'  gcamreport::fillScaleTech
 #' }
 "fillScaleTech"
 
@@ -519,8 +519,8 @@
 #'
 #' @description fuels list
 #' \dontrun{
-#'  library(report);
-#'  report::fuel.list
+#'  library(gcamreport);
+#'  gcamreport::fuel.list
 #' }
 "fuel.list"
 
@@ -528,8 +528,8 @@
 #'
 #' @description fuels color
 #' \dontrun{
-#'  library(report);
-#'  report::fuel.color
+#'  library(gcamreport);
+#'  gcamreport::fuel.color
 #' }
 "fuel.color"
 
@@ -537,8 +537,8 @@
 #'
 #' @description fuels color to paint
 #' \dontrun{
-#'  library(report);
-#'  report::colScaleFuel
+#'  library(gcamreport);
+#'  gcamreport::colScaleFuel
 #' }
 "colScaleFuel"
 
@@ -546,8 +546,8 @@
 #'
 #' @description fuels color to fill
 #' \dontrun{
-#'  library(report);
-#'  report::fillScaleFuel
+#'  library(gcamreport);
+#'  gcamreport::fillScaleFuel
 #' }
 "fillScaleFuel"
 
@@ -555,8 +555,8 @@
 #'
 #' @description categorize sector
 #' \dontrun{
-#'  library(report);
-#'  report::sector.list
+#'  library(gcamreport);
+#'  gcamreport::sector.list
 #' }
 "sector.list"
 
@@ -564,8 +564,8 @@
 #'
 #' @description color by fuel
 #' \dontrun{
-#'  library(report);
-#'  report::sector.color
+#'  library(gcamreport);
+#'  gcamreport::sector.color
 #' }
 "sector.color"
 
@@ -573,8 +573,8 @@
 #'
 #' @description final filling color scale
 #' \dontrun{
-#'  library(report);
-#'  report::fillScaleSector
+#'  library(gcamreport);
+#'  gcamreport::fillScaleSector
 #' }
 "fillScaleSector"
 
@@ -582,8 +582,8 @@
 #'
 #' @description techonolgies list
 #' \dontrun{
-#'  library(report);
-#'  report::tech.list
+#'  library(gcamreport);
+#'  gcamreport::tech.list
 #' }
 "tech.list"
 
@@ -591,8 +591,8 @@
 #'
 #' @description main directory
 #' \dontrun{
-#'  library(report);
-#'  report::iamc_dir
+#'  library(gcamreport);
+#'  gcamreport::iamc_dir
 #' }
 "iamc_dir"
 
@@ -600,8 +600,8 @@
 #'
 #' @description source directory
 #' \dontrun{
-#'  library(report);
-#'  report::src_dir
+#'  library(gcamreport);
+#'  gcamreport::src_dir
 #' }
 "src_dir"
 
@@ -609,8 +609,8 @@
 #'
 #' @description mapping directory
 #' \dontrun{
-#'  library(report);
-#'  report::map_dir
+#'  library(gcamreport);
+#'  gcamreport::map_dir
 #' }
 "map_dir"
 
@@ -618,8 +618,8 @@
 #'
 #' @description output directory
 #' \dontrun{
-#'  library(report);
-#'  report::out_dir
+#'  library(gcamreport);
+#'  gcamreport::out_dir
 #' }
 "out_dir"
 
@@ -627,8 +627,8 @@
 #'
 #' @description figures directory
 #' \dontrun{
-#'  library(report);
-#'  report::fig_dir
+#'  library(gcamreport);
+#'  gcamreport::fig_dir
 #' }
 "fig_dir"
 
@@ -636,8 +636,8 @@
 #'
 #' @description vetting directory
 #' \dontrun{
-#'  library(report);
-#'  report::vet_dir
+#'  library(gcamreport);
+#'  gcamreport::vet_dir
 #' }
 "vet_dir"
 

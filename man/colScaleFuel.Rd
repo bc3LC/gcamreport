@@ -13,8 +13,8 @@ colScaleFuel
 \description{
 fuels color to paint
 \dontrun{
- library(report);
- report::colScaleFuel
+ library(gcamreport);
+ gcamreport::colScaleFuel
 }
 }
 \keyword{datasets}

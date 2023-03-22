@@ -13,8 +13,8 @@ tech.list
 \description{
 techonolgies list
 \dontrun{
- library(report);
- report::tech.list
+ library(gcamreport);
+ gcamreport::tech.list
 }
 }
 \keyword{datasets}

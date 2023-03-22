@@ -13,8 +13,8 @@ sector.color
 \description{
 color by fuel
 \dontrun{
- library(report);
- report::sector.color
+ library(gcamreport);
+ gcamreport::sector.color
 }
 }
 \keyword{datasets}

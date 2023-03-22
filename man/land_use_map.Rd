@@ -16,8 +16,8 @@ land_use_map
 \description{
 ag maps
 \dontrun{
- library(report);
- report::land_use_map
+ library(gcamreport);
+ gcamreport::land_use_map
 }
 }
 \keyword{datasets}

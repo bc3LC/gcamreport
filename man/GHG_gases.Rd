@@ -13,8 +13,8 @@ GHG_gases
 \description{
 ghg emission conversion
 \dontrun{
- library(report);
- report::GHG_gases
+ library(gcamreport);
+ gcamreport::GHG_gases
 }
 }
 \keyword{datasets}

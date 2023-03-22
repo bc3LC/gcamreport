@@ -16,8 +16,8 @@ se_gen_map
 \description{
 primary, secondary, final energy maps
 \dontrun{
- library(report);
- report::se_gen_map
+ library(gcamreport);
+ gcamreport::se_gen_map
 }
 }
 \keyword{datasets}

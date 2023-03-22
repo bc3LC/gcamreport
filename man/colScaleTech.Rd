@@ -13,8 +13,8 @@ colScaleTech
 \description{
 techology painting color
 \dontrun{
- library(report);
- report::colScaleTech
+ library(gcamreport);
+ gcamreport::colScaleTech
 }
 }
 \keyword{datasets}

@@ -16,8 +16,8 @@ capital_gcam
 \description{
 capital update
 \dontrun{
- library(report);
- report::capital_gcam
+ library(gcamreport);
+ gcamreport::capital_gcam
 }
 }
 \keyword{datasets}

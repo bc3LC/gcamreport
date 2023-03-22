@@ -13,8 +13,8 @@ iamc_dir
 \description{
 main directory
 \dontrun{
- library(report);
- report::iamc_dir
+ library(gcamreport);
+ gcamreport::iamc_dir
 }
 }
 \keyword{datasets}

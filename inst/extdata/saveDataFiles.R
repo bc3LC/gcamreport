@@ -3,7 +3,7 @@ library(usethis)
 library(magrittr)
 
 ### paths
-rawDataFolder = "C:/Users/claudia.rodes/Documents/IAM_COMPACT/report/inst/extdata/"
+rawDataFolder = "C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/inst/extdata/"
 
 # iamc_dir <- here::here()
 iamc_dir <- rawDataFolder

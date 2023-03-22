@@ -16,8 +16,8 @@ final_energy_map
 \description{
 primary, secondary, final energy maps
 \dontrun{
- library(report);
- report::final_energy_map
+ library(gcamreport);
+ gcamreport::final_energy_map
 }
 }
 \keyword{datasets}

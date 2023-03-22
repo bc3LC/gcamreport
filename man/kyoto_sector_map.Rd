@@ -16,8 +16,8 @@ kyoto_sector_map
 \description{
 emissions maps
 \dontrun{
- library(report);
- report::kyoto_sector_map
+ library(gcamreport);
+ gcamreport::kyoto_sector_map
 }
 }
 \keyword{datasets}

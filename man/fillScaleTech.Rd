@@ -13,8 +13,8 @@ fillScaleTech
 \description{
 techology filling color
 \dontrun{
- library(report);
- report::fillScaleTech
+ library(gcamreport);
+ gcamreport::fillScaleTech
 }
 }
 \keyword{datasets}

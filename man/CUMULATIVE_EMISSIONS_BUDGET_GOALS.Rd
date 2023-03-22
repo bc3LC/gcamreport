@@ -13,8 +13,8 @@ CUMULATIVE_EMISSIONS_BUDGET_GOALS
 \description{
 cumulative emissions budget goals list
 \dontrun{
- library(report);
- report::CUMULATIVE_EMISSIONS_BUDGET_GOALS
+ library(gcamreport);
+ gcamreport::CUMULATIVE_EMISSIONS_BUDGET_GOALS
 }
 }
 \keyword{datasets}

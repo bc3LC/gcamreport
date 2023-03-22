@@ -13,8 +13,8 @@ out_dir
 \description{
 output directory
 \dontrun{
- library(report);
- report::out_dir
+ library(gcamreport);
+ gcamreport::out_dir
 }
 }
 \keyword{datasets}

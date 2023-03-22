@@ -13,8 +13,8 @@ sector.list
 \description{
 categorize sector
 \dontrun{
- library(report);
- report::sector.list
+ library(gcamreport);
+ gcamreport::sector.list
 }
 }
 \keyword{datasets}
