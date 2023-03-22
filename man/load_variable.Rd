@@ -6,6 +6,9 @@
 \usage{
 load_variable(var)
 }
+\arguments{
+\item{var:}{variable to be loaded}
+}
 \value{
 load variable
 }

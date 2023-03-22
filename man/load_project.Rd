@@ -4,11 +4,14 @@
 \alias{load_project}
 \title{load_project}
 \usage{
-load_project()
+load_project(prj_name)
+}
+\arguments{
+\item{prj_name:}{name of the project}
 }
 \value{
 loaded project into global environment
 }
 \description{
-explanation
+Load specified project into the global environment
 }

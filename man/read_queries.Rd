@@ -4,7 +4,12 @@
 \alias{read_queries}
 \title{read_queries}
 \usage{
-read_queries()
+read_queries(project_name = "gas_fin_updated", final_db_year = 2100)
+}
+\arguments{
+\item{project_name:}{name of the project. By default = gas_fin_updated.}
+
+\item{final_db_year:}{final year of the database. By default = 2100}
 }
 \value{
 load variable

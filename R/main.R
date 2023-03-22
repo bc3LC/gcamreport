@@ -3,12 +3,13 @@
 
 #' load_project
 #'
-#' explanation
+#' Load specified project into the global environment
+#' @param prj_name: name of the project
 #' @return loaded project into global environment
 #' @export
-load_project = function() {
+load_project = function(prj_name) {
   # Load data, once the project file has been created (no need to create it again!!)
-  prj <<- loadProject(paste0(iamc_dir, "/", "gas_fin_updated.dat"))
+  prj <<- loadProject(paste0(iamc_dir, "/", prj_name, ".dat"))
 
 
   Scenarios <<- listScenarios(prj)
@@ -19,6 +20,7 @@ load_project = function() {
 #' load_variable
 #'
 #' Recursive function to load desired variable and its dependent variables
+#' @param var: variable to be loaded
 #' @keywords internal
 #' @return load variable
 #' @export
@@ -41,16 +43,18 @@ load_variable = function(var){
 #' Main function. Interacts with the user to select the desired variables for the report,
 #' loads them, saves them in an external output, runs the verifications, and informs the
 #' user about the success of the whole process.
+#' @param project_name: name of the project. By default = gas_fin_updated.
+#' @param final_db_year: final year of the database. By default = 2100
 #' @keywords internal
 #' @return load variable
 #' @importFrom magrittr %>%
 #' @export
-read_queries = function() {
-  load_project()
+read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) {
+  # load project
+  load_project(project_name)
 
   # make final_db_year as a global variable
-  final_db_year <<- readline(prompt = 'It is assumed that the final year of the provided data is 2100. If right, press enter, otherwise, write the final year of your data: ')
-  final_db_year <<- ifelse(final_db_year == '', 2100, final_db_year)
+  final_db_year <<- final_db_year
 
   # final reporting columns:
   reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
