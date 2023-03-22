@@ -1,3 +1,6 @@
+library(usethis)
+library(magrittr)
+
 #########################################################################
 #                           ANCILLARY FUNCTIONS                         #
 #########################################################################
@@ -17,7 +20,7 @@ conv_ghg_co2e <- function (data) {
   GWP_adjuster <- read.csv(paste0(map_dir, "/ghg_GWP.csv"), skip = 1, na = "")
 
   data %>%
-    dplyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
+    separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::left_join(GWP_adjuster, by = c("variable" = "GHG_gases")) %>%
     dplyr::mutate(value = value * GWP, Units = "CO2e") %>%
