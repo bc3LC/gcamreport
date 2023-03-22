@@ -239,16 +239,16 @@ tech.color <- c( "biomass w/o ccs" = "darkgreen", "biomass w/ ccs" = "olivedrab"
 use_data(tech.color, overwrite=T)
 
 
-colScaleTech <- scale_colour_manual(name = "technology",
-                                    values = tech.color,
-                                    na.translate = FALSE,
-                                    guide = guide_legend(reverse = F, ncol = 1))
+colScaleTech <- ggplot2::scale_colour_manual(name = "technology",
+                                            values = tech.color,
+                                            na.translate = FALSE,
+                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(colScaleTech, overwrite=T)
 
-fillScaleTech <- scale_fill_manual(name = "technology",
-                                   values = tech.color,
-                                   na.translate = FALSE,
-                                   guide = guide_legend(reverse = F, ncol = 1))
+fillScaleTech <- ggplot2::scale_fill_manual(name = "technology",
+                                            values = tech.color,
+                                            na.translate = FALSE,
+                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(fillScaleTech, overwrite=T)
 
 

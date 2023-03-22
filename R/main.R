@@ -1,23 +1,5 @@
-#' source_functions
-#'
-#' explanation
-#' @return source ancillary functions
-#' @export
-source_functions <- function() {
-  # Source the required scripts
-  # define constants
-  # source(paste0(src_dir, "/constants.R"))
-
-  # define functions
-  source(paste0(src_dir, "/functions.R"))
-
-  # read in template and mapping files
-  # source(paste0(src_dir, "/mapping.R"))
-
-  # load functions to get the queries
-  source(paste0(src_dir, "/get_functions.R"))
-}
-
+## Main functions of the package
+## TODO: 'create project' function
 
 #' load_project
 #'
