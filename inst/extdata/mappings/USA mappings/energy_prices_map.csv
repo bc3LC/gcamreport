@@ -1,0 +1,12 @@
+﻿# Prices by sector,,,,,,,,,,
+sector,subsector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+regional biomass,,Price|Primary Energy|Biomass,,,,,,,,1
+regional coal,,Price|Primary Energy|Coal,,,,,,,,1
+regional natural gas,,Price|Primary Energy|Gas,,,,,,,,1
+regional oil,,Price|Primary Energy|Oil,,,,,,,,1
+electricity,,Price|Secondary Energy|Electricity,,,,,,,,1
+delivered biomass,,Price|Final Energy|Residential|Solids|Biomass,,,,,,,,1
+delivered coal,,Price|Final Energy|Residential|Solids|Coal,,,,,,,,1
+elect_td_bld,,Price|Final Energy|Residential|Electricity,,,,,,,,1
+delivered gas,,Price|Final Energy|Residential|Gases|Natural Gas,,,,,,,,1
+refined liquids enduse,,Price|Final Energy|Residential|Liquids|Oil,,,,,,,,1

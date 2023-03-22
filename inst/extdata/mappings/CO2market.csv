@@ -1,0 +1,72 @@
+# mapping file for CO2 markets,
+market,region
+GlobalCO2,Global
+Africa_EasternCO2,Africa_Eastern
+Africa_NorthernCO2,Africa_Northern
+Africa_SouthernCO2,Africa_Southern
+Africa_WesternCO2,Africa_Western
+ArgentinaCO2,Argentina
+Australia_NZCO2,Australia_NZ
+BrazilCO2,Brazil
+CanadaCO2,Canada
+Central America and CaribbeanCO2,Central America and Caribbean
+Central AsiaCO2,Central Asia
+ChinaCO2,China
+ColombiaCO2,Colombia
+EUCO2,EU-12
+EUCO2,EU-15
+Europe_EasternCO2,Europe_Eastern
+Europe_Non_EUCO2,Europe_Non_EU
+European Free Trade AssociationCO2,European Free Trade Association
+JapanCO2,Japan
+MexicoCO2,Mexico
+Middle EastCO2,Middle East
+PakistanCO2,Pakistan
+South AfricaCO2,South Africa
+South America_NorthernCO2,South America_Northern
+South America_SouthernCO2,South America_Southern
+South AsiaCO2,South Asia
+South KoreaCO2,South Korea
+Southeast AsiaCO2,Southeast Asia
+TaiwanCO2,Taiwan
+USACO2,USA
+ROWCO2,Africa_Eastern
+ROWCO2,Africa_Northern
+ROWCO2,Africa_Southern
+ROWCO2,Africa_Western
+ROWCO2,Central America and Caribbean
+ROWCO2,Central Asia
+ROWCO2,Europe_Eastern
+ROWCO2,Europe_Non_EU
+ROWCO2,European Free Trade Association
+ROWCO2,India
+ROWCO2,Indonesia
+ROWCO2,Mexico
+ROWCO2,Middle East
+ROWCO2,Pakistan
+ROWCO2,Russia
+ROWCO2,South America_Northern
+ROWCO2,South America_Southern
+ROWCO2,South Asia
+ROWCO2,Southeast Asia
+ROWCO2,Taiwan
+rowCO2,Africa_Eastern
+rowCO2,Africa_Northern
+rowCO2,Africa_Southern
+rowCO2,Africa_Western
+rowCO2,Central America and Caribbean
+rowCO2,Central Asia
+rowCO2,Europe_Eastern
+rowCO2,Europe_Non_EU
+rowCO2,European Free Trade Association
+rowCO2,India
+rowCO2,Indonesia
+rowCO2,Mexico
+rowCO2,Middle East
+rowCO2,Pakistan
+rowCO2,Russia
+rowCO2,South America_Northern
+rowCO2,South America_Southern
+rowCO2,South Asia
+rowCO2,Southeast Asia
+rowCO2,Taiwan

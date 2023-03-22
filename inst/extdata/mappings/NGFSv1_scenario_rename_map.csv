@@ -1,0 +1,8 @@
+# scenario mapping file between LAC paper and NGFS,
+Article6_scenario,Scenario
+ngfs_cpol,h_cpol
+ngfs_ndc,h_ndc
+ngfs_drap,d_rap
+ngfs_1p5,o_1p5c
+ngfs_o2c,o_2c
+ngfs_delfrag,d_delfrag

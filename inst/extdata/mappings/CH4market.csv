@@ -1,0 +1,84 @@
+#mapping file for CH4 market,
+market,region
+Africa_EasternCH4,Africa_Eastern
+Africa_NorthernCH4,Africa_Northern
+Africa_SouthernCH4,Africa_Southern
+Africa_WesternCH4,Africa_Western
+ArgentinaCH4,Argentina
+Australia_NZCH4,Australia_NZ
+BrazilCH4,Brazil
+CanadaCH4,Canada
+Central America and CaribbeanCH4,Central America and Caribbean
+Central AsiaCH4,Central Asia
+ChinaCH4,China
+ColombiaCH4,Colombia
+EUCH4,EU-12
+EUCH4,EU-15
+Europe_EasternCH4,Europe_Eastern
+Europe_Non_EUCH4,Europe_Non_EU
+European Free Trade AssociationCH4,European Free Trade Association
+IndiaCH4,India
+IndonesiaCH4,Indonesia
+JapanCH4,Japan
+MexicoCH4,Mexico
+Middle EastCH4,Middle East
+PakistanCH4,Pakistan
+RussiaCH4,Russia
+South AfricaCH4,South Africa
+South America_NorthernCH4,South America_Northern
+South America_SouthernCH4,South America_Southern
+South AsiaCH4,South Asia
+South KoreaCH4,South Korea
+Southeast AsiaCH4,Southeast Asia
+TaiwanCH4,Taiwan
+USACH4,USA
+ROWCH4,Africa_Eastern
+ROWCH4,Africa_Northern
+ROWCH4,Africa_Southern
+ROWCH4,Africa_Western
+ROWCH4,Argentina
+ROWCH4,Australia_NZ
+ROWCH4,Brazil
+ROWCH4,Central America and Caribbean
+ROWCH4,Central Asia
+ROWCH4,Colombia
+ROWCH4,Europe_Eastern
+ROWCH4,Europe_Non_EU
+ROWCH4,European Free Trade Association
+ROWCH4,India
+ROWCH4,Indonesia
+ROWCH4,Mexico
+ROWCH4,Middle East
+ROWCH4,Pakistan
+ROWCH4,Russia
+ROWCH4,South Africa
+ROWCH4,South America_Northern
+ROWCH4,South America_Southern
+ROWCH4,South Asia
+ROWCH4,Southeast Asia
+ROWCH4,Taiwan
+rowCH4,Africa_Eastern
+rowCH4,Africa_Northern
+rowCH4,Africa_Southern
+rowCH4,Africa_Western
+rowCH4,Argentina
+rowCH4,Australia_NZ
+rowCH4,Brazil
+rowCH4,Central America and Caribbean
+rowCH4,Central Asia
+rowCH4,Colombia
+rowCH4,Europe_Eastern
+rowCH4,Europe_Non_EU
+rowCH4,European Free Trade Association
+rowCH4,India
+rowCH4,Indonesia
+rowCH4,Mexico
+rowCH4,Middle East
+rowCH4,Pakistan
+rowCH4,Russia
+rowCH4,South Africa
+rowCH4,South America_Northern
+rowCH4,South America_Southern
+rowCH4,South Asia
+rowCH4,Southeast Asia
+rowCH4,Taiwan

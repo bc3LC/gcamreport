@@ -1,0 +1,50 @@
+﻿# Multiple load segments Electricity generation by technology (inc solar roofs),,,,,,,,,,,
+output,subsector,technology,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+electricity,biomass,biomass cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,biomass,biomass_base_conv,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,biomass,biomass_base_IGCC,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,biomass,biomass_int_IGCC,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,biomass,biomass_int_conv,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,coal,coal cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,coal,coal_base_conv pul,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,coal,coal_int_conv pul,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,coal,coal_peak_conv pul,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,coal,coal_subpeak_conv pul,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_base_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_base_CC_CCS,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,,,1
+electricity,gas,gas_int_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_peak_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_peak_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_subpeak_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,gas,gas_subpeak_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,geothermal,geo_base,Secondary Energy|Electricity,Secondary Energy|Electricity|Geothermal,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,grid_storage,battery,Secondary Energy|Electricity,,,,,,,,1
+electricity,hydro,hydro_base,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydro,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,hydro,hydro_int,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydro,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,hydrogen,hydrogen cogen,Secondary Energy|Electricity,,,,,,,,1
+electricity,nuclear,nuc_base_Gen II,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,nuclear,nuc_base_Gen III,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,refined liquids,refined liquids cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_base_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_int_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_subpeak_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_base_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_int_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_peak_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_subpeak_CC,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,,1
+electricity,refined liquids,refined liquids_peak_steam/CT,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,,,,,1
+electricity,rooftop_pv,rooftop_pv,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,PV_base_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,PV_int,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,PV_peak,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,PV_subpeak,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,CSP_base_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,CSP_int,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,CSP_peak,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,solar,CSP_subpeak,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,wind,wind_base,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,wind,wind_base_offshore,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,wind,wind_base_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,wind,wind_int,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1
+electricity,wind,wind_subpeak,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,,1

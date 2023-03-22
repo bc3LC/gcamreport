@@ -1,0 +1,25 @@
+﻿# Multiple load segments Electricity generation by technology (inc solar roofs),,,,,,,,,,,
+sector,subsector,technology,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+gas processing,biomass gasification,biomass gasification,Secondary Energy|Gases,,,,,,,,1
+gas processing,coal gasification,coal gasification,Secondary Energy|Gases,,,,,,,,1
+gas processing,natural gas,natural gas,Secondary Energy|Gases,,,,,,,,1
+H2 central production,biomass,biomass to H2,Secondary Energy|Hydrogen,,,,,,,,1
+H2 central production,biomass,biomass to H2 CCS,Secondary Energy|Hydrogen,,,,,,,,1
+H2 central production,coal,coal chemical CCS,Secondary Energy|Hydrogen,,,,,,,,1
+H2 central production,gas,natural gas steam reforming,Secondary Energy|Hydrogen,,,,,,,,1
+H2 central production,gas,natural gas steam reforming CCS,Secondary Energy|Hydrogen,,,,,,,,1
+H2 central production,nuclear,thermal splitting,Secondary Energy|Hydrogen,,,,,,,,1
+H2 forecourt production,gas,natural gas steam reforming,Secondary Energy|Hydrogen,,,,,,,,1
+biomass liquids,biomass liquids,FT biofuels,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,FT biofuels CCS level 1,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,FT biofuels CCS level 2,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,biodiesel,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,cellulosic ethanol,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,cellulosic ethanol CCS level 1,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,cellulosic ethanol CCS level 2,Secondary Energy|Liquids,,,,,,,,1
+biomass liquids,biomass liquids,corn ethanol,Secondary Energy|Liquids,,,,,,,,1
+gas to liquids,gas to liquids,gas to liquids,Secondary Energy|Liquids,,,,,,,,1
+oil refining,oil refining,oil refining,Secondary Energy|Liquids,,,,,,,,1
+coal to liquids,coal to liquids,coal to liquids CCS level 1,Secondary Energy|Liquids,,,,,,,,1
+coal to liquids,coal to liquids,coal to liquids CCS level 2,Secondary Energy|Liquids,,,,,,,,1
+,,,,,,,,,,,

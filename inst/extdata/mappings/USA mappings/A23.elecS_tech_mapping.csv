@@ -1,0 +1,61 @@
+# File: A23.elecS_tech_mapping.csv,
+# Title: Multiple Load Segments to Single Electricity Sector Mapping (Modified to extract global capacity factor for US-level electricity generation analysis),
+# Units: NA,
+# Comments: Mapping file between single electricity sector and multiple load segments electricity sector technologies,
+# Column types: cccccc ,
+# ----------,
+Electric.sector.technology,technology
+biomass cogen,biomass (conv)
+biomass_base_IGCC,biomass (IGCC)
+biomass_base_conv,biomass (conv)
+biomass_int_conv,biomass (conv)
+biomass_int_IGCC,biomass (IGCC)
+biomass_int_conv,biomass (conv)
+coal cogen,coal (conv pul)
+coal_base_conv pul,coal (conv pul)
+coal_int_conv pul,coal (conv pul)
+coal_peak_conv pul,coal (conv pul)
+coal_subpeak_conv pul,coal (conv pul)
+CSP_base_storage,CSP_storage
+CSP_int,CSP
+CSP_peak,CSP
+CSP_subpeak,CSP
+gas cogen,gas (CC)
+gas_base_CC,gas (CC)
+gas_base_CC_CCS,gas (CC CCS)
+gas_int_CC,gas (CC)
+gas_peak_CC,gas (CC)
+gas_peak_steam/CT,gas (steam/CT)
+gas_subpeak_CC,gas (CC)
+gas_subpeak_CC_CCS,gas (CC CCS)
+gas_subpeak_steam/CT,gas (steam/CT)
+geo_base,geothermal
+hydro_base,hydro
+hydro_int,hydro
+hydrogen cogen,hydro
+nuc_base_Gen II,Gen_II_LWR
+nuc_base_Gen III,Gen_III
+nuc_int_Gen II,Gen_II_LWR
+PV_base_storage,PV_storage
+PV_int,PV
+PV_peak,PV
+PV_subpeak,PV
+refined liquids cogen,refined liquids (CC)
+refined liquids_base_CC,refined liquids (CC)
+refined liquids_base_CC_CCS,refined liquids (CC CCS)
+refined liquids_base_steam/CT,refined liquids (steam/CT)
+refined liquids_int_CC,refined liquids (CC)
+refined liquids_int_CC_CCS,refined liquids (CC CCS)
+refined liquids_int_steam/CT,refined liquids (steam/CT)
+refined liquids_peak_CC,refined liquids (CC)
+refined liquids_peak_CC_CCS,refined liquids (CC CCS)
+refined liquids_peak_steam/CT,refined liquids (steam/CT)
+refined liquids_subpeak_CC,refined liquids (CC)
+refined liquids_subpeak_CC_CCS,refined liquids (CC CCS)
+refined liquids_subpeak_steam/CT,refined liquids (steam/CT)
+rooftop_pv,rooftop_pv
+wind_base,wind
+wind_base_offshore,wind
+wind_base_storage,wind_storage
+wind_int,wind
+wind_subpeak,wind

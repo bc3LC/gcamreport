@@ -1,0 +1,145 @@
+#' source_functions
+#'
+#' explanation
+#' @return source ancillary functions
+#' @export
+source_functions <- function() {
+  # Source the required scripts
+  # define constants
+  # source(paste0(src_dir, "/constants.R"))
+
+  # define functions
+  source(paste0(src_dir, "/functions.R"))
+
+  # read in template and mapping files
+  # source(paste0(src_dir, "/mapping.R"))
+
+  # load functions to get the queries
+  source(paste0(src_dir, "/get_functions.R"))
+}
+
+
+#' load_project
+#'
+#' explanation
+#' @return loaded project into global environment
+#' @export
+load_project = function() {
+  # Load data, once the project file has been created (no need to create it again!!)
+  prj <<- loadProject(paste0(iamc_dir, "/", "gas_fin_updated.dat"))
+
+
+  Scenarios <<- listScenarios(prj)
+  listQueries(prj)
+}
+
+
+#' load_variable
+#'
+#' Recursive function to load desired variable and its dependent variables
+#' @keywords internal
+#' @return load variable
+#' @export
+load_variable = function(var){
+  if (exists(var$name)) {
+    return()
+  }
+
+  if (!is.na(var$dependencies)) {
+    for (d in var$dependencies[[1]]) {
+      load_variable(variables[which(variables$name == d),])
+    }
+  }
+  get(var$fun)()
+}
+
+
+#' read_queries
+#'
+#' Main function. Interacts with the user to select the desired variables for the report,
+#' loads them, saves them in an external output, runs the verifications, and informs the
+#' user about the success of the whole process.
+#' @keywords internal
+#' @return load variable
+#' @importFrom magrittr %>%
+#' @export
+read_queries = function() {
+  load_project()
+
+  # make final_db_year as a global variable
+  final_db_year <<- readline(prompt = 'It is assumed that the final year of the provided data is 2100. If right, press enter, otherwise, write the final year of your data: ')
+  final_db_year <<- ifelse(final_db_year == '', 2100, final_db_year)
+
+  # final reporting columns:
+  reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
+
+  # desired variables to have in the report
+  variables_base <<- data.frame('name' =
+                                  c('population_clean', 'GDP_MER_clean', 'GDP_PPP_clean',
+                                    'global_temp_clean', 'forcing_clean', 'co2_concentration_clean',
+                                    'co2_emissions_clean', 'tot_co2_clean', 'co2_sequestration_clean',
+                                    'ag_demand_clean', 'land_clean',
+                                    'primary_energy_clean', 'energy_trade_clean',
+                                    'elec_gen_tech_clean', 'elec_capacity_tot_clean', 'elec_capacity_add_clean',
+                                    'se_gen_tech_clean', 'fe_sector_clean',
+                                    'energy_service_transportation_clean',
+                                    'energy_service_buildings_clean',
+                                    'ag_prices_clean', 'industry_production_clean',
+                                    'elec_capital_clean',
+                                    'elec_investment_clean', 'transmission_invest_clean', 'CCS_invest_clean', 'resource_investment_clean',
+                                    'nonco2_clean',
+                                    'co2_price_clean'),
+                                'required' = TRUE)
+
+  # check with the user the desired variables
+  print('The variables that will be in the report are:')
+  for (v in variables_base$name) {
+    print(v)
+  }
+  print('If you would like to remove some variables, please introduce their names separated by comma. Otherwise press enter to continue.')
+  input = as.list(strsplit(readline(prompt = 'Variables to be removed (separated by comma): '), c(",", ", ", " , ")))
+  input = data.frame('name' = input[[1]])
+  variables <<- anti_join(variables_base, input, by = 'name')
+
+  removed = setdiff(variables_base$name, variables$name)
+  if (length(removed) > 0) {
+    print('The following variables have been removed:')
+    for (r in removed) {
+      print(r)
+    }
+  }
+
+  print('Loading data, performing checks, and saving output...')
+
+  # consider the dependencies and checking functions
+  variables <<- merge(variables,var_fun_map, by = 'name', all = TRUE) %>%
+    replace_na(list(required = FALSE))
+
+  # for all desired variables, load the corresponding data
+  for (i in 1:nrow(variables)) {
+    if (variables$required[i]) {
+      load_variable(variables[i,])
+    }
+  }
+
+  # bind and save results
+  do_bind_results()
+
+  # checks, vetting, and errors summary
+  errors <<- c()
+
+  for (ch in variables$checks) {
+    if (!is.na(ch)) {
+      for (d in ch[[1]]) {
+        out = get(variables$fun[which(variables$name == d)])()
+        errors <<- append(errors,out)
+      }
+    }
+  }
+  vet = do_check_vetting()
+  print('The following checks have been performed:')
+  errors <<- append(errors,vet)
+  for (e in errors) {
+    print(e)
+  }
+}

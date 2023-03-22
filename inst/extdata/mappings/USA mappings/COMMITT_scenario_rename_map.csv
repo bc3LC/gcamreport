@@ -1,0 +1,7 @@
+# scenario mapping file ,
+old.scenario,Scenario
+ENGAGE_Round2_NP_CurPol_minprice,NP_CurPol
+ENGAGE_Round2_NP_2025_100pct2050_minprice,NP_2025_100%2050
+ENGAGE_Round2_UNDC_minprice,NP_UNDC
+ENGAGE_Round2_Baseline_NO_minprice,NP_BL
+ENGAGE_Round2_NP_2025_50pct2050_minprice,NP_2025_50%2050

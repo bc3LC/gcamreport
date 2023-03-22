@@ -1,0 +1,85 @@
+﻿# mapping file for BLDCO2TRN markets,
+market,region
+GlobalCO2TRN,Global
+Africa_EasternCO2TRN,Africa_Eastern
+Africa_NorthernCO2TRN,Africa_Northern
+Africa_SouthernCO2TRN,Africa_Southern
+Africa_WesternCO2TRN,Africa_Western
+ArgentinaCO2TRN,Argentina
+Australia_NZCO2TRN,Australia_NZ
+BrazilCO2TRN,Brazil
+CanadaCO2TRN,Canada
+Central America and CaribbeanCO2TRN,Central America and Caribbean
+Central AsiaCO2TRN,Central Asia
+ChinaCO2TRN,China
+ColombiaCO2TRN,Colombia
+EUCO2TRN,EU-12
+EUCO2TRN,EU-15
+Europe_EasternCO2TRN,Europe_Eastern
+Europe_Non_EUCO2TRN,Europe_Non_EU
+European Free Trade AssociationCO2TRN,European Free Trade Association
+IndiaCO2TRN,India
+IndonesiaCO2TRN,Indonesia
+JapanCO2TRN,Japan
+MexicoCO2TRN,Mexico
+Middle EastCO2TRN,Middle East
+PakistanCO2TRN,Pakistan
+RussiaCO2TRN,Russia
+South AfricaCO2TRN,South Africa
+South America_NorthernCO2TRN,South America_Northern
+South America_SouthernCO2TRN,South America_Southern
+South AsiaCO2TRN,South Asia
+South KoreaCO2TRN,South Korea
+Southeast AsiaCO2TRN,Southeast Asia
+TaiwanCO2TRN,Taiwan
+USACO2TRN,USA
+ROWCO2TRN,Africa_Eastern
+ROWCO2TRN,Africa_Northern
+ROWCO2TRN,Africa_Southern
+ROWCO2TRN,Africa_Western
+ROWCO2TRN,Central America and Caribbean
+ROWCO2TRN,Central Asia
+ROWCO2TRN,Europe_Eastern
+ROWCO2TRN,Europe_Non_EU
+ROWCO2TRN,European Free Trade Association
+ROWCO2TRN,India
+ROWCO2TRN,Indonesia
+ROWCO2TRN,Mexico
+ROWCO2TRN,Middle East
+ROWCO2TRN,Pakistan
+ROWCO2TRN,Russia
+ROWCO2TRN,South America_Northern
+ROWCO2TRN,South America_Southern
+ROWCO2TRN,South Asia
+ROWCO2TRN,Southeast Asia
+ROWCO2TRN,Taiwan
+rowCO2TRN,Africa_Eastern
+rowCO2TRN,Africa_Northern
+rowCO2TRN,Africa_Southern
+rowCO2TRN,Africa_Western
+rowCO2TRN,Central America and Caribbean
+rowCO2TRN,Central Asia
+rowCO2TRN,Europe_Eastern
+rowCO2TRN,Europe_Non_EU
+rowCO2TRN,European Free Trade Association
+rowCO2TRN,India
+rowCO2TRN,Indonesia
+rowCO2TRN,Mexico
+rowCO2TRN,Middle East
+rowCO2TRN,Pakistan
+rowCO2TRN,Russia
+rowCO2TRN,South America_Northern
+rowCO2TRN,South America_Southern
+rowCO2TRN,South Asia
+rowCO2TRN,Southeast Asia
+rowCO2TRN,Taiwan
+rowCO2TRN,Mexico
+rowCO2TRN,Middle East
+rowCO2TRN,Pakistan
+rowCO2TRN,Russia
+rowCO2TRN,South Africa
+rowCO2TRN,South America_Northern
+rowCO2TRN,South America_Southern
+rowCO2TRN,South Asia
+rowCO2TRN,Southeast Asia
+rowCO2TRN,Taiwan

@@ -1,0 +1,16 @@
+variable,unit,value,Source,Range,year,region,adj_var,adj_var2
+Total Primary energy,EJ/yr,592,"IEA,2022",0.2,2020,World,Primary Energy,Primary Energy
+Renewable energy supply,EJ/yr,68.7,"IEA,2022",0.2,2020,World,Primary Energy|Non-Biomass Renewables,Primary Energy|Renewables_wBiomass
+Renewable energy supply,EJ/yr,68.7,"IEA,2022",0.2,2020,World,Primary Energy|Biomass,Primary Energy|Renewables_wBiomass
+Renewable energy supply,EJ/yr,68.7,"IEA,2022",0.2,2020,World,Primary Energy|Biomass|Traditional,Primary Energy|Renewables_wBiomass
+Total electricity generation,EJ/yr,96.1,"IEA,2022",0.2,2020,World,Secondary Energy|Electricity,Secondary Energy|Electricity
+"Electricity , nuclear",EJ/yr,9.6,"IEA,2022",0.2,2020,World,Secondary Energy|Electricity|Nuclear,Secondary Energy|Electricity|Nuclear
+"Electricity , solar & wind",EJ/yr,8.7,"IEA,2022, Irena stats",0.2,2020,World,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar&Wind
+"Electricity , solar & wind",EJ/yr,8.7,"IEA,2022, Irena stats",0.2,2020,World,Secondary Energy|Electricity|Wind,Secondary Energy|Electricity|Solar&Wind
+Natural gas demand,bcm,4027,"IEA,2022",0.2,2020,World,Primary Energy|Gas,Primary Energy|Gas
+"Electricity , hydro",EJ/yr,15.8,"IEA,2022, Irena stats",0.2,2020,World,Secondary Energy|Electricity|Hydro,Secondary Energy|Electricity|Hydro
+Primary energy coal,EJ/yr, 157,"IEA,2022",0.2,2020,World,Primary Energy|Coal,Primary Energy|Coal
+Primary energy gas,EJ/yr, 139,"IEA,2022",0.2,2020,World,Primary Energy|Gas,Primary Energy|Gas
+primary energy oil,EJ/yr, 172,"IEA,2022",0.2,2020,World,Primary Energy|Oil,Primary Energy|Oil
+CH4 emissions ( aviation and shipping included),Mt ch4 /yr,384,EDGAR,0.2,2020,World,Emissions|CH4,Emissions|CH4
+Fossil CO2 emissions,Mt co2/yr,35960.7,EDGAR,0.2,2020,World,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy and Industrial Processes

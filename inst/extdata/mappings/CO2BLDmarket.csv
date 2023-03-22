@@ -1,0 +1,85 @@
+﻿# mapping file for BLDCO2BLD markets,
+market,region
+GlobalCO2BLD,Global
+Africa_EasternCO2BLD,Africa_Eastern
+Africa_NorthernCO2BLD,Africa_Northern
+Africa_SouthernCO2BLD,Africa_Southern
+Africa_WesternCO2BLD,Africa_Western
+ArgentinaCO2BLD,Argentina
+Australia_NZCO2BLD,Australia_NZ
+BrazilCO2BLD,Brazil
+CanadaCO2BLD,Canada
+Central America and CaribbeanCO2BLD,Central America and Caribbean
+Central AsiaCO2BLD,Central Asia
+ChinaCO2BLD,China
+ColombiaCO2BLD,Colombia
+EUCO2BLD,EU-12
+EUCO2BLD,EU-15
+Europe_EasternCO2BLD,Europe_Eastern
+Europe_Non_EUCO2BLD,Europe_Non_EU
+European Free Trade AssociationCO2BLD,European Free Trade Association
+IndiaCO2BLD,India
+IndonesiaCO2BLD,Indonesia
+JapanCO2BLD,Japan
+MexicoCO2BLD,Mexico
+Middle EastCO2BLD,Middle East
+PakistanCO2BLD,Pakistan
+RussiaCO2BLD,Russia
+South AfricaCO2BLD,South Africa
+South America_NorthernCO2BLD,South America_Northern
+South America_SouthernCO2BLD,South America_Southern
+South AsiaCO2BLD,South Asia
+South KoreaCO2BLD,South Korea
+Southeast AsiaCO2BLD,Southeast Asia
+TaiwanCO2BLD,Taiwan
+USACO2BLD,USA
+ROWCO2BLD,Africa_Eastern
+ROWCO2BLD,Africa_Northern
+ROWCO2BLD,Africa_Southern
+ROWCO2BLD,Africa_Western
+ROWCO2BLD,Argentina
+ROWCO2BLD,Australia_NZ
+ROWCO2BLD,Brazil
+ROWCO2BLD,Central America and Caribbean
+ROWCO2BLD,Central Asia
+ROWCO2BLD,Colombia
+ROWCO2BLD,Europe_Eastern
+ROWCO2BLD,Europe_Non_EU
+ROWCO2BLD,European Free Trade Association
+ROWCO2BLD,India
+ROWCO2BLD,Indonesia
+ROWCO2BLD,Mexico
+ROWCO2BLD,Middle East
+ROWCO2BLD,Pakistan
+ROWCO2BLD,Russia
+ROWCO2BLD,South Africa
+ROWCO2BLD,South America_Northern
+ROWCO2BLD,South America_Southern
+ROWCO2BLD,South Asia
+ROWCO2BLD,Southeast Asia
+ROWCO2BLD,Taiwan
+rowCO2BLD,Africa_Eastern
+rowCO2BLD,Africa_Northern
+rowCO2BLD,Africa_Southern
+rowCO2BLD,Africa_Western
+rowCO2BLD,Argentina
+rowCO2BLD,Australia_NZ
+rowCO2BLD,Brazil
+rowCO2BLD,Central America and Caribbean
+rowCO2BLD,Central Asia
+rowCO2BLD,Colombia
+rowCO2BLD,Europe_Eastern
+rowCO2BLD,Europe_Non_EU
+rowCO2BLD,European Free Trade Association
+rowCO2BLD,India
+rowCO2BLD,Indonesia
+rowCO2BLD,Mexico
+rowCO2BLD,Middle East
+rowCO2BLD,Pakistan
+rowCO2BLD,Russia
+rowCO2BLD,South Africa
+rowCO2BLD,South America_Northern
+rowCO2BLD,South America_Southern
+rowCO2BLD,South Asia
+rowCO2BLD,Southeast Asia
+rowCO2BLD,Taiwan

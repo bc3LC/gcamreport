@@ -1,0 +1,14 @@
+#Mapping of crop to land use,,,,,,,,,
+landleaf,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+biomass,Land Cover,Land Cover|Cropland,,,,,,,0.1
+crops,Land Cover,Land Cover|Cropland,,,,,,,0.1
+forest (managed),Land Cover,Land Cover|Forest,,,,,,,0.1
+forest (unmanaged),Land Cover,Land Cover|Forest,,,,,,,0.1
+grass,Land Cover,Land Cover|Pasture,,,,,,,0.1
+otherarable,Land Cover,Land Cover|Cropland,,,,,,,0.1
+pasture (grazed),Land Cover,Land Cover|Pasture,,,,,,,0.1
+pasture (other),Land Cover,Land Cover|Pasture,,,,,,,0.1
+rock and desert,Land Cover,,,,,,,,0.1
+shrubs,Land Cover,Land Cover|Pasture,,,,,,,0.1
+tundra,Land Cover,,,,,,,,0.1
+urban,Land Cover,Land Cover|Built-up Area,,,,,,,0.1

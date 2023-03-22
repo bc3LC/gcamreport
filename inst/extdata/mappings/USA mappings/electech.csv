@@ -1,0 +1,96 @@
+technology,sector
+battery,battery
+biomass cogen,
+biomass_base_conv,biomass
+biomass_base_conv_CCS,biomass CCS
+biomass_base_IGCC,biomass
+biomass_base_IGCC_CCS,biomass CCS
+biomass_int_conv,biomass
+biomass_int_conv_CCS,biomass CCS
+biomass_int_IGCC,biomass
+biomass_int_IGCC_CCS,biomass CCS
+coal cogen,
+coal_base_conv pul,coal
+coal_base_conv pul 1951-1955,coal
+coal_base_conv pul 1956-1960,coal
+coal_base_conv pul 1961-1965,coal
+coal_base_conv pul 1966-1970,coal
+coal_base_conv pul 1971-1975,coal
+coal_base_conv pul 1976-1980,coal
+coal_base_conv pul 1981-1985,coal
+coal_base_conv pul 1986-1990,coal
+coal_base_conv pul 1991-1995,coal
+coal_base_conv pul 1996-2000,coal
+coal_base_conv pul 2001-2005,coal
+coal_base_conv pul 2006-2010,coal
+coal_base_conv pul 2011-2015,coal
+coal_base_conv pul before 1950,coal
+coal_base_conv pul_CCS,coal CCS
+coal_base_conv pul_retire_2020,coal
+coal_base_IGCC_CCS,coal CCS
+coal_int_conv pul,coal
+coal_int_conv pul 1951-1955,coal
+coal_int_conv pul 1956-1960,coal
+coal_int_conv pul 1961-1965,coal
+coal_int_conv pul 1966-1970,coal
+coal_int_conv pul 1971-1975,coal
+coal_int_conv pul 1976-1980,coal
+coal_int_conv pul 1981-1985,coal
+coal_int_conv pul 1986-1990,coal
+coal_int_conv pul 1991-1995,coal
+coal_int_conv pul 1996-2000,coal
+coal_int_conv pul 2001-2005,coal
+coal_int_conv pul 2006-2010,coal
+coal_int_conv pul 2011-2015,coal
+coal_int_conv pul before 1950,coal
+coal_int_conv pul_CCS,coal CCS
+coal_int_conv pul_retire_2020,coal
+coal_int_IGCC_CCS,coal CCS
+coal_peak_conv pul,coal
+coal_peak_conv pul_retire_2020,coal
+coal_subpeak_conv pul,coal
+coal_subpeak_conv pul_retire_2020,coal
+CSP_base_storage,solar
+CSP_int,solar
+CSP_peak,solar
+CSP_subpeak,solar
+gas cogen,
+gas_base_CC,gas
+gas_base_CC_CCS,gas CCS
+gas_int_CC,gas
+gas_int_CC_CCS,gas CCS
+gas_peak_CC,gas
+gas_peak_CC_CCS,gas CCS
+gas_peak_steam/CT,gas
+gas_subpeak_CC,gas
+gas_subpeak_CC_CCS,gas CCS
+gas_subpeak_steam/CT,gas
+geo_base,geothermal
+hydro_base,hydro
+hydro_int,hydro
+hydrogen cogen,
+nuc_base_Gen II,nuclear
+nuc_base_Gen III,nuclear
+PV_base_storage,solar
+PV_int,solar
+PV_peak,solar
+PV_subpeak,solar
+refined liquids cogen,
+refined liquids_base_CC,refined liquids
+refined liquids_base_CC_CCS,refined liquids CCS
+refined liquids_base_steam/CT,refined liquids
+refined liquids_int_CC,refined liquids
+refined liquids_int_CC_CCS,refined liquids CCS
+refined liquids_int_steam/CT,refined liquids
+refined liquids_peak_CC,refined liquids
+refined liquids_peak_CC_CCS,refined liquids CCS
+refined liquids_peak_steam/CT,refined liquids
+refined liquids_subpeak_CC,refined liquids
+refined liquids_subpeak_CC_CCS,refined liquids CCS
+refined liquids_subpeak_steam/CT,refined liquids
+rooftop_pv,solar
+wind_base,wind
+wind_base_offshore,wind
+wind_base_storage,wind
+wind_int,wind
+wind_subpeak,wind

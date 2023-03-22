@@ -1,0 +1,20 @@
+﻿subsector,var
+All Sources,Capacity|Electricity
+Coal,Capacity|Electricity|Coal|w/o CCS
+Hydroelectric,Capacity|Electricity|Hydro
+Natural Gas,Capacity|Electricity|Gas|w/o CCS
+Nuclear,Capacity|Electricity|Nuclear
+Other Biomass,Capacity|Electricity|Biomass|w/o CCS
+Other Gases,Capacity|Electricity|Gas|w/o CCS
+Petroleum,Capacity|Electricity|Oil|w/o CCS
+Pumped Storage,Capacity|Electricity|Hydro
+Solar Thermal and Photovoltaic,Capacity|Electricity|Solar
+Wind,Capacity|Electricity|Wind
+Wood and Wood Derived Fuels,Capacity|Electricity|Biomass|w/o CCS
+Geothermal,Capacity|Electricity|Geothermal
+Coal,Capacity|Electricity|Coal
+Natural Gas,Capacity|Electricity|Gas
+Other Biomass,Capacity|Electricity|Biomass
+Other Gases,Capacity|Electricity|Gas
+Petroleum,Capacity|Electricity|Oil
+Wood and Wood Derived Fuels,Capacity|Electricity|Biomass

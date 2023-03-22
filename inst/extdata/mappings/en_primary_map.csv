@@ -1,0 +1,40 @@
+# Energy consumption by technology,,,,,,,
+fuel,var1,var2,var3,var4,var5,var6,unit_conv
+a oil,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Oil,Primary Energy|Oil|w/o CCS,,1
+a oil CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Oil,Primary Energy|Oil|w/ CCS,,1
+b natural gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,,1
+b natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,,1
+c coal,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Coal,Primary Energy|Coal|w/o CCS,,1
+c coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,,1
+d biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/o CCS,,,1
+d biomass CCS,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/ CCS,,,1
+first gen biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|1st Generation,,,,1
+first gen biomass CCS,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|1st Generation,,,,1
+e nuclear,Primary Energy,Primary Energy|Nuclear,,,,,1
+f hydro,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Hydro,,,,1
+g wind,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Wind,,,,1
+h solar,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Solar,,,,1
+i geothermal,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Geothermal,,,,1
+j traditional biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|Traditional,,,,1
+traded coal,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Coal,Primary Energy|Coal|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded natural gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded oil,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Oil,Primary Energy|Oil|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded oil CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Oil,Primary Energy|Oil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+desalination,,,,,,,1
+desalination CCS,,,,,,,1
+traded natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded LNG,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded LNG CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Coal|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded Afr_MidE pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded Afr_MidE pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded LA pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded LA pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded N.Amer pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded N.Amer pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded RUS pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded RUS pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded PAC pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded PAC pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded EUR pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+traded EUR pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Fossil|w/ CCS,Primary Energy|Secondary Energy Trade,1

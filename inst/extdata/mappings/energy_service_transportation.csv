@@ -1,0 +1,24 @@
+﻿#Transport Energy Service,,,,,
+sector,mode,var1,var2,var3,unit_conv
+trn_aviation_intl,International Aviation,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Aviation,,1
+trn_freight,Domestic Ship,Energy Service|Transportation|Freight,Energy Service|Transportation|Freight|Navigation,,1
+trn_freight,Freight Rail,Energy Service|Transportation|Freight,Energy Service|Transportation|Freight|Railways,,1
+trn_freight,road,Energy Service|Transportation|Freight,Energy Service|Transportation|Freight|Road,,1
+trn_freight_road,Heavy truck,,,,1
+trn_freight_road,Light truck,,,,1
+trn_freight_road,Medium truck,,,,1
+trn_pass,Cycle,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Bicycling and Walking,,1
+trn_pass,Domestic Aviation,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Aviation,,1
+trn_pass,HSR,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Railways,,1
+trn_pass,Passenger Rail,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Railways,,1
+trn_pass,Walk,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Bicycling and Walking,,1
+trn_pass,road,,,,1
+trn_pass_road,Bus,,,,1
+trn_pass_road,LDV,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Road,Energy Service|Transportation|Passenger|Road|LDV,1
+trn_pass_road,bus,Energy Service|Transportation|Passenger,Energy Service|Transportation|Passenger|Road,Energy Service|Transportation|Passenger|Road|Bus,1
+trn_pass_road_LDV,2W and 3W,,,,1
+trn_pass_road_LDV,4W,,,,1
+trn_pass_road_LDV_4W,Car,,,,1
+trn_pass_road_LDV_4W,Large Car and Truck,,,,1
+trn_pass_road_LDV_4W,Mini Car,,,,1
+trn_shipping_intl,International Ship,Energy Service|Transportation|Freight,Energy Service|Transportation|Freight|International Shipping,,1
