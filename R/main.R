@@ -36,7 +36,7 @@ load_variable = function(var){
       load_variable(variables[which(variables$name == d),])
     }
   }
-  print(var)
+  print(var$name)
   get(var$fun)()
 }
 
@@ -47,12 +47,13 @@ load_variable = function(var){
 #' loads them, saves them in an external output, runs the verifications, and informs the
 #' user about the success of the whole process.
 #' @param project_name: name of the project. By default = gas_fin_updated.
-#' @param final_db_year: final year of the database. By default = 2100
+#' @param final_db_year: final year of the database. By default = 2100.
+#' @param desired_variables: desired variables to have in the report.
+#' @importFrom magrittr %>%
 #' @keywords internal
 #' @return load variable
-#' @importFrom magrittr %>%
 #' @export
-read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) {
+read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All') {
   # load project
   # load_project(project_name)
 
@@ -80,15 +81,12 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) 
                                     'co2_price_clean'),
                                 'required' = TRUE)
 
-  # check with the user the desired variables
-  print('The variables that will be in the report are:')
-  for (v in variables_base$name) {
-    print(v)
+  # consider only the desired variables
+  if (desired_variables == 'All') {
+    variables <<- variables_base
+  } else {
+    variables <<- dplyr::anti_join(variables_base, desired_variables, by = 'name')
   }
-  print('If you would like to remove some variables, please introduce their names separated by comma. Otherwise press enter to continue.')
-  input = as.list(strsplit(readline(prompt = 'Variables to be removed (separated by comma): '), c(",", ", ", " , ")))
-  input = data.frame('name' = input[[1]])
-  variables <<- dplyr::anti_join(variables_base, input, by = 'name')
 
   removed = setdiff(variables_base$name, variables$name)
   if (length(removed) > 0) {
