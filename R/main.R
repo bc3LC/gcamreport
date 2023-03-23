@@ -1,5 +1,7 @@
 ## Main functions of the package
 ## TODO: 'create project' function
+library(usethis)
+library(magrittr)
 
 #' load_project
 #'
@@ -9,11 +11,11 @@
 #' @export
 load_project = function(prj_name) {
   # Load data, once the project file has been created (no need to create it again!!)
-  prj <<- loadProject(paste0(iamc_dir, "/", prj_name, ".dat"))
+  prj <<- rgcam::loadProject(paste0(iamc_dir, "/", prj_name, ".dat"))
 
 
-  Scenarios <<- listScenarios(prj)
-  listQueries(prj)
+  Scenarios <<- rgcam::listScenarios(prj)
+  rgcam::listQueries(prj)
 }
 
 
@@ -34,6 +36,7 @@ load_variable = function(var){
       load_variable(variables[which(variables$name == d),])
     }
   }
+  print(var)
   get(var$fun)()
 }
 
@@ -51,7 +54,7 @@ load_variable = function(var){
 #' @export
 read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) {
   # load project
-  load_project(project_name)
+  # load_project(project_name)
 
   # make final_db_year as a global variable
   final_db_year <<- final_db_year
@@ -85,7 +88,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) 
   print('If you would like to remove some variables, please introduce their names separated by comma. Otherwise press enter to continue.')
   input = as.list(strsplit(readline(prompt = 'Variables to be removed (separated by comma): '), c(",", ", ", " , ")))
   input = data.frame('name' = input[[1]])
-  variables <<- anti_join(variables_base, input, by = 'name')
+  variables <<- dplyr::anti_join(variables_base, input, by = 'name')
 
   removed = setdiff(variables_base$name, variables$name)
   if (length(removed) > 0) {
@@ -99,7 +102,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100) 
 
   # consider the dependencies and checking functions
   variables <<- merge(variables,var_fun_map, by = 'name', all = TRUE) %>%
-    replace_na(list(required = FALSE))
+    tidyr::replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
   for (i in 1:nrow(variables)) {

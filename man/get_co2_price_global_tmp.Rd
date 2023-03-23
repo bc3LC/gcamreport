@@ -13,5 +13,5 @@ co2_price_global & regions global variable
 Get global co2 price.
 }
 \keyword{co2}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{tmp}

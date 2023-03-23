@@ -13,4 +13,4 @@ GDP_PPP_clean global variable
 Get GDP (PPP) query, compute regional GDP, and change units to [10USD].
 }
 \keyword{GDP}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}

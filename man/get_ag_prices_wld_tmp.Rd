@@ -13,5 +13,5 @@ ag_prices_wld global variable
 Get ag price index.
 }
 \keyword{ag}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{tmp}

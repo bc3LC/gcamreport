@@ -3,29 +3,29 @@ library(usethis)
 library(magrittr)
 
 ### paths
-rawDataFolder = "C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/inst/extdata/"
+rawDataFolder = "C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport"
 
 # iamc_dir <- here::here()
-iamc_dir <- rawDataFolder
+iamc_dir <- paste0(rawDataFolder, "/inst/extdata")
 use_data(iamc_dir, overwrite=T)
 
-src_dir <-paste0(here::here(), "/R")
+src_dir <-paste0(rawDataFolder, "/R")
 use_data(src_dir, overwrite=T)
 
 map_dir <- paste0(iamc_dir, "/mappings")
 use_data(map_dir, overwrite=T)
 
-out_dir <- paste0(iamc_dir, "/output")
+out_dir <- paste0(rawDataFolder, "/output/datasets")
 use_data(out_dir, overwrite=T)
 
-fig_dir <- paste0(iamc_dir, "/figure")
+fig_dir <- paste0(rawDataFolder, "/output/figure")
 use_data(fig_dir, overwrite=T)
 
 vet_dir <- paste0(iamc_dir, "/vetting")
 use_data(vet_dir, overwrite=T)
 
 # variables_functions_mapping
-var_fun_map = read.csv(paste0(rawDataFolder, "/variables_functions_mapping.csv"),
+var_fun_map = read.csv(paste0(iamc_dir, "/variables_functions_mapping.csv"),
                        sep=';',header=T, na.strings=c("","NA"))
 
 var_fun_map$dependencies = as.list(strsplit(var_fun_map$dependencies, ","))
@@ -76,12 +76,12 @@ production_map <- read.csv(paste0(map_dir,"/production_map.csv"), skip = 1) %>% 
 use_data(production_map, overwrite=T)
 
 elec_gen_map <- read.csv(paste0(map_dir, "/elec_gen_map_core.csv"), skip = 1) %>%
-  filter(!grepl("cogen", technology)) %>%
+  dplyr::filter(!grepl("cogen", technology)) %>%
   gather_map()
 use_data(elec_gen_map, overwrite=T)
 
 capacity_map <- read.csv(paste0(map_dir, "/capacity_map.csv"), skip = 1) %>%
-  filter(!grepl("cogen", technology)) %>%
+  dplyr::filter(!grepl("cogen", technology)) %>%
   gather_map()
 use_data(capacity_map, overwrite=T)
 
@@ -115,16 +115,16 @@ use_data(buildings_en_service, overwrite=T)
 # capital updates
 capital_gcam <- read.csv(paste0(map_dir, "/L223.GlobalIntTechCapital_elec.csv"), skip = 2, na = "",
                          fileEncoding = "UTF-8-BOM") %>%
-  rename(technology = intermittent.technology) %>%
-  bind_rows(read.csv(paste0(map_dir, "/L223.GlobalTechCapital_elec.csv"), skip = 2, na = ""))%>%
-  select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
+  dplyr::rename(technology = intermittent.technology) %>%
+  dplyr::bind_rows(read.csv(paste0(map_dir, "/L223.GlobalTechCapital_elec.csv"), skip = 2, na = ""))%>%
+  dplyr::select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
 use_data(capital_gcam, overwrite=T)
 
 investment <- read.csv(paste0(map_dir, "/investment.csv"), na = "") %>%
-  gather(year, value, X2015:X2100) %>%
-  mutate(year = as.integer(sub("X", "", year))) %>%
-  mutate(value = gsub("%", "", value)) %>%
-  mutate(value = as.numeric(value))
+  tidyr::gather(year, value, X2015:X2100) %>%
+  dplyr::mutate(year = as.integer(sub("X", "", year))) %>%
+  dplyr::mutate(value = gsub("%", "", value)) %>%
+  dplyr::mutate(value = as.numeric(value))
 use_data(investment, overwrite=T)
 
 
@@ -270,16 +270,16 @@ fuel.color <- c( "biomass" = "darkgreen",
 use_data(fuel.color, overwrite=T)
 
 
-colScaleFuel <- scale_colour_manual(name = "fuel",
+colScaleFuel <- ggplot2::scale_colour_manual(name = "fuel",
                                     values = fuel.color,
                                     na.translate = FALSE,
-                                    guide = guide_legend(reverse = F, ncol = 1))
+                                    guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(colScaleFuel, overwrite=T)
 
-fillScaleFuel <- scale_fill_manual(name = "fuel",
+fillScaleFuel <- ggplot2::scale_fill_manual(name = "fuel",
                                    values = fuel.color,
                                    na.translate = FALSE,
-                                   guide = guide_legend(reverse = F, ncol = 1))
+                                   guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(fillScaleFuel, overwrite=T)
 
 
@@ -302,10 +302,10 @@ sector.color <- c(
 use_data(sector.color, overwrite=T)
 
 
-fillScaleSector <- scale_fill_manual(name = "Sector",
+fillScaleSector <- ggplot2::scale_fill_manual(name = "Sector",
                                      values = sector.color,
                                      na.translate = FALSE,
-                                     guide = guide_legend(reverse = F, ncol = 1))
+                                     guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(fillScaleSector, overwrite=T)
 
 

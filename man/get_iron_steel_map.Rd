@@ -12,6 +12,6 @@ iron_steel_map global variable
 \description{
 Get iron and steel emissions.
 }
-\keyword{getQuery}
 \keyword{iron}
+\keyword{rgcam::getQuery}
 \keyword{steel}

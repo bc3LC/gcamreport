@@ -13,5 +13,5 @@ energy_trade_clean global variable
 Get energy trade supply.
 }
 \keyword{energy}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{tmp}

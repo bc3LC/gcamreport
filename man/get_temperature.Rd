@@ -12,5 +12,5 @@ global_temp_clean global variable
 \description{
 Get World's mean temperature query.
 }
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{temperature}

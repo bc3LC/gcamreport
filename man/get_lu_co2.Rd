@@ -13,5 +13,5 @@ LU_carbon_clean global variable
 Get land use CO2 emissions.
 }
 \keyword{co2}
-\keyword{getQuery}
 \keyword{lu}
+\keyword{rgcam::getQuery}

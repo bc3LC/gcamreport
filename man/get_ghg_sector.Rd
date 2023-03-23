@@ -12,5 +12,5 @@ ghg_sector_clean global variable
 \description{
 Get sectorial GHG emissions.
 }
-\keyword{getQuery}
 \keyword{ghg}
+\keyword{rgcam::getQuery}

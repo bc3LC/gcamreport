@@ -12,5 +12,5 @@ nonco2_clean global variable
 \description{
 Get non CO2 emissions query.
 }
-\keyword{getQuery}
 \keyword{nonco2}
+\keyword{rgcam::getQuery}

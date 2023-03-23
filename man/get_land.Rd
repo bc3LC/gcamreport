@@ -13,4 +13,4 @@ land_clean global variable
 Get land use area.
 }
 \keyword{ag}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}

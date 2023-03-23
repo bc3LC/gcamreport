@@ -13,4 +13,4 @@ se_gen_tech_clean global variable
 Get other secondary energy production
 }
 \keyword{energy}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}

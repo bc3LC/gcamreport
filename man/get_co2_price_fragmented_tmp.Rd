@@ -13,5 +13,5 @@ co2_price_fragmented global variable
 Get fragmented co2 price.
 }
 \keyword{co2}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{tmp}

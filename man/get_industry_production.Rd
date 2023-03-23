@@ -13,4 +13,4 @@ industry_production_clean global variable
 Get industry production.
 }
 \keyword{energy}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}

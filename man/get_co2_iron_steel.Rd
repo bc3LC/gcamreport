@@ -13,6 +13,6 @@ co2_tech_ironsteel global variable
 Get iron and steel CO2 emissions.
 }
 \keyword{co2}
-\keyword{getQuery}
 \keyword{iron}
+\keyword{rgcam::getQuery}
 \keyword{steel}

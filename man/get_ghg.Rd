@@ -12,5 +12,5 @@ ghg_clean global variable
 \description{
 Get total GHG emissions.
 }
-\keyword{getQuery}
 \keyword{ghg}
+\keyword{rgcam::getQuery}

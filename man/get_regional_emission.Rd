@@ -12,5 +12,5 @@ regional_emission global variable
 \description{
 Compute regional nonCO2 emission: regional production * nonCO2 coef.
 }
-\keyword{getQuery}
 \keyword{nonco2}
+\keyword{rgcam::getQuery}

@@ -13,5 +13,5 @@ fe_sector global variable
 Get final energy demand by sector
 }
 \keyword{energy}
-\keyword{getQuery}
+\keyword{rgcam::getQuery}
 \keyword{tmp}

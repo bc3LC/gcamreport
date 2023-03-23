@@ -29,7 +29,8 @@ Imports:
     extrafont,
     RColorBrewer,
     gridExtra,
-    here
+    here,
+    shiny
 Suggests: 
     rmarkdown,
     testthat
