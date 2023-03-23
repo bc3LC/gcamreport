@@ -20,7 +20,6 @@ Imports:
     dplyr,
     tidyr,
     rgcam,
-    gcamextractor,
     readr,
     ggplot2,
     gtable,
@@ -30,7 +29,8 @@ Imports:
     RColorBrewer,
     gridExtra,
     here,
-    shiny
+    shiny,
+    DT
 Suggests: 
     rmarkdown,
     testthat
