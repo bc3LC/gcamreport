@@ -2,7 +2,13 @@
 
 library(usethis)
 library(magrittr)
+library(shiny)
 library(shinyTree)
+
+# Define app functions ---------------------------------------------------------
+
+source(paste0(here::here(),'/R/app_functions.R'))
+
 
 # Load data --------------------------------------------------------------------
 
@@ -21,16 +27,12 @@ if (!exists('sdata')) {
 
   # develop a nested list for the variables
   cols = unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <- create_nested_list(cols,names(cols))
+  tree_vars <- do_mount_tree(cols,names(cols))
 
   # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
   reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
-  tree_reg <- create_nested_list(reg_cont,names(reg_cont))
+  tree_reg <- do_mount_tree(reg_cont,names(reg_cont))
 }
-
-# Define app functions ---------------------------------------------------------
-
-source(paste0(here::here(),'/R/app_functions.R'))
 
 # Define UI --------------------------------------------------------------------
 

@@ -36,7 +36,7 @@ do_mount_tree <- function(df, column_names, current_column = 1) {
     for (value in unique(filtered_df[[column_names[current_column]]])) {
       # create a nested list for the next level
       filtered_df_tmp = filtered_df[filtered_df[[column_names[current_column]]] == value,]
-      next_list <- create_nested_list(filtered_df_tmp, column_names, current_column = current_column + 1)
+      next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1)
 
       # add the nested list to the current level with the appropriate attributes
       current_list[[value]] <- structure(next_list,
@@ -59,11 +59,11 @@ do_unmount_tree <- function(base_tree, type) {
 
   if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |
-    ll = rrapply(
-      base_tree,
-      classes = "numeric",
-      how = "flatten",
-      options = list(namesep = "|", simplify = FALSE)
+    ll = rrapply::rrapply(
+        base_tree,
+        classes = "numeric",
+        how = "flatten",
+        options = list(namesep = "|", simplify = FALSE)
     )
     ll = names(ll)
 
