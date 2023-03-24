@@ -1,4 +1,4 @@
-
+#'
 #' do_data_sample
 #'
 #' @param sdata: dataset
@@ -8,84 +8,71 @@
 #' @param sel_tree: selected variables in tree
 #' @importFrom magrittr %>%
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_tree) {
+  # subset dataset to the desired user's input
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
     dplyr::filter(Variable %in% sel_tree) %>%
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
 
-  # if (sel_type_vars == 'See all options') {
-  #   data_sample = data_sample %>%
-  #     filter(Variable %in% sel_col0)
-  # } else {
-  #   data_sample = data_sample %>%
-  #     filter(col1 %in% sel_col1)
-  # }
-
-  # data_sample = data_sample %>%
-  #   dplyr::select(c(sel_cols, sel_years)) %>%
-  #   data.table::as.data.table()
-
   return(data_sample)
 }
 
 
-do_mount_tree <- function(a) {
+do_mount_tree <- function(df, column_names, current_column = 1) {
+  # filter the data frame to include only rows with the current level
+  filtered_df <- df[!is.na(df[[column_names[current_column]]]), ]
 
-  # defining tree as list
-  tree <- list()
+  if (nrow(filtered_df) == 0) {
+    # base case: if there are no more rows, return an empty list
+    return("")
+  } else {
+    # create a list for the current level
+    current_list <- list()
 
-  # Condition to identifly if selected column is not last column
-  if (!class(a) %in% c("character","factor") && length(a) > 1) {
+    # loop over the unique values in the current column
+    for (value in unique(filtered_df[[column_names[current_column]]])) {
+      # create a nested list for the next level
+      filtered_df_tmp = filtered_df[filtered_df[[column_names[current_column]]] == value,]
+      next_list <- create_nested_list(filtered_df_tmp, column_names, current_column = current_column + 1)
 
-    # getting list of unique names from the columns to create folder
-    b <- na.omit(unique(a[,1]))
-
-    # running file name in loop
-    for (i in b) {
-      # check if the file name i not blank
-      if (i != "") {
-        # subset data for content of folder
-        subdata <- a[which(a[,1] == i),]
-
-        # if there is only one element for that item change icon as file
-        if (length(subdata[,-1])==1) {
-          tree[[i]] <- structure("", sticon = "file", stdisabled = FALSE, stopened=FALSE)
-        }
-        else {
-          # call the function recursively
-          tree[[i]] <- gettree(subdata[,-1])
-        }
-      }
+      # add the nested list to the current level with the appropriate attributes
+      current_list[[value]] <- structure(next_list,
+                                         sttype="default",
+                                         stopened=FALSE,
+                                         sticon="glyphicon glyphicon-plus",
+                                         stselected=TRUE)
     }
-  }
 
-  # Change icon of last columns as file
-  if ((class(a) == "factor" || length(a) == 1) || (class(a) == "character")) {
-    for (i in a) {
-      tree[[i]] = structure("", sticon = "glyphicon glyphicon-plus", stdisabled = TRUE, stopened=FALSE)
-    }
+    # add the current level to the list with the appropriate attributes
+    structure(current_list,
+              sttype="default",
+              stopened=FALSE,
+              sticon="glyphicon glyphicon-plus",
+              stselected=TRUE)
   }
-
-  return(tree)
 }
 
 do_unmount_tree <- function(a) {
 
-  for (i in 0:6) {
-    tmp <- paste0("(t(sapply(a,function(x) names(x",
-                  paste(rep("[[1]]", i), collapse = ""), "))))")
-    db.tmp = as.data.frame(eval(parse(text = tmp)))
-    if (!exists('db')) {
-      db = t(db.tmp)
-    } else {
-      db = cbind(db,t(db.tmp))
-    }
-  }
-  db = as.data.table(db)
-  data = apply(db, 1, paste, collapse = "|")
-  data = lapply(data, function(x) sub("\\|NULL.*", "", x))
+  if (length(a) > 0) {
+    # transform dataset to list of items with delimiter |
+    ll = rrapply(
+      a,
+      classes = "numeric",
+      how = "flatten",
+      options = list(namesep = "|", simplify = FALSE)
+    )
+    ll = names(ll)
 
-  data = unlist(data,recursive=F)
-  return(data)
+    # keep only the the string after the first delimiter appearance
+    extract_string <- function(x) {
+      split_string <- strsplit(x, "\\|")[[1]]
+      paste(split_string[2:length(split_string)], collapse = "|")
+    }
+    extracted_list <- c(unlist(lapply(ll, extract_string)))
+
+    return(extracted_list)
+  }
+  return(a)
 }

@@ -16,17 +16,17 @@ if (!exists('sdata')) {
   sdata = final_data %>%
     tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
 
+  # create vector of available years
   available_years = as.numeric(names(sdata)[13:length(names(sdata))])
 
+  # develop a nested list for the variables
   cols = unique(sdata[, grepl('col', names(sdata))])
-
-  tree_cols <- do_mount_tree(cols)
-
-
+  tree_cols <- create_nested_list(cols,names(cols))
 }
 
 # Define app functions ---------------------------------------------------------
 
+source(paste0(here::here(),'/R/app_functions.R'))
 
 # Define UI --------------------------------------------------------------------
 
@@ -41,35 +41,10 @@ ui <- fluidPage(
                          choices = unique(sdata$Scenario),
                          selected = unique(sdata$Scenario)),
 
-      # radioButtons(inputId = "select_type_var",
-      #              label = "Select variables:",
-      #              choices = c('By type',
-      #                          'See all options'),
-      #              selected = 'By type'),
-
-      # conditionalPanel(condition = "input.select_type_var == 'See all options'",
-      #                  checkboxGroupInput(inputId = "selected_col0",
-      #                                     label = "Select variables:",
-      #                                     choices = unique(sdata$Variable),
-      #                                     selected = unique(sdata$Variable))
-      #                  ),
-
-      # conditionalPanel(condition = "input.select_type_var == 'By type'",
-      #                  shinyTree("tree_cols",
-      #                            checkbox = TRUE,
-      #                            search = TRUE)
-      #                  ),
       shinyTree("tree",
                  checkbox = TRUE,
                  search = TRUE,
                  searchtime = 1000),
-
-      # conditionalPanel(condition = "input.select_type_var == 'By type'",
-      #                  shinyTree("tree",
-      #                            checkbox = TRUE,
-      #                            search = TRUE,
-      #                            searchtime = 1000)
-      #                  ),
 
       checkboxGroupInput(inputId = "selected_years",
                          label = "Select years:",
@@ -103,24 +78,19 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
 
-  # Text to debug
-  output$debug <- renderPrint({
-    # print(as.matrix.data.frame(a))
-    tree_data = shinyTree::get_selected(input$tree, format = 'slices')
-    print(do_unmount_tree(tree_data))
-    # print(str(tree_data[[1]][1]))
-    # print(as.matrix.data.frame(as.data.frame(do.call(cbind,tree_data))))
-
-
-    # dd  <-  as.data.frame(matrix(unlist(tree_data), nrow=length(unlist(tree_data[3]))))
-    # print(dd)
-  })
-  output$debug2 <- renderPrint({
-    sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
-    sel_tree = do_unmount_tree(sel_tree)
-
-    print(sel_tree)
-  })
+  # # Text to debug
+  # output$debug <- renderPrint({
+  #   sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
+  #   save(sel_tree, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\tt.RData'))
+  #
+  #   print(sel_tree)
+  # })
+  # output$debug2 <- renderPrint({
+  #   sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
+  #   sel_tree = do_unmount_tree(sel_tree)
+  #
+  #   print(sel_tree)
+  # })
 
 
   output$tree <- shinyTree::renderTree({
@@ -144,7 +114,9 @@ server <- function(input, output, session) {
       paste0("gcamreport.csv")
     },
     content = function(file) {
-      data_sample = do_data_sample(input$selected_scen,input$selected_years,input$selected_cols)
+      sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
+      sel_tree = do_unmount_tree(sel_tree)
+      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree)
       write.csv(data_sample, file)
     }
   )
