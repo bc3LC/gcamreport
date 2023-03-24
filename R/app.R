@@ -21,7 +21,11 @@ if (!exists('sdata')) {
 
   # develop a nested list for the variables
   cols = unique(sdata[, grepl('col', names(sdata))])
-  tree_cols <- create_nested_list(cols,names(cols))
+  tree_vars <- create_nested_list(cols,names(cols))
+
+  # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
+  reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
+  tree_reg <- create_nested_list(reg_cont,names(reg_cont))
 }
 
 # Define app functions ---------------------------------------------------------
@@ -41,10 +45,25 @@ ui <- fluidPage(
                          choices = unique(sdata$Scenario),
                          selected = unique(sdata$Scenario)),
 
-      shinyTree("tree",
+      br(),
+      tags$div(style="font-weight: bold", checked=NA,
+               tags$p("Select variables")
+      ),
+      shinyTree("tree_variables",
                  checkbox = TRUE,
                  search = TRUE,
-                 searchtime = 1000),
+                 searchtime = 500),
+
+      br(),
+      tags$div(style="font-weight: bold", checked=NA,
+               tags$p("Select regions")
+      ),
+      # tags$div(class="header", checked=NA,
+      #          tags$p("Select regions")
+      # ),
+
+      shinyTree("tree_regions",
+                 checkbox = TRUE),
 
       checkboxGroupInput(inputId = "selected_years",
                          label = "Select years:",
@@ -86,23 +105,33 @@ server <- function(input, output, session) {
   #   print(sel_tree)
   # })
   # output$debug2 <- renderPrint({
-  #   sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
-  #   sel_tree = do_unmount_tree(sel_tree)
+  #   sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+  #   sel_tree_reg = do_unmount_tree(sel_tree_reg, 'regions')
+  #   save(sel_tree_reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
   #
-  #   print(sel_tree)
+  #   print(sel_tree_reg)
   # })
 
 
-  output$tree <- shinyTree::renderTree({
-    tree_cols
+  output$tree_variables <- shinyTree::renderTree({
+    tree_vars
+  })
+
+  output$tree_regions <- shinyTree::renderTree({
+    tree_reg
   })
 
 
   # Data table
   output$datatable <- DT::renderDataTable({
-    sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
-    sel_tree = do_unmount_tree(sel_tree)
-    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree)
+    sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+    sel_tree_vars = do_unmount_tree(sel_tree_vars, 'variables')
+
+    sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    sel_tree_reg = do_unmount_tree(sel_tree_reg, 'regions')
+
+    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+                                 sel_tree_vars,sel_tree_reg)
     DT::datatable(data = data_sample,
                   options = list(pageLength = 10),
                   rownames = FALSE)
@@ -114,9 +143,9 @@ server <- function(input, output, session) {
       paste0("gcamreport.csv")
     },
     content = function(file) {
-      sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
-      sel_tree = do_unmount_tree(sel_tree)
-      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree)
+      sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+      sel_tree_vars = do_unmount_tree(sel_tree_vars)
+      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree_vars)
       write.csv(data_sample, file)
     }
   )

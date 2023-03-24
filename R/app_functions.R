@@ -5,13 +5,15 @@
 #' @param sel_scen: selected scenario/s
 #' @param sel_years: selected year/s
 #' @param sel_cols: selected column/s
-#' @param sel_tree: selected variables in tree
+#' @param sel_vars: selected variables in tree
+#' @param sel_reg: selected regions in tree
 #' @importFrom magrittr %>%
-do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_tree) {
+do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
   # subset dataset to the desired user's input
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
-    dplyr::filter(Variable %in% sel_tree) %>%
+    dplyr::filter(Variable %in% sel_vars) %>%
+    dplyr::filter(Region %in% sel_reg) %>%
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
 
@@ -53,12 +55,12 @@ do_mount_tree <- function(df, column_names, current_column = 1) {
   }
 }
 
-do_unmount_tree <- function(a) {
+do_unmount_tree <- function(base_tree, type) {
 
-  if (length(a) > 0) {
+  if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |
     ll = rrapply(
-      a,
+      base_tree,
       classes = "numeric",
       how = "flatten",
       options = list(namesep = "|", simplify = FALSE)
@@ -68,7 +70,12 @@ do_unmount_tree <- function(a) {
     # keep only the the string after the first delimiter appearance
     extract_string <- function(x) {
       split_string <- strsplit(x, "\\|")[[1]]
-      paste(split_string[2:length(split_string)], collapse = "|")
+      if (type == 'variables') {
+        paste(split_string[2:length(split_string)], collapse = "|")
+      } else if (type == 'regions') {
+        split_string <- strsplit(x, "\\|")[[1]][3]
+        split_string <- na.omit(split_string)
+      }
     }
     extracted_list <- c(unlist(lapply(ll, extract_string)))
 
