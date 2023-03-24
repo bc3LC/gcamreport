@@ -2,6 +2,7 @@
 
 library(usethis)
 library(magrittr)
+library(shinyTree)
 
 # Load data --------------------------------------------------------------------
 
@@ -18,54 +19,14 @@ if (!exists('sdata')) {
   available_years = as.numeric(names(sdata)[13:length(names(sdata))])
 
   cols = unique(sdata[, grepl('col', names(sdata))])
-  tree_cols = dput(cols)
 
-  # tree.data <-    list(
-  #   'Recreational - Fishing' = structure(list(
-  #     'Boat' = structure(list(
-  #       'Cray pot'= structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Hand/rod & line' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Cray loop' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Drop net' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Spear' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Other' = structure("",sttype="default",sticon="glyphicon glyphicon-record")),
-  #       sttype="default",stopened=FALSE,sticon="glyphicon glyphicon-plus", stdisabled=TRUE)),
-  #     sttype="default",stopened=FALSE,sticon="glyphicon glyphicon-plus")
-  # )
-
-  # tree_cols <- list(
-  #   'Agricultural Demand' = structure(list(
-  #     'Crops' = structure(list(
-  #       'Energy'= structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Food' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Feed' = structure("",sttype="default",sticon="glyphicon glyphicon-record"),
-  #       'Other' = structure("",sttype="default",sticon="glyphicon glyphicon-record")),
-  #       sttype="default",stopened=FALSE,sticon="glyphicon glyphicon-plus", stdisabled=TRUE)),
-  #     sttype="default",stopened=FALSE,sticon="glyphicon glyphicon-plus")
-  # )
+  tree_cols <- do_mount_tree(cols)
 
 
 }
 
-# Define extra functions -------------------------------------------------------
+# Define app functions ---------------------------------------------------------
 
-do_data_sample <- function(sel_scen,sel_years,sel_cols,sel_type_vars,
-                           sel_col0,sel_col1) {
-  data_sample = sdata %>%
-    filter(Scenario %in% sel_scen)
-
-  if (sel_type_vars == 'See all options') {
-    data_sample = data_sample %>%
-      filter(Variable %in% sel_col0)
-  } else {
-    data_sample = data_sample %>%
-      filter(col1 %in% sel_col1)
-  }
-
-  data_sample = data_sample[, colnames(data_sample) %in% c(sel_years, sel_cols)]
-
-  return(data_sample)
-}
 
 # Define UI --------------------------------------------------------------------
 
@@ -80,31 +41,35 @@ ui <- fluidPage(
                          choices = unique(sdata$Scenario),
                          selected = unique(sdata$Scenario)),
 
-      radioButtons(inputId = "select_type_var",
-                   label = "Select variables:",
-                   choices = c('By type',
-                               'See all options'),
-                   selected = 'By type'),
+      # radioButtons(inputId = "select_type_var",
+      #              label = "Select variables:",
+      #              choices = c('By type',
+      #                          'See all options'),
+      #              selected = 'By type'),
 
-      conditionalPanel(condition = "input.select_type_var == 'See all options'",
-                       checkboxGroupInput(inputId = "selected_col0",
-                                          label = "Select variables:",
-                                          choices = unique(sdata$Variable),
-                                          selected = unique(sdata$Variable))
-                       ),
+      # conditionalPanel(condition = "input.select_type_var == 'See all options'",
+      #                  checkboxGroupInput(inputId = "selected_col0",
+      #                                     label = "Select variables:",
+      #                                     choices = unique(sdata$Variable),
+      #                                     selected = unique(sdata$Variable))
+      #                  ),
 
       # conditionalPanel(condition = "input.select_type_var == 'By type'",
       #                  shinyTree("tree_cols",
       #                            checkbox = TRUE,
       #                            search = TRUE)
       #                  ),
+      shinyTree("tree",
+                 checkbox = TRUE,
+                 search = TRUE,
+                 searchtime = 1000),
 
-      conditionalPanel(condition = "input.select_type_var == 'By type'",
-                       checkboxGroupInput(inputId = "selected_col1",
-                                          label = "Select variables:",
-                                          choices = unique(sdata$col1),
-                                          selected = unique(sdata$col1))
-                       ),
+      # conditionalPanel(condition = "input.select_type_var == 'By type'",
+      #                  shinyTree("tree",
+      #                            checkbox = TRUE,
+      #                            search = TRUE,
+      #                            searchtime = 1000)
+      #                  ),
 
       checkboxGroupInput(inputId = "selected_years",
                          label = "Select years:",
@@ -126,7 +91,8 @@ ui <- fluidPage(
     ),
 
     mainPanel(
-      textOutput(outputId = "debug"),
+      # textOutput(outputId = "debug"),
+      # textOutput(outputId = "debug2"),
       DT::dataTableOutput(outputId = "datatable"),
       downloadButton("download_data", "Download data")
     )
@@ -138,17 +104,35 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   # Text to debug
-  output$debug <- renderText({
-    # paste("Debug: sel_varss = ", input$selected_col0, "\n","\n",
-    #       "sel_col1 = ", input$selected_col1, "\n","\n",
-    #       "length sel_col0 = ", length(input$selected_col0))
+  output$debug <- renderPrint({
+    # print(as.matrix.data.frame(a))
+    tree_data = shinyTree::get_selected(input$tree, format = 'slices')
+    print(do_unmount_tree(tree_data))
+    # print(str(tree_data[[1]][1]))
+    # print(as.matrix.data.frame(as.data.frame(do.call(cbind,tree_data))))
+
+
+    # dd  <-  as.data.frame(matrix(unlist(tree_data), nrow=length(unlist(tree_data[3]))))
+    # print(dd)
+  })
+  output$debug2 <- renderPrint({
+    sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
+    sel_tree = do_unmount_tree(sel_tree)
+
+    print(sel_tree)
+  })
+
+
+  output$tree <- shinyTree::renderTree({
+    tree_cols
   })
 
 
   # Data table
   output$datatable <- DT::renderDataTable({
-    data_sample = do_data_sample(input$selected_scen,input$selected_years,input$selected_cols,input$select_type_var,
-                                 input$selected_col0,input$selected_col1)
+    sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
+    sel_tree = do_unmount_tree(sel_tree)
+    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree)
     DT::datatable(data = data_sample,
                   options = list(pageLength = 10),
                   rownames = FALSE)
