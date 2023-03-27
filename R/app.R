@@ -7,14 +7,14 @@ library(shinyTree)
 
 # Define app functions ---------------------------------------------------------
 
-# source(paste0(here::here(),'/R/app_functions.R'))
+source(paste0(here::here(),'/R/app_functions.R'))
 
 
 # Load data --------------------------------------------------------------------
 
 if (!exists('final_data')) {
-  load_project('gas_fin_updated')
-  read_queries(final_db_year = 2050)
+  gcamreport::load_project('gas_fin_updated')
+  gcamreport::read_queries(final_db_year = 2050)
 }
 
 if (!exists('sdata')) {
@@ -27,11 +27,11 @@ if (!exists('sdata')) {
 
   # develop a nested list for the variables
   cols = unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <- do_mount_tree(cols,names(cols))
+  tree_vars <- do_mount_tree(cols,names(cols),selec=TRUE)
 
   # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
   reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
-  tree_reg <- do_mount_tree(reg_cont,names(reg_cont))
+  tree_reg <- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
 }
 
 # Define UI --------------------------------------------------------------------
@@ -55,6 +55,8 @@ ui <- fluidPage(
                  checkbox = TRUE,
                  search = TRUE,
                  searchtime = 500),
+      actionLink("select_all_variables","Select All"),
+      actionLink("select_none_variables","Select None"),
 
       br(),
       tags$div(style="font-weight: bold", checked=NA,
@@ -66,6 +68,8 @@ ui <- fluidPage(
 
       shinyTree("tree_regions",
                  checkbox = TRUE),
+      actionLink("select_all_regions","Select All"),
+      actionLink("select_none_regions","Select None"),
 
       checkboxGroupInput(inputId = "selected_years",
                          label = "Select years:",
@@ -123,6 +127,56 @@ server <- function(input, output, session) {
   # })
   ############
 
+  # Select all/none variables
+  observe({
+    if(input$select_all_variables == 0) return(NULL)
+    else {
+      updateTree(session, treeId = "tree_variables", data = treeDataVar_sel())
+      # data_sample()
+    }
+  })
+  observe({
+    if(input$select_none_variables == 0) return(NULL)
+    else {
+      updateTree(session, treeId = "tree_variables", data = treeDataVar_unsel())
+      # data_sample()
+    }
+  })
+
+  treeDataVar_sel <- reactive({
+    tree_vars <- do_mount_tree(cols ,names(cols), selec = TRUE)
+  })
+  treeDataVar_unsel <- reactive({
+    tree_vars <- do_mount_tree(cols ,names(cols), selec = FALSE)
+  })
+
+  # Select all/none regions
+  observe({
+    if(input$select_all_regions == 0) return(NULL)
+    else {
+      updateTree(session, treeId = "tree_regions", data = treeDataReg_sel())
+      # data_sample()
+    }
+  })
+  observe({
+    if(input$select_none_regions == 0) return(NULL)
+    else {
+      updateTree(session, treeId = "tree_regions", data = treeDataReg_unsel())
+      # data_sample()
+    }
+  })
+
+  treeDataReg_sel <- reactive({
+    tree_reg <- do_mount_tree(reg_cont ,names(reg_cont), selec = TRUE)
+  })
+  treeDataReg_unsel <- reactive({
+    tree_reg <- do_mount_tree(reg_cont ,names(reg_cont), selec = FALSE)
+  })
+
+  # observeEvent(input$updateTree,{
+  #   updateTree(session, treeId = "tree_variables", data = treeData())
+  # })
+
 
   # Variables tree
   output$tree_variables <- shinyTree::renderTree({
@@ -133,6 +187,13 @@ server <- function(input, output, session) {
   output$tree_regions <- shinyTree::renderTree({
     tree_reg
   })
+
+  # # Subset selected by the user
+  # data_sample <- observe({
+  #   do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+  #                  shinyTree::get_selected(input$tree_variables, format = 'slices'),
+  #                  shinyTree::get_selected(input$tree_regions, format = 'slices'))
+  # })
 
   # Plot
   output$plot <- renderPlot({
@@ -166,19 +227,19 @@ server <- function(input, output, session) {
                   rownames = FALSE)
   })
 
-  # Download file
-  output$download_data <- downloadHandler(
-    filename = function() {
-      paste0("gcamreport.csv")
-    },
-    content = function(file) {
-      sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-      sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
-                                   sel_tree_vars,sel_tree_reg)
-      write.csv(data_sample, file)
-    }
-  )
+  # # Download file
+  # output$download_data <- downloadHandler(
+  #   filename = function() {
+  #     paste0("gcamreport.csv")
+  #   },
+  #   content = function(file) {
+  #     sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+  #     sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+  #     data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+  #                                  sel_tree_vars,sel_tree_reg)
+  #     write.csv(data_sample, file)
+  #   }
+  # )
 
 }
 

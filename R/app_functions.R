@@ -38,7 +38,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
 #' @param current_column: number of the current column
 #' @importFrom magrittr %>%
 #' @return nested list
-do_mount_tree <- function(df, column_names, current_column = 1) {
+do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
   # filter the data frame to include only rows with the current level
   filtered_df <- df[!is.na(df[[column_names[current_column]]]), ]
 
@@ -53,14 +53,14 @@ do_mount_tree <- function(df, column_names, current_column = 1) {
     for (value in unique(filtered_df[[column_names[current_column]]])) {
       # create a nested list for the next level
       filtered_df_tmp = filtered_df[filtered_df[[column_names[current_column]]] == value,]
-      next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1)
+      next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1, selec)
 
       # add the nested list to the current level with the appropriate attributes
       current_list[[value]] <- structure(next_list,
                                          sttype="default",
                                          stopened=FALSE,
                                          sticon="glyphicon glyphicon-plus",
-                                         stselected=TRUE)
+                                         stselected=selec)
     }
 
     # add the current level to the list with the appropriate attributes
@@ -68,7 +68,7 @@ do_mount_tree <- function(df, column_names, current_column = 1) {
               sttype="default",
               stopened=FALSE,
               sticon="glyphicon glyphicon-plus",
-              stselected=TRUE)
+              stselected=selec)
   }
 }
 
