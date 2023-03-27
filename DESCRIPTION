@@ -30,6 +30,7 @@ Imports:
     gridExtra,
     here,
     shiny,
+    shinyTree,
     DT
 Suggests: 
     rmarkdown,

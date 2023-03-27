@@ -7,14 +7,14 @@ library(shinyTree)
 
 # Define app functions ---------------------------------------------------------
 
-source(paste0(here::here(),'/R/app_functions.R'))
+# source(paste0(here::here(),'/R/app_functions.R'))
 
 
 # Load data --------------------------------------------------------------------
 
 if (!exists('final_data')) {
-  gcamreport::load_project('gas_fin_updated')
-  gcamreport::read_queries(final_db_year = 2050)
+  load_project('gas_fin_updated')
+  read_queries(final_db_year = 2050)
 }
 
 if (!exists('sdata')) {
@@ -87,10 +87,17 @@ ui <- fluidPage(
     ),
 
     mainPanel(
-      # textOutput(outputId = "debug"),
-      # textOutput(outputId = "debug2"),
-      DT::dataTableOutput(outputId = "datatable"),
-      downloadButton("download_data", "Download data")
+      tabsetPanel(
+        type = "tabs",
+        tabPanel("Data",
+                 # textOutput(outputId = "debug"),
+                 # textOutput(outputId = "debug2"),
+                 DT::dataTableOutput(outputId = "datatable"),
+                 downloadButton("download_data", "Download data")
+          ),
+        tabPanel("Plot",
+                 plotOutput("plot"))
+      )
     )
   )
 )
@@ -99,7 +106,8 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
 
-  # # Text to debug
+  # Debugging
+  #########
   # output$debug <- renderPrint({
   #   sel_tree = shinyTree::get_selected(input$tree, format = 'slices')
   #   save(sel_tree, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\tt.RData'))
@@ -113,27 +121,47 @@ server <- function(input, output, session) {
   #
   #   print(sel_tree_reg)
   # })
+  ############
 
 
+  # Variables tree
   output$tree_variables <- shinyTree::renderTree({
     tree_vars
   })
 
+  # Regions tree
   output$tree_regions <- shinyTree::renderTree({
     tree_reg
+  })
+
+  # Plot
+  output$plot <- renderPlot({
+
+    sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+    sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+                                 sel_tree_vars,sel_tree_reg)
+    data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+      dplyr::mutate(values = as.numeric(as.character(values)))
+    save(data_sample, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\data_sample.RData'))
+    data_sample = data_sample %>%
+      dplyr::mutate(year = as.numeric(as.character(year))) %>%
+      dplyr::mutate(values = as.numeric(as.character(values)))
+    ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+      ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+      ggplot2::geom_line() +
+      ggplot2::guides(color = ggplot2::guide_legend(title = 'Scenario')) +
+      ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
   })
 
 
   # Data table
   output$datatable <- DT::renderDataTable({
     sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-    sel_tree_vars = do_unmount_tree(sel_tree_vars, 'variables')
-
     sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-    sel_tree_reg = do_unmount_tree(sel_tree_reg, 'regions')
-
     data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
                                  sel_tree_vars,sel_tree_reg)
+
     DT::datatable(data = data_sample,
                   options = list(pageLength = 10),
                   rownames = FALSE)
@@ -146,8 +174,9 @@ server <- function(input, output, session) {
     },
     content = function(file) {
       sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-      sel_tree_vars = do_unmount_tree(sel_tree_vars)
-      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,sel_tree_vars)
+      sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+      data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+                                   sel_tree_vars,sel_tree_reg)
       write.csv(data_sample, file)
     }
   )

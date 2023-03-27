@@ -2,7 +2,7 @@
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between variables, functions to load them, dependent variables, and availables verifications
+#' @description mapping between variables, functions to load them, dependent variables, and available verifications
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::var_fun_map

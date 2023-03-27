@@ -25,11 +25,11 @@ vet_dir <- paste0(iamc_dir, "/vetting")
 use_data(vet_dir, overwrite=T)
 
 # variables_functions_mapping
-var_fun_map = read.csv(paste0(iamc_dir, "/variables_functions_mapping.csv"),
+var_fun_map <- read.csv(paste0(iamc_dir, "/variables_functions_mapping.csv"),
                        sep=';',header=T, na.strings=c("","NA"))
 
-var_fun_map$dependencies = as.list(strsplit(var_fun_map$dependencies, ","))
-var_fun_map$checks = as.list(strsplit(var_fun_map$checks, ","))
+var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))
+var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
 use_data(var_fun_map, overwrite=T)
 
 # Read in template

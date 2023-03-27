@@ -14,7 +14,7 @@ local
 var_fun_map
 }
 \description{
-mapping between variables, functions to load them, dependent variables, and availables verifications
+mapping between variables, functions to load them, dependent variables, and available verifications
 \dontrun{
  library(gcamreport);
  gcamreport::var_fun_map

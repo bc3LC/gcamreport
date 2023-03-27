@@ -1,6 +1,10 @@
-#'
+#########################################################################
+#                         APP ANCILLARY FUNCTIONS                       #
+#########################################################################
+
 #' do_data_sample
 #'
+#' Function to subset a dataset with the user's choices
 #' @param sdata: dataset
 #' @param sel_scen: selected scenario/s
 #' @param sel_years: selected year/s
@@ -8,7 +12,12 @@
 #' @param sel_vars: selected variables in tree
 #' @param sel_reg: selected regions in tree
 #' @importFrom magrittr %>%
+#' @return subseted dataset
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
+  # create dataframes from the nested variables and regions lists
+  sel_vars = do_unmount_tree(sel_vars, 'variables')
+  sel_reg = do_unmount_tree(sel_reg, 'regions')
+
   # subset dataset to the desired user's input
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
@@ -21,6 +30,14 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
 }
 
 
+#' do_mount_tree
+#'
+#' Recursive function to create a nested list from a dataframe.
+#' @param df: dataset
+#' @param column_names: names of the columns of the original dataset
+#' @param current_column: number of the current column
+#' @importFrom magrittr %>%
+#' @return nested list
 do_mount_tree <- function(df, column_names, current_column = 1) {
   # filter the data frame to include only rows with the current level
   filtered_df <- df[!is.na(df[[column_names[current_column]]]), ]
@@ -55,6 +72,15 @@ do_mount_tree <- function(df, column_names, current_column = 1) {
   }
 }
 
+
+#' do_unmount_tree
+#'
+#' Create a dataframe from a nested list.
+#' @param base_tree: nested list
+#' @param type: 'variables' if nested list is refereed to variables, 'regions'
+#' if it refers to regional  aggregation
+#' @importFrom magrittr %>%
+#' @return dataframe
 do_unmount_tree <- function(base_tree, type) {
 
   if (length(base_tree) > 0) {
