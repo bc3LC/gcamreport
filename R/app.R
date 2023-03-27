@@ -154,7 +154,6 @@ server <- function(input, output, session) {
       ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
   })
 
-
   # Data table
   output$datatable <- DT::renderDataTable({
     sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
