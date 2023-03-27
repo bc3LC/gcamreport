@@ -74,6 +74,7 @@ ui <- fluidPage(
       br(),br(),
       checkboxGroupInput(inputId = "selected_years",
                          label = "Select years:",
+                         inline = TRUE,
                          choices = available_years,
                          selected = available_years),
 
