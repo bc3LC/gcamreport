@@ -95,7 +95,7 @@ ui <- fluidPage(
         type = "tabs",
         tabPanel("Data",
                  # textOutput(outputId = "debug"),
-                 # textOutput(outputId = "debug2"),
+                 textOutput(outputId = "debug2"),
                  DT::dataTableOutput(outputId = "datatable"),
                  downloadButton("download_data", "Download data")
           ),
@@ -118,13 +118,13 @@ server <- function(input, output, session) {
   #
   #   print(sel_tree)
   # })
-  # output$debug2 <- renderPrint({
-  #   sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-  #   sel_tree_reg = do_unmount_tree(sel_tree_reg, 'regions')
-  #   save(sel_tree_reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
-  #
-  #   print(sel_tree_reg)
-  # })
+  output$debug2 <- renderPrint({
+    # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    # sel_tree_reg = do_unmount_tree(sel_tree_reg, 'regions')
+    # save(sel_tree_reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
+
+    print(input$select_none_regions)
+  })
   ############
 
   # Select all/none variables
@@ -132,14 +132,12 @@ server <- function(input, output, session) {
     if(input$select_all_variables == 0) return(NULL)
     else {
       updateTree(session, treeId = "tree_variables", data = treeDataVar_sel())
-      # data_sample()
     }
   })
   observe({
     if(input$select_none_variables == 0) return(NULL)
     else {
       updateTree(session, treeId = "tree_variables", data = treeDataVar_unsel())
-      # data_sample()
     }
   })
 
@@ -155,16 +153,16 @@ server <- function(input, output, session) {
     if(input$select_all_regions == 0) return(NULL)
     else {
       updateTree(session, treeId = "tree_regions", data = treeDataReg_sel())
-      # data_sample()
     }
   })
   observe({
     if(input$select_none_regions == 0) return(NULL)
     else {
       updateTree(session, treeId = "tree_regions", data = treeDataReg_unsel())
-      # data_sample()
     }
   })
+
+
 
   treeDataReg_sel <- reactive({
     tree_reg <- do_mount_tree(reg_cont ,names(reg_cont), selec = TRUE)
@@ -188,24 +186,24 @@ server <- function(input, output, session) {
     tree_reg
   })
 
-  # # Subset selected by the user
-  # data_sample <- observe({
-  #   do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
-  #                  shinyTree::get_selected(input$tree_variables, format = 'slices'),
-  #                  shinyTree::get_selected(input$tree_regions, format = 'slices'))
-  # })
+  # Subset selected by the user
+  doo_data_sample <- reactive({
+    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+                                 shinyTree::get_selected(input$tree_variables, format = 'slices'),
+                                 shinyTree::get_selected(input$tree_regions, format = 'slices'))
+  })
 
   # Plot
   output$plot <- renderPlot({
 
-    sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-    sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
-                                 sel_tree_vars,sel_tree_reg)
-    data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-      dplyr::mutate(values = as.numeric(as.character(values)))
-    save(data_sample, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\data_sample.RData'))
-    data_sample = data_sample %>%
+    # sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+    # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    # data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+    #                              sel_tree_vars,sel_tree_reg)
+    # data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+    #   dplyr::mutate(values = as.numeric(as.character(values)))
+    # save(data_sample, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\data_sample.RData'))
+    data_sample = doo_data_sample() %>%
       dplyr::mutate(year = as.numeric(as.character(year))) %>%
       dplyr::mutate(values = as.numeric(as.character(values)))
     ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
@@ -217,12 +215,11 @@ server <- function(input, output, session) {
 
   # Data table
   output$datatable <- DT::renderDataTable({
-    sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-    sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-    data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
-                                 sel_tree_vars,sel_tree_reg)
-
-    DT::datatable(data = data_sample,
+    # sel_tree_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
+    # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    # data_sample = do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
+    #                              sel_tree_vars,sel_tree_reg)
+    DT::datatable(data = doo_data_sample(),
                   options = list(pageLength = 10),
                   rownames = FALSE)
   })
