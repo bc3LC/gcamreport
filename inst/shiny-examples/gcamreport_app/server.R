@@ -74,13 +74,17 @@ server <- function(input, output, session) {
 
   # Plot
   output$plot <- renderPlot({
-    data_sample = doo_data_sample() %>%
-      dplyr::mutate(year = as.numeric(as.character(year))) %>%
-      dplyr::mutate(values = as.numeric(as.character(values)))
+    data_sample = doo_data_sample()
+    data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+      dplyr::mutate(values = as.numeric(as.character(values))) %>%
+      dplyr::mutate(year = as.numeric(as.character(year)))
+
     ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
       ggplot2::geom_point(ggplot2::aes(shape = Region)) +
       ggplot2::geom_line() +
-      ggplot2::guides(color = ggplot2::guide_legend(title = 'Scenario')) +
+      ggplot2::scale_color_manual('Scenario', values = viridis::magma(length(unique(data_sample$Scenario)))) +
+      ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
+      # ggplot2::guides(color = ggplot2::guide_legend(title = 'Scenario')) +
       ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
   })
 
