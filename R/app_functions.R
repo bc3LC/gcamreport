@@ -13,6 +13,7 @@
 #' @param sel_reg: selected regions in tree
 #' @importFrom magrittr %>%
 #' @return subseted dataset
+#' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
   # create dataframes from the nested variables and regions lists
   sel_vars = do_unmount_tree(sel_vars, 'variables')
@@ -38,6 +39,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
 #' @param current_column: number of the current column
 #' @importFrom magrittr %>%
 #' @return nested list
+#' @export
 do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
   # filter the data frame to include only rows with the current level
   filtered_df <- df[!is.na(df[[column_names[current_column]]]), ]
@@ -81,6 +83,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
 #' if it refers to regional  aggregation
 #' @importFrom magrittr %>%
 #' @return dataframe
+#' @export
 do_unmount_tree <- function(base_tree, type) {
 
   if (length(base_tree) > 0) {

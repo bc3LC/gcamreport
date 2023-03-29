@@ -53,9 +53,10 @@ load_variable = function(var){
 #' @keywords internal
 #' @return load variable
 #' @export
-read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All') {
+read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', launch_app = TRUE) {
   # load project
-  # load_project(project_name)
+  print('Creating project...')
+  load_project(project_name)
 
   # make final_db_year as a global variable
   final_db_year <<- final_db_year
@@ -129,4 +130,24 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   for (e in errors) {
     print(e)
   }
+
+  sdata <<- final_data %>%
+    tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+
+  # create vector of available years
+  available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
+
+  # develop a nested list for the variables
+  cols <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+
+  # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
+  reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
+  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+
+  if (launch_app) {
+    print('Launching app...')
+    runExample()
+  }
+
 }

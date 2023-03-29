@@ -7,7 +7,8 @@
 read_queries(
   project_name = "gas_fin_updated",
   final_db_year = 2100,
-  desired_variables = "All"
+  desired_variables = "All",
+  launch_app = TRUE
 )
 }
 \arguments{
