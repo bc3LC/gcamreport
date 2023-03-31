@@ -64,7 +64,24 @@ ui <- dashboardPage(
           returnValue = "id",
           closeDepth = 0
         )
-      )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_all_regions",
+          label = "Select all",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_none_regions",
+          label = "Select none",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      br()
     ),
 
     ## -- Variables
@@ -83,7 +100,24 @@ ui <- dashboardPage(
           returnValue = "id",
           closeDepth = 0
         )
-      )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_all_variables",
+          label = "Select all",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_none_variables",
+          label = "Select none",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      br()
     ),
 
 
@@ -110,13 +144,13 @@ ui <- dashboardPage(
         width = 12,
         id = "tab_box",
         tabPanel("Data",
+                 verbatimTextOutput("res3"),
                  DT::dataTableOutput(outputId = "datatable")
                  ),
         tabPanel("Plot", "TODO")
 
         # title = "Data",
         #   #   "Box content here", br(), "More box content",
-        #   # verbatimTextOutput("res3"),
         # DT::dataTableOutput(outputId = "datatable")
         #   #   # downloadButton("download_data", "Download data")
         #   # )
@@ -128,7 +162,7 @@ ui <- dashboardPage(
 server <- function(input, output) {
  # useShinyjs()
   ## -- debug
-  # output$res3 <- renderPrint(input$tree_variables)
+  output$res3 <- renderPrint(input$tree_variables)
 
 
   ## -- function: select variables chosen by the user
@@ -139,6 +173,22 @@ server <- function(input, output) {
   #                  shinyTree::get_selected(input$tree_regions, format = 'slices'))
   # })
 
+  ## -- select all/none variables
+  observeEvent(input$select_all_variables, {
+    updateTreeInput(inputId = "tree_variables", selected = c(unique(cols[,1])))
+  })
+  observeEvent(input$select_none_variables, {
+    updateTreeInput(inputId = "tree_variables", selected = character(0))
+  })
+
+
+  ## -- select all/none variables
+  observeEvent(input$select_all_regions, {
+    updateTreeInput(inputId = "tree_regions", selected = c(unique(reg_cont$region)))
+  })
+  observeEvent(input$select_none_regions, {
+    updateTreeInput(inputId = "tree_regions", selected = character(0))
+  })
 
 
   ## -- data table
@@ -152,11 +202,9 @@ server <- function(input, output) {
       dplyr::select(c(input$selected_cols, input$selected_years)) %>%
       data.table::as.data.table()
 
-    # DT::datatable(data = doo_data_sample(),
     DT::datatable(data = data_sample,
                   options = list(pageLength = 10, scrollX = TRUE),
                   rownames = FALSE)
-
   })
 
 }
