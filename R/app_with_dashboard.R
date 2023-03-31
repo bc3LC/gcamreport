@@ -4,6 +4,7 @@ library(shinydashboard)
 library(shinyTree)
 library(magrittr)
 library(shinyjs)
+library(dashboardthemes)
 
 ui <- dashboardPage(
   dashboardHeader(title = "gcamreport"),
@@ -103,19 +104,29 @@ ui <- dashboardPage(
   )),
 
 
-  dashboardBody(fluidRow(
-    # box(
-    #   title = "Data", status = "warning",
-    #   "Box content here", br(), "More box content",
-    # verbatimTextOutput("res3"),
-      DT::dataTableOutput(outputId = "datatable")
-    #   # downloadButton("download_data", "Download data")
-    # )
-  ))
+  dashboardBody(
+    fluidRow(
+      tabBox(
+        width = 12,
+        id = "tab_box",
+        tabPanel("Data",
+                 DT::dataTableOutput(outputId = "datatable")
+                 ),
+        tabPanel("Plot", "TODO")
+
+        # title = "Data",
+        #   #   "Box content here", br(), "More box content",
+        #   # verbatimTextOutput("res3"),
+        # DT::dataTableOutput(outputId = "datatable")
+        #   #   # downloadButton("download_data", "Download data")
+        #   # )
+      )
+    )
+  )
 )
 
 server <- function(input, output) {
- useShinyjs()
+ # useShinyjs()
   ## -- debug
   # output$res3 <- renderPrint(input$tree_variables)
 
@@ -143,8 +154,9 @@ server <- function(input, output) {
 
     # DT::datatable(data = doo_data_sample(),
     DT::datatable(data = data_sample,
-                  options = list(pageLength = 10),
+                  options = list(pageLength = 10, scrollX = TRUE),
                   rownames = FALSE)
+
   })
 
 }
