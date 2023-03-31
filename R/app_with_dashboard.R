@@ -161,13 +161,11 @@ ui <- dashboardPage(
                  DT::dataTableOutput(outputId = "datatable")
                  ),
         tabPanel("Plot",
-                 # radioGroupButtons(
-                 #   inputId = "graph_group",
-                 #   label = "Choose a graph :",
-                 #   choices = c(`<i class='fa fa-bar-chart'></i>` = "grouped",
-                 #               `<i class='fa fa-pie-chart'></i>` = "ungrouped"),
-                 #   justified = TRUE
-                 # ),
+                 radioGroupButtons(
+                   inputId = "graph_grouping",
+                   label = "Choose how the graph variables should be displayed: ",
+                   choices = c("Grouped", "Ungrouped")
+                 ),
                  br(),
                  # dynamic UI for the plots
                  uiOutput("plots"))
@@ -211,44 +209,68 @@ server <- function(input, output) {
 
 
   ## -- plot
-  # output$plot <- renderPlot({
-  #   data_sample = do_data_sample(sdata,
-  #                                input$selected_scen,input$selected_years,
-  #                                input$selected_cols,input$tree_variables,
-  #                                input$tree_regions)
-  #   data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-  #     dplyr::mutate(values = as.numeric(as.character(values))) %>%
-  #     dplyr::mutate(year = as.numeric(as.character(year)))
-  #
-  #   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-  #     ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-  #     ggplot2::geom_line() +
-  #     ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
-  #     ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-  #     ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
-  # })
+  observe({
+    if (input$graph_grouping == 'Grouped'){
+      # display one single plot with all selected variables
 
-  # insert the right number of plot output objects into the web page
-  output$plots <- renderUI({
-    plot_output_list <- lapply(1:length(input$tree_variables), function(i) {
-      plotname <- paste("plot", i, sep="")
-      plotOutput(plotname, height = 400, width = 1000)
-    })
+      # insert the right number of plot output objects into the web page
+      output$plots <- renderUI({
+        plot_output_list <- lapply(1:1, function(i) {
+          plotname <- paste("plot", i, sep="")
+          plotOutput(plotname, height = 400, width = 1000)
+        })
 
-    # Convert the list to a tagList - this is necessary for the list of items
-    # to display properly.
-    do.call(tagList, plot_output_list)
-  })
+        # Convert the list to a tagList - this is necessary for the list of items
+        # to display properly.
+        do.call(tagList, plot_output_list)
+      })
 
-  for (i in 1:10) {
-    # Need local so that each item gets its own number. Without it, the value
-    # of i in the renderPlot() will be the same across all instances, because
-    # of when the expression is evaluated.
-    local({
-        my_i <- i
+      local({
+        my_i <- 1
         plotname <- paste("plot", my_i, sep="")
 
         output[[plotname]] <- renderPlot({
+          data_sample = do_data_sample(sdata,
+                                       input$selected_scen,input$selected_years,
+                                       input$selected_cols,input$tree_variables,
+                                       input$tree_regions)
+          data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+            dplyr::mutate(values = as.numeric(as.character(values))) %>%
+            dplyr::mutate(year = as.numeric(as.character(year)))
+          ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+            ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+            ggplot2::geom_line() +
+            ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
+            ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
+            ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
+        })
+      })
+    }
+    else if (input$graph_grouping == 'Ungrouped') {
+      # display one plot for each variable
+
+      # insert the right number of plot output objects into the web page
+      output$plots <- renderUI({
+        plot_output_list <- lapply(1:length(input$tree_variables), function(i) {
+          plotname <- paste("plot", i, sep="")
+          plotOutput(plotname, height = 400, width = 1000)
+        })
+
+        # Convert the list to a tagList - this is necessary for the list of items
+        # to display properly.
+        do.call(tagList, plot_output_list)
+      })
+
+
+      for (i in 1:100) {
+        # Need local so that each item gets its own number. Without it, the value
+        # of i in the renderPlot() will be the same across all instances, because
+        # of when the expression is evaluated.
+        local({
+          my_i <- i
+          plotname <- paste("plot", my_i, sep="")
+
+          output[[plotname]] <- renderPlot({
             data_sample = do_data_sample(sdata,
                                          input$selected_scen,input$selected_years,
                                          input$selected_cols,input$tree_variables[my_i],
@@ -256,16 +278,21 @@ server <- function(input, output) {
             data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
               dplyr::mutate(values = as.numeric(as.character(values))) %>%
               dplyr::mutate(year = as.numeric(as.character(year)))
+
             ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
               ggplot2::geom_point(ggplot2::aes(shape = Region)) +
               ggplot2::geom_line() +
-              ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
+              ggplot2::guides(linetype = 'none') +
+              ggplot2::scale_linetype_manual('', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
               ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
               ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
-        })
+          })
 
-    })
-  }
+        })
+      }
+    }
+  })
+
 
 
 
