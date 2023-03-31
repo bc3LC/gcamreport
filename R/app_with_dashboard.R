@@ -134,6 +134,14 @@ ui <- dashboardPage(
           selected = available_years
         )
       )
+    ),
+
+    ## -- Download button
+    downloadBttn(
+      outputId = "downloadData",
+      style = "simple",
+      color = "default",
+      size = 'sm'
     )
   )),
 
@@ -144,16 +152,10 @@ ui <- dashboardPage(
         width = 12,
         id = "tab_box",
         tabPanel("Data",
-                 verbatimTextOutput("res3"),
+                 # verbatimTextOutput("res3"),
                  DT::dataTableOutput(outputId = "datatable")
                  ),
         tabPanel("Plot", "TODO")
-
-        # title = "Data",
-        #   #   "Box content here", br(), "More box content",
-        # DT::dataTableOutput(outputId = "datatable")
-        #   #   # downloadButton("download_data", "Download data")
-        #   # )
       )
     )
   )
@@ -206,6 +208,26 @@ server <- function(input, output) {
                   options = list(pageLength = 10, scrollX = TRUE),
                   rownames = FALSE)
   })
+
+  ## -- download button
+  output$downloadData <- downloadHandler(
+
+    filename = function() {
+      paste('data-', Sys.Date(), '.csv', sep='')
+    },
+    content = function(con) {
+      reg <- c(unlist(lapply(input$tree_regions, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
+
+      data_sample = sdata %>%
+        dplyr::filter(Scenario %in% input$selected_scen) %>%
+        dplyr::filter(Variable %in% input$tree_variables) %>%
+        dplyr::filter(Region %in% reg) %>%
+        dplyr::select(c(input$selected_cols, input$selected_years)) %>%
+        data.table::as.data.table()
+
+      write.csv(data_sample, con)
+    }
+  )
 
 }
 
