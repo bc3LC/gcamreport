@@ -10,6 +10,7 @@ ui <- dashboardPage(
   dashboardHeader(title = "gcamreport"),
   dashboardSidebar(sidebarMenu(
 
+
     ## -- Scenarios
     menuItem(
       text = "Scenarios",
@@ -25,28 +26,6 @@ ui <- dashboardPage(
       )
     ),
 
-    ## -- Columns
-    menuItem(
-      text = "Columns",
-      icon = NULL,
-      startExpanded = FALSE,
-      menuItem(
-        awesomeCheckboxGroup(
-          inputId = "selected_cols",
-          label = "Select columns",
-          choices = c('Model',
-                      'Scenario',
-                      'Region',
-                      'Variable',
-                      'Unit'),
-          selected = c('Model',
-                       'Scenario',
-                       'Region',
-                       'Variable',
-                       'Unit')
-        )
-      )
-    ),
 
     ## -- Regions
     menuItem(
@@ -60,7 +39,7 @@ ui <- dashboardPage(
           choices = shinyWidgets::create_tree(reg_cont,
                                 levels = c('continent','region'),
                                 levels_id = c('code_continent','code_region')),
-          selected = "Argentina",
+          selected = "Africa",
           returnValue = "id",
           closeDepth = 0
         )
@@ -83,6 +62,7 @@ ui <- dashboardPage(
       ),
       br()
     ),
+
 
     ## -- Variables
     menuItem(
@@ -136,6 +116,31 @@ ui <- dashboardPage(
       )
     ),
 
+
+    ## -- Columns
+    menuItem(
+      text = "Columns",
+      icon = NULL,
+      startExpanded = FALSE,
+      menuItem(
+        awesomeCheckboxGroup(
+          inputId = "selected_cols",
+          label = "Select columns",
+          choices = c('Model',
+                      'Scenario',
+                      'Region',
+                      'Variable',
+                      'Unit'),
+          selected = c('Model',
+                       'Scenario',
+                       'Region',
+                       'Variable',
+                       'Unit')
+        )
+      )
+    ),
+
+
     ## -- Download button
     downloadBttn(
       outputId = "downloadData",
@@ -155,25 +160,17 @@ ui <- dashboardPage(
                  # verbatimTextOutput("res3"),
                  DT::dataTableOutput(outputId = "datatable")
                  ),
-        tabPanel("Plot", "TODO")
+        tabPanel("Plot",
+                 plotOutput("plot"))
       )
     )
   )
 )
 
 server <- function(input, output) {
- # useShinyjs()
   ## -- debug
-  output$res3 <- renderPrint(input$tree_variables)
+  output$res3 <- renderPrint(input$tree_regions)
 
-
-  ## -- function: select variables chosen by the user
-
-  # doo_data_sample <- reactive({
-  #   do_data_sample(sdata,input$selected_scen,input$selected_years,input$selected_cols,
-  #                  shinyTree::get_selected(input$tree_variables, format = 'slices'),
-  #                  shinyTree::get_selected(input$tree_regions, format = 'slices'))
-  # })
 
   ## -- select all/none variables
   observeEvent(input$select_all_variables, {
@@ -203,9 +200,28 @@ server <- function(input, output) {
                   rownames = FALSE)
   })
 
+
+  ## -- plot
+  output$plot <- renderPlot({
+    data_sample = do_data_sample(sdata,
+                                 input$selected_scen,input$selected_years,
+                                 input$selected_cols,input$tree_variables,
+                                 input$tree_regions)
+    data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+      dplyr::mutate(values = as.numeric(as.character(values))) %>%
+      dplyr::mutate(year = as.numeric(as.character(year)))
+
+    ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+      ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+      ggplot2::geom_line() +
+      ggplot2::scale_color_manual('Scenario', values = viridis::magma(length(unique(data_sample$Scenario)))) +
+      ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
+      ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
+  })
+
+
   ## -- download button
   output$downloadData <- downloadHandler(
-
     filename = function() {
       paste('data-', Sys.Date(), '.csv', sep='')
     },
