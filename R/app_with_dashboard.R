@@ -63,10 +63,6 @@ ui <- dashboardPage(
           returnValue = "id",
           closeDepth = 0
         )
-        # shinyTree("tree_regions",
-        #           checkbox = TRUE)
-        # actionLink("select_all_regions","Select All"),
-        # actionLink("select_none_regions","Select None")
       )
     ),
 
@@ -79,10 +75,6 @@ ui <- dashboardPage(
         treeInput(
           inputId = "tree_variables",
           label = "Select variables:",
-          # choices = create_tree(cols),
-          # choices = shinyWidgets::create_tree(cols,
-          #                       levels = c('col1','col2'),
-          #                       levels_id = c('code_col1','code_col2')),
           choices = shinyWidgets::create_tree(cols,
                                 levels = c('col1','col2','col3','col4','col5','col6','col7'),
                                 levels_id = c('code_col1','code_col2','code_col3','code_col4','code_col5','code_col6','code_col7')),
@@ -90,10 +82,6 @@ ui <- dashboardPage(
           returnValue = "id",
           closeDepth = 0
         )
-        # shinyTree("tree_variables",
-        #           checkbox = TRUE)
-        # actionLink("select_all_variables","Select All"),
-        # actionLink("select_none_variables","Select None"),
       )
     ),
 
@@ -132,17 +120,6 @@ server <- function(input, output) {
   # output$res3 <- renderPrint(input$tree_variables)
 
 
-  # ## -- regions tree
-  # output$tree_regions <- shinyTree::renderTree({
-  #   tree_reg
-  # })
-  #
-  # ## -- variables tree
-  # output$tree_variables <- shinyTree::renderTree({
-  #   tree_vars
-  # })
-  #
-
   ## -- function: select variables chosen by the user
 
   # doo_data_sample <- reactive({
@@ -155,17 +132,7 @@ server <- function(input, output) {
 
   ## -- data table
   output$datatable <- DT::renderDataTable({
-    # sel_varss = shinyTree::get_selected(input$tree_variables, format = 'slices')
-    # sel_regg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-    #
-    # sel_vars = do_unmount_tree(sel_varss, 'variables')
-    # sel_reg = do_unmount_tree(sel_regg, 'regions')
-    # vars = do_list(do_mount_db(data = input$tree_variables, ref = cols))
-    # save(vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\vars.RData'))
-
     reg <- c(unlist(lapply(input$tree_regions, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
-    print(reg)
-
 
     data_sample = sdata %>%
       dplyr::filter(Scenario %in% input$selected_scen) %>%

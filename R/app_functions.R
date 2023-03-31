@@ -2,20 +2,12 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
-do_codes <- function(data) {
-  n = ncol(data)
-  for (i in 1:n) {
-    # create codes
-    codes <- formatC(1:length(data[,i]), width = 3, flag = "0")
-
-    # add a new column with the code for each region
-    data$codes <- codes
-    data$codes <- as.numeric(data$codes) + i*100
-    names(data)[n + i] <- paste0('code_',names(data)[i])
-  }
-  return(data)
-}
-
+#' do_codes
+#'
+#' Create new column for each column collapsing all the previous columns
+#' @param data: dataset
+#' @importFrom magrittr %>%
+#' @export
 do_codes <- function(data) {
   n = ncol(data)
   for (i in 1:n) {
