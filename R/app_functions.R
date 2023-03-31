@@ -2,6 +2,34 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+do_codes <- function(data) {
+  n = ncol(data)
+  for (i in 1:n) {
+    # create codes
+    codes <- formatC(1:length(data[,i]), width = 3, flag = "0")
+
+    # add a new column with the code for each region
+    data$codes <- codes
+    data$codes <- as.numeric(data$codes) + i*100
+    names(data)[n + i] <- paste0('code_',names(data)[i])
+  }
+  return(data)
+}
+
+do_codes <- function(data) {
+  n = ncol(data)
+  for (i in 1:n) {
+    data$code <- tidyr::unite(data, col = 'codes', names(data)[1]:names(data)[i], sep = '|')[1]
+    names(data)[n + i] <- paste0('code_',names(data)[i])
+  }
+  data_clean <- data[,(n+1):(n+n)]
+  data_clean <- apply(data_clean, MARGIN = c(1,2), function(x)
+    ifelse(grepl("\\|NA", x), NA, x))
+
+  data[,(n+1):(n+n)] = data_clean
+  return(data)
+}
+
 #' do_data_sample
 #'
 #' Function to subset a dataset with the user's choices
@@ -62,6 +90,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
                                          sttype="default",
                                          stopened=FALSE,
                                          sticon="glyphicon glyphicon-plus",
+                                         id="a",
                                          stselected=selec)
     }
 
@@ -69,6 +98,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
     structure(current_list,
               sttype="default",
               stopened=FALSE,
+              id = 'a',
               sticon="glyphicon glyphicon-plus",
               stselected=selec)
   }

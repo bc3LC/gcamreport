@@ -56,9 +56,11 @@ ui <- dashboardPage(
         treeInput(
           inputId = "tree_regions",
           label = "Select regions:",
-          choices = create_tree(reg_cont),
+          choices = shinyWidgets::create_tree(reg_cont,
+                                levels = c('continent','region'),
+                                levels_id = c('code_continent','code_region')),
           selected = "Argentina",
-          returnValue = "text",
+          returnValue = "id",
           closeDepth = 0
         )
         # shinyTree("tree_regions",
@@ -77,9 +79,15 @@ ui <- dashboardPage(
         treeInput(
           inputId = "tree_variables",
           label = "Select variables:",
-          choices = create_tree(cols),
+          # choices = create_tree(cols),
+          # choices = shinyWidgets::create_tree(cols,
+          #                       levels = c('col1','col2'),
+          #                       levels_id = c('code_col1','code_col2')),
+          choices = shinyWidgets::create_tree(cols,
+                                levels = c('col1','col2','col3','col4','col5','col6','col7'),
+                                levels_id = c('code_col1','code_col2','code_col3','code_col4','code_col5','code_col6','code_col7')),
           selected = "Agricultural Demand",
-          returnValue = "text",
+          returnValue = "id",
           closeDepth = 0
         )
         # shinyTree("tree_variables",
@@ -111,7 +119,7 @@ ui <- dashboardPage(
     # box(
     #   title = "Data", status = "warning",
     #   "Box content here", br(), "More box content",
-    verbatimTextOutput("res3"),
+    # verbatimTextOutput("res3"),
       DT::dataTableOutput(outputId = "datatable")
     #   # downloadButton("download_data", "Download data")
     # )
@@ -121,7 +129,7 @@ ui <- dashboardPage(
 server <- function(input, output) {
  useShinyjs()
   ## -- debug
-  output$res3 <- renderPrint(input$tree_variables)
+  # output$res3 <- renderPrint(input$tree_variables)
 
 
   # ## -- regions tree
@@ -152,13 +160,17 @@ server <- function(input, output) {
     #
     # sel_vars = do_unmount_tree(sel_varss, 'variables')
     # sel_reg = do_unmount_tree(sel_regg, 'regions')
-    vars = do_list(do_mount_db(data = input$tree_variables, ref = cols))
-    save(vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\vars.RData'))
-    #
+    # vars = do_list(do_mount_db(data = input$tree_variables, ref = cols))
+    # save(vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\vars.RData'))
+
+    reg <- c(unlist(lapply(input$tree_regions, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
+    print(reg)
+
+
     data_sample = sdata %>%
       dplyr::filter(Scenario %in% input$selected_scen) %>%
-      dplyr::filter(Variable %in% vars) %>%
-      dplyr::filter(Region %in% input$tree_regions) %>%
+      dplyr::filter(Variable %in% input$tree_variables) %>%
+      dplyr::filter(Region %in% reg) %>%
       dplyr::select(c(input$selected_cols, input$selected_years)) %>%
       data.table::as.data.table()
 
