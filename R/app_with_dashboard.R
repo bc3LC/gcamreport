@@ -18,7 +18,7 @@ ui <- dashboardPage(
       menuItem(
         awesomeCheckboxGroup(
           inputId = "selected_scen",
-          label = "Select scenarios to account in the table",
+          label = "Select scenarios",
           choices = unique(sdata$Scenario),
           selected = unique(sdata$Scenario)
         )
@@ -33,7 +33,7 @@ ui <- dashboardPage(
       menuItem(
         awesomeCheckboxGroup(
           inputId = "selected_cols",
-          label = "Select columns to appear in the table",
+          label = "Select columns",
           choices = c('Model',
                       'Scenario',
                       'Region',
@@ -129,7 +129,7 @@ ui <- dashboardPage(
       menuItem(
         awesomeCheckboxGroup(
           inputId = "selected_years",
-          label = "Select years to appear in the table",
+          label = "Select years",
           choices = available_years,
           selected = available_years
         )
@@ -195,16 +195,10 @@ server <- function(input, output) {
 
   ## -- data table
   output$datatable <- DT::renderDataTable({
-    reg <- c(unlist(lapply(input$tree_regions, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
-
-    data_sample = sdata %>%
-      dplyr::filter(Scenario %in% input$selected_scen) %>%
-      dplyr::filter(Variable %in% input$tree_variables) %>%
-      dplyr::filter(Region %in% reg) %>%
-      dplyr::select(c(input$selected_cols, input$selected_years)) %>%
-      data.table::as.data.table()
-
-    DT::datatable(data = data_sample,
+    DT::datatable(data = do_data_sample(sdata,
+                                        input$selected_scen,input$selected_years,
+                                        input$selected_cols,input$tree_variables,
+                                        input$tree_regions),
                   options = list(pageLength = 10, scrollX = TRUE),
                   rownames = FALSE)
   })
@@ -216,16 +210,11 @@ server <- function(input, output) {
       paste('data-', Sys.Date(), '.csv', sep='')
     },
     content = function(con) {
-      reg <- c(unlist(lapply(input$tree_regions, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
-
-      data_sample = sdata %>%
-        dplyr::filter(Scenario %in% input$selected_scen) %>%
-        dplyr::filter(Variable %in% input$tree_variables) %>%
-        dplyr::filter(Region %in% reg) %>%
-        dplyr::select(c(input$selected_cols, input$selected_years)) %>%
-        data.table::as.data.table()
-
-      write.csv(data_sample, con)
+      write.csv(do_data_sample(sdata,
+                            input$selected_scen,input$selected_years,
+                            input$selected_cols,input$tree_variables,
+                            input$tree_regions),
+                con)
     }
   )
 

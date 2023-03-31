@@ -35,15 +35,12 @@ do_codes <- function(data) {
 #' @return subseted dataset
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
-  # create dataframes from the nested variables and regions lists
-  sel_vars = do_unmount_tree(sel_vars, 'variables')
-  sel_reg = do_unmount_tree(sel_reg, 'regions')
+  reg <- c(unlist(lapply(sel_reg, function(x) na.omit(strsplit(x, "\\|")[[1]][2]))))
 
-  # subset dataset to the desired user's input
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
     dplyr::filter(Variable %in% sel_vars) %>%
-    dplyr::filter(Region %in% sel_reg) %>%
+    dplyr::filter(Region %in% reg) %>%
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
 
