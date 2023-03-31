@@ -3,6 +3,11 @@ library(magrittr)
 library(shiny)
 library(shinyTree)
 
+# server <- shinyServer(function(input, output, session) {
+#   addClass(selector = "body", class = "sidebar-collapse")
+# })
+#
+
 # Define server ----------------------------------------------------------------
 
 server <- function(input, output, session) {
@@ -84,7 +89,6 @@ server <- function(input, output, session) {
       ggplot2::geom_line() +
       ggplot2::scale_color_manual('Scenario', values = viridis::magma(length(unique(data_sample$Scenario)))) +
       ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
-      # ggplot2::guides(color = ggplot2::guide_legend(title = 'Scenario')) +
       ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
   })
 

@@ -74,15 +74,101 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
   }
 }
 
+#' do_mount_db
+#'
+#' Build a database by iterating through a list of items using the values of
+#' previously-recorded items to determine which column to place it in.
+#' @param data: list of items
+#' @param current_row: number of the current row
+#' @param current_column: number of the current column
+#' @param db: final dataframe
+#' @param ref: reference dataframe
+#' @importFrom magrittr %>%
+#' @return itemized dataframe
+#' @export
+do_mount_db <- function(data, current_row = 1, current_col = 1, db = NULL, ref) {
+
+  # if no database is provided, initialize one with a single row and 7 columns.
+  if (is.null(db)) {
+    db = data.frame(matrix(ncol = 7, nrow = 1))
+  }
+
+  if (length(data) > 0) {
+    # if there are still items in the data list:
+
+    if (current_col == 1) {
+      # if this is the first item being added, set the reference dataframe for column selection to include all columns.
+      sub_ref = ref
+    } else {
+      # otherwise, subset the reference dataframe to only include rows that match the values of previously-recorded items.
+      sub_ref = ref
+      for (i in 1:(current_col-1)) {
+        sub_ref = subset(sub_ref, sub_ref[, i] == db[current_row, i])
+      }
+    }
+
+    if (grepl(data[1], unique(sub_ref[current_col]))) {
+      # if the item matches the expected value for the current column:
+
+      # tecord the item in the database.
+      db[current_row, current_col] = data[1]
+
+      # advance to the next column and fill in the remaining columns with NA.
+      current_col = current_col + 1
+      db[current_row, current_col : 7] = NA
+
+      # copy the current row to a new row in the database.
+      # this way, the new item can be added to a new row while preserving the values of previously-recorded items.
+      db[current_row + 1,] = db[current_row,]
+
+      # recursively call the function on the remaining items in the list.
+      do_mount_db(data[-1], current_row = current_row + 1, current_col, db, ref)
+
+    } else {
+      # if the item does not match the expected value for the current column:
+
+      # copy the current row to a new row in the database.
+      # this is necessary because the current row may be modified in a recursive call.
+      db[current_row + 1,] = db[current_row,]
+
+      # recursively call the function with a lower column index.
+      # this effectively "undoes" the previous item recorded at the current column.
+      do_mount_db(data, current_row = current_row + 1, current_col = current_col - 1, db, ref)
+    }
+  } else {
+    # when there are no more items in the list, return the unique rows of the database.
+    return(unique(db))
+  }
+}
+
+
+
+#' do_list
+#'
+#' Create a list of items with separator to match the style of the 'Variables' column
+#' @param db: dataframe
+#' @importFrom magrittr %>%
+#' @return itemized list
+#' @export
+do_list <- function(db) {
+  ## idea: to create a function that from a dataframe creates this list to later see the desired varaibles
+  list = db %>%
+    tidyr::unite(X0, 1:7, sep = "|", remove = FALSE)
+  list = unlist(list[,1])
+  list_clean = lapply(list, function(x) stringr::str_remove_all(x, "\\|NA"))
+
+  return(unlist(list_clean))
+}
+
 
 #' do_unmount_tree
 #'
-#' Create a dataframe from a nested list.
+#' Create a list of "nested" items witha separator from a nested list.
 #' @param base_tree: nested list
 #' @param type: 'variables' if nested list is refereed to variables, 'regions'
 #' if it refers to regional  aggregation
 #' @importFrom magrittr %>%
-#' @return dataframe
+#' @return list of "nested" items
 #' @export
 do_unmount_tree <- function(base_tree, type) {
 
