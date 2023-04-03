@@ -49,6 +49,9 @@ load_variable = function(var){
 #' @param project_name: name of the project. By default = gas_fin_updated.
 #' @param final_db_year: final year of the database. By default = 2100.
 #' @param desired_variables: desired variables to have in the report.
+#' @param save: if TRUE, save reporting data. Do not save otherwise.
+#' @param file_name: file name of the saved data. Not used if data not saved.
+#' @param launch_app: if TRUE, open app. Do not launch app otherwise.
 #' @importFrom magrittr %>%
 #' @keywords internal
 #' @return load variable
@@ -142,12 +145,10 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
 
   # develop a nested list for the variables
   cols <<- unique(sdata[, grepl('col', names(sdata))])
-  # tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
   cols <<- do_codes(cols)
 
   # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
   reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
-  # tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   reg_cont <<- do_codes(reg_cont)
 
   if (launch_app) {
