@@ -31,6 +31,11 @@ Imports:
     here,
     shiny,
     shinyTree,
+    shinyWidgets,
+    shinydashboard,
+    shinyTree,
+    shinyjs,
+    dashboardthemes,
     DT
 Suggests: 
     rmarkdown,

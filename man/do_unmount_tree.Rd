@@ -13,8 +13,8 @@ do_unmount_tree(base_tree, type)
 if it refers to regional  aggregation}
 }
 \value{
-dataframe
+list of "nested" items
 }
 \description{
-Create a dataframe from a nested list.
+Create a list of "nested" items witha separator from a nested list.
 }
