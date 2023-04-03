@@ -957,16 +957,28 @@ get_regions_weight_tmp = function() {
 #' @return co2_price_global & regions global variable
 #' @export
 get_co2_price_global_tmp = function() {
-  co2_price_global <<-
+
+  co2_price_global_pre <<-
     rgcam::getQuery(prj, "CO2 prices") %>%
-    #calculate for all scenarios except for d_delfrag, d_rap
-    dplyr::filter(market == "GlobalCO2") %>%
-    dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
-           var = "Price|Carbon|Supply") %>%
-    tidyr::complete(tidyr::nesting(scenario, value, year),
-             region = regions,
-             var = unique(price_var)) %>%
-    dplyr::select(all_of(long_columns))
+    dplyr::filter(market == "GlobalCO2")
+
+  if(nrow(co2_price_global_pre) > 1) {
+
+    co2_price_global <<-
+      co2_price_global_pre %>%
+      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
+                    var = "Price|Carbon|Supply") %>%
+      tidyr::complete(tidyr::nesting(scenario, value, year),
+                      region = regions,
+                      var = unique(price_var)) %>%
+      dplyr::select(all_of(long_columns))
+
+  } else {
+
+    co2_price_global <<- NULL
+
+  }
+
 }
 
 
@@ -977,9 +989,15 @@ get_co2_price_global_tmp = function() {
 #' @return co2_price_fragmented global variable
 #' @export
 get_co2_price_fragmented_tmp = function() {
-  co2_price_fragmented <<-
+
+  co2_price_fragmented_pre <<-
     rgcam::getQuery(prj, "CO2 prices") %>%
-    dplyr::filter(!grepl("LUC", market)) %>%
+    dplyr::filter(!grepl("LUC", market))
+
+  if(nrow(co2_price_fragmented_pre) > 1) {
+
+  co2_price_fragmented <<-
+    co2_price_fragmented_pre %>%
     dplyr::left_join(CO2_market, by = c("market")) %>%
     dplyr::filter(stats::complete.cases(.)) %>%
     # get global carbon price by weighing regional price by 2020 GHG emisisons
@@ -998,6 +1016,13 @@ get_co2_price_fragmented_tmp = function() {
     tidyr::complete(tidyr::nesting(scenario,value, year, region),
              var = unique(price_var)) %>%
     dplyr::select(all_of(long_columns))
+
+  } else {
+
+    co2_price_fragmented <<- NULL
+
+  }
+
 }
 
 
@@ -1008,8 +1033,35 @@ get_co2_price_fragmented_tmp = function() {
 #' @return co2_price_clean global variable
 #' @export
 get_co2_price = function() {
-  co2_price_clean <<-
-    dplyr::bind_rows(co2_price_fragmented)
+  co2_price_clean_pre <<-
+    dplyr::bind_rows(co2_price_global, co2_price_fragmented)
+
+  if(nrow(co2_price_clean_pre) < 1) {
+
+    co2_price_clean <<-
+      dplyr::bind_rows(rgcam::getQuery(prj, "CO2 prices") %>%
+                       dplyr::filter(!grepl("LUC", market)) %>%
+                       dplyr::left_join(CO2_market, by = c("market")) %>%
+                       dplyr::left_join(region_weight, by = c("scenario", "region", "year")) %>%
+                       dplyr::mutate(value = weight * value) %>%
+                       dplyr::group_by(scenario, year) %>%
+                       dplyr::summarise(value = sum(value, na.rm=T)) %>%
+                       dplyr::ungroup() %>%
+                       dplyr::mutate(region = "Global"))  %>%
+      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
+                    var = "Price|Carbon") %>%
+      # apply to carbon price for all energy sectors
+      tidyr::complete(tidyr::nesting(scenario,value, year, region),
+                      var = unique(price_var)) %>%
+      dplyr::select(all_of(long_columns)) %>%
+      dplyr::mutate(value = 0)
+
+
+  } else {
+
+    co2_price_clean <<- co2_price_clean_pre
+  }
+
 }
 
 
