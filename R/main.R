@@ -53,7 +53,7 @@ load_variable = function(var){
 #' @keywords internal
 #' @return load variable
 #' @export
-read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', launch_app = TRUE) {
+read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = 'final_data', launch_app = TRUE) {
   # load project
   print('Creating project...')
   load_project(project_name)
@@ -112,6 +112,9 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
 
   # bind and save results
   do_bind_results()
+  if (save) {
+    write.csv(final_data, file.path(out_dir, paste0(file_name,".csv")), row.names = FALSE)
+  }
 
   # checks, vetting, and errors summary
   errors <<- c()

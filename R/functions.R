@@ -1670,8 +1670,6 @@ do_bind_results = function() {
     dplyr::rename(Scenario = scenario) %>%
     dplyr::select(reporting_columns_fin) %>%
     dplyr::filter(!is.na(Region)) # Drop variables we don't report
-
-  write.csv(final_data, file.path(out_dir, "final_data.csv"), row.names = FALSE)
 }
 
 #########################################################################
