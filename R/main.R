@@ -116,6 +116,9 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   # bind and save results
   do_bind_results()
   if (save) {
+    if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
+      dir.create(paste0(here::here(), "/output/datasets/"))
+    }
     write.csv(final_data, file.path(paste0(here::here(), "/output/datasets/", file_name,".csv")), row.names = FALSE)
   }
 
