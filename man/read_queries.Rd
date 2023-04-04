@@ -19,6 +19,12 @@ read_queries(
 \item{final_db_year:}{final year of the database. By default = 2100.}
 
 \item{desired_variables:}{desired variables to have in the report.}
+
+\item{save:}{if TRUE, save reporting data. Do not save otherwise.}
+
+\item{file_name:}{file name of the saved data. Not used if data not saved.}
+
+\item{launch_app:}{if TRUE, open app. Do not launch app otherwise.}
 }
 \value{
 load variable
