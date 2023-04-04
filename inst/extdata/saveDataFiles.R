@@ -6,27 +6,9 @@ library(here)
 ### paths
 rawDataFolder = here::here()
 
-# iamc_dir <- here::here()
-iamc_dir <- paste0(rawDataFolder, "/inst/extdata")
-use_data(iamc_dir, overwrite=T)
-
-src_dir <-paste0(rawDataFolder, "/R")
-use_data(src_dir, overwrite=T)
-
-map_dir <- paste0(iamc_dir, "/mappings")
-use_data(map_dir, overwrite=T)
-
-out_dir <- paste0(rawDataFolder, "/output/datasets")
-use_data(out_dir, overwrite=T)
-
-fig_dir <- paste0(rawDataFolder, "/output/figure")
-use_data(fig_dir, overwrite=T)
-
-vet_dir <- paste0(iamc_dir, "/vetting")
-use_data(vet_dir, overwrite=T)
 
 # variables_functions_mapping
-var_fun_map <- read.csv(paste0(iamc_dir, "/variables_functions_mapping.csv"),
+var_fun_map <- read.csv(paste0(here::here(), "/inst/extdata", "/variables_functions_mapping.csv"),
                        sep=';',header=T, na.strings=c("","NA"))
 
 var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))
@@ -34,94 +16,94 @@ var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
 use_data(var_fun_map, overwrite=T)
 
 # Read in template
-template <- read.csv(paste0(iamc_dir, "/template/NGFS_reporting_template.csv"),
+template <- read.csv(paste0(here::here(), "/inst/extdata", "/template/NGFS_reporting_template.csv"),
                      fileEncoding = "UTF-8-BOM")
 use_data(template, overwrite=T)
 
 # emissions maps
-co2_sector_map <- read.csv(paste0(map_dir, "/CO2_sector_map.csv"), skip = 1, na = "") %>% gather_map()
+co2_sector_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/CO2_sector_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(co2_sector_map, overwrite=T)
 
-co2_tech_map <- read.csv(paste0(map_dir, "/CO2_tech_map.csv"), skip = 1, na = "") %>% gather_map()
+co2_tech_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/CO2_tech_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(co2_tech_map, overwrite=T)
 
-kyoto_sector_map <- read.csv(paste0(map_dir, "/Kyotogas_sector.csv"), skip = 1, na = "") %>% gather_map()
+kyoto_sector_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/Kyotogas_sector.csv"), skip = 1, na = "") %>% gather_map()
 use_data(kyoto_sector_map, overwrite=T)
 
-nonco2_emis_sector_map <- read.csv(paste0(map_dir, "/nonCO2_emissions_sector_map.csv"), skip = 1, na = "") %>% gather_map()
+nonco2_emis_sector_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/nonCO2_emissions_sector_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(nonco2_emis_sector_map, overwrite=T)
 
-nonco2_emis_resource_map <- read.csv(paste0(map_dir, "/nonCO2_emissions_resource_map.csv"), skip = 1, na = "") %>% gather_map()
+nonco2_emis_resource_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/nonCO2_emissions_resource_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(nonco2_emis_resource_map, overwrite=T)
 
-carbon_seq_tech_map <- read.csv(paste0(map_dir, "/carbon_seq_tech_map.csv"), skip = 1, na = "") %>% gather_map()
+carbon_seq_tech_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/carbon_seq_tech_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(carbon_seq_tech_map, overwrite=T)
 
 
 # ag maps
-ag_demand_map <- read.csv(paste0(map_dir, "/ag_demand_map.csv"), skip = 1) %>% gather_map()
+ag_demand_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ag_demand_map.csv"), skip = 1) %>% gather_map()
 use_data(ag_demand_map, overwrite=T)
 
-ag_prices_map <- read.csv(paste0(map_dir, "/ag_prices_map.csv"), skip = 1) %>% gather_map()
+ag_prices_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ag_prices_map.csv"), skip = 1) %>% gather_map()
 use_data(ag_prices_map, overwrite=T)
 
-land_use_map <- read.csv(paste0(map_dir, "/land_use_map.csv"), skip = 1) %>% gather_map()
+land_use_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/land_use_map.csv"), skip = 1) %>% gather_map()
 use_data(land_use_map, overwrite=T)
 
 
 # primary, secondary, final energy maps
-primary_energy_map <- read.csv(paste0(map_dir, "/en_primary_map.csv"), skip = 1) %>% gather_map()
+primary_energy_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/en_primary_map.csv"), skip = 1) %>% gather_map()
 use_data(primary_energy_map, overwrite=T)
 
-production_map <- read.csv(paste0(map_dir,"/production_map.csv"), skip = 1) %>% gather_map()
+production_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings","/production_map.csv"), skip = 1) %>% gather_map()
 use_data(production_map, overwrite=T)
 
-elec_gen_map <- read.csv(paste0(map_dir, "/elec_gen_map_core.csv"), skip = 1) %>%
+elec_gen_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/elec_gen_map_core.csv"), skip = 1) %>%
   dplyr::filter(!grepl("cogen", technology)) %>%
   gather_map()
 use_data(elec_gen_map, overwrite=T)
 
-capacity_map <- read.csv(paste0(map_dir, "/capacity_map.csv"), skip = 1) %>%
+capacity_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/capacity_map.csv"), skip = 1) %>%
   dplyr::filter(!grepl("cogen", technology)) %>%
   gather_map()
 use_data(capacity_map, overwrite=T)
 
-cf_gcam <- read.csv(paste0(map_dir, "/A23.globaltech_capacity_factor.csv"), skip = 9, na = "")
+cf_gcam <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/A23.globaltech_capacity_factor.csv"), skip = 9, na = "")
 use_data(cf_gcam, overwrite=T)
 
-cf_rgn <- read.csv(paste0(map_dir, "/L223.StubTechCapFactor_elec.csv"), skip = 1, na = "")
+cf_rgn <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/L223.StubTechCapFactor_elec.csv"), skip = 1, na = "")
 use_data(cf_rgn, overwrite=T)
 
-se_gen_map <- read.csv(paste0(map_dir, "/secondary_energy_gen_map.csv"), skip = 1) %>% gather_map()
+se_gen_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/secondary_energy_gen_map.csv"), skip = 1) %>% gather_map()
 use_data(se_gen_map, overwrite=T)
 
-final_energy_map <- read.csv(paste0(map_dir, "/final_energy_map.csv"), skip = 1) %>% gather_map()
+final_energy_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/final_energy_map.csv"), skip = 1) %>% gather_map()
 use_data(final_energy_map, overwrite=T)
 
-transport_final_en_map <- read.csv(paste0(map_dir, "/transport_final_en_map.csv"), skip = 1, na = "") %>% gather_map()
+transport_final_en_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/transport_final_en_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(transport_final_en_map, overwrite=T)
 
-energy_prices_map <- read.csv(paste0(map_dir, "/energy_prices_map.csv"), skip = 1, na = "") %>% gather_map()
+energy_prices_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/energy_prices_map.csv"), skip = 1, na = "") %>% gather_map()
 use_data(energy_prices_map, overwrite=T)
 
 
 #Energy Service maps
-transport_en_service <- read.csv(paste0(map_dir, "/energy_service_transportation.csv"), skip = 1) %>% gather_map()
+transport_en_service <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/energy_service_transportation.csv"), skip = 1) %>% gather_map()
 use_data(transport_en_service, overwrite=T)
 
-buildings_en_service <- read.csv(paste0(map_dir, "/energy_service_buildings.csv"), skip = 1) %>% gather_map()
+buildings_en_service <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/energy_service_buildings.csv"), skip = 1) %>% gather_map()
 use_data(buildings_en_service, overwrite=T)
 
 
 # capital updates
-capital_gcam <- read.csv(paste0(map_dir, "/L223.GlobalIntTechCapital_elec.csv"), skip = 2, na = "",
+capital_gcam <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/L223.GlobalIntTechCapital_elec.csv"), skip = 2, na = "",
                          fileEncoding = "UTF-8-BOM") %>%
   dplyr::rename(technology = intermittent.technology) %>%
-  dplyr::bind_rows(read.csv(paste0(map_dir, "/L223.GlobalTechCapital_elec.csv"), skip = 2, na = ""))%>%
+  dplyr::bind_rows(read.csv(paste0(here::here(), "/inst/extdata/mappings", "/L223.GlobalTechCapital_elec.csv"), skip = 2, na = ""))%>%
   dplyr::select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
 use_data(capital_gcam, overwrite=T)
 
-investment <- read.csv(paste0(map_dir, "/investment.csv"), na = "") %>%
+investment <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/investment.csv"), na = "") %>%
   tidyr::gather(year, value, X2015:X2100) %>%
   dplyr::mutate(year = as.integer(sub("X", "", year))) %>%
   dplyr::mutate(value = gsub("%", "", value)) %>%
@@ -129,19 +111,19 @@ investment <- read.csv(paste0(map_dir, "/investment.csv"), na = "") %>%
 use_data(investment, overwrite=T)
 
 
-carbon_content <- read.csv(paste0(map_dir, "/L202.CarbonCoef.csv"), skip = 2, na = "")
+carbon_content <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/L202.CarbonCoef.csv"), skip = 2, na = "")
 use_data(carbon_content, overwrite=T)
 
-nonCO2_content <-read.csv(paste0(map_dir, "/L201.ghg_res.csv"), skip = 2, na = "")
+nonCO2_content <-read.csv(paste0(here::here(), "/inst/extdata/mappings", "/L201.ghg_res.csv"), skip = 2, na = "")
 use_data(nonCO2_content, overwrite=T)
 
-iea_capacity <- read.csv(paste0(map_dir, "/IEAWEO2019_Capacity.csv"))
+iea_capacity <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/IEAWEO2019_Capacity.csv"))
 use_data(iea_capacity, overwrite=T)
 
-CO2_market <- read.csv(paste0(map_dir, "/CO2market_new.csv"), skip = 1)
+CO2_market <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/CO2market_new.csv"), skip = 1)
 use_data(CO2_market, overwrite=T)
 
-co2_market_frag_map <- read.csv(paste0(map_dir, "/CO2market_frag_map.csv"), skip = 1)
+co2_market_frag_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/CO2market_frag_map.csv"), skip = 1)
 use_data(co2_market_frag_map, overwrite=T)
 
 # List of Constants

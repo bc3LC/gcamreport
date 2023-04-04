@@ -11,7 +11,7 @@ library(magrittr)
 #' @export
 load_project = function(prj_name) {
   # Load data, once the project file has been created (no need to create it again!!)
-  prj <<- rgcam::loadProject(paste0(iamc_dir, "/", prj_name, ".dat"))
+  prj <<- rgcam::loadProject(paste0(here::here(), "/inst/extdata/", prj_name, ".dat"))
 
 
   Scenarios <<- rgcam::listScenarios(prj)
@@ -116,7 +116,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   # bind and save results
   do_bind_results()
   if (save) {
-    write.csv(final_data, file.path(out_dir, paste0(file_name,".csv")), row.names = FALSE)
+    write.csv(final_data, file.path(paste0(here::here(), "/output/datasets/", file_name,".csv")), row.names = FALSE)
   }
 
   # checks, vetting, and errors summary
@@ -147,8 +147,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   cols <<- unique(sdata[, grepl('col', names(sdata))])
   cols <<- do_codes(cols)
 
-  # reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), header = TRUE, sep = ",", encoding = "UTF-8")
-  reg_cont <<- read.csv(paste0(map_dir, "/regions_continents_map.csv"), skip = 1)
+  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
   reg_cont <<- do_codes(reg_cont)
 
   if (launch_app) {

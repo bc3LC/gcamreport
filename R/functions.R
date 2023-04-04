@@ -17,7 +17,7 @@ conv_ghg_co2e <- function (data) {
                "HFC245fa", "HFC43-10")
   GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 
-  GWP_adjuster <- read.csv(paste0(map_dir, "/ghg_GWP.csv"), skip = 1, na = "")
+  GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "")
 
   data %>%
     tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
@@ -1756,7 +1756,7 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  global_vet_values <- read.csv(paste0(vet_dir, "/global_vet_values.csv"))
+  global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"))
 
   final_data_long_check <- final_data %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
@@ -1798,7 +1798,7 @@ do_check_vetting = function() {
                   legend.position = "bottom",
                   strip.text = ggplot2::element_text(size = 5),
                   legend.title = ggplot2::element_blank())
-  ggplot2::ggsave(paste0(fig_dir, "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
+  ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
   if(nrow(check_vet_summary > 0)){
     return('Vetting variables: ERROR')
