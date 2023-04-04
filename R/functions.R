@@ -1044,7 +1044,7 @@ get_co2_price = function() {
   if(nrow(co2_price_clean_pre) < 1) {
 
     co2_price_clean <<-
-      tibble::tibble(var = price_var) %>%
+      tibble::tibble(var = unique(co2_market_frag_map$var)) %>%
       gcamdata::repeat_add_columns(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
       gcamdata::repeat_add_columns(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
       gcamdata::repeat_add_columns(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
