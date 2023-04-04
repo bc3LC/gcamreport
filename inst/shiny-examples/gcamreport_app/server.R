@@ -66,7 +66,7 @@ server <- function(input, output) {
       data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
         dplyr::mutate(values = as.numeric(as.character(values))) %>%
         dplyr::mutate(year = as.numeric(as.character(year)))
-      assign('fig1',
+      assign(paste0('fig_',unique(data_sample$Variable)[1]),
              ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                ggplot2::geom_point(ggplot2::aes(shape = Region)) +
                ggplot2::geom_line() +
@@ -81,13 +81,13 @@ server <- function(input, output) {
 
         # display plot
         output[[plotname]] <- renderPlot({
-          get(paste0('fig',my_i))
+          get(paste0('fig_',unique(data_sample$Variable)[1]))
         })
         # display download button
         output[[paste0("download", my_i)]] <- downloadHandler(
-          filename = function() { paste0('fig',my_i,'.png') },
+          filename = function() { paste0('fig_',unique(data_sample$Variable)[1],'.png') },
           content = function(file) {
-            ggplot2::ggsave(file, plot = get(paste0('fig',my_i)), device = "png",
+            ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[1])), device = "png",
                             height = 10, width = 20, units = 'cm', limitsize = FALSE)
           })
       })
@@ -112,7 +112,8 @@ server <- function(input, output) {
       })
 
 
-      for (i in 1:10) {
+      n = length(input$tree_variables)
+      for (i in 1:n) {
         # Need local so that each item gets its own number. Without it, the value
         # of i in the renderPlot() will be the same across all instances, because
         # of when the expression is evaluated.
@@ -129,7 +130,7 @@ server <- function(input, output) {
             dplyr::mutate(values = as.numeric(as.character(values))) %>%
             dplyr::mutate(year = as.numeric(as.character(year)))
 
-          assign(paste0('fig',my_i),
+          assign(paste0('fig_',unique(data_sample$Variable)[1]),
                  ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                   ggplot2::geom_point(ggplot2::aes(shape = Region)) +
                   ggplot2::geom_line() +
@@ -141,15 +142,15 @@ server <- function(input, output) {
 
           # display plot
           output[[plotname]] <- renderPlot({
-            get(paste0('fig',my_i))
+            get(paste0('fig_',unique(data_sample$Variable)[1]))
           })
           print(plotname)
 
           # display download button
           output[[paste0("download", my_i)]] <- downloadHandler(
-            filename = function() { paste0('fig',my_i,'.png') },
+            filename = function() { paste0('fig_',unique(data_sample$Variable)[1],'.png') },
             content = function(file) {
-              ggplot2::ggsave(file, plot = get(paste0('fig',my_i)), device = "png",
+              ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[1])), device = "png",
                               height = 10, width = 20, units = 'cm', limitsize = FALSE)
             })
         })
