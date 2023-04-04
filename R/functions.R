@@ -527,6 +527,8 @@ get_ag_demand = function() {
   ag_demand_clean <<-
     dplyr::bind_rows(rgcam::getQuery(prj, "demand balances by crop commodity"),
               rgcam::getQuery(prj, "demand balances by meat and dairy commodity")) %>%
+    # Adjust OtherMeat_Fish
+    dplyr::mutate(sector = ifelse(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
     dplyr::left_join(ag_demand_map, by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
