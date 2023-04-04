@@ -109,9 +109,9 @@ server <- function(input, output) {
           plotname <- paste("plot", i, sep="")
           tagList(
             plotOutput(plotname, height = 400, width = 1000),
-            downloadButton(paste0("download", i), label = "Download")
+            downloadButton(paste0("download", i), label = "Download"),
+            br(),br(),br()
           )
-
         })
 
         # Convert the list to a tagList - this is necessary for the list of items
@@ -155,7 +155,6 @@ server <- function(input, output) {
           output[[plotname]] <- renderPlot({
             get(paste0('fig_',unique(data_sample$Variable)[1]))
           })
-          print(plotname)
 
           # display download button
           output[[paste0("download", my_i)]] <- downloadHandler(
