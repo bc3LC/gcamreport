@@ -1039,22 +1039,13 @@ get_co2_price = function() {
   if(nrow(co2_price_clean_pre) < 1) {
 
     co2_price_clean <<-
-      dplyr::bind_rows(rgcam::getQuery(prj, "CO2 prices") %>%
-                       dplyr::filter(!grepl("LUC", market)) %>%
-                       dplyr::left_join(CO2_market, by = c("market")) %>%
-                       dplyr::left_join(region_weight, by = c("scenario", "region", "year")) %>%
-                       dplyr::mutate(value = weight * value) %>%
-                       dplyr::group_by(scenario, year) %>%
-                       dplyr::summarise(value = sum(value, na.rm=T)) %>%
-                       dplyr::ungroup() %>%
-                       dplyr::mutate(region = "Global"))  %>%
-      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
-                    var = "Price|Carbon") %>%
-      # apply to carbon price for all energy sectors
-      tidyr::complete(tidyr::nesting(scenario,value, year, region),
-                      var = unique(price_var)) %>%
-      dplyr::select(all_of(long_columns)) %>%
-      dplyr::mutate(value = 0)
+      tibble::tibble(var = price_var) %>%
+      gcamdata::repeat_add_columns(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
+      gcamdata::repeat_add_columns(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
+      gcamdata::repeat_add_columns(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
+      dplyr::mutate(value = 0) %>%
+      dplyr::select(all_of(long_columns))
+
 
 
   } else {
