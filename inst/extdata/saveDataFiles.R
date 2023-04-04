@@ -1,9 +1,10 @@
 # Converting raw data into package data
 library(usethis)
 library(magrittr)
+library(here)
 
 ### paths
-rawDataFolder = "C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport"
+rawDataFolder = here::here()
 
 # iamc_dir <- here::here()
 iamc_dir <- paste0(rawDataFolder, "/inst/extdata")
