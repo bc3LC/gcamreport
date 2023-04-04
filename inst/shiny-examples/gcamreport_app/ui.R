@@ -41,7 +41,7 @@ ui <- dashboardPage(
           choices = shinyWidgets::create_tree(reg_cont,
                                               levels = c('continent','region'),
                                               levels_id = c('code_continent','code_region')),
-          selected = "Africa",
+          selected = c("Africa",""),
           returnValue = "id",
           closeDepth = 0
         )
@@ -160,7 +160,7 @@ ui <- dashboardPage(
         width = 12,
         id = "tab_box",
         tabPanel("Data",
-                 # verbatimTextOutput("res3"),
+                 verbatimTextOutput("res3"),
                  DT::dataTableOutput(outputId = "datatable")
         ),
         tabPanel("Plot",
