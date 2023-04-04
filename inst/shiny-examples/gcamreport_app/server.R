@@ -70,9 +70,13 @@ server <- function(input, output) {
              ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                ggplot2::geom_point(ggplot2::aes(shape = Region)) +
                ggplot2::geom_line() +
+               ggplot2::scale_shape_manual('Region', values = rep(c(1:25), times = ceiling(length(unique(data_sample$Variable))/6))) +
                ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
                ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-               ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
+               ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year') +
+               ggplot2::theme_bw() +
+               ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                              legend.key.size = ggplot2::unit(0.5, "cm"))
       )
 
       local({
@@ -87,6 +91,10 @@ server <- function(input, output) {
         output[[paste0("download", my_i)]] <- downloadHandler(
           filename = function() { paste0('fig_',unique(data_sample$Variable)[1],'.png') },
           content = function(file) {
+            assign(paste0('fig_',unique(data_sample$Variable)[1]),
+                   get(paste0('fig_',unique(data_sample$Variable)[1])) +
+                     ggplot2::theme(legend.key.size = ggplot2::unit(0.1, "cm")))
+
             ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[1])), device = "png",
                             height = 10, width = 20, units = 'cm', limitsize = FALSE)
           })
@@ -101,9 +109,9 @@ server <- function(input, output) {
           plotname <- paste("plot", i, sep="")
           tagList(
             plotOutput(plotname, height = 400, width = 1000),
-            downloadButton(paste0("download", i), label = "Download")
+            downloadButton(paste0("download", i), label = "Download"),
+            br(),br(),br()
           )
-
         })
 
         # Convert the list to a tagList - this is necessary for the list of items
@@ -132,24 +140,30 @@ server <- function(input, output) {
 
           assign(paste0('fig_',unique(data_sample$Variable)[1]),
                  ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-                  ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-                  ggplot2::geom_line() +
-                  ggplot2::guides(linetype = 'none') +
-                  ggplot2::scale_linetype_manual('', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
-                  ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                  ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year')
-                 )
+                   ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+                   ggplot2::geom_line() +
+                   ggplot2::guides(linetype = 'none') +
+                   ggplot2::scale_shape_manual('Region', values = rep(c(1:25), times = ceiling(length(unique(data_sample$Variable))/6))) +
+                   ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
+                   ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year') +
+                   ggplot2::theme_bw() +
+                   ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                  legend.key.size = ggplot2::unit(0.7, "cm"))
+          )
 
           # display plot
           output[[plotname]] <- renderPlot({
             get(paste0('fig_',unique(data_sample$Variable)[1]))
           })
-          print(plotname)
 
           # display download button
           output[[paste0("download", my_i)]] <- downloadHandler(
             filename = function() { paste0('fig_',unique(data_sample$Variable)[1],'.png') },
             content = function(file) {
+              assign(paste0('fig_',unique(data_sample$Variable)[1]),
+                     get(paste0('fig_',unique(data_sample$Variable)[1])) +
+                       ggplot2::theme(legend.key.size = ggplot2::unit(0.25, "cm")))
+
               ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[1])), device = "png",
                               height = 10, width = 20, units = 'cm', limitsize = FALSE)
             })
