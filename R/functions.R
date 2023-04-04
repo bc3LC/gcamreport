@@ -528,7 +528,7 @@ get_ag_demand = function() {
     dplyr::bind_rows(rgcam::getQuery(prj, "demand balances by crop commodity"),
               rgcam::getQuery(prj, "demand balances by meat and dairy commodity")) %>%
     # Adjust OtherMeat_Fish
-    dplyr::mutate(sector = ifelse(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
+    dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
     dplyr::left_join(ag_demand_map, by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
@@ -913,12 +913,9 @@ get_ag_prices = function() {
 #' @return price_var global variable
 #' @export
 get_price_var_tmp = function() {
+
   price_var <<-
-    c("Price|Carbon",
-      "Price|Carbon|Supply",
-      "Price|Carbon|Demand|Residential and Commercial",
-      "Price|Carbon|Demand|Transportation",
-      "Price|Carbon|Demand|Industry")
+    unique(co2_market_frag_map$var)
 }
 
 
@@ -967,12 +964,12 @@ get_co2_price_global_tmp = function() {
   if(nrow(co2_price_global_pre) > 1) {
 
     co2_price_global <<-
-      co2_price_global_pre %>%
-      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
-                    var = "Price|Carbon|Supply") %>%
-      tidyr::complete(tidyr::nesting(scenario, value, year),
-                      region = regions,
-                      var = unique(price_var)) %>%
+      tibble::as_tibble(co2_price_global_pre) %>%
+      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
+      dplyr::mutate(market = gsub("Global", "", market)) %>%
+      dplyr::mutate(market = gsub("_", "", market)) %>%
+      dplyr::left_join(co2_market_frag_map, by = "market") %>%
+      gcamdata::repeat_add_columns(tibble::tibble(region = paste(regions, "Global"))) %>%
       dplyr::select(all_of(long_columns))
 
   } else {
@@ -1012,12 +1009,18 @@ get_co2_price_fragmented_tmp = function() {
                 dplyr::summarise(value = sum(value, na.rm=T)) %>%
                 dplyr::ungroup() %>%
                 dplyr::mutate(region = "Global"))  %>%
-    dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD,
-           var = "Price|Carbon") %>%
-    # apply to carbon price for all energy sectors
-    tidyr::complete(tidyr::nesting(scenario,value, year, region),
-             var = unique(price_var)) %>%
+    dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
+    dplyr::mutate(market_adj = "CO2",
+                  market_adj = dplyr::if_else(grepl("ETS", market), "CO2_ETS", market_adj),
+                  market_adj = dplyr::if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
+                  market_adj = dplyr::if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
+                  market_adj = dplyr::if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)) %>%
+    dplyr::mutate(market = market_adj) %>%
+    dplyr::select(-market_adj) %>%
+    dplyr::left_join(co2_market_frag_map, by = "market") %>%
+    dplyr::filter(stats::complete.cases(.)) %>%
     dplyr::select(all_of(long_columns))
+
 
   } else {
 

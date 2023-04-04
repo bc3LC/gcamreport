@@ -141,6 +141,9 @@ use_data(iea_capacity, overwrite=T)
 CO2_market <- read.csv(paste0(map_dir, "/CO2market_new.csv"), skip = 1)
 use_data(CO2_market, overwrite=T)
 
+co2_market_frag_map <- read.csv(paste0(map_dir, "/CO2market_frag_map.csv"), skip = 1)
+use_data(co2_market_frag_map, overwrite=T)
+
 # List of Constants
 
 CUMULATIVE_EMISSIONS_BUDGET_GOALS <- c(300, 400, 500, 600, 700, 800, 900, 950, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000)
