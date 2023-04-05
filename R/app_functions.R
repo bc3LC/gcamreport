@@ -2,8 +2,12 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
-resetFirstLoad <- function() {
-  print('RELOAD')
+#' reset_first_load
+#'
+#' Initialize variables to run the app
+#' @importFrom magrittr %>%
+#' @export
+reset_first_load <- function() {
   reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   cols <<- unique(sdata[, grepl('col', names(sdata))])
@@ -13,7 +17,6 @@ resetFirstLoad <- function() {
   firstVars <<- TRUE
   noReg <<- FALSE
   noVars <<- FALSE
-  printi <<- 1
 }
 
 
@@ -51,8 +54,6 @@ do_codes <- function(data) {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
-  print(paste0('basic_reg = ', basic_reg))
-  print(paste0('basic_vars = ', basic_vars))
   if (basic_reg == 1) {
     reg = unique(sdata$Region)
   } else if (basic_reg == 2) {

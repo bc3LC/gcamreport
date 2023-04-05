@@ -92,7 +92,6 @@ server <- function(input, output, session) {
         sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
         if (firstLoad) {
           firstLoad <<- FALSE
-          print('display basic tree')
           DT::datatable(data = do_data_sample(sdata,
                                               input$selected_scen,input$selected_years,
                                               input$selected_cols,unique(cols$col1),
@@ -101,42 +100,28 @@ server <- function(input, output, session) {
                         options = list(pageLength = 10, scrollX = TRUE),
                         rownames = FALSE)
         } else {
-          print('display chosen tree')
-          print(paste0('firstreg = ', firstReg))
-          print(paste0('firstvars = ', firstVars))
-          print(paste0('wellpanel null? ',is.null(input$sidebarItemExpanded)))
-          if (!is.null(input$sidebarItemExpanded)) {
-            print(input$sidebarItemExpanded)
-          }
           basic_reg = 0
           basic_vars = 0
           if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-            print('reg')
             sel_reg = reg_cont$region
             basic_reg = 1
           }
           if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-            print('vars')
             sel_vars = unique(cols$col1)
             basic_vars = 1
           }
           if (noReg) {
-            print('noreg')
             noReg <<- FALSE
             sel_reg = c()
             basic_reg = 2
           }
           if (noVars) {
-            print('novars')
             noVars <<- FALSE
             sel_vars = c()
             basic_vars = 2
           }
           firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
           firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-
-          print(paste0(printi,'----------------'))
-          printi <<- printi + 1
 
           DT::datatable(data = do_data_sample(sdata,
                                               input$selected_scen,input$selected_years,
@@ -348,7 +333,7 @@ server <- function(input, output, session) {
   #   }
   # )
 
-  session$onSessionEnded(resetFirstLoad)
+  session$onSessionEnded(reset_first_load)
 
 
 }
