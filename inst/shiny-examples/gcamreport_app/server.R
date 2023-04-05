@@ -8,7 +8,7 @@ library(shinyTree)
 server <- function(input, output, session) {
 
   ## -- debug
-  # output$res3 <- renderPrint(shinyTree::get_selected(input$tree_regions, format = 'slices'))
+  # output$res3 <- renderPrint(shinyTree::get_selected(input$tree_variables, format = 'slices'))
 
   # output$res3 <- renderPrint({
   # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
@@ -21,31 +21,33 @@ server <- function(input, output, session) {
 
   ## -- select all/none variables
   treeDataVar_sel <- reactive({
-    tree_vars <- do_mount_tree(cols, names(cols), selec = TRUE)
+    tree_vars <<- do_mount_tree(cols, names(cols), selec = TRUE)
   })
   treeDataVar_unsel <- reactive({
-    tree_vars <- do_mount_tree(cols, names(cols), selec = FALSE)
+    tree_vars <<- do_mount_tree(cols, names(cols), selec = FALSE)
   })
   observeEvent(input$select_all_variables, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
   })
   observeEvent(input$select_none_variables, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
+    noVars <<- TRUE
   })
 
 
   ## -- select all/none regions
   treeDataReg_sel <- reactive({
-    tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
   })
   treeDataReg_unsel <- reactive({
-    tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
   })
   observeEvent(input$select_all_regions, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
   })
   observeEvent(input$select_none_regions, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
+    noReg <<- TRUE
   })
 
 
@@ -59,7 +61,6 @@ server <- function(input, output, session) {
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Regions") {
-      print('rerender reg tree')
       output$tree_regions <- shinyTree::renderTree({
         tree_reg
       })
@@ -77,7 +78,6 @@ server <- function(input, output, session) {
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Variables") {
-      print('rerender vars tree')
       output$tree_variables <- shinyTree::renderTree({
         tree_vars
       })
@@ -85,8 +85,8 @@ server <- function(input, output, session) {
   })
 
 
-
-  observeEvent(input, {
+  ## -- data table
+  observeEvent(c(input, input$select_none_regions, input$select_none_variables), {
     output$datatable <- DT::renderDataTable({
         sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
         sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
@@ -108,17 +108,29 @@ server <- function(input, output, session) {
           if (!is.null(input$sidebarItemExpanded)) {
             print(input$sidebarItemExpanded)
           }
-          basic_reg = FALSE
-          basic_vars = FALSE
+          basic_reg = 0
+          basic_vars = 0
           if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
             print('reg')
             sel_reg = reg_cont$region
-            basic_reg = TRUE
+            basic_reg = 1
           }
           if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
             print('vars')
             sel_vars = unique(cols$col1)
-            basic_vars = TRUE
+            basic_vars = 1
+          }
+          if (noReg) {
+            print('noreg')
+            noReg <<- FALSE
+            sel_reg = c()
+            basic_reg = 2
+          }
+          if (noVars) {
+            print('novars')
+            noVars <<- FALSE
+            sel_vars = c()
+            basic_vars = 2
           }
           firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
           firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
@@ -137,48 +149,8 @@ server <- function(input, output, session) {
     })
   })
 
-  # observeEvent(input, {
-  #   if (firstLoad) {
-  #     # This code runs only on the first load
-  #     output$mytable <- renderDataTable({
-  #       # Code to render the table on the first load
-  #       print('display basic tree')
-  #       DT::datatable(data = do_data_sample(sdata,
-  #                                           input$selected_scen,input$selected_years,
-  #                                           input$selected_cols,unique(cols$col1),
-  #                                           reg_cont$region, first_display = TRUE),
-  #                     options = list(pageLength = 10, scrollX = TRUE),
-  #                     rownames = FALSE)
-  #
-  #     })
-  #     firstLoad <- FALSE
-  #   } else {
-  #     # This code runs on subsequent loads
-  #     output$mytable <- renderDataTable({
-  #       # Code to render the table on subsequent loads
-  #       print('display chosen tree')
-  #       DT::datatable(data = do_data_sample(sdata,
-  #                                           input$selected_scen,input$selected_years,
-  #                                           input$selected_cols,sel_vars,
-  #                                           sel_reg),
-  #                     options = list(pageLength = 10, scrollX = TRUE),
-  #                     rownames = FALSE)
-  #
-  #     })
-  #   }
-  # })
 
 
-  ## -- data table
-  # output$datatable <- DT::renderDataTable({
-  #   print(paste0('my tree = ',shinyTree::get_selected(input$tree_regions, format = 'slices')))
-  #   DT::datatable(data = do_data_sample(sdata,
-  #                                       input$selected_scen,input$selected_years,
-  #                                       input$selected_cols,input$tree_variables,
-  #                                       tree_reg),
-  #                 options = list(pageLength = 10, scrollX = TRUE),
-  #                 rownames = FALSE)
-  # })
 
 
     #####

@@ -51,18 +51,23 @@ do_codes <- function(data) {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
-  if (basic_reg) {
-    reg = sel_reg
+  print(paste0('basic_reg = ', basic_reg))
+  print(paste0('basic_vars = ', basic_vars))
+  if (basic_reg == 1) {
+    reg = unique(sdata$Region)
+  } else if (basic_reg == 2) {
+    reg = c()
   } else {
     reg = do_unmount_tree(sel_reg, 'regions')
   }
-  if (basic_vars) {
-    vars = sel_vars
-  } else {
-    vars = do_unmount_tree(sel_vars, 'regions')
+
+  if (basic_vars == 1) {
+    vars = unique(sdata$Variable)
+  } else if (basic_vars == 2) {
+    vars = c()
+  } else{
+    vars = do_unmount_tree(sel_vars, 'variables')
   }
-  # print(reg)
-  # print(vars)
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
     dplyr::filter(Variable %in% vars) %>%
@@ -70,7 +75,6 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
 
-  # print(str(data_sample))
   return(data_sample)
 }
 
