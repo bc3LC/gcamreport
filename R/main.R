@@ -148,6 +148,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
 
   # develop a nested list for the variables
   cols <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
   cols <<- do_codes(cols)
 
   reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)

@@ -5,40 +5,49 @@ library(shinyTree)
 
 # Define server ----------------------------------------------------------------
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+
   ## -- debug
   # output$res3 <- renderPrint(shinyTree::get_selected(input$tree_regions, format = 'slices'))
 
-  output$res3 <- renderPrint({
-  sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-  reg = do_unmount_tree(sel_tree_reg, 'regions')
-  # print(reg)
-  # save(reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
-  #
-  # print(reg)
-  })
+  # output$res3 <- renderPrint({
+  # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+  # reg = do_unmount_tree(sel_tree_reg, 'regions')
+  # # print(reg)
+  # # save(reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
+  # #
+  # # print(reg)
+  # })
 
   # ## -- select all/none variables
+  # treeDataVar_sel <- reactive({
+  #   tree_vars <- do_mount_tree(cols, names(cols), selec = TRUE)
+  # })
+  # treeDataVar_unsel <- reactive({
+  #   tree_vars <- do_mount_tree(cols, names(cols), selec = FALSE)
+  # })
   # observeEvent(input$select_all_variables, {
-  #   print(input$tree_variables)
-  #   updateTreeInput(inputId = "tree_variables", selected = c("Primary Energy",c("Agricultural Demand",
-  #            "Capacity Additions","Capacity","Capital Cost","Carbon Sequestration","Concentration",
-  #            "Emissions","Energy Service","Final Energy","Forcing","GDP","Investment","Land Cover",
-  #            "Population","Price","Production","Temperature","Trade","Secondary Energy")))
-  #   # updateTreeInput(inputId = "tree_variables", selected = c("Primary Energy"))
+  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
   # })
   # observeEvent(input$select_none_variables, {
-  #   updateTreeInput(inputId = "tree_variables", selected = character(0))
+  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
   # })
   #
   #
   # ## -- select all/none regions
+  # treeDataReg_sel <- reactive({
+  #   tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+  # })
+  # treeDataReg_unsel <- reactive({
+  #   tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
+  # })
   # observeEvent(input$select_all_regions, {
-  #   updateTreeInput(inputId = "tree_regions", selected = c(unique(reg_cont$region)))
+  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
   # })
   # observeEvent(input$select_none_regions, {
-  #   updateTreeInput(inputId = "tree_regions", selected = character(0))
+  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
   # })
+
 
   ## -- render regions tree
   output$tree_regions <- shinyTree::renderTree({
@@ -76,30 +85,80 @@ server <- function(input, output) {
   })
 
 
-  # observeEvent(input, {
-    output$datatable <- DT::renderDataTable({
-      sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-      sel_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
-      if (length(sel_reg) == 0) {
-        print('display basic tree')
-        DT::datatable(data = do_data_sample(sdata,
-                                            input$selected_scen,input$selected_years,
-                                            input$selected_cols,unique(cols$col1),
-                                            reg_cont$region, first_display = TRUE),
-                      options = list(pageLength = 10, scrollX = TRUE),
-                      rownames = FALSE)
-      } else {
-        print('display chosen tree')
-        DT::datatable(data = do_data_sample(sdata,
-                                            input$selected_scen,input$selected_years,
-                                            input$selected_cols,sel_vars,
-                                            sel_reg),
-                      options = list(pageLength = 10, scrollX = TRUE),
-                      rownames = FALSE)
-      }
-    })
 
+  observeEvent(input, {
+    output$datatable <- DT::renderDataTable({
+        sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
+        sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+        if (firstLoad) {
+          firstLoad <<- FALSE
+          print('display basic tree')
+          DT::datatable(data = do_data_sample(sdata,
+                                              input$selected_scen,input$selected_years,
+                                              input$selected_cols,unique(cols$col1),
+                                              reg_cont$region,
+                                              basic_reg = TRUE, basic_vars = TRUE),
+                        options = list(pageLength = 10, scrollX = TRUE),
+                        rownames = FALSE)
+        } else {
+          print('display chosen tree')
+          print(paste0('firstreg = ', firstReg))
+          print(paste0('firstvars = ', firstVars))
+          basic_reg = FALSE
+          basic_vars = FALSE
+          if (firstReg && (!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables") || is.null(input$sidebarItemExpanded)) {
+            print('reg')
+            sel_reg = reg_cont$region
+            basic_reg = TRUE
+            firstVars <<- ifelse(!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables", FALSE, TRUE)
+          }
+          if (firstVars && (!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions") || is.null(input$sidebarItemExpanded)) {
+            print('vars')
+            sel_vars = unique(cols$col1)
+            basic_vars = TRUE
+            firstReg <<- ifelse(!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions", FALSE, TRUE)
+          }
+          DT::datatable(data = do_data_sample(sdata,
+                                              input$selected_scen,input$selected_years,
+                                              input$selected_cols,sel_vars,
+                                              sel_reg, basic_reg, basic_vars),
+                        options = list(pageLength = 10, scrollX = TRUE),
+                        rownames = FALSE)
+        }
+    })
+  })
+
+  # observeEvent(input, {
+  #   if (firstLoad) {
+  #     # This code runs only on the first load
+  #     output$mytable <- renderDataTable({
+  #       # Code to render the table on the first load
+  #       print('display basic tree')
+  #       DT::datatable(data = do_data_sample(sdata,
+  #                                           input$selected_scen,input$selected_years,
+  #                                           input$selected_cols,unique(cols$col1),
+  #                                           reg_cont$region, first_display = TRUE),
+  #                     options = list(pageLength = 10, scrollX = TRUE),
+  #                     rownames = FALSE)
+  #
+  #     })
+  #     firstLoad <- FALSE
+  #   } else {
+  #     # This code runs on subsequent loads
+  #     output$mytable <- renderDataTable({
+  #       # Code to render the table on subsequent loads
+  #       print('display chosen tree')
+  #       DT::datatable(data = do_data_sample(sdata,
+  #                                           input$selected_scen,input$selected_years,
+  #                                           input$selected_cols,sel_vars,
+  #                                           sel_reg),
+  #                     options = list(pageLength = 10, scrollX = TRUE),
+  #                     rownames = FALSE)
+  #
+  #     })
+  #   }
   # })
+
 
   ## -- data table
   # output$datatable <- DT::renderDataTable({
@@ -113,6 +172,7 @@ server <- function(input, output) {
   # })
 
 
+    #####
   # ## -- plot
   # observe({
   #   if (input$graph_grouping == 'Grouped'){
@@ -290,20 +350,24 @@ server <- function(input, output) {
   #     }
   #   }
   # })
+    ######
 
 
-  ## -- download button
-  output$downloadData <- downloadHandler(
-    filename = function() {
-      paste('data-', Sys.Date(), '.csv', sep='')
-    },
-    content = function(con) {
-      write.csv(do_data_sample(sdata,
-                               input$selected_scen,input$selected_years,
-                               input$selected_cols,input$tree_variables,
-                               input$tree_regions),
-                con)
-    }
-  )
+  # ## -- download button
+  # output$downloadData <- downloadHandler(
+  #   filename = function() {
+  #     paste('data-', Sys.Date(), '.csv', sep='')
+  #   },
+  #   content = function(con) {
+  #     write.csv(do_data_sample(sdata,
+  #                              input$selected_scen,input$selected_years,
+  #                              input$selected_cols,input$tree_variables,
+  #                              input$tree_regions),
+  #               con)
+  #   }
+  # )
+
+  session$onSessionEnded(resetFirstLoad)
+
 
 }

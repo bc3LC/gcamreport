@@ -2,6 +2,17 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+resetFirstLoad <- function() {
+  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+  cols <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+  firstLoad <<- TRUE
+  firstReg <<- TRUE
+  firstVars <<- TRUE
+}
+
+
 #' do_codes
 #'
 #' Create new column for each column collapsing all the previous columns
@@ -34,24 +45,28 @@ do_codes <- function(data) {
 #' @importFrom magrittr %>%
 #' @return subseted dataset
 #' @export
-do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg) {
-  # reg <- c(unlist(lapply(sel_reg, function(x) {
-  #   y = strsplit(x, "\\|")[[1]]
-  #   if (length(y) > 1) {
-  #     na.omit(strsplit(x, "\\|")[[1]][2])
-  #   } else {
-  #     na.omit(strsplit(x, "\\|")[[1]][1])
-  #   }
-  #   }
-  #   )))
-  reg = do_unmount_tree(sel_reg, 'regions')
+do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
+                           basic_reg, basic_vars) {
+  if (basic_reg) {
+    reg = sel_reg
+  } else {
+    reg = do_unmount_tree(sel_reg, 'regions')
+  }
+  if (basic_vars) {
+    vars = sel_vars
+  } else {
+    vars = do_unmount_tree(sel_vars, 'regions')
+  }
+  # print(reg)
+  # print(vars)
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
-    # dplyr::filter(Variable %in% sel_vars) %>%
+    dplyr::filter(Variable %in% vars) %>%
     dplyr::filter(Region %in% reg) %>%
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
 
+  # print(str(data_sample))
   return(data_sample)
 }
 
