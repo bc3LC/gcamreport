@@ -40,19 +40,37 @@ server <- function(input, output) {
   #   updateTreeInput(inputId = "tree_regions", selected = character(0))
   # })
 
+  ## -- render regions tree
   output$tree_regions <- shinyTree::renderTree({
     tree_reg
   })
-
   observeEvent(input$tree_regions, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_regions", input$tree_regions)
     tree_reg <<- input$tree_regions
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Regions") {
-      print('rerender tree')
+      print('rerender reg tree')
       output$tree_regions <- shinyTree::renderTree({
         tree_reg
+      })
+    }
+  })
+
+
+  ## -- render variables tree
+  output$tree_variables <- shinyTree::renderTree({
+    tree_vars
+  })
+  observeEvent(input$tree_variables, {
+    updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
+    tree_vars <<- input$tree_variables
+  })
+  observeEvent(input$sidebarItemExpanded, {
+    if (input$sidebarItemExpanded == "Variables") {
+      print('rerender vars tree')
+      output$tree_variables <- shinyTree::renderTree({
+        tree_vars
       })
     }
   })
@@ -61,6 +79,7 @@ server <- function(input, output) {
   # observeEvent(input, {
     output$datatable <- DT::renderDataTable({
       sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+      sel_vars = shinyTree::get_selected(input$tree_variables, format = 'slices')
       if (length(sel_reg) == 0) {
         print('display basic tree')
         DT::datatable(data = do_data_sample(sdata,
@@ -73,7 +92,7 @@ server <- function(input, output) {
         print('display chosen tree')
         DT::datatable(data = do_data_sample(sdata,
                                             input$selected_scen,input$selected_years,
-                                            input$selected_cols,input$tree_variables,
+                                            input$selected_cols,sel_vars,
                                             sel_reg),
                       options = list(pageLength = 10, scrollX = TRUE),
                       rownames = FALSE)

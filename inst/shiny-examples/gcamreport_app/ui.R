@@ -8,6 +8,8 @@ library(dashboardthemes)
 
 reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
 tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+# reg_none <<- FALSE
+# starting <<- 0
 
 # Define UI --------------------------------------------------------------------
 
@@ -67,16 +69,8 @@ ui <- dashboardPage(
       icon = NULL,
       startExpanded = FALSE,
       menuItem(
-        treeInput(
-          inputId = "tree_variables",
-          label = "Select variables:",
-          choices = shinyWidgets::create_tree(cols,
-                                              levels = c('col1','col2','col3','col4','col5','col6','col7'),
-                                              levels_id = c('code_col1','code_col2','code_col3','code_col4','code_col5','code_col6','code_col7')),
-          selected = "Agricultural Demand",
-          returnValue = "id",
-          closeDepth = 0
-        )
+        shinyTree("tree_variables",
+                  checkbox = TRUE)
       ),
       menuItem(
         actionBttn(
