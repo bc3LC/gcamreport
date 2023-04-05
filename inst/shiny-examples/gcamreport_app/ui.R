@@ -15,6 +15,7 @@ tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
 firstLoad <<- TRUE
 firstReg <<- TRUE
 firstVars <<- TRUE
+printi <<- 1
 
 # Define UI --------------------------------------------------------------------
 

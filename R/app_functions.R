@@ -3,6 +3,7 @@
 #########################################################################
 
 resetFirstLoad <- function() {
+  print('RELOAD')
   reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   cols <<- unique(sdata[, grepl('col', names(sdata))])
@@ -10,6 +11,9 @@ resetFirstLoad <- function() {
   firstLoad <<- TRUE
   firstReg <<- TRUE
   firstVars <<- TRUE
+  noReg <<- FALSE
+  noVars <<- FALSE
+  printi <<- 1
 }
 
 

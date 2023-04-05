@@ -19,34 +19,34 @@ server <- function(input, output, session) {
   # # print(reg)
   # })
 
-  # ## -- select all/none variables
-  # treeDataVar_sel <- reactive({
-  #   tree_vars <- do_mount_tree(cols, names(cols), selec = TRUE)
-  # })
-  # treeDataVar_unsel <- reactive({
-  #   tree_vars <- do_mount_tree(cols, names(cols), selec = FALSE)
-  # })
-  # observeEvent(input$select_all_variables, {
-  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
-  # })
-  # observeEvent(input$select_none_variables, {
-  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
-  # })
-  #
-  #
-  # ## -- select all/none regions
-  # treeDataReg_sel <- reactive({
-  #   tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
-  # })
-  # treeDataReg_unsel <- reactive({
-  #   tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
-  # })
-  # observeEvent(input$select_all_regions, {
-  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
-  # })
-  # observeEvent(input$select_none_regions, {
-  #   updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
-  # })
+  ## -- select all/none variables
+  treeDataVar_sel <- reactive({
+    tree_vars <- do_mount_tree(cols, names(cols), selec = TRUE)
+  })
+  treeDataVar_unsel <- reactive({
+    tree_vars <- do_mount_tree(cols, names(cols), selec = FALSE)
+  })
+  observeEvent(input$select_all_variables, {
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
+  })
+  observeEvent(input$select_none_variables, {
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
+  })
+
+
+  ## -- select all/none regions
+  treeDataReg_sel <- reactive({
+    tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+  })
+  treeDataReg_unsel <- reactive({
+    tree_reg <- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
+  })
+  observeEvent(input$select_all_regions, {
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
+  })
+  observeEvent(input$select_none_regions, {
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
+  })
 
 
   ## -- render regions tree
@@ -104,26 +104,35 @@ server <- function(input, output, session) {
           print('display chosen tree')
           print(paste0('firstreg = ', firstReg))
           print(paste0('firstvars = ', firstVars))
+          print(paste0('wellpanel null? ',is.null(input$sidebarItemExpanded)))
+          if (!is.null(input$sidebarItemExpanded)) {
+            print(input$sidebarItemExpanded)
+          }
           basic_reg = FALSE
           basic_vars = FALSE
-          if (firstReg && (!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables") || is.null(input$sidebarItemExpanded)) {
+          if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
             print('reg')
             sel_reg = reg_cont$region
             basic_reg = TRUE
-            firstVars <<- ifelse(!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables", FALSE, TRUE)
           }
-          if (firstVars && (!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions") || is.null(input$sidebarItemExpanded)) {
+          if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
             print('vars')
             sel_vars = unique(cols$col1)
             basic_vars = TRUE
-            firstReg <<- ifelse(!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions", FALSE, TRUE)
           }
+          firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
+          firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
+
+          print(paste0(printi,'----------------'))
+          printi <<- printi + 1
+
           DT::datatable(data = do_data_sample(sdata,
                                               input$selected_scen,input$selected_years,
                                               input$selected_cols,sel_vars,
                                               sel_reg, basic_reg, basic_vars),
                         options = list(pageLength = 10, scrollX = TRUE),
                         rownames = FALSE)
+
         }
     })
   })
