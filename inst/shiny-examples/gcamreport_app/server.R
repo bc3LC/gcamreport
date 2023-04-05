@@ -84,8 +84,8 @@ server <- function(input, output) {
         print('display basic tree')
         DT::datatable(data = do_data_sample(sdata,
                                             input$selected_scen,input$selected_years,
-                                            input$selected_cols,input$tree_variables,
-                                            tree_reg),
+                                            input$selected_cols,unique(cols$col1),
+                                            reg_cont$region, first_display = TRUE),
                       options = list(pageLength = 10, scrollX = TRUE),
                       rownames = FALSE)
       } else {
