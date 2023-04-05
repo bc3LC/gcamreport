@@ -6,6 +6,9 @@ library(magrittr)
 library(shinyjs)
 library(dashboardthemes)
 
+reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+
 # Define UI --------------------------------------------------------------------
 
 ui <- dashboardPage(
@@ -35,16 +38,8 @@ ui <- dashboardPage(
       icon = NULL,
       startExpanded = FALSE,
       menuItem(
-        treeInput(
-          inputId = "tree_regions",
-          label = "Select regions:",
-          choices = shinyWidgets::create_tree(reg_cont,
-                                              levels = c('continent','region'),
-                                              levels_id = c('code_continent','code_region')),
-          selected = c("Africa",""),
-          returnValue = "id",
-          closeDepth = 0
-        )
+        shinyTree("tree_regions",
+                  checkbox = TRUE)
       ),
       menuItem(
         actionBttn(

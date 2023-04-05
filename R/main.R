@@ -151,6 +151,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   cols <<- do_codes(cols)
 
   reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   reg_cont <<- do_codes(reg_cont)
 
   if (launch_app) {
