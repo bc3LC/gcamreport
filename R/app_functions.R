@@ -54,6 +54,7 @@ do_codes <- function(data) {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
+  print('do_data_sample')
   if (basic_reg == 1) {
     reg = unique(sdata$Region)
   } else if (basic_reg == 2) {
@@ -136,6 +137,8 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
 #' @return dataframe
 #' @export
 do_unmount_tree <- function(base_tree, type) {
+
+  print('unmount tree')
 
   if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |
