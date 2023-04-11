@@ -183,10 +183,54 @@ server <- function(input, output, session) {
 
   })
 
-  ## -- plot
-  observeEvent(input$tab_box_selected, {
 
-    if (input$tab_box_selected == 'Plot') {
+  tableData <- reactive({
+    sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
+    sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+    if (firstLoad) {
+      firstLoad <<- FALSE
+      tableData <- do_data_sample(sdata,
+                                  input$selected_scen,input$selected_years,
+                                  input$selected_cols,unique(cols$col1),
+                                  reg_cont$region, TRUE, TRUE)
+    } else {
+      basic_reg = 0
+      basic_vars = 0
+      if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
+        sel_reg = reg_cont$region
+        basic_reg = 1
+      }
+      if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
+        sel_vars = unique(cols$col1)
+        basic_vars = 1
+      }
+      if (noReg) {
+        noReg <<- FALSE
+        sel_reg = c()
+        basic_reg = 2
+      }
+      if (noVars) {
+        noVars <<- FALSE
+        sel_vars = c()
+        basic_vars = 2
+      }
+      firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
+      firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
+      tableData <- do_data_sample(sdata,
+                                 input$selected_scen,input$selected_years,
+                                 input$selected_cols,sel_vars,
+                                 sel_reg, basic_reg, basic_vars)
+    }
+
+  })
+
+
+  ## -- plot
+  observe({
+    print('observeEvent')
+
+    if (input$tab_box == 'Plot') {
+      print('plot')
       if (input$graph_grouping == 'Grouped'){
         # display one single plot with all selected variables
 
@@ -239,9 +283,9 @@ server <- function(input, output, session) {
                    ggplot2::scale_linetype_manual('Variables', values = rep(c(1:9), times = ceiling(length(unique(data_sample$Variable))/9))) +
                    ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
                    ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year') +
-                   ggplot2::guides(color = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Scenario))/6))) +
-                   ggplot2::guides(shape = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Region))/7))) +
-                   ggplot2::guides(linetype = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Variable))/8))) +
+                   # ggplot2::guides(color = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Scenario))/6))) +
+                   # ggplot2::guides(shape = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Region))/7))) +
+                   # ggplot2::guides(linetype = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Variable))/8))) +
                    ggplot2::theme_bw() +
                    ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
                                   legend.key.size = ggplot2::unit(0.5, "cm"))
@@ -285,10 +329,12 @@ server <- function(input, output, session) {
       }
       else if (input$graph_grouping == 'Ungrouped') {
         # display one plot for each variable
-
+        sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+        n = length(sel_vars)
+        print(n)
         # insert the right number of plot output objects into the web page
         output$plots <- renderUI({
-          plot_output_list <- lapply(1:length(input$tree_variables), function(i) {
+          plot_output_list <- lapply(1:n, function(i) {
             plotname <- paste("plot", i, sep="")
             tagList(
               plotOutput(plotname, height = 400, width = 1000),
@@ -303,7 +349,8 @@ server <- function(input, output, session) {
         })
 
 
-        n = length(input$tree_variables)
+        # n = length(input$tree_variables)
+        # print(n)
         for (i in 1:n) {
           # Need local so that each item gets its own number. Without it, the value
           # of i in the renderPlot() will be the same across all instances, because
@@ -317,18 +364,19 @@ server <- function(input, output, session) {
             data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
               dplyr::mutate(values = as.numeric(as.character(values))) %>%
               dplyr::mutate(year = as.numeric(as.character(year)))
+            save(data_sample, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\data_sample.RData'))
 
-            assign(paste0('fig_',unique(data_sample$Variable)[1]),
-                   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+            assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                   ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                      ggplot2::geom_point(ggplot2::aes(shape = Region)) +
                      ggplot2::geom_line() +
                      ggplot2::guides(linetype = 'none') +
                      ggplot2::scale_shape_manual('Region', values = rep(c(1:25), times = ceiling(length(unique(data_sample$Variable))/6))) +
                      ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                     ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)), y = unique(data_sample$Unit), x = 'Year') +
-                     ggplot2::guides(color = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Scenario))/6))) +
-                     ggplot2::guides(shape = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Region))/7))) +
-                     ggplot2::guides(linetype = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Variable))/8))) +
+                     ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
+                     # ggplot2::guides(color = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Scenario))/6))) +
+                     # ggplot2::guides(shape = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Region))/7))) +
+                     # ggplot2::guides(linetype = ggplot2::guide_legend(ncol = floor(length(unique(data_sample$Variable))/8))) +
                      ggplot2::theme_bw() +
                      ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
                                     legend.key.size = ggplot2::unit(0.7, "cm"))
@@ -336,25 +384,27 @@ server <- function(input, output, session) {
 
             # display plot
             output[[plotname]] <- renderPlot({
-              get(paste0('fig_',unique(data_sample$Variable)[1]))
+              get(paste0('fig_',unique(data_sample$Variable)[my_i]))
             })
 
             # display download button
             output[[paste0("download", my_i)]] <- downloadHandler(
-              filename = function() { paste0('fig_',unique(data_sample$Variable)[1],'.png') },
+              filename = function() { paste0('fig_',unique(data_sample$Variable)[my_i],'.png') },
               content = function(file) {
-                assign(paste0('fig_',unique(data_sample$Variable)[1]),
-                       get(paste0('fig_',unique(data_sample$Variable)[1])) +
+                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                       get(paste0('fig_',unique(data_sample$Variable)[my_i])) +
                          ggplot2::theme(legend.key.size = ggplot2::unit(0.25, "cm")))
 
                 # compute width
                 w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
-                ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[1])), device = "png",
+                ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
                                 height = 10, width = 20+w, units = 'cm', limitsize = FALSE)
               })
           })
         }
       }
+    } else {
+      print('no plot')
     }
   })
 
