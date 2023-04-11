@@ -7,14 +7,6 @@ library(shinyTree)
 
 server <- function(input, output, session) {
 
-  output$datatable <- shiny::renderDataTable(
-    tableData(),
-    options = list(pageLength = 10,
-                   scrollX = TRUE,
-                   rownames = FALSE)
-  )
-
-
   ## -- debug
   # output$res3 <- renderPrint(shinyTree::get_selected(input$tree_variables, format = 'slices'))
 
@@ -51,9 +43,11 @@ server <- function(input, output, session) {
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
   })
   observeEvent(input$select_all_regions, {
+    print('select_all_reg')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
   })
   observeEvent(input$select_none_regions, {
+    print('select_none_reg')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
     noReg <<- TRUE
   })
@@ -80,7 +74,6 @@ server <- function(input, output, session) {
                                selected = available_years)
   })
   observeEvent(input$select_none_years, {
-    print('oli')
     updateAwesomeCheckboxGroup(session = getDefaultReactiveDomain(), inputId = 'selected_years',
                                label = "Select years",
                                choices = available_years,
@@ -135,7 +128,72 @@ server <- function(input, output, session) {
     }
   })
 
-  tableData <- reactive({
+  # tableData <- reactive(label = 'asdf',{
+  #   print(paste0('i = ', i, ' Create dt'))
+  #   i <<- i + 1
+  #   sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
+  #   sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+  #   if (firstLoad) {
+  #     print(paste0('i = ', i, ' FirstLoad'))
+  #     i <<- i + 1
+  #     firstLoad <<- FALSE
+  #     tableData <- do_data_sample(sdata,
+  #                                 input$selected_scen,input$selected_years,
+  #                                 input$selected_cols,unique(cols$col1),
+  #                                 reg_cont$region, TRUE, TRUE)
+  #   } else {
+  #     print(paste0('i = ', i, ' No FirstLoad'))
+  #     i <<- i + 1
+  #     basic_reg = 0
+  #     basic_vars = 0
+  #     if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
+  #       print('firstReg')
+  #       sel_reg = reg_cont$region
+  #       basic_reg = 1
+  #     }
+  #     if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
+  #       print('firstVars')
+  #       sel_vars = unique(cols$col1)
+  #       basic_vars = 1
+  #     }
+  #     if (noReg) {
+  #       print('noReg')
+  #       noReg <<- FALSE
+  #       sel_reg = c()
+  #       basic_reg = 2
+  #     }
+  #     if (noVars) {
+  #       print('noVars')
+  #       noVars <<- FALSE
+  #       sel_vars = c()
+  #       basic_vars = 2
+  #     }
+  #     firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
+  #     firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
+  #     print(paste0('i = ', i, ' Checks done'))
+  #     i <<- i + 1
+  #     tableData <- do_data_sample(sdata,
+  #                                input$selected_scen,input$selected_years,
+  #                                input$selected_cols,sel_vars,
+  #                                sel_reg, basic_reg, basic_vars)
+  #   }
+  #
+  # })
+
+  # output$datatable <- shiny::renderDataTable(
+  #   tableData(),
+  #   options = list(pageLength = 10,
+  #                  scrollX = TRUE,
+  #                  rownames = FALSE)
+  # )
+
+
+  ## -- data table
+  observeEvent(c(input$tree_regions, input$select_none_regions,
+                 input$tree_variables, input$select_none_variables), {
+    print(paste0('i = ', i, ' Print dt'))
+    i <<- i + 1
+
     print(paste0('i = ', i, ' Create dt'))
     i <<- i + 1
     sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
@@ -144,6 +202,10 @@ server <- function(input, output, session) {
       print(paste0('i = ', i, ' FirstLoad'))
       i <<- i + 1
       firstLoad <<- FALSE
+      sel_vars = unique(cols$col1)
+      sel_reg = reg_cont$region
+      basic_reg = TRUE
+      basic_vars = TRUE
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,unique(cols$col1),
@@ -154,19 +216,23 @@ server <- function(input, output, session) {
       basic_reg = 0
       basic_vars = 0
       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
+        print('firstReg')
         sel_reg = reg_cont$region
         basic_reg = 1
       }
       if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
+        print('firstVars')
         sel_vars = unique(cols$col1)
         basic_vars = 1
       }
       if (noReg) {
+        print('noReg')
         noReg <<- FALSE
         sel_reg = c()
         basic_reg = 2
       }
       if (noVars) {
+        print('noVars')
         noVars <<- FALSE
         sel_vars = c()
         basic_vars = 2
@@ -176,34 +242,27 @@ server <- function(input, output, session) {
       print(paste0('i = ', i, ' Checks done'))
       i <<- i + 1
       tableData <- do_data_sample(sdata,
-                                 input$selected_scen,input$selected_years,
-                                 input$selected_cols,sel_vars,
-                                 sel_reg, basic_reg, basic_vars)
+                                  input$selected_scen,input$selected_years,
+                                  input$selected_cols,sel_vars,
+                                  sel_reg, basic_reg, basic_vars)
     }
 
-  })
-
-  # ## -- data table
-  observeEvent(c(input, input$select_none_regions, input$select_none_variables,
-                 input$select_none_scen, input$select_none_years, input$select_none_cols), {
-    print(paste0('i = ', i, ' Print dt'))
-    i <<- i + 1
     output$datatable <- shiny::renderDataTable(
-      tableData(),
+      do_data_sample(sdata,
+                     input$selected_scen,input$selected_years,
+                     input$selected_cols,sel_vars,
+                     sel_reg, basic_reg, basic_vars),
       options = list(pageLength = 10,
                      scrollX = TRUE,
                      rownames = FALSE)
     )
+
     # output$datatable <- DT::renderDataTable({
     #   DT::datatable(data = tableData(),
     #                 options = list(pageLength = 5, scrollX = TRUE),
     #                 rownames = FALSE)
     # }, server = TRUE)
   })
-
-
-
-
 
   ## -- plot
   observeEvent(input$tab_box_selected, {
