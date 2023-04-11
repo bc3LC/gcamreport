@@ -17,6 +17,7 @@ reset_first_load <- function() {
   firstVars <<- TRUE
   noReg <<- FALSE
   noVars <<- FALSE
+  i <<- 1
 }
 
 
@@ -75,7 +76,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
     dplyr::filter(Region %in% reg) %>%
     dplyr::select(c(sel_cols, sel_years)) %>%
     data.table::as.data.table()
-
+  print('return datasample')
   return(data_sample)
 }
 

@@ -85,15 +85,21 @@ server <- function(input, output, session) {
   })
 
   tableData <- reactive({
+    print(paste0('i = ', i, ' Create dt'))
+    i <<- i + 1
     sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
     sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
     if (firstLoad) {
+      print(paste0('i = ', i, ' FirstLoad'))
+      i <<- i + 1
       firstLoad <<- FALSE
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,unique(cols$col1),
                                   reg_cont$region, TRUE, TRUE)
     } else {
+      print(paste0('i = ', i, ' No FirstLoad'))
+      i <<- i + 1
       basic_reg = 0
       basic_vars = 0
       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
@@ -116,7 +122,8 @@ server <- function(input, output, session) {
       }
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-
+      print(paste0('i = ', i, ' Checks done'))
+      i <<- i + 1
       tableData <- do_data_sample(sdata,
                                  input$selected_scen,input$selected_years,
                                  input$selected_cols,sel_vars,
@@ -125,13 +132,21 @@ server <- function(input, output, session) {
 
   })
 
-  ## -- data table
+  # ## -- data table
   observeEvent(c(input, input$select_none_regions, input$select_none_variables), {
-    output$datatable <- DT::renderDataTable({
-      DT::datatable(data = tableData(),
-                    options = list(pageLength = 10, scrollX = TRUE),
-                    rownames = FALSE)
-    })
+    print(paste0('i = ', i, ' Print dt'))
+    i <<- i + 1
+    output$datatable <- shiny::renderDataTable(
+      tableData(),
+      options = list(pageLength = 10,
+                     scrollX = TRUE,
+                     rownames = FALSE)
+    )
+    # output$datatable <- DT::renderDataTable({
+    #   DT::datatable(data = tableData(),
+    #                 options = list(pageLength = 5, scrollX = TRUE),
+    #                 rownames = FALSE)
+    # }, server = TRUE)
   })
 
 
