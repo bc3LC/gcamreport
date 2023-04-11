@@ -4,7 +4,16 @@
 \alias{do_data_sample}
 \title{do_data_sample}
 \usage{
-do_data_sample(sdata, sel_scen, sel_years, sel_cols, sel_vars, sel_reg)
+do_data_sample(
+  sdata,
+  sel_scen,
+  sel_years,
+  sel_cols,
+  sel_vars,
+  sel_reg,
+  basic_reg,
+  basic_vars
+)
 }
 \arguments{
 \item{sdata:}{dataset}
