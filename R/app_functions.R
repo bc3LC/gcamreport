@@ -2,9 +2,37 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
+  if (length(vars) > 0) {
+    check_vars = sub("\\|.*", "", stringr::str_extract(vars, "(.*?)(\\||$)"))
+  } else {
+    print('length sel vars == 0')
+    check_vars = NULL
+  }
+  print(check_vars)
+  error_message = c()
+
+  if (length(unique(scen)) < 1) {
+    error_message <- c(error_message,"ERROR: Select at least one scenario please.")
+  }
+  if (length(unique(years)) < 1) {
+    error_message <- c(error_message,"ERROR: Select at least one year please.")
+  }
+  if (length(unique(reg)) < 1) {
+    error_message <- c(error_message,"ERROR: Select at least one region please.")
+  }
+  if (length(unique(check_vars)) < 1) {
+    error_message <- c(error_message,"ERROR: Select at least one variable please.")
+  }
+  if (grouped & length(unique(check_vars)) > 1) {
+    error_message <- c(error_message,"ERROR: Select only variables from the same group please.")
+  }
+
+  return(error_message)
+}
+
 update_user_choices_plot <- function(selected_scen, selected_years, selected_cols,
-                                     tree_regions, tree_variables, sidebarItemExpanded,
-                                     aim) {
+                                     tree_regions, tree_variables, sidebarItemExpanded) {
   sel_reg_ini = shinyTree::get_selected(tree_regions, format = 'slices')
   sel_vars_ini = shinyTree::get_selected(tree_variables, format = 'slices')
 
@@ -32,18 +60,27 @@ update_user_choices_plot <- function(selected_scen, selected_years, selected_col
   firstVars <<- ifelse(!firstVars || (firstVars && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Variables"), FALSE, TRUE)
   firstReg <<- ifelse(!firstReg || (firstReg && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Regions"), FALSE, TRUE)
 
-  if (aim == 'data') {
-    sel_cols = selected_cols
+  if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
+    sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
   } else {
-    sel_cols = c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
+    sel_vars = sel_vars_ini
   }
+  if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
+    sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
+  } else {
+    sel_reg = sel_reg_ini
+  }
+
+  sel_cols = c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
 
   toret = list(
     'scen' = selected_scen,
     'years' = selected_years,
     'cols' = sel_cols,
-    'vars' = sel_vars_ini,
-    'reg' = sel_reg_ini,
+    'vars_ini' = sel_vars_ini,
+    'reg_ini' = sel_reg_ini,
+    'vars' = sel_vars,
+    'reg' = sel_reg,
     'basic_reg' = basic_reg,
     'basic_vars' = basic_vars
   )

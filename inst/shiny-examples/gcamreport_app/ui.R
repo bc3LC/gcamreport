@@ -150,16 +150,10 @@ ui <- dashboardPage(
         awesomeCheckboxGroup(
           inputId = "selected_cols",
           label = "Select columns",
-          choices = c('Model',
-                      'Scenario',
-                      'Region',
-                      'Variable',
-                      'Unit'),
-          selected = c('Model',
-                       'Scenario',
-                       'Region',
-                       'Variable',
-                       'Unit')
+          choices = c('Model', 'Scenario', 'Region',
+                      'Variable', 'Unit'),
+          selected = c('Model', 'Scenario', 'Region',
+                       'Variable', 'Unit')
         )
       ),
       menuItem(
