@@ -29,7 +29,24 @@ ui <- dashboardPage(
           choices = unique(sdata$Scenario),
           selected = unique(sdata$Scenario)
         )
-      )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_all_scen",
+          label = "Select all",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_none_scen",
+          label = "Select none",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      br()
     ),
 
 
@@ -103,7 +120,24 @@ ui <- dashboardPage(
           choices = available_years,
           selected = available_years
         )
-      )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_all_years",
+          label = "Select all",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_none_years",
+          label = "Select none",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      br()
     ),
 
 
@@ -127,7 +161,24 @@ ui <- dashboardPage(
                        'Variable',
                        'Unit')
         )
-      )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_all_cols",
+          label = "Select all",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      menuItem(
+        actionBttn(
+          inputId = "select_none_cols",
+          label = "Select none",
+          style = "minimal",
+          size = 'xs'
+        )
+      ),
+      br()
     ),
 
 

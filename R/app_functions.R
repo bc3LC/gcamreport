@@ -70,6 +70,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
   } else{
     vars = do_unmount_tree(sel_vars, 'variables')
   }
+  print(sel_years)
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
     dplyr::filter(Variable %in% vars) %>%
