@@ -127,12 +127,20 @@ server <- function(input, output, session) {
   })
 
 
-  ## -- data table
+  ## -- listen to 'select_none' buttons
   observeEvent(c(input$tab_box, input,
                  input$tree_regions, input$select_none_regions,
                  input$tree_variables, input$select_none_variables), {
 
    if (input$tab_box == 'Data') {
+   # data table
+     # sel = update_user_choices_plot(selected_scen = input$selected_scen,
+     #                          selected_years = input$selected_years,
+     #                          selected_cols = input$selected_cols,
+     #                          tree_regions = input$tree_regions,
+     #                          tree_variables = input$tree_variables,
+     #                          sidebarItemExpanded = input$sidebarItemExpanded,
+     #                          aim = 'data')
 
       sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
       sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
@@ -143,10 +151,6 @@ server <- function(input, output, session) {
         basic_reg = TRUE
         basic_vars = TRUE
         print('a1')
-        tableData <- do_data_sample(sdata,
-                                    input$selected_scen,input$selected_years,
-                                    input$selected_cols,unique(cols$col1),
-                                    reg_cont$region, TRUE, TRUE)
       } else {
         basic_reg = 0
         basic_vars = 0
@@ -171,13 +175,13 @@ server <- function(input, output, session) {
         firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
         firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
         print('a2')
-        tableData <- do_data_sample(sdata,
-                                    input$selected_scen,input$selected_years,
-                                    input$selected_cols,sel_vars,
-                                    sel_reg, basic_reg, basic_vars)
       }
 
       output$datatable <- shiny::renderDataTable(
+        # do_data_sample(sdata,
+        #                sel$scen,sel$years,
+        #                sel$cols,sel$vars,
+        #                sel$reg, sel$basic_reg, sel$basic_vars),
         do_data_sample(sdata,
                        input$selected_scen,input$selected_years,
                        input$selected_cols,sel_vars,
@@ -187,6 +191,7 @@ server <- function(input, output, session) {
                        rownames = FALSE)
       )
    } else if (input$tab_box == 'Plot') {
+     # plot
      print('plot')
      sel_reg_ini = shinyTree::get_selected(input$tree_regions, format = 'slices')
      sel_vars_ini = shinyTree::get_selected(input$tree_variables, format = 'slices')
@@ -215,24 +220,19 @@ server <- function(input, output, session) {
      firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
      firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
 
+    if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
+      sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
+    } else {
+      sel_vars = sel_vars_ini
+    }
+    if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
+      sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
+    } else {
+      sel_reg = sel_reg_ini
+    }
+
      if (input$graph_grouping == 'Grouped'){
-       # save(sel_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\sel_vars2.RData'))
-       print(str(sel_vars_ini))
-       print(is.list(sel_vars_ini))
-       if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
-         sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
-       } else {
-         sel_vars = sel_vars_ini
-       }
-       if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
-         sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
-       } else {
-         sel_reg = sel_reg_ini
-       }
-       # sel_vars = ifelse(is.list(sel_vars_ini), do_unmount_tree(sel_vars_ini, 'variables'), sel_vars_ini)
-       # sel_reg = ifelse(is.list(sel_reg_ini), do_unmount_tree(sel_reg_ini, 'regions'), sel_reg_ini)
-       print(str(sel_vars))
-       # save(sel_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\sel_vars3.RData'))
+      # single plot since 'grouped' selected
 
        # display one single plot with all selected variables
 
@@ -343,51 +343,8 @@ server <- function(input, output, session) {
        }
      }
      else if (input$graph_grouping == 'Ungrouped') {
+     # multiple plots since 'ungrouped' selected
        print('ungrouped')
-
-       sel_reg_ini = shinyTree::get_selected(input$tree_regions, format = 'slices')
-       sel_vars_ini = shinyTree::get_selected(input$tree_variables, format = 'slices')
-
-       # read user's selection
-       basic_reg = 0
-       basic_vars = 0
-       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-         sel_reg_ini = reg_cont$region
-         basic_reg = 1
-       }
-       if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-         sel_vars_ini = unique(cols$col1)
-         basic_vars = 1
-       }
-       if (noReg) {
-         noReg <<- FALSE
-         sel_reg_ini = c()
-         basic_reg = 2
-       }
-       if (noVars) {
-         noVars <<- FALSE
-         sel_vars_ini = c()
-         basic_vars = 2
-       }
-       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
-       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-
-       print(str(sel_vars_ini))
-       print(is.list(sel_vars_ini))
-       if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
-         sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
-       } else {
-         sel_vars = sel_vars_ini
-       }
-       if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
-         sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
-       } else {
-         sel_reg = sel_reg_ini
-       }
-       # sel_vars = ifelse(is.list(sel_vars_ini), do_unmount_tree(sel_vars_ini, 'variables'), sel_vars_ini)
-       # sel_reg = ifelse(is.list(sel_reg_ini), do_unmount_tree(sel_reg_ini, 'regions'), sel_reg_ini)
-       print(str(sel_vars))
-
        # display one plot for each variable
        n = length(sel_vars)
        print(n)
@@ -408,8 +365,8 @@ server <- function(input, output, session) {
        })
 
 
-       # n = length(input$tree_variables)
-       # print(n)
+       n = length(sel_vars)
+       print(n)
        for (i in 1:n) {
          # Need local so that each item gets its own number. Without it, the value
          # of i in the renderPlot() will be the same across all instances, because
@@ -545,24 +502,18 @@ server <- function(input, output, session) {
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
 
+      if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
+        sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
+      } else {
+        sel_vars = sel_vars_ini
+      }
+      if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
+        sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
+      } else {
+        sel_reg = sel_reg_ini
+      }
+
       if (input$graph_grouping == 'Grouped'){
-        # save(sel_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\sel_vars2.RData'))
-        print(str(sel_vars_ini))
-        print(is.list(sel_vars_ini))
-        if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
-          sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
-        } else {
-          sel_vars = sel_vars_ini
-        }
-        if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
-          sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
-        } else {
-          sel_reg = sel_reg_ini
-        }
-        # sel_vars = ifelse(is.list(sel_vars_ini), do_unmount_tree(sel_vars_ini, 'variables'), sel_vars_ini)
-        # sel_reg = ifelse(is.list(sel_reg_ini), do_unmount_tree(sel_reg_ini, 'regions'), sel_reg_ini)
-        print(str(sel_vars))
-        # save(sel_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\sel_vars3.RData'))
 
         # display one single plot with all selected variables
 
@@ -675,50 +626,6 @@ server <- function(input, output, session) {
       else if (input$graph_grouping == 'Ungrouped') {
         print('ungrouped')
 
-        sel_reg_ini = shinyTree::get_selected(input$tree_regions, format = 'slices')
-        sel_vars_ini = shinyTree::get_selected(input$tree_variables, format = 'slices')
-
-        # read user's selection
-        basic_reg = 0
-        basic_vars = 0
-        if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-          sel_reg_ini = reg_cont$region
-          basic_reg = 1
-        }
-        if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-          sel_vars_ini = unique(cols$col1)
-          basic_vars = 1
-        }
-        if (noReg) {
-          noReg <<- FALSE
-          sel_reg_ini = c()
-          basic_reg = 2
-        }
-        if (noVars) {
-          noVars <<- FALSE
-          sel_vars_ini = c()
-          basic_vars = 2
-        }
-        firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
-        firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-
-        print(str(sel_vars_ini))
-        print(is.list(sel_vars_ini))
-        if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
-          sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
-        } else {
-          sel_vars = sel_vars_ini
-        }
-        if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
-          sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
-        } else {
-          sel_reg = sel_reg_ini
-        }
-        # sel_vars = ifelse(is.list(sel_vars_ini), do_unmount_tree(sel_vars_ini, 'variables'), sel_vars_ini)
-        # sel_reg = ifelse(is.list(sel_reg_ini), do_unmount_tree(sel_reg_ini, 'regions'), sel_reg_ini)
-        print(str(sel_vars))
-
-
         # display one plot for each variable
         n = length(sel_vars)
         print(n)
@@ -795,8 +702,6 @@ server <- function(input, output, session) {
           })
         }
       }
-    } else {
-      print('no plot')
     }
   })
 

@@ -2,6 +2,56 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+update_user_choices_plot <- function(selected_scen, selected_years, selected_cols,
+                                     tree_regions, tree_variables, sidebarItemExpanded,
+                                     aim) {
+  sel_reg_ini = shinyTree::get_selected(tree_regions, format = 'slices')
+  sel_vars_ini = shinyTree::get_selected(tree_variables, format = 'slices')
+
+  # read user's selection
+  basic_reg = 0
+  basic_vars = 0
+  if (firstReg && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Regions") || is.null(sidebarItemExpanded))) {
+    sel_reg_ini = reg_cont$region
+    basic_reg = 1
+  }
+  if (firstVars && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Variables") || is.null(sidebarItemExpanded))) {
+    sel_vars_ini = unique(cols$col1)
+    basic_vars = 1
+  }
+  if (noReg) {
+    noReg <<- FALSE
+    sel_reg_ini = c()
+    basic_reg = 2
+  }
+  if (noVars) {
+    noVars <<- FALSE
+    sel_vars_ini = c()
+    basic_vars = 2
+  }
+  firstVars <<- ifelse(!firstVars || (firstVars && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Variables"), FALSE, TRUE)
+  firstReg <<- ifelse(!firstReg || (firstReg && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Regions"), FALSE, TRUE)
+
+  if (aim == 'data') {
+    sel_cols = selected_cols
+  } else {
+    sel_cols = c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
+  }
+
+  toret = list(
+    'scen' = selected_scen,
+    'years' = selected_years,
+    'cols' = sel_cols,
+    'vars' = sel_vars_ini,
+    'reg' = sel_reg_ini,
+    'basic_reg' = basic_reg,
+    'basic_vars' = basic_vars
+  )
+  return(toret)
+}
+
+
+
 #' reset_first_load
 #'
 #' Initialize variables to run the app
