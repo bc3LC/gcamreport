@@ -43,11 +43,9 @@ server <- function(input, output, session) {
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
   })
   observeEvent(input$select_all_regions, {
-    print('select_all_reg')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
   })
   observeEvent(input$select_none_regions, {
-    print('select_none_reg')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
     noReg <<- TRUE
   })
@@ -128,79 +126,13 @@ server <- function(input, output, session) {
     }
   })
 
-  # tableData <- reactive(label = 'asdf',{
-  #   print(paste0('i = ', i, ' Create dt'))
-  #   i <<- i + 1
-  #   sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
-  #   sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
-  #   if (firstLoad) {
-  #     print(paste0('i = ', i, ' FirstLoad'))
-  #     i <<- i + 1
-  #     firstLoad <<- FALSE
-  #     tableData <- do_data_sample(sdata,
-  #                                 input$selected_scen,input$selected_years,
-  #                                 input$selected_cols,unique(cols$col1),
-  #                                 reg_cont$region, TRUE, TRUE)
-  #   } else {
-  #     print(paste0('i = ', i, ' No FirstLoad'))
-  #     i <<- i + 1
-  #     basic_reg = 0
-  #     basic_vars = 0
-  #     if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-  #       print('firstReg')
-  #       sel_reg = reg_cont$region
-  #       basic_reg = 1
-  #     }
-  #     if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-  #       print('firstVars')
-  #       sel_vars = unique(cols$col1)
-  #       basic_vars = 1
-  #     }
-  #     if (noReg) {
-  #       print('noReg')
-  #       noReg <<- FALSE
-  #       sel_reg = c()
-  #       basic_reg = 2
-  #     }
-  #     if (noVars) {
-  #       print('noVars')
-  #       noVars <<- FALSE
-  #       sel_vars = c()
-  #       basic_vars = 2
-  #     }
-  #     firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
-  #     firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-  #     print(paste0('i = ', i, ' Checks done'))
-  #     i <<- i + 1
-  #     tableData <- do_data_sample(sdata,
-  #                                input$selected_scen,input$selected_years,
-  #                                input$selected_cols,sel_vars,
-  #                                sel_reg, basic_reg, basic_vars)
-  #   }
-  #
-  # })
-
-  # output$datatable <- shiny::renderDataTable(
-  #   tableData(),
-  #   options = list(pageLength = 10,
-  #                  scrollX = TRUE,
-  #                  rownames = FALSE)
-  # )
-
 
   ## -- data table
   observeEvent(c(input$tree_regions, input$select_none_regions,
                  input$tree_variables, input$select_none_variables), {
-    print(paste0('i = ', i, ' Print dt'))
-    i <<- i + 1
-
-    print(paste0('i = ', i, ' Create dt'))
-    i <<- i + 1
     sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
     sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
     if (firstLoad) {
-      print(paste0('i = ', i, ' FirstLoad'))
-      i <<- i + 1
       firstLoad <<- FALSE
       sel_vars = unique(cols$col1)
       sel_reg = reg_cont$region
@@ -211,36 +143,28 @@ server <- function(input, output, session) {
                                   input$selected_cols,unique(cols$col1),
                                   reg_cont$region, TRUE, TRUE)
     } else {
-      print(paste0('i = ', i, ' No FirstLoad'))
-      i <<- i + 1
       basic_reg = 0
       basic_vars = 0
       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-        print('firstReg')
         sel_reg = reg_cont$region
         basic_reg = 1
       }
       if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-        print('firstVars')
         sel_vars = unique(cols$col1)
         basic_vars = 1
       }
       if (noReg) {
-        print('noReg')
         noReg <<- FALSE
         sel_reg = c()
         basic_reg = 2
       }
       if (noVars) {
-        print('noVars')
         noVars <<- FALSE
         sel_vars = c()
         basic_vars = 2
       }
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-      print(paste0('i = ', i, ' Checks done'))
-      i <<- i + 1
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,sel_vars,
@@ -257,11 +181,6 @@ server <- function(input, output, session) {
                      rownames = FALSE)
     )
 
-    # output$datatable <- DT::renderDataTable({
-    #   DT::datatable(data = tableData(),
-    #                 options = list(pageLength = 5, scrollX = TRUE),
-    #                 rownames = FALSE)
-    # }, server = TRUE)
   })
 
   ## -- plot
@@ -436,8 +355,6 @@ server <- function(input, output, session) {
           })
         }
       }
-    } else {
-      print('no plot')
     }
   })
 

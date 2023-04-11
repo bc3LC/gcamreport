@@ -201,7 +201,6 @@ ui <- dashboardPage(
         tabPanel("Data",
                  verbatimTextOutput("res3"),
                  shiny::dataTableOutput(outputId = "datatable")
-                 # DT::dataTableOutput(outputId = "datatable")
         ),
         tabPanel("Plot",
                  radioGroupButtons(

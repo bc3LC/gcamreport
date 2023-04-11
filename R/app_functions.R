@@ -17,7 +17,6 @@ reset_first_load <- function() {
   firstVars <<- TRUE
   noReg <<- FALSE
   noVars <<- FALSE
-  i <<- 1
 }
 
 
