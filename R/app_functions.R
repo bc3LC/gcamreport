@@ -5,7 +5,8 @@
 
 #' check_user_choices_plot
 #'
-#' Update dataframe to display plots with the user's choices
+#' Check user's choices to do the plot: at least one scenario, variable, year, and region
+#' must be chosen. In case of 'grouped' plot, all variables must be from the same category.
 #' @param scen: user's selected scenarios
 #' @param years: user's selected years
 #' @param reg: user's selected regions
@@ -34,7 +35,7 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
     error_message <- c(error_message,"ERROR: Select at least one variable please.")
   }
   if (grouped & length(unique(check_vars)) > 1) {
-    error_message <- c(error_message,"ERROR: Select only variables from the same group please.")
+    error_message <- c(error_message,"ERROR: Select only variables from the same category please.")
   }
 
   return(error_message)
