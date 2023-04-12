@@ -144,7 +144,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
   print('do_data_sample')
   if (basic_reg == 1) {
     reg = unique(sdata$Region)
-  } else if (basic_reg == 2) {
+  } else if (basic_reg == 2 || (is.list(sel_reg) && length(sel_reg) == 0)) {
     reg = c()
   } else {
     reg = do_unmount_tree(sel_reg, 'regions')
@@ -152,7 +152,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
 
   if (basic_vars == 1) {
     vars = unique(sdata$Variable)
-  } else if (basic_vars == 2) {
+  } else if (basic_vars == 2 || (is.list(sel_vars) && length(sel_vars) == 0)) {
     vars = c()
   } else{
     vars = do_unmount_tree(sel_vars, 'variables')
