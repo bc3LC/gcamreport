@@ -143,9 +143,11 @@ ui <- dashboardPage(
 
     ## -- Columns
     menuItem(
+      id = 'columns_id',
       text = "Columns",
       icon = NULL,
       startExpanded = FALSE,
+      class = 'enabled_cols',
       menuItem(
         awesomeCheckboxGroup(
           inputId = "selected_cols",
@@ -188,7 +190,7 @@ ui <- dashboardPage(
   )),
 
   dashboardBody(
-    # includeCSS("C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/R/www/style.css"),
+    includeCSS("C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/R/www/style.css"),
     fluidRow(
       tabBox(
         width = 12,

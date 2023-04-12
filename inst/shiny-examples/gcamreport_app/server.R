@@ -136,6 +136,10 @@ server <- function(input, output, session) {
    if (input$tab_box == 'Data') {
    # data table
 
+     # enable Column's dropdown
+     shinyjs::enable("columns_id")
+     shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
+
       sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
       sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
       if (firstLoad) {
@@ -179,6 +183,13 @@ server <- function(input, output, session) {
       )
    } else if (input$tab_box == 'Plot') {
      # plot
+
+     # disable Column's dropdown
+     shinyjs::disable("columns_id")
+     shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
+     shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
+     # shinyjs::addClass(selector = "#selected_cols", class = "disabled_cols")
+
 
      sel = update_user_choices_plot(selected_scen = input$selected_scen,
                               selected_years = input$selected_years,
@@ -363,6 +374,13 @@ server <- function(input, output, session) {
   ## -- plot
   observe({
     if (input$tab_box == 'Plot') {
+
+      # disable Column's dropdown
+      shinyjs::disable("columns_id")
+      shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
+      shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
+      # shinyjs::addClass(selector = "#selected_cols", class = "disabled_cols")
+
       # read user's choices
       sel = update_user_choices_plot(selected_scen = input$selected_scen,
                                      selected_years = input$selected_years,
@@ -533,6 +551,11 @@ server <- function(input, output, session) {
           })
         }
       }
+    } else {
+      # enable Column's dropdown
+      shinyjs::enable("columns_id")
+      shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
+      shinyjs::removeClass(selector = "#columns_id", class = "disabled_cols")
     }
   })
 
@@ -632,6 +655,11 @@ server <- function(input, output, session) {
 
   # enable the downdload button on page load
   shinyjs::enable("downloadData")
+
+  # enable Column's dropdown on page load
+  shinyjs::enable("columns_id")
+  shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
+  shinyjs::removeClass(selector = "#columns_id", class = "disabled_cols")
 
   session$onSessionEnded(reset_first_load)
 
