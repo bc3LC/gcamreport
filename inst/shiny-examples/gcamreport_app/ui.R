@@ -15,7 +15,7 @@ reset_first_load()
 ui <- dashboardPage(
   dashboardHeader(title = "gcamreport"),
   dashboardSidebar(sidebarMenu(
-
+    shinyjs::useShinyjs(),
 
     ## -- Scenarios
     menuItem(
@@ -177,14 +177,23 @@ ui <- dashboardPage(
 
 
     ## -- Download button
-    downloadBttn(
+    # downloadBttn(
+    #   outputId = "downloadData",
+    #   style = "simple",
+    #   color = "default",
+    #   size = 'sm'
+    # )
+    # downloadButton("downloadData", "Download")
+    downloadButton(
       outputId = "downloadData",
-      style = "simple",
+      label = "Download",
       color = "default",
-      size = 'sm'
-    )
-  )),
+      size = 'sm',
+      class = 'dwnbutton'
+    ),
+    tags$head(tags$style("dwnbutton{background-color:#add8e6;} dwnbutton{color: #337ab7;}"))
 
+  )),
 
   dashboardBody(
     # includeCSS("C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/R/www/style.css"),
