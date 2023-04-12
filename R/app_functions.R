@@ -2,14 +2,23 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+
+#' check_user_choices_plot
+#'
+#' Update dataframe to display plots with the user's choices
+#' @param scen: user's selected scenarios
+#' @param years: user's selected years
+#' @param reg: user's selected regions
+#' @param vars: user's selected variables
+#' @param grouped: if TRUE, aim to display grouped plot; ungrouped plot otherwise
+#' @importFrom magrittr %>%
+#' @export
 check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
   if (length(vars) > 0) {
     check_vars = sub("\\|.*", "", stringr::str_extract(vars, "(.*?)(\\||$)"))
   } else {
-    print('length sel vars == 0')
     check_vars = NULL
   }
-  print(check_vars)
   error_message = c()
 
   if (length(unique(scen)) < 1) {
@@ -31,7 +40,17 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
   return(error_message)
 }
 
-update_user_choices_plot <- function(selected_scen, selected_years, selected_cols,
+#' update_user_choices_plot
+#'
+#' Update dataframe to display plots with the user's choices
+#' @param selected_scen: user's selected scenarios
+#' @param selected_years: user's selected years
+#' @param tree_regions: user's selected regions
+#' @param tree_variables: user's selected variables
+#' @param sidebarItemExpanded: input sidebar expanded item
+#' @importFrom magrittr %>%
+#' @export
+update_user_choices_plot <- function(selected_scen, selected_years,
                                      tree_regions, tree_variables, sidebarItemExpanded) {
   sel_reg_ini = shinyTree::get_selected(tree_regions, format = 'slices')
   sel_vars_ini = shinyTree::get_selected(tree_variables, format = 'slices')
@@ -141,7 +160,6 @@ do_codes <- function(data) {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
-  print('do_data_sample')
   if (basic_reg == 1) {
     reg = unique(sdata$Region)
   } else if (basic_reg == 2 || (is.list(sel_reg) && length(sel_reg) == 0)) {
@@ -224,8 +242,6 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
 #' @return dataframe
 #' @export
 do_unmount_tree <- function(base_tree, type) {
-
-  print('unmount tree')
 
   if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |

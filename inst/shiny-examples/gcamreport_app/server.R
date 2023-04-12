@@ -143,7 +143,6 @@ server <- function(input, output, session) {
         sel_reg = reg_cont$region
         basic_reg = TRUE
         basic_vars = TRUE
-        print('a1')
       } else {
         basic_reg = 0
         basic_vars = 0
@@ -167,11 +166,7 @@ server <- function(input, output, session) {
         }
         firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
         firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-        print('a2')
       }
-      print(sel_vars)
-      print(basic_reg)
-      print(basic_vars)
       output$datatable <- shiny::renderDataTable(
         do_data_sample(sdata,
                        input$selected_scen,input$selected_years,
@@ -183,11 +178,8 @@ server <- function(input, output, session) {
       )
    } else if (input$tab_box == 'Plot') {
      # plot
-     print('plot')
-
      sel = update_user_choices_plot(selected_scen = input$selected_scen,
                               selected_years = input$selected_years,
-                              selected_cols = input$selected_cols,
                               tree_regions = input$tree_regions,
                               tree_variables = input$tree_variables,
                               sidebarItemExpanded = input$sidebarItemExpanded)
@@ -203,7 +195,6 @@ server <- function(input, output, session) {
        # display one single plot with all selected variables
 
        if (length(errors) < 1) {
-         print('start plotting1')
          # insert the right number of plot output objects into the web page
          output$plots <- renderUI({
            plot_output_list <- lapply(1:1, function(i) {
@@ -220,13 +211,10 @@ server <- function(input, output, session) {
          })
 
          # do plot
-         print('a8')
          data_sample = do_data_sample(sdata,
                                       sel$scen, sel$years,
                                       sel$cols, sel$vars_ini,
                                       sel$reg_ini, sel$basic_reg, sel$basic_vars)
-         # save(data_sample, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\data_sample.RData'))
-         # print('saved!')
          data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
            dplyr::mutate(values = as.numeric(as.character(values))) %>%
            dplyr::mutate(year = as.numeric(as.character(year)))
@@ -279,7 +267,6 @@ server <- function(input, output, session) {
      }
      else if (input$graph_grouping == 'Ungrouped') {
      # multiple plots since 'ungrouped' selected
-       print('ungrouped2')
        errors = check_user_choices_plot(vars = sel$vars,
                                         scen = sel$scen,
                                         years = sel$years,
@@ -288,7 +275,6 @@ server <- function(input, output, session) {
        if (length(errors) < 1) {
            # display one plot for each variable
            n = length(sel$vars)
-           print(n)
            # insert the right number of plot output objects into the web page
            output$plots <- renderUI({
              plot_output_list <- lapply(1:n, function(i) {
@@ -322,7 +308,6 @@ server <- function(input, output, session) {
                  dplyr::mutate(values = as.numeric(as.character(values))) %>%
                  dplyr::mutate(year = as.numeric(as.character(year)))
 
-               print('b1')
                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                       ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                         ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -376,7 +361,6 @@ server <- function(input, output, session) {
     sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
     if (firstLoad) {
       firstLoad <<- FALSE
-      print('a3')
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,unique(cols$col1),
@@ -404,7 +388,6 @@ server <- function(input, output, session) {
       }
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-      print('a4')
       tableData <- do_data_sample(sdata,
                                  input$selected_scen,input$selected_years,
                                  input$selected_cols,sel_vars,
@@ -416,13 +399,9 @@ server <- function(input, output, session) {
 
   ## -- plot
   observe({
-    print('observeEvent')
-
     if (input$tab_box == 'Plot') {
-      print('plot')
       sel = update_user_choices_plot(selected_scen = input$selected_scen,
                                      selected_years = input$selected_years,
-                                     selected_cols = input$selected_cols,
                                      tree_regions = input$tree_regions,
                                      tree_variables = input$tree_variables,
                                      sidebarItemExpanded = input$sidebarItemExpanded)
@@ -440,7 +419,6 @@ server <- function(input, output, session) {
         # one scenario, one region, and one year are selected
 
         if (length(errors) < 1) {
-          print('start plotting')
           # insert the right number of plot output objects into the web page
           output$plots <- renderUI({
             plot_output_list <- lapply(1:1, function(i) {
@@ -457,7 +435,6 @@ server <- function(input, output, session) {
           })
 
           # do plot
-          print('a5')
           data_sample = do_data_sample(sdata,
                                        sel$scen, sel$years,
                                        sel$cols, sel$vars_ini,
@@ -468,7 +445,6 @@ server <- function(input, output, session) {
 
           tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
 
-          print('b2')
           assign(paste0('fig_',tt),
                  ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                    ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -521,12 +497,10 @@ server <- function(input, output, session) {
                                          reg = sel$reg,
                                          grouped = FALSE)
 
-        print('ungrouped')
         if (length(errors) < 1) {
 
               # display one plot for each variable
               n = length(sel$vars)
-              print(paste0('n = ',n))
               # insert the right number of plot output objects into the web page
               output$plots <- renderUI({
                 plot_output_list <- lapply(1:n, function(i) {
@@ -606,16 +580,16 @@ server <- function(input, output, session) {
   })
 
 
-  # ## -- download button
-  # output$downloadData <- downloadHandler(
-  #   filename = function() {
-  #     paste('data-', Sys.Date(), '.csv', sep='')
-  #   },
-  #   content = function(con) {
-  #     write.csv(tableData(),
-  #               con)
-  #   }
-  # )
+  ## -- download button
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste('data-', Sys.Date(), '.csv', sep='')
+    },
+    content = function(con) {
+      write.csv(tableData(),
+                con)
+    }
+  )
 
   session$onSessionEnded(reset_first_load)
 
