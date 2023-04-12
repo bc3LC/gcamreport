@@ -582,51 +582,48 @@ server <- function(input, output, session) {
 
 
   ## -- download button
+
+  # disable download button if "select_none" buttons are presed
   observeEvent(c(input, input$select_none_regions,
                  input$select_none_variables), {
-    print('obsEvent')
     if (input$select_none_variables | input$select_none_regions) {
-      print('disable dwn button')
-      Sys.sleep(1)
       # enable the download button
       shinyjs::disable("downloadData")
       # change the html of the download button
       shinyjs::html("downloadData",
-                    sprintf("<i class='fa fa-download'></i>
-                              Download",
-                            round(runif(1, 1, 10000))
-                    )
+                    sprintf("<button class='btn btn-default btn-sm'>
+                    <i class='fa fa-download'></i> Download </button>")
       )
     }
   })
 
+  # enable/disable download button depending on the dataset size
   observe({
-    print('obs')
     if (nrow(tableData()) == 0) {
       # if dataset empty, disable button
-      print('disable dwn button')
+
       # disable the download button
       shinyjs::disable("downloadData")
       # change the html of the download button
       shinyjs::html("downloadData",
-                    sprintf("<button class='btn btn-default btn-sm dwnbutton'>
+                    sprintf("<button class='btn btn-default btn-sm'>
                     <i class='fa fa-download'></i> Download </button>")
       )
     } else {
       # if dataset no-empty, enable button
-      print('enable dwn button')
+
       # enable the download button
       shinyjs::enable("downloadData")
       # change the html of the download button
       shinyjs::html("downloadData",
-                    sprintf("<button class='btn btn-default btn-sm dwnbutton'>
+                    sprintf("<button class='btn btn-default btn-sm'>
                     <i class='fa fa-download'></i> Download </button>")
       )
 
     }
   })
 
-  # download data when button clicked
+  # download data when download button clicked
   output$downloadData <- downloadHandler(
     filename = function() {
       paste('data-', Sys.Date(), '.csv', sep='')

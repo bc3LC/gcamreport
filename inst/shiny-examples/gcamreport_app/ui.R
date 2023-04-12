@@ -177,21 +177,13 @@ ui <- dashboardPage(
 
 
     ## -- Download button
-    # downloadBttn(
-    #   outputId = "downloadData",
-    #   style = "simple",
-    #   color = "default",
-    #   size = 'sm'
-    # )
-    # downloadButton("downloadData", "Download")
     downloadButton(
       outputId = "downloadData",
       label = "Download",
       color = "default",
       size = 'sm',
       class = 'dwnbutton'
-    ),
-    tags$head(tags$style("dwnbutton{background-color:#add8e6;} dwnbutton{color: #337ab7;}"))
+    )
 
   )),
 
