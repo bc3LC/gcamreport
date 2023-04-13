@@ -18,6 +18,7 @@ server <- function(input, output, session) {
   })
   observeEvent(input$select_all_variables, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
+    noVars <<- FALSE
   })
   observeEvent(input$select_none_variables, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
@@ -30,14 +31,13 @@ server <- function(input, output, session) {
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
   })
   treeDataReg_unsel <- reactive({
-    print(length(tree_reg))
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
   })
   observeEvent(input$select_all_regions, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
+    noReg <<- FALSE
   })
   observeEvent(input$select_none_regions, {
-    print('updateRegwith none')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
     noReg <<- TRUE
   })
@@ -93,6 +93,7 @@ server <- function(input, output, session) {
   observeEvent(input$tree_regions, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_regions", input$tree_regions)
     tree_reg <<- change_style(input$tree_regions, 'regions')
+    noReg <<- FALSE
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Regions") {
@@ -108,17 +109,13 @@ server <- function(input, output, session) {
     tree_vars
   })
   observeEvent(input$tree_variables, {
-    print('updateVars')
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
     if (firstReg) {
-      print('firstReg')
       sel_reg_vec = reg_cont$region %>%
         tidyr::replace_na('World')
     } else {
-      print('noFirstReg')
       sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
       if (length(sel_reg) > 0) {
-        # print(sel_reg)
         sel_reg_vec = do_unmount_tree(sel_reg, 'regions')
       } else {
         sel_reg_vec = sel_reg
@@ -135,6 +132,7 @@ server <- function(input, output, session) {
     } else {
       tree_vars <<- change_style(input$tree_variables, 'regions')
     }
+    noVars <<- FALSE
 
     if (!updated) {
     # re-render tree if style modified
@@ -146,7 +144,6 @@ server <- function(input, output, session) {
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Variables") {
-      print('itemExpanded')
       output$tree_variables <- shinyTree::renderTree({
         tree_vars
       })
@@ -171,7 +168,6 @@ server <- function(input, output, session) {
       sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
       sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
       if (firstLoad) {
-        print('reg: firstLoad')
         firstLoad <<- FALSE
         sel_vars = unique(cols$col1)
         sel_reg = reg_cont$region
@@ -181,7 +177,6 @@ server <- function(input, output, session) {
         basic_reg = 0
         basic_vars = 0
         if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-          print('reg: nsq')
           sel_reg = reg_cont$region
           basic_reg = 1
         }
@@ -190,12 +185,12 @@ server <- function(input, output, session) {
           basic_vars = 1
         }
         if (noReg) {
-          noReg <<- FALSE
+          # noReg <<- FALSE
           sel_reg = c()
           basic_reg = 2
         }
         if (noVars) {
-          noVars <<- FALSE
+          # noVars <<- FALSE
           sel_vars = c()
           basic_vars = 2
         }
@@ -608,12 +603,12 @@ server <- function(input, output, session) {
         basic_vars = 1
       }
       if (noReg) {
-        noReg <<- FALSE
+        # noReg <<- FALSE
         sel_reg = c()
         basic_reg = 2
       }
       if (noVars) {
-        noVars <<- FALSE
+        # noVars <<- FALSE
         sel_vars = c()
         basic_vars = 2
       }
