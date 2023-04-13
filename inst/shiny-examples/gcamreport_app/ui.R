@@ -57,7 +57,8 @@ ui <- dashboardPage(
       startExpanded = FALSE,
       menuItem(
         shinyTree("tree_regions",
-                  checkbox = TRUE)
+                  checkbox = TRUE,
+                  types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}}}")
       ),
       menuItem(
         actionBttn(
@@ -86,7 +87,8 @@ ui <- dashboardPage(
       startExpanded = FALSE,
       menuItem(
         shinyTree("tree_variables",
-                  checkbox = TRUE)
+                  checkbox = TRUE,
+                  types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}}}")
       ),
       menuItem(
         actionBttn(

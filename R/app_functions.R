@@ -3,6 +3,48 @@
 #########################################################################
 
 
+is_child <- function(tree) {
+
+  # if (length(tree) > 1 || (length(tree) == 1 && (!is.numeric(tree) || tree == ""))) {
+  if (length(tree) > 1 || length(tree[[1]]) > 1 || length(tree[[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]]) > 1
+      || length(tree[[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]][[1]]) > 1) {
+    return(FALSE)
+  }
+
+  return(TRUE)
+}
+
+
+# Define the function to change the icon for all nodes in a tree
+change_style <- function(tree) {
+  n = length(tree)
+  # print(paste0('n = ',n))
+  for (i in 1:n) {
+    # print(paste0('i over n = ',i,'/',n))
+    # print('............................................................')
+    # print(tree)
+    # print('------------------------------------------------------------')
+
+    # Get the attributes for the current node
+    attrs <- attributes(tree[[i]])
+
+    # Check if the current node has children
+    if (!is_child(tree[[i]])) {
+      # print('recursive')
+
+      # Recursively call the function on the children of the current node
+      tree[[i]] <- change_style(tree[[i]])
+    }
+
+    # Change the icon for the current node
+    attrs$sttype <- "basic"
+    attributes(tree[[i]]) <- attrs
+  }
+  # print('out')
+  return(tree)
+}
+
+
 #' check_user_choices_plot
 #'
 #' Check user's choices to do the plot: at least one scenario, variable, year, and region
@@ -217,7 +259,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
 
       # add the nested list to the current level with the appropriate attributes
       current_list[[value]] <- structure(next_list,
-                                         sttype="default",
+                                         sttype="basic",
                                          stopened=FALSE,
                                          sticon="glyphicon glyphicon-plus",
                                          stselected=selec)
@@ -225,7 +267,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
 
     # add the current level to the list with the appropriate attributes
     structure(current_list,
-              sttype="default",
+              sttype="basic",
               stopened=FALSE,
               sticon="glyphicon glyphicon-plus",
               stselected=selec)

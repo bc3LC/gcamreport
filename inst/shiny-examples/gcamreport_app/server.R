@@ -100,7 +100,7 @@ server <- function(input, output, session) {
   })
   observeEvent(input$tree_regions, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_regions", input$tree_regions)
-    tree_reg <<- input$tree_regions
+    tree_reg <<- change_style(input$tree_regions)
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Regions") {
@@ -117,7 +117,7 @@ server <- function(input, output, session) {
   })
   observeEvent(input$tree_variables, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
-    tree_vars <<- input$tree_variables
+    tree_vars <<- change_style(input$tree_variables)
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Variables") {
