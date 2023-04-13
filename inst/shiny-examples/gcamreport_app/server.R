@@ -30,15 +30,18 @@ server <- function(input, output, session) {
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
   })
   treeDataReg_unsel <- reactive({
+    print(length(tree_reg))
     tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
   })
   observeEvent(input$select_all_regions, {
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
   })
   observeEvent(input$select_none_regions, {
+    print('updateRegwith none')
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
     noReg <<- TRUE
   })
+
 
   ## -- select all/none scenarios
   observeEvent(input$select_all_scen, {
@@ -105,21 +108,33 @@ server <- function(input, output, session) {
     tree_vars
   })
   observeEvent(input$tree_variables, {
-      updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
-      if (firstReg) {
-        sel_reg_vec = reg_cont$region %>%
-          tidyr::replace_na('World')
-      } else {
-        sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+    print('updateVars')
+    updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
+    if (firstReg) {
+      print('firstReg')
+      sel_reg_vec = reg_cont$region %>%
+        tidyr::replace_na('World')
+    } else {
+      print('noFirstReg')
+      sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+      if (length(sel_reg) > 0) {
+        # print(sel_reg)
         sel_reg_vec = do_unmount_tree(sel_reg, 'regions')
+      } else {
+        sel_reg_vec = sel_reg
       }
-      # pull the variables of the whole data with the regions restricted to the user's selection
+    }
+    # pull the variables of the whole data with the regions restricted to the user's selection
+    if (length(sel_reg_vec) > 0) {
       tmp_vars = sdata %>%
-        dplyr::filter(Region %in% sel_reg_vec) %>%
-        dplyr::distinct(Variable) %>%
-        dplyr::pull()
+          dplyr::filter(Region %in% sel_reg_vec) %>%
+          dplyr::distinct(Variable) %>%
+          dplyr::pull()
       tmp_vars = all_vars[!(all_vars %in% tmp_vars)]
       tree_vars <<- change_style(input$tree_variables, 'variables', tmp_vars)
+    } else {
+      tree_vars <<- change_style(input$tree_variables, 'regions')
+    }
 
     if (!updated) {
     # re-render tree if style modified
@@ -131,6 +146,7 @@ server <- function(input, output, session) {
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Variables") {
+      print('itemExpanded')
       output$tree_variables <- shinyTree::renderTree({
         tree_vars
       })
@@ -155,6 +171,7 @@ server <- function(input, output, session) {
       sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
       sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
       if (firstLoad) {
+        print('reg: firstLoad')
         firstLoad <<- FALSE
         sel_vars = unique(cols$col1)
         sel_reg = reg_cont$region
@@ -164,6 +181,7 @@ server <- function(input, output, session) {
         basic_reg = 0
         basic_vars = 0
         if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
+          print('reg: nsq')
           sel_reg = reg_cont$region
           basic_reg = 1
         }
