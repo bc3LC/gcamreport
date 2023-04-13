@@ -8,17 +8,6 @@ library(shinyjs)
 
 server <- function(input, output, session) {
 
-  ## -- debug
-  # output$res3 <- renderPrint(shinyTree::get_selected(input$tree_variables, format = 'slices'))
-
-  # output$res3 <- renderPrint({
-  # sel_tree_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
-  # reg = do_unmount_tree(sel_tree_reg, 'regions')
-  # # print(reg)
-  # # save(reg, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\reg.RData'))
-  # #
-  # # print(reg)
-  # })
 
   ## -- select all/none variables
   treeDataVar_sel <- reactive({
@@ -133,7 +122,7 @@ server <- function(input, output, session) {
       tree_vars <<- change_style(input$tree_variables, 'variables', tmp_vars)
 
     if (!updated) {
-    # Re-render tree if style modified
+    # re-render tree if style modified
       output$tree_variables <- shinyTree::renderTree({
         tree_vars
       })
@@ -211,8 +200,6 @@ server <- function(input, output, session) {
      shinyjs::disable("columns_id")
      shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
      shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
-     # shinyjs::addClass(selector = "#selected_cols", class = "disabled_cols")
-
 
      sel = update_user_choices_plot(selected_scen = input$selected_scen,
                               selected_years = input$selected_years,
@@ -221,7 +208,7 @@ server <- function(input, output, session) {
                               sidebarItemExpanded = input$sidebarItemExpanded)
 
      if (input$graph_grouping == 'Grouped'){
-      # single plot since 'grouped' selected, ie, display one single plot with all selected variables
+     # single plot since 'grouped' selected, ie, display one single plot with all selected variables
 
        # check if the user's choice contains errors
        errors = check_user_choices_plot(vars = sel$vars,
@@ -231,7 +218,7 @@ server <- function(input, output, session) {
                                         grouped = TRUE)
 
        if (length(errors) < 1) {
-         # insert the only 1 plot output object into the web page
+         # insert a single plot output object into the web page
          output$plots <- renderUI({
            plot_output_list <- lapply(1:1, function(i) {
              plotname <- paste("plot", i, sep="")
@@ -314,8 +301,7 @@ server <- function(input, output, session) {
                                         reg = sel$reg,
                                         grouped = FALSE)
        if (length(errors) < 1) {
-         # insert n plot outputs objects into the web page
-
+        # insert n plot outputs objects into the web page
          n = length(sel$vars)
          output$plots <- renderUI({
            plot_output_list <- lapply(1:n, function(i) {
@@ -402,7 +388,6 @@ server <- function(input, output, session) {
       shinyjs::disable("columns_id")
       shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
       shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
-      # shinyjs::addClass(selector = "#selected_cols", class = "disabled_cols")
 
       # read user's choices
       sel = update_user_choices_plot(selected_scen = input$selected_scen,
@@ -420,7 +405,7 @@ server <- function(input, output, session) {
                                          grouped = TRUE)
 
         if (length(errors) < 1) {
-          # insert the 1 plot output object into the web page
+          # insert a single plot output object into the web page
           output$plots <- renderUI({
             plot_output_list <- lapply(1:1, function(i) {
               plotname <- paste("plot", i, sep="")
@@ -626,7 +611,7 @@ server <- function(input, output, session) {
 
 
   ## -- download button
-  # disable download button if "select_none" buttons are presed
+  # disable download button if "select_none" buttons are pressed
   observeEvent(c(input, input$select_none_regions,
                  input$select_none_variables), {
     if (input$select_none_variables | input$select_none_regions) {
@@ -662,7 +647,6 @@ server <- function(input, output, session) {
                     sprintf("<button class='btn btn-default btn-sm'>
                     <i class='fa fa-download'></i> Download </button>")
       )
-
     }
   })
 
@@ -684,6 +668,7 @@ server <- function(input, output, session) {
   shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
   shinyjs::removeClass(selector = "#columns_id", class = "disabled_cols")
 
+  # when page refreshed, pick initial variables' values
   session$onSessionEnded(reset_first_load)
 
 }

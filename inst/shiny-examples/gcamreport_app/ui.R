@@ -1,8 +1,8 @@
+library(magrittr)
 library(shiny)
 library(shinyWidgets)
 library(shinydashboard)
 library(shinyTree)
-library(magrittr)
 library(shinyjs)
 library(dashboardthemes)
 
@@ -193,13 +193,15 @@ ui <- dashboardPage(
   )),
 
   dashboardBody(
+    # css file
     includeCSS("C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/R/www/style.css"),
+
+    # dashboard items
     fluidRow(
       tabBox(
         width = 12,
         id = "tab_box",
         tabPanel("Data",
-                 verbatimTextOutput("res3"),
                  shiny::dataTableOutput(outputId = "datatable")
         ),
         tabPanel("Plot",

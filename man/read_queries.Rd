@@ -18,16 +18,22 @@ read_queries(
 
 \item{final_db_year:}{final year of the database. By default = 2100.}
 
-\item{desired_variables:}{desired variables to have in the report.}
+\item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
+Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
+global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
+ag_demand_clean, land_clean, primary_energy_clean, energy_trade_clean, elec_gen_tech_clean, elec_capacity_tot_clean,
+elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
+ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
+CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
 
 \item{save:}{if TRUE, save reporting data. Do not save otherwise.}
 
-\item{file_name:}{file name of the saved data. Not used if data not saved.}
+\item{file_name:}{file name of the saved data. Not used if data not saved. Data saved in '/output/datasets/'}
 
 \item{launch_app:}{if TRUE, open app. Do not launch app otherwise.}
 }
 \value{
-load variable
+saved? datafile with the desired variables & launched? user interface
 }
 \description{
 Main function. Interacts with the user to select the desired variables for the report,

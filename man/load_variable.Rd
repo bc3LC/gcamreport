@@ -13,6 +13,6 @@ load_variable(var)
 load variable
 }
 \description{
-Recursive function to load desired variable and its dependent variables
+Recursive function to load the desired variable and its dependent variables
 }
 \keyword{internal}

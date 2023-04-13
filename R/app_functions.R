@@ -17,6 +17,7 @@ is_leaf <- function(tree) {
   return(TRUE)
 }
 
+
 #' change_style
 #'
 #' Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
@@ -48,8 +49,6 @@ change_style <- function(tree, type, tmp_vars = NULL) {
 
   return(tree)
 }
-
-
 
 
 #' check_user_choices_plot
@@ -157,7 +156,6 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 }
 
 
-
 #' reset_first_load
 #'
 #' Initialize variables to run the app
@@ -177,26 +175,6 @@ reset_first_load <- function() {
   all_vars <<- do_collapse_df(cols)
 }
 
-
-#' do_codes
-#'
-#' Create new column for each column collapsing all the previous columns
-#' @param data: dataset
-#' @importFrom magrittr %>%
-#' @export
-do_codes <- function(data) {
-  n = ncol(data)
-  for (i in 1:n) {
-    data$code <- tidyr::unite(data, col = 'codes', names(data)[1]:names(data)[i], sep = '|')[1]
-    names(data)[n + i] <- paste0('code_',names(data)[i])
-  }
-  data_clean <- data[,(n+1):(n+n)]
-  data_clean <- apply(data_clean, MARGIN = c(1,2), function(x)
-    ifelse(grepl("\\|NA", x), NA, x))
-
-  data[,(n+1):(n+n)] = data_clean
-  return(data)
-}
 
 #' do_data_sample
 #'
@@ -344,7 +322,3 @@ do_collapse_df <- function(basic_data) {
 
   return(df_clean)
 }
-
-
-
-

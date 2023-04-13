@@ -10,9 +10,8 @@ library(magrittr)
 #' @return loaded project into global environment
 #' @export
 load_project = function(prj_name) {
-  # Load data, once the project file has been created (no need to create it again!!)
+  # load the project
   prj <<- rgcam::loadProject(paste0(here::here(), "/inst/extdata/", prj_name, ".dat"))
-
 
   Scenarios <<- rgcam::listScenarios(prj)
   rgcam::listQueries(prj)
@@ -21,7 +20,7 @@ load_project = function(prj_name) {
 
 #' load_variable
 #'
-#' Recursive function to load desired variable and its dependent variables
+#' Recursive function to load the desired variable and its dependent variables
 #' @param var: variable to be loaded
 #' @keywords internal
 #' @return load variable
@@ -48,13 +47,19 @@ load_variable = function(var){
 #' user about the success of the whole process.
 #' @param project_name: name of the project. By default = gas_fin_updated.
 #' @param final_db_year: final year of the database. By default = 2100.
-#' @param desired_variables: desired variables to have in the report.
+#' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
+#' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
+#' global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
+#' ag_demand_clean, land_clean, primary_energy_clean, energy_trade_clean, elec_gen_tech_clean, elec_capacity_tot_clean,
+#' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
+#' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
+#' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
 #' @param save: if TRUE, save reporting data. Do not save otherwise.
-#' @param file_name: file name of the saved data. Not used if data not saved.
+#' @param file_name: file name of the saved data. Not used if data not saved. Data saved in '/output/datasets/'
 #' @param launch_app: if TRUE, open app. Do not launch app otherwise.
 #' @importFrom magrittr %>%
 #' @keywords internal
-#' @return load variable
+#' @return saved? datafile with the desired variables & launched? user interface
 #' @export
 read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = 'final_data', launch_app = TRUE) {
   # load project
@@ -140,26 +145,27 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
     print(e)
   }
 
-  sdata <<- final_data %>%
-    tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
-
-  # create vector of available years
-  available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
-
-  # develop a nested list for the variables
-  cols <<- unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
-  # cols <<- do_codes(cols)
-
-  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
-  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
-  # reg_cont <<- do_codes(reg_cont)
-
-  # save a list of all variables
-  all_vars <<- do_collapse_df(cols)
-
   if (launch_app) {
     print('Launching app...')
+
+    # define the dataset for launching the app
+    sdata <<- final_data %>%
+      tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+
+    # create vector of available years for launching the app
+    available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
+
+    # develop a nested list of the variables and regions for launching the app
+    cols <<- unique(sdata[, grepl('col', names(sdata))])
+    tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+
+    reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+    tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+
+    # save a list of all variables
+    all_vars <<- do_collapse_df(cols)
+
+    # launch app
     runExample()
   }
 
