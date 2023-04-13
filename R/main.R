@@ -145,28 +145,38 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
     print(e)
   }
 
+  # define the dataset for launching the app
+  sdata <<- final_data %>%
+    tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+
+  # create vector of available years for launching the app
+  available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
+
+  # develop a nested list of the variables and regions for launching the app
+  cols <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+
+  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+
+  # save a list of all variables
+  all_vars <<- do_collapse_df(cols)
+
   if (launch_app) {
     print('Launching app...')
 
-    # define the dataset for launching the app
-    sdata <<- final_data %>%
-      tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
-
-    # create vector of available years for launching the app
-    available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
-
-    # develop a nested list of the variables and regions for launching the app
-    cols <<- unique(sdata[, grepl('col', names(sdata))])
-    tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
-
-    reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
-    tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
-
-    # save a list of all variables
-    all_vars <<- do_collapse_df(cols)
-
     # launch app
-    runExample()
+    launch_gcamreport_app()
   }
 
+}
+
+
+#' launch_gcamreport_app
+#'
+#' Launch shiny interactive app
+#' @return launch shiny interactive app
+#' @export
+launch_gcamreport_app <- function(){
+  shiny::runApp('inst/gcamreport_app')
 }
