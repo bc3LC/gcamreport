@@ -88,7 +88,8 @@ ui <- dashboardPage(
       menuItem(
         shinyTree("tree_variables",
                   checkbox = TRUE,
-                  types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}}}")
+                  types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}},
+                  'dis': {'a_attr' : { 'style' : 'opacity: 0.3; cursor: not-allowed; pointer-events: none' } }}")
       ),
       menuItem(
         actionBttn(

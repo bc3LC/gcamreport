@@ -100,7 +100,7 @@ server <- function(input, output, session) {
   })
   observeEvent(input$tree_regions, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_regions", input$tree_regions)
-    tree_reg <<- change_style(input$tree_regions)
+    tree_reg <<- change_style(input$tree_regions, 'regions')
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Regions") {
@@ -113,17 +113,57 @@ server <- function(input, output, session) {
 
   ## -- render variables tree
   output$tree_variables <- shinyTree::renderTree({
+    print('d')
     tree_vars
   })
   observeEvent(input$tree_variables, {
-    updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
-    tree_vars <<- change_style(input$tree_variables)
+      updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
+      if (firstReg) {
+        print('noReg')
+        sel_reg_vec = reg_cont$region %>%
+          tidyr::replace_na('World')
+      } else {
+        print('siReg')
+        sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
+        sel_reg_vec = do_unmount_tree(sel_reg, 'regions')
+      }
+      str(sel_reg_vec)
+      print('a')
+      print('...................................................................................................')
+      inp_tree_var = input$tree_variables
+      save(inp_tree_var, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\inp_tree_var.RData'))
+      save(sel_reg_vec, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\sel_reg_vec.RData'))
+      tmp_vars = sdata %>%
+        dplyr::filter(Region %in% sel_reg_vec) %>%
+        dplyr::distinct(Variable) %>%
+        dplyr::pull()
+      tmp_vars = all_vars[!(all_vars %in% tmp_vars)]
+      # print(tmp_vars)
+      # save(tmp_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\tmp_vars.RData'))
+      print(i)
+      tree_vars <<- change_style(inp_tree_var, 'variables', tmp_vars)
+      # tree_vars <<- change_style(inp_tree_var, 'variables', tmp_vars = sel_reg_vec)
+      print('---------------------------------------------------------------------------------------------------')
+      save(tree_vars, file = file.path('C:\\Users\\claudia.rodes\\Documents\\IAM_COMPACT\\gcamreport\\tree_vars.RData'))
+      print('b')
+      i <<- i + 1
+      print(paste0('Set style_modified to ',style_modified))
+
+    if (!updated) {
+      output$tree_variables <- shinyTree::renderTree({
+        tree_vars
+      })
+      updated <<- TRUE
+    }
   })
   observeEvent(input$sidebarItemExpanded, {
     if (input$sidebarItemExpanded == "Variables") {
       output$tree_variables <- shinyTree::renderTree({
+        print('c')
         tree_vars
       })
+    } else {
+      updated <<- FALSE
     }
   })
 

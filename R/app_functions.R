@@ -4,7 +4,6 @@
 
 
 is_child <- function(tree) {
-
   # if (length(tree) > 1 || (length(tree) == 1 && (!is.numeric(tree) || tree == ""))) {
   if (length(tree) > 1 || length(tree[[1]]) > 1 || length(tree[[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]]) > 1
       || length(tree[[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]][[1]]) > 1) {
@@ -15,34 +14,41 @@ is_child <- function(tree) {
 }
 
 
-# Define the function to change the icon for all nodes in a tree
-change_style <- function(tree) {
+# Define the function to change the style for all nodes in a tree
+#' @param tree: base tree to change the style on
+#' @param type: either regions or variables
+change_style <- function(tree, type, tmp_vars = NULL) {
   n = length(tree)
-  # print(paste0('n = ',n))
   for (i in 1:n) {
-    # print(paste0('i over n = ',i,'/',n))
-    # print('............................................................')
-    # print(tree)
-    # print('------------------------------------------------------------')
-
     # Get the attributes for the current node
     attrs <- attributes(tree[[i]])
 
     # Check if the current node has children
     if (!is_child(tree[[i]])) {
-      # print('recursive')
-
       # Recursively call the function on the children of the current node
-      tree[[i]] <- change_style(tree[[i]])
+      tree[[i]] <- change_style(tree[[i]], type, tmp_vars)
     }
 
-    # Change the icon for the current node
-    attrs$sttype <- "basic"
+    # Change the style for the current node
+    # attrs$sttype <- "basic"
+    if (type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars) {
+    # if (type == 'variables' && attrs$my_id %in% c('Forcing','Trade') && 'World' %in% tmp_vars) {
+      attrs$sttype = 'dis'
+      print(paste0('my_id = ',attrs$my_id))
+      # print(attrs)
+    } else {
+      attrs$sttype = 'basic'
+    }
+    # print(paste0('Set to ', attrs$my_id, ' sttype = ', attrs$sttype))
+    # attrs$sttype <- ifelse(type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars, "dis", "basic")
+    # attrs$sttype <- ifelse(type == 'variables', "dis", "basic")
     attributes(tree[[i]]) <- attrs
   }
-  # print('out')
+
   return(tree)
 }
+
+
 
 
 #' check_user_choices_plot
@@ -166,6 +172,7 @@ reset_first_load <- function() {
   firstVars <<- TRUE
   noReg <<- FALSE
   noVars <<- FALSE
+  updated <<- FALSE
 }
 
 
@@ -240,7 +247,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
 #' @importFrom magrittr %>%
 #' @return nested list
 #' @export
-do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
+do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, iid = NULL) {
   # filter the data frame to include only rows with the current level
   filtered_df <- df[!is.na(df[[column_names[current_column]]]), ]
 
@@ -255,14 +262,20 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
     for (value in unique(filtered_df[[column_names[current_column]]])) {
       # create a nested list for the next level
       filtered_df_tmp = filtered_df[filtered_df[[column_names[current_column]]] == value,]
-      next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1, selec)
+      if (!is.null(iid)) {
+        tmp_id = paste(iid, value, sep = '|')
+      } else {
+        tmp_id = value
+      }
+      next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1, selec, tmp_id)
 
       # add the nested list to the current level with the appropriate attributes
       current_list[[value]] <- structure(next_list,
                                          sttype="basic",
                                          stopened=FALSE,
                                          sticon="glyphicon glyphicon-plus",
-                                         stselected=selec)
+                                         stselected=selec,
+                                         my_id=tmp_id)
     }
 
     # add the current level to the list with the appropriate attributes
@@ -270,7 +283,8 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE) {
               sttype="basic",
               stopened=FALSE,
               sticon="glyphicon glyphicon-plus",
-              stselected=selec)
+              stselected=selec,
+              my_id=tmp_id)
   }
 }
 
@@ -312,3 +326,16 @@ do_unmount_tree <- function(base_tree, type) {
   }
   return(a)
 }
+
+
+do_collapse_df <- function(basic_data) {
+  df_collapsed <- data.frame(collapsed = apply(basic_data, 1, paste, collapse = "|"))
+  df_clean <- apply(df_collapsed, c(1), function(x) gsub("\\|NA", "", x)) %>%
+    as.vector()
+
+  return(df_clean)
+}
+
+
+
+
