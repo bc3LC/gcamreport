@@ -10,35 +10,27 @@ server <- function(input, output, session) {
 
 
   ## -- select all/none variables
-  treeDataVar_sel <- reactive({
-    tree_vars <<- do_mount_tree(cols, names(cols), selec = TRUE)
-  })
-  treeDataVar_unsel <- reactive({
-    tree_vars <<- do_mount_tree(cols, names(cols), selec = FALSE)
-  })
   observeEvent(input$select_all_variables, {
-    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_sel())
+    tree_vars <<- do_mount_tree(cols, names(cols), selec = TRUE)
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = tree_vars)
     noVars <<- FALSE
   })
   observeEvent(input$select_none_variables, {
-    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = treeDataVar_unsel())
+    tree_vars <<- do_mount_tree(cols, names(cols), selec = FALSE)
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = tree_vars)
     noVars <<- TRUE
   })
 
 
   ## -- select all/none regions
-  treeDataReg_sel <- reactive({
-    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
-  })
-  treeDataReg_unsel <- reactive({
-    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
-  })
   observeEvent(input$select_all_regions, {
-    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_sel())
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = tree_reg)
     noReg <<- FALSE
   })
   observeEvent(input$select_none_regions, {
-    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = treeDataReg_unsel())
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
+    updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = tree_reg)
     noReg <<- TRUE
   })
 
@@ -134,12 +126,12 @@ server <- function(input, output, session) {
     }
     noVars <<- FALSE
 
-    if (!updated) {
+    if (!updatedVars) {
     # re-render tree if style modified
       output$tree_variables <- shinyTree::renderTree({
         tree_vars
       })
-      updated <<- TRUE
+      updatedVars <<- TRUE
     }
   })
   observeEvent(input$sidebarItemExpanded, {
@@ -148,7 +140,7 @@ server <- function(input, output, session) {
         tree_vars
       })
     } else {
-      updated <<- FALSE
+      updatedVars <<- FALSE
     }
   })
 
