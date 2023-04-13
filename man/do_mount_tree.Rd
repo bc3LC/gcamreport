@@ -4,7 +4,7 @@
 \alias{do_mount_tree}
 \title{do_mount_tree}
 \usage{
-do_mount_tree(df, column_names, current_column = 1, selec = TRUE)
+do_mount_tree(df, column_names, current_column = 1, selec = TRUE, iid = NULL)
 }
 \arguments{
 \item{df:}{dataset}
