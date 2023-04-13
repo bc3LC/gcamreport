@@ -58,7 +58,7 @@ load_variable = function(var){
 #' @export
 read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = 'final_data', launch_app = TRUE) {
   # load project
-  print('Creating project...')
+  print('Loading project...')
   load_project(project_name)
 
   # make final_db_year as a global variable
@@ -156,7 +156,7 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
   # reg_cont <<- do_codes(reg_cont)
 
   # save a list of all variables
-  all_vars = do_collapse_df(cols)
+  all_vars <<- do_collapse_df(cols)
 
   if (launch_app) {
     print('Launching app...')

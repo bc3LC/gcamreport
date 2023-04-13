@@ -2,9 +2,13 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
-
-is_child <- function(tree) {
-  # if (length(tree) > 1 || (length(tree) == 1 && (!is.numeric(tree) || tree == ""))) {
+#' is_leaf
+#'
+#' Return TRUE if it is a leaf node; FALSE otherwise.
+#' @param tree: tree node to be checked
+#' @importFrom magrittr %>%
+#' @export
+is_leaf <- function(tree) {
   if (length(tree) > 1 || length(tree[[1]]) > 1 || length(tree[[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]]) > 1
       || length(tree[[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]][[1]]) > 1) {
     return(FALSE)
@@ -13,10 +17,14 @@ is_child <- function(tree) {
   return(TRUE)
 }
 
-
-# Define the function to change the style for all nodes in a tree
+#' change_style
+#'
+#' Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
 #' @param tree: base tree to change the style on
 #' @param type: either regions or variables
+#' @param tmp_vars: variables which require 'dis' style
+#' @importFrom magrittr %>%
+#' @export
 change_style <- function(tree, type, tmp_vars = NULL) {
   n = length(tree)
   for (i in 1:n) {
@@ -24,24 +32,17 @@ change_style <- function(tree, type, tmp_vars = NULL) {
     attrs <- attributes(tree[[i]])
 
     # Check if the current node has children
-    if (!is_child(tree[[i]])) {
+    if (!is_leaf(tree[[i]])) {
       # Recursively call the function on the children of the current node
       tree[[i]] <- change_style(tree[[i]], type, tmp_vars)
     }
 
     # Change the style for the current node
-    # attrs$sttype <- "basic"
     if (type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars) {
-    # if (type == 'variables' && attrs$my_id %in% c('Forcing','Trade') && 'World' %in% tmp_vars) {
       attrs$sttype = 'dis'
-      print(paste0('my_id = ',attrs$my_id))
-      # print(attrs)
     } else {
       attrs$sttype = 'basic'
     }
-    # print(paste0('Set to ', attrs$my_id, ' sttype = ', attrs$sttype))
-    # attrs$sttype <- ifelse(type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars, "dis", "basic")
-    # attrs$sttype <- ifelse(type == 'variables', "dis", "basic")
     attributes(tree[[i]]) <- attrs
   }
 
@@ -173,6 +174,7 @@ reset_first_load <- function() {
   noReg <<- FALSE
   noVars <<- FALSE
   updated <<- FALSE
+  all_vars <<- do_collapse_df(cols)
 }
 
 
@@ -328,6 +330,13 @@ do_unmount_tree <- function(base_tree, type) {
 }
 
 
+#' do_collapse_df
+#'
+#' Collapse all columns by row of the dataframe and remove NA
+#' @param basic_data: dataframe/datatable to be collapsed
+#' @return Vector with the collapsed data
+#' @importFrom magrittr %>%
+#' @export
 do_collapse_df <- function(basic_data) {
   df_collapsed <- data.frame(collapsed = apply(basic_data, 1, paste, collapse = "|"))
   df_clean <- apply(df_collapsed, c(1), function(x) gsub("\\|NA", "", x)) %>%
