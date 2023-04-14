@@ -29,16 +29,17 @@ is_leaf <- function(tree) {
 change_style <- function(tree, type, tmp_vars = NULL) {
   n = length(tree)
   for (i in 1:n) {
-    # Get the attributes for the current node
+    # get the attributes for the current node
     attrs <- attributes(tree[[i]])
 
-    # Check if the current node has children
+    # check if the current node has children
     if (!is_leaf(tree[[i]])) {
       # Recursively call the function on the children of the current node
       tree[[i]] <- change_style(tree[[i]], type, tmp_vars)
     }
 
-    # Change the style for the current node
+    # change the style for the current node. If it's in the list of variables to be disabled, set
+    # it to 'dis'. To 'basic' otherwise
     if (type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars) {
       attrs$sttype = 'dis'
     } else {
@@ -63,25 +64,34 @@ change_style <- function(tree, type, tmp_vars = NULL) {
 #' @importFrom magrittr %>%
 #' @export
 check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
+  
+  # errors' vector
+  error_message = c()
+
+  # study the category of the selected variables
   if (length(vars) > 0) {
     check_vars = sub("\\|.*", "", stringr::str_extract(vars, "(.*?)(\\||$)"))
   } else {
     check_vars = NULL
   }
-  error_message = c()
 
+  # check that at least one scenario has been choosen
   if (length(unique(scen)) < 1) {
     error_message <- c(error_message,"ERROR: Select at least one scenario please.")
   }
+  # check that at least one year has been choosen
   if (length(unique(years)) < 1) {
     error_message <- c(error_message,"ERROR: Select at least one year please.")
   }
+  # check that at least one region has been choosen
   if (length(unique(reg)) < 1) {
     error_message <- c(error_message,"ERROR: Select at least one region please.")
   }
+  # check that at least one variable has been choosen
   if (length(unique(check_vars)) < 1) {
     error_message <- c(error_message,"ERROR: Select at least one variable please.")
   }
+  # in case of grouped-variables' plot, check that at only variables from the same category have been choosen
   if (grouped & length(unique(check_vars)) > 1) {
     error_message <- c(error_message,"ERROR: Select only variables from the same category please.")
   }
@@ -101,33 +111,43 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 #' @export
 update_user_choices_plot <- function(selected_scen, selected_years,
                                      tree_regions, tree_variables, sidebarItemExpanded) {
+  # get selected regions and variables from input
   sel_reg_ini = shinyTree::get_selected(tree_regions, format = 'slices')
   sel_vars_ini = shinyTree::get_selected(tree_variables, format = 'slices')
 
-  # read user's selection
   basic_reg = 0
   basic_vars = 0
+  # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
   if (firstReg && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Regions") || is.null(sidebarItemExpanded))) {
     sel_reg_ini = reg_cont$region
     basic_reg = 1
   }
+
+  # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
   if (firstVars && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Variables") || is.null(sidebarItemExpanded))) {
     sel_vars_ini = unique(cols$col1)
     basic_vars = 1
   }
+
+  # if there are no selected regions
   if (noReg) {
     noReg <<- FALSE
     sel_reg_ini = c()
     basic_reg = 2
   }
+
+  # if there are no selected variables
   if (noVars) {
     noVars <<- FALSE
     sel_vars_ini = c()
     basic_vars = 2
   }
+
+  # set firstVars and/or firstReg to FALSE if it's not the first time loading them or if their sidebarItem is expanded
   firstVars <<- ifelse(!firstVars || (firstVars && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Variables"), FALSE, TRUE)
   firstReg <<- ifelse(!firstReg || (firstReg && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Regions"), FALSE, TRUE)
 
+  # transform the regions and variables' structures to lists 
   if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
     sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
   } else {
@@ -139,6 +159,7 @@ update_user_choices_plot <- function(selected_scen, selected_years,
     sel_reg = sel_reg_ini
   }
 
+  # consider all possible columns
   sel_cols = c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
 
   toret = list(
@@ -189,6 +210,7 @@ reset_first_load <- function() {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
+  # obtain the region's list
   if (basic_reg == 1) {
     reg = unique(sdata$Region)
   } else if (basic_reg == 2 || (is.list(sel_reg) && length(sel_reg) == 0)) {
@@ -197,6 +219,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
     reg = do_unmount_tree(sel_reg, 'regions')
   }
 
+  # obtain the variables's list
   if (basic_vars == 1) {
     vars = unique(sdata$Variable)
   } else if (basic_vars == 2 || (is.list(sel_vars) && length(sel_vars) == 0)) {
@@ -205,6 +228,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
     vars = do_unmount_tree(sel_vars, 'variables')
   }
 
+  # subset the data
   data_sample = sdata %>%
     dplyr::filter(Scenario %in% sel_scen) %>%
     dplyr::filter(Variable %in% vars) %>%
@@ -315,7 +339,10 @@ do_unmount_tree <- function(base_tree, type) {
 #' @importFrom magrittr %>%
 #' @export
 do_collapse_df <- function(basic_data) {
+  # collapse all columns by row
   df_collapsed <- data.frame(collapsed = apply(basic_data, 1, paste, collapse = "|"))
+  
+  # remove 'NA' pattern
   df_clean <- apply(df_collapsed, c(1), function(x) gsub("\\|NA", "", x)) %>%
     as.vector()
 

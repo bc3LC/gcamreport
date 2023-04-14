@@ -143,45 +143,60 @@ server <- function(input, output, session) {
                  input$tree_regions, input$select_none_regions,
                  input$tree_variables, input$select_none_variables), {
 
+                   # if the selected tab is 'Data'
                    if (input$tab_box == 'Data') {
-                     # data table
 
-                     # enable Column's dropdown
+                     # enable columns dropdown and set class 'enabled_cols'
                      shinyjs::enable("columns_id")
                      shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
 
+                     # get selected regions and variables from input
                      sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
                      sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+
+                     # if it's the first load
                      if (firstLoad) {
                        firstLoad <<- FALSE
+                       # set selected variables and regions to all possiblities
                        sel_vars = unique(cols$col1)
                        sel_reg = reg_cont$region
+                       # set basic_reg and basic_vars to TRUE
                        basic_reg = TRUE
                        basic_vars = TRUE
                      } else {
                        basic_reg = 0
                        basic_vars = 0
+
+                       # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
                        if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
                          sel_reg = reg_cont$region
                          basic_reg = 1
                        }
+
+                       # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
                        if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
                          sel_vars = unique(cols$col1)
                          basic_vars = 1
                        }
+
+                       # if there are no selected regions
                        if (noReg) {
-                         # noReg <<- FALSE
                          sel_reg = c()
                          basic_reg = 2
                        }
+
+                       # if there are no selected variables
                        if (noVars) {
-                         # noVars <<- FALSE
                          sel_vars = c()
                          basic_vars = 2
                        }
+
+                       # set firstVars and/or firstReg to FALSE if it's not the first time loading them or if their sidebarItem is expanded
                        firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
                        firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
                      }
+
+                     # render data table
                      output$datatable <- shiny::renderDataTable(
                        do_data_sample(sdata,
                                       input$selected_scen,input$selected_years,
@@ -192,21 +207,22 @@ server <- function(input, output, session) {
                                       rownames = FALSE)
                      )
                    } else if (input$tab_box == 'Plot') {
-                     # plot
+                   # if the selected tab is 'Plot'
 
-                     # disable Column's dropdown
+                     # disable columns dropdown and set class 'disabled_cols'
                      shinyjs::disable("columns_id")
                      shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
                      shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
 
+                     # get selected regions, variables, years, and scenarios from input
                      sel = update_user_choices_plot(selected_scen = input$selected_scen,
                                                     selected_years = input$selected_years,
                                                     tree_regions = input$tree_regions,
                                                     tree_variables = input$tree_variables,
                                                     sidebarItemExpanded = input$sidebarItemExpanded)
-
+                     # if no errors 
                      if (input$vars_grouping == 'Grouped Variables'){
-                       # single plot since 'grouped' selected, ie, display one single plot with all selected variables
+                       # if the variables must be displayed all in one plot
 
                        # check if the user's choice contains errors
                        errors = check_user_choices_plot(vars = sel$vars,
@@ -217,6 +233,8 @@ server <- function(input, output, session) {
 
                        if (length(errors) < 1) {
                          # insert a single plot output object into the web page
+
+                         # compute the display and download height
                          if (input$reg_grouping == 'Grouped Regions') {
                            hh_disp = 450
                            hh_dwn = 15
@@ -225,6 +243,7 @@ server <- function(input, output, session) {
                            hh_dwn = 15 + length(sel$reg)/2
                          }
 
+                         # render the plot and the corresponding download button
                          output$plots <- renderUI({
                            plot_output_list <- lapply(1:1, function(i) {
                              plotname <- paste("plot", i, sep="")
@@ -234,11 +253,11 @@ server <- function(input, output, session) {
                              )
                            })
 
-                           # Convert the list to a tagList to display properly the list of items
+                           # convert the list to a tagList to display properly the list of items
                            do.call(tagList, plot_output_list)
                          })
 
-                         # do plot
+                         # restrict the dataset to the user's choices
                          data_sample = do_data_sample(sdata,
                                                       sel$scen, sel$years,
                                                       sel$cols, sel$vars_ini,
@@ -250,7 +269,9 @@ server <- function(input, output, session) {
                          # title of the plot
                          tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
 
+                         # do plot
                          if (input$reg_grouping == 'Grouped Regions') {
+                           # consider regions in the legend
                            assign(paste0('fig_',tt),
                                   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                                     ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -267,6 +288,7 @@ server <- function(input, output, session) {
                                                    legend.key.size = ggplot2::unit(0.5, "cm"))
                            )
                          } else {
+                           # facet the plot by regions
                            assign(paste0('fig_',tt),
                                   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                                     ggplot2::geom_point() +
@@ -302,13 +324,14 @@ server <- function(input, output, session) {
 
                                # compute width
                                w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
+                               
+                               # save plot
                                ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
                                                height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                              })
                          })
                        } else {
                          # display errors to the user
-
                          output$plots <- renderUI({
                            HTML(paste(errors, collapse = '<br/>'))
                          })
@@ -323,8 +346,9 @@ server <- function(input, output, session) {
                                                         years = sel$years,
                                                         reg = sel$reg,
                                                         grouped = FALSE)
+                       # if no errors 
                        if (length(errors) < 1) {
-                         # insert n plot outputs objects into the web page
+                         # if the variables must be displayed in different plots
 
                          # restrict the dataset to the user's choices
                          data_sample = do_data_sample(sdata,
@@ -338,7 +362,7 @@ server <- function(input, output, session) {
                          # number of plots to render
                          n = length(unique(data_sample$Variable))
 
-                         # height of the plots
+                         # compute the display and download height
                          if (input$reg_grouping == 'Grouped Regions') {
                            hh_disp = 400
                            hh_dwn = 10
@@ -347,6 +371,7 @@ server <- function(input, output, session) {
                            hh_dwn = 10 + length(sel$reg)/2
                          }
 
+                         # render the plot and the corresponding download button
                          output$plots <- renderUI({
                            plot_output_list <- lapply(1:n, function(i) {
                              plotname <- paste("plot", i, sep="")
@@ -357,7 +382,7 @@ server <- function(input, output, session) {
                              )
                            })
 
-                           # Convert the list to a tagListto display properly the list of items
+                           # convert the list to a tagListto display properly the list of items
                            do.call(tagList, plot_output_list)
                          })
 
@@ -366,8 +391,9 @@ server <- function(input, output, session) {
                              my_i <- i
                              plotname <- paste("plot", my_i, sep="")
 
-                             # create plot
+                             # do plot
                              if (input$reg_grouping == 'Grouped Regions') {
+                               # consider regions in the legend
                                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                                       ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                                         ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -384,6 +410,7 @@ server <- function(input, output, session) {
                                                        legend.key.size = ggplot2::unit(0.7, "cm"))
                                )
                              } else {
+                               # facet the plot by regions
                                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                                       ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                                         ggplot2::geom_point() +
@@ -415,6 +442,8 @@ server <- function(input, output, session) {
 
                                  # compute width
                                  w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
+                                                   
+                                 # save plot
                                  ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
                                                  height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                                })
@@ -435,21 +464,24 @@ server <- function(input, output, session) {
 
   ## -- plot
   observe({
+    # if the selected tab is 'Plot'
     if (input$tab_box == 'Plot') {
 
-      # disable Column's dropdown
+      # disable columns dropdown and set class 'disabled_cols'
       shinyjs::disable("columns_id")
       shinyjs::addClass(selector = "#columns_id", class = "disabled_cols")
       shinyjs::removeClass(selector = "#columns_id", class = "enabled_cols")
 
-      # read user's choices
+      # get selected regions, variables, years, and scenarios from input
       sel = update_user_choices_plot(selected_scen = input$selected_scen,
                                      selected_years = input$selected_years,
                                      tree_regions = input$tree_regions,
                                      tree_variables = input$tree_variables,
                                      sidebarItemExpanded = input$sidebarItemExpanded)
-
+      # if no errors 
       if (input$vars_grouping == 'Grouped Variables'){
+        # if the variables must be displayed all in one plot
+
         # check if the user's choice contains errors
         errors = check_user_choices_plot(vars = sel$vars,
                                          scen = sel$scen,
@@ -459,6 +491,8 @@ server <- function(input, output, session) {
 
         if (length(errors) < 1) {
           # insert a single plot output object into the web page
+
+          # compute the display and download height
           if (input$reg_grouping == 'Grouped Regions') {
             hh_disp = 450
             hh_dwn = 15
@@ -467,6 +501,7 @@ server <- function(input, output, session) {
             hh_dwn = 20
           }
 
+          # render the plot and the corresponding download button
           output$plots <- renderUI({
             plot_output_list <- lapply(1:1, function(i) {
               plotname <- paste("plot", i, sep="")
@@ -476,11 +511,11 @@ server <- function(input, output, session) {
               )
             })
 
-            # Convert the list to a tagListto display properly the list of items
+            # convert the list to a tagListto display properly the list of items
             do.call(tagList, plot_output_list)
           })
 
-          # do plot
+          # restrict the dataset to the user's choices
           data_sample = do_data_sample(sdata,
                                        sel$scen, sel$years,
                                        sel$cols, sel$vars_ini,
@@ -489,10 +524,12 @@ server <- function(input, output, session) {
             dplyr::mutate(values = as.numeric(as.character(values))) %>%
             dplyr::mutate(year = as.numeric(as.character(year)))
 
-          # plot title
+          # title of the plot
           tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
 
+          # do plot
           if (input$reg_grouping == 'Grouped Regions') {
+            # consider regions in the legend
             assign(paste0('fig_',tt),
                    ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                      ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -509,6 +546,7 @@ server <- function(input, output, session) {
                                     legend.key.size = ggplot2::unit(0.5, "cm"))
             )
           } else {
+            # facet the plot by regions
             assign(paste0('fig_',tt),
                    ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                      ggplot2::geom_point() +
@@ -544,6 +582,8 @@ server <- function(input, output, session) {
 
                 # compute width
                 w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
+                                               
+                # save plot
                 ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
                                 height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
               })
@@ -564,9 +604,9 @@ server <- function(input, output, session) {
                                          years = sel$years,
                                          reg = sel$reg,
                                          grouped = FALSE)
-
+        # if no errors 
         if (length(errors) < 1) {
-          # insert the right number of plot output objects into the web page
+          # if the variables must be displayed in different plots
 
           # restrict the dataset to the user's choices
           data_sample = do_data_sample(sdata,
@@ -580,7 +620,7 @@ server <- function(input, output, session) {
           # number of plots to render
           n = length(unique(data_sample$Variable))
 
-          # height of the plots
+          # compute the display and download height
           if (input$reg_grouping == 'Grouped Regions') {
             hh_disp = 400
             hh_dwn = 15
@@ -589,6 +629,7 @@ server <- function(input, output, session) {
             hh_dwn = 10 + length(sel$reg)/2
           }
 
+          # render the plot and the corresponding download button
           output$plots <- renderUI({
             plot_output_list <- lapply(1:n, function(i) {
               plotname <- paste("plot", i, sep="")
@@ -599,7 +640,7 @@ server <- function(input, output, session) {
               )
             })
 
-            # Convert the list to a tagList to display properly the list of items
+            # convert the list to a tagList to display properly the list of items
             do.call(tagList, plot_output_list)
           })
 
@@ -608,8 +649,9 @@ server <- function(input, output, session) {
               my_i <- i
               plotname <- paste("plot", my_i, sep="")
 
-              # create plot
+              # do plot
               if (input$reg_grouping == 'Grouped Regions') {
+                # consider regions in the legend
                 assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                        ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                          ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -626,6 +668,7 @@ server <- function(input, output, session) {
                                         legend.key.size = ggplot2::unit(0.7, "cm"))
                 )
               } else {
+                # facet the plot by regions
                 assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                        ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                          ggplot2::geom_point() +
@@ -657,6 +700,8 @@ server <- function(input, output, session) {
 
                   # compute width
                   w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
+                                                                     
+                  # save plot
                   ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
                                   height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                 })
@@ -670,7 +715,7 @@ server <- function(input, output, session) {
         }
       }
     } else {
-      # enable Column's dropdown
+      # enable columns dropdown and set class 'enabled_cols'
       shinyjs::enable("columns_id")
       shinyjs::addClass(selector = "#columns_id", class = "enabled_cols")
       shinyjs::removeClass(selector = "#columns_id", class = "disabled_cols")
@@ -680,10 +725,14 @@ server <- function(input, output, session) {
 
   # -- self-actualized data table with the user's choices
   tableData <- reactive({
+    # get selected regions and variables from input
     sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
     sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
+    
+    # if it's the first load
     if (firstLoad) {
       firstLoad <<- FALSE
+      # update the tableData with the user's choices but considering all possible variables and regions
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,unique(cols$col1),
@@ -691,26 +740,36 @@ server <- function(input, output, session) {
     } else {
       basic_reg = 0
       basic_vars = 0
+
+      # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
         sel_reg = reg_cont$region
         basic_reg = 1
       }
+
+      # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
       if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
         sel_vars = unique(cols$col1)
         basic_vars = 1
       }
+
+      # if there are no selected regions
       if (noReg) {
-        # noReg <<- FALSE
         sel_reg = c()
         basic_reg = 2
       }
+
+      # if there are no selected variables
       if (noVars) {
-        # noVars <<- FALSE
         sel_vars = c()
         basic_vars = 2
       }
+
+      # set firstVars and/or firstReg to FALSE if it's not the first time loading them or if their sidebarItem is expanded
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
+      
+      # update the tableData with the user's choices
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
                                   input$selected_cols,sel_vars,

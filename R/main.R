@@ -28,7 +28,7 @@ load_project = function(prj_name) {
 #' @return loaded project into global environment
 #' @export
 create_project = function(db_path, query_path, db_name, prj_name, scenarios) {
-  # create project
+  # create the project
   conn <- rgcam::localDBConn(db_path,
                              db_name,migabble = FALSE)
   prj <- rgcam::addScenario(conn,
@@ -52,16 +52,23 @@ create_project = function(db_path, query_path, db_name, prj_name, scenarios) {
 #' @return load variable
 #' @export
 load_variable = function(var){
+
+  # base case: if variable already loaded, return
   if (exists(var$name)) {
     return()
   }
 
+  # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
       load_variable(variables[which(variables$name == d),])
     }
   }
+
+  # print the variable's name
   print(var$name)
+
+  # load the variable
   get(var$fun)()
 }
 
@@ -99,14 +106,19 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
+    # stop and display error
     stop('ERROR: Specify either a project or a database to extract the data from. Not both.')
-  } else if (!is.null(project_path)) {
+
+  } else if (!is.null(project_path)) {    
     # load project
     print('Loading project...')
     load_project(project_path)
+
   } else if (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
-    # create project
+    # create project if checks ok
     print('Creating project...')
+
+    # check that all the paths are specified
     if (is.null(db_path) || is.null(query_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
       null_items = c()
       not_null_items = c()
@@ -117,17 +129,20 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
           not_null_items = c(not_null_items, item)
         }
       }
+
+      # stop and display error
       if (length(not_null_items) > 1) {
         stop("If ", paste(not_null_items, collapse = ', '), " are specified, ", paste(null_items, collapse = ', '), " must also be specified.")
       } else {
         stop("If ", paste(not_null_items, collapse = ', '), " is specified, ", paste(null_items, collapse = ', '), " must also be specified.")
       }
     } else {
+      # create project
       create_project(db_path, query_path, db_name, prj_name, scenarios)
     }
 
-    create_project(db_path)
   } else {
+    # stop and display error
     stop('ERROR: Specify either a project or a database to extract the data from.')
   }
 
@@ -183,9 +198,15 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
     }
   }
 
+  # set the default file_name based on the project_path or the db_path & db_name
   if (is.null(file_name)) {
-    file_name = gsub("\\.dat$", "", project_path)
-    file_name = paste0(file_name,'_ipcc_report.csv')
+    if (!is.null(project_path)) {
+      file_name = gsub("\\.dat$", "", project_path)
+      file_name = paste0(file_name,'_ipcc_report.csv')
+    } else {
+      file_name = gsub("\\.dat$", "", project_path)
+      file_name = paste0(db_path, "/", db_name, '_ipcc_report.csv')
+    }
   }
 
   # bind and save results
