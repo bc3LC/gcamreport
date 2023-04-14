@@ -11,7 +11,7 @@ run(
   db_name = NULL,
   prj_name = NULL,
   scenarios = NULL,
-  final_db_year = 2100,
+  final_year = 2100,
   desired_variables = "All",
   save = TRUE,
   file_name = NULL,
@@ -31,7 +31,7 @@ run(
 
 \item{scenarios:}{name of the scenarios to be considered.}
 
-\item{final_db_year:}{final year of the database. By default = 2100.}
+\item{final_year:}{final year of the data. By default = 2100.}
 
 \item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,

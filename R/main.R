@@ -78,7 +78,7 @@ load_variable = function(var){
 #' @param db_name: name of the database.
 #' @param prj_name: name of the project.
 #' @param scenarios: name of the scenarios to be considered.
-#' @param final_db_year: final year of the database. By default = 2100.
+#' @param final_year: final year of the data. By default = 2100.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
 #' global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
@@ -95,7 +95,7 @@ load_variable = function(var){
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
-               final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
+               final_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
@@ -132,7 +132,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   }
 
   # make final_db_year as a global variable
-  final_db_year <<- final_db_year
+  final_db_year <<- final_year
 
   # final reporting columns:
   reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
@@ -226,7 +226,6 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   cols <<- unique(sdata[, grepl('col', names(sdata))])
   tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
 
-  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
 
   # save a list of all variables

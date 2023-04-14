@@ -2,6 +2,15 @@
 #'
 #' @source local
 #' @format .csv
+#' @description mapping between regions and continents
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::reg_cont
+#' }
+"reg_cont"
+
+#' @source local
+#' @format .csv
 #' @description mapping between variables, functions to load them, dependent variables, and available verifications
 #' \dontrun{
 #'  library(gcamreport);

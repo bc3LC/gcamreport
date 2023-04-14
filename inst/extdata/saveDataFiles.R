@@ -6,6 +6,9 @@ library(here)
 ### paths
 rawDataFolder = here::here()
 
+# regions_continents_map
+reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
+use_data(reg_cont, overwrite=T)
 
 # variables_functions_mapping
 var_fun_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/variables_functions_mapping.csv"),
