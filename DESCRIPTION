@@ -38,7 +38,8 @@ Imports:
     shinyTree,
     shinyjs,
     dashboardthemes,
-    DT
+    DT,
+    rrapply
 Suggests: 
     rmarkdown,
     testthat

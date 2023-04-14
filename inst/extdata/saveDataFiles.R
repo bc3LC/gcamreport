@@ -8,7 +8,7 @@ rawDataFolder = here::here()
 
 
 # variables_functions_mapping
-var_fun_map <- read.csv(paste0(here::here(), "/inst/extdata", "/variables_functions_mapping.csv"),
+var_fun_map <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/variables_functions_mapping.csv"),
                        sep=';',header=T, na.strings=c("","NA"))
 
 var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))

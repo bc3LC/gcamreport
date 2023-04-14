@@ -11,7 +11,7 @@ library(magrittr)
 #' @export
 load_project = function(prj_name) {
   # load the project
-  prj <<- rgcam::loadProject(paste0(here::here(), "/inst/extdata/", prj_name, ".dat"))
+  prj <<- rgcam::loadProject(prj_name)
 
   Scenarios <<- rgcam::listScenarios(prj)
   rgcam::listQueries(prj)
@@ -40,12 +40,12 @@ load_variable = function(var){
 }
 
 
-#' read_queries
+#' run
 #'
 #' Main function. Interacts with the user to select the desired variables for the report,
 #' loads them, saves them in an external output, runs the verifications, and informs the
 #' user about the success of the whole process.
-#' @param project_name: name of the project. By default = gas_fin_updated.
+#' @param project_name: full path of the project and the project name. Possible extensions: .dat and .proj
 #' @param final_db_year: final year of the database. By default = 2100.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
@@ -55,13 +55,14 @@ load_variable = function(var){
 #' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
 #' @param save: if TRUE, save reporting data. Do not save otherwise.
-#' @param file_name: file name of the saved data. Not used if data not saved. Data saved in '/output/datasets/'
+#' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
+#' tthe same name than the specified project_name, with 'ipcc_report' tag. CSV output.
 #' @param launch_app: if TRUE, open app. Do not launch app otherwise.
 #' @importFrom magrittr %>%
 #' @keywords internal
-#' @return saved? datafile with the desired variables & launched? user interface
+#' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
-read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = 'final_data', launch_app = TRUE) {
+run = function(project_name, final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
   # load project
   print('Loading project...')
   load_project(project_name)
@@ -118,13 +119,18 @@ read_queries = function(project_name = 'gas_fin_updated', final_db_year = 2100, 
     }
   }
 
+  if (is.null(file_name)) {
+    file_name = gsub("\\.dat$", "", project_name)
+    file_name = paste0(file_name,'_ipcc_report.csv')
+  }
+
   # bind and save results
   do_bind_results()
   if (save) {
     if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
       dir.create(paste0(here::here(), "/output/datasets/"))
     }
-    write.csv(final_data, file.path(paste0(here::here(), "/output/datasets/", file_name,".csv")), row.names = FALSE)
+    write.csv(final_data, file.path(file_name), row.names = FALSE)
   }
 
   # checks, vetting, and errors summary
