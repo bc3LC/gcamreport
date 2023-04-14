@@ -205,7 +205,7 @@ server <- function(input, output, session) {
                                                     tree_variables = input$tree_variables,
                                                     sidebarItemExpanded = input$sidebarItemExpanded)
 
-                     if (input$graph_grouping == 'Grouped'){
+                     if (input$graph_grouping == 'Grouped Variables'){
                        # single plot since 'grouped' selected, ie, display one single plot with all selected variables
 
                        # check if the user's choice contains errors
@@ -289,7 +289,7 @@ server <- function(input, output, session) {
                          })
                        }
                      }
-                     else if (input$graph_grouping == 'Ungrouped') {
+                     else if (input$graph_grouping == 'Ungrouped Variables') {
                        # multiple plots since 'ungrouped' selected, ie., display one plot for each variable
 
                        # check if the user's choice contains errors
@@ -300,7 +300,18 @@ server <- function(input, output, session) {
                                                         grouped = FALSE)
                        if (length(errors) < 1) {
                          # insert n plot outputs objects into the web page
-                         n = length(sel$vars)
+
+                         # restrict the dataset to the user's choices
+                         data_sample = do_data_sample(sdata,
+                                                      sel$scen, sel$years,
+                                                      sel$cols, sel$vars_ini,
+                                                      sel$reg_ini, sel$basic_reg, sel$basic_vars)
+                         data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+                           dplyr::mutate(values = as.numeric(as.character(values))) %>%
+                           dplyr::mutate(year = as.numeric(as.character(year)))
+
+                         # number of plots to render
+                         n = length(unique(data_sample$Variable))
                          output$plots <- renderUI({
                            plot_output_list <- lapply(1:n, function(i) {
                              plotname <- paste("plot", i, sep="")
@@ -321,14 +332,6 @@ server <- function(input, output, session) {
                              plotname <- paste("plot", my_i, sep="")
 
                              # create plot
-                             data_sample = do_data_sample(sdata,
-                                                          sel$scen, sel$years,
-                                                          sel$cols, sel$vars_ini,
-                                                          sel$reg_ini, sel$basic_reg, sel$basic_vars)
-                             data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-                               dplyr::mutate(values = as.numeric(as.character(values))) %>%
-                               dplyr::mutate(year = as.numeric(as.character(year)))
-
                              assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                                     ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                                       ggplot2::geom_point(ggplot2::aes(shape = Region)) +
@@ -394,7 +397,7 @@ server <- function(input, output, session) {
                                      tree_variables = input$tree_variables,
                                      sidebarItemExpanded = input$sidebarItemExpanded)
 
-      if (input$graph_grouping == 'Grouped'){
+      if (input$graph_grouping == 'Grouped Variables'){
         # check if the user's choice contains errors
         errors = check_user_choices_plot(vars = sel$vars,
                                          scen = sel$scen,
@@ -475,7 +478,9 @@ server <- function(input, output, session) {
           })
         }
       }
-      else if (input$graph_grouping == 'Ungrouped') {
+      else if (input$graph_grouping == 'Ungrouped Variables') {
+        # multiple plots since 'ungrouped' selected, ie., display one plot for each variable
+
         # check if the user's choice contains errors
         errors = check_user_choices_plot(vars = sel$vars,
                                          scen = sel$scen,
@@ -485,7 +490,18 @@ server <- function(input, output, session) {
 
         if (length(errors) < 1) {
           # insert the right number of plot output objects into the web page
-          n = length(sel$vars)
+
+          # restrict the dataset to the user's choices
+          data_sample = do_data_sample(sdata,
+                                       sel$scen, sel$years,
+                                       sel$cols, sel$vars_ini,
+                                       sel$reg_ini, sel$basic_reg, sel$basic_vars)
+          data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+            dplyr::mutate(values = as.numeric(as.character(values))) %>%
+            dplyr::mutate(year = as.numeric(as.character(year)))
+
+          # number of plots to render
+          n = length(unique(data_sample$Variable))
           output$plots <- renderUI({
             plot_output_list <- lapply(1:n, function(i) {
               plotname <- paste("plot", i, sep="")
@@ -506,14 +522,6 @@ server <- function(input, output, session) {
               plotname <- paste("plot", my_i, sep="")
 
               # create plot
-              data_sample = do_data_sample(sdata,
-                                           sel$scen, sel$years,
-                                           sel$cols, sel$vars_ini,
-                                           sel$reg_ini, sel$basic_reg, sel$basic_vars)
-              data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-                dplyr::mutate(values = as.numeric(as.character(values))) %>%
-                dplyr::mutate(year = as.numeric(as.character(year)))
-
               assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
                      ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
                        ggplot2::geom_point(ggplot2::aes(shape = Region)) +

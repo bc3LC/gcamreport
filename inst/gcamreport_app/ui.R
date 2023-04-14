@@ -210,7 +210,7 @@ ui <- dashboardPage(
                  radioGroupButtons(
                    inputId = "graph_grouping",
                    label = "Choose how the graph variables should be displayed: ",
-                   choices = c("Grouped", "Ungrouped")
+                   choices = c("Grouped Variables", "Ungrouped Variables")
                  ),
                  br(),
                  # dynamic UI for the plots
