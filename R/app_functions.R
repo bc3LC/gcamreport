@@ -162,7 +162,6 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 #' @importFrom magrittr %>%
 #' @export
 reset_first_load <- function() {
-  reg_cont <<- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   cols <<- unique(sdata[, grepl('col', names(sdata))])
   tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
