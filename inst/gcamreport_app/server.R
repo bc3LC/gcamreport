@@ -205,7 +205,7 @@ server <- function(input, output, session) {
                                                     tree_variables = input$tree_variables,
                                                     sidebarItemExpanded = input$sidebarItemExpanded)
 
-                     if (input$graph_grouping == 'Grouped Variables'){
+                     if (input$vars_grouping == 'Grouped Variables'){
                        # single plot since 'grouped' selected, ie, display one single plot with all selected variables
 
                        # check if the user's choice contains errors
@@ -217,11 +217,19 @@ server <- function(input, output, session) {
 
                        if (length(errors) < 1) {
                          # insert a single plot output object into the web page
+                         if (input$reg_grouping == 'Grouped Regions') {
+                           hh_disp = 450
+                           hh_dwn = 15
+                         } else {
+                           hh_disp = 40*(length(sel$reg))
+                           hh_dwn = 15 + length(sel$reg)/2
+                         }
+
                          output$plots <- renderUI({
                            plot_output_list <- lapply(1:1, function(i) {
                              plotname <- paste("plot", i, sep="")
                              tagList(
-                               plotOutput(plotname, height = 450, width = 1000),
+                               plotOutput(plotname, height = hh_disp, width = 1000),
                                downloadButton(paste0("download", i), label = "Download")
                              )
                            })
@@ -242,21 +250,38 @@ server <- function(input, output, session) {
                          # title of the plot
                          tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
 
-                         assign(paste0('fig_',tt),
-                                ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-                                  ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-                                  ggplot2::geom_line() +
-                                  ggplot2::scale_shape_manual('Region', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
-                                  ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
-                                  ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                                  ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
-                                  ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
-                                  ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
-                                  ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/8))) +
-                                  ggplot2::theme_bw() +
-                                  ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
-                                                 legend.key.size = ggplot2::unit(0.5, "cm"))
-                         )
+                         if (input$reg_grouping == 'Grouped Regions') {
+                           assign(paste0('fig_',tt),
+                                  ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                                    ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+                                    ggplot2::geom_line() +
+                                    ggplot2::scale_shape_manual('Regions', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
+                                    ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
+                                    ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                                    ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
+                                    ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
+                                    ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
+                                    ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/8))) +
+                                    ggplot2::theme_bw() +
+                                    ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                                   legend.key.size = ggplot2::unit(0.5, "cm"))
+                           )
+                         } else {
+                           assign(paste0('fig_',tt),
+                                  ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                                    ggplot2::geom_point() +
+                                    ggplot2::geom_line() +
+                                    ggplot2::facet_wrap(. ~ Region) +
+                                    ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
+                                    ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                                    ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
+                                    ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/8))) +
+                                    ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/5))) +
+                                    ggplot2::theme_bw() +
+                                    ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                                   legend.key.size = ggplot2::unit(0.5, "cm"), legend.position = 'bottom')
+                           )
+                         }
 
                          local({
                            my_i <- 1
@@ -278,7 +303,7 @@ server <- function(input, output, session) {
                                # compute width
                                w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
                                ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
-                                               height = 10, width = 20+w, units = 'cm', limitsize = FALSE)
+                                               height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                              })
                          })
                        } else {
@@ -289,7 +314,7 @@ server <- function(input, output, session) {
                          })
                        }
                      }
-                     else if (input$graph_grouping == 'Ungrouped Variables') {
+                     else if (input$vars_grouping == 'Ungrouped Variables') {
                        # multiple plots since 'ungrouped' selected, ie., display one plot for each variable
 
                        # check if the user's choice contains errors
@@ -312,11 +337,21 @@ server <- function(input, output, session) {
 
                          # number of plots to render
                          n = length(unique(data_sample$Variable))
+
+                         # height of the plots
+                         if (input$reg_grouping == 'Grouped Regions') {
+                           hh_disp = 400
+                           hh_dwn = 10
+                         } else {
+                           hh_disp = 30*(length(sel$reg))
+                           hh_dwn = 10 + length(sel$reg)/2
+                         }
+
                          output$plots <- renderUI({
                            plot_output_list <- lapply(1:n, function(i) {
                              plotname <- paste("plot", i, sep="")
                              tagList(
-                               plotOutput(plotname, height = 400, width = 1000),
+                               plotOutput(plotname, height = hh_disp, width = 1000),
                                downloadButton(paste0("download", i), label = "Download"),
                                br(),br(),br()
                              )
@@ -332,21 +367,38 @@ server <- function(input, output, session) {
                              plotname <- paste("plot", my_i, sep="")
 
                              # create plot
-                             assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
-                                    ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-                                      ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-                                      ggplot2::geom_line() +
-                                      ggplot2::guides(linetype = 'none') +
-                                      ggplot2::scale_shape_manual('Region', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
-                                      ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                                      ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
-                                      ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
-                                      ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
-                                      ggplot2::guides(linetype = 'none') +
-                                      ggplot2::theme_bw() +
-                                      ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
-                                                     legend.key.size = ggplot2::unit(0.7, "cm"))
-                             )
+                             if (input$reg_grouping == 'Grouped Regions') {
+                               assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                                      ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                                        ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+                                        ggplot2::geom_line() +
+                                        ggplot2::guides(linetype = 'none') +
+                                        ggplot2::scale_shape_manual('Regions', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
+                                        ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                                        ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
+                                        ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
+                                        ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
+                                        ggplot2::guides(linetype = 'none') +
+                                        ggplot2::theme_bw() +
+                                        ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                                       legend.key.size = ggplot2::unit(0.7, "cm"))
+                               )
+                             } else {
+                               assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                                      ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                                        ggplot2::geom_point() +
+                                        ggplot2::geom_line() +
+                                        ggplot2::facet_wrap(. ~ Region) +
+                                        ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                                        ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
+                                        ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/3))) +
+                                        ggplot2::guides(linetype = 'none') +
+                                        ggplot2::guides(shape = 'none') +
+                                        ggplot2::theme_bw() +
+                                        ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                                       legend.key.size = ggplot2::unit(0.5, "cm"), legend.position = 'bottom')
+                               )
+                             }
 
                              # display plot
                              output[[plotname]] <- renderPlot({
@@ -364,7 +416,7 @@ server <- function(input, output, session) {
                                  # compute width
                                  w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
                                  ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
-                                                 height = 10, width = 20+w, units = 'cm', limitsize = FALSE)
+                                                 height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                                })
                            })
                          }
@@ -397,7 +449,7 @@ server <- function(input, output, session) {
                                      tree_variables = input$tree_variables,
                                      sidebarItemExpanded = input$sidebarItemExpanded)
 
-      if (input$graph_grouping == 'Grouped Variables'){
+      if (input$vars_grouping == 'Grouped Variables'){
         # check if the user's choice contains errors
         errors = check_user_choices_plot(vars = sel$vars,
                                          scen = sel$scen,
@@ -407,11 +459,19 @@ server <- function(input, output, session) {
 
         if (length(errors) < 1) {
           # insert a single plot output object into the web page
+          if (input$reg_grouping == 'Grouped Regions') {
+            hh_disp = 450
+            hh_dwn = 15
+          } else {
+            hh_disp = 900
+            hh_dwn = 20
+          }
+
           output$plots <- renderUI({
             plot_output_list <- lapply(1:1, function(i) {
               plotname <- paste("plot", i, sep="")
               tagList(
-                plotOutput(plotname, height = 450, width = 1000),
+                plotOutput(plotname, height = hh_disp, width = 1000),
                 downloadButton(paste0("download", i), label = "Download")
               )
             })
@@ -432,21 +492,38 @@ server <- function(input, output, session) {
           # plot title
           tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
 
-          assign(paste0('fig_',tt),
-                 ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-                   ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-                   ggplot2::geom_line() +
-                   ggplot2::scale_shape_manual('Region', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
-                   ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
-                   ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                   ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
-                   ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
-                   ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
-                   ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/8))) +
-                   ggplot2::theme_bw() +
-                   ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
-                                  legend.key.size = ggplot2::unit(0.5, "cm"))
-          )
+          if (input$reg_grouping == 'Grouped Regions') {
+            assign(paste0('fig_',tt),
+                   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                     ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+                     ggplot2::geom_line() +
+                     ggplot2::scale_shape_manual('Regions', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
+                     ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
+                     ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                     ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
+                     ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
+                     ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
+                     ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/8))) +
+                     ggplot2::theme_bw() +
+                     ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                    legend.key.size = ggplot2::unit(0.5, "cm"))
+            )
+          } else {
+            assign(paste0('fig_',tt),
+                   ggplot2::ggplot(data = data_sample, ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                     ggplot2::geom_point() +
+                     ggplot2::geom_line() +
+                     ggplot2::facet_wrap(. ~ Region) +
+                     ggplot2::scale_linetype_manual('Variables', values = rep(c(1:6), times = ceiling(length(unique(data_sample$Variable))/6))) +
+                     ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                     ggplot2::labs(title = paste0('Evolution of ', tt), y = unique(data_sample$Unit), x = 'Year') +
+                     ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/8))) +
+                     ggplot2::guides(linetype = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Variable))/5))) +
+                     ggplot2::theme_bw() +
+                     ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                    legend.key.size = ggplot2::unit(0.5, "cm"), legend.position = 'bottom')
+            )
+          }
 
           local({
             my_i <- 1
@@ -468,7 +545,7 @@ server <- function(input, output, session) {
                 # compute width
                 w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
                 ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
-                                height = 10, width = 20+w, units = 'cm', limitsize = FALSE)
+                                height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
               })
           })
         } else {
@@ -478,7 +555,7 @@ server <- function(input, output, session) {
           })
         }
       }
-      else if (input$graph_grouping == 'Ungrouped Variables') {
+      else if (input$vars_grouping == 'Ungrouped Variables') {
         # multiple plots since 'ungrouped' selected, ie., display one plot for each variable
 
         # check if the user's choice contains errors
@@ -502,11 +579,21 @@ server <- function(input, output, session) {
 
           # number of plots to render
           n = length(unique(data_sample$Variable))
+
+          # height of the plots
+          if (input$reg_grouping == 'Grouped Regions') {
+            hh_disp = 400
+            hh_dwn = 15
+          } else {
+            hh_disp = 30*(length(sel$reg))
+            hh_dwn = 10 + length(sel$reg)/2
+          }
+
           output$plots <- renderUI({
             plot_output_list <- lapply(1:n, function(i) {
               plotname <- paste("plot", i, sep="")
               tagList(
-                plotOutput(plotname, height = 400, width = 1000),
+                plotOutput(plotname, height = hh_disp, width = 1000),
                 downloadButton(paste0("download", i), label = "Download"),
                 br(),br(),br()
               )
@@ -522,21 +609,38 @@ server <- function(input, output, session) {
               plotname <- paste("plot", my_i, sep="")
 
               # create plot
-              assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
-                     ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
-                       ggplot2::geom_point(ggplot2::aes(shape = Region)) +
-                       ggplot2::geom_line() +
-                       ggplot2::guides(linetype = 'none') +
-                       ggplot2::scale_shape_manual('Region', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
-                       ggplot2::scale_color_manual('Scenario', values = rainbow(length(unique(data_sample$Scenario)))) +
-                       ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
-                       ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
-                       ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
-                       ggplot2::guides(linetype = 'none') +
-                       ggplot2::theme_bw() +
-                       ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
-                                      legend.key.size = ggplot2::unit(0.7, "cm"))
-              )
+              if (input$reg_grouping == 'Grouped Regions') {
+                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                       ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                         ggplot2::geom_point(ggplot2::aes(shape = Region)) +
+                         ggplot2::geom_line() +
+                         ggplot2::guides(linetype = 'none') +
+                         ggplot2::scale_shape_manual('Regions', values = rep(c(1:20), times = ceiling(length(unique(data_sample$Region))/20))) +
+                         ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                         ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
+                         ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/6))) +
+                         ggplot2::guides(shape = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Region))/7))) +
+                         ggplot2::guides(linetype = 'none') +
+                         ggplot2::theme_bw() +
+                         ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                        legend.key.size = ggplot2::unit(0.7, "cm"))
+                )
+              } else {
+                assign(paste0('fig_',unique(data_sample$Variable)[my_i]),
+                       ggplot2::ggplot(data = data_sample %>% dplyr::filter(Variable == unique(data_sample$Variable)[my_i]), ggplot2::aes(x = year, y = values, color = Scenario, linetype = Variable, group = interaction(Scenario,Region,Variable))) +
+                         ggplot2::geom_point() +
+                         ggplot2::geom_line() +
+                         ggplot2::facet_wrap(. ~ Region) +
+                         ggplot2::scale_color_manual('Scenarios', values = rainbow(length(unique(data_sample$Scenario)))) +
+                         ggplot2::labs(title = paste0('Evolution of ', unique(data_sample$Variable)[my_i]), y = unique(data_sample$Unit), x = 'Year') +
+                         ggplot2::guides(color = ggplot2::guide_legend(ncol = ceiling(length(unique(data_sample$Scenario))/3))) +
+                         ggplot2::guides(linetype = 'none') +
+                         ggplot2::guides(shape = 'none') +
+                         ggplot2::theme_bw() +
+                         ggplot2::theme(legend.text = ggplot2::element_text(size = 8),legend.title = ggplot2::element_text(size = 10),
+                                        legend.key.size = ggplot2::unit(0.5, "cm"), legend.position = 'bottom')
+                )
+              }
 
               # display plot
               output[[plotname]] <- renderPlot({
@@ -554,7 +658,7 @@ server <- function(input, output, session) {
                   # compute width
                   w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
                   ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
-                                  height = 10, width = 20+w, units = 'cm', limitsize = FALSE)
+                                  height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
                 })
             })
           }
