@@ -12,7 +12,10 @@ reset_first_load()
 # Define UI --------------------------------------------------------------------
 
 ui <- dashboardPage(
+  # header
   dashboardHeader(title = "gcamreport"),
+
+  # sidebar
   dashboardSidebar(sidebarMenu(
     shinyjs::useShinyjs(),
 
@@ -30,6 +33,7 @@ ui <- dashboardPage(
         ) %>%
           tagAppendAttributes(class = 'names_split')
       ),
+      # select none/all buttons
       menuItem(
         actionBttn(
           inputId = "select_all_scen",
@@ -60,6 +64,7 @@ ui <- dashboardPage(
                   checkbox = TRUE,
                   types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}}}")
       ),
+      # select none/all buttons
       menuItem(
         actionBttn(
           inputId = "select_all_regions",
@@ -91,6 +96,7 @@ ui <- dashboardPage(
                   types = "{ 'basic': {'a_attr' : { 'style' : 'background-color: #2c3b41; color: inherit; cursor: inherit; pointer-events: inherit; opacity: inherit'}},
                   'dis': {'a_attr' : { 'style' : 'opacity: 0.3; cursor: not-allowed; pointer-events: none' } }}")
       ),
+      # select none/all buttons
       menuItem(
         actionBttn(
           inputId = "select_all_variables",
@@ -125,6 +131,7 @@ ui <- dashboardPage(
         ) %>%
           tagAppendAttributes(class = 'names_split')
       ),
+      # select none/all buttons
       menuItem(
         actionBttn(
           inputId = "select_all_years",
@@ -163,6 +170,7 @@ ui <- dashboardPage(
         ) %>%
           tagAppendAttributes(class = 'names_split')
       ),
+      # select none/all buttons
       menuItem(
         actionBttn(
           inputId = "select_all_cols",
@@ -194,6 +202,7 @@ ui <- dashboardPage(
 
   )),
 
+  # body
   dashboardBody(
     # css file
     includeCSS(paste0(here::here(),"/R/www/style.css")),
@@ -207,6 +216,7 @@ ui <- dashboardPage(
                  shiny::dataTableOutput(outputId = "datatable")
         ),
         tabPanel("Plot",
+                 # buttons to chose how to display the regions and variables
                  fluidRow(style='padding-left:25px;',
                    column(width = 5,
                           radioGroupButtons(
