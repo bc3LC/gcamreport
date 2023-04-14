@@ -14,7 +14,33 @@ load_project = function(prj_name) {
   prj <<- rgcam::loadProject(prj_name)
 
   Scenarios <<- rgcam::listScenarios(prj)
-  rgcam::listQueries(prj)
+}
+
+
+#' create_project
+#'
+#' Create specified project and load it into the global environment
+#' @param db_path: path of the database
+#' @param query_path: path of the query
+#' @param db_name: name of the database
+#' @param prj_name: name of the project
+#' @param scenarios: name of the scenarios to be considered
+#' @return loaded project into global environment
+#' @export
+create_project = function(db_path, query_path, db_name, prj_name, scenarios) {
+  # create project
+  conn <- rgcam::localDBConn(db_path,
+                             db_name,migabble = FALSE)
+  prj <- rgcam::addScenario(conn,
+                            prj_name,
+                            scenarios,
+                            paste0(query_path,"/",queries))
+
+  # load the project
+  print('Loading project...')
+  prj <<- rgcam::loadProject(prj)
+
+  Scenarios <<- rgcam::listScenarios(prj)
 }
 
 
@@ -42,10 +68,16 @@ load_variable = function(var){
 
 #' run
 #'
-#' Main function. Interacts with the user to select the desired variables for the report,
-#' loads them, saves them in an external output, runs the verifications, and informs the
-#' user about the success of the whole process.
-#' @param project_name: full path of the project and the project name. Possible extensions: .dat and .proj
+#' Main function. Interacts with the user to select the desired variables for the report, loads
+#' them, saves them in an external output, runs the verifications, and informs the user about the
+#' success of the whole process. Either the `project_path` should be specified, or the `db_path`
+#' with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
+#' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
+#' @param db_path: full path of the database.
+#' @param query_path: full path of the query.
+#' @param db_name: name of the database.
+#' @param prj_name: name of the project.
+#' @param scenarios: name of the scenarios to be considered.
 #' @param final_db_year: final year of the database. By default = 2100.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
@@ -56,16 +88,48 @@ load_variable = function(var){
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
 #' @param save: if TRUE, save reporting data. Do not save otherwise.
 #' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' tthe same name than the specified project_name, with 'ipcc_report' tag. CSV output.
+#' tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.
 #' @param launch_app: if TRUE, open app. Do not launch app otherwise.
 #' @importFrom magrittr %>%
 #' @keywords internal
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
-run = function(project_name, final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
-  # load project
-  print('Loading project...')
-  load_project(project_name)
+run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
+               final_db_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
+
+  # check that the paths are correctly specified
+  if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
+    stop('ERROR: Specify either a project or a database to extract the data from. Not both.')
+  } else if (!is.null(project_path)) {
+    # load project
+    print('Loading project...')
+    load_project(project_path)
+  } else if (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
+    # create project
+    print('Creating project...')
+    if (is.null(db_path) || is.null(query_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
+      null_items = c()
+      not_null_items = c()
+      for (item in c('db_path','query_path','db_name','prj_name','scenarios')) {
+        if (is.null(eval(parse(text=item)))) {
+          null_items = c(null_items, item)
+        } else {
+          not_null_items = c(not_null_items, item)
+        }
+      }
+      if (length(not_null_items) > 1) {
+        stop("If ", paste(not_null_items, collapse = ', '), " are specified, ", paste(null_items, collapse = ', '), " must also be specified.")
+      } else {
+        stop("If ", paste(not_null_items, collapse = ', '), " is specified, ", paste(null_items, collapse = ', '), " must also be specified.")
+      }
+    } else {
+      create_project(db_path, query_path, db_name, prj_name, scenarios)
+    }
+
+    create_project(db_path)
+  } else {
+    stop('ERROR: Specify either a project or a database to extract the data from.')
+  }
 
   # make final_db_year as a global variable
   final_db_year <<- final_db_year
