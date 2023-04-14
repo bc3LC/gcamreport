@@ -1,8 +1,5 @@
 library(usethis)
 library(magrittr)
-library(shiny)
-library(shinyTree)
-library(shinyjs)
 
 # Define server ----------------------------------------------------------------
 
