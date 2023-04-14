@@ -1,42 +1,42 @@
 #mapping file for regions and continents,
 continent,region
-Africa,Africa_Eastern
-Africa,Africa_Northern
-Africa,Africa_Southern
-Africa,Africa_Western
-America,Argentina
-Oceania,Australia_NZ
-America,Brazil
-America,Canada
-America,Central America and Caribbean
-Asia,Central Asia
-Asia,China
-America,Colombia
-Europe,EFTA
-Europe,EU_Central
-Europe,EU_Northeast
-Europe,EU_Northwest
-Europe,EU_Southeast
-Europe,EU_Southwest
-Europe,Europe_Eastern
-Europe,Europe_Non_EU
-Asia,India
-Asia,Indonesia
-Asia,Japan
-Europe,Lithuania
-America,Mexico
-Asia,Middle East
-Asia,Pakistan
-Europe,Poland
-Europe,Russia
-Africa,South Africa
-Africa,South America_Northern
-Africa,South America_Southern
-Asia,South Asia
-Asia,South Korea
-Asia,Southeast Asia
-Asia,Taiwan
-Europe,UK+
-Europe,Ukraine
-America,USA
+MAF,Africa_Eastern
+MAF,Africa_Northern
+MAF,Africa_Southern
+MAF,Africa_Western
+LAM,Argentina
+OECD90,Australia_NZ
+LAM,Brazil
+OECD90,Canada
+LAM,Central America and Caribbean
+REF,Central Asia
+ASIA,China
+LAM,Colombia
+OECD90,EFTA
+OECD90,EU_Central
+OECD90,EU_Northeast
+OECD90,EU_Northwest
+OECD90,EU_Southeast
+OECD90,EU_Southwest
+REF,Europe_Eastern
+OECD90,Europe_Non_EU
+ASIA,India
+ASIA,Indonesia
+OECD90,Japan
+OECD90,Lithuania
+LAM,Mexico
+MAF,Middle East
+ASIA,Pakistan
+OECD90,Poland
+REF,Russia
+MAF,South Africa
+LAM,South America_Northern
+LAM,South America_Southern
+ASIA,South Asia
+ASIA,South Korea
+ASIA,Southeast Asia
+ASIA,Taiwan
+OECD90,UK+
+OECD90,Ukraine
+OECD90,USA
 World,NA

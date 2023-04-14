@@ -209,19 +209,19 @@ ui <- dashboardPage(
         tabPanel("Plot",
                  fluidRow(style='padding-left:25px;',
                    column(width = 5,
-                     radioGroupButtons(
-                     inputId = "vars_grouping",
-                     label = "Choose how the variables and regions should be displayed: ",
-                     choices = c("Grouped Variables", "Ungrouped Variables"),
-                     direction = "vertical"
-                   )),
+                          radioGroupButtons(
+                           inputId = "vars_grouping",
+                           label = "Choose how the variables and regions should be displayed: ",
+                           choices = c("Grouped Variables", "Ungrouped Variables"),
+                           direction = "vertical"
+                         )),
                    column(width = 5,
                           radioGroupButtons(
-                     inputId = "reg_grouping",
-                     label = "  ",
-                     choices = c("Grouped Regions", "Ungrouped Regions"),
-                     direction = "vertical"
-                   ))
+                           inputId = "reg_grouping",
+                           label = "  ",
+                           choices = c("Grouped Regions", "Ungrouped Regions"),
+                           direction = "vertical"
+                         ))
                  ),
                  br(),
                  # dynamic UI for the plots
