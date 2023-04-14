@@ -1,4 +1,4 @@
-#mapping file for regions and continents,
+#mapping file for GCAM regions and R5 regions,
 continent,region
 MAF,Africa_Eastern
 MAF,Africa_Northern
@@ -37,6 +37,6 @@ ASIA,South Korea
 ASIA,Southeast Asia
 ASIA,Taiwan
 OECD90,UK+
-OECD90,Ukraine
+REF,Ukraine
 OECD90,USA
 World,NA
