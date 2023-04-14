@@ -194,7 +194,7 @@ ui <- dashboardPage(
 
   dashboardBody(
     # css file
-    includeCSS("C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/R/www/style.css"),
+    includeCSS(paste0(here::here(),"/R/www/style.css")),
 
     # dashboard items
     fluidRow(
