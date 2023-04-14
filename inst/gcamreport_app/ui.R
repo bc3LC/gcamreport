@@ -27,7 +27,8 @@ ui <- dashboardPage(
           label = "Select scenarios",
           choices = unique(sdata$Scenario),
           selected = unique(sdata$Scenario)
-        )
+        ) %>%
+          tagAppendAttributes(class = 'names_split')
       ),
       menuItem(
         actionBttn(
@@ -121,7 +122,8 @@ ui <- dashboardPage(
           label = "Select years",
           choices = available_years,
           selected = available_years
-        )
+        ) %>%
+          tagAppendAttributes(class = 'names_split')
       ),
       menuItem(
         actionBttn(
@@ -158,7 +160,8 @@ ui <- dashboardPage(
                       'Variable', 'Unit'),
           selected = c('Model', 'Scenario', 'Region',
                        'Variable', 'Unit')
-        )
+        ) %>%
+          tagAppendAttributes(class = 'names_split')
       ),
       menuItem(
         actionBttn(

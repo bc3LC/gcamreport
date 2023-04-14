@@ -13,3 +13,7 @@
   pointer-events: inherit !important;
   opacity: inherit;
 }
+
+.names_split {
+  overflow-wrap: anywhere;
+}
