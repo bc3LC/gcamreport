@@ -109,20 +109,16 @@ server <- function(input, output, session) {
       sel_reg = shinyTree::get_selected(input$tree_regions, format = 'slices')
       if (length(sel_reg) > 0) {
         sel_reg_vec = do_unmount_tree(sel_reg, 'regions')
+        # pull the variables of the whole data with the regions restricted to the user's selection
+        tmp_vars = sdata %>%
+          dplyr::filter(Region %in% sel_reg_vec) %>%
+          dplyr::distinct(Variable) %>%
+          dplyr::pull()
+        tmp_vars = all_vars[!(all_vars %in% tmp_vars)]
+        tree_vars <<- change_style(input$tree_variables, 'variables', tmp_vars)
       } else {
-        sel_reg_vec = sel_reg
+        tree_vars <<- change_style(input$tree_variables, 'regions')
       }
-    }
-    # pull the variables of the whole data with the regions restricted to the user's selection
-    if (length(sel_reg_vec) > 0) {
-      tmp_vars = sdata %>%
-        dplyr::filter(Region %in% sel_reg_vec) %>%
-        dplyr::distinct(Variable) %>%
-        dplyr::pull()
-      tmp_vars = all_vars[!(all_vars %in% tmp_vars)]
-      tree_vars <<- change_style(input$tree_variables, 'variables', tmp_vars)
-    } else {
-      tree_vars <<- change_style(input$tree_variables, 'regions')
     }
     noVars <<- FALSE
 
