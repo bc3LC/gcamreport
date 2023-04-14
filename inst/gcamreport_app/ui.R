@@ -4,7 +4,6 @@ library(shinyWidgets)
 library(shinydashboard)
 library(shinyTree)
 library(shinyjs)
-library(dashboardthemes)
 
 # Define some variables --------------------------------------------------------
 
