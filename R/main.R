@@ -184,7 +184,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   }
 
   if (is.null(file_name)) {
-    file_name = gsub("\\.dat$", "", project_name)
+    file_name = gsub("\\.dat$", "", project_path)
     file_name = paste0(file_name,'_ipcc_report.csv')
   }
 
