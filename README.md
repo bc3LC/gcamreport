@@ -79,10 +79,9 @@ To be done
 
 The package consists of a set of functions divided into two different blocks:
 
-- Dataset generation. Project creation/loading and automatically saved generated dataset.
+- Dataset generation. Project creation/loading and automatically saved generated dataset. Main function: `run`.
 
-- Interactive user block. Interactive widget to display in table format the dataset. Possibility to filter, reorder, and download. Display and download plots by variables, regions, and scenarios.
-
+- Interactive user block. Interactive widget to display in table format the dataset. Possibility to filter, reorder, and download. Display and download plots by variables, regions, and scenarios. Main function: `launch_app`.
   
 
 In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include:
