@@ -13,36 +13,24 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Imports: 
-    knitr,
-  	markdown,
-  	Rcpp,
+Imports:
     magrittr,
     devtools,
     dplyr,
     tidyr,
     rgcam,
-    readr,
     ggplot2,
-    gtable,
     grid,
     stringr,
-    extrafont,
-    RColorBrewer,
     gridExtra,
     here,
     shiny,
     shinyTree,
     shinyWidgets,
     shinydashboard,
-    shinyTree,
     shinyjs,
-    DT,
     rrapply
-Suggests: 
-    rmarkdown,
-    testthat
+Suggests:
 Remotes: 
     github::JGCRI/rgcam
 VignetteBuilder: 
-    knitr
