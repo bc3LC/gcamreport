@@ -1,4 +1,4 @@
-#' description
+#' reg_cont
 #'
 #' @source local
 #' @format .csv
@@ -9,6 +9,8 @@
 #' }
 "reg_cont"
 
+#' var_fun_map
+#'
 #' @source local
 #' @format .csv
 #' @description mapping between variables, functions to load them, dependent variables, and available verifications

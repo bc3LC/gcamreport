@@ -14,10 +14,14 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 Imports:
+    knitr,
+  	markdown,
     readr,
     Rcpp,
     stringi,
     rlang,
+    readr,
+    gtable,
     data.table,
     grid,
     gridExtra,
@@ -29,6 +33,8 @@ Imports:
     ggplot2,
     stringr,
     here,
+    extrafont,
+    RColorBrewer,
     shiny,
     shinyTree,
     shinyWidgets,
@@ -39,3 +45,4 @@ Suggests:
 Remotes: 
     github::JGCRI/rgcam
 VignetteBuilder: 
+    knitr
