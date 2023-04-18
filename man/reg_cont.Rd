@@ -3,7 +3,7 @@
 \docType{data}
 \name{reg_cont}
 \alias{reg_cont}
-\title{reg_cont}
+\title{description}
 \format{
 .csv
 }

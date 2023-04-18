@@ -1,4 +1,4 @@
-#' reg_cont
+#' description
 #'
 #' @source local
 #' @format .csv
@@ -9,7 +9,7 @@
 #' }
 "reg_cont"
 
-#' var_fun_map
+#' description
 #'
 #' @source local
 #' @format .csv

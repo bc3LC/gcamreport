@@ -109,7 +109,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
     # stop and display error
     stop('ERROR: Specify either a project or a database to extract the data from. Not both.')
 
-  } else if (!is.null(project_path)) {    
+  } else if (!is.null(project_path)) {
     # load project
     print('Loading project...')
     load_project(project_path)
