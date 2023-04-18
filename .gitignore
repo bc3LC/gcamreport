@@ -35,5 +35,6 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# Users privat data
+# Results
+output/*
  
