@@ -331,66 +331,66 @@ China,crude oil,crude oil,crude oil,2015,CH4,0.236638456
 China,crude oil,crude oil,crude oil,2015,N2O,0
 China,natural gas,natural gas,natural gas,2015,CH4,0.236638456
 China,natural gas,natural gas,natural gas,2015,N2O,0
-EU_Southwest,coal,coal,coal,1975,CH4,0.279685634
-EU_Southwest,coal,coal,coal,1975,N2O,0
-EU_Southwest,crude oil,crude oil,crude oil,1975,CH4,0.392040911
-EU_Southwest,crude oil,crude oil,crude oil,1975,N2O,0
-EU_Southwest,natural gas,natural gas,natural gas,1975,CH4,0.397931523
-EU_Southwest,natural gas,natural gas,natural gas,1975,N2O,0
-EU_Southwest,coal,coal,coal,1990,CH4,0.191492555
-EU_Southwest,coal,coal,coal,1990,N2O,0
-EU_Southwest,crude oil,crude oil,crude oil,1990,CH4,0.433626121
-EU_Southwest,crude oil,crude oil,crude oil,1990,N2O,0
-EU_Southwest,natural gas,natural gas,natural gas,1990,CH4,0.433626121
-EU_Southwest,natural gas,natural gas,natural gas,1990,N2O,0
-EU_Southwest,coal,coal,coal,2005,CH4,0.182961171
-EU_Southwest,coal,coal,coal,2005,N2O,0
-EU_Southwest,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-EU_Southwest,crude oil,crude oil,crude oil,2005,N2O,0
-EU_Southwest,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-EU_Southwest,natural gas,natural gas,natural gas,2005,N2O,0
-EU_Southwest,coal,coal,coal,2010,CH4,0.210342196
-EU_Southwest,coal,coal,coal,2010,N2O,0
-EU_Southwest,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-EU_Southwest,crude oil,crude oil,crude oil,2010,N2O,0
-EU_Southwest,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-EU_Southwest,natural gas,natural gas,natural gas,2010,N2O,0
-EU_Southwest,coal,coal,coal,2015,CH4,0.246027038
-EU_Southwest,coal,coal,coal,2015,N2O,0
-EU_Southwest,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-EU_Southwest,crude oil,crude oil,crude oil,2015,N2O,0
-EU_Southwest,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-EU_Southwest,natural gas,natural gas,natural gas,2015,N2O,0
-EU_Northwest,coal,coal,coal,1975,CH4,0.360399519
-EU_Northwest,coal,coal,coal,1975,N2O,0
-EU_Northwest,crude oil,crude oil,crude oil,1975,CH4,0.107853019
-EU_Northwest,crude oil,crude oil,crude oil,1975,N2O,0
-EU_Northwest,natural gas,natural gas,natural gas,1975,CH4,0.107853019
-EU_Northwest,natural gas,natural gas,natural gas,1975,N2O,0
-EU_Northwest,coal,coal,coal,1990,CH4,0.216477336
-EU_Northwest,coal,coal,coal,1990,N2O,0
-EU_Northwest,crude oil,crude oil,crude oil,1990,CH4,0.143267157
-EU_Northwest,crude oil,crude oil,crude oil,1990,N2O,0
-EU_Northwest,natural gas,natural gas,natural gas,1990,CH4,0.143267157
-EU_Northwest,natural gas,natural gas,natural gas,1990,N2O,0
-EU_Northwest,coal,coal,coal,2005,CH4,0.122330198
-EU_Northwest,coal,coal,coal,2005,N2O,0
-EU_Northwest,crude oil,crude oil,crude oil,2005,CH4,0.089070027
-EU_Northwest,crude oil,crude oil,crude oil,2005,N2O,0
-EU_Northwest,natural gas,natural gas,natural gas,2005,CH4,0.089070027
-EU_Northwest,natural gas,natural gas,natural gas,2005,N2O,0
-EU_Northwest,coal,coal,coal,2010,CH4,0.072390519
-EU_Northwest,coal,coal,coal,2010,N2O,0
-EU_Northwest,crude oil,crude oil,crude oil,2010,CH4,0.089542843
-EU_Northwest,crude oil,crude oil,crude oil,2010,N2O,0
-EU_Northwest,natural gas,natural gas,natural gas,2010,CH4,0.089542843
-EU_Northwest,natural gas,natural gas,natural gas,2010,N2O,0
-EU_Northwest,coal,coal,coal,2015,CH4,0.09289622
-EU_Northwest,coal,coal,coal,2015,N2O,0
-EU_Northwest,crude oil,crude oil,crude oil,2015,CH4,0.13530278
-EU_Northwest,crude oil,crude oil,crude oil,2015,N2O,0
-EU_Northwest,natural gas,natural gas,natural gas,2015,CH4,0.13530278
-EU_Northwest,natural gas,natural gas,natural gas,2015,N2O,0
+EU-12,coal,coal,coal,1975,CH4,0.279685634
+EU-12,coal,coal,coal,1975,N2O,0
+EU-12,crude oil,crude oil,crude oil,1975,CH4,0.392040911
+EU-12,crude oil,crude oil,crude oil,1975,N2O,0
+EU-12,natural gas,natural gas,natural gas,1975,CH4,0.397931523
+EU-12,natural gas,natural gas,natural gas,1975,N2O,0
+EU-12,coal,coal,coal,1990,CH4,0.191492555
+EU-12,coal,coal,coal,1990,N2O,0
+EU-12,crude oil,crude oil,crude oil,1990,CH4,0.433626121
+EU-12,crude oil,crude oil,crude oil,1990,N2O,0
+EU-12,natural gas,natural gas,natural gas,1990,CH4,0.433626121
+EU-12,natural gas,natural gas,natural gas,1990,N2O,0
+EU-12,coal,coal,coal,2005,CH4,0.182961171
+EU-12,coal,coal,coal,2005,N2O,0
+EU-12,crude oil,crude oil,crude oil,2005,CH4,0.380829137
+EU-12,crude oil,crude oil,crude oil,2005,N2O,0
+EU-12,natural gas,natural gas,natural gas,2005,CH4,0.332724508
+EU-12,natural gas,natural gas,natural gas,2005,N2O,0
+EU-12,coal,coal,coal,2010,CH4,0.210342196
+EU-12,coal,coal,coal,2010,N2O,0
+EU-12,crude oil,crude oil,crude oil,2010,CH4,0.337132965
+EU-12,crude oil,crude oil,crude oil,2010,N2O,0
+EU-12,natural gas,natural gas,natural gas,2010,CH4,0.300110342
+EU-12,natural gas,natural gas,natural gas,2010,N2O,0
+EU-12,coal,coal,coal,2015,CH4,0.246027038
+EU-12,coal,coal,coal,2015,N2O,0
+EU-12,crude oil,crude oil,crude oil,2015,CH4,0.354957542
+EU-12,crude oil,crude oil,crude oil,2015,N2O,0
+EU-12,natural gas,natural gas,natural gas,2015,CH4,0.337804658
+EU-12,natural gas,natural gas,natural gas,2015,N2O,0
+EU-15,coal,coal,coal,1975,CH4,0.360399519
+EU-15,coal,coal,coal,1975,N2O,0
+EU-15,crude oil,crude oil,crude oil,1975,CH4,0.107853019
+EU-15,crude oil,crude oil,crude oil,1975,N2O,0
+EU-15,natural gas,natural gas,natural gas,1975,CH4,0.107853019
+EU-15,natural gas,natural gas,natural gas,1975,N2O,0
+EU-15,coal,coal,coal,1990,CH4,0.216477336
+EU-15,coal,coal,coal,1990,N2O,0
+EU-15,crude oil,crude oil,crude oil,1990,CH4,0.143267157
+EU-15,crude oil,crude oil,crude oil,1990,N2O,0
+EU-15,natural gas,natural gas,natural gas,1990,CH4,0.143267157
+EU-15,natural gas,natural gas,natural gas,1990,N2O,0
+EU-15,coal,coal,coal,2005,CH4,0.122330198
+EU-15,coal,coal,coal,2005,N2O,0
+EU-15,crude oil,crude oil,crude oil,2005,CH4,0.089070027
+EU-15,crude oil,crude oil,crude oil,2005,N2O,0
+EU-15,natural gas,natural gas,natural gas,2005,CH4,0.089070027
+EU-15,natural gas,natural gas,natural gas,2005,N2O,0
+EU-15,coal,coal,coal,2010,CH4,0.072390519
+EU-15,coal,coal,coal,2010,N2O,0
+EU-15,crude oil,crude oil,crude oil,2010,CH4,0.089542843
+EU-15,crude oil,crude oil,crude oil,2010,N2O,0
+EU-15,natural gas,natural gas,natural gas,2010,CH4,0.089542843
+EU-15,natural gas,natural gas,natural gas,2010,N2O,0
+EU-15,coal,coal,coal,2015,CH4,0.09289622
+EU-15,coal,coal,coal,2015,N2O,0
+EU-15,crude oil,crude oil,crude oil,2015,CH4,0.13530278
+EU-15,crude oil,crude oil,crude oil,2015,N2O,0
+EU-15,natural gas,natural gas,natural gas,2015,CH4,0.13530278
+EU-15,natural gas,natural gas,natural gas,2015,N2O,0
 Europe_Eastern,coal,coal,coal,1975,CH4,8.94E-04
 Europe_Eastern,coal,coal,coal,1975,N2O,0
 Europe_Eastern,crude oil,crude oil,crude oil,1975,CH4,0.023860138
@@ -451,36 +451,36 @@ Europe_Non_EU,crude oil,crude oil,crude oil,2015,CH4,0.17012394
 Europe_Non_EU,crude oil,crude oil,crude oil,2015,N2O,0
 Europe_Non_EU,natural gas,natural gas,natural gas,2015,CH4,0.17012394
 Europe_Non_EU,natural gas,natural gas,natural gas,2015,N2O,0
-EFTA,coal,coal,coal,1975,CH4,0.34335099
-EFTA,coal,coal,coal,1975,N2O,0
-EFTA,crude oil,crude oil,crude oil,1975,CH4,0.027757622
-EFTA,crude oil,crude oil,crude oil,1975,N2O,0
-EFTA,natural gas,natural gas,natural gas,1975,CH4,0.027757622
-EFTA,natural gas,natural gas,natural gas,1975,N2O,0
-EFTA,coal,coal,coal,1990,CH4,0.320356952
-EFTA,coal,coal,coal,1990,N2O,0
-EFTA,crude oil,crude oil,crude oil,1990,CH4,0.006231785
-EFTA,crude oil,crude oil,crude oil,1990,N2O,0
-EFTA,natural gas,natural gas,natural gas,1990,CH4,0.006231785
-EFTA,natural gas,natural gas,natural gas,1990,N2O,0
-EFTA,coal,coal,coal,2005,CH4,0.048613476
-EFTA,coal,coal,coal,2005,N2O,0
-EFTA,crude oil,crude oil,crude oil,2005,CH4,0.004844011
-EFTA,crude oil,crude oil,crude oil,2005,N2O,0
-EFTA,natural gas,natural gas,natural gas,2005,CH4,0.004844011
-EFTA,natural gas,natural gas,natural gas,2005,N2O,0
-EFTA,coal,coal,coal,2010,CH4,0.028083561
-EFTA,coal,coal,coal,2010,N2O,0
-EFTA,crude oil,crude oil,crude oil,2010,CH4,0.004902604
-EFTA,crude oil,crude oil,crude oil,2010,N2O,7.87E-07
-EFTA,natural gas,natural gas,natural gas,2010,CH4,0.004902604
-EFTA,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
-EFTA,coal,coal,coal,2015,CH4,0.038887496
-EFTA,coal,coal,coal,2015,N2O,0
-EFTA,crude oil,crude oil,crude oil,2015,CH4,0.004967364
-EFTA,crude oil,crude oil,crude oil,2015,N2O,0
-EFTA,natural gas,natural gas,natural gas,2015,CH4,0.004967364
-EFTA,natural gas,natural gas,natural gas,2015,N2O,0
+European Free Trade Association,coal,coal,coal,1975,CH4,0.34335099
+European Free Trade Association,coal,coal,coal,1975,N2O,0
+European Free Trade Association,crude oil,crude oil,crude oil,1975,CH4,0.027757622
+European Free Trade Association,crude oil,crude oil,crude oil,1975,N2O,0
+European Free Trade Association,natural gas,natural gas,natural gas,1975,CH4,0.027757622
+European Free Trade Association,natural gas,natural gas,natural gas,1975,N2O,0
+European Free Trade Association,coal,coal,coal,1990,CH4,0.320356952
+European Free Trade Association,coal,coal,coal,1990,N2O,0
+European Free Trade Association,crude oil,crude oil,crude oil,1990,CH4,0.006231785
+European Free Trade Association,crude oil,crude oil,crude oil,1990,N2O,0
+European Free Trade Association,natural gas,natural gas,natural gas,1990,CH4,0.006231785
+European Free Trade Association,natural gas,natural gas,natural gas,1990,N2O,0
+European Free Trade Association,coal,coal,coal,2005,CH4,0.048613476
+European Free Trade Association,coal,coal,coal,2005,N2O,0
+European Free Trade Association,crude oil,crude oil,crude oil,2005,CH4,0.004844011
+European Free Trade Association,crude oil,crude oil,crude oil,2005,N2O,0
+European Free Trade Association,natural gas,natural gas,natural gas,2005,CH4,0.004844011
+European Free Trade Association,natural gas,natural gas,natural gas,2005,N2O,0
+European Free Trade Association,coal,coal,coal,2010,CH4,0.028083561
+European Free Trade Association,coal,coal,coal,2010,N2O,0
+European Free Trade Association,crude oil,crude oil,crude oil,2010,CH4,0.004902604
+European Free Trade Association,crude oil,crude oil,crude oil,2010,N2O,7.87E-07
+European Free Trade Association,natural gas,natural gas,natural gas,2010,CH4,0.004902604
+European Free Trade Association,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
+European Free Trade Association,coal,coal,coal,2015,CH4,0.038887496
+European Free Trade Association,coal,coal,coal,2015,N2O,0
+European Free Trade Association,crude oil,crude oil,crude oil,2015,CH4,0.004967364
+European Free Trade Association,crude oil,crude oil,crude oil,2015,N2O,0
+European Free Trade Association,natural gas,natural gas,natural gas,2015,CH4,0.004967364
+European Free Trade Association,natural gas,natural gas,natural gas,2015,N2O,0
 India,coal,coal,coal,1975,CH4,0.491185455
 India,coal,coal,coal,1975,N2O,0
 India,crude oil,crude oil,crude oil,1975,CH4,0.213608602
@@ -961,213 +961,207 @@ Colombia,crude oil,crude oil,crude oil,2015,CH4,0.354957542
 Colombia,crude oil,crude oil,crude oil,2015,N2O,0
 Colombia,natural gas,natural gas,natural gas,2015,CH4,0.337804658
 Colombia,natural gas,natural gas,natural gas,2015,N2O,0
-Ukraine,coal,coal,coal,1975,CH4,0.491185455
-Ukraine,coal,coal,coal,1975,N2O,0
-Ukraine,crude oil,crude oil,crude oil,1975,CH4,0.241778896
-Ukraine,crude oil,crude oil,crude oil,1975,N2O,0
-Ukraine,natural gas,natural gas,natural gas,1975,CH4,0.241778896
-Ukraine,natural gas,natural gas,natural gas,1975,N2O,0
-Ukraine,coal,coal,coal,1990,CH4,0.382951108
-Ukraine,coal,coal,coal,1990,N2O,0
-Ukraine,crude oil,crude oil,crude oil,1990,CH4,0.452815391
-Ukraine,crude oil,crude oil,crude oil,1990,N2O,0
-Ukraine,natural gas,natural gas,natural gas,1990,CH4,0.442162796
-Ukraine,natural gas,natural gas,natural gas,1990,N2O,0
-Ukraine,coal,coal,coal,2005,CH4,0.266570496
-Ukraine,coal,coal,coal,2005,N2O,0
-Ukraine,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-Ukraine,crude oil,crude oil,crude oil,2005,N2O,0
-Ukraine,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-Ukraine,natural gas,natural gas,natural gas,2005,N2O,0
-Ukraine,coal,coal,coal,2010,CH4,0.270226267
-Ukraine,coal,coal,coal,2010,N2O,0
-Ukraine,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-Ukraine,crude oil,crude oil,crude oil,2010,N2O,7.87E-07
-Ukraine,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-Ukraine,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
-Ukraine,coal,coal,coal,2015,CH4,0.256594838
-Ukraine,coal,coal,coal,2015,N2O,0
-Ukraine,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-Ukraine,crude oil,crude oil,crude oil,2015,N2O,0
-Ukraine,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-Ukraine,natural gas,natural gas,natural gas,2015,N2O,0
-UK+,coal,coal,coal,1975,CH4,0.491185455
-UK+,coal,coal,coal,1975,N2O,0
-UK+,crude oil,crude oil,crude oil,1975,CH4,0.21323845
-UK+,crude oil,crude oil,crude oil,1975,N2O,0
-UK+,natural gas,natural gas,natural gas,1975,CH4,0.21323845
-UK+,natural gas,natural gas,natural gas,1975,N2O,0
-UK+,coal,coal,coal,1990,CH4,0.382951108
-UK+,coal,coal,coal,1990,N2O,0
-UK+,crude oil,crude oil,crude oil,1990,CH4,0.086283358
-UK+,crude oil,crude oil,crude oil,1990,N2O,0
-UK+,natural gas,natural gas,natural gas,1990,CH4,0.086283358
-UK+,natural gas,natural gas,natural gas,1990,N2O,0
-UK+,coal,coal,coal,2005,CH4,0.266570496
-UK+,coal,coal,coal,2005,N2O,0
-UK+,crude oil,crude oil,crude oil,2005,CH4,0.03983987
-UK+,crude oil,crude oil,crude oil,2005,N2O,0
-UK+,natural gas,natural gas,natural gas,2005,CH4,0.03983987
-UK+,natural gas,natural gas,natural gas,2005,N2O,0
-UK+,coal,coal,coal,2010,CH4,0.204130167
-UK+,coal,coal,coal,2010,N2O,0
-UK+,crude oil,crude oil,crude oil,2010,CH4,0.050527142
-UK+,crude oil,crude oil,crude oil,2010,N2O,7.87E-07
-UK+,natural gas,natural gas,natural gas,2010,CH4,0.050527142
-UK+,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
-UK+,coal,coal,coal,2015,CH4,0.162652741
-UK+,coal,coal,coal,2015,N2O,0
-UK+,crude oil,crude oil,crude oil,2015,CH4,0.07301813
-UK+,crude oil,crude oil,crude oil,2015,N2O,0
-UK+,natural gas,natural gas,natural gas,2015,CH4,0.07301813
-UK+,natural gas,natural gas,natural gas,2015,N2O,0
-EU_Central,coal,coal,coal,1975,CH4,0.242163806
-EU_Central,coal,coal,coal,1975,N2O,0
-EU_Central,crude oil,crude oil,crude oil,1975,CH4,0.286398944
-EU_Central,crude oil,crude oil,crude oil,1975,N2O,0
-EU_Central,natural gas,natural gas,natural gas,1975,CH4,0.286398944
-EU_Central,natural gas,natural gas,natural gas,1975,N2O,0
-EU_Central,coal,coal,coal,1990,CH4,0.240427397
-EU_Central,coal,coal,coal,1990,N2O,0
-EU_Central,crude oil,crude oil,crude oil,1990,CH4,0.36842473
-EU_Central,crude oil,crude oil,crude oil,1990,N2O,0
-EU_Central,natural gas,natural gas,natural gas,1990,CH4,0.36842473
-EU_Central,natural gas,natural gas,natural gas,1990,N2O,0
-EU_Central,coal,coal,coal,2005,CH4,0.179165192
-EU_Central,coal,coal,coal,2005,N2O,0
-EU_Central,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-EU_Central,crude oil,crude oil,crude oil,2005,N2O,0
-EU_Central,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-EU_Central,natural gas,natural gas,natural gas,2005,N2O,0
-EU_Central,coal,coal,coal,2010,CH4,0.184922299
-EU_Central,coal,coal,coal,2010,N2O,0
-EU_Central,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-EU_Central,crude oil,crude oil,crude oil,2010,N2O,0
-EU_Central,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-EU_Central,natural gas,natural gas,natural gas,2010,N2O,0
-EU_Central,coal,coal,coal,2015,CH4,0.17100957
-EU_Central,coal,coal,coal,2015,N2O,0
-EU_Central,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-EU_Central,crude oil,crude oil,crude oil,2015,N2O,0
-EU_Central,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-EU_Central,natural gas,natural gas,natural gas,2015,N2O,0
-Poland,coal,coal,coal,1975,CH4,0.241960501
-Poland,coal,coal,coal,1975,N2O,0
-Poland,crude oil,crude oil,crude oil,1975,CH4,0.26110833
-Poland,crude oil,crude oil,crude oil,1975,N2O,0
-Poland,natural gas,natural gas,natural gas,1975,CH4,0.26110833
-Poland,natural gas,natural gas,natural gas,1975,N2O,0
-Poland,coal,coal,coal,1990,CH4,0.155038795
-Poland,coal,coal,coal,1990,N2O,0
-Poland,crude oil,crude oil,crude oil,1990,CH4,0.452815391
-Poland,crude oil,crude oil,crude oil,1990,N2O,0
-Poland,natural gas,natural gas,natural gas,1990,CH4,0.442162796
-Poland,natural gas,natural gas,natural gas,1990,N2O,0
-Poland,coal,coal,coal,2005,CH4,0.16055477
-Poland,coal,coal,coal,2005,N2O,0
-Poland,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-Poland,crude oil,crude oil,crude oil,2005,N2O,0
-Poland,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-Poland,natural gas,natural gas,natural gas,2005,N2O,0
-Poland,coal,coal,coal,2010,CH4,0.153538739
-Poland,coal,coal,coal,2010,N2O,0
-Poland,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-Poland,crude oil,crude oil,crude oil,2010,N2O,0
-Poland,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-Poland,natural gas,natural gas,natural gas,2010,N2O,0
-Poland,coal,coal,coal,2015,CH4,0.14896364
-Poland,coal,coal,coal,2015,N2O,0
-Poland,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-Poland,crude oil,crude oil,crude oil,2015,N2O,0
-Poland,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-Poland,natural gas,natural gas,natural gas,2015,N2O,0
-EU_Southeast,coal,coal,coal,1975,CH4,0.323930711
-EU_Southeast,coal,coal,coal,1975,N2O,0
-EU_Southeast,crude oil,crude oil,crude oil,1975,CH4,0.392040911
-EU_Southeast,crude oil,crude oil,crude oil,1975,N2O,0
-EU_Southeast,natural gas,natural gas,natural gas,1975,CH4,0.397931523
-EU_Southeast,natural gas,natural gas,natural gas,1975,N2O,0
-EU_Southeast,coal,coal,coal,1990,CH4,0.349408325
-EU_Southeast,coal,coal,coal,1990,N2O,0
-EU_Southeast,crude oil,crude oil,crude oil,1990,CH4,0.452815391
-EU_Southeast,crude oil,crude oil,crude oil,1990,N2O,0
-EU_Southeast,natural gas,natural gas,natural gas,1990,CH4,0.442162796
-EU_Southeast,natural gas,natural gas,natural gas,1990,N2O,0
-EU_Southeast,coal,coal,coal,2005,CH4,0.257542803
-EU_Southeast,coal,coal,coal,2005,N2O,0
-EU_Southeast,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-EU_Southeast,crude oil,crude oil,crude oil,2005,N2O,0
-EU_Southeast,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-EU_Southeast,natural gas,natural gas,natural gas,2005,N2O,0
-EU_Southeast,coal,coal,coal,2010,CH4,0.180444003
-EU_Southeast,coal,coal,coal,2010,N2O,0
-EU_Southeast,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-EU_Southeast,crude oil,crude oil,crude oil,2010,N2O,0
-EU_Southeast,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-EU_Southeast,natural gas,natural gas,natural gas,2010,N2O,0
-EU_Southeast,coal,coal,coal,2015,CH4,0.180030838
-EU_Southeast,coal,coal,coal,2015,N2O,0
-EU_Southeast,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-EU_Southeast,crude oil,crude oil,crude oil,2015,N2O,0
-EU_Southeast,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-EU_Southeast,natural gas,natural gas,natural gas,2015,N2O,0
-EU_Northeast,coal,coal,coal,1975,CH4,0.018071166
-EU_Northeast,coal,coal,coal,1975,N2O,0
-EU_Northeast,crude oil,crude oil,crude oil,1975,CH4,0.392040911
-EU_Northeast,crude oil,crude oil,crude oil,1975,N2O,0
-EU_Northeast,natural gas,natural gas,natural gas,1975,CH4,0.051817371
-EU_Northeast,natural gas,natural gas,natural gas,1975,N2O,0
-EU_Northeast,coal,coal,coal,1990,CH4,0.006695527
-EU_Northeast,coal,coal,coal,1990,N2O,0
-EU_Northeast,crude oil,crude oil,crude oil,1990,CH4,0.452815391
-EU_Northeast,crude oil,crude oil,crude oil,1990,N2O,0
-EU_Northeast,natural gas,natural gas,natural gas,1990,CH4,0.442162796
-EU_Northeast,natural gas,natural gas,natural gas,1990,N2O,0
-EU_Northeast,coal,coal,coal,2005,CH4,0.008636539
-EU_Northeast,coal,coal,coal,2005,N2O,0
-EU_Northeast,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-EU_Northeast,crude oil,crude oil,crude oil,2005,N2O,0
-EU_Northeast,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-EU_Northeast,natural gas,natural gas,natural gas,2005,N2O,0
-EU_Northeast,coal,coal,coal,2010,CH4,0.008037777
-EU_Northeast,coal,coal,coal,2010,N2O,0
-EU_Northeast,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-EU_Northeast,crude oil,crude oil,crude oil,2010,N2O,0
-EU_Northeast,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-EU_Northeast,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
-EU_Northeast,coal,coal,coal,2015,CH4,0.010317091
-EU_Northeast,coal,coal,coal,2015,N2O,0
-EU_Northeast,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-EU_Northeast,crude oil,crude oil,crude oil,2015,N2O,0
-EU_Northeast,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-EU_Northeast,natural gas,natural gas,natural gas,2015,N2O,0
-Lithuania,coal,coal,coal,1975,CH4,0.002208497
-Lithuania,coal,coal,coal,1975,N2O,0
-Lithuania,crude oil,crude oil,crude oil,1975,CH4,0.003493528
-Lithuania,crude oil,crude oil,crude oil,1975,N2O,0
-Lithuania,natural gas,natural gas,natural gas,1975,CH4,0.003493528
-Lithuania,natural gas,natural gas,natural gas,1975,N2O,0
-Lithuania,coal,coal,coal,1990,CH4,0.189951427
-Lithuania,coal,coal,coal,1990,N2O,0
-Lithuania,crude oil,crude oil,crude oil,1990,CH4,0.452815391
-Lithuania,crude oil,crude oil,crude oil,1990,N2O,0
-Lithuania,natural gas,natural gas,natural gas,1990,CH4,0.442162796
-Lithuania,natural gas,natural gas,natural gas,1990,N2O,0
-Lithuania,coal,coal,coal,2005,CH4,0.119356968
-Lithuania,coal,coal,coal,2005,N2O,0
-Lithuania,crude oil,crude oil,crude oil,2005,CH4,0.380829137
-Lithuania,crude oil,crude oil,crude oil,2005,N2O,0
-Lithuania,natural gas,natural gas,natural gas,2005,CH4,0.332724508
-Lithuania,natural gas,natural gas,natural gas,2005,N2O,0
-Lithuania,coal,coal,coal,2010,CH4,0.270226267
-Lithuania,coal,coal,coal,2010,N2O,0
-Lithuania,crude oil,crude oil,crude oil,2010,CH4,0.337132965
-Lithuania,crude oil,crude oil,crude oil,2010,N2O,0
-Lithuania,natural gas,natural gas,natural gas,2010,CH4,0.300110342
-Lithuania,natural gas,natural gas,natural gas,2010,N2O,7.87E-07
-Lithuania,coal,coal,coal,2015,CH4,0.115464274
-Lithuania,coal,coal,coal,2015,N2O,0
-Lithuania,crude oil,crude oil,crude oil,2015,CH4,0.354957542
-Lithuania,crude oil,crude oil,crude oil,2015,N2O,0
-Lithuania,natural gas,natural gas,natural gas,2015,CH4,0.337804658
-Lithuania,natural gas,natural gas,natural gas,2015,N2O,0
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

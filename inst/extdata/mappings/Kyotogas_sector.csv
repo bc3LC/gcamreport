@@ -198,9 +198,5 @@ N2O,AWB,Soybean,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 CH4,AWB,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AWB,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
-CO2,NA,delivered gas h2,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
-CO2,NA,delivered gas transport,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,NA,desalinated water,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,NA,elec_coal (IGCC CCS),Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
-CO2,NA,refined liquids bunkers,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
-CO2,NA,refined liquids transport,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
