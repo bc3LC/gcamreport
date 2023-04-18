@@ -3,7 +3,7 @@
 \docType{data}
 \name{kyoto_sector_map}
 \alias{kyoto_sector_map}
-\title{description}
+\title{kyoto_sector_map}
 \format{
 .csv
 }

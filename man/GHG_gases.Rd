@@ -3,7 +3,7 @@
 \docType{data}
 \name{GHG_gases}
 \alias{GHG_gases}
-\title{description}
+\title{GHG_gases}
 \format{
 An object of class \code{character} of length 17.
 }

@@ -1,4 +1,4 @@
-#' description
+#' reg_cont
 #'
 #' @source local
 #' @format .csv
@@ -9,7 +9,7 @@
 #' }
 "reg_cont"
 
-#' description
+#' var_fun_map
 #'
 #' @source local
 #' @format .csv
@@ -20,7 +20,7 @@
 #' }
 "var_fun_map"
 
-#' description
+#' template
 #'
 #' @source github
 #' @format .csv
@@ -31,7 +31,7 @@
 #' }
 "template"
 
-#' description
+#' co2_sector_map
 #'
 #' @source github
 #' @format .csv
@@ -42,7 +42,7 @@
 #' }
 "co2_sector_map"
 
-#' description
+#' co2_tech_map
 #'
 #' @source github
 #' @format .csv
@@ -53,7 +53,7 @@
 #' }
 "co2_tech_map"
 
-#' description
+#' kyoto_sector_map
 #'
 #' @source github
 #' @format .csv
@@ -64,7 +64,7 @@
 #' }
 "kyoto_sector_map"
 
-#' description
+#' nonco2_emis_sector_map
 #'
 #' @source github
 #' @format .csv
@@ -75,7 +75,7 @@
 #' }
 "nonco2_emis_sector_map"
 
-#' description
+#' nonco2_emis_resource_map
 #'
 #' @source github
 #' @format .csv
@@ -86,7 +86,7 @@
 #' }
 "nonco2_emis_resource_map"
 
-#' description
+#' carbon_seq_tech_map
 #'
 #' @source github
 #' @format .csv
@@ -97,7 +97,7 @@
 #' }
 "carbon_seq_tech_map"
 
-#' description
+#' ag_demand_map
 #'
 #' @source github
 #' @format .csv
@@ -108,7 +108,7 @@
 #' }
 "ag_demand_map"
 
-#' description
+#' ag_prices_map
 #'
 #' @source github
 #' @format .csv
@@ -119,7 +119,7 @@
 #' }
 "ag_prices_map"
 
-#' description
+#' land_use_map
 #'
 #' @source github
 #' @format .csv
@@ -130,7 +130,7 @@
 #' }
 "land_use_map"
 
-#' description
+#' primary_energy_map
 #'
 #' @source github
 #' @format .csv
@@ -141,7 +141,7 @@
 #' }
 "primary_energy_map"
 
-#' description
+#' production_map
 #'
 #' @source github
 #' @format .csv
@@ -152,7 +152,7 @@
 #' }
 "production_map"
 
-#' description
+#' elec_gen_map
 #'
 #' @source github
 #' @format .csv
@@ -163,7 +163,7 @@
 #' }
 "elec_gen_map"
 
-#' description
+#' capacity_map
 #'
 #' @source github
 #' @format .csv
@@ -174,7 +174,7 @@
 #' }
 "capacity_map"
 
-#' description
+#' cf_gcam
 #'
 #' @source github
 #' @format .csv
@@ -185,7 +185,7 @@
 #' }
 "cf_gcam"
 
-#' description
+#' cf_rgn
 #'
 #' @source github
 #' @format .csv
@@ -196,7 +196,7 @@
 #' }
 "cf_rgn"
 
-#' description
+#' se_gen_map
 #'
 #' @source github
 #' @format .csv
@@ -207,7 +207,7 @@
 #' }
 "se_gen_map"
 
-#' description
+#' final_energy_map
 #'
 #' @source github
 #' @format .csv
@@ -218,7 +218,7 @@
 #' }
 "final_energy_map"
 
-#' description
+#' transport_final_en_map
 #'
 #' @source github
 #' @format .csv
@@ -229,7 +229,7 @@
 #' }
 "transport_final_en_map"
 
-#' description
+#' energy_prices_map
 #'
 #' @source github
 #' @format .csv
@@ -240,7 +240,7 @@
 #' }
 "energy_prices_map"
 
-#' description
+#' transport_en_service
 #'
 #' @source github
 #' @format .csv
@@ -251,7 +251,7 @@
 #' }
 "transport_en_service"
 
-#' description
+#' buildings_en_service
 #'
 #' @source github
 #' @format .csv
@@ -262,7 +262,7 @@
 #' }
 "buildings_en_service"
 
-#' description
+#' capital_gcam
 #'
 #' @source github
 #' @format .csv
@@ -273,7 +273,7 @@
 #' }
 "capital_gcam"
 
-#' description
+#' investment
 #'
 #' @source github
 #' @format .csv
@@ -284,7 +284,7 @@
 #' }
 "investment"
 
-#' description
+#' carbon_content
 #'
 #' @source github
 #' @format .csv
@@ -295,7 +295,7 @@
 #' }
 "carbon_content"
 
-#' description
+#' nonCO2_content
 #'
 #' @source github
 #' @format .csv
@@ -306,7 +306,7 @@
 #' }
 "nonCO2_content"
 
-#' description
+#' iea_capacity
 #'
 #' @source github
 #' @format .csv
@@ -317,7 +317,7 @@
 #' }
 "iea_capacity"
 
-#' description
+#' CO2_market
 #'
 #' @source github
 #' @format .csv
@@ -328,7 +328,7 @@
 #' }
 "CO2_market"
 
-#' description
+#' CUMULATIVE_EMISSIONS_BUDGET_GOALS
 #'
 #' @description cumulative emissions budget goals list
 #' \dontrun{
@@ -337,7 +337,7 @@
 #' }
 "CUMULATIVE_EMISSIONS_BUDGET_GOALS"
 
-#' description
+#' conv_thousand_million
 #'
 #' @description units conversion
 #' \dontrun{
@@ -346,7 +346,7 @@
 #' }
 "conv_thousand_million"
 
-#' description
+#' conv_million_billion
 #'
 #' @description units conversion
 #' \dontrun{
@@ -355,7 +355,7 @@
 #' }
 "conv_million_billion"
 
-#' description
+#' conv_90USD_10USD
 #'
 #' @description units conversion
 #' \dontrun{
@@ -364,7 +364,7 @@
 #' }
 "conv_90USD_10USD"
 
-#' description
+#' conv_75USD_10USD
 #'
 #' @description units conversion
 #' \dontrun{
@@ -373,7 +373,7 @@
 #' }
 "conv_75USD_10USD"
 
-#' description
+#' conv_15USD_10USD
 #'
 #' @description units conversion
 #' \dontrun{
@@ -382,7 +382,7 @@
 #' }
 "conv_15USD_10USD"
 
-#' description
+#' conv_19USD_75USD
 #'
 #' @description units conversion
 #' \dontrun{
@@ -391,7 +391,7 @@
 #' }
 "conv_19USD_75USD"
 
-#' description
+#' conv_C_CO2
 #'
 #' @description units conversion
 #' \dontrun{
@@ -400,7 +400,7 @@
 #' }
 "conv_C_CO2"
 
-#' description
+#' hr_per_yr
 #'
 #' @description units conversion
 #' \dontrun{
@@ -409,7 +409,7 @@
 #' }
 "hr_per_yr"
 
-#' description
+#' EJ_to_GWh
 #'
 #' @description units conversion
 #' \dontrun{
@@ -418,7 +418,7 @@
 #' }
 "EJ_to_GWh"
 
-#' description
+#' bcm_to_EJ
 #'
 #' @description units conversion
 #' \dontrun{
@@ -427,7 +427,7 @@
 #' }
 "bcm_to_EJ"
 
-#' description
+#' GJ_to_EJ
 #'
 #' @description units conversion
 #' \dontrun{
@@ -436,7 +436,7 @@
 #' }
 "GJ_to_EJ"
 
-#' description
+#' F_GASES
 #'
 #' @description ghg emission conversion
 #' \dontrun{
@@ -445,7 +445,7 @@
 #' }
 "F_GASES"
 
-#' description
+#' GHG_gases
 #'
 #' @description ghg emission conversion
 #' \dontrun{
@@ -454,7 +454,7 @@
 #' }
 "GHG_gases"
 
-#' description
+#' GCAM_years
 #'
 #' @description reporting years
 #' \dontrun{
@@ -463,7 +463,7 @@
 #' }
 "GCAM_years"
 
-#' description
+#' reporting_years
 #'
 #' @description reporting years
 #' \dontrun{
@@ -472,7 +472,7 @@
 #' }
 "reporting_years"
 
-#' description
+#' long_columns
 #'
 #' @description reporting columns
 #' \dontrun{
@@ -481,7 +481,7 @@
 #' }
 "long_columns"
 
-#' description
+#' reporting_columns
 #'
 #' @description reporting columns
 #' \dontrun{
@@ -490,7 +490,7 @@
 #' }
 "reporting_columns"
 
-#' description
+#' state_names
 #'
 #' @description state names
 #' \dontrun{
@@ -499,7 +499,7 @@
 #' }
 "state_names"
 
-#' description
+#' tech.color
 #'
 #' @description techology color
 #' \dontrun{
@@ -508,7 +508,7 @@
 #' }
 "tech.color"
 
-#' description
+#' colScaleTech
 #'
 #' @description techology painting color
 #' \dontrun{
@@ -517,7 +517,7 @@
 #' }
 "colScaleTech"
 
-#' description
+#' fillScaleTech
 #'
 #' @description techology filling color
 #' \dontrun{
@@ -526,7 +526,7 @@
 #' }
 "fillScaleTech"
 
-#' description
+#' fuel.list
 #'
 #' @description fuels list
 #' \dontrun{
@@ -535,7 +535,7 @@
 #' }
 "fuel.list"
 
-#' description
+#' fuel.color
 #'
 #' @description fuels color
 #' \dontrun{
@@ -544,7 +544,7 @@
 #' }
 "fuel.color"
 
-#' description
+#' colScaleFuel
 #'
 #' @description fuels color to paint
 #' \dontrun{
@@ -553,7 +553,7 @@
 #' }
 "colScaleFuel"
 
-#' description
+#' fillScaleFuel
 #'
 #' @description fuels color to fill
 #' \dontrun{
@@ -562,7 +562,7 @@
 #' }
 "fillScaleFuel"
 
-#' description
+#' sector.list
 #'
 #' @description categorize sector
 #' \dontrun{
@@ -571,7 +571,7 @@
 #' }
 "sector.list"
 
-#' description
+#' sector.color
 #'
 #' @description color by fuel
 #' \dontrun{
@@ -580,7 +580,7 @@
 #' }
 "sector.color"
 
-#' description
+#' fillScaleSector
 #'
 #' @description final filling color scale
 #' \dontrun{
@@ -589,7 +589,7 @@
 #' }
 "fillScaleSector"
 
-#' description
+#' tech.list
 #'
 #' @description techonolgies list
 #' \dontrun{

@@ -3,7 +3,7 @@
 \docType{data}
 \name{capital_gcam}
 \alias{capital_gcam}
-\title{description}
+\title{capital_gcam}
 \format{
 .csv
 }

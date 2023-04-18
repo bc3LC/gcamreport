@@ -3,7 +3,7 @@
 \docType{data}
 \name{conv_C_CO2}
 \alias{conv_C_CO2}
-\title{description}
+\title{conv_C_CO2}
 \format{
 An object of class \code{numeric} of length 1.
 }

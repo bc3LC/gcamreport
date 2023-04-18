@@ -3,7 +3,7 @@
 \docType{data}
 \name{template}
 \alias{template}
-\title{description}
+\title{template}
 \format{
 .csv
 }

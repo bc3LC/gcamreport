@@ -3,7 +3,7 @@
 \docType{data}
 \name{conv_75USD_10USD}
 \alias{conv_75USD_10USD}
-\title{description}
+\title{conv_75USD_10USD}
 \format{
 An object of class \code{numeric} of length 1.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{iea_capacity}
 \alias{iea_capacity}
-\title{description}
+\title{iea_capacity}
 \format{
 .csv
 }

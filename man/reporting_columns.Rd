@@ -3,7 +3,7 @@
 \docType{data}
 \name{reporting_columns}
 \alias{reporting_columns}
-\title{description}
+\title{reporting_columns}
 \format{
 An object of class \code{character} of length 25.
 }

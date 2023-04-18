@@ -3,7 +3,7 @@
 \docType{data}
 \name{land_use_map}
 \alias{land_use_map}
-\title{description}
+\title{land_use_map}
 \format{
 .csv
 }

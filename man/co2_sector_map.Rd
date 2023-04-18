@@ -3,7 +3,7 @@
 \docType{data}
 \name{co2_sector_map}
 \alias{co2_sector_map}
-\title{description}
+\title{co2_sector_map}
 \format{
 .csv
 }

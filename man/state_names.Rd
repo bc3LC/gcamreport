@@ -3,7 +3,7 @@
 \docType{data}
 \name{state_names}
 \alias{state_names}
-\title{description}
+\title{state_names}
 \format{
 An object of class \code{character} of length 51.
 }

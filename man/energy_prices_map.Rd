@@ -3,7 +3,7 @@
 \docType{data}
 \name{energy_prices_map}
 \alias{energy_prices_map}
-\title{description}
+\title{energy_prices_map}
 \format{
 .csv
 }

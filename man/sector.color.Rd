@@ -3,7 +3,7 @@
 \docType{data}
 \name{sector.color}
 \alias{sector.color}
-\title{description}
+\title{sector.color}
 \format{
 An object of class \code{character} of length 8.
 }

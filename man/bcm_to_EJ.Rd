@@ -3,7 +3,7 @@
 \docType{data}
 \name{bcm_to_EJ}
 \alias{bcm_to_EJ}
-\title{description}
+\title{bcm_to_EJ}
 \format{
 An object of class \code{numeric} of length 1.
 }

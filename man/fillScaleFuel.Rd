@@ -3,7 +3,7 @@
 \docType{data}
 \name{fillScaleFuel}
 \alias{fillScaleFuel}
-\title{description}
+\title{fillScaleFuel}
 \format{
 An object of class \code{ScaleDiscrete} (inherits from \code{Scale}, \code{ggproto}, \code{gg}) of length 16.
 }

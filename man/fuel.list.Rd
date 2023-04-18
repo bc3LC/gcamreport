@@ -3,7 +3,7 @@
 \docType{data}
 \name{fuel.list}
 \alias{fuel.list}
-\title{description}
+\title{fuel.list}
 \format{
 An object of class \code{character} of length 8.
 }

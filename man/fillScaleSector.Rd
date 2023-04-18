@@ -3,7 +3,7 @@
 \docType{data}
 \name{fillScaleSector}
 \alias{fillScaleSector}
-\title{description}
+\title{fillScaleSector}
 \format{
 An object of class \code{ScaleDiscrete} (inherits from \code{Scale}, \code{ggproto}, \code{gg}) of length 16.
 }

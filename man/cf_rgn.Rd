@@ -3,7 +3,7 @@
 \docType{data}
 \name{cf_rgn}
 \alias{cf_rgn}
-\title{description}
+\title{cf_rgn}
 \format{
 .csv
 }

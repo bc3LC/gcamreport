@@ -3,7 +3,7 @@
 \docType{data}
 \name{conv_thousand_million}
 \alias{conv_thousand_million}
-\title{description}
+\title{conv_thousand_million}
 \format{
 An object of class \code{numeric} of length 1.
 }

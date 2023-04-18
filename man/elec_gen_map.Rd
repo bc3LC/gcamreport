@@ -3,7 +3,7 @@
 \docType{data}
 \name{elec_gen_map}
 \alias{elec_gen_map}
-\title{description}
+\title{elec_gen_map}
 \format{
 .csv
 }

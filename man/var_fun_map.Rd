@@ -3,7 +3,7 @@
 \docType{data}
 \name{var_fun_map}
 \alias{var_fun_map}
-\title{description}
+\title{var_fun_map}
 \format{
 .csv
 }
