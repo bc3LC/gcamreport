@@ -595,4 +595,3 @@
 #'  gcamreport::tech.list
 #' }
 "tech.list"
-
