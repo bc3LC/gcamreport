@@ -1040,21 +1040,22 @@ get_co2_price = function() {
   co2_price_clean_pre <<-
     dplyr::bind_rows(co2_price_global, co2_price_fragmented)
 
-  if(nrow(co2_price_clean_pre) < 1) {
+  if(nrow(co2_price_clean_pre) < 1 || length(unique(co2_price_clean_pre$scenario)) < Scenarios) {
+  # if neither co2_price_global nor co2_price_fragmented exist for any scenario, or there are
+  # scenarios where they do not exist, introduce 0's.
 
     co2_price_clean <<-
       tibble::tibble(var = unique(co2_market_frag_map$var)) %>%
-      gcamdata::repeat_add_columns(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
-      gcamdata::repeat_add_columns(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
-      gcamdata::repeat_add_columns(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
+      tidyr::expand_grid(tibble::tibble(scenario = setdiff(Scenarios, unique(co2_price_clean_pre$scenario)))) %>%
+      tidyr::expand_grid(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
+      tidyr::expand_grid(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
       dplyr::mutate(value = 0) %>%
       dplyr::select(all_of(long_columns))
-
-
 
   } else {
 
     co2_price_clean <<- co2_price_clean_pre
+
   }
 
 }
