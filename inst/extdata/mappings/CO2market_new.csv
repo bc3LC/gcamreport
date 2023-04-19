@@ -1,73 +1,60 @@
 # mapping file for CO2 markets,
 market,region
 Africa_EasternCO2,Africa_Eastern
+SSACO2,Africa_Eastern
 Africa_NorthernCO2,Africa_Northern
+MENACO2,Africa_Northern
 Africa_SouthernCO2,Africa_Southern
+SSACO2,Africa_Southern
 Africa_WesternCO2,Africa_Western
+SSACO2,Africa_Western
 ArgentinaCO2,Argentina
+L-AmCO2,Argentina
 Australia_NZCO2,Australia_NZ
+N-Am_AusCO2,Australia_NZ
 BrazilCO2,Brazil
+L-AmCO2,Brazil
 CanadaCO2,Canada
+N-Am_AusCO2,Canada
 Central America and CaribbeanCO2,Central America and Caribbean
+L-AmCO2,Central America and Caribbean
 Central AsiaCO2,Central Asia
+Rest AsiaCO2,Central Asia
 ChinaCO2,China
-ChinaCO2,Taiwan
 ColombiaCO2,Colombia
-EFTACO2,EFTA
-EU_CentralCO2,EU_Central
-EU_NortheastCO2,EU_Northeast
-EU_SoutheastCO2,EU_Southeast
-EUCO2,EU_Central
-EUCO2,EU_Northeast
-EUCO2,EU_Southeast
-EUCO2,Lithuania
-EUCO2,Poland
-EUCO2,UK+
+L-AmCO2,Colombia
+EFTACO2,European Free Trade Association
+EU12CO2,EU-12
+EUCO2,EU-12
+EU_ETSCO2_ETS,EU-12
+EU15CO2,EU-15
+EUCO2,EU-15
+EU_ETSCO2_ETS,EU-15
 Europe_EasternCO2,Europe_Eastern
-Europe_EasternCO2,Ukraine
 Europe_Non_EUCO2,Europe_Non_EU
 GlobalCO2,Global
+globalCO2,Global
 IndiaCO2,India
 IndonesiaCO2,Indonesia
-JapanCO2,Japan
-L-AmCO2,Argentina
-L-AmCO2,Brazil
-L-AmCO2,Central America and Caribbean
-L-AmCO2,Colombia
-L-AmCO2,Mexico
-L-AmCO2,South America_Southern
-LithuaniaCO2,Lithuania
-MENACO2,Africa_Northern
-MENACO2,Middle East
-MexicoCO2,Mexico
-Middle EastCO2,Middle East
-N-Am_AusCO2,Australia_NZ
-N-Am_AusCO2,Canada
-N-Am_AusCO2,USA
-PolandCO2,Poland
-Rest AsiaCO2,Central Asia
 Rest AsiaCO2,Indonesia
+JapanCO2,Japan
 Rest AsiaCO2,Japan
-Rest AsiaCO2,South Asia
-Rest AsiaCO2,South Korea
-Rest AsiaCO2,Southeast Asia
+L-AmCO2,Mexico
+MexicoCO2,Mexico
+MENACO2,Middle East
+Middle EastCO2,Middle East
 RussiaCO2,Russia
 South AfricaCO2,South Africa
-South America_SouthernCO2,South America_Southern
-South AsiaCO2,South Asia
-South KoreaCO2,South Korea
-Southeast AsiaCO2,Southeast Asia
-SSACO2,Africa_Eastern
-SSACO2,Africa_Southern
-SSACO2,Africa_Western
 SSACO2,South Africa
+L-AmCO2,South America_Southern
+South America_SouthernCO2,South America_Southern
+Rest AsiaCO2,South Asia
+South AsiaCO2,South Asia
+Rest AsiaCO2,South Korea
+South KoreaCO2,South Korea
+Rest AsiaCO2,Southeast Asia
+Southeast AsiaCO2,Southeast Asia
+ChinaCO2,Taiwan
 TaiwanCO2,Taiwan
-UK+CO2,UK+
-UkraineCO2,Ukraine
+N-Am_AusCO2,USA
 USACO2,USA
-EU_ETSCO2_ETS,EU_Central
-EU_ETSCO2_ETS,EU_Northeast
-EU_ETSCO2_ETS,EU_Southeast
-EU_ETSCO2_ETS,Lithuania
-EU_ETSCO2_ETS,Poland
-EU_ETSCO2_ETS,UK+
