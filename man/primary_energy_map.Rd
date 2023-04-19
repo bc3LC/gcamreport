@@ -3,7 +3,7 @@
 \docType{data}
 \name{primary_energy_map}
 \alias{primary_energy_map}
-\title{description}
+\title{primary_energy_map}
 \format{
 .csv
 }

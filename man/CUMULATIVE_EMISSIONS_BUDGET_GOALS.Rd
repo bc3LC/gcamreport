@@ -3,7 +3,7 @@
 \docType{data}
 \name{CUMULATIVE_EMISSIONS_BUDGET_GOALS}
 \alias{CUMULATIVE_EMISSIONS_BUDGET_GOALS}
-\title{description}
+\title{CUMULATIVE_EMISSIONS_BUDGET_GOALS}
 \format{
 An object of class \code{numeric} of length 16.
 }

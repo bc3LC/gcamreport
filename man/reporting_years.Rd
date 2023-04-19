@@ -3,7 +3,7 @@
 \docType{data}
 \name{reporting_years}
 \alias{reporting_years}
-\title{description}
+\title{reporting_years}
 \format{
 An object of class \code{numeric} of length 20.
 }

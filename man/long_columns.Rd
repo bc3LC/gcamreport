@@ -3,7 +3,7 @@
 \docType{data}
 \name{long_columns}
 \alias{long_columns}
-\title{description}
+\title{long_columns}
 \format{
 An object of class \code{character} of length 5.
 }

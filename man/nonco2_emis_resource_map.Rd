@@ -3,7 +3,7 @@
 \docType{data}
 \name{nonco2_emis_resource_map}
 \alias{nonco2_emis_resource_map}
-\title{description}
+\title{nonco2_emis_resource_map}
 \format{
 .csv
 }

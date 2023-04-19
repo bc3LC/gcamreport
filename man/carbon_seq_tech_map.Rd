@@ -3,7 +3,7 @@
 \docType{data}
 \name{carbon_seq_tech_map}
 \alias{carbon_seq_tech_map}
-\title{description}
+\title{carbon_seq_tech_map}
 \format{
 .csv
 }

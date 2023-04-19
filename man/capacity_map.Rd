@@ -3,7 +3,7 @@
 \docType{data}
 \name{capacity_map}
 \alias{capacity_map}
-\title{description}
+\title{capacity_map}
 \format{
 .csv
 }

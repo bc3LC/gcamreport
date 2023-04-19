@@ -3,7 +3,7 @@
 \docType{data}
 \name{GCAM_years}
 \alias{GCAM_years}
-\title{description}
+\title{GCAM_years}
 \format{
 An object of class \code{numeric} of length 21.
 }

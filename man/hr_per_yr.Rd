@@ -3,7 +3,7 @@
 \docType{data}
 \name{hr_per_yr}
 \alias{hr_per_yr}
-\title{description}
+\title{hr_per_yr}
 \format{
 An object of class \code{numeric} of length 1.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{sector.list}
 \alias{sector.list}
-\title{description}
+\title{sector.list}
 \format{
 An object of class \code{character} of length 8.
 }

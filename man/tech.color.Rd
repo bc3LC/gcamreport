@@ -3,7 +3,7 @@
 \docType{data}
 \name{tech.color}
 \alias{tech.color}
-\title{description}
+\title{tech.color}
 \format{
 An object of class \code{character} of length 20.
 }

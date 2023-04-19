@@ -3,7 +3,7 @@
 \docType{data}
 \name{investment}
 \alias{investment}
-\title{description}
+\title{investment}
 \format{
 .csv
 }

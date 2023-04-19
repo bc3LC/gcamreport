@@ -3,7 +3,7 @@
 \docType{data}
 \name{tech.list}
 \alias{tech.list}
-\title{description}
+\title{tech.list}
 \format{
 An object of class \code{character} of length 20.
 }

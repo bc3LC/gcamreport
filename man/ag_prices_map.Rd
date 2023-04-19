@@ -3,7 +3,7 @@
 \docType{data}
 \name{ag_prices_map}
 \alias{ag_prices_map}
-\title{description}
+\title{ag_prices_map}
 \format{
 .csv
 }

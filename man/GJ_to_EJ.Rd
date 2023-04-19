@@ -3,7 +3,7 @@
 \docType{data}
 \name{GJ_to_EJ}
 \alias{GJ_to_EJ}
-\title{description}
+\title{GJ_to_EJ}
 \format{
 An object of class \code{numeric} of length 1.
 }

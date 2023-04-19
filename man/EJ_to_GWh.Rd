@@ -3,7 +3,7 @@
 \docType{data}
 \name{EJ_to_GWh}
 \alias{EJ_to_GWh}
-\title{description}
+\title{EJ_to_GWh}
 \format{
 An object of class \code{numeric} of length 1.
 }

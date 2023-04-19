@@ -3,7 +3,7 @@
 \docType{data}
 \name{colScaleTech}
 \alias{colScaleTech}
-\title{description}
+\title{colScaleTech}
 \format{
 An object of class \code{ScaleDiscrete} (inherits from \code{Scale}, \code{ggproto}, \code{gg}) of length 16.
 }
