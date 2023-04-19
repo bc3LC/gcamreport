@@ -967,8 +967,7 @@ get_co2_price_global_tmp = function() {
       tibble::as_tibble(co2_price_global_pre) %>%
       dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
       dplyr::mutate(market = gsub("global", "", market)) %>%
-      dplyr::mutate(market = gsub("_", "", market)) %>%
-      dplyr::left_join(co2_market_frag_map, by = "market") %>%
+      dplyr::left_join(co2_market_frag_map, by = "market", multiple = "all") %>%
       dplyr::filter(value != 0) %>%
       gcamdata::repeat_add_columns(tibble::tibble(region = regions)) %>%
       dplyr::select(all_of(long_columns))
@@ -1014,7 +1013,6 @@ get_co2_price_fragmented_tmp = function() {
     tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
     dplyr::select(all_of(long_columns))
 
-
   } else {
 
     co2_price_fragmented <<- NULL
@@ -1034,13 +1032,11 @@ get_co2_price = function() {
   co2_price_clean_pre <<-
     dplyr::bind_rows(co2_price_global, co2_price_fragmented)
 
-  if(nrow(co2_price_clean_pre) < 1 || length(unique(co2_price_clean_pre$scenario)) < Scenarios) {
-  # if neither co2_price_global nor co2_price_fragmented exist for any scenario, or there are
-  # scenarios where they do not exist, introduce 0's.
+  if(nrow(co2_price_clean_pre) < 1) {
 
     co2_price_clean <<-
       tibble::tibble(var = unique(co2_market_frag_map$var)) %>%
-      tidyr::expand_grid(tibble::tibble(scenario = setdiff(Scenarios, unique(co2_price_clean_pre$scenario)))) %>%
+      tidyr::expand_grid(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
       tidyr::expand_grid(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
       tidyr::expand_grid(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
       dplyr::mutate(value = 0) %>%
