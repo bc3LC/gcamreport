@@ -1799,8 +1799,8 @@ do_check_vetting = function() {
   ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
   if(nrow(check_vet_summary) > 0){
-    return('Vetting variables: ERROR')
+    return('Vetting variables: ERROR. The output figure can be found in "output/figure"')
   }
-  return('Vetting variables: OK')
+  return('Vetting variables: OK. The output figure can be found in "output/figure"')
 
 }
