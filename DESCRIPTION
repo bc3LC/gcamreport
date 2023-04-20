@@ -42,6 +42,7 @@ Imports:
     shinyjs,
     rrapply (>= 1.2.6)
 Suggests:
+    rmarkdown
 Remotes: 
     github::JGCRI/rgcam
 VignetteBuilder: 

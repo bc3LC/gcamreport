@@ -5,22 +5,22 @@ navbar:
   left:
     - icon: fa-home
       href: index.html
-    - text: "Tab1"
+    - text: "Tutorials"
       icon: fas fa-book
       menu:
-      -  text: text for newVignetteName1
-         href: articles/newVignetteName1.html
-      -  text: text for newVignetteName2
-         href: articles/newVignetteName2.html
-    - icon: fas fa-anchor
-      text: "Tab2"
-      href: articles/newVignetteName3.html
+      -  text: Dataset Generation Tutorial
+         href: articles/Dataset_Generation_Tutorial.html
+      -  text: Interactive UI Tutorial
+         href: articles/Interactive_UI_Tutorial.html
+    - icon: fa-solid fa-seedling
+      text: "Version Guide"
+      href: articles/Version_Guide.html
     - icon: fa-file-code-o
       text: "Reference"
       href: reference/index.html
     - icon: fa-newspaper-o
       text: "News"
       href: news/index.html
-      
+
 toc:
   depth: 2
