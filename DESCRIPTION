@@ -40,7 +40,7 @@ Imports:
     shinyWidgets,
     shinydashboard,
     shinyjs,
-    rrapply
+    rrapply (>= 1.2.6)
 Suggests:
 Remotes: 
     github::JGCRI/rgcam
