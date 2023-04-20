@@ -57,9 +57,18 @@
 
 [Back to Contents](#Contents)
 
-To be done
+1. Clone this repository
 
-  
+```bash
+git clone https://github.com/bc3LC/gcamreport.git
+```
+    
+2. Open the `gcamreport` folder you just cloned and double-click the `gcamreport.Rproj` file. RStudio should open the project.
+
+```r
+install.packages("devtools")
+devtools::load_all()
+```  
 
 <!-- ------------------------>
 
