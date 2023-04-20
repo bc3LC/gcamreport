@@ -168,7 +168,8 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
                                     'elec_investment_clean', 'transmission_invest_clean', 'CCS_invest_clean', 'resource_investment_clean',
                                     'nonco2_clean',
                                     'co2_price_clean'),
-                                'required' = TRUE)
+                                'required' = TRUE,
+                                stringsAsFactors = FALSE)
 
   # consider only the desired variables
   if (desired_variables == 'All') {
@@ -213,6 +214,9 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   do_bind_results()
   if (save) {
     if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
+      if (!dir.exists(paste0(here::here(), "/output/"))){
+        dir.create(paste0(here::here(), "/output/"))
+      }
       dir.create(paste0(here::here(), "/output/datasets/"))
     }
     write.csv(final_data, file.path(file_name), row.names = FALSE)

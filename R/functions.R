@@ -18,7 +18,8 @@ conv_ghg_co2e <- function (data) {
                "HFC245fa", "HFC43-10")
   GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 
-  GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "")
+  GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "",
+                           stringsAsFactors = FALSE)
 
   data %>%
     tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
@@ -1047,7 +1048,6 @@ get_co2_price = function() {
     co2_price_clean <<- co2_price_clean_pre %>%
       tidyr::complete(tidyr::nesting(region, var, year), scenario = unique(fe_sector_clean$scenario), fill = list(value = 0)) %>%
       dplyr::select(all_of(long_columns))
-
   }
 
 }
@@ -1733,7 +1733,7 @@ do_check_trade = function() {
     dplyr::mutate(diff = (production - demand) / production,
            check = dplyr::if_else( abs(diff) > 1, "Error", "OK" ))
 
-  if (nrow(trade %>% dplyr::filter( check == "Error") > 0)) {
+  if (nrow(trade %>% dplyr::filter( check == "Error")) > 0) {
     return('Trade flows: ERROR')
   }
   return('Trade flows: OK')
@@ -1749,7 +1749,8 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"))
+  global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"),
+                                stringsAsFactors = FALSE)
 
   final_data_long_check <- final_data %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
@@ -1770,8 +1771,9 @@ do_check_vetting = function() {
     dplyr::summarise(value = sum(value),
               value_vet = mean(value_vet)) %>%
     dplyr::ungroup() %>%
+    # dplyr::mutate(unit_vet = as.character(unit_vet)) %>%
     dplyr::mutate(value_vet = dplyr::if_else(unit_vet == "bcm", value_vet * bcm_to_EJ, value_vet),
-           unit_vet = dplyr::if_else(unit_vet == "bcm", "EJ/yr", unit_vet)) %>%
+                  unit_vet = dplyr::if_else(unit_vet == "bcm", "EJ/yr", unit_vet)) %>%
     dplyr::mutate(diff = (value / value_vet) - 1,
            check = dplyr::if_else(abs(diff) > range, "Check", "OK"))
 
@@ -1791,9 +1793,12 @@ do_check_vetting = function() {
                   legend.position = "bottom",
                   strip.text = ggplot2::element_text(size = 5),
                   legend.title = ggplot2::element_blank())
+  if (!dir.exists(paste0(here::here(), "/output/figure/"))){
+    dir.create(paste0(here::here(), "/output/figure/"))
+  }
   ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
-  if(nrow(check_vet_summary > 0)){
+  if(nrow(check_vet_summary) > 0){
     return('Vetting variables: ERROR')
   }
   return('Vetting variables: OK')
