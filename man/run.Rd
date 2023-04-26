@@ -5,7 +5,7 @@
 \title{run}
 \usage{
 run(
-  project_path = NULL,
+  prj_path = NULL,
   db_path = NULL,
   query_path = NULL,
   db_name = NULL,
@@ -19,7 +19,7 @@ run(
 )
 }
 \arguments{
-\item{project_path:}{full path of the project with the project name. Possible extensions: .dat and .proj.}
+\item{prj_path:}{full path of the project with the project name. Possible extensions: .dat and .proj.}
 
 \item{db_path:}{full path of the database.}
 
@@ -44,7 +44,7 @@ CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
 \item{save:}{if TRUE, save reporting data. Do not save otherwise.}
 
 \item{file_name:}{file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.}
+tthe same name than the specified prj_path, with 'ipcc_report' tag. CSV output.}
 
 \item{launch_app:}{if TRUE, open app. Do not launch app otherwise.}
 }
@@ -54,7 +54,7 @@ saved? CSV datafile with the desired variables & launched? user interface.
 \description{
 Main function. Interacts with the user to select the desired variables for the report, loads
 them, saves them in an external output, runs the verifications, and informs the user about the
-success of the whole process. Either the `project_path` should be specified, or the `db_path`
+success of the whole process. Either the `prj_path` should be specified, or the `db_path`
 with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
 }
 \keyword{internal}
