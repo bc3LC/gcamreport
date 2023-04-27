@@ -1110,7 +1110,7 @@ get_prices_subsector = function() {
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::left_join(energy_prices_map %>%
                        dplyr::filter(is.na(subsector)) %>%
-                       unique, by = c("sector")) %>%
+                       unique, by = c("sector"), multiple = "all") %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "costs by subsector") %>%
                        dplyr::left_join(energy_prices_map %>%
                                           unique,
