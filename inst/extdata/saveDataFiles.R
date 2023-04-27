@@ -20,7 +20,7 @@ var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
 use_data(var_fun_map, overwrite=T)
 
 # Read in template
-template <- read.csv(paste0(rawDataFolder, "/inst/extdata", "/template/NGFS_reporting_template.csv"),
+template <- read.csv(paste0(rawDataFolder, "/inst/extdata", "/template/reporting_template.csv"),
                      fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE)
 use_data(template, overwrite=T)
 
