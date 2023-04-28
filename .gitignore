@@ -37,4 +37,8 @@ vignettes/*.pdf
 
 # Results
 output/*
+
+# Attempt files
+prova*
  
+inst/doc
