@@ -1,0 +1,44 @@
+---
+title: "Dataset Generation Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Dataset_Generation_Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+## Example 1: generate dataset from a project
+Assume you have a project called `myProj.dat` and are willing to generate a dataset meeting the reporting requirements of the [IPCC](https://www.ipcc.ch/).
+````R
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the project path in a variable.
+mypath <- "/path/to/project/myProj.dat"
+# Notice that the extension is included. Accepted extensions: .dat & .proj.
+
+## -- generate the dataset until 2050. 
+run(prj_path = mypath, final_year = 2050, launch_app = FALSE)
+# Notice that it will automatically be saved in "/path/to/project/myproj_ipcc_report.csv". The terminal will output the verifications done and their result.
+````
+
+## Example 2: generate dataset from a database
+Assume you have a database called `myDb` in a folder named `dbFolder` and are willing to generate a dataset meeting the reporting requirements of the [IPCC](https://www.ipcc.ch/) for several scenarios: `scen1`, `scen2`, and `scen3`.
+````R
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path and name, the query path, the desired project name, and the considered scenarios in variables.
+dbpath <- "/path/to/database"
+dbname <- "gcamdb_name"
+querypath <- "/path/to/queries"
+projname <- "awesomeProj.dat"
+scen <- c('scen1', 'scen2', 'scen3')
+# Notice that the extension is included in the "projname". Accepted extensions: .dat & .proj.
+
+## -- generate the dataset until 2075. 
+run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = projname, scenarios = scen, final_year = 2075, launch_app = FALSE)
+# Notice that it will automatically be saved in "/path/to/database/awesomeProj_ipcc_report.csv". The terminal will output the verifications done and their result.
+````

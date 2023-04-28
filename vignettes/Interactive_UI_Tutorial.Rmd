@@ -1,0 +1,25 @@
+---
+title: "Interactive UI Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Interactive_UI_Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Example 1: launch app when generating the dataset
+When running the main function `run` (see [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport//articles//Dataset_Generation_Tutorial.html) for more information), simply set `launch_app` to `TRUE` or do not specify anything.
+````R
+## -- option 1:
+run(..., launch_app = TRUE)
+
+## -- option 2.
+run(...) # without specifying launch_app
+````
+
+## Example 2: launch app once the dataset has been generated
+After generating the dataset with the `run` function, simply run in R
+````R
+## -- launch app.
+launch_gcamreport_app()
+````

@@ -1,0 +1,12 @@
+---
+title: "Version Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Version_Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+| `gcamreport` tag-version | `GCAM` version |
+|--------------------------|----------------|
+| gcam-v6.0                | GCAM 6.0       |
