@@ -1,6 +1,10 @@
 
 # gcamreport
 
+[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml)
+[![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment)
+[![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml)
+[![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml)
   
 
 <!-- ------------------------>
@@ -15,11 +19,11 @@
 
   
 
-- [Introduction](#Introduction)
-
-- [Installation Guide](#InstallGuide)
-
-- [Get Started](#GetStarted)
+- [gcamreport](#gcamreport)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Installation Guide](#installation-guide)
+  - [ Get Started](#-get-started)
 
   
 

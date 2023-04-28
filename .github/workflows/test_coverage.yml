@@ -34,7 +34,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+        # uses: codecov/codecov-action@v3 ### when this line was introduced, the github action directly broke. Without this line, everything worked until the codecov part
         run: |
           remotes::install_cran("covr")
           covr::codecov(token = "${{secrets.CODECOV_TOKEN}}")
