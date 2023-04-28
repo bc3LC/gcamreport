@@ -50,7 +50,7 @@ jobs:
 
       - name: Install dependencies 2
         run: |
-          install.packages(c("markdown", "readr", "Rcpp", "gtable", "data.table", "gridExtra", "devtools", "dplyr", "tidyr", "rgcam", "ggplot2", "here", "extrafont", "RColorBrewer", "shiny", "shinyTree", "shinyWidgets", "shinydashboard", "shinyjs", "rrapply"), repos = "https://cloud.r-project.org")
+          install.packages(c("markdown", "readr", "Rcpp", "gtable", "data.table", "gridExtra", "pkgdown", "devtools", "dplyr", "tidyr", "rgcam", "ggplot2", "here", "extrafont", "RColorBrewer", "shiny", "shinyTree", "shinyWidgets", "shinydashboard", "shinyjs", "rrapply"), repos = "https://cloud.r-project.org", dependecies = TRUE)
         shell: Rscript {0}
 
       - name: Install dependencies 2.5
