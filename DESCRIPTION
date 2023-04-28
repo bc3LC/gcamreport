@@ -42,7 +42,10 @@ Imports:
     shinyjs,
     rrapply (>= 1.2.6)
 Suggests:
+    rmarkdown,
+    testthat (>= 3.0.0)
 Remotes: 
     github::JGCRI/rgcam
 VignetteBuilder: 
     knitr
+Config/testthat/edition: 3
