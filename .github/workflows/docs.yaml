@@ -3,7 +3,7 @@ name: docs
 on:
   push:
     branches:
-      # - gcam-v6.0
+      - gcam-v6.0
 
 jobs:
   pkgdown:
@@ -26,7 +26,7 @@ jobs:
       - name: Install libcurl
         run: |
           sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev
+          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libssl-dev libxml2-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev libmagick++-dev libavfilter-dev
       
       - name: Restart R
         run: |
