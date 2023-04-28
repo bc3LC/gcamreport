@@ -7,7 +7,7 @@ on:
 
 jobs:
   pkgdown:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -21,14 +21,10 @@ jobs:
           r-version: '4.1.0'
 
       - uses: r-lib/actions/setup-pandoc@v2
+      
+      - name: Restart R
+        run: R --vanilla CMD BATCH ${GITHUB_WORKSPACE}/path/to/your/script.R /dev/null
 
-      - name: Brew and macOS config
-        if: runner.os == 'macOS'
-        run: |
-          brew install pkg-config \
-            imagemagick@6 \
-            gdal
-                  
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"), repos = "https://cloud.r-project.org")
