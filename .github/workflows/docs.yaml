@@ -11,7 +11,7 @@ jobs:
     
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      GITHUB_PAT: ${{ secrets.GH_TOKEN}}
+      GITHUB_PAT: ${{ secrets.GH_GCAMREPORT_TOKEN}}
       RSPM: ${{ matrix.config.rspm }}
 
     steps:
@@ -43,20 +43,22 @@ jobs:
       #     options(repos = c(CRAN = "https://cran.rstudio.com/"))
       #   shell: Rscript {0}
 
-      # - name: Install dependencies 2
-      #   run: |
-      #     remotes::install_deps(dependencies = TRUE)
-      #   shell: Rscript {0}
-
+      ## FIX 16
       - name: Install dependencies 2
         run: |
-          install.packages(c("markdown", "readr", "Rcpp", "gtable", "data.table", "gridExtra", "pkgdown", "devtools", "dplyr", "tidyr", "rgcam", "ggplot2", "here", "extrafont", "RColorBrewer", "shiny", "shinyTree", "shinyWidgets", "shinydashboard", "shinyjs", "rrapply"), repos = "https://cloud.r-project.org", dependecies = TRUE)
+          remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install dependencies 2.5
-        run: |
-          devtools::install_github('JorisChau/rrapply')
-        shell: Rscript {0}
+      # ## FIX 15
+      # - name: Install dependencies 2
+      #   run: |
+      #     install.packages(c("markdown", "readr", "Rcpp", "gtable", "data.table", "gridExtra", "pkgdown", "devtools", "dplyr", "tidyr", "rgcam", "ggplot2", "here", "extrafont", "RColorBrewer", "shiny", "shinyTree", "shinyWidgets", "shinydashboard", "shinyjs", "rrapply"), repos = "https://cloud.r-project.org", dependecies = TRUE)
+      #   shell: Rscript {0}
+
+      # - name: Install dependencies 2.5
+      #   run: |
+      #     devtools::install_github('JorisChau/rrapply')
+      #   shell: Rscript {0}
 
 
       - name: Install dependencies 3
