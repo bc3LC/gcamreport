@@ -24,8 +24,8 @@ jobs:
       
       - name: Restart R
         run: |
-          R --vanilla
-          q()
+          R --vanilla --quiet
+          echo 'q()' | R --no-save
 
       - name: Install dependencies
         run: |
