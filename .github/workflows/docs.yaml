@@ -23,7 +23,9 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       
       - name: Restart R
-        run: R --vanilla CMD BATCH "${GITHUB_WORKSPACE}/R/main.R" /dev/null
+        run: |
+          R --vanilla
+          q()
 
       - name: Install dependencies
         run: |
