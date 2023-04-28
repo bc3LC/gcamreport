@@ -3,7 +3,7 @@ name: test_coverage
 on:
   push:
     branches:
-      - main
+      - gcam-v6.0
 
 jobs:
   test:
