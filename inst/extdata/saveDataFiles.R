@@ -19,6 +19,16 @@ var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))
 var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
 use_data(var_fun_map, overwrite=T)
 
+# ghg adjuster
+GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "",
+                         stringsAsFactors = FALSE)
+use_data(GWP_adjuster, overwrite=T)
+
+# vetting test
+global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"),
+                              stringsAsFactors = FALSE)
+use_data(global_vet_values, overwrite=T)
+
 # Read in template
 template <- read.csv(paste0(rawDataFolder, "/inst/extdata", "/template/reporting_template.csv"),
                      fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE)

@@ -1,3 +1,25 @@
+#' GWP_adjuster
+#'
+#' @source local
+#' @format .csv
+#' @description ghg adjuster
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::GWP_adjuster
+#' }
+"GWP_adjuster"
+
+#' global_vet_values
+#'
+#' @source local
+#' @format .csv
+#' @description vetting values to test
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::global_vet_values
+#' }
+"global_vet_values"
+
 #' reg_cont
 #'
 #' @source local

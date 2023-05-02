@@ -35,9 +35,6 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# Results
-output/*
-
 # Attempt files
 prova*
  

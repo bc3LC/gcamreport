@@ -18,9 +18,6 @@ conv_ghg_co2e <- function (data) {
                "HFC245fa", "HFC43-10")
   GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 
-  GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "",
-                           stringsAsFactors = FALSE)
-
   data %>%
     tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
     dplyr::filter(variable %in% GHG_gases) %>%
@@ -1749,9 +1746,6 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"),
-                                stringsAsFactors = FALSE)
-
   final_data_long_check <- final_data %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
     dplyr::rename(region = Region,
