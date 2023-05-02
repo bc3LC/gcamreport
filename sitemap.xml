@@ -49,6 +49,9 @@
     <loc>/reference/GJ_to_EJ.html</loc>
   </url>
   <url>
+    <loc>/reference/GWP_adjuster.html</loc>
+  </url>
+  <url>
     <loc>/reference/ag_demand_map.html</loc>
   </url>
   <url>
@@ -377,6 +380,9 @@
   </url>
   <url>
     <loc>/reference/get_transmission_invest.html</loc>
+  </url>
+  <url>
+    <loc>/reference/global_vet_values.html</loc>
   </url>
   <url>
     <loc>/reference/hr_per_yr.html</loc>
