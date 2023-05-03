@@ -1,5 +1,4 @@
 ## Main functions of the package
-## TODO: 'create project' function
 library(usethis)
 library(magrittr)
 
@@ -176,14 +175,6 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
     variables <<- variables_base
   } else {
     variables <<- dplyr::anti_join(variables_base, desired_variables, by = 'name')
-  }
-
-  removed = setdiff(variables_base$name, variables$name)
-  if (length(removed) > 0) {
-    print('The following variables have been removed:')
-    for (r in removed) {
-      print(r)
-    }
   }
 
   print('Loading data, performing checks, and saving output...')

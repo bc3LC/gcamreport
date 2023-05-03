@@ -45,9 +45,14 @@ RUN R -e "install.packages('remotes')"
 RUN R -e "install.packages('httr')"
 RUN R -e "install.packages('xml2')"
 RUN R -e "devtools::install_github('JorisChau/rrapply')"
+RUN R -e "devtools::install_github('bc3LC/gcamreport')"
 
 # clone repo
 RUN git clone https://github.com/bc3LC/gcamreport.git /root/gcamreport
+
+# set working directory
+WORKDIR /app
+COPY . /app
 
 # launch R
 CMD ["R"]
