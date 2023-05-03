@@ -1,4 +1,4 @@
-library(gcamreport); library(testthat); library(magrittr); library(rprojroot); library(rpackageutils)
+library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
 
 test_that("Test1. load project function test", {
   testResult = as.numeric(length(load_project(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'))))
