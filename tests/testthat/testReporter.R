@@ -1,19 +1,16 @@
 library(gcamreport); library(testthat); library(magrittr); library(rprojroot); library(rpackageutils)
 
 test_that("Test1. load project function test", {
-  print('test1')
   testResult = as.numeric(length(load_project(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'))))
   testthat::expect(!is.null(testResult), 'Null project. Check if the path exists or the "load_project" function works correctly.')
 })
 
 test_that("Test2. run function test: dataset created", {
-  print('test2')
   run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_app = FALSE)
   testthat::expect(!is.null(final_data) & dplyr::n_distinct(final_data) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 })
 
 test_that("Test3. run function test: dataset saved with file_name specified", {
-  print('test3')
   if (!dir.exists(paste0(rprojroot::find_root(rprojroot::is_testthat), "/testOutputs/"))){
     dir.create(paste0(rprojroot::find_root(rprojroot::is_testthat), "/testOutputs/"))
   }
@@ -25,7 +22,6 @@ test_that("Test3. run function test: dataset saved with file_name specified", {
 })
 
 test_that("Test4. run function test: dataset saved with default file_name", {
-  print('test4')
   # in principle, data should be already saved due to the Test2
   testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6_ipcc_report.csv'))
 
