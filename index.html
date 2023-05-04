@@ -106,12 +106,7 @@
 <div class="section level1">
 <div class="page-header"><h1 id="gcamreport">gcamreport<a class="anchor" aria-label="anchor" href="#gcamreport"></a>
 </h1></div>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg" alt="docs"></a></p>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a></p>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg" alt="test_coverage"></a></p>
-<p><a href="https://codecov.io/gh/bc3LC/gcamreport" class="external-link"><img src="https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG" alt="codecov"></a></p>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg" alt="docker"></a></p>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg" alt="build"></a></p>
+<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg" alt="docs"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg" alt="test_coverage"></a> <a href="https://codecov.io/gh/bc3LC/gcamreport" class="external-link"><img src="https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG" alt="codecov"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg" alt="docker"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg" alt="build"></a></p>
 <!-- ------------------------>
 <!-- ------------------------>
 <div class="section level2">
@@ -121,6 +116,7 @@
 <!-- ------------------------>
 <!-- ------------------------>
 <ul>
+<li><p><a href="#contents">Contents</a></p></li>
 <li><p><a href="#introduction">Introduction</a></p></li>
 <li>
 <p><a href="#installation-guide">Installation Guide</a></p>
@@ -196,11 +192,11 @@
 <li>Load the Docker image: open docker manually (double-click Docker Desktop) and go to the <code>gcamreport</code> directory you just cloned to build the docker image.</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span>  /path/to/gcamreport/</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> load <span class="at">--input</span> gcamreport.tar</span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v1</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Run the Docker container: still in the <code>gcamreport</code> directory.</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run  <span class="at">-v</span>  /path/to/gcamreport:/app  <span class="at">-p</span>  4000:3838  <span class="at">-it</span>  gcamreport</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run  <span class="at">-v</span>  /path/to/gcamreport:/app  <span class="at">-p</span>  4000:3838  <span class="at">-it</span>  claudiarodes/gcamreport_docker:v1</span></code></pre></div>
 <p>This should prompt an R terminal in your console.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Use <code>gcamreport</code> package: in the R console, build the package.</li>
@@ -208,8 +204,8 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bc3LC/gcamreport"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: the local files to be accesses must be inside the <code>gcamreport</code> folder, which is considered now as the root direcotry of the R session.</p>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to open the shiny app, either go to Docker Desktop and type the last port started, or type ‘<a href="http://localhost:4000/#" class="external-link uri">http://localhost:4000/#</a>’ in the browser.</p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: the local files to be accesses must be inside the <code>gcamreport</code> folder, which is considered now as the root direcotry of the R session. Inside the R session, it is refered to as <code>/app</code>.</p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to open the shiny app, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
 <p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
 <p><br></p>
 <!-- ------------------------>
@@ -228,12 +224,7 @@
 <li><p>Dataset generation. Project creation/loading and automatically saved generated dataset. Main function: <code>run</code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a>.</p></li>
 <li><p>Interactive user block. Interactive widget to display in table format the dataset. Possibility to filter, reorder, and download. Display and download plots by variables, regions, and scenarios. Main function: <code>launch_app</code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a></p></li>
 </ul>
-<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include:</p>
-<ul>
-<li><p>Energy shares</p></li>
-<li><p>Land shares</p></li>
-<li><p>Other</p></li>
-</ul>
+<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include: energy shares, land shares, etc.</p>
 </div>
 </div>
   </div>
