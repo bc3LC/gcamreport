@@ -125,8 +125,8 @@
 <li><p><a href="#with-docker">With Docker</a></p></li>
 </ul>
 </li>
-<li><p><a href="#get-started">Get Started</a></p></li>
-<li><p><a href="#bugs">Known Bugs and Workarounds</a></p></li>
+<li><p><a href="#get-started">Getting Started</a></p></li>
+<li><p><a href="#bugs">Known Errors and Workarounds</a></p></li>
 </ul>
 <!-- ------------------------><!-- ------------------------>
 </div>
@@ -148,7 +148,7 @@
 <!-- ------------------------>
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
-<p>There are two equivalent possiblities to make usage of this package:</p>
+<p>There are two equivalent possibilities to make use of this package:</p>
 <div class="section level3">
 <h3 id="with-r">
 <a name="with-R"></a>With R<a class="anchor" aria-label="anchor" href="#with-r"></a>
@@ -190,7 +190,7 @@
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Open Docker Desktop: double click the icon in your computer.</p></li>
+<li><p>Open Docker Desktop: double click the icon on your computer.</p></li>
 <li><p>Pull the Docker image. Inside a terminal (bash or cmd) pull the docker image:</p></li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v1</span></code></pre></div>
@@ -205,9 +205,9 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bc3LC/gcamreport"</span><span class="op">)</span> <span class="co">#you can skip all updates in case you are asked</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: the local files to be accesses must be inside the <code>gcamreport</code> folder, which is considered now as the root direcotry of the R session. Inside the R session, it is refered to as <code>/app</code>.</p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: the local files to be accessed must be inside the <code>gcamreport</code> folder, which is considered now as the root directory of the R session. Inside the R session, it is referred to as <code>/app</code>.</p>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to open the shiny app, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to use again the docker image, you can simply run steps 3, 5 and 6. The docker image is already on your computer, you simply need to run it! :)</p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to use again the docker image, you can simply run steps 3, 5 and 6, since the docker image is already on your computer.</p>
 <p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
 <p><br></p>
 <!-- ------------------------>
@@ -215,38 +215,51 @@
 </div>
 </div>
 <div class="section level2">
-<h2 id="get-started">
-<a name="get-started"></a>Get Started<a class="anchor" aria-label="anchor" href="#get-started"></a>
+<h2 id="getting-started">
+<a name="get-started"></a>Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
 <p>The package consists of a set of functions divided into two different blocks:</p>
 <ul>
-<li><p>Dataset generation. Project creation/loading and automatically saved generated dataset. Main function: <code>run</code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a>.</p></li>
-<li><p>Interactive user block. Interactive widget to display in table format the dataset. Possibility to filter, reorder, and download. Display and download plots by variables, regions, and scenarios. Main function: <code>launch_app</code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a></p></li>
+<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a>.</p></li>
+<li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays and downloads plots, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a></p></li>
 </ul>
-<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include: energy shares, land shares, etc.</p>
+<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.</p>
 <p><br></p>
 <!-- ------------------------>
 <!-- ------------------------>
 </div>
 <div class="section level2">
-<h2 id="known-bugs-and-workarounds">
-<a name="bugs"></a>Known Bugs and Workarounds<a class="anchor" aria-label="anchor" href="#known-bugs-and-workarounds"></a>
+<h2 id="known-errors-and-workarounds">
+<a name="bugs"></a>Known Errors and Workarounds<a class="anchor" aria-label="anchor" href="#known-errors-and-workarounds"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
-<p>There are some typical and already known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
+<p>Some typical and already-known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Error on <code>run("path/to/your/data/myData.dat")</code></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">run</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading project..."</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading data, performing checks, and saving output..."</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"ag_demand_clean"</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> rgcam<span class="sc">::</span><span class="fu">getQuery</span>(prj, <span class="st">"demand balances by crop commodity"</span>) <span class="sc">:</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  getQuery<span class="sc">:</span> Query demand balances by crop commodity is not <span class="cf">in</span> any scenarios <span class="cf">in</span> the data set.</span></code></pre></div>
-<p>This problem is due to a wrong path specification. <strong>Possible solution</strong>: make sure that you specified correctly the path. In addition: - In case you are using <code>gcamreport</code> package following the <a href="#with-r">R installation</a>, try to copy the whole path to your data, for instance starting with <code>C:\Users\username\Documents\path\to\your\data\myData.dat</code>. - In case you are using <code>gcamreport</code> package following the <a href="#with-docker">Docker installation</a>: a) make sure that your data is inside the <code>gcamreport</code> folder. b) make sure that you type correctly the path to your <code>gcamreport</code> folder when running the docker image (5th step in the <a href="#with-docker">Docker section</a>) c) make sure that you are pointing correctly to your data. For example, if in the <code>gcamreport</code> folder you have a folder called <code>amazingData</code> with you dataset <code>myData.dat</code>, you should refer to it as</p>
+<p>In your R console, you might see this error:</p>
+<pre><code>&gt; run("path/to/your/data/myData.dat")
+[1] "Loading project..."
+[1] "Loading data, performing checks, and saving output..."
+[1] "ag_demand_clean"
+Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
+  getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.</code></pre>
+<p>This problem is due to a wrong path specification.</p>
+<p><strong>Possible solution</strong>: make sure that you specified correctly the path. In addition:</p>
+<ul>
+<li><p>In case you are using <code>gcamreport</code> package following the <a href="#with-r">R installation</a>, try to copy the whole path to your data, for instance <code>C:\Users\username\Documents\path\to\your\data\myData.dat</code> if you are using a Windows distribution.</p></li>
+<li>
+<p>In case you are using <code>gcamreport</code> package following the <a href="#with-docker">Docker installation</a>:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>make sure that your data is inside the <code>gcamreport</code> folder.</p></li>
+<li><p>make sure that you type correctly the path to your <code>gcamreport</code> folder when running the docker image (5th step in the <a href="#with-docker">Docker section</a>)</p></li>
+<li><p>make sure that you are pointing correctly to your data. For example, if in the <code>gcamreport</code> folder you have a folder called <code>amazingData</code> with your dataset <code>myData.dat</code>, you should refer to it as</p></li>
+</ol>
+</li>
+</ul>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
@@ -254,27 +267,33 @@
 <span><span class="co"># option 2: partial path</span></span>
 <span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
-<p><span class="emoji" data-emoji="computer">💻</span> Error 1 on the user interface when using <a href="#with-docker">Docker installation</a>. After using the functions <code><a href="reference/run.html">run()</a></code> or <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>, you might get this message:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Listening on http<span class="sc">:</span><span class="er">//</span><span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">0.0</span><span class="sc">:</span><span class="dv">3838</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> www<span class="sc">-</span>browser<span class="sc">:</span> not found</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links2<span class="sc">:</span> not found</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> elinks<span class="sc">:</span> not found</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links<span class="sc">:</span> not found</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> lynx<span class="sc">:</span> not found</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> w3m<span class="sc">:</span> not found</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>xdg<span class="sc">-</span>open<span class="sc">:</span> no method available <span class="cf">for</span> opening <span class="st">'http://127.0.0.1:3838'</span> </span></code></pre></div>
-<p><strong>Possible solution</strong>: either go to your Docker Desktop program and type the last started port <img src="https://github.com/bc3LC/gcamreport/tree/gcam-v6.0/readme_fig/shiny_error1.png" alt="fig1"> or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favorite browser.</p>
+<p><span class="emoji" data-emoji="computer">💻</span> Wired message due to the user interface when using <a href="#with-docker">Docker installation</a>.</p>
+<p>After using the functions <code><a href="reference/run.html">run()</a></code> or <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>, you might get this message:</p>
+<pre><code>Listening on http://0.0.0.0:3838
+/usr/bin/xdg-open: 882: www-browser: not found
+/usr/bin/xdg-open: 882: links2: not found
+/usr/bin/xdg-open: 882: elinks: not found
+/usr/bin/xdg-open: 882: links: not found
+/usr/bin/xdg-open: 882: lynx: not found
+/usr/bin/xdg-open: 882: w3m: not found
+xdg-open: no method available for opening 'http://127.0.0.1:3838' </code></pre>
+<p>This is not an error! You simply need to either go to your Docker Desktop program and click the last started port</p>
+<p><img src="readme_fig/shiny_error1.png" alt="UI error" width="50%" height="50%" title="Click the last started docker port"></p>
+<p>or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.</p>
 <p><br></p>
-<p><span class="emoji" data-emoji="computer">💻</span> Error 2 on the user interface when using <a href="#with-docker">Docker installation</a>. When oppening your <em>localhost</em>, you might see this error: <img src="https://github.com/bc3LC/gcamreport/tree/gcam-v6.0/readme_fig/shiny_error2.png" alt="fig2"><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
+<p><span class="emoji" data-emoji="computer">💻</span> Error when using the user interface through <a href="#with-docker">Docker installation</a>.</p>
+<p>When oppening your <em>localhost</em>, you might see this error:</p>
+<p><img src="readme_fig/shiny_error2.png" alt="UI error" width="25%" height="25%" title="UI error"></p>
+<p><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
 <p><br></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the <a href="#with-docker">Docker installation</a>.</p>
 <p>Once the R console is opened, you might see this message after introducing any command:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>System has not been booted with systemd as init <span class="fu">system</span> (PID <span class="dv">1</span>). Can<span class="st">'t operate.</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">Failed to connect to bus: Host is down</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">Warning message:</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">In system("timedatectl", intern = TRUE) :</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">   running command '</span>timedatectl<span class="st">' had status 1 </span></span></code></pre></div>
-<p><strong>Possible solution</strong>: simply type <code>Ctl + C</code> and run your command again.</p>
+<pre><code>System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+Warning message:
+In system("timedatectl", intern = TRUE) :
+   running command 'timedatectl' had status 1 </code></pre>
+<p><strong>Possible solution</strong>: simply type <code>Ctl+C</code> and run your command again.</p>
 </div>
 </div>
   </div>
