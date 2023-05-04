@@ -6,19 +6,11 @@
   
 
 [![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml)
-
 [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment)
-
 [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml)
-
 [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport)
-
 [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml)
-
 [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)
-
-  
-
   
 
 <!-- ------------------------>
@@ -40,7 +32,7 @@
 <!-- ------------------------>
 
   
-
+- [Contents](#contents)
 
 - [Introduction](#introduction)
 
@@ -170,13 +162,13 @@ git clone  https://github.com/bc3LC/gcamreport.git
 
 ```bash
 cd  /path/to/gcamreport/
-docker load --input gcamreport.tar
+docker pull claudiarodes/gcamreport_docker:v1
 ```
   
 
 4. Run the Docker container: still in the `gcamreport` directory.
 ```bash
-docker run  -v  /path/to/gcamreport:/app  -p  4000:3838  -it  gcamreport
+docker run  -v  /path/to/gcamreport:/app  -p  4000:3838  -it  claudiarodes/gcamreport_docker:v1
 ```
 This should prompt an R terminal in your console.
   
@@ -187,9 +179,9 @@ This should prompt an R terminal in your console.
 remotes::install_github("bc3LC/gcamreport")
 library(gcamreport)
 ```
-**Note**:exclamation:: the local files to be accesses must be inside the `gcamreport` folder, which is considered now as the root direcotry of the R session.  
+**Note**:exclamation:: the local files to be accesses must be inside the `gcamreport` folder, which is considered now as the root direcotry of the R session. Inside the R session, it is refered to as `/app`. 
 
-**Note**:exclamation:: to open the shiny app, either go to Docker Desktop and type the last port started, or type 'http://localhost:4000/#' in the browser.
+**Note**:exclamation:: to open the shiny app, either go to Docker Desktop and type the last started port, or type http://localhost:4000 in the browser.
 
 Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
@@ -237,12 +229,4 @@ The package consists of a set of functions divided into two different blocks:
 
   
 
-In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include:
-
-  
-
-- Energy shares  
-
-- Land shares  
-
-- Other
+In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include: energy shares, land shares, etc.
