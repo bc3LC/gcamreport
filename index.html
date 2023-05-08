@@ -170,7 +170,7 @@
 </ol>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
 <p><br></p>
 </div>
@@ -227,7 +227,7 @@
 <li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/launch_gcamreport_app.html">?launch_gcamreport_app</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 </ul>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"></p>
 <p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.</p>
 <p><br></p>
 <!-- ------------------------>
@@ -241,16 +241,16 @@
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
 <p>Some typical and already-known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
-<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error on “run(”path/to/your/data/myData.dat”)”</p>
+<p><span class="emoji" data-emoji="computer">💻</span> Error on “run(”path/to/your/data/myData.dat”)”</p>
 <p>In your R console, you might see this error:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">run</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading project..."</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading data, performing checks, and saving output..."</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"ag_demand_clean"</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> rgcam<span class="sc">::</span><span class="fu">getQuery</span>(prj, <span class="st">"demand balances by crop commodity"</span>) <span class="sc">:</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  getQuery<span class="sc">:</span> Query demand balances by crop commodity is not <span class="cf">in</span> any scenarios <span class="cf">in</span> the data set.</span></code></pre></div>
-</summary><p>This problem is due to a wrong path specification.</p>
-<p><strong>Possible solution</strong>: make sure that you specified correctly the path. In addition:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&gt;</span> <span class="fu">run</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"Loading project..."</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"Loading data, performing checks, and saving output..."</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"ag_demand_clean"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  Error <span class="cf">in</span> rgcam<span class="sc">::</span><span class="fu">getQuery</span>(prj, <span class="st">"demand balances by crop commodity"</span>) <span class="sc">:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    getQuery<span class="sc">:</span> Query demand balances by crop commodity is not <span class="cf">in</span> any scenarios <span class="cf">in</span> the data set.</span></code></pre></div>
+<details><summary><strong>Possible solution</strong>
+</summary><p>This problem is due to a wrong path specification. Thus, make sure that you specified correctly the path. In addition:</p>
 <ul>
 <li><p>In case you are using <code>gcamreport</code> package following the <a href="#with-r">R installation</a>, try to copy the whole path to your data, for instance <code>C:\Users\username\Documents\path\to\your\data\myData.dat</code> if you are using a Windows distribution.</p></li>
 <li>
@@ -263,39 +263,42 @@
 </li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
-<span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># option 2: partial path</span></span>
-<span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span>  <span class="co"># option 1: full path</span></span>
+<span>  <span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># option 2: partial path</span></span>
+<span>  <span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
 </details><p><br></p>
-<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Wired message when launching the UI when using the Docker installation.</p>
-<p>After using the functions <code>run()</code> or <code>launch_gcamreport_app()</code> to launch the UI, you might get this message:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Listening on http<span class="sc">:</span><span class="er">//</span><span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">0.0</span><span class="sc">:</span><span class="dv">3838</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> www<span class="sc">-</span>browser<span class="sc">:</span> not found</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links2<span class="sc">:</span> not found</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> elinks<span class="sc">:</span> not found</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links<span class="sc">:</span> not found</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> lynx<span class="sc">:</span> not found</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> w3m<span class="sc">:</span> not found</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>xdg<span class="sc">-</span>open<span class="sc">:</span> no method available <span class="cf">for</span> opening <span class="st">'http://127.0.0.1:3838'</span> </span></code></pre></div>
+<p><span class="emoji" data-emoji="computer">💻</span> Wired message when launching the UI when using the Docker installation.</p>
+<p>After using the functions <code><a href="reference/run.html">run()</a></code> or <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code> to launch the UI, you might get this message:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  Listening on http<span class="sc">:</span><span class="er">//</span><span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">0.0</span><span class="sc">:</span><span class="dv">3838</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> www<span class="sc">-</span>browser<span class="sc">:</span> not found</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links2<span class="sc">:</span> not found</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> elinks<span class="sc">:</span> not found</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links<span class="sc">:</span> not found</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> lynx<span class="sc">:</span> not found</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> w3m<span class="sc">:</span> not found</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  xdg<span class="sc">-</span>open<span class="sc">:</span> no method available <span class="cf">for</span> opening <span class="st">'http://127.0.0.1:3838'</span> </span></code></pre></div>
+<details><summary><strong>Possible solution</strong>
 </summary><p>This is not an error! You simply need to either go to your Docker Desktop program and click the last started port</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
 <p>or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.</p>
 </details><p><br></p>
-<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error when using the UI through Docker installation.</p>
+<p><span class="emoji" data-emoji="computer">💻</span> Error when using the UI through Docker installation.</p>
 <p>When oppening your <em>localhost</em>, you might see this error:</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"></p>
-</summary><p><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"></p>
+<details><summary><strong>Possible solution</strong>
+</summary><p>Your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
 </details><p><br></p>
-<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the Docker installation.</p>
+<p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the Docker installation.</p>
 <p>Once the R console is opened, you might see this message after introducing any command:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>System has not been booted with systemd as init <span class="fu">system</span> (PID <span class="dv">1</span>). Can<span class="st">'t operate.</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">Failed to connect to bus: Host is down</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">Warning message:</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">In system("timedatectl", intern = TRUE) :</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">   running command '</span>timedatectl<span class="st">' had status 1 </span></span></code></pre></div>
-</summary><p><strong>Possible solution</strong>: simply type <code>Ctrl+C</code> and run your command again.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  System has not been booted with systemd as init <span class="fu">system</span> (PID <span class="dv">1</span>). Can<span class="st">'t operate.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">  Failed to connect to bus: Host is down</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">  Warning message:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">  In system("timedatectl", intern = TRUE) :</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">     running command '</span>timedatectl<span class="st">' had status 1 </span></span></code></pre></div>
+<details><summary><strong>Possible solution</strong>
+</summary><p>Simply type <code>Ctrl+C</code> and run your command again.</p>
 </details>
 </div>
 </div>
