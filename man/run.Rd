@@ -57,4 +57,3 @@ them, saves them in an external output, runs the verifications, and informs the 
 success of the whole process. Either the `project_path` should be specified, or the `db_path`
 with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
 }
-\keyword{internal}

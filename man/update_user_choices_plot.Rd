@@ -26,3 +26,4 @@ update_user_choices_plot(
 \description{
 Update dataframe to display plots with the user's choices
 }
+\keyword{internal}

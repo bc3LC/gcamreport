@@ -96,8 +96,6 @@ load_variable = function(var){
 #' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
 #' tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.
 #' @param launch_app: if TRUE, open app. Do not launch app otherwise.
-#' @importFrom magrittr %>%
-#' @keywords internal
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
