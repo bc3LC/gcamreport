@@ -9,7 +9,6 @@ vignette: >
 
 To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html), and of the `launch_gcamreport_app()`, look [here](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_app.html).
 
-
 ## Example 1: launch app when generating the dataset
 
 When running the main function `run` (see [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport//articles//Dataset_Generation_Tutorial.html) for more information), simply set `launch_app` to `TRUE` or do not specify anything.
@@ -50,7 +49,7 @@ After using the functions `run()` or `launch_gcamreport_app()` to launch the UI,
 
 This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
 
-<img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
 
 or open this url <http://localhost:4000> in your favourite browser.
 
@@ -58,7 +57,7 @@ or open this url <http://localhost:4000> in your favourite browser.
 
 When oppening your *localhost*, you might see this error:
 
-<img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"/>
 
 </summary>
 
