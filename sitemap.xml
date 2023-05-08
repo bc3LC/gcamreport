@@ -4,10 +4,10 @@
     <loc>/404.html</loc>
   </url>
   <url>
-    <loc>/articles/Dataset_Generation_Tutorial.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>/articles/Dataset_Generation_Tutorial.html</loc>
   </url>
   <url>
     <loc>/articles/Interactive_UI_Tutorial.html</loc>
@@ -16,16 +16,40 @@
     <loc>/articles/Version_Guide.html</loc>
   </url>
   <url>
+    <loc>/articles/index.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>
     <loc>/index.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>/news/index.html</loc>
   </url>
   <url>
-    <loc>/news/index.html</loc>
+    <loc>/reference/CO2_market.html</loc>
+  </url>
+  <url>
+    <loc>/reference/CUMULATIVE_EMISSIONS_BUDGET_GOALS.html</loc>
+  </url>
+  <url>
+    <loc>/reference/EJ_to_GWh.html</loc>
+  </url>
+  <url>
+    <loc>/reference/F_GASES.html</loc>
+  </url>
+  <url>
+    <loc>/reference/GCAM_years.html</loc>
+  </url>
+  <url>
+    <loc>/reference/GHG_gases.html</loc>
+  </url>
+  <url>
+    <loc>/reference/GJ_to_EJ.html</loc>
+  </url>
+  <url>
+    <loc>/reference/GWP_adjuster.html</loc>
   </url>
   <url>
     <loc>/reference/ag_demand_map.html</loc>
@@ -67,9 +91,6 @@
     <loc>/reference/check_user_choices_plot.html</loc>
   </url>
   <url>
-    <loc>/reference/CO2_market.html</loc>
-  </url>
-  <url>
     <loc>/reference/co2_sector_map.html</loc>
   </url>
   <url>
@@ -103,10 +124,13 @@
     <loc>/reference/conv_EJ_TWh.html</loc>
   </url>
   <url>
-    <loc>/reference/conv_ghg_co2e.html</loc>
+    <loc>/reference/conv_GW_EJ.html</loc>
   </url>
   <url>
-    <loc>/reference/conv_GW_EJ.html</loc>
+    <loc>/reference/conv_TWh_EJ.html</loc>
+  </url>
+  <url>
+    <loc>/reference/conv_ghg_co2e.html</loc>
   </url>
   <url>
     <loc>/reference/conv_million_billion.html</loc>
@@ -115,13 +139,7 @@
     <loc>/reference/conv_thousand_million.html</loc>
   </url>
   <url>
-    <loc>/reference/conv_TWh_EJ.html</loc>
-  </url>
-  <url>
     <loc>/reference/create_project.html</loc>
-  </url>
-  <url>
-    <loc>/reference/CUMULATIVE_EMISSIONS_BUDGET_GOALS.html</loc>
   </url>
   <url>
     <loc>/reference/do_bind_results.html</loc>
@@ -143,9 +161,6 @@
   </url>
   <url>
     <loc>/reference/do_unmount_tree.html</loc>
-  </url>
-  <url>
-    <loc>/reference/EJ_to_GWh.html</loc>
   </url>
   <url>
     <loc>/reference/elec_gen_map.html</loc>
@@ -175,16 +190,13 @@
     <loc>/reference/fuel.list.html</loc>
   </url>
   <url>
-    <loc>/reference/F_GASES.html</loc>
-  </url>
-  <url>
     <loc>/reference/gather_map.html</loc>
   </url>
   <url>
     <loc>/reference/gcamreport.html</loc>
   </url>
   <url>
-    <loc>/reference/GCAM_years.html</loc>
+    <loc>/reference/get_CCS_invest.html</loc>
   </url>
   <url>
     <loc>/reference/get_ag_demand.html</loc>
@@ -197,9 +209,6 @@
   </url>
   <url>
     <loc>/reference/get_ag_production.html</loc>
-  </url>
-  <url>
-    <loc>/reference/get_CCS_invest.html</loc>
   </url>
   <url>
     <loc>/reference/get_cf_iea_tmp.html</loc>
@@ -334,10 +343,10 @@
     <loc>/reference/get_population.html</loc>
   </url>
   <url>
-    <loc>/reference/get_prices_subsector.html</loc>
+    <loc>/reference/get_price_var_tmp.html</loc>
   </url>
   <url>
-    <loc>/reference/get_price_var_tmp.html</loc>
+    <loc>/reference/get_prices_subsector.html</loc>
   </url>
   <url>
     <loc>/reference/get_primary_energy.html</loc>
@@ -355,10 +364,10 @@
     <loc>/reference/get_resource_investment.html</loc>
   </url>
   <url>
-    <loc>/reference/get_secondary_solids.html</loc>
+    <loc>/reference/get_se_gen_tech.html</loc>
   </url>
   <url>
-    <loc>/reference/get_se_gen_tech.html</loc>
+    <loc>/reference/get_secondary_solids.html</loc>
   </url>
   <url>
     <loc>/reference/get_temperature.html</loc>
@@ -373,10 +382,7 @@
     <loc>/reference/get_transmission_invest.html</loc>
   </url>
   <url>
-    <loc>/reference/GHG_gases.html</loc>
-  </url>
-  <url>
-    <loc>/reference/GJ_to_EJ.html</loc>
+    <loc>/reference/global_vet_values.html</loc>
   </url>
   <url>
     <loc>/reference/global_vet_values.html</loc>
@@ -448,13 +454,13 @@
     <loc>/reference/run.html</loc>
   </url>
   <url>
+    <loc>/reference/se_gen_map.html</loc>
+  </url>
+  <url>
     <loc>/reference/sector.color.html</loc>
   </url>
   <url>
     <loc>/reference/sector.list.html</loc>
-  </url>
-  <url>
-    <loc>/reference/se_gen_map.html</loc>
   </url>
   <url>
     <loc>/reference/standard_tech_group.html</loc>
