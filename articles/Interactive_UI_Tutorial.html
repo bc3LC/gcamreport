@@ -114,8 +114,6 @@
 
     
     
-<p>To see all possiblities of the <code><a href="../reference/run.html">run()</a></code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html" class="external-link">here</a>,
-and of the <code><a href="../reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>, look <a href="https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_app.html" class="external-link">here</a>.</p>
 <div class="section level2">
 <h2 id="example-1-launch-app-when-generating-the-dataset">Example 1: launch app when generating the dataset<a class="anchor" aria-label="anchor" href="#example-1-launch-app-when-generating-the-dataset"></a>
 </h2>
@@ -133,47 +131,11 @@ anything.</p>
 <div class="section level2">
 <h2 id="example-2-launch-app-once-the-dataset-has-been-generated">Example 2: launch app once the dataset has been generated<a class="anchor" aria-label="anchor" href="#example-2-launch-app-once-the-dataset-has-been-generated"></a>
 </h2>
-<p>After generating the dataset with the <code><a href="../reference/run.html">run()</a></code> function,
+<p>After generating the dataset with the <code>run</code> function,
 simply run in R</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- launch app.</span></span>
 <span><span class="fu"><a href="../reference/launch_gcamreport_app.html">launch_gcamreport_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="troubleshooting-when-launching-the-ui-with-the-docker-installation">Troubleshooting when launching the UI with the Docker
-installation<a class="anchor" aria-label="anchor" href="#troubleshooting-when-launching-the-ui-with-the-docker-installation"></a>
-</h2>
-<div class="section level4">
-<h4 id="a-wired-message-when-launching-the-ui-when-using-the-docker-installation-">A) Wired message when launching the UI when using the Docker
-installation.<a class="anchor" aria-label="anchor" href="#a-wired-message-when-launching-the-ui-when-using-the-docker-installation-"></a>
-</h4>
-<p>After using the functions <code><a href="../reference/run.html">run()</a></code> or
-<code><a href="../reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code> to launch the UI, you might get
-this message:</p>
-<pre><code>Listening on http://0.0.0.0:3838
-/usr/bin/xdg-open: 882: www-browser: not found
-/usr/bin/xdg-open: 882: links2: not found
-/usr/bin/xdg-open: 882: elinks: not found
-/usr/bin/xdg-open: 882: links: not found
-/usr/bin/xdg-open: 882: lynx: not found
-/usr/bin/xdg-open: 882: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:3838' </code></pre>
-
-<p>This is not an error! You simply need to either go to your Docker
-Desktop program and click the last started port</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
-<p>or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.</p>
-</div>
-<div class="section level4">
-<h4 id="b-error-when-using-the-ui-through-docker-installation-">B) Error when using the UI through Docker installation.<a class="anchor" aria-label="anchor" href="#b-error-when-using-the-ui-through-docker-installation-"></a>
-</h4>
-<p>When oppening your <em>localhost</em>, you might see this error:</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"></p>
-
-<p><strong>Possible solution</strong>: your app is not running. Try to
-either use the <code><a href="../reference/run.html">run()</a></code> function or the
-<code>launch_app_function()</code>.</p>
-</div>
 </div>
   </div>
 
