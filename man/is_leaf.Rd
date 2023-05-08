@@ -12,3 +12,4 @@ is_leaf(tree)
 \description{
 Return TRUE if it is a leaf node; FALSE otherwise.
 }
+\keyword{internal}

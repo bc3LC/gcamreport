@@ -18,9 +18,6 @@ conv_ghg_co2e <- function (data) {
                "HFC245fa", "HFC43-10")
   GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 
-  GWP_adjuster <- read.csv(paste0(here::here(), "/inst/extdata/mappings", "/ghg_GWP.csv"), skip = 1, na = "",
-                           stringsAsFactors = FALSE)
-
   data %>%
     tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
     dplyr::filter(variable %in% GHG_gases) %>%
@@ -118,19 +115,19 @@ gather_map <- function(df){
 standard_tech_group <- function(data, technology) {
   data %>%
     dplyr::mutate(tech = technology,
-             tech = replace(tech, grepl("wind", technology), "wind"),
-             tech = replace(tech, grepl("biomass", technology), "biomass"),
-             tech = replace(tech, grepl("PV", technology), "solar"),
-             tech = replace(tech, grepl("pv", technology), "solar"),
-             tech = replace(tech, grepl("CSP", technology), "solar"),
-             tech = replace(tech, grepl("geothermal", technology), "geothermal"),
-             tech = replace(tech, grepl("hydro", technology), "hydro"),
-             tech = replace(tech, grepl("Gen", technology), "nuclear"),
-             tech = replace(tech, grepl("coal", technology), "coal"),
-             tech = replace(tech, grepl("gas", technology), "gas"),
-             tech = replace(tech, grepl("refined liquids", technology), "oil"),
-             tech = replace(tech, grepl("oil", technology), "oil"),
-             tech = replace(tech, grepl("CCS", technology), paste(tech[grepl("CCS", technology)], "ccs", sep = " w/ "))) %>%
+                  tech = replace(tech, grepl("wind", technology), "wind"),
+                  tech = replace(tech, grepl("biomass", technology), "biomass"),
+                  tech = replace(tech, grepl("PV", technology), "solar"),
+                  tech = replace(tech, grepl("pv", technology), "solar"),
+                  tech = replace(tech, grepl("CSP", technology), "solar"),
+                  tech = replace(tech, grepl("geothermal", technology), "geothermal"),
+                  tech = replace(tech, grepl("hydro", technology), "hydro"),
+                  tech = replace(tech, grepl("Gen", technology), "nuclear"),
+                  tech = replace(tech, grepl("coal", technology), "coal"),
+                  tech = replace(tech, grepl("gas", technology), "gas"),
+                  tech = replace(tech, grepl("refined liquids", technology), "oil"),
+                  tech = replace(tech, grepl("oil", technology), "oil"),
+                  tech = replace(tech, grepl("CCS", technology), paste(tech[grepl("CCS", technology)], "ccs", sep = " w/ "))) %>%
     dplyr::mutate(tech = factor(tech, levels = tech.list))
 }
 
@@ -970,7 +967,7 @@ get_co2_price_global_tmp = function() {
       dplyr::mutate(market = gsub("global", "", market)) %>%
       dplyr::left_join(co2_market_frag_map, by = "market", multiple = "all") %>%
       dplyr::filter(value != 0) %>%
-      gcamdata::repeat_add_columns(tibble::tibble(region = regions)) %>%
+      tidyr::expand_grid(tibble::tibble(region = regions)) %>%
       dplyr::select(all_of(long_columns))
 
   } else {
@@ -997,22 +994,22 @@ get_co2_price_fragmented_tmp = function() {
 
   if(nrow(co2_price_fragmented_pre) > 1) {
 
-  co2_price_fragmented <<-
-    co2_price_fragmented_pre %>%
-    dplyr::left_join(CO2_market, by = c("market"), multiple = "all") %>%
-    dplyr::filter(stats::complete.cases(.)) %>%
-    dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
-    dplyr::mutate(market_adj = "CO2",
-                  market_adj = dplyr::if_else(grepl("ETS", market), "CO2_ETS", market_adj),
-                  market_adj = dplyr::if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
-                  market_adj = dplyr::if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
-                  market_adj = dplyr::if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)) %>%
-    dplyr::mutate(market = market_adj) %>%
-    dplyr::select(-market_adj) %>%
-    dplyr::left_join(co2_market_frag_map, by = "market", multiple = "all") %>%
-    dplyr::filter(stats::complete.cases(.)) %>%
-    tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
-    dplyr::select(all_of(long_columns))
+    co2_price_fragmented <<-
+      co2_price_fragmented_pre %>%
+      dplyr::left_join(CO2_market, by = c("market"), multiple = "all") %>%
+      dplyr::filter(stats::complete.cases(.)) %>%
+      dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
+      dplyr::mutate(market_adj = "CO2",
+                    market_adj = dplyr::if_else(grepl("ETS", market), "CO2_ETS", market_adj),
+                    market_adj = dplyr::if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
+                    market_adj = dplyr::if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
+                    market_adj = dplyr::if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)) %>%
+      dplyr::mutate(market = market_adj) %>%
+      dplyr::select(-market_adj) %>%
+      dplyr::left_join(co2_market_frag_map, by = "market", multiple = "all") %>%
+      dplyr::filter(stats::complete.cases(.)) %>%
+      tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
+      dplyr::select(all_of(long_columns))
 
   } else {
 
@@ -1063,9 +1060,9 @@ get_gov_revenue_sector = function() {
   gov_revenue_sector <<-
     co2_clean %>%
     dplyr::mutate(sector  = ifelse(var == "Emissions|CO2|Energy|Demand|Industry", "Carbon|Demand|Industry", NA ),
-                  sector  = ifelse(var == "Emissions|CO2|Energy|Demand|Residential and Commercial", "Carbon|Demand|Buildings", sector ),
-                  sector  = ifelse(var == "Emissions|CO2|Energy|Demand|Transportation", "Carbon|Demand|Transport", sector ),
-                  sector  = ifelse(var == "Emissions|CO2|Energy|Supply|Electricity", "Carbon|Supply", sector ),
+                  sector = ifelse(var == "Emissions|CO2|Energy|Demand|Residential and Commercial", "Carbon|Demand|Buildings", sector ),
+                  sector = ifelse(var == "Emissions|CO2|Energy|Demand|Transportation", "Carbon|Demand|Transport", sector ),
+                  sector = ifelse(var == "Emissions|CO2|Energy|Supply|Electricity", "Carbon|Supply", sector ),
                   emiss = value) %>%
     dplyr::select(-var, -value) %>%
     dplyr::filter(!is.na(sector)) %>%
@@ -1110,11 +1107,11 @@ get_prices_subsector = function() {
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::left_join(energy_prices_map %>%
                        dplyr::filter(is.na(subsector)) %>%
-                       unique, by = c("sector")) %>%
+                       unique, by = c("sector"), multiple = "all") %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "costs by subsector") %>%
                        dplyr::left_join(energy_prices_map %>%
-                                   unique,
-                                   by = c("sector", "subsector"))) %>%
+                                          unique,
+                                        by = c("sector", "subsector"))) %>%
     dplyr::filter(!is.na(var)) %>%
     # read in carbon content in kg C per GJ -> convert to tC per GJ
     dplyr::left_join(carbon_content %>%
@@ -1172,7 +1169,7 @@ get_total_revenue = function() {
                      by = c("scenario", "year", "resource")) %>%
     dplyr::mutate(total_production = total_production * GJ_to_EJ,
                   total_revenue = total_production * resource_price * conv_75USD_10USD)
-  }
+}
 
 #' get_regional_emission
 #'
@@ -1185,16 +1182,16 @@ get_regional_emission = function() {
     nonCO2_content %>%
     dplyr::filter(year == 2005) %>%
     tidyr::spread(Non.CO2, emiss.coef) %>%
-    dplyr::rename(CH4.coef =  CH4,
+    dplyr::rename(CH4.coef = CH4,
                   N2O.coef = N2O) %>%
-    dplyr::mutate(CH4.coef =  CH4.coef/1000000,
+    dplyr::mutate(CH4.coef = CH4.coef/1000000,
                   N2O.coef =  N2O.coef/1000000) %>%
     dplyr::select(region, resource, CH4.coef, N2O.coef) %>%
     dplyr::left_join(rgcam::getQuery(prj, "resource production")%>%
                        dplyr::filter(resource %in% c("coal", "crude oil", "natural gas")) %>%
                        dplyr::rename(regional_production = value), by = c("region", "resource")) %>%
-    dplyr::mutate(regional_CH4emission = regional_production * CH4.coef * GJ_to_EJ,
-                  regional_N2Oemission = regional_production * N2O.coef * GJ_to_EJ)
+    dplyr::mutate(regional_CH4emission = regional_production *CH4.coef * GJ_to_EJ,
+                  regional_N2Oemission = regional_production *N2O.coef * GJ_to_EJ)
 }
 
 
@@ -1681,8 +1678,8 @@ do_bind_results = function() {
   GCAM_DATA_WORLD <-
     GCAM_DATA %>%
     dplyr::filter(region != "World", # excl. Temperature|Forcing|Concentration
-           # excl. price and costs variables - already calculated global average
-           !grepl("Price|Capital Cost", var)) %>%
+                  # excl. price and costs variables - already calculated global average
+                  !grepl("Price|Capital Cost", var)) %>%
     dplyr::group_by(scenario, year, var) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
@@ -1731,7 +1728,7 @@ do_check_trade = function() {
                      demand = sum(demand, na.rm = T)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(diff = (production - demand) / production,
-                  check = dplyr::if_else(abs(diff) > 1, "Error", "OK" ))
+                  check = dplyr::if_else( abs(diff) > 1, "Error", "OK" ))
 
   if (nrow(trade %>% dplyr::filter( check == "Error")) > 0) {
     return('Trade flows: ERROR')
@@ -1749,9 +1746,6 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  global_vet_values <- read.csv(paste0(here::here(), "/inst/extdata/vetting", "/global_vet_values.csv"),
-                                stringsAsFactors = FALSE)
-
   final_data_long_check <- final_data %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
     dplyr::rename(region = Region,
@@ -1799,8 +1793,8 @@ do_check_vetting = function() {
   ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
   if(nrow(check_vet_summary) > 0){
-    return('Vetting variables: ERROR. The output figure can be found in "output/figure"')
+    return('Vetting variables: ERROR')
   }
-  return('Vetting variables: OK. The output figure can be found in "output/figure"')
+  return('Vetting variables: OK')
 
 }

@@ -1,5 +1,4 @@
 ## Main functions of the package
-## TODO: 'create project' function
 library(usethis)
 library(magrittr)
 
@@ -77,9 +76,9 @@ load_variable = function(var){
 #'
 #' Main function. Interacts with the user to select the desired variables for the report, loads
 #' them, saves them in an external output, runs the verifications, and informs the user about the
-#' success of the whole process. Either the `prj_path` should be specified, or the `db_path`
+#' success of the whole process. Either the `project_path` should be specified, or the `db_path`
 #' with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
-#' @param prj_path: full path of the project with the project name. Possible extensions: .dat and .proj.
+#' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
 #' @param db_path: full path of the database.
 #' @param query_path: full path of the query.
 #' @param db_name: name of the database.
@@ -95,24 +94,22 @@ load_variable = function(var){
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
 #' @param save: if TRUE, save reporting data. Do not save otherwise.
 #' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' tthe same name than the specified prj_path, with 'ipcc_report' tag. CSV output.
+#' tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.
 #' @param launch_app: if TRUE, open app. Do not launch app otherwise.
-#' @importFrom magrittr %>%
-#' @keywords internal
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
-run = function(prj_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
+run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
                final_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
 
   # check that the paths are correctly specified
-  if (!is.null(prj_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
+  if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
     # stop and display error
     stop('ERROR: Specify either a project or a database to extract the data from. Not both.')
 
-  } else if (!is.null(prj_path)) {
+  } else if (!is.null(project_path)) {
     # load project
     print('Loading project...')
-    load_project(prj_path)
+    load_project(project_path)
 
   } else if (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
     # create project if checks ok
@@ -178,14 +175,6 @@ run = function(prj_path = NULL, db_path = NULL, query_path = NULL, db_name = NUL
     variables <<- dplyr::anti_join(variables_base, desired_variables, by = 'name')
   }
 
-  removed = setdiff(variables_base$name, variables$name)
-  if (length(removed) > 0) {
-    print('The following variables have been removed:')
-    for (r in removed) {
-      print(r)
-    }
-  }
-
   print('Loading data, performing checks, and saving output...')
 
   # consider the dependencies and checking functions
@@ -199,16 +188,14 @@ run = function(prj_path = NULL, db_path = NULL, query_path = NULL, db_name = NUL
     }
   }
 
-  # set the default file_name based on the prj_path or the db_path & db_name
+  # set the default file_name based on the project_path or the db_path & db_name
   if (is.null(file_name)) {
-    if (!is.null(prj_path)) {
-      file_name = ifelse(grepl('.dat', prj_path), gsub("\\.dat$", "", prj_path),
-                               gsub("\\.proj$", "", prj_path))
+    if (!is.null(project_path)) {
+      file_name = gsub("\\.dat$", "", project_path)
       file_name = paste0(file_name,'_ipcc_report.csv')
     } else {
-      file_name = ifelse(grepl('.dat', prj_name), gsub("\\.dat$", "", prj_name),
-                         gsub("\\.proj$", "", prj_name))
-      file_name = paste0(db_path, "/", file_name, '_ipcc_report.csv')
+      file_name = gsub("\\.dat$", "", project_path)
+      file_name = paste0(db_path, "/", db_name, '_ipcc_report.csv')
     }
   }
 

@@ -6,6 +6,7 @@
 #'
 #' Return TRUE if it is a leaf node; FALSE otherwise.
 #' @param tree: tree node to be checked
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 is_leaf <- function(tree) {
@@ -24,6 +25,7 @@ is_leaf <- function(tree) {
 #' @param tree: base tree to change the style on
 #' @param type: either regions or variables
 #' @param tmp_vars: variables which require 'dis' style
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 change_style <- function(tree, type, tmp_vars = NULL) {
@@ -61,10 +63,11 @@ change_style <- function(tree, type, tmp_vars = NULL) {
 #' @param reg: user's selected regions
 #' @param vars: user's selected variables
 #' @param grouped: if TRUE, aim to display grouped plot; ungrouped plot otherwise
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
-  
+
   # errors' vector
   error_message = c()
 
@@ -107,6 +110,7 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 #' @param tree_regions: user's selected regions
 #' @param tree_variables: user's selected variables
 #' @param sidebarItemExpanded: input sidebar expanded item
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 update_user_choices_plot <- function(selected_scen, selected_years,
@@ -147,7 +151,7 @@ update_user_choices_plot <- function(selected_scen, selected_years,
   firstVars <<- ifelse(!firstVars || (firstVars && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Variables"), FALSE, TRUE)
   firstReg <<- ifelse(!firstReg || (firstReg && !is.null(sidebarItemExpanded) && sidebarItemExpanded == "Regions"), FALSE, TRUE)
 
-  # transform the regions and variables' structures to lists 
+  # transform the regions and variables' structures to lists
   if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
     sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
   } else {
@@ -180,6 +184,7 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 #' reset_first_load
 #'
 #' Initialize variables to run the app
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 reset_first_load <- function() {
@@ -205,6 +210,7 @@ reset_first_load <- function() {
 #' @param sel_cols: selected column/s
 #' @param sel_vars: selected variables in tree
 #' @param sel_reg: selected regions in tree
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @return subseted dataset
 #' @export
@@ -247,6 +253,7 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
 #' @param df: dataset
 #' @param column_names: names of the columns of the original dataset
 #' @param current_column: number of the current column
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @return nested list
 #' @export
@@ -298,6 +305,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, ii
 #' @param base_tree: nested list
 #' @param type: 'variables' if nested list is refereed to variables, 'regions'
 #' if it refers to regional  aggregation
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @return dataframe
 #' @export
@@ -336,12 +344,13 @@ do_unmount_tree <- function(base_tree, type) {
 #' Collapse all columns by row of the dataframe and remove NA
 #' @param basic_data: dataframe/datatable to be collapsed
 #' @return Vector with the collapsed data
+#' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
 do_collapse_df <- function(basic_data) {
   # collapse all columns by row
   df_collapsed <- data.frame(collapsed = apply(basic_data, 1, paste, collapse = "|"))
-  
+
   # remove 'NA' pattern
   df_clean <- apply(df_collapsed, c(1), function(x) gsub("\\|NA", "", x)) %>%
     as.vector()

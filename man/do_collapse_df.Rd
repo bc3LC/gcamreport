@@ -15,3 +15,4 @@ Vector with the collapsed data
 \description{
 Collapse all columns by row of the dataframe and remove NA
 }
+\keyword{internal}

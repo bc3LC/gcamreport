@@ -207,7 +207,7 @@ server <- function(input, output, session) {
                                       rownames = FALSE)
                      )
                    } else if (input$tab_box == 'Plot') {
-                   # if the selected tab is 'Plot'
+                     # if the selected tab is 'Plot'
 
                      # disable columns dropdown and set class 'disabled_cols'
                      shinyjs::disable("columns_id")
@@ -220,7 +220,7 @@ server <- function(input, output, session) {
                                                     tree_regions = input$tree_regions,
                                                     tree_variables = input$tree_variables,
                                                     sidebarItemExpanded = input$sidebarItemExpanded)
-                     # if no errors 
+                     # if no errors
                      if (input$vars_grouping == 'Grouped Variables'){
                        # if the variables must be displayed all in one plot
 
@@ -324,7 +324,7 @@ server <- function(input, output, session) {
 
                                # compute width
                                w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
-                               
+
                                # save plot
                                ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
                                                height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
@@ -346,7 +346,7 @@ server <- function(input, output, session) {
                                                         years = sel$years,
                                                         reg = sel$reg,
                                                         grouped = FALSE)
-                       # if no errors 
+                       # if no errors
                        if (length(errors) < 1) {
                          # if the variables must be displayed in different plots
 
@@ -442,7 +442,7 @@ server <- function(input, output, session) {
 
                                  # compute width
                                  w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
-                                                   
+
                                  # save plot
                                  ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
                                                  height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
@@ -478,7 +478,7 @@ server <- function(input, output, session) {
                                      tree_regions = input$tree_regions,
                                      tree_variables = input$tree_variables,
                                      sidebarItemExpanded = input$sidebarItemExpanded)
-      # if no errors 
+      # if no errors
       if (input$vars_grouping == 'Grouped Variables'){
         # if the variables must be displayed all in one plot
 
@@ -582,7 +582,7 @@ server <- function(input, output, session) {
 
                 # compute width
                 w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
-                                               
+
                 # save plot
                 ggplot2::ggsave(file, plot = get(paste0('fig_',tt)), device = "png",
                                 height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
@@ -604,7 +604,7 @@ server <- function(input, output, session) {
                                          years = sel$years,
                                          reg = sel$reg,
                                          grouped = FALSE)
-        # if no errors 
+        # if no errors
         if (length(errors) < 1) {
           # if the variables must be displayed in different plots
 
@@ -700,7 +700,7 @@ server <- function(input, output, session) {
 
                   # compute width
                   w = 5*(max(floor(length(unique(data_sample$Scenario))/6),floor(length(unique(data_sample$Region))/7),floor(length(unique(data_sample$Variable))/8))-1)
-                                                                     
+
                   # save plot
                   ggplot2::ggsave(file, plot = get(paste0('fig_',unique(data_sample$Variable)[my_i])), device = "png",
                                   height = hh_dwn, width = 20+w, units = 'cm', limitsize = FALSE)
@@ -728,7 +728,7 @@ server <- function(input, output, session) {
     # get selected regions and variables from input
     sel_reg <<- shinyTree::get_selected(input$tree_regions, format = 'slices')
     sel_vars <<- shinyTree::get_selected(input$tree_variables, format = 'slices')
-    
+
     # if it's the first load
     if (firstLoad) {
       firstLoad <<- FALSE
@@ -768,7 +768,7 @@ server <- function(input, output, session) {
       # set firstVars and/or firstReg to FALSE if it's not the first time loading them or if their sidebarItem is expanded
       firstVars <<- ifelse(!firstVars || (firstVars && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Variables"), FALSE, TRUE)
       firstReg <<- ifelse(!firstReg || (firstReg && !is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded == "Regions"), FALSE, TRUE)
-      
+
       # update the tableData with the user's choices
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,

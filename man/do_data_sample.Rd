@@ -34,3 +34,4 @@ subseted dataset
 \description{
 Function to subset a dataset with the user's choices
 }
+\keyword{internal}

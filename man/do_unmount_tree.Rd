@@ -18,3 +18,4 @@ dataframe
 \description{
 Create a dataframe from a nested list.
 }
+\keyword{internal}

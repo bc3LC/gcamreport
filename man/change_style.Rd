@@ -16,3 +16,4 @@ change_style(tree, type, tmp_vars = NULL)
 \description{
 Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
 }
+\keyword{internal}

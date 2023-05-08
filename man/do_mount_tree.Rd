@@ -19,3 +19,4 @@ nested list
 \description{
 Recursive function to create a nested list from a dataframe.
 }
+\keyword{internal}
