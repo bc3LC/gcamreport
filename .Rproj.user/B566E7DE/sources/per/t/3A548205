@@ -1,0 +1,26 @@
+{
+    "id": "3A548205",
+    "path": "~/IAM_COMPACT/gcamreport/R/data.R",
+    "project_path": "R/data.R",
+    "type": "r_source",
+    "hash": "3347399196",
+    "contents": "",
+    "dirty": false,
+    "created": 1683544711270.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,15",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683544714,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683544714367,
+    "read_only": false,
+    "read_only_alternatives": []
+}

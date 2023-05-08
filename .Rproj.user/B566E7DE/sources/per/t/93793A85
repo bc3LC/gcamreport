@@ -1,0 +1,26 @@
+{
+    "id": "93793A85",
+    "path": "~/IAM_COMPACT/gcamreport/inst/gcamreport_app/ui.R",
+    "project_path": "inst/gcamreport_app/ui.R",
+    "type": "r_source",
+    "hash": "1995811675",
+    "contents": "",
+    "dirty": false,
+    "created": 1683544656777.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "242,0",
+        "scrollLine": "221"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683544664,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683544664106,
+    "read_only": false,
+    "read_only_alternatives": []
+}
