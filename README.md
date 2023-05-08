@@ -1,12 +1,12 @@
 # gcamreport
 
-[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)
+[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7907666.svg)](https://doi.org/10.5281/zenodo.7907666)
 
 <!-- ------------------------>
 
 <!-- ------------------------>
 
-## <a name="contents"></a>Contents
+## <a name="contents"></a>Contents {#contents}
 
 <!-- ------------------------>
 
@@ -30,7 +30,7 @@
 
 <!-- ------------------------>
 
-## <a name="introduction"></a>Introduction
+## <a name="introduction"></a>Introduction {#introduction}
 
 <!-- ------------------------>
 
@@ -44,7 +44,7 @@
 
 <!-- ------------------------>
 
-## <a name="installation-guide"></a>Installation Guide
+## <a name="installation-guide"></a>Installation Guide {#installation-guide}
 
 <!-- ------------------------>
 
@@ -54,7 +54,7 @@
 
 There are two equivalent possibilities to make use of this package:
 
-### <a name="with-R"></a>With R
+### <a name="with-R"></a>With R {#with-r}
 
 1.  Requirements
 
@@ -81,7 +81,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
 <br>
 
-### <a name="with-Docker"></a>With Docker
+### <a name="with-Docker"></a>With Docker {#with-docker}
 
 1.  Requirements
 
@@ -168,50 +168,49 @@ In addition, the package includes some default input files (.Rda), that are read
 
 Some typical and already-known errors that can be easily solved! :bulb:
 
+:computer: Error on "run("path/to/your/data/myData.dat")"
 
+In your R console, you might see this error:
 
-  :computer: Error on "run("path/to/your/data/myData.dat")"
-
-  In your R console, you might see this error:
-  
       > run("path/to/your/data/myData.dat")
       [1] "Loading project..."
       [1] "Loading data, performing checks, and saving output..."
       [1] "ag_demand_clean"
       Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
         getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.
-  
+
 <details>
-  <summary>**Possible solution**</summary>
-  
-  This problem is due to a wrong path specification. Thus, make sure that you specified correctly the path. In addition:
-  
-  -   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
-  
-  -   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
-  
-      a)  make sure that your data is inside the `gcamreport` folder.
-  
-      b)  make sure that you type correctly the path to your `gcamreport` folder when running the docker image (5th step in the [Docker section](#with-docker))
-  
-      c)  make sure that you are pointing correctly to your data. For example, if in the `gcamreport` folder you have a folder called `amazingData` with your dataset `myData.dat`, you should refer to it as
-  
-  ``` r
+
+<summary>**Possible solution**</summary>
+
+This problem is due to a wrong path specification. Thus, make sure that you specified correctly the path. In addition:
+
+-   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
+
+-   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+
+    a)  make sure that your data is inside the `gcamreport` folder.
+
+    b)  make sure that you type correctly the path to your `gcamreport` folder when running the docker image (5th step in the [Docker section](#with-docker))
+
+    c)  make sure that you are pointing correctly to your data. For example, if in the `gcamreport` folder you have a folder called `amazingData` with your dataset `myData.dat`, you should refer to it as
+
+``` r
   # option 1: full path
   run("/app/amazingData/myData.dat")
   
   # option 2: partial path
   run("amazingData/myData.dat")
-  ```
+```
 
 </details>
 
 <br>
 
-  :computer: Wired message when launching the UI when using the Docker installation.
-  
-  After using the functions `run()` or `launch_gcamreport_app()` to launch the UI, you might get this message:
-  
+:computer: Wired message when launching the UI when using the Docker installation.
+
+After using the functions `run()` or `launch_gcamreport_app()` to launch the UI, you might get this message:
+
       Listening on http://0.0.0.0:3838
       /usr/bin/xdg-open: 882: www-browser: not found
       /usr/bin/xdg-open: 882: links2: not found
@@ -220,48 +219,51 @@ Some typical and already-known errors that can be easily solved! :bulb:
       /usr/bin/xdg-open: 882: lynx: not found
       /usr/bin/xdg-open: 882: w3m: not found
       xdg-open: no method available for opening 'http://127.0.0.1:3838' 
-  
-<details>
-  <summary>**Possible solution**</summary>
 
-  This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
-  
-  <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
-  
-  or open this url <http://localhost:4000> in your favourite browser.
+<details>
+
+<summary>**Possible solution**</summary>
+
+This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
+
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
+
+or open this url <http://localhost:4000> in your favourite browser.
 
 </details>
 
 <br>
 
-  :computer: Error when using the UI through Docker installation.
-  
-  When oppening your *localhost*, you might see this error:
-  
-  <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"/>
-  
+:computer: Error when using the UI through Docker installation.
+
+When oppening your *localhost*, you might see this error:
+
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"/>
+
 <details>
-  <summary>**Possible solution**</summary>
-  
-  Your app is not running. Try to either use the `run()` function or the `launch_app_function()`.
+
+<summary>**Possible solution**</summary>
+
+Your app is not running. Try to either use the `run()` function or the `launch_app_function()`.
 
 </details>
 
 <br>
 
-  :computer: Error related to *system* when using the Docker installation.
-  
-  Once the R console is opened, you might see this message after introducing any command:
-  
+:computer: Error related to *system* when using the Docker installation.
+
+Once the R console is opened, you might see this message after introducing any command:
+
       System has not been booted with systemd as init system (PID 1). Can't operate.
       Failed to connect to bus: Host is down
       Warning message:
       In system("timedatectl", intern = TRUE) :
          running command 'timedatectl' had status 1 
-  
+
 <details>
-  <summary>**Possible solution**</summary>
-  
-  Simply type `Ctrl+C` and run your command again.
+
+<summary>**Possible solution**</summary>
+
+Simply type `Ctrl+C` and run your command again.
 
 </details>
