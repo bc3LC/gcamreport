@@ -6,7 +6,7 @@
 
 <!-- ------------------------>
 
-## <a name="contents"></a>Contents {#contents}
+## <a name="contents"></a>Contents
 
 <!-- ------------------------>
 
@@ -30,7 +30,7 @@
 
 <!-- ------------------------>
 
-## <a name="introduction"></a>Introduction {#introduction}
+## <a name="introduction"></a>Introduction
 
 <!-- ------------------------>
 
@@ -44,7 +44,7 @@
 
 <!-- ------------------------>
 
-## <a name="installation-guide"></a>Installation Guide {#installation-guide}
+## <a name="installation-guide"></a>Installation Guide
 
 <!-- ------------------------>
 
@@ -54,7 +54,7 @@
 
 There are two equivalent possibilities to make use of this package:
 
-### <a name="with-R"></a>With R {#with-r}
+### <a name="with-R"></a>With R
 
 1.  Requirements
 
@@ -81,7 +81,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
 <br>
 
-### <a name="with-Docker"></a>With Docker {#with-docker}
+### <a name="with-Docker"></a>With Docker
 
 1.  Requirements
 
