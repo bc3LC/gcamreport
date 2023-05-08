@@ -157,12 +157,12 @@
 <li>
 <p>Requirements</p>
 <ul>
-<li><p>R (to download clik <a href="https://www.r-project.org/" class="external-link">here</a>)</p></li>
-<li><p>Rstudio (to download clik <a href="https://www.rstudio.com/" class="external-link">here</a>)</p></li>
-<li><p>Git (to download clik <a href="https://git-scm.com/downloads/" class="external-link">here</a>)</p></li>
+<li><p>R (to download click <a href="https://www.r-project.org/" class="external-link">here</a>)</p></li>
+<li><p>Rstudio (to download click <a href="https://www.rstudio.com/" class="external-link">here</a>)</p></li>
+<li><p>Git (to download click <a href="https://git-scm.com/downloads/" class="external-link">here</a>)</p></li>
 </ul>
 </li>
-<li><p>Clone this repository:</p></li>
+<li><p>Open git bash in the folder where you want to clone the repository and clone it:</p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone  https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
@@ -190,7 +190,7 @@
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Open Docker Desktop (double click the icon on your computer) and leave it running in the background.</p></li>
+<li><p>Open Docker Desktop (double-click the icon on your computer) and leave it running in the background.</p></li>
 <li><p>Inside a terminal (bash or cmd) pull the docker image:</p></li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v1</span></code></pre></div>
@@ -223,11 +223,11 @@
 <p><a href="#contents">Back to Contents</a></p>
 <p>The <code>gcamreport</code> package consists of a set of functions divided into two different blocks:</p>
 <ul>
-<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/run.html">?run</a></code> in your R consolse. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
+<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/run.html">?run</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 <li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/launch_gcamreport_app.html">?launch_gcamreport_app</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 </ul>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been lunched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" alt="UI error" width="60%" height="60%" title="Click the last started docker port"></p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
+<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"></p>
 <p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.</p>
 <p><br></p>
 <!-- ------------------------>
@@ -243,12 +243,12 @@
 <p>Some typical and already-known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
 <details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error on “run(”path/to/your/data/myData.dat”)”</p>
 <p>In your R console, you might see this error:</p>
-<pre><code>&gt; run("path/to/your/data/myData.dat")
-[1] "Loading project..."
-[1] "Loading data, performing checks, and saving output..."
-[1] "ag_demand_clean"
-Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
-  getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">run</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading project..."</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"Loading data, performing checks, and saving output..."</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"ag_demand_clean"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> rgcam<span class="sc">::</span><span class="fu">getQuery</span>(prj, <span class="st">"demand balances by crop commodity"</span>) <span class="sc">:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  getQuery<span class="sc">:</span> Query demand balances by crop commodity is not <span class="cf">in</span> any scenarios <span class="cf">in</span> the data set.</span></code></pre></div>
 </summary><p>This problem is due to a wrong path specification.</p>
 <p><strong>Possible solution</strong>: make sure that you specified correctly the path. In addition:</p>
 <ul>
@@ -271,29 +271,30 @@ Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
 </details><p><br></p>
 <details><summary><p><span class="emoji" data-emoji="computer">💻</span> Wired message when launching the UI when using the Docker installation.</p>
 <p>After using the functions <code>run()</code> or <code>launch_gcamreport_app()</code> to launch the UI, you might get this message:</p>
-<pre><code>Listening on http://0.0.0.0:3838
-/usr/bin/xdg-open: 882: www-browser: not found
-/usr/bin/xdg-open: 882: links2: not found
-/usr/bin/xdg-open: 882: elinks: not found
-/usr/bin/xdg-open: 882: links: not found
-/usr/bin/xdg-open: 882: lynx: not found
-/usr/bin/xdg-open: 882: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:3838' </code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Listening on http<span class="sc">:</span><span class="er">//</span><span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">0.0</span><span class="sc">:</span><span class="dv">3838</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> www<span class="sc">-</span>browser<span class="sc">:</span> not found</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links2<span class="sc">:</span> not found</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> elinks<span class="sc">:</span> not found</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links<span class="sc">:</span> not found</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> lynx<span class="sc">:</span> not found</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> w3m<span class="sc">:</span> not found</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>xdg<span class="sc">-</span>open<span class="sc">:</span> no method available <span class="cf">for</span> opening <span class="st">'http://127.0.0.1:3838'</span> </span></code></pre></div>
 </summary><p>This is not an error! You simply need to either go to your Docker Desktop program and click the last started port</p>
-<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" alt="UI error" width="50%" height="50%" title="Click the last started docker port"></p>
-or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.
+<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
+<p>or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.</p>
 </details><p><br></p>
 <details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error when using the UI through Docker installation.</p>
 <p>When oppening your <em>localhost</em>, you might see this error:</p>
-<img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" alt="UI error" width="25%" height="25%" title="UI error"></summary><p><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
+<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"></p>
+</summary><p><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
 </details><p><br></p>
 <details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the Docker installation.</p>
 <p>Once the R console is opened, you might see this message after introducing any command:</p>
-<pre><code>System has not been booted with systemd as init system (PID 1). Can't operate.
-Failed to connect to bus: Host is down
-Warning message:
-In system("timedatectl", intern = TRUE) :
-   running command 'timedatectl' had status 1 </code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>System has not been booted with systemd as init <span class="fu">system</span> (PID <span class="dv">1</span>). Can<span class="st">'t operate.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">Failed to connect to bus: Host is down</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">Warning message:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">In system("timedatectl", intern = TRUE) :</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">   running command '</span>timedatectl<span class="st">' had status 1 </span></span></code></pre></div>
 </summary><p><strong>Possible solution</strong>: simply type <code>Ctrl+C</code> and run your command again.</p>
 </details>
 </div>
