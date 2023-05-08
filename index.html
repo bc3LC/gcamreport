@@ -106,77 +106,196 @@
 <div class="section level1">
 <div class="page-header"><h1 id="gcamreport">gcamreport<a class="anchor" aria-label="anchor" href="#gcamreport"></a>
 </h1></div>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg" alt="docs"></a></p>
+<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v6.0" alt="docs"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v6.0" alt="test_coverage"></a> <a href="https://codecov.io/gh/bc3LC/gcamreport" class="external-link"><img src="https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG" alt="codecov"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v6.0" alt="docker"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v6.0" alt="build"></a></p>
 <!-- ------------------------>
 <!-- ------------------------>
 <div class="section level2">
 <h2 id="contents">
-<a name="Contents"></a>Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
+<a name="contents"></a>Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
 <ul>
+<li><p><a href="#contents">Contents</a></p></li>
+<li><p><a href="#introduction">Introduction</a></p></li>
 <li>
-<a href="#gcamreport">gcamreport</a>
+<p><a href="#installation-guide">Installation Guide</a></p>
 <ul>
-<li><a href="#contents">Contents</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#installation-guide">Installation Guide</a></li>
-<li><a href="#id_-get-started">Get Started</a></li>
+<li><p><a href="#with-r">With R</a></p></li>
+<li><p><a href="#with-docker">With Docker</a></p></li>
 </ul>
 </li>
+<li><p><a href="#get-started">Getting Started</a></p></li>
+<li><p><a href="#bugs">Warning and Error Messages</a></p></li>
 </ul>
 <!-- ------------------------><!-- ------------------------>
 </div>
 <div class="section level2">
 <h2 id="introduction">
-<a name="Introduction"></a>Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<a name="introduction"></a>Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
-<p><a href="#Contents">Back to Contents</a></p>
+<p><a href="#contents">Back to Contents</a></p>
 <p><code>gcamreport</code> is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), which meets the reporting requirements of the Intergovernmental Panel on Climate Change (<a href="https://www.ipcc.ch/" class="external-link">IPCC</a>). Additionally, <code>gcamreport</code> includes an interactive user widget that allows users to create and download plots, as well as download reduced versions of the dataset in table format.</p>
 <!-- ------------------------>
 <!-- ------------------------>
 </div>
 <div class="section level2">
 <h2 id="installation-guide">
-<a name="InstallGuide"></a>Installation Guide<a class="anchor" aria-label="anchor" href="#installation-guide"></a>
+<a name="installation-guide"></a>Installation Guide<a class="anchor" aria-label="anchor" href="#installation-guide"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
-<p><a href="#Contents">Back to Contents</a></p>
+<p><a href="#contents">Back to Contents</a></p>
+<p>There are two equivalent possibilities to make use of this package:</p>
+<div class="section level3">
+<h3 id="with-r">
+<a name="with-R"></a>With R<a class="anchor" aria-label="anchor" href="#with-r"></a>
+</h3>
 <ol style="list-style-type: decimal">
-<li>Clone this repository</li>
+<li>
+<p>Requirements</p>
+<ul>
+<li><p>R (to download clik <a href="https://www.r-project.org/" class="external-link">here</a>)</p></li>
+<li><p>Rstudio (to download clik <a href="https://www.rstudio.com/" class="external-link">here</a>)</p></li>
+<li><p>Git (to download clik <a href="https://git-scm.com/downloads/" class="external-link">here</a>)</p></li>
+</ul>
+</li>
+<li><p>Clone this repository:</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
-<ol start="2" style="list-style-type: decimal">
-<li>Open the <code>gcamreport</code> folder you just cloned and double-click the <code>gcamreport.Rproj</code> file. RStudio should open the project.</li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone  https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Open the <code>gcamreport</code> folder you just cloned and double-click the <code>gcamreport.Rproj</code> file. RStudio should open the project. Load the library:</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
+<p><br></p>
+</div>
+<div class="section level3">
+<h3 id="with-docker">
+<a name="with-Docker"></a>With Docker<a class="anchor" aria-label="anchor" href="#with-docker"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p>Requirements</p>
+<ul>
+<li><p>Docker (to download click <a href="https://docs.docker.com/get-docker/" class="external-link">here</a>)</p></li>
+<li><p>Git (to download click <a href="https://git-scm.com/downloads" class="external-link">here</a>)</p></li>
+</ul>
+</li>
+<li><p>Open git bash in the folder where you want to clone the repository and clone it:</p></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Open Docker Desktop (double click the icon on your computer) and leave it running in the background.</p></li>
+<li><p>Inside a terminal (bash or cmd) pull the docker image:</p></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v1</span></code></pre></div>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: this step requires 13.5GB of free space in your computer.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Run the Docker container using your path to the <code>gcamreport</code> folder:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:v1</span></code></pre></div>
+<p>This should prompt an R terminal in your console.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Install the <code>gcamreport</code> package in the new R console:</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bc3LC/gcamreport"</span><span class="op">)</span> <span class="co">#you can skip all updates in case you are asked</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: the local files to be accessed must be inside the <code>gcamreport</code> folder, which is considered now as the root directory of the R session. Inside the R session, it is referred to as <code>/app</code>.</p>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: to use again the docker image, you can simply run steps 3, 5 and 6, since the docker image is already on your computer.</p>
+<p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
+<p><br></p>
+<!-- ------------------------>
+<!-- ------------------------>
+</div>
+</div>
+<div class="section level2">
+<h2 id="getting-started">
+<a name="get-started"></a>Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
+<!-- ------------------------>
+<!-- ------------------------>
+<p><a href="#contents">Back to Contents</a></p>
+<p>The <code>gcamreport</code> package consists of a set of functions divided into two different blocks:</p>
+<ul>
+<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/run.html">?run</a></code> in your R consolse. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
+<li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_app.html">launch_gcamreport_app()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html" class="external-link">tutorial</a> or type <code><a href="reference/launch_gcamreport_app.html">?launch_gcamreport_app</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
+</ul>
+<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been lunched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
+<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" alt="UI error" width="60%" height="60%" title="Click the last started docker port"></p>
+<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.</p>
+<p><br></p>
 <!-- ------------------------>
 <!-- ------------------------>
 </div>
 <div class="section level2">
-<h2 id="id_-get-started">
-<a name="GetStarted"></a> Get Started<a class="anchor" aria-label="anchor" href="#id_-get-started"></a>
+<h2 id="warning-and-error-messages">
+<a name="bugs"></a>Warning and Error Messages<a class="anchor" aria-label="anchor" href="#warning-and-error-messages"></a>
 </h2>
 <!-- ------------------------>
 <!-- ------------------------>
-<p><a href="#Contents">Back to Contents</a></p>
-<p>The package consists of a set of functions divided into two different blocks:</p>
+<p><a href="#contents">Back to Contents</a></p>
+<p>Some typical and already-known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
+<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error on “run(”path/to/your/data/myData.dat”)”</p>
+<p>In your R console, you might see this error:</p>
+<pre><code>&gt; run("path/to/your/data/myData.dat")
+[1] "Loading project..."
+[1] "Loading data, performing checks, and saving output..."
+[1] "ag_demand_clean"
+Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
+  getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.</code></pre>
+</summary><p>This problem is due to a wrong path specification.</p>
+<p><strong>Possible solution</strong>: make sure that you specified correctly the path. In addition:</p>
 <ul>
-<li><p>Dataset generation. Project creation/loading and automatically saved generated dataset. Main function: <code>run</code>.</p></li>
-<li><p>Interactive user block. Interactive widget to display in table format the dataset. Possibility to filter, reorder, and download. Display and download plots by variables, regions, and scenarios. Main function: <code>launch_app</code>.</p></li>
+<li><p>In case you are using <code>gcamreport</code> package following the <a href="#with-r">R installation</a>, try to copy the whole path to your data, for instance <code>C:\Users\username\Documents\path\to\your\data\myData.dat</code> if you are using a Windows distribution.</p></li>
+<li>
+<p>In case you are using <code>gcamreport</code> package following the <a href="#with-docker">Docker installation</a>:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>make sure that your data is inside the <code>gcamreport</code> folder.</p></li>
+<li><p>make sure that you type correctly the path to your <code>gcamreport</code> folder when running the docker image (5th step in the <a href="#with-docker">Docker section</a>)</p></li>
+<li><p>make sure that you are pointing correctly to your data. For example, if in the <code>gcamreport</code> folder you have a folder called <code>amazingData</code> with your dataset <code>myData.dat</code>, you should refer to it as</p></li>
+</ol>
+</li>
 </ul>
-<p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include:</p>
-<ul>
-<li><p>Energy shares</p></li>
-<li><p>Land shares</p></li>
-<li><p>Other</p></li>
-</ul>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
+<span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># option 2: partial path</span></span>
+<span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+</details><p><br></p>
+<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Wired message when launching the UI when using the Docker installation.</p>
+<p>After using the functions <code>run()</code> or <code>launch_gcamreport_app()</code> to launch the UI, you might get this message:</p>
+<pre><code>Listening on http://0.0.0.0:3838
+/usr/bin/xdg-open: 882: www-browser: not found
+/usr/bin/xdg-open: 882: links2: not found
+/usr/bin/xdg-open: 882: elinks: not found
+/usr/bin/xdg-open: 882: links: not found
+/usr/bin/xdg-open: 882: lynx: not found
+/usr/bin/xdg-open: 882: w3m: not found
+xdg-open: no method available for opening 'http://127.0.0.1:3838' </code></pre>
+</summary><p>This is not an error! You simply need to either go to your Docker Desktop program and click the last started port</p>
+<p><img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" alt="UI error" width="50%" height="50%" title="Click the last started docker port"></p>
+or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.
+</details><p><br></p>
+<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error when using the UI through Docker installation.</p>
+<p>When oppening your <em>localhost</em>, you might see this error:</p>
+<img src="https://github.com/bc3LC/gcamreport/blob/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" alt="UI error" width="25%" height="25%" title="UI error"></summary><p><strong>Possible solution</strong>: your app is not running. Try to either use the <code><a href="reference/run.html">run()</a></code> function or the <code>launch_app_function()</code>.</p>
+</details><p><br></p>
+<details><summary><p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the Docker installation.</p>
+<p>Once the R console is opened, you might see this message after introducing any command:</p>
+<pre><code>System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+Warning message:
+In system("timedatectl", intern = TRUE) :
+   running command 'timedatectl' had status 1 </code></pre>
+</summary><p><strong>Possible solution</strong>: simply type <code>Ctrl+C</code> and run your command again.</p>
+</details>
 </div>
 </div>
   </div>

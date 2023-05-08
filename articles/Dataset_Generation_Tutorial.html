@@ -114,12 +114,15 @@
 
     
     
+<p>To see all possiblities of the <code><a href="../reference/run.html">run()</a></code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html" class="external-link">here</a>.</p>
 <div class="section level2">
-<h2 id="example-1-generate-dataset-from-a-project">Example 1: generate dataset from a project<a class="anchor" aria-label="anchor" href="#example-1-generate-dataset-from-a-project"></a>
+<h2 id="example-1-generate-a-dataset-from-a-project">Example 1: generate a dataset from a project<a class="anchor" aria-label="anchor" href="#example-1-generate-a-dataset-from-a-project"></a>
 </h2>
 <p>Assume you have a project called <code>myProj.dat</code> and are
 willing to generate a dataset meeting the reporting requirements of the
-<a href="https://www.ipcc.ch/" class="external-link">IPCC</a>.</p>
+<a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. With the <code>run</code>
+function, it will be generated and automatically saved in the same
+folder where <code>myProj.dat</code> is.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
@@ -127,19 +130,22 @@ willing to generate a dataset meeting the reporting requirements of the
 <span><span class="co">## -- store the project path in a variable.</span></span>
 <span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span>
 <span><span class="co"># Notice that the extension is included. Accepted extensions: .dat &amp; .proj.</span></span>
+<span><span class="co"># ATENTION: in case you followed the Docker installation, you should store your project data inside the gcamreport folder and your root directory is called "/app". Thus, your path will be something like "/app/myProj.dat".</span></span>
 <span></span>
 <span><span class="co">## -- generate the dataset until 2050. </span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>prj_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_app <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_app <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co"># Notice that it will automatically be saved in "/path/to/project/myproj_ipcc_report.csv". The terminal will output the verifications done and their result.</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example-2-generate-dataset-from-a-database">Example 2: generate dataset from a database<a class="anchor" aria-label="anchor" href="#example-2-generate-dataset-from-a-database"></a>
+<h2 id="example-2-generate-a-dataset-from-a-database">Example 2: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example-2-generate-a-dataset-from-a-database"></a>
 </h2>
 <p>Assume you have a database called <code>myDb</code> in a folder named
 <code>dbFolder</code> and are willing to generate a dataset meeting the
 reporting requirements of the <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>
 for several scenarios: <code>scen1</code>, <code>scen2</code>, and
-<code>scen3</code>.</p>
+<code>scen3</code>. With the <code>run</code> function, it will be
+generated and automatically saved in the same folder where
+<code>myDb</code> is.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
@@ -150,11 +156,72 @@ for several scenarios: <code>scen1</code>, <code>scen2</code>, and
 <span><span class="va">querypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/queries"</span></span>
 <span><span class="va">projname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span>
-<span><span class="co"># Notice that the extension is included in the "projname". Accepted extensions: .dat &amp; .proj.</span></span>
+<span><span class="co"># Notice that the extension is included in the project name. Accepted extensions: .dat &amp; .proj.</span></span>
+<span><span class="co"># ATENTION: in case you followed the Docker installation, you should store your database inside the gcamreport folder and your root directory is called "/app". Thus, your database path will be something like "/app/database".</span></span>
 <span></span>
 <span><span class="co">## -- generate the dataset until 2075. </span></span>
 <span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">projname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2075</span>, launch_app <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co"># Notice that it will automatically be saved in "/path/to/database/awesomeProj_ipcc_report.csv". The terminal will output the verifications done and their result.</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="troubleshooting-for-the-run-function">Troubleshooting for the <code>run()</code> function<a class="anchor" aria-label="anchor" href="#troubleshooting-for-the-run-function"></a>
+</h2>
+<div class="section level4">
+<h4 id="a-error-on-runpathtoyourdatamydata-dat">A) Error on <code>run("path/to/your/data/myData.dat")</code><a class="anchor" aria-label="anchor" href="#a-error-on-runpathtoyourdatamydata-dat"></a>
+</h4>
+<p>In your R console, you might see this error:</p>
+<pre><code>&gt; run("path/to/your/data/myData.dat")
+[1] "Loading project..."
+[1] "Loading data, performing checks, and saving output..."
+[1] "ag_demand_clean"
+Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
+  getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.</code></pre>
+<p>This problem is due to a wrong path specification.</p>
+<p><strong>Possible solution</strong>: make sure that you specified
+correctly the path. In addition:</p>
+<ul>
+<li><p>In case you are using <code>gcamreport</code> package following
+the <a href="#with-r">R installation</a>, try to copy the whole path to
+your data, for instance
+<code>C:\Users\username\Documents\path\to\your\data\myData.dat</code> if
+you are using a Windows distribution.</p></li>
+<li>
+<p>In case you are using <code>gcamreport</code> package following
+the <a href="#with-docker">Docker installation</a>:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>make sure that your data is inside the <code>gcamreport</code>
+folder.</p></li>
+<li><p>make sure that you type correctly the path to your
+<code>gcamreport</code> folder when running the docker image (5th step
+in the <a href="#with-docker">Docker section</a>)</p></li>
+<li><p>make sure that you are pointing correctly to your data. For
+example, if in the <code>gcamreport</code> folder you have a folder
+called <code>amazingData</code> with your dataset
+<code>myData.dat</code>, you should refer to it as</p></li>
+</ol>
+</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
+<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># option 2: partial path</span></span>
+<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="b-error-related-to-system-when-using-the-docker-installation-">B) Error related to <em>system</em> when using the Docker
+installation.<a class="anchor" aria-label="anchor" href="#b-error-related-to-system-when-using-the-docker-installation-"></a>
+</h4>
+<p>Once the R console is opened, you might see this message after
+introducing any command:</p>
+<pre><code>System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+Warning message:
+In system("timedatectl", intern = TRUE) :
+   running command 'timedatectl' had status 1 </code></pre>
+<p><strong>Possible solution</strong>: simply type <code>Ctrl+C</code>
+and run your command again.</p>
+</div>
 </div>
   </div>
 
