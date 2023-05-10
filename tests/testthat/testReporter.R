@@ -27,3 +27,27 @@ test_that("Test4. run function test: dataset saved with default file_name", {
 
   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
 })
+
+test_that("Test5. load variable test", {
+  vv = data.frame('name' = 'GDP_MER_clean',
+                  'required' = TRUE,
+                  'fun' = 'get_gdp_mer',
+                  'dependencies' = as.list(NA),
+                  'checks' = as.list(NA))
+
+  load_variable(vv)
+
+  testthat::expect(exists("GDP_MER_clean"), 'Loading variables function is broken.')
+})
+
+test_that("Test6. get functions", {
+  get_elec_capacity_tot()
+  testthat::expect(exists("elec_capacity_tot_clean"), 'get_elec_capacity_tot() function is broken.')
+  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test6.1.RData')))
+  testthat::expect_equal(elec_capacity_tot_clean, testResult)
+
+  get_elec_capital()
+  testthat::expect(exists("elec_capital_clean"), 'get_elec_capital() function is broken.')
+  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test6.2.RData')))
+  testthat::expect_equal(elec_capital_clean, testResult)
+})

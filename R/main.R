@@ -92,14 +92,14 @@ load_variable = function(var){
 #' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
 #' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
-#' @param saveOutput: if TRUE, save reporting data. Do not save otherwise.
+#' @param save_output: if TRUE, save reporting data. Do not save otherwise.
 #' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
 #' the same name than the specified project_path, with 'ipcc_report' tag. CSV output.
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
-               final_year = 2100, desired_variables = 'All', saveOutput = TRUE, file_name = NULL, launch_ui = TRUE) {
+               final_year = 2100, desired_variables = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
@@ -201,7 +201,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
 
   # bind and save results
   do_bind_results()
-  if (saveOutput) {
+  if (save_output) {
     if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
       if (!dir.exists(paste0(here::here(), "/output/"))){
         dir.create(paste0(here::here(), "/output/"))

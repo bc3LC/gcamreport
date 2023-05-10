@@ -70,12 +70,23 @@ There are two equivalent possibilities to make use of this package:
 git clone  https://github.com/bc3LC/gcamreport.git
 ```
 
-3.  Open the `gcamreport` folder you just cloned and double-click the `gcamreport.Rproj` file. RStudio should open the project. Load the library:
+3.  Load `gcamreport` package. There are two options:
 
-``` r
-install.packages('devtools')
-devtools::load_all()
-```
+    a) Open the `gcamreport` folder you just cloned and double-click the `gcamreport.Rproj` file. RStudio should open the project. Load the library:
+
+    ``` r
+    install.packages('devtools')
+    devtools::load_all()
+    ```
+    
+    b) Open Rstudio (it does not matter the Rproject) and load the library:
+    
+    ``` r
+    install.packages('remotes')
+    remotes::install_github("bc3LC/gcamreport") #you can skip all updates in case you are asked
+    library(gcamreport)
+    ```
+<br>
 
 Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
@@ -238,7 +249,7 @@ or open this url <http://localhost:4000> in your favourite browser.
 
 When oppening your *localhost*, you might see this error:
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="25%" height="25%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
 
 <details>
 

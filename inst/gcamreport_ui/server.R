@@ -234,12 +234,21 @@ server <- function(input, output, session) {
                        if (length(errors) < 1) {
                          # insert a single plot output object into the web page
 
+                         # restrict the dataset to the user's choices
+                         data_sample = do_data_sample(sdata,
+                                                      sel$scen, sel$years,
+                                                      sel$cols, sel$vars_ini,
+                                                      sel$reg_ini, sel$basic_reg, sel$basic_vars)
+                         data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+                           dplyr::mutate(values = as.numeric(as.character(values))) %>%
+                           dplyr::mutate(year = as.numeric(as.character(year)))
+
                          # compute the display and download height
                          if (input$reg_grouping == 'Grouped Regions') {
                            hh_disp = 450
                            hh_dwn = 15
                          } else {
-                           hh_disp = compute_height(sel$reg)
+                           hh_disp = compute_height(sel$reg[sel$reg %in% unique(data_sample$Region)])
                            hh_dwn = hh_disp/20
                          }
 
@@ -256,15 +265,6 @@ server <- function(input, output, session) {
                            # convert the list to a tagList to display properly the list of items
                            do.call(tagList, plot_output_list)
                          })
-
-                         # restrict the dataset to the user's choices
-                         data_sample = do_data_sample(sdata,
-                                                      sel$scen, sel$years,
-                                                      sel$cols, sel$vars_ini,
-                                                      sel$reg_ini, sel$basic_reg, sel$basic_vars)
-                         data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-                           dplyr::mutate(values = as.numeric(as.character(values))) %>%
-                           dplyr::mutate(year = as.numeric(as.character(year)))
 
                          # title of the plot
                          tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
@@ -367,7 +367,7 @@ server <- function(input, output, session) {
                            hh_disp = 450
                            hh_dwn = 15
                          } else {
-                           hh_disp = compute_height(sel$reg)
+                           hh_disp = compute_height(sel$reg[sel$reg %in% unique(data_sample$Region)])
                            hh_dwn = hh_disp/20
                          }
 
@@ -492,12 +492,21 @@ server <- function(input, output, session) {
         if (length(errors) < 1) {
           # insert a single plot output object into the web page
 
+          # restrict the dataset to the user's choices
+          data_sample = do_data_sample(sdata,
+                                       sel$scen, sel$years,
+                                       sel$cols, sel$vars_ini,
+                                       sel$reg_ini, sel$basic_reg, sel$basic_vars)
+          data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
+            dplyr::mutate(values = as.numeric(as.character(values))) %>%
+            dplyr::mutate(year = as.numeric(as.character(year)))
+
           # compute the display and download height
           if (input$reg_grouping == 'Grouped Regions') {
             hh_disp = 450
             hh_dwn = 15
           } else {
-            hh_disp = compute_height(sel$reg)
+            hh_disp = compute_height(sel$reg[sel$reg %in% unique(data_sample$Region)])
             hh_dwn = hh_disp/20
           }
 
@@ -514,15 +523,6 @@ server <- function(input, output, session) {
             # convert the list to a tagListto display properly the list of items
             do.call(tagList, plot_output_list)
           })
-
-          # restrict the dataset to the user's choices
-          data_sample = do_data_sample(sdata,
-                                       sel$scen, sel$years,
-                                       sel$cols, sel$vars_ini,
-                                       sel$reg_ini, sel$basic_reg, sel$basic_vars)
-          data_sample = tidyr::pivot_longer(data_sample, cols = 6:ncol(data_sample), names_to = 'year', values_to = 'values') %>%
-            dplyr::mutate(values = as.numeric(as.character(values))) %>%
-            dplyr::mutate(year = as.numeric(as.character(year)))
 
           # title of the plot
           tt = check_vars = sub("\\|.*", "", stringr::str_extract(unique(data_sample$Variable)[1], "(.*?)(\\||$)"))
@@ -625,7 +625,7 @@ server <- function(input, output, session) {
             hh_disp = 400
             hh_dwn = 15
           } else {
-            hh_disp = compute_height(sel$reg)
+            hh_disp = compute_height(sel$reg[sel$reg %in% unique(data_sample$Region)])
             hh_dwn = hh_disp/20
           }
 

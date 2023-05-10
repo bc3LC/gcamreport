@@ -1,7 +1,16 @@
 title: gcamreport
+url: https://bc3lc.github.io/gcamreport/
+template:
+  bootstrap: 5
+development:
+  model: auto
 
 navbar:
-  type: inverse
+  structure:
+    left:  [intro, articles, reference, news]
+    right: [search, github]
+
+
   left:
     - icon: fa-home
       href: index.html
@@ -12,15 +21,15 @@ navbar:
          href: articles/Dataset_Generation_Tutorial.html
       -  text: Interactive UI Tutorial
          href: articles/Interactive_UI_Tutorial.html
-    - icon: fa-solid fa-seedling
-      text: "Version Guide"
+    - text: "Version Guide"
+      icon: fa-solid fa-seedling
       href: articles/Version_Guide.html
-    - icon: fa-file-code-o
-      text: "Reference"
+    - text: "Reference"
+      icon: fa-file-code-o
       href: reference/index.html
-    - icon: fa-newspaper-o
-      text: "News"
+    - text: "News"
+      icon: fa-newspaper-o
       href: news/index.html
-      
-toc:
-  depth: 2
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/bc3LC/gcamreport

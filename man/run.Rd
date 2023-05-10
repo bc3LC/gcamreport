@@ -13,7 +13,7 @@ run(
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
-  saveOutput = TRUE,
+  save_output = TRUE,
   file_name = NULL,
   launch_ui = TRUE
 )
@@ -41,7 +41,7 @@ elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_tran
 ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
 
-\item{saveOutput:}{if TRUE, save reporting data. Do not save otherwise.}
+\item{save_output:}{if TRUE, save reporting data. Do not save otherwise.}
 
 \item{file_name:}{file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
 the same name than the specified project_path, with 'ipcc_report' tag. CSV output.}

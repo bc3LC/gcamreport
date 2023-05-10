@@ -1,5 +1,11 @@
-# gcamreport 0.1.0 (Under development)
+# gcamreport 6.0.0-gas
 
-## New features
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7908004.svg)](https://doi.org/10.5281/zenodo.7908004)
 
-## Bug Fixes
+Compatible with GCAM 6.0 with gas features.
+
+# gcamreport 6.0.0
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7907666.svg)](https://doi.org/10.5281/zenodo.7907666)
+
+First release. Compatible with GCAM 6.0.

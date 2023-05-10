@@ -35,4 +35,13 @@ test_that("Test1. test tree functions", {
   testResult7 = check_user_choices_plot(c('var1'), c('scen1','scen2'), c('year1','year2'), 'reg1', grouped = FALSE)
   testExpect7 = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/message7.RData')))
   testthat::expect_equal(testResult7, testExpect7)
+
+  # compute_height
+  testResult8 = compute_height(c(reg_cont[,2],'World'))
+  testExpect8 = 960
+  testthat::expect_equal(testResult8, testExpect8)
+
+  testResult9 = compute_height(c('MAF','LAM'))
+  testExpect9 = 325
+  testthat::expect_equal(testResult9, testExpect9)
 })
