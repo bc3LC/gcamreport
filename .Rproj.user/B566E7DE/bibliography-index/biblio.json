@@ -1,0 +1,536 @@
+{
+    "sources": [
+        {
+            "ISSN": "2052-4463",
+            "author": [
+                {
+                    "family": "Lin",
+                    "given": "Dawei"
+                },
+                {
+                    "family": "Crabtree",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Dillo",
+                    "given": "Ingrid"
+                },
+                {
+                    "family": "Downs",
+                    "given": "Robert R"
+                },
+                {
+                    "family": "Edmunds",
+                    "given": "Rorie"
+                },
+                {
+                    "family": "Giaretta",
+                    "given": "David"
+                },
+                {
+                    "family": "De Giusti",
+                    "given": "Marisa"
+                },
+                {
+                    "family": "L’Hours",
+                    "given": "Hervé"
+                },
+                {
+                    "family": "Hugo",
+                    "given": "Wim"
+                },
+                {
+                    "family": "Jenkyns",
+                    "given": "Reyna"
+                }
+            ],
+            "container-title": "Scientific Data",
+            "container-title-short": "Scientific Data",
+            "id": "lin2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "Publisher: Nature Publishing Group UK London",
+            "page": "144",
+            "title": "The TRUST principles for digital repositories",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.1038/sdata.2016.18",
+            "ISSN": "2052-4463",
+            "URL": "https://www.nature.com/articles/sdata201618",
+            "abstract": "In the realm of its Open Science strategy, the European Commission (EC) has announced its intentions to promote open access to research data resulting from publically funded research under Horizon 2020 to increase the circulation and exploitation of knowledge. Openness should become the default case respecting constraints to privacy, national security and intellectual property rights. For making open science happen, two major pillars need to be addressed. Data needs to be FAIR (Findable, Accessible, Interoperable, Reusable) to overcome the fragmentation and inefficiencies and thus to increase data reuse effectively. Commissioner Moedas made clear that \"Europe’s final transition must be one from fragmented data sets to an integrated European Open Science Cloud (EOSC)\". By 2020, all European researchers need to be able depositing, accessing and analyzing European scientific data through the EOSC. EOSC and FAIR research data are closely related and the EC is working out phases for implementing EOSC and action plans to make data FAIR.",
+            "author": [
+                {
+                    "family": "Wilkinson",
+                    "given": "Mark D"
+                },
+                {
+                    "family": "Dumontier",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Aalbersberg",
+                    "given": "IJsbrand Jan"
+                },
+                {
+                    "family": "Appleton",
+                    "given": "Gabrielle"
+                },
+                {
+                    "family": "Axton",
+                    "given": "Myles"
+                },
+                {
+                    "family": "Baak",
+                    "given": "Arie"
+                },
+                {
+                    "family": "Blomberg",
+                    "given": "Niklas"
+                },
+                {
+                    "family": "Boiten",
+                    "given": "Jan-Willem"
+                },
+                {
+                    "dropping-particle": "da",
+                    "family": "Silva Santos",
+                    "given": "Luiz Bonino"
+                },
+                {
+                    "family": "Bourne",
+                    "given": "Philip E"
+                }
+            ],
+            "container-title": "Scientific data",
+            "container-title-short": "Scientific data",
+            "id": "wilkinson2016",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        3,
+                        15
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "note": "Publisher: Nature Publishing Group",
+            "page": "160018",
+            "title": "The FAIR guiding principles for scientific data management and stewardship",
+            "type": "article-journal",
+            "volume": "3"
+        },
+        {
+            "DOI": "10.1017/9781009157926",
+            "author": [
+                {
+                    "literal": "Shukla, J."
+                },
+                {
+                    "literal": "Skea, R."
+                },
+                {
+                    "literal": "Slade, A."
+                },
+                {
+                    "literal": "Al Khourdajie, R"
+                },
+                {
+                    "literal": "R. van Diemen"
+                },
+                {
+                    "literal": "D. McCollum"
+                },
+                {
+                    "literal": "M. Pathak"
+                },
+                {
+                    "literal": "S. Some"
+                },
+                {
+                    "literal": "P. Vyas"
+                },
+                {
+                    "literal": "R. Fradera"
+                },
+                {
+                    "literal": "M. Belkacemi"
+                },
+                {
+                    "literal": "A. Hasija"
+                },
+                {
+                    "literal": "G. Lisboa"
+                },
+                {
+                    "literal": "S. Luz"
+                },
+                {
+                    "literal": "J. Malley"
+                },
+                {
+                    "literal": "et al."
+                }
+            ],
+            "container-title": "Cambridge University Press, Cambridge, UK and New York, NY, USA",
+            "id": "shukla2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "keyword": "ipcc, wgiii",
+            "language": "en-US",
+            "title": "Climate change 2022 mitigation of climate change",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1002/wcc.727",
+            "ISSN": "1757-7780, 1757-7799",
+            "URL": "https://onlinelibrary.wiley.com/doi/10.1002/wcc.727",
+            "abstract": "Integrated assessment models (IAMs) connect trends in future socioeconomic and technological development with impacts on the environment, such as global climate change. They occupy a critical position at the global sciencepolicy interface. IAMs and associated scenarios have come under intense scrutiny, with critiques addressing both methodological and substantive issues, such as land use, carbon dioxide removal and technology performance. Criticisms have also addressed the transparency of IAM methods and assumptions as well as the transparency of the Intergovernmental Panel on Climate Change (IPCC) assessment of IAMs. This paper, authored by the co-chairs of IPCC Working Group III and members of the Technical Support Unit, documents activities aiming to enhance the transparency of IAMs and their assessment. It includes a history of IPCC’s approach to scenarios covering the formation of the Integrated Assessment Modeling Consortium (IAMC) in 2007 and the emergence of the approach by which IPCC facilitates the development of scenarios, but does not produce them itself. An IPCC Expert Meeting at the start of the current assessment cycle made transparency recommendations targeted at both the research community and IPCC. The community has taken steps to “open the black box” by moving toward open-source and web-publishing IAM documentation. IPCC has included an Annex to its next report focusing on scenarios and modeling methodologies. An open call for scenario data linked to the current IPCC report includes an expanded set of input and output variables. This paper ends with suggested criteria for measuring the success of these efforts to improve transparency.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        5,
+                        8
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Skea",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Shukla",
+                    "given": "Priyadarshi"
+                },
+                {
+                    "family": "Al Khourdajie",
+                    "given": "Alaa"
+                },
+                {
+                    "family": "McCollum",
+                    "given": "David"
+                }
+            ],
+            "container-title": "WIREs Climate Change",
+            "container-title-short": "WIREs Climate Change",
+            "id": "skea2021",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Intergovernmental panel on climate change: Transparency and integrated assessment modeling",
+            "title-short": "Intergovernmental panel on climate change",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "DOI": "10.1038/nclimate3199",
+            "ISSN": "1758-678X, 1758-6798",
+            "URL": "http://www.nature.com/articles/nclimate3199",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        5,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Marangoni",
+                    "given": "G."
+                },
+                {
+                    "family": "Tavoni",
+                    "given": "M."
+                },
+                {
+                    "family": "Bosetti",
+                    "given": "V."
+                },
+                {
+                    "family": "Borgonovo",
+                    "given": "E."
+                },
+                {
+                    "family": "Capros",
+                    "given": "P."
+                },
+                {
+                    "family": "Fricko",
+                    "given": "O."
+                },
+                {
+                    "family": "Gernaat",
+                    "given": "D. E. H. J."
+                },
+                {
+                    "family": "Guivarch",
+                    "given": "C."
+                },
+                {
+                    "family": "Havlik",
+                    "given": "P."
+                },
+                {
+                    "family": "Huppmann",
+                    "given": "D."
+                },
+                {
+                    "family": "Johnson",
+                    "given": "N."
+                },
+                {
+                    "family": "Karkatsoulis",
+                    "given": "P."
+                },
+                {
+                    "family": "Keppo",
+                    "given": "I."
+                },
+                {
+                    "family": "Krey",
+                    "given": "V."
+                },
+                {
+                    "family": "Ó Broin",
+                    "given": "E."
+                },
+                {
+                    "family": "Price",
+                    "given": "J."
+                },
+                {
+                    "family": "Van Vuuren",
+                    "given": "D. P."
+                }
+            ],
+            "container-title": "Nature Climate Change",
+            "container-title-short": "Nature Clim Change",
+            "id": "marangoni2017",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        2
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "113-117",
+            "title": "Sensitivity of projected long-term CO2 emissions across the shared socioeconomic pathways",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.1038/s41558-021-01215-2",
+            "ISSN": "1758-678X, 1758-6798",
+            "URL": "https://www.nature.com/articles/s41558-021-01215-2",
+            "author": [
+                {
+                    "family": "Riahi",
+                    "given": "Keywan"
+                },
+                {
+                    "family": "Bertram",
+                    "given": "Christoph"
+                },
+                {
+                    "family": "Huppmann",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Rogelj",
+                    "given": "Joeri"
+                },
+                {
+                    "family": "Bosetti",
+                    "given": "Valentina"
+                },
+                {
+                    "family": "Cabardos",
+                    "given": "Anique-Marie"
+                },
+                {
+                    "family": "Deppermann",
+                    "given": "Andre"
+                },
+                {
+                    "family": "Drouet",
+                    "given": "Laurent"
+                },
+                {
+                    "family": "Frank",
+                    "given": "Stefan"
+                },
+                {
+                    "family": "Fricko",
+                    "given": "Oliver"
+                }
+            ],
+            "container-title": "Nature Climate Change",
+            "container-title-short": "Nature Climate Change",
+            "id": "riahi2021",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        12
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "note": "Publisher: Nature Publishing Group UK London",
+            "page": "1063-1069",
+            "title": "Cost and attainability of meeting stringent climate targets without overshoot",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.5194/gmd-12-677-2019",
+            "ISSN": "1991-9603",
+            "URL": "https://gmd.copernicus.org/articles/12/677/2019/",
+            "abstract": "This paper describes GCAM v5.1, an open source model that represents the linkages between energy, water, land, climate, and economic systems. GCAM is a market equilibrium model, is global in scope, and operates from 1990 to 2100 in 5-year time steps. It can be used to examine, for example, how changes in population, income, or technology cost might alter crop production, energy demand, or water withdrawals, or how changes in one region’s demand for energy affect energy, water, and land in other regions. This paper describes the model, including its assumptions, inputs, and outputs. We then use 11 scenarios, varying the socioeconomic and climate policy assumptions, to illustrate the results from the model. The resulting scenarios demonstrate a wide range of potential future energy, water, and land uses. We compare the results from GCAM v5.1 to historical data and to future scenario simulations from earlier versions of GCAM and from other models. Finally, we provide information on how to obtain the model.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        5,
+                        8
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Calvin",
+                    "given": "Katherine"
+                },
+                {
+                    "family": "Patel",
+                    "given": "Pralit"
+                },
+                {
+                    "family": "Clarke",
+                    "given": "Leon"
+                },
+                {
+                    "family": "Asrar",
+                    "given": "Ghassem"
+                },
+                {
+                    "family": "Bond-Lamberty",
+                    "given": "Ben"
+                },
+                {
+                    "family": "Cui",
+                    "given": "Ryna Yiyun"
+                },
+                {
+                    "family": "Di Vittorio",
+                    "given": "Alan"
+                },
+                {
+                    "family": "Dorheim",
+                    "given": "Kalyn"
+                },
+                {
+                    "family": "Edmonds",
+                    "given": "Jae"
+                },
+                {
+                    "family": "Hartin",
+                    "given": "Corinne"
+                },
+                {
+                    "family": "Hejazi",
+                    "given": "Mohamad"
+                },
+                {
+                    "family": "Horowitz",
+                    "given": "Russell"
+                },
+                {
+                    "family": "Iyer",
+                    "given": "Gokul"
+                },
+                {
+                    "family": "Kyle",
+                    "given": "Page"
+                },
+                {
+                    "family": "Kim",
+                    "given": "Sonny"
+                },
+                {
+                    "family": "Link",
+                    "given": "Robert"
+                },
+                {
+                    "family": "McJeon",
+                    "given": "Haewon"
+                },
+                {
+                    "family": "Smith",
+                    "given": "Steven J."
+                },
+                {
+                    "family": "Snyder",
+                    "given": "Abigail"
+                },
+                {
+                    "family": "Waldhoff",
+                    "given": "Stephanie"
+                },
+                {
+                    "family": "Wise",
+                    "given": "Marshall"
+                }
+            ],
+            "container-title": "Geoscientific Model Development",
+            "container-title-short": "Geosci. Model Dev.",
+            "id": "calvin2019",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        2,
+                        15
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "677-698",
+            "title": "GCAM v5.1: Representing the linkages between energy, water, land, climate, and economic systems",
+            "title-short": "GCAM v5.1",
+            "type": "article-journal",
+            "volume": "12"
+        }
+    ],
+    "project_biblios": []
+}

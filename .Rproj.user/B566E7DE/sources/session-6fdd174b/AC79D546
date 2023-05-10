@@ -1,0 +1,26 @@
+{
+    "id": "AC79D546",
+    "path": "~/IAM_COMPACT/gcamreport/inst/gcamreport_app/server.R",
+    "project_path": "inst/gcamreport_app/server.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1683723020519.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "364,48",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683723405,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683723405805,
+    "read_only": false,
+    "read_only_alternatives": []
+}
