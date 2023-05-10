@@ -29,15 +29,11 @@ test_that("Test4. run function test: dataset saved with default file_name", {
 })
 
 test_that("Test5. load variable test", {
-  vv = data.frame('name' = 'GDP_MER_clean',
-                  'required' = TRUE,
-                  'fun' = 'get_gdp_mer',
-                  'dependencies' = as.list(NA),
-                  'checks' = as.list(NA))
+  vv = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/results_test5.RData')))
 
-  load_variable(vv)
+  load_variable(vv[3,])
 
-  testthat::expect(exists("GDP_MER_clean"), 'Loading variables function is broken.')
+  testthat::expect(exists("ag_prices_wld"), 'Loading variables function is broken.')
 })
 
 test_that("Test6. get functions", {
