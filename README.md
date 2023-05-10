@@ -144,7 +144,7 @@ The `gcamreport` package consists of a set of functions divided into two differe
 
 -   Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of [IPCC](https://www.ipcc.ch/). Main function: `run()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `?run` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
--   Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: `launch_gcamreport_app()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `?launch_gcamreport_app` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
+-   Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: `launch_gcamreport_ui()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `?launch_gcamreport_ui` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
 **Note**:exclamation:: if you followed the [Docker installation](#with-Docker), to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <http://localhost:4000> in the browser.
 
@@ -209,7 +209,7 @@ This problem is due to a wrong path specification. Thus, make sure that you spec
 
 :computer: Wired message when launching the UI when using the Docker installation.
 
-After using the functions `run()` or `launch_gcamreport_app()` to launch the UI, you might get this message:
+After using the functions `run()` or `launch_gcamreport_ui()` to launch the UI, you might get this message:
 
       Listening on http://0.0.0.0:3838
       /usr/bin/xdg-open: 882: www-browser: not found
@@ -244,7 +244,7 @@ When oppening your *localhost*, you might see this error:
 
 <summary>**Possible solution**</summary>
 
-Your app is not running. Try to either use the `run()` function or the `launch_app_function()`.
+Your UI is not running. Try to either use the `run()` function or the `launch_gcamreport_ui()`.
 
 </details>
 

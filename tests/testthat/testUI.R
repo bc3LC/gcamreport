@@ -1,7 +1,7 @@
 library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
 
 test_that("Test1. test tree functions", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_app = FALSE)
+  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_ui = FALSE)
   # do_mount_tree with regions
   testResult1 = do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   testExpect1 = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/tree_reg_test.RData')))

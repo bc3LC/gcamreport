@@ -2,6 +2,22 @@
 #                         APP ANCILLARY FUNCTIONS                       #
 #########################################################################
 
+
+#' compute_height
+#'
+#' Return perfect heigh of rendered plots with ungrouped regions
+#' @param reg_all: regions' vector
+#' @keywords internal
+#' @importFrom magrittr %>%
+#' @export
+compute_height <- function(reg_all) {
+  reg_clean = setdiff(reg_all, c('MAF','LAM','OECD90','REF','ASIA'))
+  h = dplyr::if_else(length(reg_clean) < 3, 325, 160*ceiling(sqrt(length(reg_clean))))
+
+  return(h)
+}
+
+
 #' is_leaf
 #'
 #' Return TRUE if it is a leaf node; FALSE otherwise.

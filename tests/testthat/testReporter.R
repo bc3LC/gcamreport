@@ -6,7 +6,7 @@ test_that("Test1. load project function test", {
 })
 
 test_that("Test2. run function test: dataset created", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_app = FALSE)
+  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_ui = FALSE)
   testthat::expect(!is.null(final_data) & dplyr::n_distinct(final_data) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 })
 
@@ -14,7 +14,7 @@ test_that("Test3. run function test: dataset saved with file_name specified", {
   if (!dir.exists(paste0(rprojroot::find_root(rprojroot::is_testthat), "/testOutputs/"))){
     dir.create(paste0(rprojroot::find_root(rprojroot::is_testthat), "/testOutputs/"))
   }
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_app = FALSE,
+  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_ui = FALSE,
       file_name = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.csv'))
   testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.csv'))
 

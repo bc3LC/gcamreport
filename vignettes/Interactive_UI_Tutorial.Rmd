@@ -7,34 +7,34 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html), and of the `launch_gcamreport_app()`, look [here](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_app.html).
+To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html), and of the `launch_gcamreport_ui()`, look [here](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html).
 
-## Example 1: launch app when generating the dataset
+## Example 1: launch UI when generating the dataset
 
-When running the main function `run` (see [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport//articles//Dataset_Generation_Tutorial.html) for more information), simply set `launch_app` to `TRUE` or do not specify anything.
+When running the main function `run` (see [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport//articles//Dataset_Generation_Tutorial.html) for more information), simply set `launch_ui` to `TRUE` or do not specify anything.
 
 ``` r
 ## -- option 1:
-run(..., launch_app = TRUE)
+run(..., launch_ui = TRUE)
 
 ## -- option 2.
-run(...) # without specifying launch_app
+run(...) # without specifying launch_ui
 ```
 
-## Example 2: launch app once the dataset has been generated
+## Example 2: launch UI once the dataset has been generated
 
 After generating the dataset with the `run()` function, simply run in R
 
 ``` r
-## -- launch app.
-launch_gcamreport_app()
+## -- launch UI:
+launch_gcamreport_ui()
 ```
 
 ## Troubleshooting when launching the UI with the Docker installation
 
 #### A) Wired message when launching the UI when using the Docker installation.
 
-After using the functions `run()` or `launch_gcamreport_app()` to launch the UI, you might get this message:
+After using the functions `run()` or `launch_gcamreport_ui()` to launch the UI, you might get this message:
 
     Listening on http://0.0.0.0:3838
     /usr/bin/xdg-open: 882: www-browser: not found
@@ -61,4 +61,4 @@ When oppening your *localhost*, you might see this error:
 
 </summary>
 
-**Possible solution**: your app is not running. Try to either use the `run()` function or the `launch_app_function()`.
+**Possible solution**: your UI is not running. Try to either use the `run()` function or the `launch_gcamreport_ui()`.

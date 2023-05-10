@@ -13,9 +13,9 @@ run(
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
-  save = TRUE,
+  saveOutput = TRUE,
   file_name = NULL,
-  launch_app = TRUE
+  launch_ui = TRUE
 )
 }
 \arguments{
@@ -41,12 +41,12 @@ elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_tran
 ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
 
-\item{save:}{if TRUE, save reporting data. Do not save otherwise.}
+\item{saveOutput:}{if TRUE, save reporting data. Do not save otherwise.}
 
 \item{file_name:}{file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.}
+the same name than the specified project_path, with 'ipcc_report' tag. CSV output.}
 
-\item{launch_app:}{if TRUE, open app. Do not launch app otherwise.}
+\item{launch_ui:}{if TRUE, launch UI, Do not launch UI otherwise.}
 }
 \value{
 saved? CSV datafile with the desired variables & launched? user interface.

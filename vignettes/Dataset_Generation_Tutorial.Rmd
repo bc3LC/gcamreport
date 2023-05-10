@@ -23,7 +23,7 @@ mypath <- "/path/to/project/myProj.dat"
 # ATENTION: in case you followed the Docker installation, you should store your project data inside the gcamreport folder and your root directory is called "/app". Thus, your path will be something like "/app/myProj.dat".
 
 ## -- generate the dataset until 2050. 
-run(project_path = mypath, final_year = 2050, launch_app = FALSE)
+run(project_path = mypath, final_year = 2050, launch_ui = FALSE)
 # Notice that it will automatically be saved in "/path/to/project/myproj_ipcc_report.csv". The terminal will output the verifications done and their result.
 ```
 
@@ -45,7 +45,7 @@ scen <- c('scen1', 'scen2', 'scen3')
 # ATENTION: in case you followed the Docker installation, you should store your database inside the gcamreport folder and your root directory is called "/app". Thus, your database path will be something like "/app/database".
 
 ## -- generate the dataset until 2075. 
-run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = projname, scenarios = scen, final_year = 2075, launch_app = FALSE)
+run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = projname, scenarios = scen, final_year = 2075, launch_ui = FALSE)
 # Notice that it will automatically be saved in "/path/to/database/awesomeProj_ipcc_report.csv". The terminal will output the verifications done and their result.
 ```
 
