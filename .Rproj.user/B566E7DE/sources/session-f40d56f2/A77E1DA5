@@ -1,0 +1,26 @@
+{
+    "id": "A77E1DA5",
+    "path": "~/IAM_COMPACT/gcamreport/R/app_functions.R",
+    "project_path": "R/app_functions.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1683792215730.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "734,0",
+        "scrollLine": "717"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683792904,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683792904966,
+    "read_only": false,
+    "read_only_alternatives": []
+}
