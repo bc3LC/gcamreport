@@ -14,6 +14,17 @@ do_data_sample(
   basic_reg,
   basic_vars
 )
+
+do_data_sample(
+  sdata,
+  sel_scen,
+  sel_years,
+  sel_cols,
+  sel_vars,
+  sel_reg,
+  basic_reg,
+  basic_vars
+)
 }
 \arguments{
 \item{sdata:}{dataset}
@@ -30,8 +41,12 @@ do_data_sample(
 }
 \value{
 subseted dataset
+
+subseted dataset
 }
 \description{
+Function to subset a dataset with the user's choices
+
 Function to subset a dataset with the user's choices
 }
 \keyword{internal}

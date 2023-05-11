@@ -5,6 +5,8 @@
 \title{change_style}
 \usage{
 change_style(tree, type, tmp_vars = NULL)
+
+change_style(tree, type, tmp_vars = NULL)
 }
 \arguments{
 \item{tree:}{base tree to change the style on}
@@ -14,6 +16,8 @@ change_style(tree, type, tmp_vars = NULL)
 \item{tmp_vars:}{variables which require 'dis' style}
 }
 \description{
+Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
+
 Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
 }
 \keyword{internal}

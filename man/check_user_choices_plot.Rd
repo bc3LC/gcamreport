@@ -5,6 +5,8 @@
 \title{check_user_choices_plot}
 \usage{
 check_user_choices_plot(vars, scen, years, reg, grouped)
+
+check_user_choices_plot(vars, scen, years, reg, grouped)
 }
 \arguments{
 \item{scen:}{user's selected scenarios}
@@ -18,6 +20,9 @@ check_user_choices_plot(vars, scen, years, reg, grouped)
 \item{grouped:}{if TRUE, aim to display grouped plot; ungrouped plot otherwise}
 }
 \description{
+Check user's choices to do the plot: at least one scenario, variable, year, and region
+must be chosen. In case of 'grouped' plot, all variables must be from the same category.
+
 Check user's choices to do the plot: at least one scenario, variable, year, and region
 must be chosen. In case of 'grouped' plot, all variables must be from the same category.
 }

@@ -5,6 +5,8 @@
 \title{do_mount_tree}
 \usage{
 do_mount_tree(df, column_names, current_column = 1, selec = TRUE, iid = NULL)
+
+do_mount_tree(df, column_names, current_column = 1, selec = TRUE, iid = NULL)
 }
 \arguments{
 \item{df:}{dataset}
@@ -15,8 +17,12 @@ do_mount_tree(df, column_names, current_column = 1, selec = TRUE, iid = NULL)
 }
 \value{
 nested list
+
+nested list
 }
 \description{
+Recursive function to create a nested list from a dataframe.
+
 Recursive function to create a nested list from a dataframe.
 }
 \keyword{internal}

@@ -5,8 +5,12 @@
 \title{reset_first_load}
 \usage{
 reset_first_load()
+
+reset_first_load()
 }
 \description{
+Initialize variables to run the app
+
 Initialize variables to run the app
 }
 \keyword{internal}

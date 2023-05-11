@@ -5,11 +5,15 @@
 \title{is_leaf}
 \usage{
 is_leaf(tree)
+
+is_leaf(tree)
 }
 \arguments{
 \item{tree:}{tree node to be checked}
 }
 \description{
+Return TRUE if it is a leaf node; FALSE otherwise.
+
 Return TRUE if it is a leaf node; FALSE otherwise.
 }
 \keyword{internal}

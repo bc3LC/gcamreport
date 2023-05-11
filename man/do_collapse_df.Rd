@@ -5,14 +5,20 @@
 \title{do_collapse_df}
 \usage{
 do_collapse_df(basic_data)
+
+do_collapse_df(basic_data)
 }
 \arguments{
 \item{basic_data:}{dataframe/datatable to be collapsed}
 }
 \value{
 Vector with the collapsed data
+
+Vector with the collapsed data
 }
 \description{
+Collapse all columns by row of the dataframe and remove NA
+
 Collapse all columns by row of the dataframe and remove NA
 }
 \keyword{internal}

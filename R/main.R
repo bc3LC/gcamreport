@@ -92,14 +92,14 @@ load_variable = function(var){
 #' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
 #' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
-#' @param save: if TRUE, save reporting data. Do not save otherwise.
+#' @param save_output: if TRUE, save reporting data. Do not save otherwise.
 #' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' tthe same name than the specified project_path, with 'ipcc_report' tag. CSV output.
-#' @param launch_app: if TRUE, open app. Do not launch app otherwise.
+#' the same name than the specified project_path, with 'ipcc_report' tag. CSV output.
+#' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
 #' @return saved? CSV datafile with the desired variables & launched? user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
-               final_year = 2100, desired_variables = 'All', save = TRUE, file_name = NULL, launch_app = TRUE) {
+               final_year = 2100, desired_variables = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
@@ -201,7 +201,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
 
   # bind and save results
   do_bind_results()
-  if (save) {
+  if (save_output) {
     if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
       if (!dir.exists(paste0(here::here(), "/output/"))){
         dir.create(paste0(here::here(), "/output/"))
@@ -229,14 +229,14 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
     print(e)
   }
 
-  # define the dataset for launching the app
+  # define the dataset for launching the ui
   sdata <<- final_data %>%
     tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
 
-  # create vector of available years for launching the app
+  # create vector of available years for launching the ui
   available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
 
-  # develop a nested list of the variables and regions for launching the app
+  # develop a nested list of the variables and regions for launching the ui
   cols <<- unique(sdata[, grepl('col', names(sdata))])
   tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
 
@@ -245,21 +245,21 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   # save a list of all variables
   all_vars <<- do_collapse_df(cols)
 
-  if (launch_app) {
-    print('Launching app...')
+  if (launch_ui) {
+    print('Launching UI...')
 
-    # launch app
-    launch_gcamreport_app()
+    # launch ui
+    launch_gcamreport_ui()
   }
 
 }
 
 
-#' launch_gcamreport_app
+#' launch_gcamreport_ui
 #'
-#' Launch shiny interactive app
-#' @return launch shiny interactive app
+#' Launch shiny interactive ui
+#' @return launch shiny interactive ui
 #' @export
-launch_gcamreport_app <- function(){
-  shiny::runApp('inst/gcamreport_app')
+launch_gcamreport_ui <- function(){
+  shiny::runApp('inst/gcamreport_ui')
 }
