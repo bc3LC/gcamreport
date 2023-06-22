@@ -35,6 +35,8 @@ Imports:
     shinyWidgets,
     shinydashboard,
     shinyjs,
+    writexl,
+    readxl,
     rrapply (>= 1.2.6)
 Suggests:
     rmarkdown,

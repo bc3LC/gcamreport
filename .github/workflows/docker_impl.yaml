@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build --build-arg WHEN=2023-03-01 -t gcamreport_docker .
+      run: docker build -t gcamreport_docker .
 
     - name: Push Docker image
       uses: docker/build-push-action@v2

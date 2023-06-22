@@ -15,9 +15,12 @@ test_that("Test3. run function test: dataset saved with file_name specified", {
     dir.create(paste0(rprojroot::find_root(rprojroot::is_testthat), "/testOutputs/"))
   }
   run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_ui = FALSE,
-      file_name = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.csv'))
-  testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.csv'))
+      file_name = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output'))
 
+  testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.csv'))
+  testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+
+  testResult = readxl::read_excel(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/test6_output.xlsx'))
   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
 })
 

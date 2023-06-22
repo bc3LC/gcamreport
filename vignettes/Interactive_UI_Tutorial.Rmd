@@ -20,6 +20,13 @@ run(..., launch_ui = TRUE)
 ## -- option 2.
 run(...) # without specifying launch_ui
 ```
+<span style="color:white">newline</span>
+
+
+
+
+
+
 
 ## Example 2: launch UI once the dataset has been generated
 
@@ -29,6 +36,13 @@ After generating the dataset with the `run()` function, simply run in R
 ## -- launch UI:
 launch_gcamreport_ui()
 ```
+<span style="color:white">newline</span>
+
+
+
+
+
+
 
 ## Troubleshooting when launching the UI with the Docker installation
 
@@ -52,6 +66,9 @@ This is not an error! You simply need to either go to your Docker Desktop progra
 <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
 
 or open this url <http://localhost:4000> in your favourite browser.
+
+
+
 
 #### B) Error when using the UI through Docker installation.
 

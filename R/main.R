@@ -92,11 +92,13 @@ load_variable = function(var){
 #' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
 #' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
-#' @param save_output: if TRUE, save reporting data. Do not save otherwise.
-#' @param file_name: file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' the same name than the specified project_path, with 'ipcc_report' tag. CSV output.
+#' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
+#' data saved only in the specified format.
+#' @param file_name: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
+#' the same name than the specified project_path, with 'ipcc_report' tag. CSV and XLSX output. In case of specifiing the path, do not
+#' introduce the extension, it will be automatically added.
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
-#' @return saved? CSV datafile with the desired variables & launched? user interface.
+#' @return saved? CSV and XLSX datafile with the desired variables & launched? user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
                final_year = 2100, desired_variables = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
@@ -192,23 +194,28 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   if (is.null(file_name)) {
     if (!is.null(project_path)) {
       file_name = gsub("\\.dat$", "", project_path)
-      file_name = paste0(file_name,'_ipcc_report.csv')
+      file_name = paste0(file_name,'_ipcc_report')
     } else {
       file_name = gsub("\\.dat$", "", project_path)
-      file_name = paste0(db_path, "/", db_name, '_ipcc_report.csv')
+      file_name = paste0(db_path, "/", db_name, '_ipcc_report')
     }
   }
 
   # bind and save results
   do_bind_results()
-  if (save_output) {
+  if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
     if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
       if (!dir.exists(paste0(here::here(), "/output/"))){
         dir.create(paste0(here::here(), "/output/"))
       }
       dir.create(paste0(here::here(), "/output/datasets/"))
     }
-    write.csv(final_data, file.path(file_name), row.names = FALSE)
+    if (save_output == TRUE || 'CSV' %in% save_output) {
+      write.csv(final_data, file.path(paste0(file_name,'.csv')), row.names = FALSE)
+    }
+    if (save_output == TRUE || 'XLSX' %in% save_output) {
+      writexl::write_xlsx(final_data, file.path(paste0(file_name,'.xlsx')))
+    }
   }
 
   # checks, vetting, and errors summary

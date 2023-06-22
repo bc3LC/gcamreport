@@ -38,6 +38,8 @@ RUN R -e "install.packages('shinyjs')"
 RUN R -e "install.packages('rrapply')"
 RUN R -e "install.packages('httr')"
 RUN R -e "install.packages('xml2')"
+RUN R -e "install.packages('writexl')"
+RUN R -e "install.packages('readxl')"
 RUN R -e "remotes::install_github('JGCRI/rgcam')"
 RUN R -e "install.packages('rrapply', repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages('usethis')"
@@ -47,7 +49,7 @@ RUN apt-get install -y git
 RUN git clone https://github.com/bc3LC/gcamreport.git /root/gcamreport
 
 # shiny dependencies
-RUN apt-get update
+RUN apt-get --allow-releaseinfo-change update
 RUN apt-get install -y \
     sudo \
     libcurl4-gnutls-dev \

@@ -9,6 +9,8 @@ vignette: >
 
 To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html).
 
+
+
 ## Example 1: generate a dataset from a project
 
 Assume you have a project called `myProj.dat` and are willing to generate a dataset meeting the reporting requirements of the [IPCC](https://www.ipcc.ch/). With the `run` function, it will be generated and automatically saved in the same folder where `myProj.dat` is.
@@ -25,9 +27,15 @@ mypath <- "/path/to/project/myProj.dat"
 
 ## -- generate the dataset until 2050. 
 run(project_path = mypath, final_year = 2050, launch_ui = FALSE)
-# Notice that it will automatically be saved in "/path/to/project/myproj_ipcc_report.csv". 
+# Notice that it will automatically be saved in .csv and .xlsx at "/path/to/project/myproj_ipcc_report.csv" and "/path/to/project/myproj_ipcc_report.xlsx". 
 # The terminal will output the verifications done and their result.
 ```
+<span style="color:white">newline</span>
+
+
+
+
+
 
 ## Example 2: generate a dataset from a database
 
@@ -49,9 +57,41 @@ scen <- c('scen1', 'scen2', 'scen3')
 
 ## -- generate the dataset until 2075. 
 run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = projname, scenarios = scen, final_year = 2075, launch_ui = FALSE)
-# Notice that it will automatically be saved in "/path/to/database/awesomeProj_ipcc_report.csv". The terminal will output
+# Notice that it will automatically be saved in .csv and .xlsx at "/path/to/database/awesomeProj_ipcc_report.csv" and "/path/to/database/awesomeProj_ipcc_report.xlsx". The terminal will output
 # the verifications done and their result.
 ```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+## Example 3: save the output in an specified format
+
+Assume you are in the situation of any of the previous examples but want to save the results in either `.csv` of `.xlsx` format. If you do not specify anything, both formats will be automatically saved.
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- use example1 or example2 project or database descriptions and add all the 
+extra parameters that you consider in the `run` function. Specify the output through
+the `save_output` parameter
+
+## -- save the dataset only in CSV format
+run(..., save_output = 'CSV')
+
+## -- save the dataset only in XLSX format
+run(..., save_output = 'XLSX')
+
+```
+<span style="color:white">newline</span>
+
+
+
+
+
 
 ## Troubleshooting for the `run()` function
 
@@ -87,6 +127,12 @@ run("/app/amazingData/myData.dat")
 # option 2: partial path
 run("amazingData/myData.dat")
 ```
+<span style="color:white">newline</span>
+
+
+
+
+
 
 #### B) Error related to *system* when using the Docker installation.
 
