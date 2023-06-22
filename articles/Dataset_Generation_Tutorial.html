@@ -127,8 +127,9 @@ folder where <code>myProj.dat</code> is.</p>
 <span></span>
 <span><span class="co">## -- generate the dataset until 2050. </span></span>
 <span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co"># Notice that it will automatically be saved in "/path/to/project/myproj_ipcc_report.csv". </span></span>
+<span><span class="co"># Notice that it will automatically be saved in .csv and .xlsx at "/path/to/project/myproj_ipcc_report.csv" and "/path/to/project/myproj_ipcc_report.xlsx". </span></span>
 <span><span class="co"># The terminal will output the verifications done and their result.</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
 <h2 id="example-2-generate-a-dataset-from-a-database">Example 2: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example-2-generate-a-dataset-from-a-database"></a>
@@ -156,8 +157,30 @@ generated and automatically saved in the same folder where
 <span></span>
 <span><span class="co">## -- generate the dataset until 2075. </span></span>
 <span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">projname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2075</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co"># Notice that it will automatically be saved in "/path/to/database/awesomeProj_ipcc_report.csv". The terminal will output</span></span>
+<span><span class="co"># Notice that it will automatically be saved in .csv and .xlsx at "/path/to/database/awesomeProj_ipcc_report.csv" and "/path/to/database/awesomeProj_ipcc_report.xlsx". The terminal will output</span></span>
 <span><span class="co"># the verifications done and their result.</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="example-3-save-the-output-in-an-specified-format">Example 3: save the output in an specified format<a class="anchor" aria-label="anchor" href="#example-3-save-the-output-in-an-specified-format"></a>
+</h2>
+<p>Assume you are in the situation of any of the previous examples but
+want to save the results in either <code>.csv</code> of
+<code>.xlsx</code> format. If you do not specify anything, both formats
+will be automatically saved.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## -- load gcamreport library.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcamreport)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## -- use example1 or example2 project or database descriptions and add all the </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>extra parameters that you consider <span class="cf">in</span> the <span class="st">`</span><span class="at">run</span><span class="st">`</span> function. Specify the output through</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>the <span class="st">`</span><span class="at">save_output</span><span class="st">`</span> parameter</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="do">## -- save the dataset only in CSV format</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">run</span>(..., <span class="at">save_output =</span> <span class="st">'CSV'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="do">## -- save the dataset only in XLSX format</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">run</span>(..., <span class="at">save_output =</span> <span class="st">'XLSX'</span>)</span></code></pre></div>
+<p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
 <h2 id="troubleshooting-for-the-run-function">Troubleshooting for the <code>run()</code> function<a class="anchor" aria-label="anchor" href="#troubleshooting-for-the-run-function"></a>
@@ -197,12 +220,13 @@ called <code>amazingData</code> with your dataset
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># option 2: partial path</span></span>
 <span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
 </div>
 <div class="section level4">
 <h4 id="b-error-related-to-system-when-using-the-docker-installation-">B) Error related to <em>system</em> when using the Docker

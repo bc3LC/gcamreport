@@ -1,0 +1,147 @@
+---
+title: "Dataset Generation Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Dataset_Generation_Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html).
+
+
+
+## Example 1: generate a dataset from a project
+
+Assume you have a project called `myProj.dat` and are willing to generate a dataset meeting the reporting requirements of the [IPCC](https://www.ipcc.ch/). With the `run` function, it will be generated and automatically saved in the same folder where `myProj.dat` is.
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the project path in a variable.
+mypath <- "/path/to/project/myProj.dat"
+# Notice that the extension is included. Accepted extensions: .dat & .proj.
+# ATENTION: in case you followed the Docker installation, you should store your project data inside the 
+# gcamreport folder and your root directory is called "/app". Thus, your path will be something like "/app/myProj.dat".
+
+## -- generate the dataset until 2050. 
+run(project_path = mypath, final_year = 2050, launch_ui = FALSE)
+# Notice that it will automatically be saved in .csv and .xlsx at "/path/to/project/myproj_ipcc_report.csv" and "/path/to/project/myproj_ipcc_report.xlsx". 
+# The terminal will output the verifications done and their result.
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+## Example 2: generate a dataset from a database
+
+Assume you have a database called `myDb` in a folder named `dbFolder` and are willing to generate a dataset meeting the reporting requirements of the [IPCC](https://www.ipcc.ch/) for several scenarios: `scen1`, `scen2`, and `scen3`. With the `run` function, it will be generated and automatically saved in the same folder where `myDb` is.
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path and name, the query path, the desired project name, and the considered scenarios in variables.
+dbpath <- "/path/to/database"
+dbname <- "gcamdb_name"
+querypath <- "/path/to/queries"
+projname <- "awesomeProj.dat"
+scen <- c('scen1', 'scen2', 'scen3')
+# Notice that the extension is included in the project name. Accepted extensions: .dat & .proj.
+# ATENTION: in case you followed the Docker installation, you should store your database inside the gcamreport folder and
+# your root directory is called "/app". Thus, your database path will be something like "/app/database".
+
+## -- generate the dataset until 2075. 
+run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = projname, scenarios = scen, final_year = 2075, launch_ui = FALSE)
+# Notice that it will automatically be saved in .csv and .xlsx at "/path/to/database/awesomeProj_ipcc_report.csv" and "/path/to/database/awesomeProj_ipcc_report.xlsx". The terminal will output
+# the verifications done and their result.
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+## Example 3: save the output in an specified format
+
+Assume you are in the situation of any of the previous examples but want to save the results in either `.csv` of `.xlsx` format. If you do not specify anything, both formats will be automatically saved.
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- use example1 or example2 project or database descriptions and add all the 
+extra parameters that you consider in the `run` function. Specify the output through
+the `save_output` parameter
+
+## -- save the dataset only in CSV format
+run(..., save_output = 'CSV')
+
+## -- save the dataset only in XLSX format
+run(..., save_output = 'XLSX')
+
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+## Troubleshooting for the `run()` function
+
+#### A) Error on `run("path/to/your/data/myData.dat")`
+
+In your R console, you might see this error:
+
+    > run("path/to/your/data/myData.dat")
+    [1] "Loading project..."
+    [1] "Loading data, performing checks, and saving output..."
+    [1] "ag_demand_clean"
+    Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
+      getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.
+
+This problem is due to a wrong path specification.
+
+**Possible solution**: make sure that you specified correctly the path. In addition:
+
+-   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
+
+-   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+
+    a)  make sure that your data is inside the `gcamreport` folder.
+
+    b)  make sure that you type correctly the path to your `gcamreport` folder when running the docker image (5th step in the [Docker section](#with-docker))
+
+    c)  make sure that you are pointing correctly to your data. For example, if in the `gcamreport` folder you have a folder called `amazingData` with your dataset `myData.dat`, you should refer to it as
+
+``` r
+# option 1: full path
+run("/app/amazingData/myData.dat")
+
+# option 2: partial path
+run("amazingData/myData.dat")
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+#### B) Error related to *system* when using the Docker installation.
+
+Once the R console is opened, you might see this message after introducing any command:
+
+    System has not been booted with systemd as init system (PID 1). Can't operate.
+    Failed to connect to bus: Host is down
+    Warning message:
+    In system("timedatectl", intern = TRUE) :
+       running command 'timedatectl' had status 1 
+
+**Possible solution**: simply type `Ctrl+C` and run your command again.
