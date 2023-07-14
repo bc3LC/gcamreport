@@ -51,18 +51,25 @@ test_that("Test6. get functions", {
   testthat::expect_equal(elec_capital_clean, testResult)
 })
 
-test_that("Test7. create project and run", {
-  db_path <<- paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
-  db_name <<- "database_basexdb_gcamreport"
+test_that("Test7. download db, create project, and run", {
+  # load a reference GCAM db form a Zenodo repository
+  db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
+  rpackageutils::download_unpack_zip(data_directory = db_path,
+                                     url = "https://zenodo.org/record/7326437/files/database_basexdb_ref.zip?download=1")
+  testthat::expect_equal(1, 1)
+
+  # create the prj
+  db_name <<- "database_basexdb_ref"
   prj_name <<- "test_prj.dat"
   scenarios <<- 'Reference'
 
   create_project(db_path, db_name, prj_name, scenarios)
-  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/database_basexdb_gcamreport_test_prj.dat')))
+  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/database_basexdb_ref_test_prj.dat')))
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by region`, testResult$Reference$`nonCO2 emissions by region`)
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector`, testResult$Reference$`nonCO2 emissions by sector`)
   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
 
+  # check nonCO2 emissions query
   dt_sec = data_query('nonCO2 emissions by sector')
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test7.RData')))
   testthat::expect_equal(dt_sec, testResult)
