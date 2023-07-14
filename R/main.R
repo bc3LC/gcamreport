@@ -281,7 +281,6 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   # bind and save results
   do_bind_results()
   if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
-    create_datasets_folder()
     if (save_output == TRUE || 'CSV' %in% save_output) {
       write.csv(final_data, file.path(paste0(file_name,'.csv')), row.names = FALSE)
     }
