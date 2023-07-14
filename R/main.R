@@ -51,42 +51,6 @@ data_query = function(type) {
 #' @return empty dataframes on the void queries of the project
 #' @export
 fill_queries = function() {
-
-  # add nonCO2 emissions by sector
-  # nonCO2_sector = data.frame()
-  # qq = '<emissionsQueryBuilder title="nonCO2 emissions by sector">
-  #             <axis1 name="GHG">GHG</axis1>
-  #             <axis2 name="Year">emissions</axis2>
-  #             <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = "sector" and @name = "current_sec"]//*[@type = "GHG"]/emissions/node()</xPath>
-  #             <comments/>
-  #         </emissionsQueryBuilder>'
-  #
-  # for (sc in rgcam::listScenarios(prj)) {
-  #   for (sec in sectors) {
-  #     qq_sec = gsub("current_sec", sec, qq)
-  #
-  #     prj_tmp = rgcam::addSingleQuery(
-  #       conn = rgcam::localDBConn(db_path,
-  #                                 db_name,migabble = FALSE),
-  #       proj = prj_name,
-  #       qn = 'nonCO2 emissions by sector',
-  #       query = qq_sec,
-  #       scenario = sc,
-  #       regions = NULL,
-  #       clobber = FALSE,
-  #       transformations = NULL,
-  #       saveProj = FALSE,
-  #       warn.empty = TRUE
-  #     )
-  #     tmp = data.frame(prj_tmp[[sc]]$`nonCO2 emissions by sector`)
-  #     tmp$sector = sec
-  #
-  #     nonCO2_sector = dplyr::bind_rows(nonCO2_sector,tmp)
-  #   }
-  # }
-  # prj = rgcam::addQueryTable(project = prj_name, qdata = nonCO2_sector,
-  #                            queryname = 'nonCO2 emissions by sector', clobber = TRUE)
-
   # add nonCO2 queries manually (they are too big to use the usual method)
   dt_sec = data_query('nonCO2 emissions by sector')
   prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
@@ -107,21 +71,6 @@ fill_queries = function() {
                                  queryname = 'CO2 prices', clobber = FALSE)
   }
 
-}
-
-
-#' create_datasets_folder
-#'
-#' Create a folder to save the datasets and file, in case it does not exist
-#' @return new folder to save the future datasets and project files
-#' @export
-create_datasets_folder = function() {
-  if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
-    if (!dir.exists(paste0(here::here(), "/output/"))){
-      dir.create(paste0(here::here(), "/output/"))
-    }
-    dir.create(paste0(here::here(), "/output/datasets/"))
-  }
 }
 
 
@@ -167,9 +116,7 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
   fill_queries()
 
   # save the project
-  # create_datasets_folder()
   rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
-  # rgcam::saveProject(prj, file = paste0('output/datasets/prj_',prj_name))
 
   Scenarios <<- rgcam::listScenarios(prj)
 }
