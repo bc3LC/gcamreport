@@ -4,12 +4,10 @@
 \alias{create_project}
 \title{create_project}
 \usage{
-create_project(db_path, query_path, db_name, prj_name, scenarios)
+create_project(db_path, db_name, prj_name, scenarios)
 }
 \arguments{
 \item{db_path:}{path of the database}
-
-\item{query_path:}{path of the query}
 
 \item{db_name:}{name of the database}
 

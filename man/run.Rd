@@ -7,7 +7,6 @@
 run(
   project_path = NULL,
   db_path = NULL,
-  query_path = NULL,
   db_name = NULL,
   prj_name = NULL,
   scenarios = NULL,
@@ -22,8 +21,6 @@ run(
 \item{project_path:}{full path of the project with the project name. Possible extensions: .dat and .proj.}
 
 \item{db_path:}{full path of the database.}
-
-\item{query_path:}{full path of the query.}
 
 \item{db_name:}{name of the database.}
 
@@ -41,19 +38,21 @@ elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_tran
 ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
 
-\item{save_output:}{if TRUE, save reporting data. Do not save otherwise.}
+\item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
+data saved only in the specified format.}
 
-\item{file_name:}{file name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-the same name than the specified project_path, with 'ipcc_report' tag. CSV output.}
+\item{file_name:}{file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
+the same name than the specified project_path, with 'ipcc_report' tag. CSV and XLSX output. In case of specifiing the path, do not
+introduce the extension, it will be automatically added.}
 
 \item{launch_ui:}{if TRUE, launch UI, Do not launch UI otherwise.}
 }
 \value{
-saved? CSV datafile with the desired variables & launched? user interface.
+saved? CSV and XLSX datafile with the desired variables & launched? user interface.
 }
 \description{
 Main function. Interacts with the user to select the desired variables for the report, loads
 them, saves them in an external output, runs the verifications, and informs the user about the
 success of the whole process. Either the `project_path` should be specified, or the `db_path`
-with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
+with all the related items, being `db_name`, `prj_name`, and `scenarios`.
 }

@@ -5,6 +5,7 @@ library(magrittr)
 #' data_query
 #'
 #' Add nonCO2 large queries
+#' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
 #' @return dataframe with the data from the query
 #' @export
 data_query = function(type) {
@@ -27,7 +28,7 @@ data_query = function(type) {
         clobber = TRUE,
         transformations = NULL,
         saveProj = FALSE,
-        warn.empty = TRUE
+        warn.empty = FALSE
       )
 
       tmp = data.frame(prj_tmp[[sc]][type])
@@ -52,12 +53,14 @@ data_query = function(type) {
 #' @export
 fill_queries = function() {
   # add nonCO2 queries manually (they are too big to use the usual method)
+  print('nonCO2 emissions by sector')
   dt_sec = data_query('nonCO2 emissions by sector')
   prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                               queryname = 'nonCO2 emissions by sector', clobber = TRUE)
+                               queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+  print('nonCO2 emissions by region')
   dt_reg = data_query('nonCO2 emissions by region')
   prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
-                               queryname = 'nonCO2 emissions by region', clobber = TRUE)
+                               queryname = 'nonCO2 emissions by region', clobber = FALSE)
 
   # fix CO2 prices if needed
   if (!'CO2 prices' %in% rgcam::listQueries(prj)) {
@@ -108,7 +111,7 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
     prj <- rgcam::addScenario(conn,
                               prj_name,
                               sc,
-                              paste0('inst/extdata/queries',"/",'queries_gcamreport_gcam6.0_complete.xml'))
+                              paste0('inst/extdata/queries/','queries_gcamreport_gcam6.0_complete.xml'))
   }
   prj <<- prj
 
