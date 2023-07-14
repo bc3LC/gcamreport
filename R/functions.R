@@ -403,6 +403,7 @@ get_total_co2_emissions = function() {
     dplyr::select(all_of(long_columns))
 }
 
+
 #' get_nonco2_emissions
 #'
 #' Get non CO2 emissions query.
@@ -688,14 +689,14 @@ get_elec_gen_tech = function() {
 #' @export
 get_secondary_solids = function() {
   secondary_solids <<-
-    rgcam::getQuery(prj,"inputs by tech") %>%
+    rgcam::getQuery(prj,"inputs by sector") %>%
     dplyr::filter(input %in% c("delivered biomass", "delivered coal")) %>%
     dplyr::group_by(scenario, region, year, input) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(var = ifelse(input == "delivered biomass", "Secondary Energy|Solids|Biomass",
                                "Secondary Energy|Solids|Coal")) %>%
-    dplyr::bind_rows(rgcam::getQuery(prj,"inputs by tech") %>%
+    dplyr::bind_rows(rgcam::getQuery(prj,"inputs by sector") %>%
                        dplyr::filter(input %in% c("delivered biomass", "delivered coal")) %>%
                        dplyr::group_by(scenario, region, year) %>%
                        dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -1027,6 +1028,7 @@ get_co2_price_fragmented_tmp = function() {
 #' @return co2_price_clean global variable
 #' @export
 get_co2_price = function() {
+
   co2_price_clean_pre <<-
     dplyr::bind_rows(co2_price_global, co2_price_fragmented)
 

@@ -30,6 +30,7 @@ Imports:
     stringr,
     stringi,
     here,
+    xml2,
     shiny,
     shinyTree,
     shinyWidgets,

@@ -2,6 +2,129 @@
 library(usethis)
 library(magrittr)
 
+#' data_query
+#'
+#' Add nonCO2 large queries
+#' @return dataframe with the data from the query
+#' @export
+data_query = function(type) {
+  dt = data.frame()
+  xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam6.0_nonCO2.xml')
+  qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
+
+  for (sc in rgcam::listScenarios(prj)) {
+    for (emis in emissions_list) {
+      qq_sec = gsub("current_emis", emis, qq)
+
+      prj_tmp = rgcam::addSingleQuery(
+        conn = rgcam::localDBConn(db_path,
+                                  db_name,migabble = FALSE),
+        proj = prj_name,
+        qn = type,
+        query = qq_sec,
+        scenario = sc,
+        regions = NULL,
+        clobber = TRUE,
+        transformations = NULL,
+        saveProj = FALSE,
+        warn.empty = TRUE
+      )
+
+      tmp = data.frame(prj_tmp[[sc]][type])
+      if (nrow(tmp) > 0) {
+        dt = dplyr::bind_rows(dt,tmp)
+      }
+      rm(prj_tmp)
+    }
+  }
+  # Rename columns
+  new_colnames <- sub(".*\\.(.*)", "\\1", names(dt))
+  names(dt) <- new_colnames
+
+  return(dt)
+}
+
+
+#' fill_queries
+#'
+#' Create a folder to save the datasets and file, in case it does not exist
+#' @return empty dataframes on the void queries of the project
+#' @export
+fill_queries = function() {
+
+  # add nonCO2 emissions by sector
+  # nonCO2_sector = data.frame()
+  # qq = '<emissionsQueryBuilder title="nonCO2 emissions by sector">
+  #             <axis1 name="GHG">GHG</axis1>
+  #             <axis2 name="Year">emissions</axis2>
+  #             <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = "sector" and @name = "current_sec"]//*[@type = "GHG"]/emissions/node()</xPath>
+  #             <comments/>
+  #         </emissionsQueryBuilder>'
+  #
+  # for (sc in rgcam::listScenarios(prj)) {
+  #   for (sec in sectors) {
+  #     qq_sec = gsub("current_sec", sec, qq)
+  #
+  #     prj_tmp = rgcam::addSingleQuery(
+  #       conn = rgcam::localDBConn(db_path,
+  #                                 db_name,migabble = FALSE),
+  #       proj = prj_name,
+  #       qn = 'nonCO2 emissions by sector',
+  #       query = qq_sec,
+  #       scenario = sc,
+  #       regions = NULL,
+  #       clobber = FALSE,
+  #       transformations = NULL,
+  #       saveProj = FALSE,
+  #       warn.empty = TRUE
+  #     )
+  #     tmp = data.frame(prj_tmp[[sc]]$`nonCO2 emissions by sector`)
+  #     tmp$sector = sec
+  #
+  #     nonCO2_sector = dplyr::bind_rows(nonCO2_sector,tmp)
+  #   }
+  # }
+  # prj = rgcam::addQueryTable(project = prj_name, qdata = nonCO2_sector,
+  #                            queryname = 'nonCO2 emissions by sector', clobber = TRUE)
+
+  # add nonCO2 queries manually (they are too big to use the usual method)
+  dt_sec = data_query('nonCO2 emissions by sector')
+  prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
+                               queryname = 'nonCO2 emissions by sector', clobber = TRUE)
+  dt_reg = data_query('nonCO2 emissions by region')
+  prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
+                               queryname = 'nonCO2 emissions by region', clobber = TRUE)
+
+  # fix CO2 prices if needed
+  if (!'CO2 prices' %in% rgcam::listQueries(prj)) {
+    l = length(rgcam::listScenarios(prj))
+    dt = data.frame(Units = rep(NA,l),
+                    scenario = rgcam::listScenarios(prj),
+                    year = rep(NA,l),
+                    market = rep(NA,l),
+                    value = rep(NA,l))
+    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt,
+                                 queryname = 'CO2 prices', clobber = FALSE)
+  }
+
+}
+
+
+#' create_datasets_folder
+#'
+#' Create a folder to save the datasets and file, in case it does not exist
+#' @return new folder to save the future datasets and project files
+#' @export
+create_datasets_folder = function() {
+  if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
+    if (!dir.exists(paste0(here::here(), "/output/"))){
+      dir.create(paste0(here::here(), "/output/"))
+    }
+    dir.create(paste0(here::here(), "/output/datasets/"))
+  }
+}
+
+
 #' load_project
 #'
 #' Load specified project into the global environment
@@ -20,24 +143,33 @@ load_project = function(prj_name) {
 #'
 #' Create specified project and load it into the global environment
 #' @param db_path: path of the database
-#' @param query_path: path of the query
 #' @param db_name: name of the database
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
 #' @return loaded project into global environment
 #' @export
-create_project = function(db_path, query_path, db_name, prj_name, scenarios) {
+create_project = function(db_path, db_name, prj_name, scenarios) {
+  # # increase memory limit
+  # memory.limit(5e6)
+
   # create the project
   conn <- rgcam::localDBConn(db_path,
                              db_name,migabble = FALSE)
-  prj <- rgcam::addScenario(conn,
-                            prj_name,
-                            scenarios,
-                            paste0(query_path,"/",queries))
+  for (sc in scenarios) {
+    prj <- rgcam::addScenario(conn,
+                              prj_name,
+                              sc,
+                              paste0('inst/extdata/queries',"/",'queries_gcamreport_gcam6.0_complete.xml'))
+  }
+  prj <<- prj
 
-  # load the project
-  print('Loading project...')
-  prj <<- rgcam::loadProject(prj)
+  # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
+  fill_queries()
+
+  # save the project
+  # create_datasets_folder()
+  rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
+  # rgcam::saveProject(prj, file = paste0('output/datasets/prj_',prj_name))
 
   Scenarios <<- rgcam::listScenarios(prj)
 }
@@ -77,10 +209,9 @@ load_variable = function(var){
 #' Main function. Interacts with the user to select the desired variables for the report, loads
 #' them, saves them in an external output, runs the verifications, and informs the user about the
 #' success of the whole process. Either the `project_path` should be specified, or the `db_path`
-#' with all the related items, being `query_path`, `db_name`, `prj_name`, and `scenarios`.
+#' with all the related items, being `db_name`, `prj_name`, and `scenarios`.
 #' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
 #' @param db_path: full path of the database.
-#' @param query_path: full path of the query.
 #' @param db_name: name of the database.
 #' @param prj_name: name of the project.
 #' @param scenarios: name of the scenarios to be considered.
@@ -100,11 +231,11 @@ load_variable = function(var){
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
 #' @return saved? CSV and XLSX datafile with the desired variables & launched? user interface.
 #' @export
-run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
+run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
                final_year = 2100, desired_variables = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
 
   # check that the paths are correctly specified
-  if (!is.null(project_path) && (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
+  if (!is.null(project_path) && (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
     # stop and display error
     stop('ERROR: Specify either a project or a database to extract the data from. Not both.')
 
@@ -113,15 +244,15 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
     print('Loading project...')
     load_project(project_path)
 
-  } else if (!is.null(db_path) || !is.null(query_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
+  } else if (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
     # create project if checks ok
     print('Creating project...')
 
     # check that all the paths are specified
-    if (is.null(db_path) || is.null(query_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
+    if (is.null(db_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
       null_items = c()
       not_null_items = c()
-      for (item in c('db_path','query_path','db_name','prj_name','scenarios')) {
+      for (item in c('db_path','db_name','prj_name','scenarios')) {
         if (is.null(eval(parse(text=item)))) {
           null_items = c(null_items, item)
         } else {
@@ -137,7 +268,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
       }
     } else {
       # create project
-      create_project(db_path, query_path, db_name, prj_name, scenarios)
+      create_project(db_path, db_name, prj_name, scenarios)
     }
 
   } else {
@@ -196,7 +327,6 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
       file_name = gsub("\\.dat$", "", project_path)
       file_name = paste0(file_name,'_ipcc_report')
     } else {
-      file_name = gsub("\\.dat$", "", project_path)
       file_name = paste0(db_path, "/", db_name, '_ipcc_report')
     }
   }
@@ -204,12 +334,7 @@ run = function(project_path = NULL, db_path = NULL, query_path = NULL, db_name =
   # bind and save results
   do_bind_results()
   if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
-    if (!dir.exists(paste0(here::here(), "/output/datasets/"))){
-      if (!dir.exists(paste0(here::here(), "/output/"))){
-        dir.create(paste0(here::here(), "/output/"))
-      }
-      dir.create(paste0(here::here(), "/output/datasets/"))
-    }
+    create_datasets_folder()
     if (save_output == TRUE || 'CSV' %in% save_output) {
       write.csv(final_data, file.path(paste0(file_name,'.csv')), row.names = FALSE)
     }

@@ -1,3 +1,14 @@
+#' emissions_list
+#'
+#' @source local
+#' @format vector
+#' @description nonCO2 pollutants list
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::emissions_list
+#' }
+"emissions_list"
+
 #' GWP_adjuster
 #'
 #' @source local
