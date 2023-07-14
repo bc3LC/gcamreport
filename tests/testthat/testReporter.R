@@ -51,20 +51,20 @@ test_that("Test6. get functions", {
   testthat::expect_equal(elec_capital_clean, testResult)
 })
 
-# test_that("Test7. create project and run", {
-#   db_path <<- paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
-#   db_name <<- "database_basexdb_gcamreport"
-#   prj_name <<- "test_prj.dat"
-#   scenarios <<- 'Reference'
-#
-#   create_project(db_path, db_name, prj_name, scenarios)
-#   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/database_basexdb_gcamreport_test_prj.dat')))
-#   testthat::expect_equal(prj$Reference$`nonCO2 emissions by region`, testResult$Reference$`nonCO2 emissions by region`)
-#   testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector`, testResult$Reference$`nonCO2 emissions by sector`)
-#   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
-#
-#   dt_sec = data_query('nonCO2 emissions by sector')
-#   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test7.RData')))
-#   testthat::expect_equal(dt_sec, testResult)
-#
-# })
+test_that("Test7. create project and run", {
+  db_path <<- paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
+  db_name <<- "database_basexdb_gcamreport"
+  prj_name <<- "test_prj.dat"
+  scenarios <<- 'Reference'
+
+  create_project(db_path, db_name, prj_name, scenarios)
+  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/database_basexdb_gcamreport_test_prj.dat')))
+  testthat::expect_equal(prj$Reference$`nonCO2 emissions by region`, testResult$Reference$`nonCO2 emissions by region`)
+  testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector`, testResult$Reference$`nonCO2 emissions by sector`)
+  testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
+
+  dt_sec = data_query('nonCO2 emissions by sector')
+  testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test7.RData')))
+  testthat::expect_equal(dt_sec, testResult)
+
+})
