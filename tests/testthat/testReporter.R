@@ -1,4 +1,4 @@
-library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
+library(gcamreport); library(testthat); library(magrittr); library(rprojroot); library(rpackageutils)
 
 test_that("Test1. load project function test", {
   testResult = as.numeric(length(load_project(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'))))
@@ -59,9 +59,9 @@ test_that("Test7. download db, create project, and run", {
   testthat::expect_equal(1, 1)
 
   # create the prj
-  db_name <<- "database_basexdb_ref"
-  prj_name <<- "test_prj.dat"
-  scenarios <<- 'Reference'
+  db_name = "database_basexdb_ref"
+  prj_name = "test_prj.dat"
+  scenarios = 'Reference'
 
   create_project(db_path, db_name, prj_name, scenarios)
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/database_basexdb_ref_test_prj.dat')))
@@ -70,7 +70,7 @@ test_that("Test7. download db, create project, and run", {
   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
 
   # check nonCO2 emissions query
-  dt_sec = data_query('nonCO2 emissions by sector')
+  dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/result_test7.RData')))
   testthat::expect_equal(dt_sec, testResult)
 

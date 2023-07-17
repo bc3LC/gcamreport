@@ -4,9 +4,17 @@
 \alias{data_query}
 \title{data_query}
 \usage{
-data_query(type)
+data_query(type, db_path, db_name, prj_name, scenarios)
 }
 \arguments{
+\item{db_path:}{path of the database}
+
+\item{db_name:}{name of the database}
+
+\item{prj_name:}{name of the project}
+
+\item{scenarios:}{name of the scenarios to be considered}
+
 \item{type:}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'}
 }
 \value{

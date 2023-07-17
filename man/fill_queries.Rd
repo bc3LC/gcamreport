@@ -4,7 +4,16 @@
 \alias{fill_queries}
 \title{fill_queries}
 \usage{
-fill_queries()
+fill_queries(db_path, db_name, prj_name, scenarios)
+}
+\arguments{
+\item{db_path:}{path of the database}
+
+\item{db_name:}{name of the database}
+
+\item{prj_name:}{name of the project}
+
+\item{scenarios:}{name of the scenarios to be considered}
 }
 \value{
 empty dataframes on the void queries of the project

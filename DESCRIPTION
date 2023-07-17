@@ -40,6 +40,8 @@ Imports:
     readxl,
     rrapply (>= 1.2.6)
 Suggests:
+    rpackageutils,
+    rprojroot,
     rmarkdown,
     testthat (>= 3.0.0)
 Remotes: 

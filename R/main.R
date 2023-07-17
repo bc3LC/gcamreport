@@ -5,15 +5,19 @@ library(magrittr)
 #' data_query
 #'
 #' Add nonCO2 large queries
+#' @param db_path: path of the database
+#' @param db_name: name of the database
+#' @param prj_name: name of the project
+#' @param scenarios: name of the scenarios to be considered
 #' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
 #' @return dataframe with the data from the query
 #' @export
-data_query = function(type) {
+data_query = function(type, db_path, db_name, prj_name, scenarios) {
   dt = data.frame()
   xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam6.0_nonCO2.xml')
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
-  for (sc in rgcam::listScenarios(prj)) {
+  for (sc in scenarios) {
     for (emis in emissions_list) {
       qq_sec = gsub("current_emis", emis, qq)
 
@@ -49,16 +53,20 @@ data_query = function(type) {
 #' fill_queries
 #'
 #' Create a folder to save the datasets and file, in case it does not exist
+#' @param db_path: path of the database
+#' @param db_name: name of the database
+#' @param prj_name: name of the project
+#' @param scenarios: name of the scenarios to be considered
 #' @return empty dataframes on the void queries of the project
 #' @export
-fill_queries = function() {
+fill_queries = function(db_path, db_name, prj_name, scenarios) {
   # add nonCO2 queries manually (they are too big to use the usual method)
   print('nonCO2 emissions by sector')
-  dt_sec = data_query('nonCO2 emissions by sector')
+  dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
   prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
                                queryname = 'nonCO2 emissions by sector', clobber = FALSE)
   print('nonCO2 emissions by region')
-  dt_reg = data_query('nonCO2 emissions by region')
+  dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
   prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
                                queryname = 'nonCO2 emissions by region', clobber = FALSE)
 
@@ -116,7 +124,7 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
   prj <<- prj
 
   # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-  fill_queries()
+  fill_queries(db_path, db_name, prj_name, scenarios)
 
   # save the project
   rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
