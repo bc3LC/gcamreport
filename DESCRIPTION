@@ -44,7 +44,7 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Remotes: 
-    github::JGCRI/rgcam
+    github::JGCRI/rgcam,
     github::JGCRI/rpackageutils
 VignetteBuilder: 
     knitr
