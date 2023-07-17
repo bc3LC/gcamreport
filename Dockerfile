@@ -42,7 +42,7 @@ RUN R -e "install.packages('writexl')"
 RUN R -e "install.packages('readxl')"
 RUN R -e "install.packages('rrapply', repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages('usethis')"
-RUN R -e "install.packages('rpackageutils')"
+RUN R -e "remotes::install_github('JGCRI/rpackageutils')"
 
 # clone repo
 RUN apt-get install -y git
