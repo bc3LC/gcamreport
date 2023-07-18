@@ -34,5 +34,8 @@ jobs:
           remotes::install_github("JGCRI/rpackageutils")
         shell: Rscript {0}
 
-      - name: Test coverage
+      - name: Compute coverage
+        run: Rscript -e 'covr::codecov()'
+
+      - name: Upload test coverage
         uses: codecov/codecov-action@v3
