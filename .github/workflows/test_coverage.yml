@@ -49,8 +49,7 @@ jobs:
           Rscript -e 'covr:::report(cov, file = "coverage.xml")'
         shell: Rscript {0}
 
-      - name: Upload coverage
-        uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v3
           with:
             token: ${{secrets.CODECOV_TOKEN}}
             files: ./coverage.xml
