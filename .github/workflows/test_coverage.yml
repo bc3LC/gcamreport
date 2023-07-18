@@ -50,7 +50,7 @@ jobs:
         shell: Rscript {0}
 
       - uses: codecov/codecov-action@v3
-          with:
-            token: ${{secrets.CODECOV_TOKEN}}
-            files: ./coverage.xml
-            verbose: true
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          files: ./coverage.xml
+          verbose: true
