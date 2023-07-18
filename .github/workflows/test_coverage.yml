@@ -36,7 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          install.packages(c("remotes","rcmdcheck"), repos = "https://cloud.r-project.org")
+          install.packages(c("remotes","rcmdcheck","covr"), repos = "https://cloud.r-project.org")
           remotes::install_github("JGCRI/rpackageutils")
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
@@ -44,5 +44,14 @@ jobs:
       - name: Test coverage
         run: |
           remotes::install_cran("covr")
-          covr::codecov(token = "${{secrets.CODECOV_TOKEN}}")
+          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
+          Rscript -e 'cov <- covr::package_coverage()'
+          Rscript -e 'covr:::report(cov, file = "coverage.xml")'
         shell: Rscript {0}
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+          with:
+            token: ${{secrets.CODECOV_TOKEN}}
+            files: ./coverage.xml
+            verbose: true
