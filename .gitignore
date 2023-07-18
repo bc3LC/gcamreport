@@ -35,6 +35,9 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
+# DB
+*.basex
+
 # Attempt files
 prova*
  
