@@ -43,10 +43,8 @@ jobs:
         
       - name: Test coverage
         run: |
-          remotes::install_cran("covr")
-          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
-          Rscript -e 'cov <- covr::package_coverage()'
-          Rscript -e 'covr:::report(cov, file = "coverage.xml")'
+          cov <- covr::package_coverage()
+          covr:::report(cov, file = "coverage.xml")
         shell: Rscript {0}
 
       - uses: codecov/codecov-action@v3
