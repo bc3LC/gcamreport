@@ -38,6 +38,12 @@ vignettes/*.pdf
 # DB
 *.basex
 
+# Temporal files
+lib/*
+
+# Docs
+docs/*
+
 # Attempt files
 prova*
  
