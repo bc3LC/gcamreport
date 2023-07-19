@@ -70,9 +70,17 @@ COPY . /app
 RUN addgroup --system app \
     && adduser --system --ingroup app app
 
+# Update the package list to install Java JRE
+RUN echo 'export PATH=$PATH:/usr/java/jre1.6.0_24/bin/' >> /root/.bashrc
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jre && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # port and permissions
 RUN chown app:app -R /app
 USER app
 EXPOSE 3838
 
 CMD ["R"]
+
