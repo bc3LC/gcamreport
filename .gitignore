@@ -37,5 +37,14 @@ vignettes/*.pdf
 
 # Results
 output/*
+
+# Examples
+examples/*
+
+# Documentation
+docs/*
+
+# Extras
+lib/*
  
 inst/doc

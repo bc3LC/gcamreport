@@ -6,6 +6,15 @@ library(here)
 ### paths
 rawDataFolder = here::here()
 
+# emissions considered nonCO2
+emissions_list = c('BC','BC_AWB','C2F6','CF4','CH4','CH4_AGR','CH4_AWB','CO','CO2','CO_AWB','H2',
+                   'H2_AWB','HFC125','HFC134a','HFC143a','HFC152a','HFC227ea','HFC23','HFC236fa',
+                   'HFC245fa','HFC32','HFC365mfc','HFC43','N2O','N2O_AGR','N2O_AWB','NH3','NH3_AGR',
+                   'NH3_AWB','NMVOC','NMVOC_AGR','NMVOC_AWB','NOx','NOx_AGR','NOx_AWB','OC','OC_AWB',
+                   'PM10','PM2.5','SF6','SO2_1','SO2_1_AWB','SO2_2','SO2_2_AWB','SO2_3','SO2_3_AWB',
+                   'SO2_4','SO2_4_AWB')
+use_data(emissions_list, overwrite=T)
+
 # regions_continents_map
 reg_cont <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/regions_continents_map.csv"), skip = 1,
                      stringsAsFactors = FALSE)
@@ -13,7 +22,7 @@ use_data(reg_cont, overwrite=T)
 
 # variables_functions_mapping
 var_fun_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/variables_functions_mapping.csv"),
-                        sep=';',header=T, na.strings=c("","NA"), stringsAsFactors = FALSE)
+                       sep=';',header=T, na.strings=c("","NA"), stringsAsFactors = FALSE)
 
 var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))
 var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
@@ -48,7 +57,7 @@ kyoto_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/K
 use_data(kyoto_sector_map, overwrite=T)
 
 nonco2_emis_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/nonCO2_emissions_sector_map.csv"),
-                                   skip = 1, na = "", stringsAsFactors = FALSE) %>% gather_map()
+                                          skip = 1, na = "", stringsAsFactors = FALSE) %>% gather_map()
 use_data(nonco2_emis_sector_map, overwrite=T)
 
 nonco2_emis_resource_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/nonCO2_emissions_resource_map.csv"),
@@ -265,9 +274,9 @@ use_data(tech.color, overwrite=T)
 
 
 colScaleTech <- ggplot2::scale_colour_manual(name = "technology",
-                                             values = tech.color,
-                                             na.translate = FALSE,
-                                             guide = ggplot2::guide_legend(reverse = F, ncol = 1))
+                                            values = tech.color,
+                                            na.translate = FALSE,
+                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(colScaleTech, overwrite=T)
 
 fillScaleTech <- ggplot2::scale_fill_manual(name = "technology",
@@ -296,15 +305,15 @@ use_data(fuel.color, overwrite=T)
 
 
 colScaleFuel <- ggplot2::scale_colour_manual(name = "fuel",
-                                             values = fuel.color,
-                                             na.translate = FALSE,
-                                             guide = ggplot2::guide_legend(reverse = F, ncol = 1))
+                                    values = fuel.color,
+                                    na.translate = FALSE,
+                                    guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(colScaleFuel, overwrite=T)
 
 fillScaleFuel <- ggplot2::scale_fill_manual(name = "fuel",
-                                            values = fuel.color,
-                                            na.translate = FALSE,
-                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
+                                   values = fuel.color,
+                                   na.translate = FALSE,
+                                   guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(fillScaleFuel, overwrite=T)
 
 
@@ -328,9 +337,9 @@ use_data(sector.color, overwrite=T)
 
 
 fillScaleSector <- ggplot2::scale_fill_manual(name = "Sector",
-                                              values = sector.color,
-                                              na.translate = FALSE,
-                                              guide = ggplot2::guide_legend(reverse = F, ncol = 1))
+                                     values = sector.color,
+                                     na.translate = FALSE,
+                                     guide = ggplot2::guide_legend(reverse = F, ncol = 1))
 use_data(fillScaleSector, overwrite=T)
 
 

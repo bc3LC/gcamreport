@@ -1,6 +1,6 @@
 Package: gcamreport
 Title: gcamreport
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Rodés-Bachs", "Clàudia", email = "claudia.rodes@bc3research.org", role = c("aut", "cre"),
 		   comment = c(ORCID = "0000-0001-6696-7685")),
 		   person("Sampedro", "Jon", email = "jon.sampedro@bc3research.org", role = c("aut"),
@@ -30,17 +30,22 @@ Imports:
     stringr,
     stringi,
     here,
+    xml2,
     shiny,
     shinyTree,
     shinyWidgets,
     shinydashboard,
     shinyjs,
+    writexl,
+    readxl,
     rrapply (>= 1.2.6)
 Suggests:
+    rprojroot,
     rmarkdown,
     testthat (>= 3.0.0)
 Remotes: 
-    github::JGCRI/rgcam
+    github::JGCRI/rgcam,
+    github::JGCRI/rpackageutils
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3

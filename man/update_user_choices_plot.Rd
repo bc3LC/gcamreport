@@ -11,14 +11,6 @@ update_user_choices_plot(
   tree_variables,
   sidebarItemExpanded
 )
-
-update_user_choices_plot(
-  selected_scen,
-  selected_years,
-  tree_regions,
-  tree_variables,
-  sidebarItemExpanded
-)
 }
 \arguments{
 \item{selected_scen:}{user's selected scenarios}
@@ -32,8 +24,6 @@ update_user_choices_plot(
 \item{sidebarItemExpanded:}{input sidebar expanded item}
 }
 \description{
-Update dataframe to display plots with the user's choices
-
 Update dataframe to display plots with the user's choices
 }
 \keyword{internal}

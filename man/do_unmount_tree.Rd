@@ -5,8 +5,6 @@
 \title{do_unmount_tree}
 \usage{
 do_unmount_tree(base_tree, type)
-
-do_unmount_tree(base_tree, type)
 }
 \arguments{
 \item{base_tree:}{nested list}
@@ -16,12 +14,8 @@ if it refers to regional  aggregation}
 }
 \value{
 dataframe
-
-dataframe
 }
 \description{
-Create a dataframe from a nested list.
-
 Create a dataframe from a nested list.
 }
 \keyword{internal}
