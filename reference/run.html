@@ -16,7 +16,7 @@ with all the related items, being `db_name`, `prj_name`, and `scenarios`."><!-- 
     
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,7 @@ with all the related items, being `db_name`, `prj_name`, and `scenarios`."><!-- 
     Tutorials
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdown--tutorials">
+    <a class="dropdown-item" href="../articles/Step_By_Step_Full_Example.html">Step-by-step Full Example</a>
     <a class="dropdown-item" href="../articles/Dataset_Generation_Tutorial.html">Dataset Generation Tutorial</a>
     <a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a>
   </div>
@@ -129,7 +130,7 @@ with all the related items, being `db_name`, `prj_name`, and `scenarios`.</p>
 
 
 <dt>final_year:</dt>
-<dd><p>final year of the data. By default = 2100.</p></dd>
+<dd><p>final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.</p></dd>
 
 
 <dt>desired_variables:</dt>
@@ -149,7 +150,7 @@ data saved only in the specified format.</p></dd>
 
 <dt>file_name:</dt>
 <dd><p>file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-the same name than the specified project_path, with 'ipcc_report' tag. CSV and XLSX output. In case of specifiing the path, do not
+the same name than the specified project_path, with 'iamc_report' tag. CSV and XLSX output. In case of specifing the path, do not
 introduce the extension, it will be automatically added.</p></dd>
 
 

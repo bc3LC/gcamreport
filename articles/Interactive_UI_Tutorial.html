@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +48,7 @@
     Tutorials
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdown--tutorials">
+    <a class="dropdown-item" href="../articles/Step_By_Step_Full_Example.html">Step-by-step Full Example</a>
     <a class="dropdown-item" href="../articles/Dataset_Generation_Tutorial.html">Dataset Generation Tutorial</a>
     <a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a>
   </div>
@@ -106,8 +107,9 @@
 
     
     
-<p>To see all possiblities of the <code><a href="../reference/run.html">run()</a></code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html">here</a>,
+<p>To see all possibilities of the <code><a href="../reference/run.html">run()</a></code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html">here</a>,
 and of the <code><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>, look <a href="https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html">here</a>.</p>
+<p><span style="color:white">newline</span></p>
 <div class="section level2">
 <h2 id="example-1-launch-ui-when-generating-the-dataset">Example 1: launch UI when generating the dataset<a class="anchor" aria-label="anchor" href="#example-1-launch-ui-when-generating-the-dataset"></a>
 </h2>
@@ -116,11 +118,7 @@ Generation Tutorial</a> for more information), simply set
 <code>launch_ui</code> to <code>TRUE</code> or do not specify
 anything.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## -- option 1:</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## -- option 2.</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="co"># without specifying launch_ui</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -129,8 +127,7 @@ anything.</p>
 <p>After generating the dataset with the <code><a href="../reference/run.html">run()</a></code> function,
 simply run in R</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## -- launch UI:</span></span>
-<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">

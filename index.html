@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +48,7 @@
     Tutorials
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdown--tutorials">
+    <a class="dropdown-item" href="articles/Step_By_Step_Full_Example.html">Step-by-step Full Example</a>
     <a class="dropdown-item" href="articles/Dataset_Generation_Tutorial.html">Dataset Generation Tutorial</a>
     <a class="dropdown-item" href="articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a>
   </div>
@@ -126,7 +127,7 @@
 <!-- ------------------------>
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
-<p><code>gcamreport</code> is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), which meets the reporting requirements of the Intergovernmental Panel on Climate Change (<a href="https://www.ipcc.ch/" class="external-link">IPCC</a>). Additionally, <code>gcamreport</code> includes an interactive user widget that allows users to create and download plots, as well as download reduced versions of the dataset in table format.</p>
+<p><code>gcamreport</code> is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), which meets the reporting requirements of the Integrated Assessment Modeling Consortium (<a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>). Additionally, <code>gcamreport</code> includes an interactive user widget that allows users to create and download plots, as well as to download reduced versions of the formated dataset in table format.</p>
 <!-- ------------------------>
 <!-- ------------------------>
 </div>
@@ -195,12 +196,12 @@
 <li><p>Open Docker Desktop (double-click the icon on your computer) and leave it running in the background.</p></li>
 <li><p>Inside a terminal (bash or cmd) pull the docker image:</p></li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v2</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v3</span></code></pre></div>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: this step requires 13.5GB of free space in your computer.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>Run the Docker container using your path to the <code>gcamreport</code> folder:</li>
+<li>Run the Docker container using your full path to the <code>gcamreport</code> folder:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:v2</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:v3</span></code></pre></div>
 <p>This should prompt an R terminal in your console.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Install the <code>gcamreport</code> package in the new R console:</li>
@@ -225,7 +226,7 @@
 <p><a href="#contents">Back to Contents</a></p>
 <p>The <code>gcamreport</code> package consists of a set of functions divided into two different blocks:</p>
 <ul>
-<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.ipcc.ch/" class="external-link">IPCC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code><a href="reference/run.html">?run</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
+<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>. Main function: <code><a href="reference/run.html">run()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code><a href="reference/run.html">?run</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 <li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html">tutorial</a> or type <code><a href="reference/launch_gcamreport_ui.html">?launch_gcamreport_ui</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 </ul>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
