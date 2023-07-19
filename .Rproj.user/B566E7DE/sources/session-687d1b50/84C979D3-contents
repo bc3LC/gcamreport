@@ -1,0 +1,209 @@
+---
+title: "Dataset Generation Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Dataset_Generation_Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+To see all possibilities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html).
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 1: generate a dataset from a database {#example1}
+
+Assume you have a database called `myDb` in a folder named `dbFolder` and are willing to generate a standardized dataset for several scenarios: `scen1`, `scen2`, and `scen3`. With the `run` function, it will be generated and automatically saved in the same folder where `myDb` is.
+
+1) Load `gcamreport` library.
+
+``` r
+library(gcamreport)
+```
+
+2) Store the database path and name, the query path, the desired project name, and the considered scenarios in variables.
+
+``` r
+dbpath <- "/path/to/database"
+dbname <- "gcamdb_name"
+prjname <- "awesomeProj.dat"
+scen <- c('scen1', 'scen2', 'scen3')
+```
+
+Notice that the extension is included in the project name. Accepted extensions: `.dat` & `.proj`.
+
+**Note**: in case you followed the Docker installation, you should store your database inside the `gcamreport` folder and your root directory is called `/app`. Thus, your database path will be something like `/app/path/to/database`.
+
+3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
+
+``` r
+run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = prjname, scenarios = scen, final_year = 2050, launch_ui = FALSE)
+```
+
+**Note**: project generation requires approximately 30 minutes.
+
+Notice that the dataset will automatically be saved in `.csv` and `.xlsx` at `/path/to/database/awesomeProj_iamc_report.csv` and `/path/to/database/awesomeProj_iamc_report.xlsx`.
+
+This procedure will generate a project file at `/path/to/database/dbname_prjname.dat` with all the necessary queries that you can use as indicated in [Example 2](#example2).
+
+The terminal will output the performed verifications and their final status.
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+
+## Example 2: generate a dataset from a project {#example2}
+
+Assume you have a project called `myProj.dat` and are willing to generate a standardized dataset out of it. With the `run` function, it will be generated and automatically saved in the same folder where `myProj.dat` is. Notice that `myProj.dat` should have all the required queries for the standardized dataset generation. If you are not sure you have all of them or you need to generate the project, see [Example1](#example1).
+
+
+1) Load `gcamreport` library.
+
+``` r
+library(gcamreport)
+```
+
+
+2) Store the project path in a variable.
+
+``` r
+mypath <- "/path/to/project/myProj.dat"
+```
+
+Notice that the extension is included. Accepted extensions: `.dat` & `.proj`.
+
+**Note**: in case you followed the Docker installation, you should store your database inside the `gcamreport` folder and your root directory is called `/app`. Thus, your database path will be something like `/app/path/to/database`.
+
+
+3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
+
+``` r
+run(project_path = mypath, final_year = 2050, launch_ui = FALSE)
+```
+
+Notice that the dataset will automatically be saved in `.csv` and `.xlsx` at `/path/to/database/awesomeProj_iamc_report.csv` and `/path/to/database/awesomeProj_iamc_report.xlsx`.
+
+The terminal will output the performed verifications and their final status.
+
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+
+
+## Example 3: save or not the output and specify the file format or the directory
+
+Assume you are in the situation of any of the previous examples but want to either not save the output, save it in `.csv`, `.xlsx`, or both extensions.
+
+1) Load `gcamreport` library.
+
+``` r
+library(gcamreport)
+```
+
+
+2) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `run` function. Specify the output saving options through the `save_output` parameter
+
+```r
+## -- save the dataset in CSV and XLSX format
+run(..., save_output = TRUE)    # this is the default option
+
+## -- save the dataset only in CSV format
+run(..., save_output = 'CSV')
+
+## -- save the dataset only in XLSX format
+run(..., save_output = 'XLSX')
+
+## -- do not save the dataset
+run(..., save_output = FALSE)
+```
+
+
+
+3) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `run` function. Specify the output directory and output file name through `file_name` parameter. This will save the output in the indicated path as `.csv` and `.xlsx`. To modify this, see the above explanation.
+
+```r
+## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'
+run(..., file_name = '/desired/directory/awesomeOutput')
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+## Troubleshooting for the `run()` function
+
+#### A) Error on `run("path/to/your/data/myData.dat")`
+
+In your R console, you might see this error:
+
+    > run("path/to/your/data/myData.dat")
+    [1] "Loading project..."
+    [1] "Loading data, performing checks, and saving output..."
+    [1] "ag_demand_clean"
+    Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
+      getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.
+
+This problem is due to a wrong path specification.
+
+**Possible solution**: make sure that you specified correctly the path. In addition:
+
+-   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
+
+-   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+
+    a)  make sure that your data is inside the `gcamreport` folder.
+
+    b)  make sure that you type correctly the path to your `gcamreport` folder when running the docker image (5th step in the [Docker section](#with-docker))
+
+    c)  make sure that you are pointing correctly to your data. For example, if in the `gcamreport` folder you have a folder called `amazingData` with your dataset `myData.dat`, you should refer to it as
+
+``` r
+# option 1: full path
+run("/app/amazingData/myData.dat")
+
+# option 2: partial path
+run("amazingData/myData.dat")
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+#### B) Error related to *system* when using the Docker installation.
+
+Once the R console is opened, you might see this message after introducing any command:
+
+    System has not been booted with systemd as init system (PID 1). Can't operate.
+    Failed to connect to bus: Host is down
+    Warning message:
+    In system("timedatectl", intern = TRUE) :
+       running command 'timedatectl' had status 1 
+
+**Possible solution**: simply type `Ctrl+C` and run your command again.
