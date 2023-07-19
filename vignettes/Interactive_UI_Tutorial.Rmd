@@ -7,18 +7,23 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-To see all possiblities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html), and of the `launch_gcamreport_ui()`, look [here](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html).
+To see all possibilities of the `run()` function, look [here](https://bc3lc.github.io/gcamreport/reference/run.html), and of the `launch_gcamreport_ui()`, look [here](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html).
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
 
 ## Example 1: launch UI when generating the dataset
 
 When running the main function `run` (see [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport//articles//Dataset_Generation_Tutorial.html) for more information), simply set `launch_ui` to `TRUE` or do not specify anything.
 
 ``` r
-## -- option 1:
-run(..., launch_ui = TRUE)
-
-## -- option 2.
-run(...) # without specifying launch_ui
+run(..., launch_ui = TRUE)    # this is the default option
 ```
 <span style="color:white">newline</span>
 
@@ -33,7 +38,6 @@ run(...) # without specifying launch_ui
 After generating the dataset with the `run()` function, simply run in R
 
 ``` r
-## -- launch UI:
 launch_gcamreport_ui()
 ```
 <span style="color:white">newline</span>

@@ -61,14 +61,18 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
 #' @export
 fill_queries = function(db_path, db_name, prj_name, scenarios) {
   # add nonCO2 queries manually (they are too big to use the usual method)
-  print('nonCO2 emissions by sector')
-  dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
-  prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                               queryname = 'nonCO2 emissions by sector', clobber = FALSE)
-  print('nonCO2 emissions by region')
-  dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
-  prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
-                               queryname = 'nonCO2 emissions by region', clobber = FALSE)
+  if (!'nonCO2 emissions by sector' %in% rgcam::listQueries(prj)) {
+    print('nonCO2 emissions by sector')
+    dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
+    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
+                                 queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+  }
+  if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
+    print('nonCO2 emissions by region')
+    dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
+    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
+                                 queryname = 'nonCO2 emissions by region', clobber = FALSE)
+  }
 
   # fix CO2 prices if needed
   if (!'CO2 prices' %in% rgcam::listQueries(prj)) {
@@ -173,7 +177,7 @@ load_variable = function(var){
 #' @param db_name: name of the database.
 #' @param prj_name: name of the project.
 #' @param scenarios: name of the scenarios to be considered.
-#' @param final_year: final year of the data. By default = 2100.
+#' @param final_year: final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
 #' global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
@@ -184,7 +188,7 @@ load_variable = function(var){
 #' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
 #' data saved only in the specified format.
 #' @param file_name: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' the same name than the specified project_path, with 'ipcc_report' tag. CSV and XLSX output. In case of specifiing the path, do not
+#' the same name than the specified project_path, with 'iamc_report' tag. CSV and XLSX output. In case of specifing the path, do not
 #' introduce the extension, it will be automatically added.
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
 #' @return saved? CSV and XLSX datafile with the desired variables & launched? user interface.
@@ -283,9 +287,9 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   if (is.null(file_name)) {
     if (!is.null(project_path)) {
       file_name = gsub("\\.dat$", "", project_path)
-      file_name = paste0(file_name,'_ipcc_report')
+      file_name = paste0(file_name,'_iamc_report')
     } else {
-      file_name = paste0(db_path, "/", db_name, '_ipcc_report')
+      file_name = paste0(db_path, "/", gsub("\\.dat$", "", prj_name), '_iamc_report')
     }
   }
 

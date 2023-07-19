@@ -26,7 +26,7 @@ test_that("Test3. run function test: dataset saved with file_name specified", {
 
 test_that("Test4. run function test: dataset saved with default file_name", {
   # in principle, data should be already saved due to the Test2
-  testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6_ipcc_report.csv'))
+  testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6_iamc_report.csv'))
 
   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
 })
@@ -55,7 +55,7 @@ test_that("Test7. download db, create project, and run", {
   # load a reference GCAM db form a Zenodo repository
   db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
   rpackageutils::download_unpack_zip(data_directory = db_path,
-                                     url = "https://zenodo.org/record/7326437/files/database_basexdb_ref.zip?download=1")
+                                     url = "https://zenodo.org/record/8162970/files/database_basexdb_ref.zip?download=1")
   testthat::expect_equal(1, 1)
 
   # create the prj

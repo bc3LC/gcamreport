@@ -17,6 +17,8 @@ navbar:
     - text: "Tutorials"
       icon: fas fa-book
       menu:
+      -  text: Step-by-step Full Example
+         href: articles/Step_By_Step_Full_Example.html
       -  text: Dataset Generation Tutorial
          href: articles/Dataset_Generation_Tutorial.html
       -  text: Interactive UI Tutorial

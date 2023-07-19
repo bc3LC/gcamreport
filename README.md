@@ -38,7 +38,7 @@
 
 [Back to Contents](#contents)
 
-`gcamreport` is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model ([GCAM](http://www.globalchange.umd.edu/gcam/)), which meets the reporting requirements of the Intergovernmental Panel on Climate Change ([IPCC](https://www.ipcc.ch/)). Additionally, `gcamreport` includes an interactive user widget that allows users to create and download plots, as well as download reduced versions of the dataset in table format.
+`gcamreport` is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model ([GCAM](http://www.globalchange.umd.edu/gcam/)), which meets the reporting requirements of the Integrated Assessment Modeling Consortium ([IAMC](https://www.iamconsortium.org/)). Additionally, `gcamreport` includes an interactive user widget that allows users to create and download plots, as well as to download reduced versions of the formated dataset in table format.
 
 <!-- ------------------------>
 
@@ -111,15 +111,15 @@ git clone https://github.com/bc3LC/gcamreport.git
 4.  Inside a terminal (bash or cmd) pull the docker image:
 
 ``` bash
-docker pull claudiarodes/gcamreport_docker:v2
+docker pull claudiarodes/gcamreport_docker:v3
 ```
 
 **Note**:exclamation:: this step requires 13.5GB of free space in your computer.
 
-5.  Run the Docker container using your path to the `gcamreport` folder:
+5.  Run the Docker container using your full path to the `gcamreport` folder:
 
 ``` bash
-docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:v2
+docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:v3
 ```
 
 This should prompt an R terminal in your console.
@@ -153,7 +153,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
 The `gcamreport` package consists of a set of functions divided into two different blocks:
 
--   Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of [IPCC](https://www.ipcc.ch/). Main function: `run()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `?run` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
+-   Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of [IAMC](https://www.iamconsortium.org/). Main function: `run()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `?run` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
 -   Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: `launch_gcamreport_ui()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `?launch_gcamreport_ui` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
