@@ -64,14 +64,17 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
   if (!'nonCO2 emissions by sector' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by sector')
     dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
-    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                                 queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
+                                    queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+
   }
   if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by region')
     dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
-    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
-                                 queryname = 'nonCO2 emissions by region', clobber = FALSE)
+    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
+                                    queryname = 'nonCO2 emissions by region', clobber = FALSE)
+    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
   }
 
   # fix CO2 prices if needed
@@ -82,8 +85,9 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
                     year = rep(NA,l),
                     market = rep(NA,l),
                     value = rep(NA,l))
-    prj <<- rgcam::addQueryTable(project = prj_name, qdata = dt,
-                                 queryname = 'CO2 prices', clobber = FALSE)
+    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt,
+                                    queryname = 'CO2 prices', clobber = FALSE)
+    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
   }
 
 }
@@ -113,17 +117,37 @@ load_project = function(prj_name) {
 #' @return loaded project into global environment
 #' @export
 create_project = function(db_path, db_name, prj_name, scenarios) {
-  # # increase memory limit
-  # memory.limit(5e6)
-
   # create the project
   conn <- rgcam::localDBConn(db_path,
                              db_name,migabble = FALSE)
+
+  # read the queries file
+  queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam6.0_complete.xml')
+  queries <- rgcam::parse_batch_query(queryFile)
+
+  # load all queries for all desired scenarios informing the user
   for (sc in scenarios) {
-    prj <- rgcam::addScenario(conn,
-                              prj_name,
-                              sc,
-                              paste0('inst/extdata/queries/','queries_gcamreport_gcam6.0_complete.xml'))
+    print(paste('Start reading queries for',sc,'scenario'))
+
+    for(qn in names(queries)) {
+      print(paste('Read', qn, 'query'))
+
+      bq <- queries[[qn]]
+      table <- rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
+      if(nrow(table) > 0) {
+        prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = table,
+                                        queryname = qn, clobber = FALSE,
+                                        saveProj = FALSE, show_col_types = FALSE)
+        if (exists('prj')) {
+          prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+        } else {
+          prj = prj_tmp
+        }
+
+      } else {
+        warning(paste(qn, 'query is empty!'))
+      }
+    }
   }
   prj <<- prj
 
