@@ -66,7 +66,7 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
     dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
                                     queryname = 'nonCO2 emissions by sector', clobber = FALSE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }
   if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
@@ -74,20 +74,22 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
     dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
                                     queryname = 'nonCO2 emissions by region', clobber = FALSE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
   }
 
   # fix CO2 prices if needed
   if (!'CO2 prices' %in% rgcam::listQueries(prj)) {
     l = length(rgcam::listScenarios(prj))
-    dt = data.frame(Units = rep(NA,l),
-                    scenario = rgcam::listScenarios(prj),
-                    year = rep(NA,l),
-                    market = rep(NA,l),
-                    value = rep(NA,l))
-    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt,
-                                    queryname = 'CO2 prices', clobber = FALSE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+    for (sc in rgcam::listScenarios(prj)) {
+      dt = data.frame(Units = rep(NA,l),
+                      scenario = sc,
+                      year = rep(NA,l),
+                      market = rep(NA,l),
+                      value = rep(NA,l))
+      prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt,
+                                      queryname = 'CO2 prices', clobber = TRUE)
+      prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
+    }
   }
 
 }
