@@ -3,8 +3,8 @@ library(gcamreport); library(testthat); library(magrittr); library(rprojroot); l
 test_that("Test1. download db, create project, and run", {
   # load a reference GCAM db form a Zenodo repository
   db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs')
-  # rpackageutils::download_unpack_zip(data_directory = db_path,
-  #                                    url = "https://zenodo.org/record/8162970/files/database_basexdb_ref.zip?download=1")
+  rpackageutils::download_unpack_zip(data_directory = db_path,
+                                     url = "https://zenodo.org/record/8162970/files/database_basexdb_ref.zip?download=1")
   testthat::expect_equal(1, 1)
 
   # create the prj
