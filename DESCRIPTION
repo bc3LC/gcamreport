@@ -1,6 +1,6 @@
 Package: gcamreport
 Title: gcamreport
-Version: 0.1.1
+Version: 6.0.1
 Authors@R: c(person("Rodés-Bachs", "Clàudia", email = "claudia.rodes@bc3research.org", role = c("aut", "cre"),
 		   comment = c(ORCID = "0000-0001-6696-7685")),
 		   person("Sampedro", "Jon", email = "jon.sampedro@bc3research.org", role = c("aut"),

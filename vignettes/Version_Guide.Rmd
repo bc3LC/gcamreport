@@ -9,5 +9,6 @@ vignette: >
 
 | `gcamreport` tag-version | `GCAM` version                   |
 |--------------------------|----------------------------------|
+| v6.0.1                     | GCAM 6.0                         |
 | v6.0.0                     | GCAM 6.0                         |
 | v6.0.0-gas                 | GCAM 6.0 with gas extra features |
