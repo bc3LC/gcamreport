@@ -14,12 +14,14 @@ library(magrittr)
 #' @export
 data_query = function(type, db_path, db_name, prj_name, scenarios) {
   dt = data.frame()
-  xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam6.0_nonCO2.xml')
+  xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
+  emiss_list = emissions_list
   for (sc in scenarios) {
-    for (emis in emissions_list) {
-      qq_sec = gsub("current_emis", emis, qq)
+    while (length(emiss_list) > 0) {
+      current_emis = emiss_list[1:min(21,length(emiss_list))]
+      qq_sec = gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
 
       prj_tmp = rgcam::addSingleQuery(
         conn = rgcam::localDBConn(db_path,
@@ -40,6 +42,12 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
         dt = dplyr::bind_rows(dt,tmp)
       }
       rm(prj_tmp)
+
+      if (length(emiss_list) > 21) {
+        emiss_list <- emiss_list[(21 + 1):length(emiss_list)]
+      } else {
+        emiss_list = c()
+      }
     }
   }
   # Rename columns
@@ -61,9 +69,9 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
 #' @export
 fill_queries = function(db_path, db_name, prj_name, scenarios) {
   # add nonCO2 queries manually (they are too big to use the usual method)
-  if (!'nonCO2 emissions by sector' %in% rgcam::listQueries(prj)) {
-    print('nonCO2 emissions by sector')
-    dt_sec = data_query('nonCO2 emissions by sector', db_path, db_name, prj_name, scenarios)
+  if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj)) {
+    print('nonCO2 emissions by sector (excluding resource production)')
+    dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
                                     queryname = 'nonCO2 emissions by sector', clobber = FALSE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
@@ -121,7 +129,7 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
                              db_name,migabble = FALSE)
 
   # read the queries file
-  queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam6.0_complete.xml')
+  queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
   queries <- rgcam::parse_batch_query(queryFile)
 
   # load all queries for all desired scenarios informing the user

@@ -237,7 +237,7 @@ get_co2_concentration = function() {
 #' @export
 get_co2 = function() {
   co2_clean <<-
-    tibble::as_tibble(rgcam::getQuery(prj, "CO2 emissions by sector (no bio)")) %>%
+    tibble::as_tibble(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)")) %>%
     dplyr::left_join(co2_sector_map, by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
@@ -261,8 +261,8 @@ get_co2 = function() {
 #' @export
 get_nonbio_tmp = function() {
   nonbio_share <<-
-    rgcam::getQuery(prj, "CO2 emissions by sector") %>%
-    dplyr::left_join(rgcam::getQuery(prj, "CO2 emissions by sector (no bio)"), by = c("region", "scenario", "year", "sector", "Units")) %>%
+    rgcam::getQuery(prj, "CO2 emissions by sector (excluding resource production)") %>%
+    dplyr::left_join(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)"), by = c("region", "scenario", "year", "sector", "Units")) %>%
     dplyr::mutate(value.y = dplyr::if_else(is.na(value.y), value.x, value.y),
                   percent = value.y/value.x) %>%
     dplyr::select(-value.x, -value.y)
@@ -277,7 +277,7 @@ get_nonbio_tmp = function() {
 #' @export
 get_co2_tech_nobio_tmp = function() {
   co2_tech_nobio <<-
-    rgcam::getQuery(prj, "CO2 emissions by tech") %>%
+    rgcam::getQuery(prj, "CO2 emissions by tech (excluding resource production)") %>%
     dplyr::left_join(nonbio_share, by = c("region", "scenario", "year", "sector", "Units")) %>%
     dplyr::mutate(value = value*percent) %>%
     dplyr::select(-percent)
@@ -475,7 +475,7 @@ get_ghg_sector = function() {
     dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
                        dplyr::rename(sector = resource) %>%
                        dplyr::select(-subresource)) %>%
-    dplyr::bind_rows(rgcam::getQuery(prj, "CO2 emissions by sector (no bio)") %>%
+    dplyr::bind_rows(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)") %>%
                        dplyr::mutate(ghg = "CO2")) %>%
     dplyr::mutate(subsector = sector) %>%
     conv_ghg_co2e() %>%
