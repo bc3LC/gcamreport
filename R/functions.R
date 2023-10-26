@@ -336,9 +336,9 @@ get_co2_iron_steel = function() {
     co2_tech_nobio %>% #Using redistributed bio version
     dplyr::filter(sector == "iron and steel") %>%
     dplyr::left_join(iron_steel_map, by = c("sector", "subsector", "technology", "year", "region")) %>%
-    dplyr::mutate(input = str_replace(input, "wholesale gas", "Emissions|CO2|Energy|Gas"),
-                  input = str_replace(input, "refined liquids industrial", "Emissions|CO2|Energy|Oil"),
-                  input = str_replace(input,	"delivered coal", "Emissions|CO2|Energy|Coal")) %>%
+    dplyr::mutate(input = stringr::str_replace(input, "wholesale gas", "Emissions|CO2|Energy|Gas"),
+                  input = stringr::str_replace(input, "refined liquids industrial", "Emissions|CO2|Energy|Oil"),
+                  input = stringr::str_replace(input,	"delivered coal", "Emissions|CO2|Energy|Coal")) %>%
     dplyr::rename(var = input) %>%
     dplyr::mutate(value = value * conv_C_CO2) %>%
     dplyr::group_by(scenario, region, year, var) %>%
