@@ -336,9 +336,9 @@ get_co2_iron_steel = function() {
     co2_tech_nobio %>% #Using redistributed bio version
     dplyr::filter(sector == "iron and steel") %>%
     dplyr::left_join(iron_steel_map, by = c("sector", "subsector", "technology", "year", "region")) %>%
-    dplyr::mutate(input = str_replace(input, "wholesale gas", "Emissions|CO2|Energy|Gas"),
-                  input = str_replace(input, "refined liquids industrial", "Emissions|CO2|Energy|Oil"),
-                  input = str_replace(input,	"delivered coal", "Emissions|CO2|Energy|Coal")) %>%
+    dplyr::mutate(input = stringr::str_replace(input, "wholesale gas", "Emissions|CO2|Energy|Gas"),
+                  input = stringr::str_replace(input, "refined liquids industrial", "Emissions|CO2|Energy|Oil"),
+                  input = stringr::str_replace(input,	"delivered coal", "Emissions|CO2|Energy|Coal")) %>%
     dplyr::rename(var = input) %>%
     dplyr::mutate(value = value * conv_C_CO2) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -1107,6 +1107,7 @@ get_gov_revenue_all = function() {
 get_prices_subsector = function() {
   prices_subsector <<-
     rgcam::getQuery(prj, "prices by sector") %>%
+    dplyr::select(-Units) %>%
     dplyr::left_join(energy_prices_map %>%
                        dplyr::filter(is.na(subsector)) %>%
                        unique, by = c("sector"), multiple = "all") %>%
@@ -1704,8 +1705,8 @@ do_bind_results = function() {
     template %>%
     dplyr::inner_join(GCAM_DATA_wGLOBAL %>%
                         na.omit %>%
-                        tidyr::spread(year, value), by = c("Variable" = "var"),
-                      multiple = "all") %>%
+                        tidyr::pivot_wider(names_from = 'year', values_from = 'value'),
+                      by = c("Variable" = "var"), multiple = "all") %>%
     #  dplyr::left_join(reporting_scen %>% dplyr::select(GCAM_scenario, Scenario),
     #            by = c("scenario" = "GCAM_scenario")) %>%
     dplyr::rename(Region = region) %>%
@@ -1763,6 +1764,7 @@ do_check_vetting = function() {
     dplyr::rename(unit_vet = unit,
                   value_vet = value) %>%
     dplyr::left_join(final_data_long_check, by = c("variable", "region", "year")) %>%
+    tidyr::unnest(value) %>%
     dplyr::mutate(value = dplyr::if_else(grepl("Traditional", variable), value * -1, value)) %>%
     dplyr::select(Scenario, variable = adj_var2, region, year, value, unit = Unit, value_vet, unit_vet, range) %>%
     # Adjust for Solar&Wind and biomass

@@ -8,6 +8,10 @@ cement,cement CCS,Carbon Sequestration|CCS,,Carbon Sequestration|CCS|Industrial 
 ces,dac,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
 ces,dac,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
 ces,dac,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
+CO2 removal,hightemp DAC NG,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
+CO2 removal,hightemp DAC elec,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
+CO2 removal,lowtemp DAC heatpump,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
+process heat dac,gas CCS,CO2 capture|Direct Air Capture,,,,,,,,,3.666667
 chemical energy use,biomass CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Biomass,Carbon Sequestration|CCS|Biomass|Energy,Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry,,,,,,3.666667
 chemical energy use,coal CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
 chemical energy use,gas CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
@@ -58,6 +62,7 @@ elec_coal (IGCC CCS),coal (IGCC CCS) (seawater),Carbon Sequestration|CCS,Carbon 
 elec_refined liquids (CC CCS),refined liquids (CC CCS) (dry cooling),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Liquids|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667
 elec_refined liquids (CC CCS),refined liquids (CC CCS) (recirculating),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Liquids|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667
 elec_refined liquids (CC CCS),refined liquids (CC CCS) (seawater),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Liquids|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667
+elec_refined liquids (CC CCS),refined liquids (CC CCS) (once through),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Liquids|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667
 iron and steel,BLASTFUR CCS with hydrogen,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
 elec_coal (IGCC CCS),coal (IGCC CCS) (once through),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667
 elec_coal (IGCC CCS),refined liquids (CC CCS) (once through),Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Supply,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,,,,,3.666667

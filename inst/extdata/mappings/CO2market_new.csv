@@ -58,3 +58,163 @@ ChinaCO2,Taiwan
 TaiwanCO2,Taiwan
 N-Am_AusCO2,USA
 USACO2,USA
+X,Y
+Africa_EasternCO2 removal,Africa_Eastern
+Africa_EasternairCO2,Africa_Easternair
+Africa_NorthernCO2 removal,Africa_Northern
+Africa_NorthernairCO2,Africa_Northernair
+Africa_SouthernCO2 removal,Africa_Southern
+Africa_SouthernairCO2,Africa_Southernair
+Africa_WesternCO2 removal,Africa_Western
+Africa_WesternairCO2,Africa_Westernair
+ArgentinaCO2 removal,Argentina
+ArgentinaairCO2,Argentinaair
+Australia_NZCO2 removal,Australia_NZ
+Australia_NZairCO2,Australia_NZair
+BrazilCO2 removal,Brazil
+BrazilairCO2,Brazilair
+CanadaCO2 removal,Canada
+CanadaairCO2,Canadaair
+Central America and CaribbeanCO2 removal,Central America and Caribbean
+Central America and CaribbeanairCO2,Central America and Caribbeanair
+Central AsiaCO2 removal,Central Asia
+Central AsiaairCO2,Central Asiaair
+ChinaCO2 removal,China
+ChinaairCO2,Chinaair
+ColombiaCO2 removal,Colombia
+ColombiaairCO2,Colombiaair
+EU-12CO2 removal,EU-12
+EU-12airCO2,EU-12air
+EU-15CO2 removal,EU-15
+EU-15airCO2,EU-15air
+Europe_EasternCO2 removal,Europe_Eastern
+Europe_EasternairCO2,Europe_Easternair
+Europe_Non_EUCO2 removal,Europe_Non_EU
+Europe_Non_EUairCO2,Europe_Non_EUair
+European Free Trade AssociationCO2 removal,European Free Trade Association
+European Free Trade AssociationairCO2,European Free Trade Associationair
+IndiaCO2 removal,India
+IndiaairCO2,Indiaair
+IndonesiaCO2 removal,Indonesia
+IndonesiaairCO2,Indonesiaair
+JapanCO2 removal,Japan
+JapanairCO2,Japanair
+MexicoCO2 removal,Mexico
+MexicoairCO2,Mexicoair
+Middle EastCO2 removal,Middle East
+Middle EastairCO2,Middle Eastair
+PakistanCO2 removal,Pakistan
+PakistanairCO2,Pakistanair
+RussiaCO2 removal,Russia
+RussiaairCO2,Russiaair
+South AfricaCO2 removal,South Africa
+South AfricaairCO2,South Africaair
+South America_NorthernCO2 removal,South America_Northern
+South America_NorthernairCO2,South America_Northernair
+South America_SouthernCO2 removal,South America_Southern
+South America_SouthernairCO2,South America_Southernair
+South AsiaCO2 removal,South Asia
+South AsiaairCO2,South Asiaair
+South KoreaCO2 removal,South Korea
+South KoreaairCO2,South Koreaair
+Southeast AsiaCO2 removal,Southeast Asia
+Southeast AsiaairCO2,Southeast Asiaair
+TaiwanCO2 removal,Taiwan
+TaiwanairCO2,Taiwanair
+USACO2 removal,USA
+USAairCO2,USAair
+ArgentinanonCO2,Argentinanon
+Australia_NZnonCO2,Australia_NZnon
+BrazilnonCO2,Brazilnon
+CanadaCO2_FUG,Canada
+CanadaCO2_building,Canada
+CanadanonCO2,Canadanon
+ChinaCO2_industry,China
+ChinanonCO2,Chinanon
+EUCO2_ETS,EU
+EUnonCO2,EUnon
+Europe_Non_EUnonCO2,Europe_Non_EUnon
+European Free Trade AssociationCO2_ETS,European Free Trade Association
+European Free Trade AssociationnonCO2,European Free Trade Associationnon
+IndianonCO2,Indianon
+IndonesiaCO2_FUG,Indonesia
+IndonesianonCO2,Indonesianon
+JapanCO2_FUG,Japan
+JapanCO2_cement,Japan
+JapanCO2_ironsteel,Japan
+JapannonCO2,Japannon
+MexicoCO2_FUG,Mexico
+MexicononCO2,Mexiconon
+Middle EastnonCO2,Middle Eastnon
+RussianonCO2,Russianon
+South AfricaCO2_FUG,South Africa
+South AfricanonCO2,South Africanon
+South KoreanonCO2,South Koreanon
+USAnonCO2,USAnon
+Africa_EasternCO2 removal-tfe,Africa_Eastern
+Africa_NorthernCO2 removal-tfe,Africa_Northern
+Africa_SouthernCO2 removal-tfe,Africa_Southern
+Africa_WesternCO2 removal-tfe,Africa_Western
+ArgentinaCO2 removal-tfe,Argentina
+Australia_NZCO2 removal-tfe,Australia_NZ
+BrazilCO2 removal-tfe,Brazil
+CanadaCO2 removal-tfe,Canada
+Central America and CaribbeanCO2 removal-tfe,Central America and Caribbean
+Central AsiaCO2 removal-tfe,Central Asia
+ChinaCO2 removal-tfe,China
+ColombiaCO2 removal-tfe,Colombia
+EU-12CO2 removal-tfe,EU-12
+EU-15CO2 removal-tfe,EU-15
+Europe_EasternCO2 removal-tfe,Europe_Eastern
+Europe_Non_EUCO2 removal-tfe,Europe_Non_EU
+European Free Trade AssociationCO2 removal-tfe,European Free Trade Association
+IndiaCO2 removal-tfe,India
+IndonesiaCO2 removal-tfe,Indonesia
+JapanCO2 removal-tfe,Japan
+MexicoCO2 removal-tfe,Mexico
+Middle EastCO2 removal-tfe,Middle East
+PakistanCO2 removal-tfe,Pakistan
+RussiaCO2 removal-tfe,Russia
+South AfricaCO2 removal-tfe,South Africa
+South America_NorthernCO2 removal-tfe,South America_Northern
+South America_SouthernCO2 removal-tfe,South America_Southern
+South AsiaCO2 removal-tfe,South Asia
+South KoreaCO2 removal-tfe,South Korea
+Southeast AsiaCO2 removal-tfe,Southeast Asia
+TaiwanCO2 removal-tfe,Taiwan
+USACO2 removal-tfe,USA
+Africa_EasternCO2_FUG,Africa_Eastern
+Africa_EasternnonCO2,Africa_Easternnon
+Africa_NorthernnonCO2,Africa_Northernnon
+Africa_SouthernCO2_FUG,Africa_Southern
+Africa_SouthernnonCO2,Africa_Southernnon
+Africa_WesternCO2_FUG,Africa_Western
+Africa_WesternnonCO2,Africa_Westernnon
+ArgentinaCO2_FUG,Argentina
+Australia_NZCO2_FUG,Australia_NZ
+BrazilCO2_FUG,Brazil
+Central America and CaribbeanCO2_FUG,Central America and Caribbean
+Central America and CaribbeannonCO2,Central America and Caribbeannon
+Central AsiaCO2_FUG,Central Asia
+Central AsianonCO2,Central Asianon
+ChinaCO2_FUG,China
+ColombiaCO2_FUG,Colombia
+ColombianonCO2,Colombianon
+Europe_EasternCO2_FUG,Europe_Eastern
+Europe_EasternnonCO2,Europe_Easternnon
+Europe_Non_EUCO2_FUG,Europe_Non_EU
+European Free Trade AssociationCO2,European Free Trade Association
+European Free Trade AssociationCO2_FUG,European Free Trade Association
+IndiaCO2_FUG,India
+Middle EastCO2_FUG,Middle East
+PakistannonCO2,Pakistannon
+RussiaCO2_FUG,Russia
+South America_NorthernnonCO2,South America_Northernnon
+South America_SouthernCO2_FUG,South America_Southern
+South America_SouthernnonCO2,South America_Southernnon
+South AsianonCO2,South Asianon
+South KoreaCO2_FUG,South Korea
+Southeast AsiaCO2_FUG,Southeast Asia
+Southeast AsianonCO2,Southeast Asianon
+TaiwannonCO2,Taiwannon
+USACO2_FUG,USA
