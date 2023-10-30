@@ -168,6 +168,8 @@ GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,Mt CO2/yr
 GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrogen,Mt CO2/yr
 GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids,Mt CO2/yr
 GCAM 7.0,Carbon Sequestration|CCS|Industrial Processes,Mt CO2/yr
+GCAM 7.0,Carbon Sequestration|Direct Air Capture,Mt CO2/yr
+GCAM 7.0,Carbon Sequestration|Feedstocks,Mt CO2/yr
 GCAM 7.0,Carbon Sequestration|Land Use,Mt CO2/yr
 GCAM 7.0,Carbon Sequestration|Land Use|Afforestation,Mt CO2/yr
 GCAM 7.0,Concentration|CH4,ppb
@@ -245,6 +247,8 @@ GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals|Methanol,Mt CO2/yr
 GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals|Other,Mt CO2/yr
 GCAM 7.0,Emissions|CO2|Industrial Processes|Non-ferrous metals,Mt CO2/yr
 GCAM 7.0,Emissions|CO2|Industrial Processes|Other,Mt CO2/yr
+GCAM 7.0,Emissions|CO2|Other,Mt CO2/yr
+GCAM 7.0,Emissions|CO2|Other|DACCS,Mt CO2/yr
 GCAM 7.0,Emissions|F-Gases,Mt CO2-equiv/yr
 GCAM 7.0,Emissions|HFC,kt HFC134a-equiv/yr
 GCAM 7.0,Emissions|HFC|HFC125,kt HFC125/yr
@@ -608,6 +612,8 @@ GCAM 7.0,Final Energy|Residential and Commercial|Solids,EJ/yr
 GCAM 7.0,Final Energy|Residential and Commercial|Solids|Biomass,EJ/yr
 GCAM 7.0,Final Energy|Residential and Commercial|Solids|Biomass|Traditional,EJ/yr
 GCAM 7.0,Final Energy|Residential and Commercial|Solids|Coal,EJ/yr
+GCAM 7.0,Final Energy|Other,EJ/yr
+GCAM 7.0,Final Energy|Other|Electricity,EJ/yr
 GCAM 7.0,Final Energy|Solar,EJ/yr
 GCAM 7.0,Final Energy|Solids,EJ/yr
 GCAM 7.0,Final Energy|Solids|Biomass,EJ/yr

@@ -1,28 +1,21 @@
 # Prices by sector,,,,,,,,,,
 sector,subsector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
 delivered biomass,,Price|Secondary Energy|Solids|Biomass,Price|Final Energy|Residential|Solids|Biomass,,,,,,,1
-delivered biomass industry,,Price|Secondary Energy|Solids|Biomass,Price|Final Energy|Residential|Solids|Biomass,,,,,,,1
+delivered biomass industry,,,Price|Final Energy|Industry|Solids|Biomass,,,,,,,1
 delivered coal,,Price|Secondary Energy|Solids|Coal,Price|Final Energy|Residential|Solids|Coal,,,,,,,1
-delivered coal feedstocks,,Price|Secondary Energy|Solids|Coal,Price|Final Energy|Residential|Solids|Coal,,,,,,,1
-delivered coal industry,,Price|Secondary Energy|Solids|Coal,Price|Final Energy|Residential|Solids|Coal,,,,,,,1
-delivered gas,,Price|Final Energy|Buildings|Residential|Gases|Natural Gas,,,,,,,,1
-delivered gas h2,,Price|Final Energy|Buildings|Residential|Gases|Natural Gas,,,,,,,,1
-delivered gas transport,,Price|Final Energy|Buildings|Residential|Gases|Natural Gas,,,,,,,,1
+delivered coal industry,,,Price|Final Energy|Industry|Solids|Coal,,,,,,,1
+delivered gas,,Price|Final Energy|Buildings|Residential|Gases,,,,,,,,1
+delivered gas transport,,Price|Final Energy|Transportation|Gases,,,,,,,,1
 elect_td_bld,,Price|Final Energy|Buildings|Residential|Electricity,,,,,,,,1
 elect_td_ind,,Price|Final Energy|Industry|Electricity,,,,,,,,1
 elect_td_trn,,Price|Final Energy|Transportation|Electricity,,,,,,,,1
-elect_td_en,,Price|Final Energy|Transportation|Electricity,,,,,,,,1
-elect_td_h2,,Price|Final Energy|Transportation|Electricity,,,,,,,,1
 electricity,,Price|Secondary Energy|Electricity,,,,,,,,1
 gas processing,natural gas,Price|Secondary Energy|Gases|Natural Gas,,,,,,,,1
-process heat dac,,Price|Secondary Energy|Gases|Natural Gas,,,,,,,,1
 H2 central production,,Price|Secondary Energy|Hydrogen,,,,,,,,1
 H2 enduse,,Price|Final Energy|Transportation|Hydrogen,Price|Final Energy|Industry|Hydrogen,,,,,,,1
 refined liquids enduse,,Price|Final Energy|Buildings|Residential|Liquids,,,,,,,,1
 refined liquids industrial,,Price|Final Energy|Industry|Liquids,,,,,,,,1
-refined liquids bunkers,,Price|Final Energy|Industry|Liquids,,,,,,,,1
-refined liquids feedstocks,,Price|Final Energy|Industry|Liquids,,,,,,,,1
-refined liquids transport,,Price|Final Energy|Industry|Liquids,,,,,,,,1
+refined liquids transport,,Price|Final Energy|Transportation|Liquids,,,,,,,,1
 refining,,Price|Secondary Energy|Liquids,,,,,,,,1
 refining,biomass liquids,Price|Secondary Energy|Liquids|Biomass,,,,,,,,1
 refining,oil refining,Price|Secondary Energy|Liquids|Oil,,,,,,,,1
@@ -31,11 +24,3 @@ regional coal,,Price|Primary Energy|Coal,,,,,,,,1
 regional natural gas,,Price|Primary Energy|Gas,,,,,,,,1
 regional oil,,Price|Primary Energy|Oil,,,,,,,,1
 wholesale gas,,Price|Final Energy|Industry|Gases,,,,,,,,1
-wholesale gas feedstocks,,Price|Final Energy|Industry|Gases,,,,,,,,1
-rofftop_pv,,Price|Primary Energy|Solar,,,,,,,,1
-CO2 removal,,,,,,,,,,1
-Corn,,,,,,,,,,1
-Rice,,,,,,,,,,1
-Soybean,,,,,,,,,,1
-Wheat,,,,,,,,,,1
-airCO2,,,,,,,,,,1
