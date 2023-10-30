@@ -18,7 +18,7 @@ data_query(type, db_path, db_name, prj_name, scenarios)
 \item{type:}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'}
 }
 \value{
-dataframe with the data from the query
+dataframe with the data from the queries
 }
 \description{
 Add nonCO2 large queries

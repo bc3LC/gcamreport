@@ -10,15 +10,15 @@ library(magrittr)
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
 #' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
-#' @return dataframe with the data from the query
+#' @return dataframe with the data from the queries
 #' @export
 data_query = function(type, db_path, db_name, prj_name, scenarios) {
   dt = data.frame()
   xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
-  emiss_list = emissions_list
   for (sc in scenarios) {
+    emiss_list = emissions_list
     while (length(emiss_list) > 0) {
       current_emis = emiss_list[1:min(21,length(emiss_list))]
       qq_sec = gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
