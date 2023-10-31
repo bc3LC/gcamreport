@@ -73,7 +73,7 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
     print('nonCO2 emissions by sector (excluding resource production)')
     dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                                    queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }
