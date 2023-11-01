@@ -487,6 +487,15 @@
 #' }
 "GHG_gases"
 
+#' CO2_equivalent
+#'
+#' @description CO2 equivalency conversion
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::CO2_equivalent
+#' }
+"CO2_equivalent"
+
 #' GCAM_years
 #'
 #' @description reporting years

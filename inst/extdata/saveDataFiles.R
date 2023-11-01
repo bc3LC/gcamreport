@@ -48,10 +48,6 @@ co2_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2
                            stringsAsFactors = FALSE) %>% gather_map()
 use_data(co2_sector_map, overwrite=T)
 
-co2_ets_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2_ETS_sector_map.csv"), skip = 1, na = "",
-                           stringsAsFactors = FALSE) %>% gather_map()
-use_data(co2_ets_sector_map, overwrite=T)
-
 co2_tech_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2_tech_map.csv"), skip = 1, na = "",
                          stringsAsFactors = FALSE) %>% gather_map()
 use_data(co2_tech_map, overwrite=T)
@@ -160,10 +156,6 @@ investment <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/investm
 use_data(investment, overwrite=T)
 
 
-last_historical_year = 2015
-use_data(last_historical_year, overwrite=T)
-
-
 carbon_content <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/L202.CarbonCoef.csv"), skip = 2, na = "",
                            stringsAsFactors = FALSE)
 use_data(carbon_content, overwrite=T)
@@ -234,6 +226,9 @@ use_data(F_GASES, overwrite=T)
 GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 use_data(GHG_gases, overwrite=T)
 
+CO2_equivalent <- 3.666667 #ghg * CO2_equivalent gives CO2 units
+use_data(CO2_equivalent, overwrite=T)
+
 
 # Reporting years
 GCAM_years <- c(1990, seq(2005, 2100, 5))
@@ -241,6 +236,10 @@ use_data(GCAM_years, overwrite=T)
 
 reporting_years <- seq(2005, 2100, 5)
 use_data(reporting_years, overwrite=T)
+
+last_historical_year = 2015
+use_data(last_historical_year, overwrite=T)
+
 
 # REPLACE with reporting years
 

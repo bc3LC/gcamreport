@@ -255,13 +255,11 @@ get_co2 = function() {
 #' @export
 get_co2_ets = function() {
   co2_ets <<-
-    tibble::as_tibble(rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")) %>%
+    tibble::as_tibble(rgcam::getQuery(prj, "nonCO2 emissions by region")) %>%
     dplyr::filter(ghg == 'CO2_ETS') %>%
-    dplyr::left_join(co2_ets_sector_map, by = "sector", multiple = "all") %>%
-    dplyr::mutate(value = value * unit_conv) %>%
-    dplyr::group_by(scenario, region, year, var) %>% #
-    dplyr::summarise(value = sum(value, na.rm = T)) %>%
-    dplyr::ungroup() %>%
+    # change units to CO2 equivalent and set the variable
+    dplyr::mutate(value = value * CO2_equivalent,
+                  var = 'Emissions|CO2_ETS|Energy and Industrial Processes') %>%
     dplyr::select(all_of(long_columns))
 }
 
@@ -451,6 +449,7 @@ get_nonco2_emissions = function() {
 get_fgas = function() {
   f_gas_clean <<-
     rgcam::getQuery(prj, "nonCO2 emissions by region") %>%
+    dplyr::filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% F_GASES) %>%
     dplyr::group_by(scenario, region, year) %>%
@@ -470,6 +469,7 @@ get_fgas = function() {
 get_ghg = function() {
   ghg_clean <<-
     rgcam::getQuery(prj, "nonCO2 emissions by region") %>%
+    dplyr::filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::bind_rows(LU_carbon_clean) %>%
@@ -1049,6 +1049,10 @@ get_co2_price_fragmented_tmp = function() {
                   market_adj = dplyr::if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
                   market_adj = dplyr::if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
                   market_adj = dplyr::if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)) %>%
+    # consider the value sum of by market (sum CO2_ETS coming from ETS and CO2IND)
+    dplyr::group_by(Units, scenario, year, market, region) %>%
+    dplyr::mutate(value = sum(value)) %>%
+    dplyr::ungroup() %>%
     # apply the share between CO2 and CO2_ETS
     dplyr::left_join(co2_price_share %>%
                        dplyr::select(scenario, region, market_adj, share),
