@@ -7,7 +7,7 @@
 get_co2_ets()
 }
 \value{
-co2_ets global variable
+co2_ets_by reg and co2_ets_bysec global variables
 }
 \description{
 Get World's CO2 ETS emissions query.

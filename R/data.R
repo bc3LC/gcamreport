@@ -75,6 +75,17 @@
 #' }
 "co2_sector_map"
 
+#' co2_ets_sector_map
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::co2_ets_sector_map
+#' }
+"co2_ets_sector_map"
+
 #' co2_tech_map
 #'
 #' @source github

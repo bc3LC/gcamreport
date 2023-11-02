@@ -7,7 +7,7 @@
 get_co2_price_share()
 }
 \value{
-co2_price_share global variable
+co2_price_share_byreg and co2_price_share_bysec global variables
 }
 \description{
 Get co2 price between CO2 and CO2_ETS. If only one CO2 type present, share = 1;

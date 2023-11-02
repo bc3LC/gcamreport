@@ -26,10 +26,15 @@ desalinated water,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|En
 district heat,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Heat,,,,3.666667
 elec_biomass (conv CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 elec_biomass (IGCC CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
+elec_coal (conv pul),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 elec_coal (conv pul CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 elec_coal (IGCC CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
+elec_gas (CC),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 elec_gas (CC CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
+elec_gas (steam/CT),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
+elec_refined liquids (CC),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 elec_refined liquids (CC CCS),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
+elec_refined liquids (steam/CT),Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 electricity,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Electricity,,,,3.666667
 gas pipeline,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,3.666667
 gas processing,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,3.666667

@@ -48,6 +48,10 @@ co2_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2
                            stringsAsFactors = FALSE) %>% gather_map()
 use_data(co2_sector_map, overwrite=T)
 
+co2_ets_sector_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2_ETS_sector_map.csv"), skip = 1, na = "",
+                           stringsAsFactors = FALSE) %>% gather_map()
+use_data(co2_ets_sector_map, overwrite=T)
+
 co2_tech_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/CO2_tech_map.csv"), skip = 1, na = "",
                          stringsAsFactors = FALSE) %>% gather_map()
 use_data(co2_tech_map, overwrite=T)
