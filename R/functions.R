@@ -1036,7 +1036,7 @@ get_co2_price_share = function() {
             dplyr::filter(year == last_historical_year)) %>%
     # select only reported sectors and do a right join, so that all sectors are present,
     # even if the value is NA
-    right_join(expand.grid(var = c('Emissions|CO2|Energy and Industrial Processes',
+    dplyr::right_join(expand.grid(var = c('Emissions|CO2|Energy and Industrial Processes',
                                    'Emissions|CO2|Energy|Demand|Industry',
                                    'Emissions|CO2|Energy|Demand|Transportation',
                                    'Emissions|CO2|Energy|Demand|Residential and Commercial',
