@@ -1036,7 +1036,7 @@ get_co2_price_share = function() {
             dplyr::filter(year == last_historical_year)) %>%
     # select only reported sectors and do a right join, so that all sectors are present,
     # even if the value is NA
-    right_join(expand.grid(var = c('Emissions|CO2|Energy and Industrial Processes',
+    dplyr::right_join(expand.grid(var = c('Emissions|CO2|Energy and Industrial Processes',
                                    'Emissions|CO2|Energy|Demand|Industry',
                                    'Emissions|CO2|Energy|Demand|Transportation',
                                    'Emissions|CO2|Energy|Demand|Residential and Commercial',
@@ -1106,13 +1106,6 @@ get_co2_price_fragmented_tmp = function() {
     dplyr::filter(stats::complete.cases(.)) %>%
     tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
     dplyr::select(all_of(long_columns))
-    # dplyr::mutate(value = CO2 + CO2_ETS * share_CO2_ETS) %>%
-    # dplyr::select(Units, scenario, year, region, value, sector) %>%
-    # dplyr::left_join(co2_market_frag_map, by = "sector", multiple = "all") %>%
-    # dplyr::filter(stats::complete.cases(.)) %>%
-    # tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
-    # dplyr::select(all_of(long_columns))
-
   } else {
 
     co2_price_fragmented <<- NULL

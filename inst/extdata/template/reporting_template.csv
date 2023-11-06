@@ -815,7 +815,7 @@ GCAM 7.0,Price|Carbon,US$2010/t
 GCAM 7.0,Price|Carbon|Demand|Industry,US$2010/t CO2
 GCAM 7.0,Price|Carbon|Demand|Residential and Commercial,US$2010/t CO2
 GCAM 7.0,Price|Carbon|Demand|Transportation,US$2010/t CO2
-GCAM 7.0,Price|Carbon|Supply,US$2010/t CO2 - weighted: CO2 + CO2_ETS*weightRegional, byseec
+GCAM 7.0,Price|Carbon|Supply,US$2010/t CO2
 GCAM 7.0,Price|Final Energy|Industry|Gases|Bioenergy,US$2010/GJ
 GCAM 7.0,Price|Final Energy|Industry|Gases|Fossil,US$2010/GJ
 GCAM 7.0,Price|Final Energy|Industry|Gases,US$2010/GJ
