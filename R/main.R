@@ -17,8 +17,8 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
   xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
-  emiss_list = emissions_list
   for (sc in scenarios) {
+    emiss_list = emissions_list
     while (length(emiss_list) > 0) {
       current_emis = emiss_list[1:min(21,length(emiss_list))]
       qq_sec = gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
@@ -73,7 +73,7 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
     print('nonCO2 emissions by sector (excluding resource production)')
     dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                                    queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }

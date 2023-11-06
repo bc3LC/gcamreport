@@ -6,6 +6,7 @@ options(dplyr.summarise.inform = FALSE)
 #                           ANCILLARY FUNCTIONS                         #
 #########################################################################
 
+
 #' conv_ghg_co2e
 #'
 #' Covert GHG to CO2e
@@ -247,6 +248,33 @@ get_co2 = function() {
 }
 
 
+#' get_co2_ets
+#'
+#' Get World's CO2 ETS emissions query.
+#' @keywords co2 rgcam::getQuery
+#' @return co2_ets_by reg and co2_ets_bysec global variables
+#' @export
+get_co2_ets = function() {
+  co2_ets_byreg <<-
+    tibble::as_tibble(rgcam::getQuery(prj, "nonCO2 emissions by region")) %>%
+    dplyr::filter(ghg == 'CO2_ETS') %>%
+    # change units to CO2 equivalent and set the variable
+    dplyr::mutate(value = value * CO2_equivalent,
+                  var = 'Emissions|CO2_ETS|Energy and Industrial Processes') %>%
+    dplyr::select(all_of(long_columns))
+  co2_ets_bysec <<-
+    tibble::as_tibble(rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")) %>%
+    dplyr::filter(ghg == 'CO2_ETS') %>%
+    # change units to CO2 equivalent and group by sector
+    dplyr::left_join(co2_ets_sector_map, by = "sector", multiple = "all") %>%
+    dplyr::mutate(value = value * unit_conv) %>%
+    dplyr::group_by(scenario, region, year, var) %>% #
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(all_of(long_columns))
+}
+
+
 # Get CO2 emissions by tech, to break out ships vs rail vs aviation
 # and to get Emissions|CO2|Energy| Coal vs Gas vs Oil.
 # Must create CO2 emissions by tech (no bio) output first to be consistent. There is no query for this
@@ -412,7 +440,7 @@ get_total_co2_emissions = function() {
 #' @export
 get_nonco2_emissions = function() {
   nonco2_clean <<-
-    rgcam::getQuery(prj, "nonCO2 emissions by sector") %>%
+    rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)") %>%
     dplyr::left_join(nonco2_emis_sector_map, by = c("ghg", "sector"), multiple = "all") %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
                        dplyr::left_join(nonco2_emis_resource_map, by = c("ghg", "resource"), multiple = "all")) %>%
@@ -432,6 +460,7 @@ get_nonco2_emissions = function() {
 get_fgas = function() {
   f_gas_clean <<-
     rgcam::getQuery(prj, "nonCO2 emissions by region") %>%
+    dplyr::filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% F_GASES) %>%
     dplyr::group_by(scenario, region, year) %>%
@@ -451,6 +480,7 @@ get_fgas = function() {
 get_ghg = function() {
   ghg_clean <<-
     rgcam::getQuery(prj, "nonCO2 emissions by region") %>%
+    dplyr::filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::bind_rows(LU_carbon_clean) %>%
@@ -470,8 +500,8 @@ get_ghg = function() {
 #' @export
 get_ghg_sector = function() {
   ghg_sector_clean <<-
-    rgcam::getQuery(prj, "nonCO2 emissions by sector")  %>%
-    dplyr::filter(!grepl("CO2", ghg)) %>%
+    rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")  %>%
+    dplyr::filter(!grepl("CO2", ghg), !grepl("CO2_ETS", ghg)) %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
                        dplyr::rename(sector = resource) %>%
                        dplyr::select(-subresource)) %>%
@@ -980,6 +1010,60 @@ get_co2_price_global_tmp = function() {
 }
 
 
+#' get_co2_price_share
+#'
+#' Get co2 price between CO2 and CO2_ETS. If only one CO2 type present, share = 1;
+#' otherwise, each type has the share corresponding to the last historical year
+#' @keywords co2 rgcam::getQuery tmp
+#' @return co2_price_share_byreg and co2_price_share_bysec global variables
+#' @export
+get_co2_price_share = function() {
+  co2_price_share_byreg <<- co2_clean %>%
+    dplyr::filter(var == 'Emissions|CO2|Energy and Industrial Processes',
+                  year == last_historical_year) %>%
+    rbind(co2_ets_byreg %>%
+            dplyr::filter(var == 'Emissions|CO2_ETS|Energy and Industrial Processes',
+                          year == last_historical_year)) %>%
+    dplyr::mutate(var = dplyr::if_else(var == "Emissions|CO2|Energy and Industrial Processes", 'CO2', 'CO2_ETS')) %>%
+    tidyr::pivot_wider(names_from = 'var', values_from = 'value') %>%
+    dplyr::mutate(CO2_ETS = dplyr::if_else(is.na(CO2_ETS), 0, CO2_ETS)) %>%
+    dplyr::mutate(share_CO2_ETS = CO2_ETS / CO2) %>%
+    dplyr::select(scenario, region, year, share_CO2_ETS)
+
+  co2_price_share_bysec <<- co2_clean %>%
+    dplyr::filter(year == last_historical_year) %>%
+    rbind(co2_ets_bysec %>%
+            dplyr::filter(year == last_historical_year)) %>%
+    # select only reported sectors and do a right join, so that all sectors are present,
+    # even if the value is NA
+    dplyr::right_join(expand.grid(var = c('Emissions|CO2|Energy and Industrial Processes',
+                                   'Emissions|CO2|Energy|Demand|Industry',
+                                   'Emissions|CO2|Energy|Demand|Transportation',
+                                   'Emissions|CO2|Energy|Demand|Residential and Commercial',
+                                   'Emissions|CO2|Energy|Supply',
+                                   'Emissions|CO2_ETS|Energy and Industrial Processes',
+                                   'Emissions|CO2_ETS|Energy|Demand|Industry',
+                                   'Emissions|CO2_ETS|Energy|Demand|Transportation',
+                                   'Emissions|CO2_ETS|Energy|Demand|Residential and Commercial',
+                                   'Emissions|CO2_ETS|Energy|Supply'),
+                           region = unique(co2_clean$region),
+                           scenario = unique(co2_clean$scenario),
+                           year = 2015)) %>%
+    dplyr::mutate(value = dplyr::if_else(is.na(value), 0, value)) %>%
+    # compute the share
+    dplyr::mutate(sector = sub('.*\\|([^|]+)$', '\\1', var),
+                  ghg = sub('Emissions\\|([^|]+)\\|.*$', '\\1', var)) %>%
+    dplyr::select(-var) %>% dplyr::distinct(.) %>%
+    tidyr::pivot_wider(names_from = 'ghg', values_from = 'value') %>%
+    dplyr::mutate(CO2_ETS, dplyr::if_else(is.na(CO2_ETS), 0, CO2_ETS)) %>%
+    dplyr::mutate(share_CO2_ETS = CO2_ETS/CO2) %>%
+    # if the share is > 1, set it to 1 (seems that "biomass" is not accounted in the CO2 emissions query)
+    dplyr::mutate(share_CO2_ETS = dplyr::if_else(share_CO2_ETS > 1, 1, share_CO2_ETS)) %>%
+    dplyr::select(scenario, region, year, sector, share_CO2_ETS)
+}
+
+
+
 #' get_co2_price_fragmented_tmp
 #'
 #' Get fragmented co2 price.
@@ -1005,13 +1089,23 @@ get_co2_price_fragmented_tmp = function() {
                   market_adj = dplyr::if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
                   market_adj = dplyr::if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
                   market_adj = dplyr::if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)) %>%
-    dplyr::mutate(market = market_adj) %>%
-    dplyr::select(-market_adj) %>%
-    dplyr::left_join(co2_market_frag_map, by = "market", multiple = "all") %>%
+    # consider the value sum of by market (sum CO2_ETS coming from ETS and CO2IND)
+    dplyr::group_by(Units, scenario, year, market, region) %>%
+    dplyr::mutate(value = sum(value)) %>%
+    dplyr::ungroup() %>%
+    # apply the share between CO2 and CO2_ETS
+    dplyr::select(-market) %>%
+    tidyr::pivot_wider(names_from = 'market_adj', values_from = 'value') %>%
+    dplyr::mutate(across(6:length(colnames(.)), ~ ifelse(is.na(.), 0, .))) %>%
+    dplyr::left_join(co2_price_share_bysec %>%
+                       dplyr::select(-year),
+                     by = c('scenario','region')) %>%
+    dplyr::mutate(value = CO2 + CO2_ETS * share_CO2_ETS) %>%
+    dplyr::select(Units, scenario, year, region, value, CO2, CO2_ETS, share_CO2_ETS, sector) %>%
+    dplyr::left_join(co2_market_frag_map, by = "sector", multiple = "all") %>%
     dplyr::filter(stats::complete.cases(.)) %>%
     tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
     dplyr::select(all_of(long_columns))
-
   } else {
 
     co2_price_fragmented <<- NULL
@@ -1107,6 +1201,7 @@ get_gov_revenue_all = function() {
 get_prices_subsector = function() {
   prices_subsector <<-
     rgcam::getQuery(prj, "prices by sector") %>%
+    dplyr::select(-Units) %>%
     dplyr::left_join(energy_prices_map %>%
                        dplyr::filter(is.na(subsector)) %>%
                        unique, by = c("sector"), multiple = "all") %>%
@@ -1704,8 +1799,8 @@ do_bind_results = function() {
     template %>%
     dplyr::inner_join(GCAM_DATA_wGLOBAL %>%
                         na.omit %>%
-                        tidyr::spread(year, value), by = c("Variable" = "var"),
-                      multiple = "all") %>%
+                        tidyr::pivot_wider(names_from = 'year', values_from = 'value'),
+                      by = c("Variable" = "var"), multiple = "all") %>%
     #  dplyr::left_join(reporting_scen %>% dplyr::select(GCAM_scenario, Scenario),
     #            by = c("scenario" = "GCAM_scenario")) %>%
     dplyr::rename(Region = region) %>%
@@ -1763,6 +1858,7 @@ do_check_vetting = function() {
     dplyr::rename(unit_vet = unit,
                   value_vet = value) %>%
     dplyr::left_join(final_data_long_check, by = c("variable", "region", "year")) %>%
+    tidyr::unnest(value) %>%
     dplyr::mutate(value = dplyr::if_else(grepl("Traditional", variable), value * -1, value)) %>%
     dplyr::select(Scenario, variable = adj_var2, region, year, value, unit = Unit, value_vet, unit_vet, range) %>%
     # Adjust for Solar&Wind and biomass
