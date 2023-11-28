@@ -4,10 +4,17 @@
 \alias{load_project}
 \title{load_project}
 \usage{
-load_project(prj_name)
+load_project(prj_name, desired_regions = "All")
 }
 \arguments{
 \item{prj_name:}{name of the project}
+
+\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
+being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+In case the project dataset needs to be created, it will be produced with only the specified regions.}
 }
 \value{
 loaded project into global environment
