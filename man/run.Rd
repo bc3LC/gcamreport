@@ -12,6 +12,7 @@ run(
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
+  desired_regions = "All",
   save_output = TRUE,
   file_name = NULL,
   launch_ui = TRUE
@@ -37,6 +38,13 @@ ag_demand_clean, land_clean, primary_energy_clean, energy_trade_clean, elec_gen_
 elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
 ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
+
+\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
+being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+In case the project dataset needs to be created, it will be produced with only the specified regions.}
 
 \item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
 data saved only in the specified format.}
