@@ -1562,13 +1562,7 @@ get_elec_capacity_add_tmp = function() {
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
     # use GCAM cf for capacity additions
-    dplyr::left_join(elec_cf %>%
-                       dplyr::filter(!technology %in% c("coal (conv pul)")) %>%
-                       dplyr::group_by(region, technology) %>%
-                       dplyr::mutate(cf = replace(cf, vintage < 2025, cf[vintage == 2025])) %>%
-                       dplyr::ungroup() %>%
-                       dplyr::bind_rows(elec_cf %>%
-                                          dplyr::filter(technology %in% c("coal (conv pul)" ))),
+    dplyr::left_join(elec_cf ,
                      by = c("region", "technology", "year" = "vintage")) %>%
     # use average annual additions
     dplyr::mutate(EJ = value / 5) %>%
