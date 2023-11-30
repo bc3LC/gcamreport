@@ -32,7 +32,7 @@ Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCIO
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 }
 \value{
-dataframe with the data from the queries
+dataframe with the data from the query
 }
 \description{
 Add nonCO2 large queries
