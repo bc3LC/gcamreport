@@ -133,7 +133,7 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
 #' @export
 load_project = function(project_path, desired_regions = 'All') {
   # load the project
-  prj <<- rgcam::loadProject(project_path)
+  prj = rgcam::loadProject(project_path)
 
   # filter the regions if not all of them are considered (desired_regions != 'All')
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -145,6 +145,7 @@ load_project = function(project_path, desired_regions = 'All') {
       }
     }
   }
+  prj <<- prj
 
   Scenarios <<- rgcam::listScenarios(prj)
 }
@@ -344,7 +345,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
                                   c('co2_price_clean', 'population_clean', 'GDP_MER_clean', 'GDP_PPP_clean',
                                     'global_temp_clean', 'forcing_clean', 'co2_concentration_clean',
                                     'co2_emissions_clean', 'tot_co2_clean', 'co2_sequestration_clean',
-                                    'ag_demand_clean', 'land_clean',
+                                    'ag_demand_clean', 'ag_production_clean', 'land_clean',
                                     'primary_energy_clean', 'energy_trade_clean',
                                     'elec_gen_tech_clean', 'elec_capacity_tot_clean', 'elec_capacity_add_clean',
                                     'se_gen_tech_clean', 'fe_sector_clean',
@@ -361,7 +362,8 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   if (desired_variables == 'All') {
     variables <<- variables_base
   } else {
-    variables <<- dplyr::anti_join(variables_base, desired_variables, by = 'name')
+    variables <<- variables_base %>%
+      dplyr::filter(name %in% desired_variables)
   }
 
   print('Loading data, performing checks, and saving output...')
