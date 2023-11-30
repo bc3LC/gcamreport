@@ -4,7 +4,7 @@
 \alias{load_project}
 \title{load_project}
 \usage{
-load_project(prj_name, desired_regions = "All")
+load_project(project_path, desired_regions = "All")
 }
 \arguments{
 \item{prj_name:}{name of the project}

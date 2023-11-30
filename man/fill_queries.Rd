@@ -4,7 +4,14 @@
 \alias{fill_queries}
 \title{fill_queries}
 \usage{
-fill_queries(db_path, db_name, prj_name, scenarios, desired_regions = "All")
+fill_queries(
+  db_path,
+  db_name,
+  prj_name,
+  scenarios,
+  desired_regions = "All",
+  prj
+)
 }
 \arguments{
 \item{db_path:}{path of the database}
@@ -21,9 +28,11 @@ Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade 
 Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
 Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
+
+\item{prj:}{prject file}
 }
 \value{
-empty dataframes on the void queries of the project
+project file with extra queries
 }
 \description{
 Create a folder to save the datasets and file, in case it does not exist

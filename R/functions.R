@@ -27,10 +27,18 @@ filter_regions <- function (data, desired_regions = 'All', variable) {
     if (variable %in% c('CO2 prices','supply of all markets')) {
       pattern <- paste(c("CO2", "airCO2", "nonCO2", "CO2_FUG", "CO2 removal",
                          "H2", "Exports"), collapse = "|")
+      # desired_regions special case: if some "EU" region is present, consider the
+      # "EU" region to compute CO2 price
+      if (any(grepl("^EU", desired_regions))) {
+        desired_regions_tmp = c(desired_regions,'EU')
+      } else {
+        desired_regions_tmp = desired_regions
+      }
+
       data = data %>%
         dplyr::mutate(region = sapply(strsplit(as.character(market), pattern),
                                       function(x) x[1])) %>%
-        dplyr::filter(region %in% desired_regions) %>%
+        dplyr::filter(region %in% desired_regions_tmp) %>%
         dplyr::select(-region)
     } else if (!(v %in% c('CO2 concentrations','global mean temperature',
                           'total climate forcing'))) {
@@ -1081,7 +1089,15 @@ get_co2_price_share = function() {
             dplyr::filter(var == 'Emissions|CO2_ETS|Energy and Industrial Processes',
                           year == last_historical_year)) %>%
     dplyr::mutate(var = dplyr::if_else(var == "Emissions|CO2|Energy and Industrial Processes", 'CO2', 'CO2_ETS')) %>%
-    tidyr::pivot_wider(names_from = 'var', values_from = 'value') %>%
+    tidyr::pivot_wider(names_from = 'var', values_from = 'value')
+
+  # if CO2_ETS is not present, create a NA column
+  if (!("CO2_ETS" %in% colnames(co2_price_share_byreg))) {
+    co2_price_share_byreg <<- co2_price_share_byreg %>%
+      dplyr::mutate(CO2_ETS = NA)
+  }
+
+  co2_price_share_byreg <<- co2_price_share_byreg %>%
     dplyr::mutate(CO2_ETS = dplyr::if_else(is.na(CO2_ETS), 0, CO2_ETS)) %>%
     dplyr::mutate(share_CO2_ETS = CO2_ETS / CO2) %>%
     dplyr::select(scenario, region, year, share_CO2_ETS)
@@ -1577,7 +1593,7 @@ get_elec_capacity_add = function() {
                               "Secondary Energy|Electricity|Storage Capacity")) %>%
     dplyr::mutate(value = GW * unit_conv,
                   var = sub("Secondary Energy", "Capacity Additions", var)) %>%
-    dplyr::bind_rows(elec_capacity_add%>%
+    dplyr::bind_rows(elec_capacity_add %>%
                        dplyr::left_join(capacity_map %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
                        dplyr::filter(var == "Secondary Energy|Electricity|Storage Capacity") %>%
                        dplyr::mutate(value = GW * 8760, # multiply by # of hours in a year

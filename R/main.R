@@ -81,23 +81,24 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
 #' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
 #' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @return empty dataframes on the void queries of the project
+#' @param prj: prject file
+#' @return project file with extra queries
 #' @export
-fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
+fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All', prj) {
   # add nonCO2 queries manually (they are too big to use the usual method)
   if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by sector (excluding resource production)')
     dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
-    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
+    prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp1.dat', qdata = dt_sec, saveProj = FALSE,
+                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = TRUE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }
   if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by region')
     dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
-    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
-                                    queryname = 'nonCO2 emissions by region', clobber = FALSE)
+    prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp2.dat', qdata = dt_reg, saveProj = FALSE,
+                                    queryname = 'nonCO2 emissions by region', clobber = TRUE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
   }
 
@@ -113,6 +114,8 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
                                     queryname = 'CO2 prices', clobber = TRUE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
   }
+
+  return(prj)
 }
 
 
@@ -128,9 +131,9 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return loaded project into global environment
 #' @export
-load_project = function(prj_name, desired_regions = 'All') {
+load_project = function(project_path, desired_regions = 'All') {
   # load the project
-  prj <<- rgcam::loadProject(prj_name)
+  prj <<- rgcam::loadProject(project_path)
 
   # filter the regions if not all of them are considered (desired_regions != 'All')
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -138,7 +141,6 @@ load_project = function(prj_name, desired_regions = 'All') {
     for (s in names(prj)) {
       # for all variables in prj
       for (v in names(prj[[s]])) {
-        print(v)
         prj[[s]][[v]] = filter_regions(prj[[s]][[v]], desired_regions, v)
       }
     }
@@ -172,12 +174,14 @@ create_project = function(db_path, db_name, prj_name, scenarios, desired_regions
   queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
   queries <- rgcam::parse_batch_query(queryFile)
 
+  read_qn = c()
   # load all queries for all desired scenarios informing the user
   for (sc in scenarios) {
     print(paste('Start reading queries for',sc,'scenario'))
 
     for(qn in names(queries)) {
       print(paste('Read', qn, 'query'))
+      read_qn = c(read_qn, qn)
 
       bq <- queries[[qn]]
 
@@ -205,7 +209,7 @@ create_project = function(db_path, db_name, prj_name, scenarios, desired_regions
   prj <<- prj
 
   # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-  fill_queries(db_path, db_name, prj_name, scenarios, desired_regions)
+  prj <<- fill_queries(db_path, db_name, prj_name, scenarios, desired_regions, prj)
 
   # save the project
   rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
@@ -284,11 +288,6 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     check_reg = setdiff(desired_regions, reg_cont$region)
     if (length(check_reg) > 0) {
       stop(paste0('ERROR: You specified regions ',check_reg, ' which are not present in the GCAM 7 IAM-COMPACT configuration.'))
-    }
-    # desired_regions special case: if some "EU" region is present, consider the
-    # "EU" region to compute CO2 prices
-    if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
-      desired_regions = c(desired_regions, 'EU')
     }
   }
 
@@ -402,22 +401,26 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     }
   }
 
-  # checks, vetting, and errors summary
-  errors <<- c()
+  if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+    print("No checks or vetting performed since not all regions were selected.")
+  } else {
+    # checks, vetting, and errors summary
+    errors <<- c()
 
-  for (ch in variables$checks) {
-    if (!is.na(ch)) {
-      for (d in ch[[1]]) {
-        out = get(variables$fun[which(variables$name == d)])()
-        errors <<- append(errors,out)
+    for (ch in variables$checks) {
+      if (!is.na(ch)) {
+        for (d in ch[[1]]) {
+          out = get(variables$fun[which(variables$name == d)])()
+          errors <<- append(errors,out)
+        }
       }
     }
-  }
-  vet = do_check_vetting()
-  print('The following checks have been performed:')
-  errors <<- append(errors,vet)
-  for (e in errors) {
-    print(e)
+    vet = do_check_vetting()
+    print('The following checks have been performed:')
+    errors <<- append(errors,vet)
+    for (e in errors) {
+      print(e)
+    }
   }
 
   # define the dataset for launching the ui
