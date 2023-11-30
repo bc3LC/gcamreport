@@ -4,7 +4,14 @@
 \alias{data_query}
 \title{data_query}
 \usage{
-data_query(type, db_path, db_name, prj_name, scenarios)
+data_query(
+  type,
+  db_path,
+  db_name,
+  prj_name,
+  scenarios,
+  desired_regions = "All"
+)
 }
 \arguments{
 \item{db_path:}{path of the database}
@@ -16,6 +23,13 @@ data_query(type, db_path, db_name, prj_name, scenarios)
 \item{scenarios:}{name of the scenarios to be considered}
 
 \item{type:}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'}
+
+\item{desired_regions:}{desired regions to consider. By default, 'All' (written as NULL). Otherwise, specify a vector
+with all the considered regions, being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+In case the project dataset needs to be created, it will be produced with only the specified regions.}
 }
 \value{
 dataframe with the data from the queries

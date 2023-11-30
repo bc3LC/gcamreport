@@ -75,6 +75,17 @@
 #' }
 "co2_sector_map"
 
+#' co2_ets_sector_map
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::co2_ets_sector_map
+#' }
+"co2_ets_sector_map"
+
 #' co2_tech_map
 #'
 #' @source github
@@ -486,6 +497,15 @@
 #'  gcamreport::GHG_gases
 #' }
 "GHG_gases"
+
+#' CO2_equivalent
+#'
+#' @description CO2 equivalency conversion
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::CO2_equivalent
+#' }
+"CO2_equivalent"
 
 #' GCAM_years
 #'

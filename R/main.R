@@ -10,9 +10,19 @@ library(magrittr)
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
 #' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
-#' @return dataframe with the data from the queries
+#' @param desired_regions: desired regions to consider. By default, 'All' (written as NULL). Otherwise, specify a vector
+#' with all the considered regions, being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' In case the project dataset needs to be created, it will be produced with only the specified regions.
+#' @return dataframe with the data from the query
 #' @export
-data_query = function(type, db_path, db_name, prj_name, scenarios) {
+data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
+  if (length(desired_regions) == 1 && desired_regions == 'All') {
+    desired_regions = NULL
+  }
+
   dt = data.frame()
   xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
@@ -30,7 +40,7 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
         qn = type,
         query = qq_sec,
         scenario = sc,
-        regions = NULL,
+        regions = desired_regions,
         clobber = TRUE,
         transformations = NULL,
         saveProj = FALSE,
@@ -65,21 +75,27 @@ data_query = function(type, db_path, db_name, prj_name, scenarios) {
 #' @param db_name: name of the database
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector
+#' with all the considered regions, being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return empty dataframes on the void queries of the project
 #' @export
-fill_queries = function(db_path, db_name, prj_name, scenarios) {
+fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
   # add nonCO2 queries manually (they are too big to use the usual method)
   if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by sector (excluding resource production)')
-    dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios)
+    dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_sec,
-                                    queryname = 'nonCO2 emissions by sector', clobber = FALSE)
+                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }
   if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
     print('nonCO2 emissions by region')
-    dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios)
+    dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt_reg,
                                     queryname = 'nonCO2 emissions by region', clobber = FALSE)
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
@@ -104,11 +120,29 @@ fill_queries = function(db_path, db_name, prj_name, scenarios) {
 #'
 #' Load specified project into the global environment
 #' @param prj_name: name of the project
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
+#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return loaded project into global environment
 #' @export
-load_project = function(prj_name) {
+load_project = function(prj_name, desired_regions = 'All') {
   # load the project
   prj <<- rgcam::loadProject(prj_name)
+
+  # filter the regions if not all of them are considered (desired_regions != 'All')
+  if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+    # for all scenarios in prj
+    for (s in names(prj)) {
+      # for all variables in prj
+      for (v in names(prj[[s]])) {
+        print(v)
+        prj[[s]][[v]] = filter_regions(prj[[s]][[v]], desired_regions, v)
+      }
+    }
+  }
 
   Scenarios <<- rgcam::listScenarios(prj)
 }
@@ -121,9 +155,15 @@ load_project = function(prj_name) {
 #' @param db_name: name of the database
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
+#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return loaded project into global environment
 #' @export
-create_project = function(db_path, db_name, prj_name, scenarios) {
+create_project = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
   # create the project
   conn <- rgcam::localDBConn(db_path,
                              db_name,migabble = FALSE)
@@ -140,6 +180,12 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
       print(paste('Read', qn, 'query'))
 
       bq <- queries[[qn]]
+
+      # subset regions if necessary
+      if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+        bq$regions = desired_regions
+      }
+
       table <- rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
       if(nrow(table) > 0) {
         prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = table,
@@ -159,7 +205,7 @@ create_project = function(db_path, db_name, prj_name, scenarios) {
   prj <<- prj
 
   # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-  fill_queries(db_path, db_name, prj_name, scenarios)
+  fill_queries(db_path, db_name, prj_name, scenarios, desired_regions)
 
   # save the project
   rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
@@ -216,6 +262,12 @@ load_variable = function(var){
 #' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
 #' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
 #' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
+#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
+#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
+#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
+#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
 #' data saved only in the specified format.
 #' @param file_name: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
@@ -224,8 +276,21 @@ load_variable = function(var){
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
 #' @return saved? CSV and XLSX datafile with the desired variables & launched? user interface.
 #' @export
-run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL,
-               final_year = 2100, desired_variables = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
+run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
+               desired_variables = 'All', desired_regions = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
+
+  # check that the desired_regions do exist in GCAM7 IAM COMPACT
+  if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+    check_reg = setdiff(desired_regions, reg_cont$region)
+    if (length(check_reg) > 0) {
+      stop(paste0('ERROR: You specified regions ',check_reg, ' which are not present in the GCAM 7 IAM-COMPACT configuration.'))
+    }
+    # desired_regions special case: if some "EU" region is present, consider the
+    # "EU" region to compute CO2 prices
+    if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+      desired_regions = c(desired_regions, 'EU')
+    }
+  }
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
@@ -235,7 +300,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   } else if (!is.null(project_path)) {
     # load project
     print('Loading project...')
-    load_project(project_path)
+    load_project(project_path, desired_regions)
 
   } else if (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
     # create project if checks ok
@@ -261,7 +326,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
       }
     } else {
       # create project
-      create_project(db_path, db_name, prj_name, scenarios)
+      create_project(db_path, db_name, prj_name, scenarios, desired_regions)
     }
 
   } else {
@@ -277,7 +342,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
 
   # desired variables to have in the report
   variables_base <<- data.frame('name' =
-                                  c('population_clean', 'GDP_MER_clean', 'GDP_PPP_clean',
+                                  c('co2_price_clean', 'population_clean', 'GDP_MER_clean', 'GDP_PPP_clean',
                                     'global_temp_clean', 'forcing_clean', 'co2_concentration_clean',
                                     'co2_emissions_clean', 'tot_co2_clean', 'co2_sequestration_clean',
                                     'ag_demand_clean', 'land_clean',
@@ -289,8 +354,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
                                     'ag_prices_clean', 'industry_production_clean',
                                     'elec_capital_clean',
                                     'elec_investment_clean', 'transmission_invest_clean', 'CCS_invest_clean', 'resource_investment_clean',
-                                    'nonco2_clean',
-                                    'co2_price_clean'),
+                                    'nonco2_clean'),
                                 'required' = TRUE,
                                 stringsAsFactors = FALSE)
 
@@ -308,6 +372,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     tidyr::replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
+  desired_regions <<- desired_regions
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
       load_variable(variables[i,])
@@ -326,6 +391,8 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
 
   # bind and save results
   do_bind_results()
+  save(final_data, file = paste0(file_name,'.RData'))
+
   if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
     if (save_output == TRUE || 'CSV' %in% save_output) {
       write.csv(final_data, file.path(paste0(file_name,'.csv')), row.names = FALSE)

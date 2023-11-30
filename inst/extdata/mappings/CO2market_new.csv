@@ -54,7 +54,10 @@ Rest AsiaCO2,South Korea
 South KoreaCO2,South Korea
 Rest AsiaCO2,Southeast Asia
 Southeast AsiaCO2,Southeast Asia
-ChinaCO2,Taiwan
 TaiwanCO2,Taiwan
 N-Am_AusCO2,USA
 USACO2,USA
+EUCO2_ETS,EU-12
+EUCO2_ETS,EU-15
+European Free Trade AssociationCO2_ETS,European Free Trade Association
+European Free Trade AssociationCO2,European Free Trade Association

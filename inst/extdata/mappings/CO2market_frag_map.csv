@@ -1,7 +1,7 @@
 # mapping file for CO2 markets fragmentation,
-market,var
-CO2,Price|Carbon
-CO2,Price|Carbon|Demand|Industry
-CO2,Price|Carbon|Demand|Residential and Commercial
-CO2,Price|Carbon|Demand|Transportation
-CO2,Price|Carbon|Supply
+market,var,sector
+CO2,Price|Carbon,Energy and Industrial Processes
+CO2,Price|Carbon|Demand|Industry,Industry
+CO2,Price|Carbon|Demand|Residential and Commercial,Residential and Commercial
+CO2,Price|Carbon|Demand|Transportation,Transportation
+CO2,Price|Carbon|Supply,Supply
