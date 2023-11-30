@@ -40,7 +40,7 @@ filter_regions <- function (data, desired_regions = 'All', variable) {
                                       function(x) x[1])) %>%
         dplyr::filter(region %in% desired_regions_tmp) %>%
         dplyr::select(-region)
-    } else if (!(v %in% c('CO2 concentrations','global mean temperature',
+    } else if (!(variable %in% c('CO2 concentrations','global mean temperature',
                           'total climate forcing'))) {
       data = data %>%
         dplyr::filter(region %in% desired_regions)
