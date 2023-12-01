@@ -1928,11 +1928,17 @@ do_check_trade = function() {
     dplyr::mutate(diff = (production - demand) / production,
                   check = dplyr::if_else( abs(diff) > 1, "Error", "OK" ))
 
-  if (nrow(trade %>% dplyr::filter( check == "Error")) > 0) {
-    return('Trade flows: ERROR')
-  }
-  return('Trade flows: OK')
+  check_trade_summary <- trade %>%
+    dplyr::rename('percentual_diff_between_production_and_demand' = 'diff')
 
+  if (nrow(trade %>% dplyr::filter( check == "Error")) > 0) {
+    res = list(message = 'Trade flows: ERROR',
+               summary = as.data.frame(check_trade_summary))
+  } else {
+    res = list(message = 'Trade flows: OK',
+               summary = check_vet_summary)
+  }
+  return(res)
 }
 
 
@@ -1970,7 +1976,10 @@ do_check_vetting = function() {
     dplyr::mutate(diff = (value / value_vet) - 1,
                   check = dplyr::if_else(abs(diff) > range, "Check", "OK"))
 
-  check_vet_summary <- check_vet %>% dplyr::filter(check == "Check")
+  check_vet_summary <- check_vet %>% dplyr::filter(check == "Check") %>%
+    dplyr::rename('computed_value' = 'value',
+                  'expected_value (vetting)' = 'value_vet',
+                  'confidance_range' = 'range')
 
   ## plot
   check_vet_plot <- check_vet %>%
@@ -1991,10 +2000,15 @@ do_check_vetting = function() {
   }
   ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
+  # output
   if(nrow(check_vet_summary) > 0){
-    return('Vetting variables: ERROR')
+    res = list(message = 'Vetting variables: ERROR',
+               summary = as.data.frame(check_vet_summary))
+  } else {
+    res = list(message = 'Vetting variables: OK',
+               summary = check_vet_summary)
   }
-  return('Vetting variables: OK')
+  return(res)
 
 }
 
