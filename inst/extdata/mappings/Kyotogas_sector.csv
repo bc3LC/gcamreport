@@ -46,6 +46,10 @@ CH4,AGR,Dairy,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,Dairy,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 CO2,,delivered biomass,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,,delivered gas,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,delivered gas h2,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,delivered gas transport,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,delivered biomass industry,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,wholesale gas feedstocks,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CH4,,district heat,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 N2O,,district heat,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,,district heat,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
@@ -118,6 +122,9 @@ CH4,,process heat cement,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Cement,Emis
 N2O,,process heat cement,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Cement,Emissions|Kyoto Gases|Industry,,,,,,,,1
 CO2,,refined liquids enduse,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,,refined liquids industrial,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,refined liquids feedstocks,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,refined liquids bunkers,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,refined liquids transport,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CH4,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 N2O,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
 CO2,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Energy Supply,,Emissions|Kyoto Gases|Supply,,,,,,,1
@@ -198,5 +205,7 @@ N2O,AWB,Soybean,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 CH4,AWB,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AWB,Vegetables,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
-CO2,NA,desalinated water,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
-CO2,NA,elec_coal (IGCC CCS),Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,desalinated water,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,elec_coal (IGCC CCS),Emissions|Kyoto Gases,Emissions|Kyoto Gases|Electricity,,Emissions|Kyoto Gases|Supply,,,,,,,1
+CO2,,airCO2,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Industry,Emissions|Kyoto Gases|Industry,,,,,,,,1
+CO2,,process heat dac,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other Industry,Emissions|Kyoto Gases|Industry,,,,,,,,1
