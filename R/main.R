@@ -285,6 +285,9 @@ load_variable = function(var){
 
   # load the variable
   get(var$fun)()
+
+  # keep record of the loaded variables
+  loaded_internal_variables <<- c(loaded_internal_variables, var$name)
 }
 
 
@@ -484,7 +487,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
 
   # desired variables to have in the report
-  variables_base <<- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
+  variables_base <- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
                                 'required' = TRUE,
                                 stringsAsFactors = FALSE)
 
@@ -507,6 +510,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     tidyr::replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
+  loaded_internal_variables <<- c()
   desired_regions <<- desired_regions
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
@@ -561,6 +565,11 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     print('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details')
     print('You can check the vetting figure in output/figure/vetting.tiff')
   }
+
+  # remove internal variables from the environment
+  rm(list = loaded_internal_variables, envir = .GlobalEnv)
+  rm(list = c('loaded_internal_variables', 'variables'), envir = .GlobalEnv)
+  gc()
 
   # define the dataset for launching the ui
   sdata <<- final_data %>%
