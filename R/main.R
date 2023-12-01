@@ -128,6 +128,8 @@ fill_queries = function(db_path, db_name, prj_name, scenarios,
 #' @return loaded project into global environment
 #' @export
 load_project = function(project_path, desired_regions = 'All') {
+  print('Loading project...')
+
   # load the project
   prj = rgcam::loadProject(project_path)
 
@@ -166,77 +168,92 @@ load_project = function(project_path, desired_regions = 'All') {
 #' @export
 create_project = function(db_path, db_name, prj_name, scenarios,
                           desired_regions = 'All', desired_variables = 'All') {
-  # create the project
-  conn <- rgcam::localDBConn(db_path,
-                             db_name,migabble = FALSE)
 
-  # read the queries file
-  queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
-  queries_original <- rgcam::parse_batch_query(queryFile)
+  # check if the project already exists
+  file_name = paste0(db_path, "/", db_name, '_', prj_name)
+  if (file.exists(file_name)) {
+    print('Loading project...')
+    prj <<- rgcam::loadProject(file_name)
 
-  # subset the queries necessary for the selected variables
-  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
-    required_internal_variables = var_fun_map %>%
-      dplyr::rename('Internal_variable' = 'name') %>%
-      dplyr::left_join(template %>%
-                         dplyr::filter(!is.na(Internal_variable)),
-                       by = 'Internal_variable') %>%
-      dplyr::mutate(required = dplyr::if_else(Variable %in% desired_variables, TRUE, FALSE))
+  } else {
+    print('Creating project...')
 
-    required_queries = c()
-    for (req_int_var in unique(required_internal_variables %>%
-                     dplyr::filter(required == TRUE) %>%
-                     dplyr::pull(Variable))) {
-      required_queries = c(required_queries,
-                           load_query(required_internal_variables[which(required_internal_variables$Variable == req_int_var),],
-                                      required_internal_variables,
-                                      c()))
+    # create the project
+    conn <- rgcam::localDBConn(db_path,
+                               db_name,migabble = FALSE)
+
+    # read the queries file
+    queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
+    queries_original <- rgcam::parse_batch_query(queryFile)
+
+    # subset the queries necessary for the selected variables
+    if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+      # create a mapping with the Variables, Internal variables, functions to load
+      # them, and the dependencies
+      required_internal_variables = var_fun_map %>%
+        dplyr::rename('Internal_variable' = 'name') %>%
+        dplyr::left_join(template %>%
+                           dplyr::filter(!is.na(Internal_variable)),
+                         by = 'Internal_variable') %>%
+        dplyr::mutate(required = dplyr::if_else(Variable %in% desired_variables, TRUE, FALSE))
+
+      # create a vector with the required queries for the desired variables
+      required_queries = c()
+      for (req_int_var in unique(required_internal_variables %>%
+                       dplyr::filter(required == TRUE) %>%
+                       dplyr::pull(Variable))) {
+        required_queries = c(required_queries,
+                             load_query(required_internal_variables[which(required_internal_variables$Variable == req_int_var),],
+                                        required_internal_variables,
+                                        c()))
+      }
+      required_queries = unique(required_queries[!is.na(required_queries)])
+
+      # save the read-to-use queries in a vector
+      queries_touse = queries_original[names(queries_original) %in% required_queries]
+    } else {
+      # save the read-to-use queries in a vector. These are all the possible queries
+      queries_touse = queries_original
     }
 
-    required_queries = unique(required_queries[!is.na(required_queries)])
+    # load all queries for all desired scenarios informing the user
+    for (sc in scenarios) {
+      print(paste('Start reading queries for',sc,'scenario'))
 
-    queries_touse = queries_original[names(queries_original) %in% required_queries]
-  } else {
-    queries_touse = queries_original
-  }
+      for(qn in names(queries_touse)) {
+        print(paste('Read', qn, 'query'))
 
-  # load all queries for all desired scenarios informing the user
-  for (sc in scenarios) {
-    print(paste('Start reading queries for',sc,'scenario'))
+        bq <- queries_touse[[qn]]
 
-    for(qn in names(queries_touse)) {
-      print(paste('Read', qn, 'query'))
-
-      bq <- queries_touse[[qn]]
-
-      # subset regions if necessary
-      if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
-        bq$regions = desired_regions
-      }
-
-      table <- rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
-      if(nrow(table) > 0) {
-        prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = table,
-                                        queryname = qn, clobber = FALSE,
-                                        saveProj = FALSE, show_col_types = FALSE)
-        if (exists('prj')) {
-          prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
-        } else {
-          prj = prj_tmp
+        # subset regions if necessary
+        if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+          bq$regions = desired_regions
         }
 
-      } else {
-        warning(paste(qn, 'query is empty!'))
+        table <- rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
+        if(nrow(table) > 0) {
+          prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = table,
+                                          queryname = qn, clobber = FALSE,
+                                          saveProj = FALSE, show_col_types = FALSE)
+          if (exists('prj')) {
+            prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+          } else {
+            prj = prj_tmp
+          }
+
+        } else {
+          warning(paste(qn, 'query is empty!'))
+        }
       }
     }
+
+    # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
+    prj <<- fill_queries(db_path, db_name, prj_name, scenarios,
+                         desired_regions, prj, queries_touse)
+
+    # save the project
+    rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
   }
-
-  # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-  prj <<- fill_queries(db_path, db_name, prj_name, scenarios,
-                       desired_regions, prj, queries_touse)
-
-  # save the project
-  rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
 
   Scenarios <<- rgcam::listScenarios(prj)
 }
@@ -424,12 +441,10 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
 
   } else if (!is.null(project_path)) {
     # load project
-    print('Loading project...')
     load_project(project_path, desired_regions)
 
   } else if (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios)) {
     # create project if checks ok
-    print('Creating project...')
 
     # check that all the paths are specified
     if (is.null(db_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
@@ -493,7 +508,6 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   desired_regions <<- desired_regions
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
-      print(variables$name[i])
       load_variable(variables[i,])
     }
   }
