@@ -10,7 +10,8 @@ fill_queries(
   prj_name,
   scenarios,
   desired_regions = "All",
-  prj
+  prj,
+  desired_queries
 )
 }
 \arguments{
@@ -27,6 +28,8 @@ To know all possible regions, run `available_regions()`. ATTENTION: the consider
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 
 \item{prj:}{prject file}
+
+\item{desired_queries:}{desired queries to be loaded}
 }
 \value{
 project file with extra queries

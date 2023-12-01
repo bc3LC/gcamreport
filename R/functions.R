@@ -54,7 +54,7 @@ filter_loading_regions <- function (data, desired_regions = 'All', variable) {
 #' @return filtered dataframe
 #' @export
 filter_variables = function(data) {
-  if (!(length(desired_variables) == 1 & desired_variables == 'All')) {
+  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
     if ('var' %in% colnames(data)) {
       data = data %>%
         dplyr::filter(var %in% desired_variables)
@@ -1596,16 +1596,17 @@ get_elec_capacity_add = function() {
   # check calculations for this
   elec_capacity_add_clean <<-
     elec_capacity_add %>%
-    dplyr::left_join(filter_variables(capacity_map) %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
+    dplyr::left_join(capacity_map %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
     dplyr::filter(!var %in% c("Secondary Energy|Electricity|Hydro",
                               "Secondary Energy|Electricity|Storage Capacity")) %>%
     dplyr::mutate(value = GW * unit_conv,
                   var = sub("Secondary Energy", "Capacity Additions", var)) %>%
     dplyr::bind_rows(elec_capacity_add %>%
-                       dplyr::left_join(filter_variables(capacity_map) %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
+                       dplyr::left_join(capacity_map %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
                        dplyr::filter(var == "Secondary Energy|Electricity|Storage Capacity") %>%
                        dplyr::mutate(value = GW * 8760, # multiply by # of hours in a year
                                      var = sub("Secondary Energy", "Capacity Additions", var))) %>%
+    filter_variables() %>%
     dplyr::group_by(scenario, region, var, year) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
