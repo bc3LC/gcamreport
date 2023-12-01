@@ -373,6 +373,8 @@ available_variables = function(print = TRUE) {
   return(invisible(unique(av_var$Variable)))
 }
 
+
+
 #' run
 #'
 #' Main function. Interacts with the user to select the desired variables for the report, loads
@@ -539,22 +541,25 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     print("No checks or vetting performed since not all regions were selected.")
   } else {
     # checks, vetting, and errors summary
-    errors <<- c()
-
+    vetting_summary <- list()
     for (ch in variables$checks) {
       if (!is.na(ch)) {
         for (d in ch[[1]]) {
           out = get(variables$fun[which(variables$name == d)])()
-          errors <<- append(errors,out)
+          vetting_summary[[stringr::str_sub(as.character(out$message),
+                                            end = stringr::str_locate(as.character(out$message), ':') - 1)[1]]] = out
         }
       }
     }
     vet = do_check_vetting()
-    print('The following checks have been performed:')
-    errors <<- append(errors,vet)
-    for (e in errors) {
-      print(e)
+    print('Vetting summary:')
+    vetting_summary[[stringr::str_sub(as.character(vet$message),
+                                      end = stringr::str_locate(as.character(vet$message), ':') - 1)[1]]] = vet
+    for (e in vetting_summary) {
+      print(e$message)
     }
+    print('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details')
+    print('You can check the vetting figure in output/figure/vetting.tiff')
   }
 
   # define the dataset for launching the ui
