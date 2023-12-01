@@ -380,10 +380,11 @@ available_variables = function(print = TRUE) {
 
 #' run
 #'
-#' Main function. Interacts with the user to select the desired variables for the report, loads
-#' them, saves them in an external output, runs the verifications, and informs the user about the
-#' success of the whole process. Either the `project_path` should be specified, or the `db_path`
-#' with all the related items, being `db_name`, `prj_name`, and `scenarios`.
+#' Main function. Creates/loads a GCAM project, standardizes the data and saves it
+#' in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
+#' the User Interface. Specify regions and/or variables to be reported and point
+#' either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
+#' The resulting RData output can be used to call manually `launch_gcamreport_ui`.
 #' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
 #' @param db_path: full path of the database.
 #' @param db_name: name of the database.
@@ -392,9 +393,10 @@ available_variables = function(print = TRUE) {
 #' @param final_year: final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-#' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
-#' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
-#' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3"
+#' In case the project dataset needs to be created, it will be created containing only the specified variables.
+#' ATTENTION: global variables such as "Emissions" will be computed considering only the selected variables. As an example,
+#' if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not
+#' consider other variables, such as "Emissions|CH4" or "Emissions|NH3"
 #' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
@@ -402,16 +404,16 @@ available_variables = function(print = TRUE) {
 #' the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
 #' continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
 #' specified continents/regions' groups.
-#' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
-#' data saved only in the specified format.
-#' @param file_name: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-#' the same name than the specified project_path, with 'iamc_report' tag. CSV and XLSX output. In case of specifing the path, do not
-#' introduce the extension, it will be automatically added.
-#' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
+#' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
+#' 'save_output = XLSX', the data will be only saved in the specified format.
+#' @param output_file: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
+#' database or the project file, and using a default name containing the project name with 'standardized' tag.
+#' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
+#' @param launch_ui: if TRUE, launch User Interface, Do not launch it otherwise.
 #' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
-               desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
+               desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
 
   # check that the desired_regions are available
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -518,26 +520,26 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     }
   }
 
-  # set the default file_name based on the project_path or the db_path & db_name
-  if (is.null(file_name)) {
+  # set the default output_file based on the project_path or the db_path & db_name
+  if (is.null(output_file)) {
     if (!is.null(project_path)) {
-      file_name = gsub("\\.dat$", "", project_path)
-      file_name = paste0(file_name,'_iamc_report')
+      output_file = gsub("\\.dat$", "", project_path)
+      output_file = paste0(output_file,'_standardized')
     } else {
-      file_name = paste0(db_path, "/", gsub("\\.dat$", "", prj_name), '_iamc_report')
+      output_file = paste0(db_path, "/", gsub("\\.dat$", "", prj_name), '_standardized')
     }
   }
 
   # bind and save results
   do_bind_results()
-  save(final_data, file = paste0(file_name,'.RData'))
+  save(final_data, file = paste0(output_file,'.RData'))
 
   if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
     if (save_output == TRUE || 'CSV' %in% save_output) {
-      write.csv(final_data, file.path(paste0(file_name,'.csv')), row.names = FALSE)
+      write.csv(final_data, file.path(paste0(output_file,'.csv')), row.names = FALSE)
     }
     if (save_output == TRUE || 'XLSX' %in% save_output) {
-      writexl::write_xlsx(final_data, file.path(paste0(file_name,'.xlsx')))
+      writexl::write_xlsx(final_data, file.path(paste0(output_file,'.xlsx')))
     }
   }
 
@@ -571,8 +573,41 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   rm(list = c('loaded_internal_variables', 'variables'), envir = .GlobalEnv)
   gc()
 
+  if (launch_ui) {
+    print('Launching UI...')
+
+    # launch ui
+    launch_gcamreport_ui(data = final_data)
+  }
+
+}
+
+
+#' launch_gcamreport_ui
+#'
+#' Launch shiny interactive user interface.
+#' @param data_path: RData dataset path containing the standardized data. You can obtain
+#' this dataset by using the function `gcamreport::run`.
+#' @param data: dataset containing the standardized data. You can obtain
+#' this dataset by using the function `gcamreport::run`.
+#' @return launch shiny interactive ui
+#' @export
+launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
+
+  # checks
+  if (is.null(data_path) && is.null(data)) {
+    stop('ERROR: Specify either the dataset or the dataset path to be considered.')
+  } else if (!is.null(data_path) && !is.null(data)) {
+    stop('ERROR: Specify either the dataset or the dataset path to be considered, not both.')
+  }
+
+  # load data
+  if (!is.null(data_path)) {
+    data = assign('data', get(load(data_path)))
+  }
+
   # define the dataset for launching the ui
-  sdata <<- final_data %>%
+  sdata <<- data %>%
     tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
 
   # create vector of available years for launching the ui
@@ -587,21 +622,5 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   # save a list of all variables
   all_vars <<- do_collapse_df(cols)
 
-  if (launch_ui) {
-    print('Launching UI...')
-
-    # launch ui
-    launch_gcamreport_ui()
-  }
-
-}
-
-
-#' launch_gcamreport_ui
-#'
-#' Launch shiny interactive ui
-#' @return launch shiny interactive ui
-#' @export
-launch_gcamreport_ui <- function(){
   shiny::runApp('inst/gcamreport_ui')
 }
