@@ -28,7 +28,9 @@ In case the project dataset needs to be created, it will be produced with only t
 
 \item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-In case the project dataset needs to be created, it will be produced with only the specified variables.}
+In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
+the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
+and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".}
 }
 \value{
 loaded project into global environment

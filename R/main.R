@@ -76,11 +76,14 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param prj: prject file
+#' @param desired_queries: desired queries to be loaded
 #' @return project file with extra queries
 #' @export
-fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All', prj) {
+fill_queries = function(db_path, db_name, prj_name, scenarios,
+                        desired_regions = 'All', prj, desired_queries) {
   # add nonCO2 queries manually (they are too big to use the usual method)
-  if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj)) {
+  if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj) &
+      'nonCO2 emissions by sector (excluding resource production)' %in% desired_queries) {
     print('nonCO2 emissions by sector (excluding resource production)')
     dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp1.dat', qdata = dt_sec, saveProj = FALSE,
@@ -88,7 +91,8 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
     prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
 
   }
-  if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj)) {
+  if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj) &
+      'nonCO2 emissions by region' %in% desired_queries) {
     print('nonCO2 emissions by region')
     dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp2.dat', qdata = dt_reg, saveProj = FALSE,
@@ -97,7 +101,8 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
   }
 
   # fix CO2 prices if needed
-  if (!'CO2 prices' %in% rgcam::listQueries(prj)) {
+  if (!'CO2 prices' %in% rgcam::listQueries(prj) &
+      'CO2 prices' %in% desired_queries) {
     l = length(rgcam::listScenarios(prj))
     dt = data.frame(Units = rep(NA,l),
                     scenario = rgcam::listScenarios(prj),
@@ -154,7 +159,9 @@ load_project = function(project_path, desired_regions = 'All') {
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-#' In case the project dataset needs to be created, it will be produced with only the specified variables.
+#' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
+#' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
+#' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".
 #' @return loaded project into global environment
 #' @export
 create_project = function(db_path, db_name, prj_name, scenarios,
@@ -165,16 +172,42 @@ create_project = function(db_path, db_name, prj_name, scenarios,
 
   # read the queries file
   queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
-  queries <- rgcam::parse_batch_query(queryFile)
+  queries_original <- rgcam::parse_batch_query(queryFile)
+
+  # subset the queries necessary for the selected variables
+  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    required_internal_variables = var_fun_map %>%
+      dplyr::rename('Internal_variable' = 'name') %>%
+      dplyr::left_join(template %>%
+                         dplyr::filter(!is.na(Internal_variable)),
+                       by = 'Internal_variable') %>%
+      dplyr::mutate(required = dplyr::if_else(Variable %in% desired_variables, TRUE, FALSE))
+
+    required_queries = c()
+    for (req_int_var in unique(required_internal_variables %>%
+                     dplyr::filter(required == TRUE) %>%
+                     dplyr::pull(Variable))) {
+      required_queries = c(required_queries,
+                           load_query(required_internal_variables[which(required_internal_variables$Variable == req_int_var),],
+                                      required_internal_variables,
+                                      c()))
+    }
+
+    required_queries = unique(required_queries[!is.na(required_queries)])
+
+    queries_touse = queries_original[names(queries_original) %in% required_queries]
+  } else {
+    queries_touse = queries_original
+  }
 
   # load all queries for all desired scenarios informing the user
   for (sc in scenarios) {
     print(paste('Start reading queries for',sc,'scenario'))
 
-    for(qn in names(queries)) {
+    for(qn in names(queries_touse)) {
       print(paste('Read', qn, 'query'))
 
-      bq <- queries[[qn]]
+      bq <- queries_touse[[qn]]
 
       # subset regions if necessary
       if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -197,10 +230,10 @@ create_project = function(db_path, db_name, prj_name, scenarios,
       }
     }
   }
-  prj <<- prj
 
   # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-  prj <<- fill_queries(db_path, db_name, prj_name, scenarios, desired_regions, prj)
+  prj <<- fill_queries(db_path, db_name, prj_name, scenarios,
+                       desired_regions, prj, queries_touse)
 
   # save the project
   rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
@@ -235,6 +268,33 @@ load_variable = function(var){
 
   # load the variable
   get(var$fun)()
+}
+
+
+#' load_query
+#'
+#' Recursive function to load the necessary queries for the desired variables
+#' @param var: variable to be loaded
+#' @param base_data: dataframe with the required internal variables
+#' @param final_queries: vector of the queries to be loaded
+#' @keywords internal
+#' @return query name to be loaded
+#' @export
+load_query = function(var, base_data, final_queries){
+
+  # if the variable has dependencies, load them
+  if (!is.na(var$dependencies)) {
+    for (d in var$dependencies[[1]]) {
+      tmp = load_query(base_data[which(base_data$Internal_variable == d),][1,],
+                       base_data,
+                       final_queries)
+      final_queries = c(final_queries, tmp)
+    }
+  }
+
+  # record the required query
+  final_queries = c(final_queries, var$queries[[1]])
+  return(final_queries)
 }
 
 
@@ -310,7 +370,9 @@ available_variables = function(print = TRUE) {
 #' @param final_year: final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-#' In case the project dataset needs to be created, it will be produced with only the specified variables.
+#' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
+#' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
+#' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3"
 #' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
@@ -348,7 +410,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   }
   # check that the desired_variables are available
   if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
-    check_reg = setdiff(desired_variables, available_variables(print = FALSE))
+    check_var = setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
       stop(paste0("ERROR: You specified the variable ",check_var, ' which is not available for reporting.'))
     }
@@ -389,7 +451,8 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
       }
     } else {
       # create project
-      create_project(db_path, db_name, prj_name, scenarios, desired_regions)
+      create_project(db_path, db_name, prj_name, scenarios,
+                     desired_regions, desired_variables)
     }
 
   } else {
@@ -409,7 +472,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
                                 stringsAsFactors = FALSE)
 
   # consider only the desired variables
-  if (desired_variables == 'All') {
+  if (length(desired_variables) == 1 && desired_variables == 'All') {
     variables <<- variables_base
   } else {
     variables <<- variables_base %>%
@@ -430,6 +493,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   desired_regions <<- desired_regions
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
+      print(variables$name[i])
       load_variable(variables[i,])
     }
   }
