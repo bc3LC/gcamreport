@@ -4,7 +4,14 @@
 \alias{create_project}
 \title{create_project}
 \usage{
-create_project(db_path, db_name, prj_name, scenarios, desired_regions = "All")
+create_project(
+  db_path,
+  db_name,
+  prj_name,
+  scenarios,
+  desired_regions = "All",
+  desired_variables = "All"
+)
 }
 \arguments{
 \item{db_path:}{path of the database}
@@ -15,12 +22,13 @@ create_project(db_path, db_name, prj_name, scenarios, desired_regions = "All")
 
 \item{scenarios:}{name of the scenarios to be considered}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
-being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
+
+\item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
+Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
+In case the project dataset needs to be created, it will be produced with only the specified variables.}
 }
 \value{
 loaded project into global environment
