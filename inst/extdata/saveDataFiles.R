@@ -26,6 +26,7 @@ var_fun_map <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/variab
 
 var_fun_map$dependencies <- as.list(strsplit(var_fun_map$dependencies, ","))
 var_fun_map$checks <- as.list(strsplit(var_fun_map$checks, ","))
+var_fun_map$queries <- as.list(strsplit(var_fun_map$queries, ","))
 use_data(var_fun_map, overwrite=T)
 
 # ghg adjuster

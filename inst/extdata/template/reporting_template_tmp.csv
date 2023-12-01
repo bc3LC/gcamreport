@@ -1,0 +1,1038 @@
+Model,Variable,Unit,Internal_variable
+GCAM 7.0,Agricultural Demand,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Energy,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Energy|1st generation,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Energy|2nd generation,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Feed,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Food,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Crops|Other,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Livestock,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Livestock|Food,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Demand|Livestock|Other,million t DM/yr,ag_demand_clean
+GCAM 7.0,Agricultural Production,million t DM/yr,ag_production_clean
+GCAM 7.0,Agricultural Production|Energy,million t DM/yr,
+GCAM 7.0,Agricultural Production|Energy|Crops,million t DM/yr,
+GCAM 7.0,Agricultural Production|Energy|Residues,million t DM/yr,
+GCAM 7.0,Agricultural Production|Non-Energy,million t DM/yr,
+GCAM 7.0,Agricultural Production|Non-Energy|Crops,million t DM/yr,
+GCAM 7.0,Agricultural Production|Non-Energy|Livestock,million t DM/yr,
+GCAM 7.0,Capacity Additions|Electricity|Biomass,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Biomass|w/ CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Biomass|w/o CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Coal,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Coal|w/ CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Coal|w/o CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Gas,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Gas|w/ CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Gas|w/o CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Geothermal,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Hydro,GW/yr,
+GCAM 7.0,Capacity Additions|Electricity|Nuclear,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Oil,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Oil|w/ CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Oil|w/o CCS,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Solar,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Solar|CSP,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Solar|PV,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Storage Capacity,GWh/yr,
+GCAM 7.0,Capacity Additions|Electricity|Transmissions Grid,GWkm/yr,
+GCAM 7.0,Capacity Additions|Electricity|Wind,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Wind|Offshore,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity Additions|Electricity|Wind|Onshore,GW/yr,elec_capacity_add_clean
+GCAM 7.0,Capacity|Electricity,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Biomass,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Biomass|w/ CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Biomass|w/o CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Coal,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Coal|w/ CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Coal|w/o CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Gas,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Gas|w/ CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Gas|w/o CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Geothermal,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Hydro,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Nuclear,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Ocean,GW,
+GCAM 7.0,Capacity|Electricity|Oil,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Oil|w/ CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Oil|w/o CCS,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Other,GW,
+GCAM 7.0,Capacity|Electricity|Peak Demand,GW,
+GCAM 7.0,Capacity|Electricity|Solar,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Solar|CSP,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Solar|PV,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Storage,GW,
+GCAM 7.0,Capacity|Electricity|Storage Capacity,GW,
+GCAM 7.0,Capacity|Electricity|Transmissions Grid,GW,
+GCAM 7.0,Capacity|Electricity|Wind,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Wind|Offshore,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Electricity|Wind|Onshore,GW,elec_capacity_tot_clean
+GCAM 7.0,Capacity|Gases,GW,
+GCAM 7.0,Capacity|Gases|Biomass,GW,
+GCAM 7.0,Capacity|Gases|Biomass|w/ CCS,GW,
+GCAM 7.0,Capacity|Gases|Biomass|w/o CCS,GW,
+GCAM 7.0,Capacity|Gases|Coal,GW,
+GCAM 7.0,Capacity|Gases|Coal|w/ CCS,GW,
+GCAM 7.0,Capacity|Gases|Coal|w/o CCS,GW,
+GCAM 7.0,Capacity|Hydrogen,GW,
+GCAM 7.0,Capacity|Hydrogen|Biomass,GW,
+GCAM 7.0,Capacity|Hydrogen|Biomass|w/ CCS,GW,
+GCAM 7.0,Capacity|Hydrogen|Biomass|w/o CCS,GW,
+GCAM 7.0,Capacity|Hydrogen|Coal,GW,
+GCAM 7.0,Capacity|Hydrogen|Coal|w/ CCS,GW,
+GCAM 7.0,Capacity|Hydrogen|Coal|w/o CCS,GW,
+GCAM 7.0,Capacity|Hydrogen|Electricity,GW,
+GCAM 7.0,Capacity|Hydrogen|Gas,GW,
+GCAM 7.0,Capacity|Hydrogen|Gas|w/ CCS,GW,
+GCAM 7.0,Capacity|Hydrogen|Gas|w/o CCS,GW,
+GCAM 7.0,Capacity|Liquids,GW,
+GCAM 7.0,Capacity|Liquids|Biomass,GW,
+GCAM 7.0,Capacity|Liquids|Biomass|w/ CCS,GW,
+GCAM 7.0,Capacity|Liquids|Biomass|w/o CCS,GW,
+GCAM 7.0,Capacity|Liquids|Coal,GW,
+GCAM 7.0,Capacity|Liquids|Coal|w/ CCS,GW,
+GCAM 7.0,Capacity|Liquids|Coal|w/o CCS,GW,
+GCAM 7.0,Capacity|Liquids|Gas,GW,
+GCAM 7.0,Capacity|Liquids|Gas|w/ CCS,GW,
+GCAM 7.0,Capacity|Liquids|Gas|w/o CCS,GW,
+GCAM 7.0,Capacity|Liquids|Oil,GW,
+GCAM 7.0,Capacity|Transportation|Aviation|Freight,billion tkm/yr,
+GCAM 7.0,Capacity|Transportation|Aviation|Passenger,billion pkm/yr,
+GCAM 7.0,Capacity|Transportation|Maritime|Freight,billion tkm/yr,
+GCAM 7.0,Capacity|Transportation|Maritime|Passenger,billion pkm/yr,
+GCAM 7.0,Capacity|Transportation|Rail|Freight,billion tkm/yr,
+GCAM 7.0,Capacity|Transportation|Rail|Passenger,billion pkm/yr,
+GCAM 7.0,Capacity|Transportation|Road|Freight,billion tkm/yr,
+GCAM 7.0,Capital Cost|Electricity|Biomass|w/ CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Biomass|w/o CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Coal|w/ CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Coal|w/o CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Gas|w/ CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Gas|w/o CCS,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Geothermal,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Hydro,US$2010/kW,
+GCAM 7.0,Capital Cost|Electricity|Nuclear,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Solar|CSP,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Solar|PV,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Wind|Offshore,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Electricity|Wind|Onshore,US$2010/kW,elec_capital_clean
+GCAM 7.0,Capital Cost|Gases|Biomass|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Gases|Coal|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Biomass|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Biomass|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Coal|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Coal|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Electricity,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Gas|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Hydrogen|Gas|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Industry|Cement,Index (2020 = 1),
+GCAM 7.0,Capital Cost|Industry|Steel,Index (2020 = 1),
+GCAM 7.0,Capital Cost|Liquids|Biomass|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Biomass|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Coal|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Coal|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Gas|w/ CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Gas|w/o CCS,US$2010/kW,
+GCAM 7.0,Capital Cost|Liquids|Oil,US$2010/kW,
+GCAM 7.0,Capital Cost|Residential and Commercial|Cooling,Index (2020 = 1),
+GCAM 7.0,Capital Cost|Residential and Commercial|Heating,Index (2020 = 1),
+GCAM 7.0,Capital Cost|Transportation,Index (2020 = 1),
+GCAM 7.0,Carbon Intensity|Production|Cement|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|High value chemicals,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|High value chemicals|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|Methanol|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|Methanol|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Chemicals|Other|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Plastics|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Plastics|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Pulp and Paper,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Pulp and Paper|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Pulp and Paper|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Steel,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Steel|Fossil|Energy|Demand|Industry,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Intensity|Production|Steel|Industrial Processes,Mt CO2-equiv/Mt,
+GCAM 7.0,Carbon Sequestration|CCS,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass|Energy|Supply,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass|Energy|Supply|Electricity,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass|Energy|Supply|Hydrogen,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Biomass|Energy|Supply|Liquids,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrogen,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|CCS|Industrial Processes,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|Direct Air Capture,Mt CO2/yr,co2_sequestration_clean
+GCAM 7.0,Carbon Sequestration|Feedstocks,Mt CO2/yr,
+GCAM 7.0,Carbon Sequestration|Land Use,Mt CO2/yr,
+GCAM 7.0,Carbon Sequestration|Land Use|Afforestation,Mt CO2/yr,
+GCAM 7.0,Concentration|CH4,ppb,
+GCAM 7.0,Concentration|CO2,ppm,co2_concentration_clean
+GCAM 7.0,Concentration|N2O,ppb,
+GCAM 7.0,Consumption,billion US$2010/yr,
+GCAM 7.0,Emissions|BC,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|AFOLU,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|Energy,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|Energy|Demand|Industry,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|Energy|Demand|Residential and Commercial,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|Energy|Demand|Transportation,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|BC|Energy|Supply,Mt BC/yr,nonco2_clean
+GCAM 7.0,Emissions|C2F6,kt C2F6/yr,nonco2_clean
+GCAM 7.0,Emissions|C6F14,kt C6F14/yr,nonco2_clean
+GCAM 7.0,Emissions|CF4,kt CF4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|AFOLU,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Energy,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Energy|Demand|Industry,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Energy|Demand|Residential and Commercial,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Energy|Demand|Transportation,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Energy|Supply,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CH4|Other,Mt CH4/yr,nonco2_clean
+GCAM 7.0,Emissions|CO,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|AFOLU,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|Energy,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|Energy|Demand|Industry,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|Energy|Demand|Residential and Commercial,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|Energy|Demand|Transportation,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO|Energy|Supply,Mt CO/yr,nonco2_clean
+GCAM 7.0,Emissions|CO2,Mt CO2/yr,tot_co2_clean
+GCAM 7.0,Emissions|CO2|AFOLU,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy and Industrial Processes,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|AFOFI,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Cement,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Chemicals,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Chemicals|Ammonia,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Chemicals|High value chemicals,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Chemicals|Methanol,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Chemicals|Other,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Non-ferrous metals,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Other,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Plastics,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Pulp and Paper,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Industry|Steel,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Residential and Commercial,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Residential and Commercial|Residential,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Aviation,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Aviation|Freight,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Aviation|Passenger,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Freight,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Maritime,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Maritime|Freight,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Maritime|Passenger,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Passenger,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Rail,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Rail|Freight,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|Bus,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Energy|Supply,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Supply|Electricity,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Supply|Heat,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Supply|Gases,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Supply|Solids,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Energy|Supply|Liquids,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Industrial Processes,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals|High value chemicals,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals|Methanol,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Industrial Processes|Chemicals|Other,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Industrial Processes|Non-ferrous metals,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Industrial Processes|Other,Mt CO2/yr,
+GCAM 7.0,Emissions|CO2|Other,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|CO2|Other|DACCS,Mt CO2/yr,co2_emissions_clean
+GCAM 7.0,Emissions|F-Gases,Mt CO2-equiv/yr,f_gas_clean
+GCAM 7.0,Emissions|HFC,kt HFC134a-equiv/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC125,kt HFC125/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC134a,kt HFC134a/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC143a,kt HFC143a/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC227ea,kt HFC227ea/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC23,kt HFC23/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC245fa,kt HFC245fa/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC32,kt HFC32/yr,nonco2_clean
+GCAM 7.0,Emissions|HFC|HFC43-10,kt HFC43-10/yr,
+GCAM 7.0,Emissions|N2O,kt N2O/yr,nonco2_clean
+GCAM 7.0,Emissions|N2O|AFOLU,kt N2O/yr,nonco2_clean
+GCAM 7.0,Emissions|N2O|Energy,kt N2O/yr,nonco2_clean
+GCAM 7.0,Emissions|N2O|Other,kt N2O/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|AFOLU,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|Energy,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|Energy|Demand|Industry,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|Energy|Demand|Residential and Commercial,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|Energy|Demand|Transportation,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NH3|Energy|Supply,Mt NH3/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|AFOLU,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|Energy,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|Energy|Demand|Industry,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|Energy|Demand|Residential and Commercial,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|Energy|Demand|Transportation,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|NOx|Energy|Supply,Mt NO2/yr,nonco2_clean
+GCAM 7.0,Emissions|OC,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|AFOLU,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|Energy,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|Energy|Demand|Industry,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|Energy|Demand|Residential and Commercial,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|Energy|Demand|Transportation,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|OC|Energy|Supply,Mt OC/yr,nonco2_clean
+GCAM 7.0,Emissions|PFC,kt CF4-equiv/yr,nonco2_clean
+GCAM 7.0,Emissions|PFC|C2F6,kt C2F6/yr,
+GCAM 7.0,Emissions|PFC|C6F14,kt C6F14/yr,
+GCAM 7.0,Emissions|PFC|CF4,kt CF4/yr,
+GCAM 7.0,Emissions|SF6,kt SF6/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|AFOLU,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|Energy,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|Energy|Demand|Industry,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|Energy|Demand|Residential and Commercial,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|Energy|Demand|Transportation,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|Sulfur|Energy|Supply,Mt SO2/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|AFOLU,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|Energy,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|Energy|Demand|Industry,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|Energy|Demand|Residential and Commercial,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|Energy|Demand|Transportation,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Emissions|VOC|Energy|Supply,Mt VOC/yr,nonco2_clean
+GCAM 7.0,Energy Expenditures|Industry|Cement,US$2010/yr,
+GCAM 7.0,Energy Expenditures|Industry|Steel,US$2010/yr,
+GCAM 7.0,Energy Expenditures|Residential and Commercial|Cooling,US$2010/yr,
+GCAM 7.0,Energy Expenditures|Residential and Commercial|Heating,US$2010/yr,
+GCAM 7.0,Energy Expenditures|Transportation,US$2010/yr,
+GCAM 7.0,Energy Service|Residential and Commercial|Commercial|Health|Floor space,billion m2/yr,
+GCAM 7.0,Energy Service|Residential and Commercial|Commercial|Offices|Floor space,billion m2/yr,
+GCAM 7.0,Energy Service|Residential and Commercial|Commercial|Restaurant|Floor space,billion m2/yr,
+GCAM 7.0,Energy Service|Residential and Commercial|Floor Space,billion m2/yr,energy_service_buildings_clean
+GCAM 7.0,Energy Service|Residential and Commercial|Residential|Floor Space,billion m2/yr,energy_service_buildings_clean
+GCAM 7.0,Energy Service|Residential and Commercial|Residential|Multi-family|Floor space,billion m2/yr,
+GCAM 7.0,Energy Service|Residential and Commercial|Residential|Slum|Floor space,billion m2/yr,
+GCAM 7.0,Energy Service|Transportation|Aviation,billion vkm/yr,
+GCAM 7.0,Energy Service|Transportation|Freight,billion tkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Freight|Aviation,billion tkm/yr,
+GCAM 7.0,Energy Service|Transportation|Freight|International Shipping,billion tkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Freight|Road,billion tkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Freight|Railways,billion tkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Freight|Navigation,billion vkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger,billion pkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger|Aviation,billion pkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger|Bicycling and Walking,billion pkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger|Road|Bus,billion pkm/yr,
+GCAM 7.0,Energy Service|Transportation|Passenger|Road|LDV,billion pkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger|Railways,billion vkm/yr,energy_service_transportation_clean
+GCAM 7.0,Energy Service|Transportation|Passenger|Road,billion vkm/yr,energy_service_transportation_clean
+GCAM 7.0,Expenditure|Energy|Fossil,billion US$2010/Yr,
+GCAM 7.0,Fertilizer Use|Nitrogen,Tg N/yr,
+GCAM 7.0,Fertilizer Use|Phosphorus,Tg P/yr,
+GCAM 7.0,Final Energy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Geothermal,EJ/yr,
+GCAM 7.0,Final Energy|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Cement,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Cement|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Cement|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Cement|Gases|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Gases|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Gases|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Heat,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Hydrogen,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Liquids,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Liquids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Liquids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Liquids|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Other,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Solids,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Solids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Cement|Solids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Electricity,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Gases|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Gases|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Gases|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Heat,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Liquids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Liquids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Liquids|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Other,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Solids,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Solids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Ammonia|Solids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Gases|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Gases|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Gases|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Electricity,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Gases,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Gases|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Gases|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Gases|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Heat,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Hydrogen,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Liquids,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Liquids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Liquids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Liquids|Hydrogen synfuel,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Other,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Solids,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Solids|Bioenergy,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|High value chemicals|Solids|Fossil,EJ/yr,
+GCAM 7.0,Final Energy|Industry|Chemicals|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Methanol|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Other|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Chemicals|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Electricity|Share,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Gases|,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids|,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Liquids|Oil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Non-ferrous metals|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Other|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Plastics|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Pulp and Paper|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Gases|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Liquids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Liquids|Hydrogen synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Solids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Industry|Steel|Solids|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Non-Energy Use,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Non-Energy Use|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Non-Energy Use|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Non-Energy Use|Gas,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Non-Energy Use|Oil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Solids|Biomass|Traditional,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other Sector|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Appliances,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Appliances,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Cooling,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Heating,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Heating|Cooking,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Heating|Space,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Heating|Water,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Lighting,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Ofice equipment,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Solids|Biomass|Traditional,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Water|Desalination,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Water|Groundwater Extraction,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Water|Surface Water Extraction,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Commercial|Water|Transfer,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Cooling,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Heating,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Heating|Cooking,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Heating|Space,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Heating|Water,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Lighting,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Ofice equipment,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Appliances,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Cooling,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Heat,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Heating,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Heating|Cooking,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Heating|Space,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Heating|Water,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Lighting,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Ofice equipment,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Solids|Biomass|Traditional,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Residential|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Solids|Biomass|Traditional,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Residential and Commercial|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Other|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Solar,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Solids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Solids|Biomass,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Solids|Biomass|Traditional,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Solids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Aviation,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Aviation|Freight,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Aviation|Passenger,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Liquids|Fossil synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Liquids|Oil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Freight|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids|Coal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids|Fossil synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids|Natural Gas,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Liquids|Oil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Maritime,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Maritime|Freight,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Maritime|Passenger,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Gases|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Gases|Fossil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Hydrogen,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Liquids|Bioenergy,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Liquids|Fossil synfuel,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Liquids|Oil,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Passenger|Other,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Rail,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Rail|Freight,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Rail|Passenger,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Freight,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Freight|Electric,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Freight|FC,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Freight|ICE,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Passenger,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Passenger|2W&3W,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Passenger|Bus,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Transportation|Road|Passenger|LDV,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Irrigation,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Irrigation|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Industry,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Industry|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Municipal,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Municipal|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Desalination,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Desalination|Electricity,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Desalination|Gases,EJ/yr,fe_sector_clean
+GCAM 7.0,Final Energy|Water|Desalination|Liquids,EJ/yr,fe_sector_clean
+GCAM 7.0,Fiscal Gap,billion US$2010/yr,
+GCAM 7.0,Fiscal Resilience,billion US$2010/yr,
+GCAM 7.0,Food Demand,kcal/cap/day,
+GCAM 7.0,Food Demand|Crops,kcal/cap/day,
+GCAM 7.0,Food Demand|Livestock,kcal/cap/day,
+GCAM 7.0,Food Energy Supply,EJ/yr,
+GCAM 7.0,Food Energy Supply|Livestock,EJ/yr,
+GCAM 7.0,Forcing,W/m2,forcing_clean
+GCAM 7.0,Forcing|Kyoto Gases,W/m2,forcing_clean
+GCAM 7.0,Forestry Demand|Roundwood,million m3/yr,
+GCAM 7.0,Forestry Demand|Roundwood|Industrial Roundwood,million m3/yr,
+GCAM 7.0,Forestry Demand|Roundwood|Wood Fuel,million m3/yr,
+GCAM 7.0,Forestry Production|Roundwood,million m3/yr,
+GCAM 7.0,Forestry Production|Roundwood|Industrial Roundwood,million m3/yr,
+GCAM 7.0,Forestry Production|Roundwood|Wood Fuel,million m3/yr,
+GCAM 7.0,GDP|MER,billion US$2010/yr,GDP_MER_clean
+GCAM 7.0,GDP|PPP,billion US$2010/yr,GDP_PPP_clean
+GCAM 7.0,Indirect Risk|GDP Growth,%,
+GCAM 7.0,Indirect Risk|Public Debt,billion US$2010/yr,
+GCAM 7.0,Investment,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Freight|Aviation,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Freight|Railways,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Freight|Road|HDT|EV,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Freight|Road|HDT|FCV,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Freight|Road|HDT|ICE,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Passenger|Aviation,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Passenger|Railways,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Passenger|Road|LDV|EV,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Passenger|Road|LDV|FCV,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Demand|Transportation|Passenger|Road|LDV|ICE,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Efficiency,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|CO2 Transport and Storage,billion US$2010/yr,CCS_invest_clean
+GCAM 7.0,Investment|Energy Supply|Electricity,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Biomass,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Biomass|w/ CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Biomass|w/o CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Coal,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Coal|w/ CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Coal|w/o CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Electricity Storage,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Fossil,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Gas,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Gas|w/ CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Gas|w/o CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Geothermal,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Hydro,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Non-Biomass Renewables,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Non-fossil,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Nuclear,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Ocean,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Oil,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Oil|w/ CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Oil|w/o CCS,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Other,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Solar,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Transmission and Distribution,billion US$2010/yr,transmission_invest_clean
+GCAM 7.0,Investment|Energy Supply|Electricity|Wind,billion US$2010/yr,elec_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Bioenergy,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Coal,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Fossil,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Gas,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Oil,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Extraction|Uranium,billion US$2010/yr,resource_investment_clean
+GCAM 7.0,Investment|Energy Supply|Heat,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen|Biomass,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen|Electricity,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen|Fossil,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen|Other,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Hydrogen|Renewable,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Liquids,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Liquids|Biomass,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Liquids|Coal and Gas,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Liquids|Oil,billion US$2010/yr,
+GCAM 7.0,Investment|Energy Supply|Other,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Industry|Green,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Industry|Non-Green,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Residential and Commercial|Building Retrofits,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Residential and Commercial|High-Efficiency Buildings,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Residential and Commercial|Low-Efficiency Buildings,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Residential and Commercial|Medium-Efficiency Buildings,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Transportation,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Transportation|Aviation,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Transportation|Maritime,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Transportation|Rail,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Transportation|Road,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Water|Cooling,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Water|Irrigation,billion US$2010/yr,
+GCAM 7.0,Investment|Infrastructure|Water|Other,billion US$2010/yr,
+GCAM 7.0,Investment|Medical System,billion US$2010/yr,
+GCAM 7.0,Investment|RnD|Energy Supply,billion US$2010/yr,
+GCAM 7.0,Land Cover,million ha,land_clean
+GCAM 7.0,Land Cover|Built-up Area,million ha,land_clean
+GCAM 7.0,Land Cover|Cropland,million ha,land_clean
+GCAM 7.0,Land Cover|Cropland|Cereals,million ha,land_clean
+GCAM 7.0,Land Cover|Cropland|Energy Crops,million ha,land_clean
+GCAM 7.0,Land Cover|Cropland|Irrigated,million ha,land_clean
+GCAM 7.0,Land Cover|Forest,million ha,land_clean
+GCAM 7.0,Land Cover|Forest|Afforestation and Reforestation,million ha,land_clean
+GCAM 7.0,Land Cover|Forest|Managed,million ha,land_clean
+GCAM 7.0,Land Cover|Forest|Natural Forest,million ha,land_clean
+GCAM 7.0,Land Cover|Other Arable Land,million ha,land_clean
+GCAM 7.0,Land Cover|Other Land,million ha,land_clean
+GCAM 7.0,Land Cover|Pasture,million ha,land_clean
+GCAM 7.0,Material Consumption|Domestic,Mt/yr,
+GCAM 7.0,Material recycling|Cement,Mt/yr,
+GCAM 7.0,Material recycling|Chemicals,Mt/yr,
+GCAM 7.0,Material recycling|Chemicals|Ammonia,Mt/yr,
+GCAM 7.0,Material recycling|Chemicals|High value chemicals,Mt/yr,
+GCAM 7.0,Material recycling|Chemicals|Methanol,Mt/yr,
+GCAM 7.0,Policy Cost|Additional Total Energy System Cost,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Area under MAC Curve,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Consumption Loss,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Default for CAV,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Equivalent Variation,billion US$2010/yr,
+GCAM 7.0,Policy Cost|GDP Loss,billion US$2010/yr,
+GCAM 7.0,Policy Cost|GDP Loss|w/o transfers,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Other,billion US$2010/yr,
+GCAM 7.0,Policy Cost|Welfare Change,billion US$2010/yr,
+GCAM 7.0,Population,million,population_clean
+GCAM 7.0,Population|Rural,million,population_clean
+GCAM 7.0,Population|Urban,million,population_clean
+GCAM 7.0,Price|Agriculture|Corn|Index,Index (2005 = 1),ag_prices_clean
+GCAM 7.0,Price|Agriculture|Non-Energy Crops and Livestock|Index,Index (2005 = 1),ag_prices_clean
+GCAM 7.0,Price|Agriculture|Non-Energy Crops|Index,Index (2005 = 1),ag_prices_clean
+GCAM 7.0,Price|Agriculture|Soybean|Index,Index (2005 = 1),ag_prices_clean
+GCAM 7.0,Price|Agriculture|Wheat|Index,Index (2005 = 1),ag_prices_clean
+GCAM 7.0,Price|Carbon,US$2010/t,co2_price_clean
+GCAM 7.0,Price|Carbon|Demand|Industry,US$2010/t CO2,co2_price_clean
+GCAM 7.0,Price|Carbon|Demand|Residential and Commercial,US$2010/t CO2,co2_price_clean
+GCAM 7.0,Price|Carbon|Demand|Transportation,US$2010/t CO2,co2_price_clean
+GCAM 7.0,Price|Carbon|Supply,US$2010/t CO2,co2_price_clean
+GCAM 7.0,Price|Final Energy|Industry|Gases|Bioenergy,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Gases|Fossil,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Gases,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Electricity,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Hydrogen,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Liquids,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Liquids|Bioenergy,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Liquids|Fossil synfuel,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Solids|Biomass,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Industry|Solids|Coal,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Electricity,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Electricity|Index,Index (2020 = 1),
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Gases|Natural Gas,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Gases|Natural Gas|Index,Index (2020 = 1),
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Liquids|Biomass,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Liquids|Biomass|Index,Index (2020 = 1),
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Liquids|Oil,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Liquids|Oil|Index,Index (2020 = 1),
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Solids|Biomass,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Buildings|Residential|Solids|Coal,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Gases|Bioenergy,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Gases|Fossil,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Gases,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Hydrogen,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Liquids,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Electricity,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Liquids|Bioenergy,US$2010/GJ,
+GCAM 7.0,Price|Final Energy|Transportation|Liquids|Fossil synfuel,US$2010/GJ,
+GCAM 7.0,Price|Industry|Cement,US$2010/Mt,
+GCAM 7.0,Price|Primary Energy|Biomass,US$2010/GJ,
+GCAM 7.0,Price|Primary Energy|Biomass|Index,Index (2020 = 1),
+GCAM 7.0,Price|Primary Energy|Coal,US$2010/GJ,
+GCAM 7.0,Price|Primary Energy|Coal|Index,Index (2020 = 1),
+GCAM 7.0,Price|Primary Energy|Gas,US$2010/GJ,
+GCAM 7.0,Price|Primary Energy|Gas|Index,Index (2020 = 1),
+GCAM 7.0,Price|Primary Energy|Oil,US$2010/GJ,
+GCAM 7.0,Price|Primary Energy|Oil|Index,Index (2020 = 1),
+GCAM 7.0,Price|Secondary Energy|Electricity,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Electricity|Index,Index (2020 = 1),
+GCAM 7.0,Price|Secondary Energy|Gases|Natural Gas,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Gases|Natural Gas|Index,Index (2020 = 1),
+GCAM 7.0,Price|Secondary Energy|Hydrogen,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Liquids,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Liquids|Biomass,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Liquids|Biomass|Index,Index (2020 = 1),
+GCAM 7.0,Price|Secondary Energy|Liquids|Oil,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Liquids|Oil|Index,Index (2020 = 1),
+GCAM 7.0,Price|Secondary Energy|Solids|Coal,US$2010/GJ,
+GCAM 7.0,Price|Secondary Energy|Solids|Coal|Index,Index (2020 = 1),
+GCAM 7.0,Primary Energy,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|1st Generation,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Electricity,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Electricity|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Electricity|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Energy Crops,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Modern,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Residues,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Biomass|Traditional,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal|Electricity,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal|Electricity|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal|Electricity|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Coal|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Fossil,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Fossil|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Fossil|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas|Electricity,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas|Electricity|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas|Electricity|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Gas|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables|Geothermal,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables|Hydro,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables|Ocean,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables|Solar,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Non-Biomass Renewables|Wind,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Nuclear,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil|Electricity,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil|Electricity|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil|Electricity|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil|w/ CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Oil|w/o CCS,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Other,EJ/yr,primary_energy_clean
+GCAM 7.0,Primary Energy|Secondary Energy Trade,EJ/yr,primary_energy_clean
+GCAM 7.0,Production|Cement,Mt/yr,industry_production_clean
+GCAM 7.0,Production|Chemicals,Mt/yr,
+GCAM 7.0,Production|Chemicals|Other,Mt/yr,
+GCAM 7.0,Production|Non-ferrous metals,Mt/yr,industry_production_clean
+GCAM 7.0,Production|Plastics,Mt/yr,
+GCAM 7.0,Production|Pulp and Paper,Mt/yr,
+GCAM 7.0,Production|Steel,Mt/yr,industry_production_clean
+GCAM 7.0,Productivity|Industry|Cement,Mt/EJ,
+GCAM 7.0,Productivity|Industry|Steel,Mt/EJ,
+GCAM 7.0,Productivity|Residential and Commercial|Cooling,%,
+GCAM 7.0,Productivity|Residential and Commercial|Heating,%,
+GCAM 7.0,Productivity|Transportation|Freight,billion tkm/EJ,
+GCAM 7.0,Productivity|Transportation|Passenger,billion pkm/EJ,
+GCAM 7.0,Revenue|Government|Tax|Carbon,billion US$2010/yr,gov_revenue_clean
+GCAM 7.0,Revenue|Government|Tax|Carbon|Demand|Buildings,billion US$2010/yr,gov_revenue_clean
+GCAM 7.0,Revenue|Government|Tax|Carbon|Demand|Industry,billion US$2010/yr,gov_revenue_clean
+GCAM 7.0,Revenue|Government|Tax|Carbon|Demand|Transport,billion US$2010/yr,gov_revenue_clean
+GCAM 7.0,Revenue|Government|Tax|Carbon|Supply,billion US$2010/yr,gov_revenue_clean
+GCAM 7.0,Revenue|Industry|Cement,US$2010/yr,
+GCAM 7.0,Revenue|Industry|Steel,US$2010/yr,
+GCAM 7.0,Secondary Energy,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Biomass,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Biomass|w/ CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Biomass|w/o CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Coal,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Coal|w/ CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Coal|w/o CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Fossil,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Fossil|w/ CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Fossil|w/o CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Gas,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Gas|w/ CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Gas|w/o CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Geothermal,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Hydro,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Non-Biomass Renewables,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Nuclear,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Oil,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Oil|w/o CCS,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Other,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Solar,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Solar|CSP,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Solar|PV,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Storage Losses,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Transmission Losses,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Wind,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Wind|Offshore,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Electricity|Wind|Onshore,EJ/yr,elec_gen_tech_clean
+GCAM 7.0,Secondary Energy|Gases,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Gases|Biomass,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Gases|Coal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Gases|Natural Gas,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Gases|Other,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Biomass,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Coal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Gas,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Geothermal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Oil,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Heat|Other,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Biomass,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Biomass|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Biomass|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Coal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Coal|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Coal|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Electricity,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Fossil,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Fossil|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Fossil|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Gas,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Gas|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Hydrogen|Gas|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Biomass,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Biomass|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Biomass|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Coal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Coal|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Coal|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Fossil,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Fossil|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Fossil|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Gas,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Gas|w/ CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Gas|w/o CCS,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Liquids|Oil,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Solids,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Solids|Biomass,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Secondary Energy|Solids|Coal,EJ/yr,se_gen_tech_clean
+GCAM 7.0,Specific Energy Consumption|Production|Chemicals|Methanol,MJ/t,
+GCAM 7.0,Specific Energy Consumption|Production|Chemicals|Other,MJ/t,
+GCAM 7.0,Specific Energy Consumption|Production|Non-ferrous metals,MJ/t,
+GCAM 7.0,Temperature|Global Mean,ºC,global_temp_clean
+GCAM 7.0,Trade|Primary Energy|Biomass|Volume,EJ/yr,energy_trade_clean
+GCAM 7.0,Trade|Primary Energy|Coal|Volume,EJ/yr,energy_trade_clean
+GCAM 7.0,Trade|Primary Energy|Gas|Volume,EJ/yr,energy_trade_clean
+GCAM 7.0,Trade|Primary Energy|Oil|Volume,EJ/yr,energy_trade_clean
+GCAM 7.0,Transport|Stock|Maritime,million vehicles,
+GCAM 7.0,Transport|Stock|Maritime|Freight,million vehicles,
+GCAM 7.0,Transport|Stock|Rail,million vehicles,
+GCAM 7.0,Transport|Stock|Rail|Freight,million vehicles,
+GCAM 7.0,Transport|Stock|Rail|Passenger,million vehicles,
+GCAM 7.0,Transport|Stock|Road|Freight,million vehicles,
+GCAM 7.0,Transport|Stock|Road|Passenger,million vehicles,
+GCAM 7.0,Transport|Stock|Road|Passenger|2W&3W,million vehicles,
+GCAM 7.0,Transport|Stock|Road|Passenger|Bus,million vehicles,
+GCAM 7.0,Value Added|Industry,billion US$2010/yr,
+GCAM 7.0,Value Added|Industry|Energy,billion US$2010/yr,
+GCAM 7.0,Value Added|Industry|Share of energy costs,%,
+GCAM 7.0,Water Consumption,km3/yr,
+GCAM 7.0,Water Consumption|Irrigation,km3/yr,
+GCAM 7.0,Water Withdrawal|Irrigation,km3/yr,
+GCAM 7.0,Yield|Cereal,t DM/ha/yr,
+GCAM 7.0,Yield|Oilcrops,t DM/ha/yr,
+GCAM 7.0,Yield|Sugarcrops,t DM/ha/yr,
+GCAM 7.0,Emissions|Kyoto Gases,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|AFOLU,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Buildings,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Cement,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Chemicals,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Electricity,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Industry,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Other,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Other Energy Supply,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Other Industry,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Steel,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Supply,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Transportation,Mt CO2-equiv/yr,ghg_sector_clean
+GCAM 7.0,Emissions|Kyoto Gases|Non-ferrous Metals,Mt CO2-equiv/yr,ghg_sector_clean

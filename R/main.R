@@ -10,11 +10,8 @@ library(magrittr)
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
 #' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
-#' @param desired_regions: desired regions to consider. By default, 'All' (written as NULL). Otherwise, specify a vector
-#' with all the considered regions, being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return dataframe with the data from the query
 #' @export
@@ -75,11 +72,8 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
 #' @param db_name: name of the database
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector
-#' with all the considered regions, being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param prj: prject file
 #' @return project file with extra queries
@@ -123,11 +117,8 @@ fill_queries = function(db_path, db_name, prj_name, scenarios, desired_regions =
 #'
 #' Load specified project into the global environment
 #' @param prj_name: name of the project
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
-#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return loaded project into global environment
 #' @export
@@ -141,7 +132,7 @@ load_project = function(project_path, desired_regions = 'All') {
     for (s in names(prj)) {
       # for all variables in prj
       for (v in names(prj[[s]])) {
-        prj[[s]][[v]] = filter_regions(prj[[s]][[v]], desired_regions, v)
+        prj[[s]][[v]] = filter_loading_regions(prj[[s]][[v]], desired_regions, v)
       }
     }
   }
@@ -158,15 +149,16 @@ load_project = function(project_path, desired_regions = 'All') {
 #' @param db_name: name of the database
 #' @param prj_name: name of the project
 #' @param scenarios: name of the scenarios to be considered
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
-#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
+#' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
+#' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
+#' In case the project dataset needs to be created, it will be produced with only the specified variables.
 #' @return loaded project into global environment
 #' @export
-create_project = function(db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
+create_project = function(db_path, db_name, prj_name, scenarios,
+                          desired_regions = 'All', desired_variables = 'All') {
   # create the project
   conn <- rgcam::localDBConn(db_path,
                              db_name,migabble = FALSE)
@@ -175,14 +167,12 @@ create_project = function(db_path, db_name, prj_name, scenarios, desired_regions
   queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
   queries <- rgcam::parse_batch_query(queryFile)
 
-  read_qn = c()
   # load all queries for all desired scenarios informing the user
   for (sc in scenarios) {
     print(paste('Start reading queries for',sc,'scenario'))
 
     for(qn in names(queries)) {
       print(paste('Read', qn, 'query'))
-      read_qn = c(read_qn, qn)
 
       bq <- queries[[qn]]
 
@@ -248,6 +238,64 @@ load_variable = function(var){
 }
 
 
+#' available_regions
+#'
+#' @param print: if TRUE, prints all available regions. TRUE by default.
+#' @return Prints a list of all the available regions for the IAMC reporting dataset.
+#' It also returns them as a vector.
+#' @export
+available_regions = function(print = TRUE) {
+  av_reg = reg_cont %>%
+    dplyr::mutate(region = dplyr::if_else(continent == 'World', 'World', region))
+
+  if (print) {
+    for (it in unique(av_reg$region)) {
+      print(it)
+    }
+  }
+
+  return(invisible(unique(av_reg$region)))
+}
+
+
+#' available_continents
+#'
+#' @param print: if TRUE, prints all available continents/regions' groups. TRUE by default.
+#' @return Prints a list of all the available continents/regions' groups for the
+#' IAMC reporting dataset. It also returns them as a vector.
+#' @export
+available_continents = function(print = TRUE) {
+  av_cont = unique(reg_cont$continent)
+
+  if (print) {
+    for (it in av_cont) {
+      print(it)
+    }
+  }
+
+  return(invisible(av_cont))
+}
+
+
+#' available_variables
+#'
+#' @param print: if TRUE, prints all available variables. TRUE by default.
+#' @return Prints a list of all the available variables for the IAMC reporting dataset.
+#' It also returns them as a vector.
+#' @export
+available_variables = function(print = TRUE) {
+  av_var = template %>%
+    dplyr::filter(!is.na(Internal_variable) & Internal_variable != "")
+
+  if (print) {
+    for (it in unique(av_var$Variable)) {
+      print(it)
+    }
+  }
+
+  return(invisible(unique(av_var$Variable)))
+}
+
 #' run
 #'
 #' Main function. Interacts with the user to select the desired variables for the report, loads
@@ -261,36 +309,51 @@ load_variable = function(var){
 #' @param scenarios: name of the scenarios to be considered.
 #' @param final_year: final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
 #' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
-#' Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
-#' global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
-#' ag_demand_clean, land_clean, primary_energy_clean, energy_trade_clean, elec_gen_tech_clean, elec_capacity_tot_clean,
-#' elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
-#' ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
-#' CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
-#' being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-#' Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-#' Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-#' Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+#' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
+#' In case the project dataset needs to be created, it will be produced with only the specified variables.
+#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
+#' @param desired_continents: desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
+#' the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
+#' continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
+#' specified continents/regions' groups.
 #' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
 #' data saved only in the specified format.
 #' @param file_name: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
 #' the same name than the specified project_path, with 'iamc_report' tag. CSV and XLSX output. In case of specifing the path, do not
 #' introduce the extension, it will be automatically added.
 #' @param launch_ui: if TRUE, launch UI, Do not launch UI otherwise.
-#' @return saved? CSV and XLSX datafile with the desired variables & launched? user interface.
+#' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 #' @export
 run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
-               desired_variables = 'All', desired_regions = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
+               desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, file_name = NULL, launch_ui = TRUE) {
 
-  # check that the desired_regions do exist in GCAM7 IAM COMPACT
+  # check that the desired_regions are available
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
-    check_reg = setdiff(desired_regions, reg_cont$region)
+    check_reg = setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
-      stop(paste0('ERROR: You specified regions ',check_reg, ' which are not present in the GCAM 7 IAM-COMPACT configuration.'))
+      stop(paste0('ERROR: You specified the region ',check_reg, ' which is not available for reporting.'))
     }
   }
+  # check that the desired_continents are available
+  if (!(length(desired_continents) == 1 && desired_continents == 'All')) {
+    check_cont = setdiff(desired_continents, available_continents(print = FALSE))
+    if (length(check_cont) > 0) {
+      stop(paste0("ERROR: You specified the continent/regions' group ",check_cont, ' which is not available for reporting.'))
+    }
+    desired_regions = reg_cont %>%
+      dplyr::filter(continent %in% desired_continents) %>%
+      dplyr::pull(region)
+  }
+  # check that the desired_variables are available
+  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    check_reg = setdiff(desired_variables, available_variables(print = FALSE))
+    if (length(check_var) > 0) {
+      stop(paste0("ERROR: You specified the variable ",check_var, ' which is not available for reporting.'))
+    }
+  }
+
 
   # check that the paths are correctly specified
   if (!is.null(project_path) && (!is.null(db_path) || !is.null(db_name) || !is.null(prj_name) || !is.null(scenarios))) {
@@ -337,24 +400,11 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   # make final_db_year as a global variable
   final_db_year <<- final_year
 
-  # final reporting columns:
+  # final reporting columns
   reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
 
   # desired variables to have in the report
-  variables_base <<- data.frame('name' =
-                                  c('co2_price_clean', 'population_clean', 'GDP_MER_clean', 'GDP_PPP_clean',
-                                    'global_temp_clean', 'forcing_clean', 'co2_concentration_clean',
-                                    'co2_emissions_clean', 'tot_co2_clean', 'co2_sequestration_clean',
-                                    'ag_demand_clean', 'ag_production_clean', 'land_clean',
-                                    'primary_energy_clean', 'energy_trade_clean',
-                                    'elec_gen_tech_clean', 'elec_capacity_tot_clean', 'elec_capacity_add_clean',
-                                    'se_gen_tech_clean', 'fe_sector_clean',
-                                    'energy_service_transportation_clean',
-                                    'energy_service_buildings_clean',
-                                    'ag_prices_clean', 'industry_production_clean',
-                                    'elec_capital_clean',
-                                    'elec_investment_clean', 'transmission_invest_clean', 'CCS_invest_clean', 'resource_investment_clean',
-                                    'nonco2_clean'),
+  variables_base <<- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
                                 'required' = TRUE,
                                 stringsAsFactors = FALSE)
 
@@ -363,7 +413,11 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     variables <<- variables_base
   } else {
     variables <<- variables_base %>%
-      dplyr::filter(name %in% desired_variables)
+      dplyr::mutate(required = dplyr::if_else(
+        !name %in% unique(template %>%
+                            dplyr::filter(Variable %in% desired_variables) %>%
+                            dplyr::pull(Internal_variable)),
+        FALSE, required))
   }
 
   print('Loading data, performing checks, and saving output...')

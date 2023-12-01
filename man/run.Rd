@@ -13,6 +13,7 @@ run(
   final_year = 2100,
   desired_variables = "All",
   desired_regions = "All",
+  desired_continents = "All",
   save_output = TRUE,
   file_name = NULL,
   launch_ui = TRUE
@@ -32,19 +33,17 @@ run(
 \item{final_year:}{final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.}
 
 \item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
-Otherwise, specify a vector with all the desired options, being population_clean, GDP_MER_clean, GDP_PPP_clean,
-global_temp_clean, forcing_clean, co2_concentration_clean, co2_emissions_clean, tot_co2_clean, co2_sequestration_clean,
-ag_demand_clean, land_clean, primary_energy_clean, energy_trade_clean, elec_gen_tech_clean, elec_capacity_tot_clean,
-elec_capacity_add_clean, se_gen_tech_clean, fe_sector_clean, energy_service_transportation_clean, energy_service_buildings_clean,
-ag_prices_clean, industry_production_clean, elec_capital_clean, elec_investment_clean, transmission_invest_clean,
-CCS_invest_clean, resource_investment_clean, nonco2_clean, co2_price_clean.}
+Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
+In case the project dataset needs to be created, it will be produced with only the specified variables.}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions,
-being USA,Africa_Eastern,Africa_Northern,Africa_Southern,Africa_Western,Australia_NZ,Brazil,Canada,
-Central Asia,China,EU-12,EU-15,Europe_Eastern,Europe_Non_EU,European Free Trade Association,India,Indonesia,Japan,
-Mexico,Middle East,Pakistan,Russia,South Africa,South America_Northern,South America_Southern,South Asia,South Korea,
-Southeast Asia,Taiwan,Argentina,Colombia,Central America and Caribbean. ATTENCION: the considered regions will make up "World".
+\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
+
+\item{desired_continents:}{desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
+the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
+continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
+specified continents/regions' groups.}
 
 \item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
 data saved only in the specified format.}
@@ -56,7 +55,7 @@ introduce the extension, it will be automatically added.}
 \item{launch_ui:}{if TRUE, launch UI, Do not launch UI otherwise.}
 }
 \value{
-saved? CSV and XLSX datafile with the desired variables & launched? user interface.
+RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 }
 \description{
 Main function. Interacts with the user to select the desired variables for the report, loads
