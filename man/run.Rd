@@ -15,7 +15,7 @@ run(
   desired_regions = "All",
   desired_continents = "All",
   save_output = TRUE,
-  file_name = NULL,
+  output_file = NULL,
   launch_ui = TRUE
 )
 }
@@ -34,9 +34,10 @@ run(
 
 \item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
-the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
-and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3"}
+In case the project dataset needs to be created, it will be created containing only the specified variables.
+ATTENTION: global variables such as "Emissions" will be computed considering only the selected variables. As an example,
+if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not
+consider other variables, such as "Emissions|CH4" or "Emissions|NH3"}
 
 \item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
@@ -47,21 +48,22 @@ the considered continents/regions' groups. To know all possibilities, run `avail
 continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
 specified continents/regions' groups.}
 
-\item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If equals 'CSV' or 'XLSX',
-data saved only in the specified format.}
+\item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
+'save_output = XLSX', the data will be only saved in the specified format.}
 
-\item{file_name:}{file path and name of the saved data. Not used if data not saved. By default, saved in the same directory and with
-the same name than the specified project_path, with 'iamc_report' tag. CSV and XLSX output. In case of specifing the path, do not
-introduce the extension, it will be automatically added.}
+\item{output_file:}{file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
+database or the project file, and using a default name containing the project name with 'standardized' tag.
+In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.}
 
-\item{launch_ui:}{if TRUE, launch UI, Do not launch UI otherwise.}
+\item{launch_ui:}{if TRUE, launch User Interface, Do not launch it otherwise.}
 }
 \value{
 RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 }
 \description{
-Main function. Interacts with the user to select the desired variables for the report, loads
-them, saves them in an external output, runs the verifications, and informs the user about the
-success of the whole process. Either the `project_path` should be specified, or the `db_path`
-with all the related items, being `db_name`, `prj_name`, and `scenarios`.
+Main function. Creates/loads a GCAM project, standardizes the data and saves it
+in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
+the User Interface. Specify regions and/or variables to be reported and point
+either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
+The resulting RData output can be used to call manually `launch_gcamreport_ui`.
 }

@@ -4,11 +4,18 @@
 \alias{launch_gcamreport_ui}
 \title{launch_gcamreport_ui}
 \usage{
-launch_gcamreport_ui()
+launch_gcamreport_ui(data_path = NULL, data = NULL)
+}
+\arguments{
+\item{data_path:}{RData dataset path containing the standardized data. You can obtain
+this dataset by using the function `gcamreport::run`.}
+
+\item{data:}{dataset containing the standardized data. You can obtain
+this dataset by using the function `gcamreport::run`.}
 }
 \value{
 launch shiny interactive ui
 }
 \description{
-Launch shiny interactive ui
+Launch shiny interactive user interface.
 }
