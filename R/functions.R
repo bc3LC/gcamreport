@@ -1936,7 +1936,7 @@ do_check_trade = function() {
                summary = as.data.frame(check_trade_summary))
   } else {
     res = list(message = 'Trade flows: OK',
-               summary = check_vet_summary)
+               summary = check_trade_summary)
   }
   return(res)
 }
