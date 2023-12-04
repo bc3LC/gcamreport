@@ -65,59 +65,6 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
 }
 
 
-#' fill_queries
-#'
-#' Create a folder to save the datasets and file, in case it does not exist
-#' @param db_path: path of the database
-#' @param db_name: name of the database
-#' @param prj_name: name of the project
-#' @param scenarios: name of the scenarios to be considered
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-#' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param prj: prject file
-#' @param desired_queries: desired queries to be loaded
-#' @return project file with extra queries
-#' @export
-fill_queries = function(db_path, db_name, prj_name, scenarios,
-                        desired_regions = 'All', prj, desired_queries) {
-  # add nonCO2 queries manually (they are too big to use the usual method)
-  if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj) &
-      'nonCO2 emissions by sector (excluding resource production)' %in% desired_queries) {
-    print('nonCO2 emissions by sector (excluding resource production)')
-    dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
-    prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp1.dat', qdata = dt_sec, saveProj = FALSE,
-                                    queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = TRUE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
-
-  }
-  if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj) &
-      'nonCO2 emissions by region' %in% desired_queries) {
-    print('nonCO2 emissions by region')
-    dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
-    prj_tmp <- rgcam::addQueryTable(project = 'prj_tmp2.dat', qdata = dt_reg, saveProj = FALSE,
-                                    queryname = 'nonCO2 emissions by region', clobber = TRUE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
-  }
-
-  # fix CO2 prices if needed
-  if (!'CO2 prices' %in% rgcam::listQueries(prj) &
-      'CO2 prices' %in% desired_queries) {
-    l = length(rgcam::listScenarios(prj))
-    dt = data.frame(Units = rep(NA,l),
-                    scenario = rgcam::listScenarios(prj),
-                    year = rep(NA,l),
-                    market = rep(NA,l),
-                    value = rep(NA,l))
-    prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = dt,
-                                    queryname = 'CO2 prices', clobber = TRUE)
-    prj <<- rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
-  }
-
-  return(prj)
-}
-
-
 #' load_project
 #'
 #' Load specified project into the global environment
@@ -184,7 +131,9 @@ create_project = function(db_path, db_name, prj_name, scenarios,
 
     # read the queries file
     queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
-    queries_original <- rgcam::parse_batch_query(queryFile)
+    queries_short <- rgcam::parse_batch_query(queryFile)
+    queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_nonCO2.xml')
+    queries_large <- rgcam::parse_batch_query(queryFile)
 
     # subset the queries necessary for the selected variables
     if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
@@ -210,20 +159,22 @@ create_project = function(db_path, db_name, prj_name, scenarios,
       required_queries = unique(required_queries[!is.na(required_queries)])
 
       # save the read-to-use queries in a vector
-      queries_touse = queries_original[names(queries_original) %in% required_queries]
+      queries_touse_short = queries_short[names(queries_short) %in% required_queries]
+      queries_touse_large = queries_large[names(queries_large) %in% required_queries]
     } else {
       # save the read-to-use queries in a vector. These are all the possible queries
-      queries_touse = queries_original
+      queries_touse_short = queries_short
+      queries_touse_large = queries_large
     }
 
     # load all queries for all desired scenarios informing the user
     for (sc in scenarios) {
       print(paste('Start reading queries for',sc,'scenario'))
 
-      for(qn in names(queries_touse)) {
+      for(qn in names(queries_touse_short)) {
         print(paste('Read', qn, 'query'))
 
-        bq <- queries_touse[[qn]]
+        bq <- queries_touse_short[[qn]]
 
         # subset regions if necessary
         if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -247,9 +198,40 @@ create_project = function(db_path, db_name, prj_name, scenarios,
       }
     }
 
-    # fill with empty datatable the possible 'CO2 price' query and add 'nonCO2' large queries
-    prj <<- fill_queries(db_path, db_name, prj_name, scenarios,
-                         desired_regions, prj, queries_touse)
+    # Add 'nonCO2' large queries manually (they are too big to use the usual method)
+    if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj) &&
+        'nonCO2 emissions by sector (excluding resource production)' %in% names(queries_touse_large)) {
+      print('nonCO2 emissions by sector (excluding resource production)')
+      dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt_sec, saveProj = FALSE,
+                                      queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
+      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+
+    }
+    if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj) &&
+        'nonCO2 emissions by region' %in% names(queries_touse_large)) {
+      print('nonCO2 emissions by region')
+      dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt_reg, saveProj = FALSE,
+                                      queryname = 'nonCO2 emissions by region', clobber = FALSE)
+      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+    }
+
+    # Fill with an empty datatable the possible 'CO2 price' query if necessary
+    if (!'CO2 prices' %in% rgcam::listQueries(prj) &&
+        'CO2 prices' %in% names(queries_touse_short)) {
+      l = length(rgcam::listScenarios(prj))
+      dt = data.frame(Units = rep(NA,l),
+                      scenario = rgcam::listScenarios(prj),
+                      year = rep(NA,l),
+                      market = rep(NA,l),
+                      value = rep(NA,l))
+      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt,
+                                      queryname = 'CO2 prices', clobber = TRUE)
+      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
+    }
+
+    prj <<- prj
 
     # save the project
     rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
@@ -565,8 +547,9 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
     for (e in vetting_summary) {
       print(e$message)
     }
-    print('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details')
-    print('You can check the vetting figure in output/figure/vetting.tiff')
+    vetting_summary <<- vetting_summary
+    cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details')
+    cat('You can check the vetting figure in output/figure/vetting.tiff')
   }
 
   # remove internal variables from the environment
