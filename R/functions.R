@@ -7,6 +7,19 @@ options(dplyr.summarise.inform = FALSE)
 #########################################################################
 
 
+#' start_with_pattern
+#'
+#' Return the vector elements starting with the specified parameters
+#' @param vector: vector to check
+#' @param pattern: pattern to consider
+#' @return subvector of `vector` whose elements start with `pattern`
+#' @export
+start_with_pattern = function(vector, pattern) {
+  matching_elements = vector[substr(vector, 1, nchar(pattern)) == pattern]
+  return(matching_elements)
+}
+
+
 #' filter_loading_regions
 #'
 #' Filter the desired regions of a GCAM project
@@ -16,6 +29,7 @@ options(dplyr.summarise.inform = FALSE)
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param variable: dataset variable information
 #' @return filtered dataframe
+#' @export
 filter_loading_regions <- function (data, desired_regions = 'All', variable) {
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
     # the variable CO2 prices does not contain "region", but "markets". Now we
@@ -51,13 +65,17 @@ filter_loading_regions <- function (data, desired_regions = 'All', variable) {
 #'
 #' Filter the desired regions of a GCAM project
 #' @param data: dataframe to be filtered
+#' @param variable: variable that requires this data
 #' @return filtered dataframe
 #' @export
-filter_variables = function(data) {
-  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
-    if ('var' %in% colnames(data)) {
-      data = data %>%
-        dplyr::filter(var %in% desired_variables)
+filter_variables = function(data, variable) {
+
+  if (variable %in% variables[variables$required == TRUE,]$name) {
+    if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+      if ('var' %in% colnames(data)) {
+        data = data %>%
+          dplyr::filter(var %in% desired_variables)
+      }
     }
   }
 
@@ -297,7 +315,7 @@ get_co2_concentration = function() {
 get_co2 = function() {
   co2_clean <<-
     tibble::as_tibble(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)")) %>%
-    dplyr::left_join(filter_variables(co2_sector_map), by = "sector", multiple = "all") %>%
+    dplyr::left_join(filter_variables(co2_sector_map, 'co2_clean'), by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -324,7 +342,7 @@ get_co2_ets = function() {
     tibble::as_tibble(rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")) %>%
     dplyr::filter(ghg == 'CO2_ETS') %>%
     # change units to CO2 equivalent and group by sector
-    dplyr::left_join(filter_variables(co2_ets_sector_map), by = "sector", multiple = "all") %>%
+    dplyr::left_join(filter_variables(co2_ets_sector_map, 'co2_ets_bysec'), by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -379,7 +397,7 @@ get_co2_tech_nobio_tmp = function() {
 get_co2_tech_emissions_tmp = function() {
   co2_tech_emissions <<-
     co2_tech_nobio %>%
-    dplyr::left_join(filter_variables(co2_tech_map), by = c("sector", "subsector", "technology"), multiple = "all")  %>%
+    dplyr::left_join(filter_variables(co2_tech_map, 'co2_tech_emissions'), by = c("sector", "subsector", "technology"), multiple = "all")  %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -421,7 +439,7 @@ get_co2_iron_steel = function() {
   co2_tech_ironsteel <<-
     co2_tech_nobio %>% #Using redistributed bio version
     dplyr::filter(sector == "iron and steel") %>%
-    dplyr::left_join(filter_variables(iron_steel_map), by = c("sector", "subsector", "technology", "year", "region")) %>%
+    dplyr::left_join(filter_variables(iron_steel_map, 'co2_tech_ironsteel'), by = c("sector", "subsector", "technology", "year", "region")) %>%
     dplyr::mutate(input = stringr::str_replace(input, "wholesale gas", "Emissions|CO2|Energy|Gas"),
                   input = stringr::str_replace(input, "refined liquids industrial", "Emissions|CO2|Energy|Oil"),
                   input = stringr::str_replace(input,	"delivered coal", "Emissions|CO2|Energy|Coal")) %>%
@@ -499,9 +517,9 @@ get_total_co2_emissions = function() {
 get_nonco2_emissions = function() {
   nonco2_clean <<-
     rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)") %>%
-    dplyr::left_join(filter_variables(nonco2_emis_sector_map), by = c("ghg", "sector"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(nonco2_emis_sector_map, 'nonco2_clean'), by = c("ghg", "sector"), multiple = "all") %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
-                       dplyr::left_join(filter_variables(nonco2_emis_resource_map), by = c("ghg", "resource"), multiple = "all")) %>%
+                       dplyr::left_join(filter_variables(nonco2_emis_resource_map, 'nonco2_clean'), by = c("ghg", "resource"), multiple = "all")) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -569,7 +587,7 @@ get_ghg_sector = function() {
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::rename(ghg = variable) %>%
-    dplyr::left_join(filter_variables(kyoto_sector_map), relationship = "many-to-many") %>%
+    dplyr::left_join(filter_variables(kyoto_sector_map, 'ghg_sector_clean'), relationship = "many-to-many") %>%
     dplyr::select(all_of(long_columns)) %>%
     dplyr::bind_rows(LU_carbon_clean %>%
                        dplyr::mutate(var = "Emissions|Kyoto Gases"),
@@ -590,7 +608,7 @@ get_ghg_sector = function() {
 get_co2_sequestration = function() {
   co2_sequestration_clean <<-
     rgcam::getQuery(prj, "CO2 sequestration by tech") %>%
-    dplyr::left_join(filter_variables(carbon_seq_tech_map), by = c("sector", "technology"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(carbon_seq_tech_map, 'co2_sequestration_clean'), by = c("sector", "technology"), multiple = "all") %>%
     tidyr::complete(tidyr::nesting(scenario,region, year),
                     var = unique(var),
                     fill = list(value = 0)) %>%
@@ -617,7 +635,7 @@ get_ag_demand = function() {
                      rgcam::getQuery(prj, "demand balances by meat and dairy commodity")) %>%
     # Adjust OtherMeat_Fish
     dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
-    dplyr::left_join(filter_variables(ag_demand_map), by = c("sector"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(ag_demand_map, 'ag_demand_clean'), by = c("sector"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -656,7 +674,7 @@ get_ag_production = function() {
 get_land = function() {
   land_clean <<-
     rgcam::getQuery(prj, "aggregated land allocation") %>%
-    dplyr::left_join(filter_variables(land_use_map), by = c("landleaf"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(land_use_map, 'land_clean'), by = c("landleaf"), multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -677,7 +695,7 @@ get_primary_energy = function() {
     rgcam::getQuery(prj, "primary energy consumption with CCS by region (direct equivalent)") %>%
     dplyr::filter(!grepl("water", fuel),
                   Units == "EJ") %>%
-    dplyr::left_join(filter_variables(primary_energy_map), by = c("fuel"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(primary_energy_map, 'primary_energy_clean'), by = c("fuel"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -742,7 +760,7 @@ get_energy_trade = function() {
                   resource = sub("natural gas", "Gas", resource),
                   resource = sub("oil", "Oil", resource),
                   var = paste0("Trade|Primary Energy|", resource, "|Volume")) %>%
-    filter_variables() %>%
+    filter_variables(variable = 'energy_trade_clean') %>%
     dplyr::select(all_of(long_columns))
 }
 
@@ -757,7 +775,7 @@ get_energy_trade = function() {
 get_elec_gen_tech = function() {
   elec_gen_tech_clean <<-
     rgcam::getQuery(prj, "elec gen by gen tech") %>%
-    dplyr::left_join(filter_variables(elec_gen_map), by = c("output", "subsector", "technology"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(elec_gen_map, 'elec_gen_tech_clean'), by = c("output", "subsector", "technology"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -791,7 +809,7 @@ get_secondary_solids = function() {
                        dplyr::summarise(value = sum(value, na.rm = T)) %>%
                        dplyr::ungroup() %>%
                        dplyr::mutate(var = "Secondary Energy|Solids")) %>%
-    filter_variables() %>%
+    filter_variables(variable = 'secondary_solids') %>%
     dplyr::select(all_of(long_columns))
 }
 
@@ -807,7 +825,7 @@ get_se_gen_tech = function() {
     dplyr::bind_rows(rgcam::getQuery(prj, "gas production by tech"),
                      rgcam::getQuery(prj, "hydrogen production by tech"),
                      rgcam::getQuery(prj, "refined liquids production by tech")) %>%
-    dplyr::left_join(filter_variables(se_gen_map), by = c("sector", "subsector", "technology"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(se_gen_map, 'se_gen_tech_clean'), by = c("sector", "subsector", "technology"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -834,7 +852,7 @@ get_se_gen_tech = function() {
 get_fe_sector_tmp = function() {
   fe_sector <<-
     rgcam::getQuery(prj, "final energy consumption by sector and fuel") %>%
-    dplyr::left_join(filter_variables(final_energy_map), by = c("sector", "input"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(final_energy_map, 'fe_sector'), by = c("sector", "input"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -856,7 +874,7 @@ get_fe_sector_tmp = function() {
 get_fe_transportation_tmp = function() {
   fe_transportation <<-
     rgcam::getQuery(prj, "transport final energy by mode and fuel") %>%
-    dplyr::left_join(filter_variables(transport_final_en_map), by = c("sector", "input", "mode"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(transport_final_en_map, 'fe_transportation'), by = c("sector", "input", "mode"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -900,7 +918,7 @@ get_fe_sector = function() {
 get_energy_service_transportation = function() {
   energy_service_transportation_clean <<-
     rgcam::getQuery(prj, "transport service output by mode") %>%
-    dplyr::left_join(filter_variables(transport_en_service), by = c("sector", "mode"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(transport_en_service, 'energy_service_transportation_clean'), by = c("sector", "mode"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -919,7 +937,7 @@ get_energy_service_transportation = function() {
 get_energy_service_buildings = function() {
   energy_service_buildings_clean <<-
     rgcam::getQuery(prj, "building floorspace") %>%
-    dplyr::left_join(filter_variables(buildings_en_service), by = c("building"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(buildings_en_service, 'energy_service_buildings_clean'), by = c("building"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -942,7 +960,7 @@ get_energy_service_buildings = function() {
 get_industry_production = function() {
   industry_production_clean <<-
     rgcam::getQuery(prj, "industry primary output by sector") %>%
-    dplyr::left_join(filter_variables(production_map), by = c("sector")) %>%
+    dplyr::left_join(filter_variables(production_map, 'industry_production_clean'), by = c("sector")) %>%
     # dplyr::filter variables that are in terms of Mt
     dplyr::filter(var %in% c("Production|Cement", "Production|Steel", "Production|Non-ferrous metals"))%>%
     dplyr::group_by(scenario, region, var, year) %>%
@@ -963,7 +981,7 @@ get_industry_production = function() {
 get_ag_prices_wld_tmp = function() {
   ag_prices_wld <<-
     rgcam::getQuery(prj, "prices by sector") %>%
-    dplyr::left_join(filter_variables(ag_prices_map), by = c("sector")) %>%
+    dplyr::left_join(filter_variables(ag_prices_map, 'ag_prices_wld'), by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::group_by(scenario, sector, year) %>%
     dplyr::summarise(value = mean(value, na.rm = T)) %>%
@@ -981,7 +999,7 @@ get_ag_prices = function() {
   ag_prices_clean <<-
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::bind_rows(ag_prices_wld) %>%
-    dplyr::left_join(filter_variables(ag_prices_map), by = c("sector")) %>%
+    dplyr::left_join(filter_variables(ag_prices_map, 'ag_prices_clean'), by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::group_by(scenario, region, sector) %>%
     dplyr::mutate(value = value * unit_conv / value[year == 2005]) %>%
@@ -1004,7 +1022,7 @@ get_ag_prices = function() {
 #' @export
 get_price_var_tmp = function() {
   price_var <<-
-    unique(filter_variables(co2_market_frag_map)$var)
+    unique(filter_variables(co2_market_frag_map, 'price_var')$var)
 }
 
 
@@ -1074,7 +1092,7 @@ get_co2_price_global_tmp = function() {
       tibble::as_tibble(co2_price_global_pre) %>%
       dplyr::mutate(value = value / conv_C_CO2 * conv_90USD_10USD) %>%
       dplyr::mutate(market = gsub("global", "", market)) %>%
-      dplyr::left_join(filter_variables(co2_market_frag_map), by = "market", multiple = "all") %>%
+      dplyr::left_join(filter_variables(co2_market_frag_map, 'co2_price_global'), by = "market", multiple = "all") %>%
       dplyr::filter(value != 0) %>%
       tidyr::expand_grid(tibble::tibble(region = regions)) %>%
       dplyr::select(all_of(long_columns))
@@ -1109,6 +1127,17 @@ get_co2_price_share = function() {
   if (!("CO2_ETS" %in% colnames(co2_price_share_byreg))) {
     co2_price_share_byreg <<- co2_price_share_byreg %>%
       dplyr::mutate(CO2_ETS = NA)
+  }
+
+  if (nrow(co2_price_share_byreg) < 1) {
+    co2_price_clean <<-
+      tidyr::expand_grid(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
+      tidyr::expand_grid(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
+      tidyr::expand_grid(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
+      dplyr::mutate(value = 0) %>%
+      dplyr::select(all_of(long_columns))
+
+    # scenario region                         year share_CO2_ETS
   }
 
   co2_price_share_byreg <<- co2_price_share_byreg %>%
@@ -1191,7 +1220,7 @@ get_co2_price_fragmented_tmp = function() {
                       by = c('scenario','region')) %>%
       dplyr::mutate(value = CO2 + CO2_ETS * share_CO2_ETS) %>%
       dplyr::select(Units, scenario, year, region, value, CO2, CO2_ETS, share_CO2_ETS, sector) %>%
-      dplyr::left_join(filter_variables(co2_market_frag_map), by = "sector", multiple = "all") %>%
+      dplyr::left_join(filter_variables(co2_market_frag_map, 'co2_price_fragmented'), by = "sector", multiple = "all") %>%
       dplyr::filter(stats::complete.cases(.)) %>%
       tidyr::complete(tidyr::nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
       dplyr::select(all_of(long_columns))
@@ -1218,7 +1247,7 @@ get_co2_price = function() {
   if(nrow(co2_price_clean_pre) < 1) {
 
     co2_price_clean <<-
-      tibble::tibble(var = unique(filter_variables(co2_market_frag_map)$var)) %>%
+      tibble::tibble(var = unique(filter_variables(co2_market_frag_map, 'co2_price_clean')$var)) %>%
       tidyr::expand_grid(tibble::tibble(scenario = unique(fe_sector_clean$scenario))) %>%
       tidyr::expand_grid(tibble::tibble(year = unique(fe_sector_clean$year))) %>%
       tidyr::expand_grid(tibble::tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
@@ -1291,11 +1320,11 @@ get_prices_subsector = function() {
   prices_subsector <<-
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::select(-Units) %>%
-    dplyr::left_join(filter_variables(energy_prices_map) %>%
+    dplyr::left_join(filter_variables(energy_prices_map, 'prices_subsector') %>%
                        dplyr::filter(is.na(subsector)) %>%
                        unique, by = c("sector"), multiple = "all") %>%
     dplyr::bind_rows(rgcam::getQuery(prj, "costs by subsector") %>%
-                       dplyr::left_join(filter_variables(energy_prices_map) %>%
+                       dplyr::left_join(filter_variables(energy_prices_map, 'prices_subsector') %>%
                                           unique,
                                         by = c("sector", "subsector"))) %>%
     dplyr::filter(!is.na(var)) %>%
@@ -1465,7 +1494,7 @@ get_cf_iea_tmp = function() {
     dplyr::mutate(cf = EJ / (value * hr_per_yr * EJ_to_GWh),
                   cf = replace(cf, cf > 1, 0.99)) %>%
     dplyr::filter(!is.na(cf), !var %in% c("Secondary Energy|Electricity", "Secondary Energy|Electricity|Non-Biomass Renewables")) %>%
-    dplyr::left_join(filter_variables(capacity_map), by = "var", multiple = "all") %>%
+    dplyr::left_join(filter_variables(capacity_map, 'cf_iea'), by = "var", multiple = "all") %>%
     dplyr::select(technology, cf) %>%
     dplyr::mutate(region = "USA", vintage = 2020) %>%
     tidyr::complete(tidyr::nesting(technology, cf),
@@ -1535,7 +1564,7 @@ get_elec_capacity_tot = function() {
     dplyr::group_by(scenario, region, technology, year) %>%
     dplyr::summarise(value = sum(gw, na.rm = T)) %>%
     dplyr::ungroup() %>%
-    dplyr::left_join(filter_variables(capacity_map) %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(capacity_map, 'elec_capacity_tot_clean') %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv,
                   var = sub("Secondary Energy", "Capacity", var)) %>%
@@ -1606,7 +1635,7 @@ get_elec_capacity_add = function() {
                        dplyr::filter(var == "Secondary Energy|Electricity|Storage Capacity") %>%
                        dplyr::mutate(value = GW * 8760, # multiply by # of hours in a year
                                      var = sub("Secondary Energy", "Capacity Additions", var))) %>%
-    filter_variables() %>%
+    filter_variables(variable = 'elec_capacity_add_clean') %>%
     dplyr::group_by(scenario, region, var, year) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
@@ -1905,7 +1934,8 @@ do_bind_results = function() {
     #  dplyr::rename(Model = ?..Model) %>%
     dplyr::rename(Scenario = scenario) %>%
     dplyr::select(all_of(reporting_columns_fin)) %>%
-    dplyr::filter(!is.na(Region)) # Drop variables we don't report
+    dplyr::filter(!is.na(Region)) %>% # Drop variables we don't report
+    dplyr::filter(Variable %in% desired_variables)
 }
 
 #########################################################################
@@ -1918,25 +1948,31 @@ do_bind_results = function() {
 #' @return Verification message indicating if the process was successful.
 #' @export
 do_check_trade = function() {
-  # check global total is zero
-  trade <- energy_trade_prod %>%
-    dplyr::left_join(energy_trade_supply, by = c("scenario", "resource", "region", "year")) %>%
-    dplyr::group_by(scenario, resource, year) %>%
-    dplyr::summarise(production = sum(production, na.rm = T),
-                     demand = sum(demand, na.rm = T)) %>%
-    dplyr::ungroup() %>%
-    dplyr::mutate(diff = (production - demand) / production,
-                  check = dplyr::if_else( abs(diff) > 1, "Error", "OK" ))
 
-  check_trade_summary <- trade %>%
-    dplyr::rename('percentual_diff_between_production_and_demand' = 'diff')
+  if (exists('energy_trade_prod')) {
+    # check global total is zero
+    trade <- energy_trade_prod %>%
+      dplyr::left_join(energy_trade_supply, by = c("scenario", "resource", "region", "year")) %>%
+      dplyr::group_by(scenario, resource, year) %>%
+      dplyr::summarise(production = sum(production, na.rm = T),
+                       demand = sum(demand, na.rm = T)) %>%
+      dplyr::ungroup() %>%
+      dplyr::mutate(diff = (production - demand) / production,
+                    check = dplyr::if_else( abs(diff) > 1, "ERROR", "OK" ))
 
-  if (nrow(trade %>% dplyr::filter( check == "Error")) > 0) {
-    res = list(message = 'Trade flows: ERROR',
-               summary = as.data.frame(check_trade_summary))
+    check_trade_summary <- trade %>%
+      dplyr::rename('percentual_diff_between_production_and_demand' = 'diff')
+
+    if (nrow(trade %>% dplyr::filter( check == "ERROR")) > 0) {
+      res = list(message = 'Trade flows: ERROR',
+                 summary = as.data.frame(check_trade_summary))
+    } else {
+      res = list(message = 'Trade flows: OK',
+                 summary = check_trade_summary)
+    }
   } else {
-    res = list(message = 'Trade flows: OK',
-               summary = check_trade_summary)
+    res = list(message = 'Trade flows: Vetting not performed',
+               summary = 'To check the trade flows, consider introducing `Trade*` as desired variable.')
   }
   return(res)
 }
@@ -1974,9 +2010,9 @@ do_check_vetting = function() {
     dplyr::mutate(value_vet = dplyr::if_else(unit_vet == "bcm", value_vet * bcm_to_EJ, value_vet),
                   unit_vet = dplyr::if_else(unit_vet == "bcm", "EJ/yr", unit_vet)) %>%
     dplyr::mutate(diff = (value / value_vet) - 1,
-                  check = dplyr::if_else(abs(diff) > range, "Check", "OK"))
+                  check = dplyr::if_else(abs(diff) > range, "ERROR", "OK"))
 
-  check_vet_summary <- check_vet %>% dplyr::filter(check == "Check") %>%
+  check_vet_summary <- check_vet %>%
     dplyr::rename('computed_value' = 'value',
                   'expected_value (vetting)' = 'value_vet',
                   'confidance_range' = 'range')
@@ -1995,18 +2031,24 @@ do_check_vetting = function() {
                    legend.position = "bottom",
                    strip.text = ggplot2::element_text(size = 5),
                    legend.title = ggplot2::element_blank())
+  if (!dir.exists(paste0(here::here(), "/output/"))){
+    dir.create(paste0(here::here(), "/output/"))
+  }
   if (!dir.exists(paste0(here::here(), "/output/figure/"))){
     dir.create(paste0(here::here(), "/output/figure/"))
   }
   ggplot2::ggsave(paste0(here::here(), "/output/figure", "/vetting.tiff"), ggplot2::last_plot(), "tiff", dpi = 200)
 
   # output
-  if(nrow(check_vet_summary) > 0){
-    res = list(message = 'Vetting variables: ERROR',
-               summary = as.data.frame(check_vet_summary))
-  } else {
+  if (nrow(check_vet_summary[check_vet_summary$check == 'ERROR',]) == 0) {
     res = list(message = 'Vetting variables: OK',
                summary = check_vet_summary)
+  } else if (nrow(check_vet_summary[is.na(check_vet_summary$check),]) > 0) {
+    res = list(message = 'Vetting variables: Vetting only performed on some variables',
+               summary = check_vet_summary)
+  } else {
+    res = list(message = 'Vetting variables: ERROR',
+               summary = as.data.frame(check_vet_summary))
   }
   return(res)
 

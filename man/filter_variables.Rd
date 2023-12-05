@@ -4,10 +4,12 @@
 \alias{filter_variables}
 \title{filter_variables}
 \usage{
-filter_variables(data)
+filter_variables(data, variable)
 }
 \arguments{
 \item{data:}{dataframe to be filtered}
+
+\item{variable:}{variable that requires this data}
 }
 \value{
 filtered dataframe
