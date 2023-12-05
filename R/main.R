@@ -90,9 +90,9 @@ load_project = function(project_path, desired_regions = 'All') {
       }
     }
   }
-  prj <<- prj
-
   Scenarios <<- rgcam::listScenarios(prj)
+
+  prj <<- prj
 }
 
 
@@ -119,8 +119,7 @@ create_project = function(db_path, db_name, prj_name, scenarios,
   # check if the project already exists
   file_name = paste0(db_path, "/", db_name, '_', prj_name)
   if (file.exists(file_name)) {
-    print('Loading project...')
-    prj <<- rgcam::loadProject(file_name)
+    load_project(file_name, desired_regions)
 
   } else {
     print('Creating project...')
@@ -231,13 +230,14 @@ create_project = function(db_path, db_name, prj_name, scenarios,
       prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
     }
 
-    prj <<- prj
-
     # save the project
     rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
-  }
 
-  Scenarios <<- rgcam::listScenarios(prj)
+
+    Scenarios <<- rgcam::listScenarios(prj)
+
+    prj <<- prj
+  }
 }
 
 
@@ -401,14 +401,14 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
     check_reg = setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
-      stop(paste0('ERROR: You specified the region ',check_reg, ' which is not available for reporting.'))
+      stop(paste0('ERROR: You specified the region ',check_reg, ' which is not available for reporting.\n'))
     }
   }
   # check that the desired_continents are available
   if (!(length(desired_continents) == 1 && desired_continents == 'All')) {
     check_cont = setdiff(desired_continents, available_continents(print = FALSE))
     if (length(check_cont) > 0) {
-      stop(paste0("ERROR: You specified the continent/regions' group ",check_cont, ' which is not available for reporting.'))
+      stop(paste0("ERROR: You specified the continent/regions' group ",check_cont, ' which is not available for reporting.\n'))
     }
     desired_regions = reg_cont %>%
       dplyr::filter(continent %in% desired_continents) %>%
@@ -416,9 +416,31 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   }
   # check that the desired_variables are available
   if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    original_desired_variables = desired_variables
+
+    # consider the * symbol
+    contains_star = grepl('\\*', desired_variables)
+    if (sum(contains_star) > 0) {
+      contains_star = desired_variables[contains_star]
+      avail_variables = available_variables(F)
+
+      for (elem in contains_star) {
+        pattern = sub("\\*.*", "", elem)
+        desired_variables = c(desired_variables, start_with_pattern(avail_variables,pattern))
+      }
+
+      # remove elements containing '*'
+      contains_star = grepl('\\*', desired_variables)
+      desired_variables = desired_variables[-contains_star]
+    }
+
+    # check the user input
     check_var = setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
-      stop(paste0("ERROR: You specified the variable ",check_var, ' which is not available for reporting.'))
+      stop(paste0("ERROR: You specified the variable ",check_var, ' which is not available for reporting.\n'))
+    }
+    if (length(desired_variables) == 0) {
+      stop(paste0("ERROR: You specified the variable ",original_desired_variables, ' which is not available for reporting.\n'))
     }
   }
 
@@ -496,6 +518,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   # for all desired variables, load the corresponding data
   loaded_internal_variables <<- c()
   desired_regions <<- desired_regions
+  desired_variables <<- desired_variables
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
       load_variable(variables[i,])
@@ -547,8 +570,9 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
       print(e$message)
     }
     vetting_summary <<- vetting_summary
-    cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details')
-    cat('You can check the vetting figure in output/figure/vetting.tiff')
+    cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details\n')
+    cat('You can check the vetting figure in output/figure/vetting.tiff\n')
+    cat('==============================================================\n')
   }
 
   # remove internal variables from the environment
