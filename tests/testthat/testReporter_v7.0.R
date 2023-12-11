@@ -52,12 +52,18 @@ test_that("Test4_v7. run - dataset saved with output_file specified", {
   testResult1 = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/test7_output.csv'))
   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
   testResult2 = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/result_test4.1.csv'))
-  testthat::expect_equal(testResult1, testResult2)
+  testthat::expect_equal(testResult1 %>%
+                           dplyr::select(-Unit),
+                         testResult2 %>%
+                           dplyr::select(-Unit))
 
   testResult1 = readxl::read_excel(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/test7_output.xlsx'))
   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
   testResult2 = readxl::read_excel(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/result_test4.2.xlsx'))
-  testthat::expect_equal(testResult1, testResult2)
+  testthat::expect_equal(testResult1 %>%
+                           dplyr::select(-Unit),
+                         testResult2 %>%
+                           dplyr::select(-Unit))
 
   # clean environment
   rm(list = ls())

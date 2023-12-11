@@ -46,7 +46,7 @@ RUN R -e "remotes::install_github('JGCRI/rpackageutils')"
 
 # clone repo
 RUN apt-get install -y git
-RUN git clone https://github.com/bc3LC/gcamreport.git /root/gcamreport
+RUN git clone -b gcam-v7.0 https://github.com/bc3LC/gcamreport.git /root/gcamreport
 
 # shiny dependencies
 RUN apt-get --allow-releaseinfo-change update
@@ -60,7 +60,8 @@ RUN apt-get install -y \
     xdg-utils \
     chromium-bsu
 
-RUN xdg-settings set default-web-browser chromium.desktop
+RUN ln -sf /usr/bin/chromium-bsu /usr/bin/x-www-browser && \
+    ln -sf /usr/bin/chromium-bsu /usr/bin/gnome-www-browser
 RUN echo "local(options(shiny.port = 3838, shiny.host = '0.0.0.0'))" > /usr/lib/R/etc/Rprofile.site
 
 # working directory
@@ -83,4 +84,3 @@ USER app
 EXPOSE 3838
 
 CMD ["R"]
-
