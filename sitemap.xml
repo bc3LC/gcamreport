@@ -31,6 +31,9 @@
     <loc>https://bc3lc.github.io/gcamreport/news/index.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/CO2_equivalent.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/CO2_market.html</loc>
   </url>
   <url>
@@ -64,6 +67,15 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_continents.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_variables.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/bcm_to_EJ.html</loc>
   </url>
   <url>
@@ -92,6 +104,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map.html</loc>
@@ -190,7 +205,13 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/fillScaleTech.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/fill_queries.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_data_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_loading_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_variables.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map.html</loc>
@@ -238,6 +259,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_ets.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc>
   </url>
   <url>
@@ -248,6 +272,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_global_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_sequestration.html</loc>
@@ -331,7 +358,7 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_ghg_sector.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue_all.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue_sector.html</loc>
@@ -427,6 +454,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/load_project.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/load_query.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/load_variable.html</loc>
   </url>
   <url>
@@ -475,6 +505,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/standard_tech_group.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/state_names.html</loc>
   </url>
   <url>
@@ -491,6 +524,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/update_template.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/update_user_choices_plot.html</loc>
