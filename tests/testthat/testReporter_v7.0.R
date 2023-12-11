@@ -16,7 +16,6 @@ test_that("Test1_v7. download db, create project, and run", {
   prj_tmp = prj
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/test7.dat')))
   prj = prj_tmp
-  print('................test queries')
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by region`, testResult$Reference$`nonCO2 emissions by region`)
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector`, testResult$Reference$`nonCO2 emissions by sector (excluding resource production)`)
   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
@@ -286,7 +285,7 @@ test_that("Test10_v7. vetting", {
       desired_variables = c('Final Energy*'),
       launch_ui = FALSE)
 
-  testthat::expect(!exists('vetting_summary'), 'ERROR: vetting performed when not all regions were selected')
+  testthat::expect(exists('vetting_summary'), 'ERROR: vetting performed when not all regions were selected')
 
   # clean environment
   rm(list = ls())

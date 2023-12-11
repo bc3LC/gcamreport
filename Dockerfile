@@ -58,7 +58,7 @@ RUN apt-get install -y \
     libssl-dev \
     libssh2-1-dev \
     xdg-utils \
-    chromium
+    chromium-bsu
 
 RUN xdg-settings set default-web-browser chromium.desktop
 RUN echo "local(options(shiny.port = 3838, shiny.host = '0.0.0.0'))" > /usr/lib/R/etc/Rprofile.site
