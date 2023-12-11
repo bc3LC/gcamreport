@@ -3,12 +3,12 @@ name: docs
 on:
   push:
     branches:
-      - gcam-v6.0
+      - gcam-v7.0
 
 jobs:
   pkgdown:
     runs-on: ubuntu-latest
-    
+
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       GITHUB_PAT: ${{ secrets.GH_GCAMREPORT_TOKEN}}
@@ -27,7 +27,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libssl-dev libxml2-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev libmagick++-dev libavfilter-dev
-      
+
       - name: Restart R
         run: |
           R --vanilla --quiet

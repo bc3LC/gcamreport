@@ -1934,8 +1934,12 @@ do_bind_results = function() {
     #  dplyr::rename(Model = ?..Model) %>%
     dplyr::rename(Scenario = scenario) %>%
     dplyr::select(all_of(reporting_columns_fin)) %>%
-    dplyr::filter(!is.na(Region)) %>% # Drop variables we don't report
-    dplyr::filter(Variable %in% desired_variables)
+    dplyr::filter(!is.na(Region)) # Drop variables we don't report
+
+  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    final_data <<- final_data %>%
+      dplyr::filter(Variable %in% desired_variables)
+  }
 }
 
 #########################################################################
