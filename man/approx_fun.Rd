@@ -6,6 +6,13 @@
 \usage{
 approx_fun(year, value, rule = 1)
 }
+\arguments{
+\item{year:}{year to consider}
+
+\item{value:}{values to extrapolate from}
+
+\item{rule:}{number of points to extrapolate}
+}
 \description{
 Interpolation function
 }

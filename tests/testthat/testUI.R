@@ -1,7 +1,7 @@
 library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
 
 test_that("Test1. test tree functions", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
+  generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
   # load data
   data = final_data
   # define the dataset for launching the ui

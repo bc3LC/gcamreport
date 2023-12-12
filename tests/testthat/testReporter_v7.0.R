@@ -38,7 +38,7 @@ test_that("Test2_v7. load project", {
 })
 
 test_that("Test3_v7. run - dataset created", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
+  generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
   testthat::expect(!is.null(final_data) & dplyr::n_distinct(final_data) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 
   # clean environment
@@ -46,7 +46,7 @@ test_that("Test3_v7. run - dataset created", {
 })
 
 test_that("Test4_v7. run - dataset saved with output_file specified", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE,
+  generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE,
       output_file = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/test7_output'))
 
   testResult1 = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/test7_output.csv'))
@@ -70,7 +70,7 @@ test_that("Test4_v7. run - dataset saved with output_file specified", {
 })
 
 test_that("Test5_v7. run - dataset saved with default output_file", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
+  generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
 
   testResult = read.csv(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7_standardized.csv'))
   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
@@ -130,7 +130,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   testthat::expect_equal(test_variables, testResult_variables)
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -147,7 +147,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
                                                       "Japan","USA","World"))
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -159,7 +159,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   testthat::expect_equal(unique(final_data$Variable), testResult)
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -171,7 +171,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   testthat::expect_equal(unique(final_data$Variable), testResult)
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -186,7 +186,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
 
 test_that("Test8_v7. error messages", {
 
-  expect_error(run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
                    db_name = 'database_basexdb',
                    prj_name = 'gcamv7.0_noCreated.dat',
                    scenarios = 'Reference',
@@ -194,7 +194,7 @@ test_that("Test8_v7. error messages", {
                    launch_ui = FALSE),
                "ERROR: You specified the variable dummy variable which is not available for reporting.")
 
-  expect_error(run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
                    db_name = 'database_basexdb',
                    prj_name = 'gcamv7.0_noCreated.dat',
                    scenarios = 'Reference',
@@ -202,7 +202,7 @@ test_that("Test8_v7. error messages", {
                    launch_ui = FALSE),
                "ERROR: You specified the variable Final|Energy* which is not available for reporting.")
 
-  expect_error(run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
                    db_name = 'database_basexdb',
                    prj_name = 'gcamv7.0_noCreated.dat',
                    scenarios = 'Reference',
@@ -210,7 +210,7 @@ test_that("Test8_v7. error messages", {
                    launch_ui = FALSE),
                "ERROR: You specified the region dummy region which is not available for reporting.")
 
-  expect_error(run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
                    db_name = 'database_basexdb',
                    prj_name = 'gcamv7.0_p1.dat',
                    scenarios = 'Reference',
@@ -218,13 +218,13 @@ test_that("Test8_v7. error messages", {
                    launch_ui = FALSE),
                "ERROR: You specified the continent/regions' group dummy continent which is not available for reporting.")
 
-  expect_error(run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
                    prj_name = 'gcamv7.0_p1.dat',
                    scenarios = 'Reference',
                    launch_ui = FALSE),
                "If db_path, prj_name, scenarios are specified, db_name must also be specified.")
 
-  expect_error(run(project_path = 'dummy name',
+  expect_error(generate_report(project_path = 'dummy name',
                    db_path = 'dummy name',
                    launch_ui = FALSE),
                "ERROR: Specify either a project or a database to extract the data from. Not both.")
@@ -234,7 +234,7 @@ test_that("Test8_v7. error messages", {
 test_that("Test9_v7. CO2 ETS", {
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -256,7 +256,7 @@ test_that("Test9_v7. CO2 ETS", {
 
 test_that("Test10_v7. vetting", {
 
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -269,7 +269,7 @@ test_that("Test10_v7. vetting", {
   testthat::expect_equal(vetting_summary, testResult)
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',
@@ -282,7 +282,7 @@ test_that("Test10_v7. vetting", {
   testthat::expect_equal(vetting_summary, testResult)
 
   rm(list = ls())
-  run(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
+  generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
       db_name = 'database_basexdb_ref',
       prj_name = 'gcamv7.0_test.dat',
       scenarios = 'Reference',

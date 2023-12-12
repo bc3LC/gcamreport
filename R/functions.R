@@ -86,6 +86,7 @@ filter_variables = function(data, variable) {
 #' conv_ghg_co2e
 #'
 #' Covert GHG to CO2e
+#' @param data: dataset
 #' @export
 conv_ghg_co2e <- function (data) {
 
@@ -104,40 +105,13 @@ conv_ghg_co2e <- function (data) {
     return()
 }
 
-#' conv_EJ_TWh
-#'
-#' Covert capacity to generation
-#' @export
-conv_EJ_TWh <- function (data, EJ){
-  data %>%
-    dplyr::mutate(TWh = EJ / EJ_to_GWh / 1000)
-}
-
-#' conv_TWh_EJ
-#'
-#' Covert TWh to EJ
-#' @export
-conv_TWh_EJ <- function (data, TWh){
-  data %>%
-    dplyr::mutate(EJ = TWh * EJ_to_GWh * 1000)
-}
-
-#' conv_GW_EJ
-#'
-#' Covert GW to EJ
-#' @export
-conv_GW_EJ <- function (data, cf, GW){
-  # Elec related conversions
-  hr_per_yr <- 8760
-  EJ_to_GWh <- 0.0000036
-
-  data %>%
-    dplyr::mutate(EJ = GW * (cf * hr_per_yr * EJ_to_GWh))
-}
 
 #' conv_EJ_GW
 #'
 #' Covert EJ to GW
+#' @param data: dataset
+#' @param cf: conversion factor
+#' @param EJ: EJ amount
 #' @export
 conv_EJ_GW <- function (data, cf, EJ){
   # Elec related conversions
@@ -151,6 +125,9 @@ conv_EJ_GW <- function (data, cf, EJ){
 #' approx_fun
 #'
 #' Interpolation function
+#' @param year: year to consider
+#' @param value: values to extrapolate from
+#' @param rule: number of points to extrapolate
 #' @export
 approx_fun <- function(year, value, rule = 1) {
   if(rule == 1 | rule == 2) {
@@ -162,51 +139,6 @@ approx_fun <- function(year, value, rule = 1) {
   }
 }
 
-#' firstup
-#'
-#' Capitalizes the first letter of every variable
-#' @export
-firstup <- function(x) {
-  x <- tolower(x)
-  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
-  x
-}
-
-#' gather_map
-#'
-#' Formats all maps into a long table
-#' @export
-gather_map <- function(df){
-  untouched_cols <- names(df) %>% .[!grepl("var", names(df))]
-  df %>%
-    tidyr::gather(identifier, var, -untouched_cols) %>%
-    dplyr::select(-identifier) %>%
-    dplyr::filter(!is.na(var), var != "") %>%
-    return()
-}
-
-#' standard_tech_group
-#'
-#' technologies categorization
-#' @export
-standard_tech_group <- function(data, technology) {
-  data %>%
-    dplyr::mutate(tech = technology,
-                  tech = replace(tech, grepl("wind", technology), "wind"),
-                  tech = replace(tech, grepl("biomass", technology), "biomass"),
-                  tech = replace(tech, grepl("PV", technology), "solar"),
-                  tech = replace(tech, grepl("pv", technology), "solar"),
-                  tech = replace(tech, grepl("CSP", technology), "solar"),
-                  tech = replace(tech, grepl("geothermal", technology), "geothermal"),
-                  tech = replace(tech, grepl("hydro", technology), "hydro"),
-                  tech = replace(tech, grepl("Gen", technology), "nuclear"),
-                  tech = replace(tech, grepl("coal", technology), "coal"),
-                  tech = replace(tech, grepl("gas", technology), "gas"),
-                  tech = replace(tech, grepl("refined liquids", technology), "oil"),
-                  tech = replace(tech, grepl("oil", technology), "oil"),
-                  tech = replace(tech, grepl("CCS", technology), paste(tech[grepl("CCS", technology)], "ccs", sep = " w/ "))) %>%
-    dplyr::mutate(tech = factor(tech, levels = tech.list))
-}
 
 #########################################################################
 #                         LOAD QUERIES FUNCTIONS                        #

@@ -6,6 +6,13 @@
 \usage{
 conv_EJ_GW(data, cf, EJ)
 }
+\arguments{
+\item{data:}{dataset}
+
+\item{cf:}{conversion factor}
+
+\item{EJ:}{EJ amount}
+}
 \description{
 Covert EJ to GW
 }
