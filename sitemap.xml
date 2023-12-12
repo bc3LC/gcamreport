@@ -109,6 +109,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map.html</loc>
   </url>
   <url>
@@ -140,15 +143,6 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/conv_EJ_GW.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/conv_EJ_TWh.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/conv_GW_EJ.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/conv_TWh_EJ.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/conv_ghg_co2e.html</loc>
@@ -217,19 +211,16 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/firstup.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/fuel.color.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/fuel.list.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/gather_map.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc>
@@ -448,6 +439,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/land_use_map.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html</loc>
   </url>
   <url>
@@ -490,9 +484,6 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/reset_first_load.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/run.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map.html</loc>
   </url>
   <url>
@@ -500,9 +491,6 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/sector.list.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/standard_tech_group.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc>

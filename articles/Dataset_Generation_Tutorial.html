@@ -107,7 +107,7 @@
 
     
     
-<p>To see all possibilities of the <code><a href="../reference/run.html">run()</a></code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html">here</a>.</p>
+<p>To see all possibilities of the <code>run()</code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html">here</a>.</p>
 <p><span style="color:white">newline</span></p>
 <div class="section level2">
 <h2 id="example1">Example 1: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example1"></a>
@@ -143,7 +143,7 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">run</span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: project generation requires approximately 30
 minutes.</p>
 <p>Notice that the dataset will automatically be saved in
@@ -189,7 +189,7 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">run</span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
 <code>.csv</code> and <code>.xlsx</code> at
 <code>/path/to/database/awesomeProj_iamc_report.csv</code> and
@@ -218,16 +218,16 @@ parameter</li>
 </ol>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in CSV and XLSX format</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span>
+<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span>
 <span></span>
 <span><span class="co">## -- save the dataset only in CSV format</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'CSV'</span><span class="op">)</span></span>
+<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'CSV'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- save the dataset only in XLSX format</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'XLSX'</span><span class="op">)</span></span>
+<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'XLSX'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- do not save the dataset</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
 parameters that you consider in the <code>run</code> function. Specify
@@ -238,7 +238,7 @@ explanation.</li>
 </ol>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="va">...</span>, file_name <span class="op">=</span> <span class="st">'/desired/directory/awesomeOutput'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, file_name <span class="op">=</span> <span class="st">'/desired/directory/awesomeOutput'</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -281,10 +281,10 @@ called <code>amazingData</code> with your dataset
 </ul>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span><span class="fu">run</span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># option 2: partial path</span></span>
-<span><span class="fu"><a href="../reference/run.html">run</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">run</span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level4">
