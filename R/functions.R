@@ -519,7 +519,7 @@ get_ghg_sector = function() {
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::rename(ghg = variable) %>%
-    dplyr::left_join(filter_variables(kyoto_sector_map, 'ghg_sector_clean'), relationship = "many-to-many") %>%
+    dplyr::left_join(filter_variables(kyoto_sector_map, 'ghg_sector_clean')) %>%
     dplyr::select(all_of(long_columns)) %>%
     dplyr::bind_rows(LU_carbon_clean %>%
                        dplyr::mutate(var = "Emissions|Kyoto Gases"),
