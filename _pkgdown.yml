@@ -23,6 +23,9 @@ navbar:
          href: articles/Dataset_Generation_Tutorial.html
       -  text: Interactive UI Tutorial
          href: articles/Interactive_UI_Tutorial.html
+      -  text: -----
+      -  text: Documentation and tutorials for gcamreport v6.0*
+         href: articles/gcamreport_v6-0.html
     - text: "Version Guide"
       icon: fa-solid fa-seedling
       href: articles/Version_Guide.html

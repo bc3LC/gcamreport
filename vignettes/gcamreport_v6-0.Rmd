@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Find below all tutorials compatible with `gcamreport v6.0` versions (i.e. `v6.0.0`, `v6.0.1`, and `v6.0.0-gas`):
+Find below all tutorials compatible with `gcamreport v6.0*` releases (i.e. `gcamreport v6.0.0`, `gcamreport v6.0.1`, and `gcamreport v6.0.0-gas`):
 
 
 [README for gcamreport v6.0*](README_v6-0.html)
