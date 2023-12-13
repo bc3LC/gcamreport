@@ -107,7 +107,8 @@
 
     
     
-<p>To see all possibilities of the <code>run()</code> function, look <a href="https://bc3lc.github.io/gcamreport/reference/run.html">here</a>.</p>
+<p>To see all possibilities of the <code><a href="../reference/generate_report.html">generate_report()</a></code>
+function, look <a href="https://bc3lc.github.io/gcamreport/reference/generate_report.html">here</a>.</p>
 <p><span style="color:white">newline</span></p>
 <div class="section level2">
 <h2 id="example1">Example 1: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example1"></a>
@@ -115,8 +116,8 @@
 <p>Assume you have a database called <code>myDb</code> in a folder named
 <code>dbFolder</code> and are willing to generate a standardized dataset
 for several scenarios: <code>scen1</code>, <code>scen2</code>, and
-<code>scen3</code>. With the <code>run</code> function, it will be
-generated and automatically saved in the same folder where
+<code>scen3</code>. With the <code>generate_report</code> function, it
+will be generated and automatically saved in the same folder where
 <code>myDb</code> is.</p>
 <ol style="list-style-type: decimal">
 <li>Load <code>gcamreport</code> library.</li>
@@ -143,13 +144,15 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">run</span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: project generation requires approximately 30
 minutes.</p>
 <p>Notice that the dataset will automatically be saved in
-<code>.csv</code> and <code>.xlsx</code> at
-<code>/path/to/database/awesomeProj_iamc_report.csv</code> and
-<code>/path/to/database/awesomeProj_iamc_report.xlsx</code>.</p>
+<code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
+<code>/path/to/database/awesomeProj_standardized.RData</code>,
+<code>/path/to/database/awesomeProj_standardized.csv</code>, and
+<code>/path/to/database/awesomeProj_standardized.xlsx</code>. TODO
+specify reg, continent, variables</p>
 <p>This procedure will generate a project file at
 <code>/path/to/database/dbname_prjname.dat</code> with all the necessary
 queries that you can use as indicated in <a href="#example2">Example
@@ -163,11 +166,11 @@ status.</p>
 </h2>
 <p>Assume you have a project called <code>myProj.dat</code> and are
 willing to generate a standardized dataset out of it. With the
-<code>run</code> function, it will be generated and automatically saved
-in the same folder where <code>myProj.dat</code> is. Notice that
-<code>myProj.dat</code> should have all the required queries for the
-standardized dataset generation. If you are not sure you have all of
-them or you need to generate the project, see <a href="#example1">Example1</a>.</p>
+<code>generate_report</code> function, it will be generated and
+automatically saved in the same folder where <code>myProj.dat</code> is.
+Notice that <code>myProj.dat</code> should have all the required queries
+for the standardized dataset generation. If you are not sure you have
+all of them or you need to generate the project, see <a href="#example1">Example1</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Load <code>gcamreport</code> library.</li>
 </ol>
@@ -189,11 +192,12 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">run</span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
-<code>.csv</code> and <code>.xlsx</code> at
-<code>/path/to/database/awesomeProj_iamc_report.csv</code> and
-<code>/path/to/database/awesomeProj_iamc_report.xlsx</code>.</p>
+<code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
+<code>/path/to/project/myProj_standardized.RData</code>,
+<code>/path/to/project/myProj_standardized.csv</code>, and
+<code>/path/to/project/myProj_standardized.xlsx</code>.</p>
 <p>The terminal will output the performed verifications and their final
 status.</p>
 <p><span style="color:white">newline</span></p>
@@ -212,43 +216,139 @@ want to either not save the output, save it in <code>.csv</code>,
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
-parameters that you consider in the <code>run</code> function. Specify
-the output saving options through the <code>save_output</code>
-parameter</li>
+parameters that you consider in the <code>generate_report</code>
+function. Specify the output saving options through the
+<code>save_output</code> parameter</li>
 </ol>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in CSV and XLSX format</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span>
 <span></span>
 <span><span class="co">## -- save the dataset only in CSV format</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'CSV'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'CSV'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- save the dataset only in XLSX format</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'XLSX'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="st">'XLSX'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- do not save the dataset</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
-parameters that you consider in the <code>run</code> function. Specify
-the output directory and output file name through <code>file_name</code>
-parameter. This will save the output in the indicated path as
-<code>.csv</code> and <code>.xlsx</code>. To modify this, see the above
-explanation.</li>
+parameters that you consider in the <code>generate_report</code>
+function. Specify the output directory and output file name through
+<code>file_name</code> parameter. This will save the output in the
+indicated path as <code>.csv</code> and <code>.xlsx</code>. To modify
+this, see the above explanation.</li>
 </ol>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="va">...</span>, file_name <span class="op">=</span> <span class="st">'/desired/directory/awesomeOutput'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, file_name <span class="op">=</span> <span class="st">'/desired/directory/awesomeOutput'</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
-<h2 id="troubleshooting-for-the-run-function">Troubleshooting for the <code>run()</code> function<a class="anchor" aria-label="anchor" href="#troubleshooting-for-the-run-function"></a>
+<h2 id="example-4-specify-the-regions-or-regions-groups">Example 4: specify the regions or regions’ group/s<a class="anchor" aria-label="anchor" href="#example-4-specify-the-regions-or-regions-groups"></a>
+</h2>
+<p>Assume you are in the situation of any of the previous examples but
+want to consider only some regions. You have two options to select them:
+you can directly specify the desired regions to consider or you can
+specify the regions’ group/s to consider. In any case, the desired
+regions will make up <em>World</em>. Then, for example, the World’s
+total crop land will be the sum of the crop land of
+<strong>only</strong> the picked regions.</p>
+<ol style="list-style-type: decimal">
+<li>Load <code>gcamreport</code> library.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Check which are the available regions or regions’ groups. The
+following commands will print a list with all the possibilities.</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/available_regions.html">available_regions</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/available_continents.html">available_continents</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>In case you want to save them in a vector, you can simply assign the
+output. You can also skip the regions’ console printing by setting
+<code>print = FALSE</code>.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">avail_reg</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_regions.html">available_regions</a></span><span class="op">(</span>print <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">avail_cont</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_continents.html">available_continents</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
+parameters that you consider in the <code>generate_report</code>
+function. Specify the regions through the <code>desired_regions</code>
+parameter or regions’ group through the <code>desired_continents</code>
+parameter. Notice that not both can be specified at the same time.</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## -- specify the desired regions</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-15'</span>,<span class="st">'EU-12'</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## -- specify the desired regions' group/s</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, desired_continents <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'ASIA'</span>,<span class="st">'REF'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="example-5-specify-the-variables">Example 5: specify the variables<a class="anchor" aria-label="anchor" href="#example-5-specify-the-variables"></a>
+</h2>
+<p>Assume you are in the situation of any of the previous examples but
+want to consider only variables.</p>
+<ol style="list-style-type: decimal">
+<li>Load <code>gcamreport</code> library.</li>
+</ol>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Check which are the available variables. The following command will
+print a list with all the possibilities.</li>
+</ol>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>In case you want to save them in a vector, you can simply assign the
+output. You can also skip the variables’ console printing by setting
+<code>print = FALSE</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">avail_var</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span>print <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
+parameters that you consider in the <code>generate_report</code>
+function. Specify the variables through the
+<code>desired_variables</code> parameter. You can specify a vector with
+all the desired variables names fully written, or also consier all
+variables that start with the same name. This last feature, allows you
+to easily select all variables within a group, such as
+<em>Emissions</em>, <em>Emissions|CO2</em>, or <em>Agricultural
+Demand</em>
+</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## -- specify the desired variables</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, </span>
+<span>              desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural Demand|Crops|Energy'</span>,</span>
+<span>                                    <span class="st">'Agricultural Demand|Crops|Feed'</span>,</span>
+<span>                                    <span class="st">'Capacity Additions|Electricity|Wind|Onshore'</span>, </span>
+<span>                                    <span class="st">'Emissions|BC|Energy*'</span><span class="op">)</span><span class="op">)</span> <span class="co"># This will select,</span></span>
+<span>                                                             <span class="co"># Emissions|BC|Energy,</span></span>
+<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Industry, </span></span>
+<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Residential and Commercial,</span></span>
+<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Transportation,</span></span>
+<span>                                                             <span class="co"># Emissions|BC|Energy|Supply</span></span></code></pre></div>
+<p>In case you specify only some variables within a group, they will
+make up the total value. As an example, if we select <em>Final
+Energy|Electricity</em> and <em>Final Energy|Gases</em>, then <em>Final
+Energy</em> will be the sum of these two sectors, and will not consider
+<em>Final Energy|Industry</em> or <em>Final Energy|Heat</em>.</p>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="troubleshooting-for-the-generate_report-function">Troubleshooting for the <code>generate_report()</code> function<a class="anchor" aria-label="anchor" href="#troubleshooting-for-the-generate_report-function"></a>
 </h2>
 <div class="section level4">
-<h4 id="a-error-on-runpathtoyourdatamydata-dat">A) Error on <code>run("path/to/your/data/myData.dat")</code><a class="anchor" aria-label="anchor" href="#a-error-on-runpathtoyourdatamydata-dat"></a>
+<h4 id="a-error-on-generate_reportpathtoyourdatamydata-dat">A) Error on
+<code>generate_report("path/to/your/data/myData.dat")</code><a class="anchor" aria-label="anchor" href="#a-error-on-generate_reportpathtoyourdatamydata-dat"></a>
 </h4>
 <p>In your R console, you might see this error:</p>
-<pre><code>&gt; run("path/to/your/data/myData.dat")
+<pre><code>&gt; generate_report("path/to/your/data/myData.dat")
 [1] "Loading project..."
 [1] "Loading data, performing checks, and saving output..."
 [1] "ag_demand_clean"
@@ -270,8 +370,8 @@ the <a href="#with-docker">Docker installation</a>:</p>
 <li><p>make sure that your data is inside the <code>gcamreport</code>
 folder.</p></li>
 <li><p>make sure that you type correctly the path to your
-<code>gcamreport</code> folder when running the docker image (5th step
-in the <a href="#with-docker">Docker section</a>)</p></li>
+<code>gcamreport</code> folder when generate_reportning the docker image
+(5th step in the <a href="#with-docker">Docker section</a>)</p></li>
 <li><p>make sure that you are pointing correctly to your data. For
 example, if in the <code>gcamreport</code> folder you have a folder
 called <code>amazingData</code> with your dataset
@@ -279,12 +379,12 @@ called <code>amazingData</code> with your dataset
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># option 2: partial path</span></span>
-<span><span class="fu">run</span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level4">

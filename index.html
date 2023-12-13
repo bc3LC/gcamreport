@@ -96,7 +96,7 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="gcamreport">gcamreport<a class="anchor" aria-label="anchor" href="#gcamreport"></a>
 </h1></div>
-<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v6.0" alt="docs"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v6.0" alt="test_coverage"></a> <a href="https://codecov.io/gh/bc3LC/gcamreport" class="external-link"><img src="https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG" alt="codecov"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v6.0" alt="docker"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v6.0" alt="build"></a><a href="https://doi.org/10.5281/zenodo.8177345" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8177345.svg" alt="DOI"></a></p>
+<p><a href="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v7.0" alt="docs"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v7.0" alt="test_coverage"></a> <a href="https://codecov.io/gh/bc3LC/gcamreport" class="external-link"><img src="https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG" alt="codecov"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v7.0" alt="docker"></a> <a href="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml" class="external-link"><img src="https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v7.0" alt="build"></a><a href="https://doi.org/10.5281/zenodo.8177345" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8177345.svg" alt="DOI"></a></p>
 <!-- ------------------------>
 <!-- ------------------------>
 <div class="section level2">
@@ -196,12 +196,12 @@
 <li><p>Open Docker Desktop (double-click the icon on your computer) and leave it running in the background.</p></li>
 <li><p>Inside a terminal (bash or cmd) pull the docker image:</p></li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:v3</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:gcam-v7.0-v1</span></code></pre></div>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: this step requires 13.5GB of free space in your computer.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Run the Docker container using your full path to the <code>gcamreport</code> folder:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:v3</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:gcam-v7.0-v1</span></code></pre></div>
 <p>This should prompt an R terminal in your console.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Install the <code>gcamreport</code> package in the new R console:</li>
@@ -226,11 +226,11 @@
 <p><a href="#contents">Back to Contents</a></p>
 <p>The <code>gcamreport</code> package consists of a set of functions divided into two different blocks:</p>
 <ul>
-<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>. Main function: <code>run()</code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code>?run</code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
+<li><p>Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of <a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>. Main function: <code><a href="reference/generate_report.html">generate_report()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code><a href="reference/generate_report.html">?generate_report</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 <li><p>Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>. For more information look at this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html">tutorial</a> or type <code><a href="reference/launch_gcamreport_ui.html">?launch_gcamreport_ui</a></code> in your R console. If you obtain some warning or error messages, it might be useful to look at the <a href="#bugs">Warning and Error Messages</a> section.</p></li>
 </ul>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: if you followed the <a href="#with-Docker">Docker installation</a>, to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser.</p>
-<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"></p>
 <p>In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.</p>
 <p><br></p>
 <!-- ------------------------>
@@ -246,7 +246,7 @@
 <p>Some typical and already-known errors that can be easily solved! <span class="emoji" data-emoji="bulb">💡</span></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Error on “run(”path/to/your/data/myData.dat”)”</p>
 <p>In your R console, you might see this error:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&gt;</span> <span class="fu">run</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&gt;</span> <span class="fu">generate_report</span>(<span class="st">"path/to/your/data/myData.dat"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"Loading project..."</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"Loading data, performing checks, and saving output..."</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="st">"ag_demand_clean"</span></span>
@@ -267,13 +267,13 @@
 </ul>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span>  <span class="co"># option 1: full path</span></span>
-<span>  <span class="fu">run</span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span>  </span>
 <span>  <span class="co"># option 2: partial path</span></span>
-<span>  <span class="fu">run</span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"amazingData/myData.dat"</span><span class="op">)</span></span></code></pre></div>
 </details><p><br></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Wired message when launching the UI when using the Docker installation.</p>
-<p>After using the functions <code>run()</code> or <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code> to launch the UI, you might get this message:</p>
+<p>After using the functions <code><a href="reference/generate_report.html">generate_report()</a></code> or <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code> to launch the UI, you might get this message:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  Listening on http<span class="sc">:</span><span class="er">//</span><span class="dv">0</span>.<span class="dv">0</span>.<span class="fl">0.0</span><span class="sc">:</span><span class="dv">3838</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> www<span class="sc">-</span>browser<span class="sc">:</span> not found</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span>usr<span class="sc">/</span>bin<span class="sc">/</span>xdg<span class="sc">-</span>open<span class="sc">:</span> <span class="dv">882</span><span class="sc">:</span> links2<span class="sc">:</span> not found</span>
@@ -284,14 +284,14 @@
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  xdg<span class="sc">-</span>open<span class="sc">:</span> no method available <span class="cf">for</span> opening <span class="st">'http://127.0.0.1:3838'</span> </span></code></pre></div>
 <details><summary><strong>Possible solution</strong>
 </summary><p>This is not an error! You simply need to either go to your Docker Desktop program and click the last started port</p>
-<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"></p>
 <p>or open this url <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in your favourite browser.</p>
 </details><p><br></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Error when using the UI through Docker installation.</p>
 <p>When oppening your <em>localhost</em>, you might see this error:</p>
-<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"></p>
 <details><summary><strong>Possible solution</strong>
-</summary><p>Your UI is not running. Try to either use the <code>run()</code> function or the <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>.</p>
+</summary><p>Your UI is not running. Try to either use the <code><a href="reference/generate_report.html">generate_report()</a></code> function or the <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>.</p>
 </details><p><br></p>
 <p><span class="emoji" data-emoji="computer">💻</span> Error related to <em>system</em> when using the Docker installation.</p>
 <p>Once the R console is opened, you might see this message after introducing any command:</p>

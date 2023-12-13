@@ -108,7 +108,7 @@
     
     
 <p>In this tutorial we will 1) generate a dataset from a provided
-GCAM6.0 database and run the associated user interface and 2) generate a
+GCAM7.0 database and run the associated user interface and 2) generate a
 dataset from a provided project and run the corresponding user
 interface. To know more about the <code>gcamreport</code> package
 possibilities, look at these tutorials: <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">dataset
@@ -122,8 +122,8 @@ provided database<a class="anchor" aria-label="anchor" href="#example-1-step-by-
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
 guide</a> either with R Studio or Docker</p></li>
-<li><p>Download the example <a href="https://zenodo.org/record/8162970" class="external-link">GCAM6.0 database</a>, store it
-inside <code>gcamreport/examples</code>, and unpack it.</p></li>
+<li><p>Download the example <a href="https://zenodo.org/records/10258919" class="external-link">GCAM7.0 database</a>, store
+it inside <code>gcamreport/examples</code>, and unpack it.</p></li>
 <li><p>Generate the standardized dataset:</p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -138,10 +138,14 @@ inside <code>gcamreport/examples</code>, and unpack it.</p></li>
 <span><span class="co">## -- choose a project name</span></span>
 <span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"example1.dat"</span></span>
 <span></span>
-<span><span class="co">## -- generate the dataset until 2025, save the output in .csv and .xlsx format, and lunch the user interface</span></span>
-<span><span class="fu">run</span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, final_year <span class="op">=</span> <span class="fl">2025</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><strong>Note</strong>: project generation requires approximately 30
-minutes.</p>
+<span><span class="co">## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the </span></span>
+<span><span class="co">## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, </span></span>
+<span><span class="co">## -- and lunch the user interface</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, </span>
+<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>, </span>
+<span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
+<span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Once the project has been generated and the standardized dataset
 created, the user interface will prompt. If you are using R Studio, it
@@ -150,18 +154,24 @@ will automatically open. For a better experience, click the
 type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser or go to Docker
 Desktop and click the last started port.</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"></p>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Check the generated dataset: look at <code>examples</code> folder
-and you should see a file called <code>example1_iamc_report.csv</code>
-and a file called <code>example1_iamc_report.xlsx</code> containing the
+and you should see a file called <code>example1_standardized.csv</code>
+and a file called <code>example1_standardized.xlsx</code> containing the
 standardized dataset.</p></li>
 <li><p>Notice that in the <code>examples</code> folder a file called
 <code>database_basexdb_ref_example1.dat</code> has appeared. It is the
 generated project file from the provided database. In case you want to
 generate the standardized dataset again or to open the user interface,
 you can use directly this file and avoid creating the project again. If
-you whish to proceed as mentioned, you can follow <a href="#example2">Example 2</a>.</p></li>
+you wish to proceed as mentioned, you can follow <a href="#example2">Example 2</a>.</p></li>
+<li><p>Notice that in the <code>examples</code> folder a file called
+<code>example1_standardized.RData</code> has appeared. It is the
+generated reporting file from the provided database. In case you want to
+launch the user interface in the future, you can use directly this file
+and avoid creating or loading the project again. If you wish to proceed
+as mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
 </ol>
 <p><span style="color:white">newline</span></p>
 </div>
@@ -183,8 +193,13 @@ guide</a> either with R Studio or Docker</p></li>
 <span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
 <span><span class="va">projectpath</span> <span class="op">&lt;-</span> <span class="st">"examples/example2.dat"</span></span>
 <span></span>
-<span><span class="co">## -- generate the dataset until 2025, save the output in .csv and .xlsx format, and lunch the user interface</span></span>
-<span><span class="fu">run</span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">projectpath</span>, final_year <span class="op">=</span> <span class="fl">2025</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co">## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the </span></span>
+<span><span class="co">## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, </span></span>
+<span><span class="co">## -- and lunch the user interface</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">projectpath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>,</span>
+<span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
+<span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Once the project has been generated and the standardized dataset
 created, the user interface will prompt. If you are using R Studio, it
@@ -193,13 +208,64 @@ will automatically open. For a better experience, click the
 type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser or go to Docker
 Desktop and click the last started port.</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"></p>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"></p>
 <ol start="5" style="list-style-type: decimal">
-<li>Check the generated dataset: look at <code>examples</code> folder
-and you should see a file called <code>example2_iamc_report.csv</code>
-and a file called <code>example2_iamc_report.xlsx</code> containing the
-standardized dataset.</li>
+<li><p>Check the generated dataset: look at <code>examples</code> folder
+and you should see a file called <code>example2_standardized.csv</code>
+and a file called <code>example2_standardized.xlsx</code> containing the
+standardized dataset.</p></li>
+<li><p>Notice that in the <code>examples</code> folder a file called
+<code>example2_standardized.RData</code> has appeared. It is the
+generated reporting file from the provided database. In case you want to
+launch the user interface in the future, you can use directly this file
+and avoid creating or loading the project again. If you wish to proceed
+as mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
 </ol>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="example3">Example 3: step-by-step user interface launching from a provided
+standardized dataset<a class="anchor" aria-label="anchor" href="#example3"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
+guide</a> either with R Studio or Docker</p></li>
+<li><p>In this example we will use an example dataset stored in
+<code>examples</code> called <code>example3.RData</code></p></li>
+<li><p>Launch the user interface for the standardized dataset:</p></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
+<span><span class="va">datapath</span> <span class="op">&lt;-</span> <span class="st">"examples/example3.RData"</span></span>
+<span></span>
+<span><span class="co">## -- launch the user interface</span></span>
+<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data_path <span class="op">=</span> <span class="va">datapath</span><span class="op">)</span></span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Once the project has been generated and the standardized dataset
+created, the user interface will prompt. If you are using R Studio, it
+will automatically open. For a better experience, click the
+<code>open in browser</code> button. If you are using Docker, either
+type <a href="http://localhost:4000" class="external-link uri">http://localhost:4000</a> in the browser or go to Docker
+Desktop and click the last started port.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"></p>
+<ol start="5" style="list-style-type: decimal">
+<li>In case you just run <a href="#example1">Example 1</a> or <a href="#example2">Example 2</a>, you should have in the environemnt a
+variable called <code>report</code>. You can use it too to launch the
+user interface:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
+<span><span class="va">dataname</span> <span class="op">&lt;-</span> <span class="st">"report"</span></span>
+<span></span>
+<span><span class="co">## -- launch the user interface</span></span>
+<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">dataname</span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
