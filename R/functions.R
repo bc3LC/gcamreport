@@ -1854,7 +1854,7 @@ do_bind_results = function() {
   GCAM_DATA_wGLOBAL <- GCAM_DATA_wGLOBAL %>% dplyr::filter(year <= final_db_year)
 
 
-  final_data <<-
+  report <<-
     template %>%
     dplyr::inner_join(GCAM_DATA_wGLOBAL %>%
                         na.omit %>%
@@ -1869,7 +1869,7 @@ do_bind_results = function() {
     dplyr::filter(!is.na(Region)) # Drop variables we don't report
 
   if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
-    final_data <<- final_data %>%
+    report <<- report %>%
       dplyr::filter(Variable %in% desired_variables)
   }
 }
@@ -1922,7 +1922,7 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  final_data_long_check <- final_data %>%
+  final_data_long_check <- report %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
     dplyr::rename(region = Region,
                   variable = Variable) %>%
@@ -2002,7 +2002,7 @@ do_check_vetting = function() {
 #' @return Updated template as .rda and as csv in the inst/extdata folder
 update_template = function() {
   data = merge(template,
-               data.frame(Variable = unique(final_data$Variable)) %>%
+               data.frame(Variable = unique(report$Variable)) %>%
                  dplyr::mutate('as_output' = TRUE),
                by = 'Variable', all = TRUE) %>%
     dplyr::select(colnames(template), as_output) %>%

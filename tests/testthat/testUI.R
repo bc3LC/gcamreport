@@ -3,7 +3,7 @@ library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
 test_that("Test1. test tree functions", {
   generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
   # load data
-  data = final_data
+  data = report
   # define the dataset for launching the ui
   sdata <<- data %>%
     tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)

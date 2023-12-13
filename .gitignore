@@ -48,3 +48,4 @@ docs/*
 prova*
  
 inst/doc
+*.tiff

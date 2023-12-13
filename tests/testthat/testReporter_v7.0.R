@@ -39,7 +39,7 @@ test_that("Test2_v7. load project", {
 
 test_that("Test3_v7. run - dataset created", {
   generate_report(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
-  testthat::expect(!is.null(final_data) & dplyr::n_distinct(final_data) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
+  testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 
   # clean environment
   rm(list = ls())
@@ -138,11 +138,11 @@ test_that("Test7_v7. specify variables, regions, continents", {
       desired_continents = 'OECD90',
       desired_variables = available_variables(F)[c(1,3,10,11)],
       launch_ui = FALSE)
-  testthat::expect_equal(unique(final_data$Variable), c("Agricultural Demand",
+  testthat::expect_equal(unique(report$Variable), c("Agricultural Demand",
                                                         "Agricultural Demand|Crops|Energy",
                                                         "Agricultural Production",
                                                         "Capacity Additions|Electricity|Biomass"))
-  testthat::expect_equal(unique(final_data$Region), c("Australia_NZ","Canada","EU-12","EU-15",
+  testthat::expect_equal(unique(report$Region), c("Australia_NZ","Canada","EU-12","EU-15",
                                                       "Europe_Non_EU","European Free Trade Association",
                                                       "Japan","USA","World"))
 
@@ -156,7 +156,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
       desired_variables = 'Emissions*',
       launch_ui = FALSE)
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/result_test7.2.RData')))
-  testthat::expect_equal(unique(final_data$Variable), testResult)
+  testthat::expect_equal(unique(report$Variable), testResult)
 
   rm(list = ls())
   generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
@@ -168,7 +168,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
       desired_variables = 'Price|Carbon',
       launch_ui = FALSE)
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/result_test7.3.RData')))
-  testthat::expect_equal(unique(final_data$Variable), testResult)
+  testthat::expect_equal(unique(report$Variable), testResult)
 
   rm(list = ls())
   generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0'),
@@ -180,7 +180,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
       desired_variables = 'Price|Carbon*',
       launch_ui = FALSE)
   testResult = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/v_7.0/result_test7.4.RData')))
-  testthat::expect_equal(unique(final_data$Variable), testResult)
+  testthat::expect_equal(unique(report$Variable), testResult)
 
 })
 
@@ -228,6 +228,15 @@ test_that("Test8_v7. error messages", {
                    db_path = 'dummy name',
                    launch_ui = FALSE),
                "ERROR: Specify either a project or a database to extract the data from. Not both.")
+
+  expect_error(generate_report(db_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/v_7.0/'),
+                               db_name = 'database_basexdb',
+                               prj_name = 'gcamv7.0_p1.dat',
+                               scenarios = 'Reference',
+                               desired_regions = 'dummy region',
+                               desired_continents = 'dummy continent',
+                               launch_ui = FALSE),
+               "ERROR: You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.")
 
 })
 
