@@ -1,0 +1,150 @@
+---
+title: "Step-by-step full example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Step_By_Step_Full_Example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+In this tutorial we will 1) generate a dataset from a provided GCAM7.0 database and run the associated user interface and 2) generate a dataset from a provided project and run the corresponding user interface. To know more about the `gcamreport` package possibilities, look at these tutorials: [dataset generation tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) and [user interface tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html).
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 1: step-by-step standardized dataset generation from a provided database
+
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker
+
+2) Download the example [GCAM7.0 database](https://zenodo.org/records/10258919), store it inside `gcamreport/examples`, and unpack it.
+
+3) Generate the standardized dataset:
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path, name, and scenarios in a variable.
+dbpath <- "examples"
+dbname <- "database_basexdb_ref"
+scen <- "Reference"
+
+## -- choose a project name
+prjname <- "example1.dat"
+
+## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
+## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, 
+## -- and lunch the user interface
+generate_report(db_path = dbpath, db_name = dbname, scenarios = scen, 
+                prj_name = prjname, final_year = 2050, 
+                desired_regions = c('EU-12', 'EU-15'), 
+                desired_variables = c('Agricultural*'), 
+                save_output = TRUE, launch_ui = TRUE)
+```
+
+4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
+
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+
+5) Check the generated dataset: look at `examples` folder and you should see a file called `example1_standardized.csv` and a file called `example1_standardized.xlsx` containing the standardized dataset. 
+
+6) Notice that in the `examples` folder a file called `database_basexdb_ref_example1.dat` has appeared. It is the generated project file from the provided database. In case you want to generate the standardized dataset again or to open the user interface, you can use directly this file and avoid creating the project again. If you wish to proceed as mentioned, you can follow [Example 2](#example2).
+
+7) Notice that in the `examples` folder a file called `example1_standardized.RData` has appeared. It is the generated reporting file from the provided database. In case you want to launch the user interface in the future, you can use directly this file and avoid creating or loading the project again. If you wish to proceed as mentioned, you can follow [Example 3](#example3).
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 2: step-by-step standardized dataset generation from a provided project {#example2}
+
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker
+
+2) In this example we will use an example dataset stored in `examples` called `example2.dat`
+
+3) Generate the standardized dataset:
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path, name, and scenarios in a variable.
+projectpath <- "examples/example2.dat"
+
+## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
+## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, 
+## -- and lunch the user interface
+generate_report(project_path = projectpath, final_year = 2050, 
+                desired_regions = c('EU-12', 'EU-15'),
+                desired_variables = c('Agricultural*'), 
+                save_output = TRUE, launch_ui = TRUE)
+```
+
+4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
+
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+
+5) Check the generated dataset: look at `examples` folder and you should see a file called `example2_standardized.csv` and a file called `example2_standardized.xlsx` containing the standardized dataset.
+
+6) Notice that in the `examples` folder a file called `example2_standardized.RData` has appeared. It is the generated reporting file from the provided database. In case you want to launch the user interface in the future, you can use directly this file and avoid creating or loading the project again. If you wish to proceed as mentioned, you can follow [Example 3](#example3).
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 3: step-by-step user interface launching from a provided standardized dataset {#example3}
+
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker
+
+2) In this example we will use an example dataset stored in `examples` called `example3.RData`
+
+3) Launch the user interface for the standardized dataset:
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path, name, and scenarios in a variable.
+datapath <- "examples/example3.RData"
+
+## -- launch the user interface
+launch_gcamreport_ui(data_path = datapath)
+```
+
+4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
+
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+
+5) In case you just run [Example 1](#example1) or [Example 2](#example2), you should have in the environemnt a variable called `report`. You can use it too to launch the user interface:
+
+``` r
+## -- load gcamreport library.
+library(gcamreport)
+
+## -- store the database path, name, and scenarios in a variable.
+dataname <- "report"
+
+## -- launch the user interface
+launch_gcamreport_ui(data = dataname)
+```
+
+

@@ -1,0 +1,53 @@
+
+################################################################################
+#                                   README                                     #
+################################################################################
+## 1. open gcamerport project (C:\\GCAM_working_group\\IAM COMPACT\\gcamreport)
+## 2. save in different variables the database path and name, as well as the
+##    considered scenarios and the desired project name
+## 3. run the dataset generation
+## 4. the outputs will be saved in the same folder than the database: the .dat
+##    project, and a csv & xlsx with the dataset outputs
+
+## tests gcam7.0
+db_path = 'C:\\GCAM\\GCAM_7.0_Claudia\\gcam-v7.0-Windows-Release-Package\\output'
+db_name = 'database_basexdb_ref'
+prj_name = 'gcamv7.0_test.dat'
+scenarios = c('Reference')
+final_year = 2050
+run(db_path = db_path, db_name = db_name, prj_name = prj_name, scenarios = scenarios,
+    desired_continents = desired_continents, desired_variables = desired_variables,
+    final_year = final_year)
+launch_gcamreport_ui('C:\\GCAM\\GCAM_v7.0_Claudia\\gcam-v7.0-Windows-Release-Package\\output\\camv7.0_p1_standardized.RData')
+
+
+## report only some variables
+db_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam7-IAMCOMPACT\\output'
+db_name = 'database_basexdb_2100'
+prj_name = 'prova_only_elec_cap.dat'
+scenarios = c('NDC_LTT_vF')
+desired_continents = 'OECD90'
+final_year = 2100
+desired_variables = available_variables(F)[c(1,3,10,11)]
+run(db_path = db_path, db_name = db_name, prj_name = prj_name, scenarios = scenarios,
+    desired_continents = desired_continents, desired_variables = desired_variables,
+    final_year = final_year)
+launch_gcamreport_ui('C:\\GCAM_working_group\\IAM COMPACT\\gcam7-IAMCOMPACT\\output\\prova_only_elec_cap_standardized.RData')
+
+## Study 1 IAM COMPACT
+db_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam7-IAMCOMPACT\\output'
+db_name = 'database_basexdb_2100'
+prj_name = 'prova_only_elec_cap.dat'
+# prj_name = 'iam_compact_EU12_EU15_try_select_variables1.dat'
+scenarios = c('NDC_LTT_EU-CostOptimal', 'NDC_LTT_vF')
+desired_regions = c('EU-12','EU-15')
+final_year = 2100
+desired_variables = 'All'
+
+run(db_path = db_path, db_name = db_name, prj_name = prj_name, scenarios = scenarios,
+    desired_regions = desired_regions, final_year = final_year)
+
+
+project_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam7-IAMCOMPACT\\output\\database_basexdb_2100_iam_compact_EU12_EU15_v5.dat'
+project_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam7-IAMCOMPACT\\output\\database_basexdb_2100_iam_compact_st1_vF.dat'
+run(project_path = project_path, launch_ui = F)

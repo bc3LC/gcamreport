@@ -1,0 +1,40 @@
+title: gcamreport
+url: https://bc3lc.github.io/gcamreport/
+template:
+  bootstrap: 5
+development:
+  model: auto
+
+navbar:
+  structure:
+    left:  [intro, tutorials, reference, news]
+    right: [search, github]
+
+
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Tutorials"
+      icon: fas fa-book
+      menu:
+      -  text: "Step-by-step Full Example"
+         href: articles/Step_By_Step_Full_Example.html
+      -  text: "Dataset Generation Tutorial"
+         href: articles/Dataset_Generation_Tutorial.html
+      -  text: "Interactive UI Tutorial"
+         href: articles/Interactive_UI_Tutorial.html
+      -  text: -------
+      -  text: "Tutorials for gcamreport v6.0*"
+         href: articles/gcamreport_v6-0.html
+    - text: "Version Guide"
+      icon: fa-solid fa-seedling
+      href: articles/Version_Guide.html
+    - text: "Reference"
+      icon: fa-file-code-o
+      href: reference/index.html
+    - text: "News"
+      icon: fa-newspaper-o
+      href: news/index.html
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/bc3LC/gcamreport

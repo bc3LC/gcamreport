@@ -1,0 +1,12 @@
+devtools::load_all()
+
+db_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam_steel_trade\\output'
+db_name = 'database_basexdb_2050v4'
+prj_name = 'iam_compact_st4_211123.dat'
+scenarios = c('NDC_LTT_IronSteel', 'NDC_LTT_IronSteel_CBAM', 'NDC_LTT_IronSteel_SUFFICIENCY')
+
+run(db_path = db_path, db_name = db_name, prj_name = prj_name, scenarios = scenarios)
+
+
+# project_path = 'C:\\GCAM_working_group\\IAM COMPACT\\gcam_steel_trade\\output\\iam_compact_st7.dat'
+# run(project_path = project_path, launch_ui = F)

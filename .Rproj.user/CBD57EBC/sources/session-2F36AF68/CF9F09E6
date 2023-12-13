@@ -1,0 +1,27 @@
+{
+    "id": "CF9F09E6",
+    "path": "C:/GCAM_working_group/IAM COMPACT/gcamreport/tests/testthat/testReporter_v7.0.R",
+    "project_path": "tests/testthat/testReporter_v7.0.R",
+    "type": "r_source",
+    "hash": "3197482009",
+    "contents": "",
+    "dirty": true,
+    "created": 1702470252482.0,
+    "source_on_save": false,
+    "relative_order": 9,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "9,18",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1702470573,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1702470573792,
+    "read_only": false,
+    "read_only_alternatives": []
+}
