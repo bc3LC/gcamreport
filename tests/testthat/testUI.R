@@ -17,7 +17,7 @@ test_that("Test1. test tree functions", {
   tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   # save a list of all variables
-  all_vars <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols)
 
 
   # do_mount_tree with regions
