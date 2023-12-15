@@ -116,31 +116,31 @@ The resulting RData output can be used to manually call `launch_gcamreport_ui`.<
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>project_path:</dt>
+    <dl><dt>project_path</dt>
 <dd><p>full path of the project with the project name. Possible extensions: .dat and .proj.</p></dd>
 
 
-<dt>db_path:</dt>
+<dt>db_path</dt>
 <dd><p>full path of the database.</p></dd>
 
 
-<dt>db_name:</dt>
+<dt>db_name</dt>
 <dd><p>name of the database.</p></dd>
 
 
-<dt>prj_name:</dt>
+<dt>prj_name</dt>
 <dd><p>name of the project.</p></dd>
 
 
-<dt>scenarios:</dt>
+<dt>scenarios</dt>
 <dd><p>name of the scenarios to be considered.</p></dd>
 
 
-<dt>final_year:</dt>
+<dt>final_year</dt>
 <dd><p>final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.</p></dd>
 
 
-<dt>desired_variables:</dt>
+<dt>desired_variables</dt>
 <dd><p>desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
 In case the project dataset needs to be created, it will be created containing only the specified variables.
@@ -149,31 +149,31 @@ if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for
 consider other variables, such as "Emissions|CH4" or "Emissions|NH3"</p></dd>
 
 
-<dt>desired_regions:</dt>
+<dt>desired_regions</dt>
 <dd><p>desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.</p></dd>
 
 
-<dt>desired_continents:</dt>
+<dt>desired_continents</dt>
 <dd><p>desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
 the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
 continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
 specified continents/regions' groups.</p></dd>
 
 
-<dt>save_output:</dt>
+<dt>save_output</dt>
 <dd><p>if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
 'save_output = XLSX', the data will be only saved in the specified format.</p></dd>
 
 
-<dt>output_file:</dt>
+<dt>output_file</dt>
 <dd><p>file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
 database or the project file, and using a default name containing the project name with 'standardized' tag.
 In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.</p></dd>
 
 
-<dt>launch_ui:</dt>
+<dt>launch_ui</dt>
 <dd><p>if TRUE, launch User Interface, Do not launch it otherwise.</p></dd>
 
 </dl></div>
