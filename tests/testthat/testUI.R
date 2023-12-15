@@ -1,7 +1,25 @@
 library(gcamreport); library(testthat); library(magrittr); library(rprojroot)
 
 test_that("Test1. test tree functions", {
-  run(project_path = paste0(rprojroot::find_root(rprojroot::is_testthat),'/testInputs/test6.dat'), launch_ui = FALSE)
+
+  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
+  # load data
+  data <- report
+  # define the dataset for launching the ui
+  sdata <<- suppressWarnings(
+    data %>%
+      tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+    )
+  # create vector of available years for launching the ui
+  available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
+  # develop a nested list of the variables and regions for launching the ui
+  cols <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+  # save a list of all variables
+  all_varss <<- do_collapse_df(cols)
+
+
   # do_mount_tree with regions
   testResult1 = do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   testExpect1 = get(load(paste0(rprojroot::find_root(rprojroot::is_testthat),'/testOutputs/tree_reg_test.RData')))

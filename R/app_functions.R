@@ -214,7 +214,7 @@ reset_first_load <- function() {
   noReg <<- FALSE
   noVars <<- FALSE
   updatedVars <<- FALSE
-  all_vars <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols)
 }
 
 

@@ -111,7 +111,7 @@ server <- function(input, output, session) {
           dplyr::filter(Region %in% sel_reg_vec) %>%
           dplyr::distinct(Variable) %>%
           dplyr::pull()
-        tmp_vars = all_vars[!(all_vars %in% tmp_vars)]
+        tmp_vars = all_varss[!(all_varss %in% tmp_vars)]
         tree_vars <<- change_style(input$tree_variables, 'variables', tmp_vars)
       } else {
         tree_vars <<- change_style(input$tree_variables, 'regions')

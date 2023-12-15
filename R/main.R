@@ -648,7 +648,7 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
 
   # save a list of all variables
-  all_vars <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols)
 
   runApp('inst/gcamreport_ui')
 }
