@@ -12,6 +12,8 @@ sector.list
 }
 \description{
 categorize sector
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::sector.list

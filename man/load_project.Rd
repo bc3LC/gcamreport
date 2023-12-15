@@ -7,9 +7,9 @@
 load_project(project_path, desired_regions = "All")
 }
 \arguments{
-\item{prj_name:}{name of the project}
+\item{project_path}{path of the project (including project name and extension)}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 }

@@ -15,6 +15,8 @@ energy_prices_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::energy_prices_map

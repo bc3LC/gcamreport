@@ -7,9 +7,9 @@
 filter_variables(data, variable)
 }
 \arguments{
-\item{data:}{dataframe to be filtered}
+\item{data}{dataframe to be filtered}
 
-\item{variable:}{variable that requires this data}
+\item{variable}{variable that requires this data}
 }
 \value{
 filtered dataframe

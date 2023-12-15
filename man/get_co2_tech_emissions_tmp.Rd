@@ -13,5 +13,4 @@ co2_tech_emissions global variable
 Get no bio CO2 emissions query by sector, subsector, and techonolgy.
 }
 \keyword{co2}
-\keyword{rgcam::getQuery}
 \keyword{tmp}

@@ -7,13 +7,13 @@
 filter_loading_regions(data, desired_regions = "All", variable)
 }
 \arguments{
-\item{data:}{dataframe to be filtered}
+\item{data}{dataframe to be filtered}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 
-\item{variable:}{dataset variable information}
+\item{variable}{dataset variable information}
 }
 \value{
 filtered dataframe

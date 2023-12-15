@@ -12,6 +12,8 @@ hr_per_yr
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::hr_per_yr

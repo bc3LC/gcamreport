@@ -7,9 +7,9 @@
 start_with_pattern(vector, pattern)
 }
 \arguments{
-\item{vector:}{vector to check}
+\item{vector}{vector to check}
 
-\item{pattern:}{pattern to consider}
+\item{pattern}{pattern to consider}
 }
 \value{
 subvector of `vector` whose elements start with `pattern`

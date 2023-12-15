@@ -13,5 +13,4 @@ fe_transportation global variable
 Get mode-specific transport final energy to break out rail, ship, and domestic air.
 }
 \keyword{energy}
-\keyword{rgcam::getQuery}
 \keyword{tmp}

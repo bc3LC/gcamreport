@@ -13,4 +13,3 @@ population_clean global variable
 Get population query and change units to [million].
 }
 \keyword{population}
-\keyword{rgcam::getQuery}

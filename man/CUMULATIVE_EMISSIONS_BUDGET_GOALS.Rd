@@ -12,6 +12,8 @@ CUMULATIVE_EMISSIONS_BUDGET_GOALS
 }
 \description{
 cumulative emissions budget goals list
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::CUMULATIVE_EMISSIONS_BUDGET_GOALS

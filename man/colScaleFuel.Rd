@@ -12,6 +12,8 @@ colScaleFuel
 }
 \description{
 fuels color to paint
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::colScaleFuel

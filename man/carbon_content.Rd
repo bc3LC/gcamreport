@@ -15,6 +15,8 @@ carbon_content
 }
 \description{
 carbon content
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::carbon_content

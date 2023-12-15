@@ -6,13 +6,13 @@
 #' compute_height
 #'
 #' Return perfect heigh of rendered plots with ungrouped regions
-#' @param reg_all: regions' vector
+#' @param reg_all regions' vector
 #' @keywords internal
-#' @importFrom magrittr %>%
+#' @importFrom dplyr if_else
 #' @export
 compute_height <- function(reg_all) {
-  reg_clean = setdiff(reg_all, c('MAF','LAM','OECD90','REF','ASIA'))
-  h = dplyr::if_else(length(reg_clean) < 3, 325, 160*ceiling(sqrt(length(reg_clean))))
+  reg_clean <- setdiff(reg_all, c('MAF','LAM','OECD90','REF','ASIA'))
+  h <- if_else(length(reg_clean) < 3, 325, 160*ceiling(sqrt(length(reg_clean))))
 
   return(h)
 }
@@ -21,9 +21,8 @@ compute_height <- function(reg_all) {
 #' is_leaf
 #'
 #' Return TRUE if it is a leaf node; FALSE otherwise.
-#' @param tree: tree node to be checked
+#' @param tree tree node to be checked
 #' @keywords internal
-#' @importFrom magrittr %>%
 #' @export
 is_leaf <- function(tree) {
   if (length(tree) > 1 || length(tree[[1]]) > 1 || length(tree[[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]]) > 1
@@ -38,9 +37,9 @@ is_leaf <- function(tree) {
 #' change_style
 #'
 #' Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.
-#' @param tree: base tree to change the style on
-#' @param type: either regions or variables
-#' @param tmp_vars: variables which require 'dis' style
+#' @param tree base tree to change the style on
+#' @param type either regions or variables
+#' @param tmp_vars variables which require 'dis' style
 #' @keywords internal
 #' @importFrom magrittr %>%
 #' @export
@@ -59,9 +58,9 @@ change_style <- function(tree, type, tmp_vars = NULL) {
     # change the style for the current node. If it's in the list of variables to be disabled, set
     # it to 'dis'. To 'basic' otherwise
     if (type == 'variables' && length(tmp_vars) > 0 && attrs$my_id %in% tmp_vars) {
-      attrs$sttype = 'dis'
+      attrs$sttype <- 'dis'
     } else {
-      attrs$sttype = 'basic'
+      attrs$sttype <- 'basic'
     }
     attributes(tree[[i]]) <- attrs
   }
@@ -74,24 +73,25 @@ change_style <- function(tree, type, tmp_vars = NULL) {
 #'
 #' Check user's choices to do the plot: at least one scenario, variable, year, and region
 #' must be chosen. In case of 'grouped' plot, all variables must be from the same category.
-#' @param scen: user's selected scenarios
-#' @param years: user's selected years
-#' @param reg: user's selected regions
-#' @param vars: user's selected variables
-#' @param grouped: if TRUE, aim to display grouped plot; ungrouped plot otherwise
+#' @param scen user's selected scenarios
+#' @param years user's selected years
+#' @param reg user's selected regions
+#' @param vars user's selected variables
+#' @param grouped if TRUE, aim to display grouped plot; ungrouped plot otherwise
 #' @keywords internal
 #' @importFrom magrittr %>%
+#' @importFrom stringr str_extract
 #' @export
 check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 
   # errors' vector
-  error_message = c()
+  error_message <- c()
 
   # study the category of the selected variables
   if (length(vars) > 0) {
-    check_vars = sub("\\|.*", "", stringr::str_extract(vars, "(.*?)(\\||$)"))
+    check_vars <- sub("\\|.*", "", str_extract(vars, "(.*?)(\\||$)"))
   } else {
-    check_vars = NULL
+    check_vars <- NULL
   }
 
   # check that at least one scenario has been choosen
@@ -121,46 +121,47 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 #' update_user_choices_plot
 #'
 #' Update dataframe to display plots with the user's choices
-#' @param selected_scen: user's selected scenarios
-#' @param selected_years: user's selected years
-#' @param tree_regions: user's selected regions
-#' @param tree_variables: user's selected variables
-#' @param sidebarItemExpanded: input sidebar expanded item
+#' @param selected_scen user's selected scenarios
+#' @param selected_years user's selected years
+#' @param tree_regions user's selected regions
+#' @param tree_variables user's selected variables
+#' @param sidebarItemExpanded input sidebar expanded item
 #' @keywords internal
 #' @importFrom magrittr %>%
+#' @importFrom shinyTree get_selected
 #' @export
 update_user_choices_plot <- function(selected_scen, selected_years,
                                      tree_regions, tree_variables, sidebarItemExpanded) {
   # get selected regions and variables from input
-  sel_reg_ini = shinyTree::get_selected(tree_regions, format = 'slices')
-  sel_vars_ini = shinyTree::get_selected(tree_variables, format = 'slices')
+  sel_reg_ini <- get_selected(tree_regions, format = 'slices')
+  sel_vars_ini <- get_selected(tree_variables, format = 'slices')
 
-  basic_reg = 0
-  basic_vars = 0
+  basic_reg <- 0
+  basic_vars <- 0
   # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
   if (firstReg && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Regions") || is.null(sidebarItemExpanded))) {
-    sel_reg_ini = reg_cont$region
-    basic_reg = 1
+    sel_reg_ini <- reg_cont$region
+    basic_reg <- 1
   }
 
   # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
   if (firstVars && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Variables") || is.null(sidebarItemExpanded))) {
-    sel_vars_ini = unique(cols$col1)
-    basic_vars = 1
+    sel_vars_ini <- unique(cols$col1)
+    basic_vars <- 1
   }
 
   # if there are no selected regions
   if (noReg) {
     noReg <<- FALSE
-    sel_reg_ini = c()
-    basic_reg = 2
+    sel_reg_ini <- c()
+    basic_reg <- 2
   }
 
   # if there are no selected variables
   if (noVars) {
     noVars <<- FALSE
-    sel_vars_ini = c()
-    basic_vars = 2
+    sel_vars_ini <- c()
+    basic_vars <- 2
   }
 
   # set firstVars and/or firstReg to FALSE if it's not the first time loading them or if their sidebarItem is expanded
@@ -169,20 +170,20 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 
   # transform the regions and variables' structures to lists
   if (is.list(sel_vars_ini) & length(sel_vars_ini) > 0) {
-    sel_vars = do_unmount_tree(sel_vars_ini, 'variables')
+    sel_vars <- do_unmount_tree(sel_vars_ini, 'variables')
   } else {
-    sel_vars = sel_vars_ini
+    sel_vars <- sel_vars_ini
   }
   if (is.list(sel_reg_ini) & length(sel_reg_ini) > 0) {
-    sel_reg = do_unmount_tree(sel_reg_ini, 'regions')
+    sel_reg <- do_unmount_tree(sel_reg_ini, 'regions')
   } else {
-    sel_reg = sel_reg_ini
+    sel_reg <- sel_reg_ini
   }
 
   # consider all possible columns
-  sel_cols = c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
+  sel_cols <- c('Model', 'Scenario', 'Region', 'Variable', 'Unit')
 
-  toret = list(
+  toret <- list(
     'scen' = selected_scen,
     'years' = selected_years,
     'cols' = sel_cols,
@@ -220,43 +221,45 @@ reset_first_load <- function() {
 #' do_data_sample
 #'
 #' Function to subset a dataset with the user's choices
-#' @param sdata: dataset
-#' @param sel_scen: selected scenario/s
-#' @param sel_years: selected year/s
-#' @param sel_cols: selected column/s
-#' @param sel_vars: selected variables in tree
-#' @param sel_reg: selected regions in tree
+#' @param sdata dataset
+#' @param sel_scen selected scenario/s
+#' @param sel_years selected year/s
+#' @param sel_cols selected column/s
+#' @param sel_vars selected variables in tree
+#' @param sel_reg selected regions in tree
 #' @keywords internal
 #' @importFrom magrittr %>%
+#' @importFrom dplyr filter select
+#' @importFrom data.table as.data.table
 #' @return subseted dataset
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
   # obtain the region's list
   if (basic_reg == 1) {
-    reg = unique(sdata$Region)
+    reg <- unique(sdata$Region)
   } else if (basic_reg == 2 || (is.list(sel_reg) && length(sel_reg) == 0)) {
-    reg = c()
+    reg <- c()
   } else {
-    reg = do_unmount_tree(sel_reg, 'regions')
+    reg <- do_unmount_tree(sel_reg, 'regions')
   }
 
   # obtain the variables's list
   if (basic_vars == 1) {
-    vars = unique(sdata$Variable)
+    vars <- unique(sdata$Variable)
   } else if (basic_vars == 2 || (is.list(sel_vars) && length(sel_vars) == 0)) {
-    vars = c()
+    vars <- c()
   } else{
-    vars = do_unmount_tree(sel_vars, 'variables')
+    vars <- do_unmount_tree(sel_vars, 'variables')
   }
 
   # subset the data
-  data_sample = sdata %>%
-    dplyr::filter(Scenario %in% sel_scen) %>%
-    dplyr::filter(Variable %in% vars) %>%
-    dplyr::filter(Region %in% reg) %>%
-    dplyr::select(c(sel_cols, sel_years)) %>%
-    data.table::as.data.table()
+  data_sample <- sdata %>%
+    filter(Scenario %in% sel_scen) %>%
+    filter(Variable %in% vars) %>%
+    filter(Region %in% reg) %>%
+    select(c(sel_cols, sel_years)) %>%
+    as.data.table()
 
   return(data_sample)
 }
@@ -266,9 +269,9 @@ do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
 #' do_mount_tree
 #'
 #' Recursive function to create a nested list from a dataframe.
-#' @param df: dataset
-#' @param column_names: names of the columns of the original dataset
-#' @param current_column: number of the current column
+#' @param df dataset
+#' @param column_names names of the columns of the original dataset
+#' @param current_column number of the current column
 #' @keywords internal
 #' @importFrom magrittr %>%
 #' @return nested list
@@ -287,11 +290,11 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, ii
     # loop over the unique values in the current column
     for (value in unique(filtered_df[[column_names[current_column]]])) {
       # create a nested list for the next level
-      filtered_df_tmp = filtered_df[filtered_df[[column_names[current_column]]] == value,]
+      filtered_df_tmp <- filtered_df[filtered_df[[column_names[current_column]]] == value,]
       if (!is.null(iid)) {
-        tmp_id = paste(iid, value, sep = '|')
+        tmp_id <- paste(iid, value, sep = '|')
       } else {
-        tmp_id = value
+        tmp_id <- value
       }
       next_list <- do_mount_tree(filtered_df_tmp, column_names, current_column = current_column + 1, selec, tmp_id)
 
@@ -318,24 +321,25 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, ii
 #' do_unmount_tree
 #'
 #' Create a dataframe from a nested list.
-#' @param base_tree: nested list
-#' @param type: 'variables' if nested list is refereed to variables, 'regions'
+#' @param base_tree nested list
+#' @param type 'variables' if nested list is refereed to variables, 'regions'
 #' if it refers to regional  aggregation
 #' @keywords internal
 #' @importFrom magrittr %>%
+#' @importFrom rrapply rrapply
 #' @return dataframe
 #' @export
 do_unmount_tree <- function(base_tree, type) {
 
   if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |
-    ll = rrapply::rrapply(
+    ll <- rrapply(
       base_tree,
       classes = "numeric",
       how = "flatten",
       options = list(namesep = "|", simplify = FALSE)
     )
-    ll = names(ll)
+    ll <- names(ll)
 
     # keep only the the string after the first delimiter appearance
     extract_string <- function(x) {
@@ -358,7 +362,7 @@ do_unmount_tree <- function(base_tree, type) {
 #' do_collapse_df
 #'
 #' Collapse all columns by row of the dataframe and remove NA
-#' @param basic_data: dataframe/datatable to be collapsed
+#' @param basic_data dataframe/datatable to be collapsed
 #' @return Vector with the collapsed data
 #' @keywords internal
 #' @importFrom magrittr %>%

@@ -13,4 +13,3 @@ primary_energy_clean global variable
 Get primary energy consumption by tech.
 }
 \keyword{energy}
-\keyword{rgcam::getQuery}

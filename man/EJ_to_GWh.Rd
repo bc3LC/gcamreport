@@ -12,6 +12,8 @@ EJ_to_GWh
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::EJ_to_GWh

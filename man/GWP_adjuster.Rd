@@ -15,6 +15,8 @@ GWP_adjuster
 }
 \description{
 ghg adjuster
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::GWP_adjuster

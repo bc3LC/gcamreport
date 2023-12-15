@@ -15,6 +15,8 @@ capacity_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::capacity_map

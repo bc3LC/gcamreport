@@ -15,6 +15,8 @@ transport_en_service
 }
 \description{
 energy services
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::transport_en_service

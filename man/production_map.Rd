@@ -15,6 +15,8 @@ production_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::production_map

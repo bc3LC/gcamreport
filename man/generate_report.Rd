@@ -20,42 +20,42 @@ generate_report(
 )
 }
 \arguments{
-\item{project_path:}{full path of the project with the project name. Possible extensions: .dat and .proj.}
+\item{project_path}{full path of the project with the project name. Possible extensions: .dat and .proj.}
 
-\item{db_path:}{full path of the database.}
+\item{db_path}{full path of the database.}
 
-\item{db_name:}{name of the database.}
+\item{db_name}{name of the database.}
 
-\item{prj_name:}{name of the project.}
+\item{prj_name}{name of the project.}
 
-\item{scenarios:}{name of the scenarios to be considered.}
+\item{scenarios}{name of the scenarios to be considered.}
 
-\item{final_year:}{final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.}
+\item{final_year}{final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.}
 
-\item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
+\item{desired_variables}{desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
 In case the project dataset needs to be created, it will be created containing only the specified variables.
 ATTENTION: global variables such as "Emissions" will be computed considering only the selected variables. As an example,
 if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not
 consider other variables, such as "Emissions|CH4" or "Emissions|NH3"}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 
-\item{desired_continents:}{desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
+\item{desired_continents}{desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
 the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
 continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
 specified continents/regions' groups.}
 
-\item{save_output:}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
+\item{save_output}{if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
 'save_output = XLSX', the data will be only saved in the specified format.}
 
-\item{output_file:}{file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
+\item{output_file}{file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
 database or the project file, and using a default name containing the project name with 'standardized' tag.
 In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.}
 
-\item{launch_ui:}{if TRUE, launch User Interface, Do not launch it otherwise.}
+\item{launch_ui}{if TRUE, launch User Interface, Do not launch it otherwise.}
 }
 \value{
 RData, CSV, and XLSX datafile with the desired variables & launches user interface.

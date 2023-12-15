@@ -13,4 +13,3 @@ energy_service_transportation_clean global variable
 Get transport.
 }
 \keyword{energy}
-\keyword{rgcam::getQuery}

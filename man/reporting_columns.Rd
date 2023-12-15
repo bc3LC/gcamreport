@@ -12,6 +12,8 @@ reporting_columns
 }
 \description{
 reporting columns
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::reporting_columns

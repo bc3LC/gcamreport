@@ -12,6 +12,8 @@ conv_19USD_75USD
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::conv_19USD_75USD

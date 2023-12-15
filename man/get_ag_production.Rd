@@ -13,4 +13,3 @@ ag_production_clean global variable
 Get agricultural production.
 }
 \keyword{ag}
-\keyword{rgcam::getQuery}

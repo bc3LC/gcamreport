@@ -13,4 +13,3 @@ co2_concentration_clean global variable
 Get World's CO2 concentration query.
 }
 \keyword{co2}
-\keyword{rgcam::getQuery}

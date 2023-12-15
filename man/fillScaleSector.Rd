@@ -12,6 +12,8 @@ fillScaleSector
 }
 \description{
 final filling color scale
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::fillScaleSector

@@ -13,4 +13,3 @@ co2_price_clean global variable
 Get co2 price.
 }
 \keyword{co2}
-\keyword{rgcam::getQuery}

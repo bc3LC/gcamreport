@@ -15,6 +15,8 @@ iea_capacity
 }
 \description{
 iea 2019 capacity
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::iea_capacity

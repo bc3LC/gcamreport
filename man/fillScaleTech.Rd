@@ -12,6 +12,8 @@ fillScaleTech
 }
 \description{
 techology filling color
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::fillScaleTech

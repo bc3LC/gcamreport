@@ -12,6 +12,8 @@ tech.list
 }
 \description{
 techonolgies list
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::tech.list

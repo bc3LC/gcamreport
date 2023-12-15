@@ -12,6 +12,8 @@ state_names
 }
 \description{
 state names
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::state_names

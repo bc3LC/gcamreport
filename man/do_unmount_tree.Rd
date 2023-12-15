@@ -7,9 +7,9 @@
 do_unmount_tree(base_tree, type)
 }
 \arguments{
-\item{base_tree:}{nested list}
+\item{base_tree}{nested list}
 
-\item{type:}{'variables' if nested list is refereed to variables, 'regions'
+\item{type}{'variables' if nested list is refereed to variables, 'regions'
 if it refers to regional  aggregation}
 }
 \value{

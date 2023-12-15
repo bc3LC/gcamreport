@@ -15,6 +15,8 @@ nonCO2_content
 }
 \description{
 non CO2 content
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::nonCO2_content

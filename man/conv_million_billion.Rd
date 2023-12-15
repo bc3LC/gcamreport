@@ -12,6 +12,8 @@ conv_million_billion
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::conv_million_billion

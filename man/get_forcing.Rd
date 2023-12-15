@@ -13,4 +13,3 @@ forcing_clean global variable
 Get World's forcing query.
 }
 \keyword{forcing}
-\keyword{rgcam::getQuery}

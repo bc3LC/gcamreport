@@ -13,4 +13,3 @@ co2_clean global variable
 Get World's CO2 emissions query.
 }
 \keyword{co2}
-\keyword{rgcam::getQuery}

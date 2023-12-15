@@ -7,7 +7,7 @@
 conv_ghg_co2e(data)
 }
 \arguments{
-\item{data:}{dataset}
+\item{data}{dataset}
 }
 \description{
 Covert GHG to CO2e

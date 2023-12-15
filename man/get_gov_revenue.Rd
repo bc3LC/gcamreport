@@ -13,4 +13,3 @@ gov_revenue_all global variable
 Get overall carbon revenue.
 }
 \keyword{revenue}
-\keyword{rgcam::getQuery}

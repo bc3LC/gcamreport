@@ -12,6 +12,8 @@ conv_C_CO2
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::conv_C_CO2

@@ -12,6 +12,8 @@ fuel.color
 }
 \description{
 fuels color
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::fuel.color

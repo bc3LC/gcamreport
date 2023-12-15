@@ -12,6 +12,8 @@ fuel.list
 }
 \description{
 fuels list
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::fuel.list

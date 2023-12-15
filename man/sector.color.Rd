@@ -12,6 +12,8 @@ sector.color
 }
 \description{
 color by fuel
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::sector.color

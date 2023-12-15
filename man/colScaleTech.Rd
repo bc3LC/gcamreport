@@ -12,6 +12,8 @@ colScaleTech
 }
 \description{
 techology painting color
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::colScaleTech

@@ -13,5 +13,4 @@ energy_price global variable
 Bind regional oil, gas, coal prices with other energy prices
 }
 \keyword{price}
-\keyword{rgcam::getQuery}
 \keyword{tmp}

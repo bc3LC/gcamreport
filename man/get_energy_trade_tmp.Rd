@@ -13,5 +13,4 @@ energy_trade_supply global variable
 Get energy trade supply. Query used to compute other variables.
 }
 \keyword{energy}
-\keyword{rgcam::getQuery}
 \keyword{tmp}

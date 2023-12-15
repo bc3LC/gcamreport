@@ -7,15 +7,15 @@
 check_user_choices_plot(vars, scen, years, reg, grouped)
 }
 \arguments{
-\item{scen:}{user's selected scenarios}
+\item{vars}{user's selected variables}
 
-\item{years:}{user's selected years}
+\item{scen}{user's selected scenarios}
 
-\item{reg:}{user's selected regions}
+\item{years}{user's selected years}
 
-\item{vars:}{user's selected variables}
+\item{reg}{user's selected regions}
 
-\item{grouped:}{if TRUE, aim to display grouped plot; ungrouped plot otherwise}
+\item{grouped}{if TRUE, aim to display grouped plot; ungrouped plot otherwise}
 }
 \description{
 Check user's choices to do the plot: at least one scenario, variable, year, and region

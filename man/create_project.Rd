@@ -14,19 +14,19 @@ create_project(
 )
 }
 \arguments{
-\item{db_path:}{path of the database}
+\item{db_path}{path of the database}
 
-\item{db_name:}{name of the database}
+\item{db_name}{name of the database}
 
-\item{prj_name:}{name of the project}
+\item{prj_name}{name of the project}
 
-\item{scenarios:}{name of the scenarios to be considered}
+\item{scenarios}{name of the scenarios to be considered}
 
-\item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 
-\item{desired_variables:}{desired variables to have in the report. Considered 'All' by default.
+\item{desired_variables}{desired variables to have in the report. Considered 'All' by default.
 Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
 In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
 the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",

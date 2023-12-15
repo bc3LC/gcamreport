@@ -13,4 +13,3 @@ co2_sequestration_clean global variable
 Get carbon sequestration.
 }
 \keyword{co2}
-\keyword{rgcam::getQuery}

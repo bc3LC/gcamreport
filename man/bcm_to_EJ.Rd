@@ -12,6 +12,8 @@ bcm_to_EJ
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::bcm_to_EJ

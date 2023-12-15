@@ -7,10 +7,10 @@
 launch_gcamreport_ui(data_path = NULL, data = NULL)
 }
 \arguments{
-\item{data_path:}{RData dataset path containing the standardized data. You can obtain
+\item{data_path}{RData dataset path containing the standardized data. You can obtain
 this dataset by using the function `gcamreport::generate_report`.}
 
-\item{data:}{dataset containing the standardized data. You can obtain
+\item{data}{dataset containing the standardized data. You can obtain
 this dataset by using the function `gcamreport::generate_report`.}
 }
 \value{

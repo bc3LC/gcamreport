@@ -13,4 +13,3 @@ ag_prices_clean global variable
 Calculate average mean for ag global index
 }
 \keyword{ag}
-\keyword{rgcam::getQuery}

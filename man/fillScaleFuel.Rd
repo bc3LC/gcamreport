@@ -12,6 +12,8 @@ fillScaleFuel
 }
 \description{
 fuels color to fill
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::fillScaleFuel

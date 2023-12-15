@@ -13,4 +13,3 @@ secondary_solids global variable
 Get secondary solids
 }
 \keyword{energy}
-\keyword{rgcam::getQuery}

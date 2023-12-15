@@ -13,4 +13,3 @@ prices_subsector global variable
 Get energy prices - primary, secondary, and final
 }
 \keyword{prices}
-\keyword{rgcam::getQuery}

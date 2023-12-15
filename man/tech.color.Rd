@@ -12,6 +12,8 @@ tech.color
 }
 \description{
 techology color
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::tech.color

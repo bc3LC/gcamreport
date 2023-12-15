@@ -15,6 +15,8 @@ nonco2_emis_resource_map
 }
 \description{
 emissions maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::nonco2_emis_resource_map

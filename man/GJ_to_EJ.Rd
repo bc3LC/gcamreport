@@ -12,6 +12,8 @@ GJ_to_EJ
 }
 \description{
 units conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::GJ_to_EJ

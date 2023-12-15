@@ -16,17 +16,17 @@ do_data_sample(
 )
 }
 \arguments{
-\item{sdata:}{dataset}
+\item{sdata}{dataset}
 
-\item{sel_scen:}{selected scenario/s}
+\item{sel_scen}{selected scenario/s}
 
-\item{sel_years:}{selected year/s}
+\item{sel_years}{selected year/s}
 
-\item{sel_cols:}{selected column/s}
+\item{sel_cols}{selected column/s}
 
-\item{sel_vars:}{selected variables in tree}
+\item{sel_vars}{selected variables in tree}
 
-\item{sel_reg:}{selected regions in tree}
+\item{sel_reg}{selected regions in tree}
 }
 \value{
 subseted dataset

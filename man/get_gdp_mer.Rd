@@ -13,4 +13,3 @@ GDP_MER_clean global variable
 Get GDP (MER) query and change units to [10USD].
 }
 \keyword{GDP}
-\keyword{rgcam::getQuery}
