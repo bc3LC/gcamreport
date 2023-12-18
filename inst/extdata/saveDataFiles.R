@@ -41,6 +41,11 @@ use_data(global_vet_values, overwrite=T)
 # Read in template
 template <- read.csv(file.path(rawDataFolder, "inst/extdata", "template/reporting_template.csv"),
                      fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE)
+decode_html <- function(text) {
+  xml2::xml_text(xml2::read_xml(paste0("<x>", text, "</x>")))
+}
+# Applying the function to decode HTML entities in col1
+template$Unit <- sapply(template$Unit, decode_html)
 use_data(template, overwrite=T)
 
 # emissions maps
@@ -224,7 +229,8 @@ use_data(GJ_to_EJ, overwrite=T)
 
 
 # GHG emission conversion
-F_GASES <- c("C2F6", "CF4", "HFC125", "HFC134a", "HFC245fa", "SF6", "HFC143a", "HFC152a", "HFC227ea", "HFC23", "HFC236fa", "HFC32", "HFC365mfc")
+F_GASES <- c("C2F6", "CF4", "HFC125", "HFC134a", "HFC245fa", "SF6", "HFC143a",
+             "HFC152a", "HFC227ea", "HFC23", "HFC236fa", "HFC32", "HFC365mfc")
 use_data(F_GASES, overwrite=T)
 
 GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
