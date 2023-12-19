@@ -13,5 +13,9 @@ fe_transportation global variable
 Get mode-specific transport final energy to break out rail, ship, and domestic air.
 }
 \keyword{energy}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

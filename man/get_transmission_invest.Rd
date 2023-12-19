@@ -14,5 +14,6 @@ Calculate investment electricity transmission and distribution
 scale 2020 number - average of other model results from Mcollion et al. 2018
 Need to convert 2015 to 2010 $
 }
+\keyword{internal}
 \keyword{investment}
 \keyword{process}

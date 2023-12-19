@@ -12,5 +12,9 @@ global_temp_clean global variable
 \description{
 Get World's mean temperature query.
 }
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{temperature}

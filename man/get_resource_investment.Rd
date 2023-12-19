@@ -12,5 +12,6 @@ resource_investment_clean global variable
 \description{
 Calculate investment of resource production
 }
+\keyword{internal}
 \keyword{investment}
 \keyword{process}

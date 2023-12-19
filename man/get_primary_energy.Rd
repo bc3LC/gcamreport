@@ -13,4 +13,8 @@ primary_energy_clean global variable
 Get primary energy consumption by tech.
 }
 \keyword{energy}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)

@@ -13,3 +13,4 @@ Verification message indicating if the process was successful.
 Verify vetting and produce plot.
 }
 \keyword{check}
+\keyword{internal}

@@ -13,5 +13,6 @@ elec_capacity_add global variable
 Calculate added total capacity
 }
 \keyword{capacity}
+\keyword{internal}
 \keyword{process}
 \keyword{tmp}

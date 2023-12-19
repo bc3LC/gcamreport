@@ -13,4 +13,5 @@ co2_emissions_clean global variable
 Combine CO2 emission queries.
 }
 \keyword{co2}
+\keyword{internal}
 \keyword{process}

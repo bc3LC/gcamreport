@@ -13,4 +13,8 @@ land_clean global variable
 Get land use area.
 }
 \keyword{ag}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)

@@ -13,4 +13,5 @@ elec_capacity_add_clean global variable
 Calculate added total capacity
 }
 \keyword{capacity}
+\keyword{internal}
 \keyword{process}

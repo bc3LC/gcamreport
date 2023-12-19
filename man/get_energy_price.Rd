@@ -12,5 +12,6 @@ energy_price_clean global variable
 \description{
 Compute final energy price
 }
+\keyword{internal}
 \keyword{price}
 \keyword{process}

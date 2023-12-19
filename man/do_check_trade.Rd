@@ -13,3 +13,4 @@ Verification message indicating if the process was successful.
 Check global trade is zero.
 }
 \keyword{check}
+\keyword{internal}

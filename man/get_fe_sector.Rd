@@ -17,4 +17,5 @@ aviation; international is mapped from the sector-level query, and domestic is m
 Without this step there would be duplicate entries with different data for the same reporting categories.
 }
 \keyword{energy}
+\keyword{internal}
 \keyword{process}

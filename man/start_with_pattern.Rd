@@ -17,3 +17,5 @@ subvector of `vector` whose elements start with `pattern`
 \description{
 Return the vector elements starting with the specified parameters
 }
+\keyword{internal}
+\keyword{utils}

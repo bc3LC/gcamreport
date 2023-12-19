@@ -13,5 +13,9 @@ energy_trade_supply global variable
 Get energy trade supply. Query used to compute other variables.
 }
 \keyword{energy}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

@@ -13,4 +13,8 @@ forcing_clean global variable
 Get World's forcing query.
 }
 \keyword{forcing}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)

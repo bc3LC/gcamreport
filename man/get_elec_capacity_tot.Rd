@@ -13,4 +13,5 @@ elec_capacity_tot_clean global variable
 Calculate electricity total capacity
 }
 \keyword{capacity}
+\keyword{internal}
 \keyword{process}

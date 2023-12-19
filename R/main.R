@@ -117,6 +117,7 @@ load_project <- function(project_path, desired_regions = 'All') {
 #' @export
 create_project <- function(db_path, db_name, prj_name, scenarios,
                            desired_regions = 'All', desired_variables = 'All') {
+  Internal_variable <- Variable <- required <- NULL
 
   # check if the project already exists
   file_name <- file.path(db_path, paste(db_name, prj_name, sep = '_'))
@@ -312,6 +313,8 @@ load_query <- function(var, base_data, final_queries){
 #' @importFrom dplyr mutate if_else
 #' @export
 available_regions <- function(print = TRUE) {
+  continent <- region <- NULL
+
   av_reg <- gcamreport::reg_cont %>%
     mutate(region = if_else(continent == 'World', 'World', region))
 
@@ -332,6 +335,8 @@ available_regions <- function(print = TRUE) {
 #' IAMC reporting dataset. It also returns them as a vector.
 #' @export
 available_continents <- function(print = TRUE) {
+  continent <- region <- NULL
+
   av_cont <- unique(gcamreport::reg_cont$continent)
 
   if (print) {
@@ -352,6 +357,8 @@ available_continents <- function(print = TRUE) {
 #' @importFrom dplyr filter
 #' @export
 available_variables <- function(print = TRUE) {
+  Internal_variable <- NULL
+
   av_var <- gcamreport::template %>%
     filter(!is.na(Internal_variable) & Internal_variable != "")
 
@@ -407,6 +414,7 @@ available_variables <- function(print = TRUE) {
 #' @export
 generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
                desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
+  continent <- region <- name <- Variable <- Internal_variable <- required <- NULL
 
   # check that desired_regions and desired_continents are not specified at the same time
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {

@@ -13,4 +13,8 @@ co2_price_clean global variable
 Get co2 price.
 }
 \keyword{co2}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)

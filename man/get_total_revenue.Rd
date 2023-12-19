@@ -12,5 +12,6 @@ total_revenue global variable
 \description{
 Compute total revenue: total production * global price.
 }
+\keyword{internal}
 \keyword{revenue}
 \keyword{rgcam::getQuery}

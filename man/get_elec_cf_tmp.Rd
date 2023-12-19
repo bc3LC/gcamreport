@@ -13,5 +13,6 @@ elec_cf global variable
 Calculate future capacity using GCAM
 }
 \keyword{capacity}
+\keyword{internal}
 \keyword{process}
 \keyword{tmp}

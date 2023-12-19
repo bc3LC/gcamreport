@@ -13,4 +13,8 @@ GDP_MER_clean global variable
 Get GDP (MER) query and change units to [10USD].
 }
 \keyword{GDP}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)

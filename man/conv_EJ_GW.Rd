@@ -9,3 +9,5 @@ conv_EJ_GW(data, cf, EJ)
 \description{
 Covert EJ to GW
 }
+\keyword{conversion}
+\keyword{internal}

@@ -235,6 +235,8 @@ reset_first_load <- function() {
 #' @export
 do_data_sample <- function(sdata,sel_scen,sel_years,sel_cols,sel_vars,sel_reg,
                            basic_reg, basic_vars) {
+  Scenario <- Variable <- Region <- NULL
+
   # obtain the region's list
   if (basic_reg == 1) {
     reg <- unique(sdata$Region)
@@ -330,6 +332,7 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, ii
 #' @return dataframe
 #' @export
 do_unmount_tree <- function(base_tree, type) {
+  na.omit <- NULL
 
   if (length(base_tree) > 0) {
     # transform dataset to list of items with delimiter |
@@ -355,7 +358,7 @@ do_unmount_tree <- function(base_tree, type) {
 
     return(extracted_list)
   }
-  return(a)
+  return(NULL)
 }
 
 

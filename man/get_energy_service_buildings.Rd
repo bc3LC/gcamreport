@@ -13,4 +13,8 @@ energy_service_buildings_clean global variable
 Get ES buildings.
 }
 \keyword{energy}
+<<<<<<< HEAD
 \keyword{rgcam::getQuery}
+=======
+\keyword{internal}
+>>>>>>> dc7f961 (Review: fix warning message undefined data)
