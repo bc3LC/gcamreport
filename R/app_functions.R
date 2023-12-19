@@ -146,7 +146,7 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 
   # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
   if (firstVars && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Variables") || is.null(sidebarItemExpanded))) {
-    sel_vars_ini <- unique(cols$col1)
+    sel_vars_ini <- unique(cols.global$col1)
     basic_vars <- 1
   }
 
@@ -206,15 +206,15 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 #' @export
 reset_first_load <- function() {
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
-  cols <<- unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+  cols.global <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
   firstLoad <<- TRUE
   firstReg <<- TRUE
   firstVars <<- TRUE
   noReg <<- FALSE
   noVars <<- FALSE
   updatedVars <<- FALSE
-  all_varss <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols.global)
 }
 
 

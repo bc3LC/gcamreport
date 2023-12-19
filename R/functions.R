@@ -73,7 +73,7 @@ filter_loading_regions <- function (data, desired_regions = 'All', variable) {
 #' @export
 filter_variables <- function(data, variable) {
 
-  if (variable %in% variables[variables$required == TRUE,]$name) {
+  if (variable %in% variables.global[variables.global$required == TRUE,]$name) {
     if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
       if ('var' %in% colnames(data)) {
         data <- data %>%
@@ -1127,7 +1127,7 @@ filter_data_regions <- function(data) {
 #' @export
 get_regions_tmp <- function() {
   CO2_market_filteredReg <- filter_data_regions(CO2_market)
-  regions <<-
+  regions.global <<-
     unique(CO2_market_filteredReg$region)
 }
 
@@ -1177,7 +1177,7 @@ get_co2_price_global_tmp <- function() {
       mutate(market = gsub("global", "", market)) %>%
       left_join(filter_variables(co2_market_frag_map, 'co2_price_global'), by = "market", multiple = "all") %>%
       filter(value != 0) %>%
-      expand_grid(tibble(region = regions)) %>%
+      expand_grid(tibble(region = regions.global)) %>%
       select(all_of(long_columns))
 
   } else {
@@ -1313,7 +1313,7 @@ get_co2_price_fragmented_tmp <- function() {
       select(Units, scenario, year, region, value, CO2, CO2_ETS, share_CO2_ETS, sector) %>%
       left_join(filter_variables(co2_market_frag_map, 'co2_price_fragmented'), by = "sector", multiple = "all") %>%
       filter(complete.cases(.)) %>%
-      complete(nesting(scenario, var, year, market, Units), region = regions, fill = list(value = 0)) %>%
+      complete(nesting(scenario, var, year, market, Units), region = regions.global, fill = list(value = 0)) %>%
       select(all_of(long_columns))
   } else {
 
@@ -2049,7 +2049,7 @@ get_resource_investment <- function() {
 #' @importFrom magrittr %>%
 #' @export
 do_bind_results <- function() {
-  vars <- variables[variables$required == TRUE, 'name']
+  vars <- variables.global[variables.global$required == TRUE, 'name']
   GCAM_DATA <-
     bind_rows(lapply(vars, function(x) get(x))) %>%
     mutate(region = gsub("Global", "World", region),
@@ -2073,8 +2073,8 @@ do_bind_results <- function() {
     replace_na(list(value = 0)) %>%
     distinct(.)
 
-  # filter to final_db_year
-  GCAM_DATA_wGLOBAL <- GCAM_DATA_wGLOBAL %>% filter(year <= final_db_year)
+  # filter to final_year.global
+  GCAM_DATA_wGLOBAL <- GCAM_DATA_wGLOBAL %>% filter(year <= final_year.global)
 
 
   report <<-
@@ -2088,7 +2088,7 @@ do_bind_results <- function() {
     rename(Region = region) %>%
     #  rename(Model = ?..Model) %>%
     rename(Scenario = scenario) %>%
-    select(all_of(reporting_columns_fin)) %>%
+    select(all_of(reporting_columns.global)) %>%
     filter(!is.na(Region)) # Drop variables we don't report
 
   if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
@@ -2156,7 +2156,7 @@ do_check_vetting <- function() {
     gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
     rename(region = Region,
            variable = Variable) %>%
-    filter(Scenario == Scenarios[1]) %>%
+    filter(Scenario == scenarios.global[1]) %>%
     mutate(year = as.integer(year))
 
   check_vet <- global_vet_values %>%
@@ -2230,6 +2230,8 @@ do_check_vetting <- function() {
 #' as well as cleans no-reported variables
 #' @keywords internal
 #' @importFrom here here
+#' @importFrom utils write.csv
+#' @importFrom usethis use_data
 #' @importFrom dplyr filter mutate select anti_join if_else
 #' @return Updated template as .rda and as csv in the inst/extdata folder
 update_template <- function() {

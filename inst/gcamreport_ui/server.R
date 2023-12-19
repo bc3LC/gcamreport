@@ -8,12 +8,12 @@ server <- function(input, output, session) {
 
   ## -- select all/none variables
   observeEvent(input$select_all_variables, {
-    tree_vars <<- do_mount_tree(cols, names(cols), selec = TRUE)
+    tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = tree_vars)
     noVars <<- FALSE
   })
   observeEvent(input$select_none_variables, {
-    tree_vars <<- do_mount_tree(cols, names(cols), selec = FALSE)
+    tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = FALSE)
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_variables", data = tree_vars)
     noVars <<- TRUE
   })
@@ -158,7 +158,7 @@ server <- function(input, output, session) {
                      if (firstLoad) {
                        firstLoad <<- FALSE
                        # set selected variables and regions to all possiblities
-                       sel_vars = unique(cols$col1)
+                       sel_vars = unique(cols.global$col1)
                        sel_reg = reg_cont$region
                        # set basic_reg and basic_vars to TRUE
                        basic_reg = TRUE
@@ -175,7 +175,7 @@ server <- function(input, output, session) {
 
                        # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
                        if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-                         sel_vars = unique(cols$col1)
+                         sel_vars = unique(cols.global$col1)
                          basic_vars = 1
                        }
 
@@ -735,7 +735,7 @@ server <- function(input, output, session) {
       # update the tableData with the user's choices but considering all possible variables and regions
       tableData <- do_data_sample(sdata,
                                   input$selected_scen,input$selected_years,
-                                  input$selected_cols,unique(cols$col1),
+                                  input$selected_cols,unique(cols.global$col1),
                                   reg_cont$region, TRUE, TRUE)
     } else {
       basic_reg = 0
@@ -749,7 +749,7 @@ server <- function(input, output, session) {
 
       # if it's the first time loading variables and there is a sidebarItem expanded different than variables, choose all possible variables
       if (firstVars && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Variables") || is.null(input$sidebarItemExpanded))) {
-        sel_vars = unique(cols$col1)
+        sel_vars = unique(cols.global$col1)
         basic_vars = 1
       }
 

@@ -39,12 +39,12 @@ industry_production_clean;get_industry_production;;;industry primary output by s
 ag_prices_wld;get_ag_prices_wld_tmp;;;prices by sector
 ag_prices_clean;get_ag_prices;ag_prices_wld;;prices by sector
 price_var;get_price_var_tmp;;;
-regions;get_regions_tmp;;;
+regions.global;get_regions_tmp;;;
 region_weight;get_regions_weight_tmp;fe_sector_clean;;Final Energy
 co2_ets_bysec;get_co2_ets;;;nonCO2 emissions by region,nonCO2 emissions by sector (excluding resource production)
 co2_price_share_bysec;get_co2_price_share;co2_ets_bysec,co2_clean;;
-co2_price_global;get_co2_price_global_tmp;regions,price_var;;CO2 prices
-co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,region_weight,regions,co2_price_share_bysec;;CO2 prices
+co2_price_global;get_co2_price_global_tmp;regions.global,price_var;;CO2 prices
+co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,region_weight,regions.global,co2_price_share_bysec;;CO2 prices
 co2_price_clean;get_co2_price;co2_price_fragmented,co2_price_global;;
 gov_revenue_sector;get_gov_revenue_sector;co2_clean;;
 gov_revenue_clean;get_gov_revenue;gov_revenue_sector;;
