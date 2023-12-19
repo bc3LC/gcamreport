@@ -12,3 +12,5 @@ conv_ghg_co2e(data)
 \description{
 Covert GHG to CO2e
 }
+\keyword{conversion}
+\keyword{internal}

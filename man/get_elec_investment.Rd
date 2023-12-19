@@ -13,4 +13,5 @@ elec_investment_clean global variable
 Calculate electricity investment = annual capacity additions * capital costs
 }
 \keyword{capital}
+\keyword{internal}
 \keyword{process}

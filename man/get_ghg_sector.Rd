@@ -13,3 +13,4 @@ ghg_sector_clean global variable
 Get sectorial GHG emissions.
 }
 \keyword{ghg}
+\keyword{internal}

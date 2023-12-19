@@ -13,4 +13,5 @@ LU_carbon_clean global variable
 Get land use CO2 emissions.
 }
 \keyword{co2}
+\keyword{internal}
 \keyword{lu}

@@ -13,4 +13,5 @@ tot_co2_clean global variable
 Compute total CO2 emission.
 }
 \keyword{co2}
+\keyword{internal}
 \keyword{process}

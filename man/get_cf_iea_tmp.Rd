@@ -13,5 +13,6 @@ cf_iea global variable
 Calculate cf for existing capacity checking global existing capacity from IEA.
 }
 \keyword{capacity}
+\keyword{internal}
 \keyword{process}
 \keyword{tmp}

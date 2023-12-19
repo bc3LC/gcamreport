@@ -12,4 +12,5 @@ population_clean global variable
 \description{
 Get population query and change units to [million].
 }
+\keyword{internal}
 \keyword{population}

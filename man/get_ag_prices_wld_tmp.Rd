@@ -13,4 +13,5 @@ ag_prices_wld global variable
 Get ag price index.
 }
 \keyword{ag}
+\keyword{internal}
 \keyword{tmp}

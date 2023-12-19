@@ -13,4 +13,5 @@ fe_sector global variable
 Get final energy demand by sector
 }
 \keyword{energy}
+\keyword{internal}
 \keyword{tmp}

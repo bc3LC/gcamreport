@@ -12,4 +12,5 @@ Save results in an output file.
 \description{
 Bind and save results
 }
+\keyword{internal}
 \keyword{process}

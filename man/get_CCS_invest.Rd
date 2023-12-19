@@ -12,5 +12,6 @@ CCS_invest_clean global variable
 \description{
 Calculate CSS investment
 }
+\keyword{internal}
 \keyword{investment}
 \keyword{process}

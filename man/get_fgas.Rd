@@ -13,4 +13,5 @@ f_gas_clean global variable
 Compute F-Gases emissions.
 }
 \keyword{f-gases}
+\keyword{internal}
 \keyword{process}

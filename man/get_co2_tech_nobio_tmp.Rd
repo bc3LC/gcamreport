@@ -13,4 +13,5 @@ co2_tech_nobio global variable
 Get no bio CO2 emissions query by sector and techonolgy.
 }
 \keyword{co2}
+\keyword{internal}
 \keyword{tmp}

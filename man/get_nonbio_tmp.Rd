@@ -13,3 +13,4 @@ nonbio_share global variable
 Get no bio CO2 emissions query by sector.
 }
 \keyword{co2}
+\keyword{internal}

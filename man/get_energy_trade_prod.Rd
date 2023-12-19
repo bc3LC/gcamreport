@@ -13,3 +13,4 @@ energy_trade_prod global variable
 Get energy trade.
 }
 \keyword{energy}
+\keyword{internal}

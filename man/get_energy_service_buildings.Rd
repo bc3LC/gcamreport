@@ -13,3 +13,4 @@ energy_service_buildings_clean global variable
 Get ES buildings.
 }
 \keyword{energy}
+\keyword{internal}

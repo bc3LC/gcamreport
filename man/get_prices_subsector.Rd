@@ -12,4 +12,5 @@ prices_subsector global variable
 \description{
 Get energy prices - primary, secondary, and final
 }
+\keyword{internal}
 \keyword{prices}

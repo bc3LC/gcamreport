@@ -16,3 +16,5 @@ approx_fun(year, value, rule = 1)
 \description{
 Interpolation function
 }
+\keyword{internal}
+\keyword{utils}

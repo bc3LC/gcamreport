@@ -14,3 +14,4 @@ Update the template file. This function checks for new reported variables,
 as well as cleans no-reported variables
 }
 \keyword{internal}
+\keyword{template}

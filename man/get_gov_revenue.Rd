@@ -12,4 +12,5 @@ gov_revenue_all global variable
 \description{
 Get overall carbon revenue.
 }
+\keyword{internal}
 \keyword{revenue}

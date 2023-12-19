@@ -12,5 +12,6 @@ iron_steel_map global variable
 \description{
 Get iron and steel emissions.
 }
+\keyword{internal}
 \keyword{iron}
 \keyword{steel}

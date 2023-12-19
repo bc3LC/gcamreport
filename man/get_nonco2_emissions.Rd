@@ -12,4 +12,5 @@ nonco2_clean global variable
 \description{
 Get non CO2 emissions query.
 }
+\keyword{internal}
 \keyword{nonco2}

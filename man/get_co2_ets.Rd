@@ -13,3 +13,4 @@ co2_ets_by reg and co2_ets_bysec global variables
 Get World's CO2 ETS emissions query.
 }
 \keyword{co2}
+\keyword{internal}

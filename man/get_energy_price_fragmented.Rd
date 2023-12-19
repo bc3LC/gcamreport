@@ -12,5 +12,6 @@ energy_price_fragmented global variable
 \description{
 Get energy prices fragmented, join by region since price is different.
 }
+\keyword{internal}
 \keyword{prices}
 \keyword{process}

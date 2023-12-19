@@ -13,4 +13,5 @@ elec_capital_clean global variable
 Calculate electricity capital
 }
 \keyword{capital}
+\keyword{internal}
 \keyword{process}

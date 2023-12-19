@@ -13,3 +13,4 @@ elec_gen_tech_clean global variable
 Get electricity generation
 }
 \keyword{electricity}
+\keyword{internal}
