@@ -24,7 +24,7 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regi
   qq <- xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
   for (sc in scenarios) {
-    emiss_list <- emissions_list
+    emiss_list <- gcamreport::emissions_list
     while (length(emiss_list) > 0) {
       current_emis <- emiss_list[1:min(21,length(emiss_list))]
       qq_sec <- gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
@@ -140,9 +140,9 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
     if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
       # create a mapping with the Variables, Internal variables, functions to load
       # them, and the dependencies
-      required_internal_variables = var_fun_map %>%
+      required_internal_variables = gcamreport::var_fun_map %>%
         rename('Internal_variable' = 'name') %>%
-        left_join(template %>%
+        left_join(gcamreport::template %>%
                     filter(!is.na(Internal_variable)),
                   by = 'Internal_variable') %>%
         mutate(required = if_else(Variable %in% desired_variables, TRUE, FALSE))
@@ -312,7 +312,7 @@ load_query <- function(var, base_data, final_queries){
 #' @importFrom dplyr mutate if_else
 #' @export
 available_regions <- function(print = TRUE) {
-  av_reg <- reg_cont %>%
+  av_reg <- gcamreport::reg_cont %>%
     mutate(region = if_else(continent == 'World', 'World', region))
 
   if (print) {
@@ -332,7 +332,7 @@ available_regions <- function(print = TRUE) {
 #' IAMC reporting dataset. It also returns them as a vector.
 #' @export
 available_continents <- function(print = TRUE) {
-  av_cont <- unique(reg_cont$continent)
+  av_cont <- unique(gcamreport::reg_cont$continent)
 
   if (print) {
     for (it in av_cont) {
@@ -352,7 +352,7 @@ available_continents <- function(print = TRUE) {
 #' @importFrom dplyr filter
 #' @export
 available_variables <- function(print = TRUE) {
-  av_var <- template %>%
+  av_var <- gcamreport::template %>%
     filter(!is.na(Internal_variable) & Internal_variable != "")
 
   if (print) {
@@ -428,7 +428,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
     if (length(check_cont) > 0) {
       stop(paste0("ERROR: You specified the continent/regions' group ",check_cont, ' which is not available for reporting.\n'))
     }
-    desired_regions <- reg_cont %>%
+    desired_regions <- gcamreport::reg_cont %>%
       filter(continent %in% desired_continents) %>%
       pull(region)
   }
@@ -511,7 +511,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_year.global, by = 5)))
 
   # desired variables to have in the report
-  variables_base <- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
+  variables_base <- data.frame('name' = unique(gcamreport::template$Internal_variable)[!is.na(unique(gcamreport::template$Internal_variable)) & unique(gcamreport::template$Internal_variable) != ""],
                                 'required' = TRUE,
                                 stringsAsFactors = FALSE)
 
@@ -521,7 +521,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   } else {
     variables.global <<- variables_base %>%
       mutate(required = if_else(
-        !name %in% unique(template %>%
+        !name %in% unique(gcamreport::template %>%
                             filter(Variable %in% desired_variables) %>%
                             pull(Internal_variable)),
         FALSE, required))
@@ -530,7 +530,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   print('Loading data, performing checks, and saving output...')
 
   # consider the dependencies and checking functions
-  variables.global <<- merge(variables.global,var_fun_map, by = 'name', all = TRUE) %>%
+  variables.global <<- merge(variables.global,gcamreport::var_fun_map, by = 'name', all = TRUE) %>%
     replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
@@ -646,7 +646,7 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
   cols.global <<- unique(sdata[, grepl('col', names(sdata))])
   tree_vars <<- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
 
-  tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
+  tree_reg <<- do_mount_tree(gcamreport::reg_cont,names(gcamreport::reg_cont),selec=TRUE)
 
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)
