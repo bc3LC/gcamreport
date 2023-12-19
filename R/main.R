@@ -90,7 +90,7 @@ load_project <- function(project_path, desired_regions = 'All') {
       }
     }
   }
-  Scenarios <<- listScenarios(prj)
+  scenarios.global <<- listScenarios(prj)
 
   prj <<- prj
 }
@@ -238,7 +238,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
     saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = '_')))
 
 
-    Scenarios <<- listScenarios(prj)
+    scenarios.global <<- listScenarios(prj)
 
     prj <<- prj
   }
@@ -262,7 +262,7 @@ load_variable <- function(var){
   # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
-      load_variable(variables[which(variables$name == d),])
+      load_variable(variables.global[which(variables.global$name == d),])
     }
   }
 
@@ -273,7 +273,7 @@ load_variable <- function(var){
   get(var$fun)()
 
   # keep record of the loaded variables
-  loaded_internal_variables <<- c(loaded_internal_variables, var$name)
+  loaded_internal_variables.global <<- c(loaded_internal_variables.global, var$name)
 }
 
 
@@ -401,6 +401,7 @@ available_variables <- function(print = TRUE) {
 #' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 #' @import dplyr
 #' @importFrom tidyr replace_na
+#' @importFrom utils write.csv
 #' @importFrom writexl write_xlsx
 #' @importFrom stringr str_sub str_locate
 #' @export
@@ -503,11 +504,11 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
     stop('ERROR: Specify either a project or a database to extract the data from.')
   }
 
-  # make final_db_year as a global variable
-  final_db_year <<- final_year
+  # make final_year as a global variable
+  final_year.global <<- final_year
 
   # final reporting columns
-  reporting_columns_fin <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_db_year, by = 5)))
+  reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_year.global, by = 5)))
 
   # desired variables to have in the report
   variables_base <- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
@@ -516,9 +517,9 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
 
   # consider only the desired variables
   if (length(desired_variables) == 1 && desired_variables == 'All') {
-    variables <<- variables_base
+    variables.global <<- variables_base
   } else {
-    variables <<- variables_base %>%
+    variables.global <<- variables_base %>%
       mutate(required = if_else(
         !name %in% unique(template %>%
                             filter(Variable %in% desired_variables) %>%
@@ -529,16 +530,16 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   print('Loading data, performing checks, and saving output...')
 
   # consider the dependencies and checking functions
-  variables <<- merge(variables,var_fun_map, by = 'name', all = TRUE) %>%
+  variables.global <<- merge(variables.global,var_fun_map, by = 'name', all = TRUE) %>%
     replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
-  loaded_internal_variables <<- c()
+  loaded_internal_variables.global <<- c()
   desired_regions <<- desired_regions
   desired_variables <<- desired_variables
-  for (i in 1:nrow(variables)) {
-    if (variables$required[i]) {
-      load_variable(variables[i,])
+  for (i in 1:nrow(variables.global)) {
+    if (variables.global$required[i]) {
+      load_variable(variables.global[i,])
     }
   }
 
@@ -570,10 +571,10 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   } else {
     # checks, vetting, and errors summary
     vetting_summary <- list()
-    for (ch in variables$checks) {
+    for (ch in variables.global$checks) {
       if (!is.na(ch)) {
         for (d in ch[[1]]) {
-          out = get(variables$fun[which(variables$name == d)])()
+          out = get(variables.global$fun[which(variables.global$name == d)])()
           vetting_summary[[str_sub(as.character(out$message),
                                    end = str_locate(as.character(out$message), ':') - 1)[1]]] = out
         }
@@ -593,8 +594,8 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   }
 
   # remove internal variables from the environment
-  rm(list = loaded_internal_variables, envir = .GlobalEnv)
-  rm(list = c('loaded_internal_variables', 'variables'), envir = .GlobalEnv)
+  rm(list = loaded_internal_variables.global, envir = .GlobalEnv)
+  rm(list = c('loaded_internal_variables.global', 'variables.global'), envir = .GlobalEnv)
   gc()
 
   if (launch_ui) {
@@ -642,13 +643,13 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
   available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
 
   # develop a nested list of the variables and regions for launching the ui
-  cols <<- unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+  cols.global <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
 
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
 
   # save a list of all variables
-  all_varss <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols.global)
 
   runApp('inst/gcamreport_ui')
 }

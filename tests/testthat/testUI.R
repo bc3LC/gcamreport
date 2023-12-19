@@ -13,11 +13,11 @@ test_that("Test1. test tree functions", {
   # create vector of available years for launching the ui
   available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
   # develop a nested list of the variables and regions for launching the ui
-  cols <<- unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <<- do_mount_tree(cols,names(cols),selec=TRUE)
+  cols.global <<- unique(sdata[, grepl('col', names(sdata))])
+  tree_vars <<- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
   tree_reg <<- do_mount_tree(reg_cont,names(reg_cont),selec=TRUE)
   # save a list of all variables
-  all_varss <<- do_collapse_df(cols)
+  all_varss <<- do_collapse_df(cols.global)
 
 
   # do_mount_tree with regions
@@ -26,12 +26,12 @@ test_that("Test1. test tree functions", {
   testthat::expect_equal(testResult1, testExpect1)
 
   # do_mount_tree with variables
-  testResult2 <- do_mount_tree(cols,names(cols),selec=TRUE)
+  testResult2 <- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
   testExpect2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat),'testOutputs/v_7.0/test_ui_2.RData')))
   testthat::expect_equal(testResult2, testExpect2)
 
   # do_collapse_df
-  testResult3 <- do_collapse_df(cols)
+  testResult3 <- do_collapse_df(cols.global)
   testExpect3 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat),'testOutputs/v_7.0/test_ui_3.RData')))
   testthat::expect_equal(testResult3, testExpect3)
 

@@ -78,17 +78,21 @@ test_that("Test5_v7. run - dataset saved with default output_file", {
 
 test_that("Test6_v7. load variable and get function", {
 
-  vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat),'testOutputs/v_7.0/results_test6.RData')))
+  # load prj
+  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/test7.dat'), launch_ui = FALSE)
 
-  loaded_internal_variables <<- c()
+  # load variables
+  vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat),'testOutputs/v_7.0/results_test6.RData')))
+  loaded_internal_variables.global <<- c()
   desired_regions <<- 'All'
   desired_variables <<- 'All'
   variables_base <- data.frame('name' = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
                                'required' = TRUE,
                                stringsAsFactors = FALSE)
-  variables <<- merge(variables_base,var_fun_map, by = 'name', all = TRUE) %>%
+  variables.global <<- merge(variables_base,var_fun_map, by = 'name', all = TRUE) %>%
     tidyr::replace_na(list(required = FALSE))
 
+  # test
   load_variable(vv)
 
   testthat::expect(exists("ag_prices_wld"), 'Loading variables function is broken.')
@@ -134,12 +138,12 @@ test_that("Test7_v7. specify variables, regions, continents", {
                   desired_variables = available_variables(F)[c(1,3,10,11)],
                   launch_ui = FALSE)
   testthat::expect_equal(unique(report$Variable), c("Agricultural Demand",
-                                                        "Agricultural Demand|Crops|Energy",
-                                                        "Agricultural Production",
-                                                        "Capacity Additions|Electricity|Biomass"))
+                                                    "Agricultural Demand|Crops|Energy",
+                                                    "Agricultural Production",
+                                                    "Capacity Additions|Electricity|Biomass"))
   testthat::expect_equal(unique(report$Region), c("Australia_NZ","Canada","EU-12","EU-15",
-                                                      "Europe_Non_EU","European Free Trade Association",
-                                                      "Japan","USA","World"))
+                                                  "Europe_Non_EU","European Free Trade Association",
+                                                  "Japan","USA","World"))
 
   rm(list = ls())
   generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0'),
