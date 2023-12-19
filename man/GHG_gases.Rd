@@ -5,7 +5,7 @@
 \alias{GHG_gases}
 \title{GHG_gases}
 \format{
-An object of class \code{character} of length 17.
+An object of class \code{character} of length 20.
 }
 \usage{
 GHG_gases

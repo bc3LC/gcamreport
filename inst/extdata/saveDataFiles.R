@@ -185,59 +185,36 @@ use_data(co2_market_frag_map, overwrite=T)
 
 # List of Constants
 
-CUMULATIVE_EMISSIONS_BUDGET_GOALS <- c(300, 400, 500, 600, 700, 800, 900, 950, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000)
-use_data(CUMULATIVE_EMISSIONS_BUDGET_GOALS, overwrite=T)
-
-# Basic format conv_[from]_[to]
-conv_thousand_million <- 1/1000
-use_data(conv_thousand_million, overwrite=T)
-
-conv_million_billion <- 1/1000
-use_data(conv_million_billion, overwrite=T)
-
-# NOTE: These values are only used for queries that don't have an associated mapping file
-# for queries such as primary_fuel_prices this conversion is specified in the mapping file
-# These values are taken from GDP inflator in the GCAM R package
-conv_90USD_10USD <- 1.515897
-use_data(conv_90USD_10USD, overwrite=T)
-
-conv_75USD_10USD <- 3.227608
-use_data(conv_75USD_10USD, overwrite=T)
-
-conv_15USD_10USD <- .91863
-use_data(conv_15USD_10USD, overwrite=T)
-
-conv_19USD_75USD <- .2658798
-use_data(conv_19USD_75USD, overwrite=T)
-
-conv_C_CO2 <- 44/12
-use_data(conv_C_CO2, overwrite=T)
-
-
-# Elec related conversions
-hr_per_yr <- 8760
-use_data(hr_per_yr, overwrite=T)
-
-EJ_to_GWh <- 0.0000036
-use_data(EJ_to_GWh, overwrite=T)
-
-bcm_to_EJ <- 0.03600
-use_data(bcm_to_EJ, overwrite=T)
-
-GJ_to_EJ <- 1.0E9
-use_data(GJ_to_EJ, overwrite=T)
-
+convert <- list(
+  # Basic format conv_[from]_[to]
+  conv_thousand_million = 1/1000,
+  conv_million_billion = 1/1000,
+  # NOTE: These values are only used for queries that don't have an associated mapping file
+  # for queries such as primary_fuel_prices this conversion is specified in the mapping file
+  # These values are taken from GDP inflator in the GCAM R package
+  conv_90USD_10USD = 1.515897,
+  conv_75USD_10USD = 3.227608,
+  conv_15USD_10USD = 0.91863,
+  conv_19USD_75USD = 0.2658798,
+  conv_C_CO2 = 44/12,
+  # Elec related conversions
+  hr_per_yr = 8760,
+  EJ_to_GWh = 0.0000036,
+  bcm_to_EJ = 0.03600,
+  GJ_to_EJ = 1.0E9,
+  #ghg * CO2_equivalent gives CO2 units
+  CO2_equivalent = 3.666667
+)
+use_data(convert, overwrite=T)
 
 # GHG emission conversion
 F_GASES <- c("C2F6", "CF4", "HFC125", "HFC134a", "HFC245fa", "SF6", "HFC143a",
-             "HFC152a", "HFC227ea", "HFC23", "HFC236fa", "HFC32", "HFC365mfc")
+             "HFC152a", "HFC227ea", "HFC23", "HFC236fa", "HFC32", "HFC365mfc",
+             "HFC43", "HFC245fa", "HFC43-10")
 use_data(F_GASES, overwrite=T)
 
 GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 use_data(GHG_gases, overwrite=T)
-
-CO2_equivalent <- 3.666667 #ghg * CO2_equivalent gives CO2 units
-use_data(CO2_equivalent, overwrite=T)
 
 
 # Reporting years
@@ -257,112 +234,3 @@ use_data(last_historical_year, overwrite=T)
 long_columns <- c("scenario", "region", "var", "year", "value")
 use_data(long_columns, overwrite=T)
 
-reporting_columns <- c("Model", "Scenario", "Region", "Variable", "Unit", reporting_years)
-use_data(reporting_columns, overwrite=T)
-
-
-# state names
-state_names <- c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI",
-                 "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI",
-                 "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC",
-                 "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT",
-                 "VT", "VA", "WA", "WV", "WI", "WY")
-use_data(state_names, overwrite=T)
-
-
-################################################################################
-
-# color by tech
-tech.color <- c( "biomass w/o ccs" = "darkgreen", "biomass w/ ccs" = "olivedrab",
-                 "traditional biomass" = "olivedrab3", "biomass traditional" = "olivedrab3",
-                 "biomass 1st generation" = "olivedrab1",
-                 "solar" = "goldenrod1",
-                 "wind" = "skyblue",
-                 "geothermal" = "olivedrab1",
-                 "hydro" = "mediumpurple4",
-                 "coal w/o ccs" = "darkred", "coal w/ ccs" = "firebrick3", "coal.total" = "firebrick4",
-                 "nuclear" = "darkorange1",
-                 "gas w/o ccs" = "mediumorchid3", "gas w/ ccs" = "plum",
-                 "natural gas" = "mediumorchid3", "natural gas_ccs" = "plum",
-                 "oil w/o ccs" = "hotpink", "oil w/ ccs" = "lightpink1",
-                 # "other" = "firebrick3")
-                 "other" = "plum")
-use_data(tech.color, overwrite=T)
-
-
-colScaleTech <- ggplot2::scale_colour_manual(name = "technology",
-                                            values = tech.color,
-                                            na.translate = FALSE,
-                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
-use_data(colScaleTech, overwrite=T)
-
-fillScaleTech <- ggplot2::scale_fill_manual(name = "technology",
-                                            values = tech.color,
-                                            na.translate = FALSE,
-                                            guide = ggplot2::guide_legend(reverse = F, ncol = 1))
-use_data(fillScaleTech, overwrite=T)
-
-
-# categorize fuel
-fuel.list <- c("electricity","biomass", "biomass|modern", "biomass|traditional", "gas", "coal", "liquids", "hydrogen")
-use_data(fuel.list, overwrite=T)
-
-
-# color by fuel
-fuel.color <- c( "biomass" = "darkgreen",
-                 "biomass|modern" = "darkgreen",
-                 "biomass|traditional" = "limegreen",
-                 "electricity" = "goldenrod1",
-                 "hydrogen" = "mediumpurple4",
-                 "coal" = "firebrick4",
-                 "gas" = "mediumorchid3",
-                 "liquids" = "hotpink",
-                 "heat" = "darkorange1")
-use_data(fuel.color, overwrite=T)
-
-
-colScaleFuel <- ggplot2::scale_colour_manual(name = "fuel",
-                                    values = fuel.color,
-                                    na.translate = FALSE,
-                                    guide = ggplot2::guide_legend(reverse = F, ncol = 1))
-use_data(colScaleFuel, overwrite=T)
-
-fillScaleFuel <- ggplot2::scale_fill_manual(name = "fuel",
-                                   values = fuel.color,
-                                   na.translate = FALSE,
-                                   guide = ggplot2::guide_legend(reverse = F, ncol = 1))
-use_data(fillScaleFuel, overwrite=T)
-
-
-# categorize sector
-sector.list <- c("Electricity", "Residential and commercial", "Other energy supply", "Refining",
-                 "Transportation", "Industrial processes", "AFOLU CO2", "NonCO2")
-use_data(sector.list, overwrite=T)
-
-
-# color by fuel
-sector.color <- c(
-  "Electricity" = "goldenrod1",
-  "Refining" = "purple",
-  "Industry" = "gray",
-  "Other energy supply" = "navy",
-  "Residential and commercial" = "deepskyblue2",
-  "Transportation" = "darkgreen",
-  "AFOLU CO2" = "lime green",
-  "NonCO2" = "brown")
-use_data(sector.color, overwrite=T)
-
-
-fillScaleSector <- ggplot2::scale_fill_manual(name = "Sector",
-                                     values = sector.color,
-                                     na.translate = FALSE,
-                                     guide = ggplot2::guide_legend(reverse = F, ncol = 1))
-use_data(fillScaleSector, overwrite=T)
-
-
-tech.list <- c("other", "geothermal", "solar", "wind", "biomass w/ ccs", "biomass w/o ccs",
-               "hydro", "nuclear",
-               "gas w/ ccs", "gas w/o ccs", "natural gas_ccs", "natural gas",
-               "oil w/ ccs", "oil w/o ccs", "coal w/ ccs","coal w/o ccs", "coal.total",
-               "biomass 1st generation", "traditional biomass", "biomass traditional")
-use_data(tech.list, overwrite=T)
