@@ -157,7 +157,8 @@ capital_gcam <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "L223
   dplyr::select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
 use_data(capital_gcam, overwrite=T)
 
-investment <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "investment.csv"), na = "", stringsAsFactors = FALSE) %>%
+investment <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "investment.csv"), na = "",
+                       fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE) %>%
   tidyr::gather(year, value, X2015:X2100) %>%
   dplyr::mutate(year = as.integer(sub("X", "", year))) %>%
   dplyr::mutate(value = gsub("%", "", value)) %>%
