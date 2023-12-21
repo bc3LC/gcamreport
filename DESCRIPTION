@@ -39,11 +39,14 @@ Imports:
     shinyjs,
     writexl,
     readxl,
-    rrapply (>= 1.2.6)
+    rrapply (>= 1.2.6),
+    rpackageutils
 Suggests:
     rprojroot,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    devtools,
+    remotes
 Remotes: 
     github::JGCRI/rgcam,
     github::JGCRI/rpackageutils
