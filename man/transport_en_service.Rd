@@ -18,8 +18,8 @@ energy services
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::transport_en_service
+library(gcamreport)
+gcamreport::transport_en_service
 }
 }
 \keyword{datasets}

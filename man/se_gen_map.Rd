@@ -18,8 +18,8 @@ primary, secondary, final energy maps
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::se_gen_map
+library(gcamreport)
+gcamreport::se_gen_map
 }
 }
 \keyword{datasets}

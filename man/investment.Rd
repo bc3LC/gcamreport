@@ -18,8 +18,8 @@ capital investment
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::investment
+library(gcamreport)
+gcamreport::investment
 }
 }
 \keyword{datasets}

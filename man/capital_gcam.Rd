@@ -18,8 +18,8 @@ capital update
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::capital_gcam
+library(gcamreport)
+gcamreport::capital_gcam
 }
 }
 \keyword{datasets}

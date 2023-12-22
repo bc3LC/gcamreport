@@ -15,8 +15,8 @@ reporting columns
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::long_columns
+library(gcamreport)
+gcamreport::long_columns
 }
 }
 \keyword{datasets}

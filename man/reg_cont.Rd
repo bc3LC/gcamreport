@@ -18,8 +18,8 @@ mapping between regions and continents
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::reg_cont
+library(gcamreport)
+gcamreport::reg_cont
 }
 }
 \keyword{datasets}

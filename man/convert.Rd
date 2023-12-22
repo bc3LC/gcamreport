@@ -15,8 +15,8 @@ units conversion list
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::convert
+library(gcamreport)
+gcamreport::convert
 }
 }
 \keyword{datasets}

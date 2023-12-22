@@ -15,8 +15,8 @@ reporting years
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::reporting_years
+library(gcamreport)
+gcamreport::reporting_years
 }
 }
 \keyword{datasets}

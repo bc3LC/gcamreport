@@ -18,8 +18,8 @@ emissions maps
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::nonco2_emis_sector_map
+library(gcamreport)
+gcamreport::nonco2_emis_sector_map
 }
 }
 \keyword{datasets}

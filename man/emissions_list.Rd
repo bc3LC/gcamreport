@@ -18,8 +18,8 @@ nonCO2 pollutants list
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::emissions_list
+library(gcamreport)
+gcamreport::emissions_list
 }
 }
 \keyword{datasets}

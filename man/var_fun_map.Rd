@@ -18,8 +18,8 @@ mapping between variables, functions to load them, dependent variables, and avai
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::var_fun_map
+library(gcamreport)
+gcamreport::var_fun_map
 }
 }
 \keyword{datasets}

@@ -18,8 +18,8 @@ energy services
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::buildings_en_service
+library(gcamreport)
+gcamreport::buildings_en_service
 }
 }
 \keyword{datasets}

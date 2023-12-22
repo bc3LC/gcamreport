@@ -18,8 +18,8 @@ ghg adjuster
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::GWP_adjuster
+library(gcamreport)
+gcamreport::GWP_adjuster
 }
 }
 \keyword{datasets}
