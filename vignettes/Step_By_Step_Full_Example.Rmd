@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-In this tutorial we will 1) generate a dataset from a provided GCAM6.0 database and run the associated user interface and 2) generate a dataset from a provided project and run the corresponding user interface. To know more about the `gcamreport` package possibilities, look at these tutorials: [dataset generation tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) and [user interface tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html).
+In this tutorial, we will 1) generate a dataset from a provided GCAM7.0 database and run the associated user interface and 2) generate a dataset from a provided project and run the corresponding user interface. To know more about the `gcamreport` package possibilities, look at these tutorials: [dataset generation tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) and [user interface tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html).
 
 <span style="color:white">newline</span>
 

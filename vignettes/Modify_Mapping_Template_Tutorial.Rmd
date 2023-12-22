@@ -1,0 +1,118 @@
+---
+title: "Modify Mappings and Template Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Modify_Mapping_Template_Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+In this tutorial, we will modify some of the pre-build mappings of the `gcamreport` package
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 1: step-by-step to add a new mapping item - *AvocadoSeeds* and *AvocadoSeedsTrees*
+
+In this example, we assume that the GCAM version has a more detailed land-food system and reports a new food item called *AvocadoSeeds* and a new land-leaf called *AvocadoSeedsTrees*. Thus, we need to modify `gcamreport` to include these items in the reporting dataset. In this example, the new items add to the final *cropland* area and several pollutant *emissions*, but do not have their own category in the template.
+
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Open the `gcamreport.Rprj`.
+
+3) To modify the mappings, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *NutsSeeds* and *NutsSeedsTree*. To see where the mapping modifications should be performed, search across all files (`Ctrl + Shift + F`) inside `inst/extdata/mappings` for the key words *NutsSeeds* and *NutsSeedsTree*.
+   
+4) Using the previous point method, we can see that we should add some lines to the following files stored in `inst/extdata/mappings`:
+   
+   a. `ag_prices_map.csv`. Add this line: 
+   ```
+   AvocadoTrees,,,,,,,,,1
+   ```
+   b. `Kyotogas_sector.csv`. Add these lines: 
+   ```
+   CH4,AWB,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
+   N2O,AGR,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
+   N2O,AWB,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
+   ```
+   c. `land_use_map.csv`. Add these line
+   ```
+   AvocadoTrees,Land Cover,Land Cover|Cropland,,,,,,,0.1
+   AvocadoTreesTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
+   ```
+   d. `nonCO2_emissions_sector_map.csv`. Add these lines
+   ```
+   AvocadoTrees,BC_AWB,Emissions|BC,Emissions|BC|AFOLU,,,,,,,1
+   AvocadoTrees,CH4_AWB,Emissions|CH4,Emissions|CH4|AFOLU,,,,,,,1
+   AvocadoTrees,CO_AWB,Emissions|CO,Emissions|CO|AFOLU,,,,,,,1
+   AvocadoTrees,N2O_AGR,Emissions|N2O,Emissions|N2O|AFOLU,,,,,,,1
+   AvocadoTrees,N2O_AWB,Emissions|N2O,Emissions|N2O|AFOLU,,,,,,,1
+   AvocadoTrees,NH3_AGR,Emissions|NH3,Emissions|NH3|AFOLU,,,,,,,1
+   AvocadoTrees,NH3_AWB,Emissions|NH3,Emissions|NH3|AFOLU,,,,,,,1
+   AvocadoTrees,NMVOC_AWB,Emissions|NMVOC,Emissions|NMVOC|AFOLU,,,,,,,1
+   AvocadoTrees,NOx_AGR,Emissions|NOx,Emissions|NOx|AFOLU,,,,,,,1
+   AvocadoTrees,NOx_AWB,Emissions|NOx,Emissions|NOx|AFOLU,,,,,,,1
+   AvocadoTrees,OC_AWB,Emissions|OC,Emissions|OC|AFOLU,,,,,,,1
+   AvocadoTrees,SO2_1_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
+   AvocadoTrees,SO2_2_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
+   AvocadoTrees,SO2_3_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
+   AvocadoTrees,SO2_4_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
+   ```
+5) Update the queries file (if necessary, as is in this example). To do it, open `inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml` and add these lines in the *aggregated land allocation* query.
+   ```
+   <rewrite from="AvocadoSeeds" to="crops" />
+   <rewrite from="AvocadoSeedsTree" to="crops" />
+   ```
+
+6) Update the pre-build mappings: 
+   
+   a) Run the file `inst/extdata/saveDataFiles.R`.
+
+   b) Build the document file: press `Ctrl + Shift + D`.
+
+   c) Install the modified package: `Build > install`.
+
+7) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+
+## Example 2: step-by-step to add/modify a template item - *Energy Service|Transportation|Freight|Bicycling and Walking*
+
+In this example, we assume that the GCAM version has a more detailed energy transportation freight service that considers *Bicycling and Walking*. We want to include this in the report as a new item: *Energy Service|Transportation|Passenger|Bicycling and Walking*. To do it, we need to modify the reporting template.
+
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Open the `gcamreport.Rprj`.
+
+3) To modify the reporting template, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *Energy Service|Transportation|Freight|Road*. To see where the reporting template modifications should be performed, open the reporting template file (`inst/extdata/template/reporting_template.csv`) and search (`Ctrl + F`) for the key words *Energy Service|Transportation|Freight|Road*.
+   
+4) Using the previous point method, we can see that we should add one line to the reporting template:
+   ```
+   "GCAM 7.0","Energy Service|Transportation|Freight|Bicycling and Walking","billion pkm/yr","energy_service_transportation_clean"
+   ```
+   It contains the following columns: GCAM version, item name, units, and internal variable storing its value.
+
+5) Update the pre-build reporting template:
+   
+   a) Run the file `inst/extdata/saveDataFiles.R`.
+
+   b) Build the document file: press `Ctrl + Shift + D`.
+
+   c) Install the modified package: `Build > install`.
+
+6) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+
