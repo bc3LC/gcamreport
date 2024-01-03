@@ -14,6 +14,7 @@ data_query(
 )
 }
 \arguments{
+<<<<<<< HEAD
 \item{db_path:}{path of the database}
 
 \item{db_name:}{name of the database}
@@ -23,13 +24,24 @@ data_query(
 \item{scenarios:}{name of the scenarios to be considered}
 
 \item{type:}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'}
+=======
+\item{type}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.}
+
+\item{db_path}{path of the database.}
+
+\item{db_name}{name of the database.}
+
+\item{prj_name}{name of the project.}
+
+\item{scenarios}{name of the scenarios to be considered.}
+>>>>>>> e5eba6c (Allow default selection of all db/prj scenarios. Improve user's input checks. Add tests)
 
 \item{desired_regions:}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
 }
 \value{
-dataframe with the data from the query
+dataframe with the data from the query.
 }
 \description{
 Add nonCO2 large queries

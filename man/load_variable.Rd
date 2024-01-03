@@ -7,10 +7,14 @@
 load_variable(var)
 }
 \arguments{
+<<<<<<< HEAD
 \item{var:}{variable to be loaded}
+=======
+\item{var}{variable to be loaded.}
+>>>>>>> e5eba6c (Allow default selection of all db/prj scenarios. Improve user's input checks. Add tests)
 }
 \value{
-load variable
+load variable.
 }
 \description{
 Recursive function to load the desired variable and its dependent variables

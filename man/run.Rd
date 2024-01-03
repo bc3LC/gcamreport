@@ -28,7 +28,11 @@ run(
 
 \item{prj_name:}{name of the project.}
 
+<<<<<<< HEAD:man/run.Rd
 \item{scenarios:}{name of the scenarios to be considered.}
+=======
+\item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project or the database are considered.}
+>>>>>>> e5eba6c (Allow default selection of all db/prj scenarios. Improve user's input checks. Add tests):man/generate_report.Rd
 
 \item{final_year:}{final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.}
 

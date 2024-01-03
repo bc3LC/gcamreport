@@ -7,14 +7,22 @@
 load_query(var, base_data, final_queries)
 }
 \arguments{
+<<<<<<< HEAD
 \item{var:}{variable to be loaded}
 
 \item{base_data:}{dataframe with the required internal variables}
 
 \item{final_queries:}{vector of the queries to be loaded}
+=======
+\item{var}{variable to be loaded.}
+
+\item{base_data}{dataframe with the required internal variables.}
+
+\item{final_queries}{vector of the queries to be loaded.}
+>>>>>>> e5eba6c (Allow default selection of all db/prj scenarios. Improve user's input checks. Add tests)
 }
 \value{
-query name to be loaded
+query name to be loaded.
 }
 \description{
 Recursive function to load the necessary queries for the desired variables

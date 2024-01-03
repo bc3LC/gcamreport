@@ -62,4 +62,15 @@ test_that("Test1. test tree functions", {
   testResult9 = compute_height(c('MAF','LAM'))
   testExpect9 = 325
   testthat::expect_equal(testResult9, testExpect9)
+
+})
+
+test_that("Test2. error messages", {
+
+  expect_error(launch_gcamreport_ui(),
+               "Specify either the dataset or the dataset path to be considered.")
+
+  expect_error(launch_gcamreport_ui('dummy1','dummy2'),
+               "Specify either the dataset or the dataset path to be considered, not both")
+
 })

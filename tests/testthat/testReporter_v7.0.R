@@ -186,56 +186,84 @@ test_that("Test7_v7. specify variables, regions, continents", {
 test_that("Test8_v7. error messages", {
 
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
-                               db_name = 'database_basexdb',
+                               db_name = 'database_basexdb_ref',
                                prj_name = 'gcamv7.0_noCreated.dat',
                                scenarios = 'Reference',
                                desired_variables = 'dummy variable',
                                launch_ui = FALSE),
-               "ERROR: You specified the variable dummy variable which is not available for reporting.")
+               "The variable dummy variable is not available for reporting")
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_noCreated.dat',
+                               scenarios = 'Reference',
+                               desired_variables = c('dummy1', 'dummy2'),
+                               launch_ui = FALSE),
+               "The variables dummy1, dummy2 are not available for reporting")
 
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
-                               db_name = 'database_basexdb',
+                               db_name = 'database_basexdb_ref',
                                prj_name = 'gcamv7.0_noCreated.dat',
                                scenarios = 'Reference',
                                desired_variables = 'Final|Energy*',
                                launch_ui = FALSE),
-               "ERROR: You specified the variable Final|Energy* which is not available for reporting.")
-
+               "There is no variable containing the pattern Final|Energy* available for reporting.")
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
-                               db_name = 'database_basexdb',
+                               db_name = 'database_basexdb_ref',
                                prj_name = 'gcamv7.0_noCreated.dat',
                                scenarios = 'Reference',
-                               desired_region = 'dummy region',
+                               desired_variables = c('Final|Energy*','Emissions CH4*'),
                                launch_ui = FALSE),
-               "ERROR: You specified the region dummy region which is not available for reporting.")
+               "There are no variables containing the patterns Final|Energy*, Emissions CH4* available for reporting")
 
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
-                               db_name = 'database_basexdb',
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_noCreated.dat',
+                               scenarios = 'Reference',
+                               desired_regions = 'dummy region',
+                               launch_ui = FALSE),
+               "The desired region dummy region is not available for reporting.")
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_noCreated.dat',
+                               scenarios = 'Reference',
+                               desired_regions = c('dummy1', 'dummy2'),
+                               launch_ui = FALSE),
+               "The desired regions dummy1, dummy2 are not available for reporting.")
+
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
                                prj_name = 'gcamv7.0_p1.dat',
                                scenarios = 'Reference',
                                desired_continents = 'dummy continent',
                                launch_ui = FALSE),
-               "ERROR: You specified the continent/regions' group dummy continent which is not available for reporting.")
+               "The desired continent/regions' group dummy continent is not available for reporting.")
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_p1.dat',
+                               scenarios = 'Reference',
+                               desired_continents = c('dummy1', 'dummy2'),
+                               launch_ui = FALSE),
+               "The desired continent/regions' groups dummy1, dummy2 are not available for reporting.")
 
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
                                prj_name = 'gcamv7.0_p1.dat',
                                scenarios = 'Reference',
                                launch_ui = FALSE),
-               "If db_path, prj_name, scenarios are specified, db_name must also be specified.")
+               "If db_path, prj_name are specified, db_name must also be specified.")
 
   expect_error(generate_report(project_path = 'dummy name',
                                db_path = 'dummy name',
                                launch_ui = FALSE),
-               "ERROR: Specify either a project or a database to extract the data from. Not both.")
+               "Specify either a project or a database to extract the data from. Not both.")
 
   expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
-                               db_name = 'database_basexdb',
+                               db_name = 'database_basexdb_ref',
                                prj_name = 'gcamv7.0_p1.dat',
                                scenarios = 'Reference',
                                desired_regions = 'dummy region',
                                desired_continents = 'dummy continent',
                                launch_ui = FALSE),
-               "ERROR: You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.")
+               "You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.")
 
 })
 
@@ -296,6 +324,74 @@ test_that("Test10_v7. vetting", {
       desired_variables = c('Final Energy*'),
       launch_ui = FALSE)
 
-  testthat::expect(exists('vetting_summary'), 'ERROR: vetting performed when not all regions were selected')
+  testthat::expect(exists('vetting_summary'), 'Vetting performed when not all regions were selected')
+
+})
+
+test_that("Test11_v7. scenarios", {
+
+  # check when creating project
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_p1.dat',
+                               scenarios = c('dummy', 'Reference'),
+                               launch_ui = FALSE),
+               "The desired scenario dummy is not present in the database.")
+
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_p1.dat',
+                               scenarios = c('dummy1', 'dummy2', 'Reference'),
+                               launch_ui = FALSE),
+               "The desired scenarios dummy1, dummy2 are not present in the database.")
+
+  generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0'),
+                  db_name = 'database_basexdb_ref',
+                  prj_name = 'gcamv7.0_test_scenarios.dat',
+                  final_year = 2050,
+                  desired_regions = 'All',
+                  desired_variables = c('Emissions|CH4*'),
+                  launch_ui = FALSE)
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal('Reference', testResult)
+
+  # check when loading project
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_test_scenarios.dat',
+                               scenarios = c('dummy', 'Reference'),
+                               launch_ui = FALSE),
+               "The desired scenario dummy is not present in the loaded project.")
+
+  expect_error(generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0/'),
+                               db_name = 'database_basexdb_ref',
+                               prj_name = 'gcamv7.0_test_scenarios.dat',
+                               scenarios = c('dummy1', 'dummy2', 'Reference'),
+                               launch_ui = FALSE),
+               "The desired scenarios dummy1, dummy2 are not present in the loaded project.")
+
+  generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0'),
+                  db_name = 'database_basexdb_ref',
+                  prj_name = 'gcamv7.0_test_scenarios.dat',
+                  final_year = 2050,
+                  desired_regions = 'All',
+                  desired_variables = c('Emissions|CH4*'),
+                  launch_ui = FALSE)
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal('Reference', testResult)
+
+  generate_report(db_path = file.path(rprojroot::find_root(rprojroot::is_testthat),'testInputs/v_7.0'),
+                  db_name = 'database_basexdb',
+                  prj_name = 'test_scenarios7.dat',
+                  final_year = 2050,
+                  scenarios = 'CP_EI_recovery',
+                  desired_regions = 'USA',
+                  desired_variables = 'Emissions|CH4*',
+                  launch_ui = FALSE)
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal('CP_EI_recovery', testResult)
 
 })
