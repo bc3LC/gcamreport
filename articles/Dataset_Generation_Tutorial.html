@@ -129,7 +129,9 @@ will be generated and automatically saved in the same folder where
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Store the database path and name, the query path, the desired
-project name, and the considered scenarios in variables.</li>
+project name, and the considered scenarios in variables. In case you do
+not specify the scenarios, all the scenarios in the database will be
+considered for reporting.</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
@@ -147,7 +149,9 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, </span>
+<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: project generation requires approximately 30
 minutes.</p>
 <p>Notice that the dataset will automatically be saved in
@@ -180,10 +184,13 @@ all of them or you need to generate the project, see <a href="#example1">Example
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
-<li>Store the project path in a variable.</li>
+<li>Store the project path and the scenarios in a variable. In case you
+do not specify the scenarios, all the scenarios in the project will be
+considered for the reporting.</li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span>
+<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the extension is included. Accepted extensions:
 <code>.dat</code> &amp; <code>.proj</code>.</p>
 <p><strong>Note</strong>: in case you followed the Docker installation,
@@ -195,7 +202,8 @@ path will be something like <code>/app/path/to/database</code>.</p>
 By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>project_path <span class="op">=</span> <span class="va">mypath</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
 <code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
 <code>/path/to/project/myProj_standardized.RData</code>,
