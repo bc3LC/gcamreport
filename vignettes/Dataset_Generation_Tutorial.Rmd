@@ -29,7 +29,7 @@ Assume you have a database called `myDb` in a folder named `dbFolder` and are wi
 library(gcamreport)
 ```
 
-2) Store the database path and name, the query path, the desired project name, and the considered scenarios in variables.
+2) Store the database path and name, the query path, the desired project name, and the considered scenarios in variables. In case you do not specify the scenarios, all the scenarios in the database will be considered for reporting.
 
 ``` r
 dbpath <- "/path/to/database"
@@ -45,7 +45,9 @@ Notice that the extension is included in the project name. Accepted extensions: 
 3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = prjname, scenarios = scen, final_year = 2050, launch_ui = FALSE)
+generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, 
+                prj_name = prjname, scenarios = scen, final_year = 2050, 
+                launch_ui = FALSE)
 ```
 
 **Note**: project generation requires approximately 30 minutes.
@@ -80,21 +82,22 @@ library(gcamreport)
 ```
 
 
-2) Store the project path in a variable.
+2) Store the project path and the scenarios in a variable. In case you do not specify the scenarios, all the scenarios in the project will be considered for the reporting.
 
 ``` r
 mypath <- "/path/to/project/myProj.dat"
+scen <- c('scen1', 'scen2', 'scen3')
 ```
 
 Notice that the extension is included. Accepted extensions: `.dat` & `.proj`.
 
 **Note**: in case you followed the Docker installation, you should store your database inside the `gcamreport` folder and your root directory is called `/app`. Thus, your database path will be something like `/app/path/to/database`.
 
-
 3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-generate_report(project_path = mypath, final_year = 2050, launch_ui = FALSE)
+generate_report(project_path = mypath, scenarios = scen, final_year = 2050, 
+                launch_ui = FALSE)
 ```
 
 Notice that the dataset will automatically be saved in `.RData`, `.csv` and `.xlsx` at `/path/to/project/myProj_standardized.RData`, `/path/to/project/myProj_standardized.csv`, and `/path/to/project/myProj_standardized.xlsx`.
