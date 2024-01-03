@@ -97,13 +97,13 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
   if (is.null(scenarios)) {
     scenarios.global <<- listScenarios(prj)
   } else {
-    scenarios.global <<- intersect(scenarios,listScenarios(prj))
+    scenarios.global <<- intersect(scenarios, listScenarios(prj))
     # check the user input
     if (length(scenarios) > length(scenarios.global)) {
-      check_scen <- setdiff(scenarios,listScenarios(prj))
-      tmp <- paste(check_scen, collapse = ', ')
-      if (length(check_scen) > 1) stop("The desired scenarios ",tmp, " are not present in the loaded project.\n")
-      if (length(check_scen) == 1) stop("The desired scenario ",tmp, " is not present in the loaded project.\n")
+      check_scen <- setdiff(scenarios, listScenarios(prj))
+      tmp <- paste(check_scen, collapse = ", ")
+      if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the loaded project.\n")
+      if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the loaded project.\n")
     }
     # drop unnecessary scenarios
     for (i in listScenarios(prj)[!listScenarios(prj) %in% scenarios]) {
@@ -158,10 +158,10 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
       scenarios <- available_scenarios
     } else {
       if (length(scenarios) > length(available_scenarios)) {
-        check_scen <- setdiff(scenarios,available_scenarios)
-        tmp <- paste(check_scen, collapse = ', ')
-        if (length(check_scen) > 1) stop("The desired scenarios ",tmp, " are not present in the database.\n")
-        if (length(check_scen) == 1) stop("The desired scenario ",tmp, " is not present in the database.\n")
+        check_scen <- setdiff(scenarios, available_scenarios)
+        tmp <- paste(check_scen, collapse = ", ")
+        if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the database.\n")
+        if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
       }
     }
 
@@ -476,7 +476,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   if (!(identical(desired_regions, "All"))) {
     check_reg <- setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
-      tmp <- paste(check_reg, collapse = ', ')
+      tmp <- paste(check_reg, collapse = ", ")
       if (length(check_reg) > 1) stop(paste0("The desired regions ", tmp, " are not available for reporting.\n"))
       if (length(check_reg) == 1) stop(paste0("The desired region ", tmp, " is not available for reporting.\n"))
     }
@@ -485,7 +485,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   if (!(length(desired_continents) == 1 && desired_continents == "All")) {
     check_cont <- setdiff(desired_continents, available_continents(print = FALSE))
     if (length(check_cont) > 0) {
-      tmp <- paste(check_cont, collapse = ', ')
+      tmp <- paste(check_cont, collapse = ", ")
       if (length(check_cont) > 1) stop(paste0("The desired continent/regions' groups ", tmp, " are not available for reporting.\n"))
       if (length(check_cont) == 1) stop(paste0("The desired continent/regions' group ", tmp, " is not available for reporting.\n"))
     }
@@ -511,23 +511,23 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
         if (length(desired_variables) == length(tmp)) no_pattern <- c(no_pattern, elem)
         desired_variables <- tmp
       }
-      if (length(no_pattern) > 1) stop(paste0("There are no variables containing the patterns ", paste(no_pattern, collapse = ', '), " available for reporting.\n"))
+      if (length(no_pattern) > 1) stop(paste0("There are no variables containing the patterns ", paste(no_pattern, collapse = ", "), " available for reporting.\n"))
       if (length(no_pattern) == 1) stop(paste0("There is no variable containing the pattern ", no_pattern, " available for reporting.\n"))
 
       # remove elements containing '*'
       contains_star <- grepl("\\*", desired_variables)
-      desired_variables <- setdiff(desired_variables,desired_variables[contains_star])
+      desired_variables <- setdiff(desired_variables, desired_variables[contains_star])
     }
 
     # check the user input
     check_var <- setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
-      tmp <- paste(check_var, collapse = ', ')
+      tmp <- paste(check_var, collapse = ", ")
       if (length(check_var) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
       if (length(check_var) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
     }
     if (length(desired_variables) == 0) {
-      tmp <- paste(original_desired_variables, collapse = ', ')
+      tmp <- paste(original_desired_variables, collapse = ", ")
       if (length(original_desired_variables) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
       if (length(original_desired_variables) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
     }
