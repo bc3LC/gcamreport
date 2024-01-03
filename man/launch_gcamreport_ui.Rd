@@ -14,7 +14,7 @@ this dataset by using the function `gcamreport::generate_report`.}
 this dataset by using the function `gcamreport::generate_report`.}
 }
 \value{
-launch shiny interactive ui
+launch shiny interactive ui.
 }
 \description{
 Launch shiny interactive user interface.

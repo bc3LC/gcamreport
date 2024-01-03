@@ -36,7 +36,7 @@ start_with_pattern <- function(vector, pattern) {
 filter_loading_regions <- function(data, desired_regions = "All", variable) {
   market <- region <- NULL
 
-  if (!(length(desired_regions) == 1 && desired_regions == "All")) {
+  if (!(identical(desired_regions, "All"))) {
     # the variable CO2 prices does not contain "region", but "markets". Now we
     # filter for all market items that do not contain the desired regions
     if (variable %in% c("CO2 prices", "supply of all markets")) {
@@ -1255,7 +1255,7 @@ get_price_var_tmp <- function() {
 filter_data_regions <- function(data) {
   region <- NULL
 
-  if (!(length(desired_regions) == 1 && desired_regions == "All")) {
+  if (!(identical(desired_regions, "All"))) {
     data <- data %>%
       filter(region %in% desired_regions)
   }

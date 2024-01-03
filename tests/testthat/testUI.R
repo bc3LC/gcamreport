@@ -68,9 +68,9 @@ test_that("Test1. test tree functions", {
 test_that("Test2. error messages", {
 
   expect_error(launch_gcamreport_ui(),
-               "ERROR: Specify either the dataset or the dataset path to be considered.")
+               "Specify either the dataset or the dataset path to be considered.")
 
   expect_error(launch_gcamreport_ui('dummy1','dummy2'),
-               "ERROR: Specify either the dataset or the dataset path to be considered, not both")
+               "Specify either the dataset or the dataset path to be considered, not both")
 
 })

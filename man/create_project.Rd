@@ -14,13 +14,13 @@ create_project(
 )
 }
 \arguments{
-\item{db_path}{path of the database}
+\item{db_path}{path of the database.}
 
-\item{db_name}{name of the database}
+\item{db_name}{name of the database.}
 
-\item{prj_name}{name of the project}
+\item{prj_name}{name of the project.}
 
-\item{scenarios}{name of the scenarios to be considered}
+\item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the database are considered.}
 
 \item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
@@ -33,7 +33,7 @@ the global variables such as "Emissions" will be computed considering only the s
 and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".}
 }
 \value{
-loaded project into global environment
+loaded project into global environment.
 }
 \description{
 Create specified project and load it into the global environment

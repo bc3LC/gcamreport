@@ -28,7 +28,7 @@ generate_report(
 
 \item{prj_name}{name of the project.}
 
-\item{scenarios}{name of the scenarios to be considered.}
+\item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project or the database are considered.}
 
 \item{final_year}{final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.}
 

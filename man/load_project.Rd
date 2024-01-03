@@ -4,17 +4,19 @@
 \alias{load_project}
 \title{load_project}
 \usage{
-load_project(project_path, desired_regions = "All")
+load_project(project_path, desired_regions = "All", scenarios = NULL)
 }
 \arguments{
-\item{project_path}{path of the project (including project name and extension)}
+\item{project_path}{path of the project (including project name and extension).}
 
 \item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
+
+\item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project are considered.}
 }
 \value{
-loaded project into global environment
+loaded project into global environment.
 }
 \description{
 Load specified project into the global environment

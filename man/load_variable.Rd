@@ -7,10 +7,10 @@
 load_variable(var)
 }
 \arguments{
-\item{var}{variable to be loaded}
+\item{var}{variable to be loaded.}
 }
 \value{
-load variable
+load variable.
 }
 \description{
 Recursive function to load the desired variable and its dependent variables
