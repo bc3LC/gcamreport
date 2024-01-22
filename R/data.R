@@ -372,6 +372,17 @@
 #' }
 "CO2_market"
 
+#' co2_market_frag_map
+#'
+#' @source github
+#' @format .csv
+#' @description new CO2 market fragmented map
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::co2_market_frag_map
+#' }
+"co2_market_frag_map"
+
 #' CUMULATIVE_EMISSIONS_BUDGET_GOALS
 #'
 #' @description cumulative emissions budget goals list
@@ -524,6 +535,15 @@
 #'  gcamreport::reporting_years
 #' }
 "reporting_years"
+
+#' last_historical_year
+#'
+#' @description last historical years
+#' \dontrun{
+#'  library(gcamreport);
+#'  gcamreport::last_historical_year
+#' }
+"last_historical_year"
 
 #' long_columns
 #'

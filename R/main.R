@@ -360,13 +360,13 @@ available_variables = function(print = TRUE) {
 
 
 
-#' run
+#' generate_report
 #'
 #' Main function. Creates/loads a GCAM project, standardizes the data and saves it
 #' in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
-#' the User Interface. Specify regions and/or variables to be reported and point
+#' the User Interface. You can specify the regions and/or variables to be reported and point
 #' either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
-#' The resulting RData output can be used to call manually `launch_gcamreport_ui`.
+#' The resulting RData output can be used to manually call `launch_gcamreport_ui`.
 #' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
 #' @param db_path: full path of the database.
 #' @param db_name: name of the database.
@@ -394,7 +394,7 @@ available_variables = function(print = TRUE) {
 #' @param launch_ui: if TRUE, launch User Interface, Do not launch it otherwise.
 #' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
 #' @export
-run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
+generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
                desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
 
   # check that the desired_regions are available
@@ -594,9 +594,9 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
 #'
 #' Launch shiny interactive user interface.
 #' @param data_path: RData dataset path containing the standardized data. You can obtain
-#' this dataset by using the function `gcamreport::run`.
+#' this dataset by using the function `gcamreport::generate_report`.
 #' @param data: dataset containing the standardized data. You can obtain
-#' this dataset by using the function `gcamreport::run`.
+#' this dataset by using the function `gcamreport::generate_report`.
 #' @return launch shiny interactive ui
 #' @export
 launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
