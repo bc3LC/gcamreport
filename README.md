@@ -1,6 +1,6 @@
 # gcamreport
 
-[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v6.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v6.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8177345.svg)](https://doi.org/10.5281/zenodo.8177345)
+[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10371722.svg)](https://doi.org/10.5281/zenodo.10371722)
 
 
 <!-- ------------------------>
@@ -112,7 +112,7 @@ git clone https://github.com/bc3LC/gcamreport.git
 4.  Inside a terminal (bash or cmd) pull the docker image:
 
 ``` bash
-docker pull claudiarodes/gcamreport_docker:v3
+docker pull claudiarodes/gcamreport_docker:gcam-v7.0-v1
 ```
 
 **Note**:exclamation:: this step requires 13.5GB of free space in your computer.
@@ -120,7 +120,7 @@ docker pull claudiarodes/gcamreport_docker:v3
 5.  Run the Docker container using your full path to the `gcamreport` folder:
 
 ``` bash
-docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:v3
+docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:gcam-v7.0-v1
 ```
 
 This should prompt an R terminal in your console.
@@ -154,13 +154,13 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
 The `gcamreport` package consists of a set of functions divided into two different blocks:
 
--   Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of [IAMC](https://www.iamconsortium.org/). Main function: `run()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `?run` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
+-   Dataset generation: it creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of [IAMC](https://www.iamconsortium.org/). Main function: `generate_report()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `?generate_report` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
 -   Interactive user block: it launches an interactive widget to display in table format the dataset, with the possibility to filter, reorder, and download live. Moreover, it displays plots and allows them to be downloaded, aggregated by variables, regions, and scenarios. Main function: `launch_gcamreport_ui()`. For more information look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `?launch_gcamreport_ui` in your R console. If you obtain some warning or error messages, it might be useful to look at the [Warning and Error Messages](#bugs) section.
 
 **Note**:exclamation:: if you followed the [Docker installation](#with-Docker), to open the user interface (UI) once it has been launched, either go to Docker Desktop and type the last started port, or type <http://localhost:4000> in the browser.
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"/>
 
 In addition, the package includes some default input files (.Rda), that are read by the different functions. These can be changed by the user. Some of these constants include energy shares, land shares, and others.
 
@@ -184,7 +184,7 @@ Some typical and already-known errors that can be easily solved! :bulb:
 
 In your R console, you might see this error:
 
-      > run("path/to/your/data/myData.dat")
+      > generate_report("path/to/your/data/myData.dat")
       [1] "Loading project..."
       [1] "Loading data, performing checks, and saving output..."
       [1] "ag_demand_clean"
@@ -209,10 +209,10 @@ This problem is due to a wrong path specification. Thus, make sure that you spec
 
 ``` r
   # option 1: full path
-  run("/app/amazingData/myData.dat")
+  generate_report("/app/amazingData/myData.dat")
   
   # option 2: partial path
-  run("amazingData/myData.dat")
+  generate_report("amazingData/myData.dat")
 ```
 
 </details>
@@ -221,7 +221,7 @@ This problem is due to a wrong path specification. Thus, make sure that you spec
 
 :computer: Wired message when launching the UI when using the Docker installation.
 
-After using the functions `run()` or `launch_gcamreport_ui()` to launch the UI, you might get this message:
+After using the functions `generate_report()` or `launch_gcamreport_ui()` to launch the UI, you might get this message:
 
       Listening on http://0.0.0.0:3838
       /usr/bin/xdg-open: 882: www-browser: not found
@@ -238,7 +238,7 @@ After using the functions `run()` or `launch_gcamreport_ui()` to launch the UI, 
 
 This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
 
 or open this url <http://localhost:4000> in your favourite browser.
 
@@ -250,13 +250,13 @@ or open this url <http://localhost:4000> in your favourite browser.
 
 When oppening your *localhost*, you might see this error:
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v6.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
 
 <details>
 
 <summary>**Possible solution**</summary>
 
-Your UI is not running. Try to either use the `run()` function or the `launch_gcamreport_ui()`.
+Your UI is not running. Try to either use the `generate_report()` function or the `launch_gcamreport_ui()`.
 
 </details>
 

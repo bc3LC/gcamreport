@@ -1,18 +1,50 @@
+# gcamreport 7.0.0
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10371722.svg)](https://doi.org/10.5281/zenodo.10371722)
+
+gcamreport package suitable for GCAM 7.0 💥
+
+Novelties:
+
+-Updated mappings to meet the GCAM 7.0 novelties.<br>
+-Allow selection of regions and variables.<br>
+-Add user error checks.<br>
+-Simplify the UI launch.<br>
+-Rename functions to make them more intuitive.<br>
+-Fix: Report all the calculated elements.<br>
+-Improve the documentation.<br>
+
 # gcamreport 6.0.1
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8177345.svg)](https://doi.org/10.5281/zenodo.8177345)
 
-Fix project creation. Compatible with GCAM 6.0.
+gcamreport package suitable for GCAM 6.0 💥
+
+Novelties:
+
+-Fix project creation.<br>
+-Introduce user messages.<br>
+-Add a step-by-step tutorial and other tutorial examples.<br>
 
 # gcamreport 6.0.0-gas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7923878.svg)](https://doi.org/10.5281/zenodo.7923878)
 
-Compatible with GCAM 6.0 with gas features.
+gcamreport package suitable for GCAM 6.0 with extra gas features 💥
+
+Novelties:
+
+-Mapping update to meet the new GCAM version requirements (with detailed gas trading features).<br>
+
 
 # gcamreport 6.0.0
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7923791.svg)](https://doi.org/10.5281/zenodo.7923791)
 
-First release. Compatible with GCAM 6.0.
+gcamreport package suitable for GCAM 6.0 💥
+
+Novelties:
+
+-Creation of a template for the desired project following the IPCC requirements.<br>
+-Friendly UI to view and subset the data items in a table, as well as to plot the desired variables choosing the desired regions and scenarios.<br>
 

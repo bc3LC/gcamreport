@@ -26,6 +26,7 @@ RUN R -e "install.packages('readr')"
 RUN R -e "install.packages('data.table')"
 RUN R -e "install.packages('magrittr')"
 RUN R -e "install.packages('dplyr')"
+RUN R -e "install.packages('tibble')"
 RUN R -e "install.packages('tidyr')"
 RUN R -e "install.packages('ggplot2')"
 RUN R -e "install.packages('stringr')"
@@ -46,7 +47,7 @@ RUN R -e "remotes::install_github('JGCRI/rpackageutils')"
 
 # clone repo
 RUN apt-get install -y git
-RUN git clone https://github.com/bc3LC/gcamreport.git /root/gcamreport
+RUN git clone -b gcam-v7.0 https://github.com/bc3LC/gcamreport.git /root/gcamreport
 
 # shiny dependencies
 RUN apt-get --allow-releaseinfo-change update
@@ -58,9 +59,10 @@ RUN apt-get install -y \
     libssl-dev \
     libssh2-1-dev \
     xdg-utils \
-    chromium
+    chromium-bsu
 
-RUN xdg-settings set default-web-browser chromium.desktop
+RUN ln -sf /usr/bin/chromium-bsu /usr/bin/x-www-browser && \
+    ln -sf /usr/bin/chromium-bsu /usr/bin/gnome-www-browser
 RUN echo "local(options(shiny.port = 3838, shiny.host = '0.0.0.0'))" > /usr/lib/R/etc/Rprofile.site
 
 # working directory
@@ -83,4 +85,3 @@ USER app
 EXPOSE 3838
 
 CMD ["R"]
-
