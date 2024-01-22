@@ -18,8 +18,8 @@ iea 2019 capacity
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::iea_capacity
+library(gcamreport)
+gcamreport::iea_capacity
 }
 }
 \keyword{datasets}

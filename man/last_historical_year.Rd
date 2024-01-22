@@ -15,8 +15,8 @@ last historical years
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::last_historical_year
+library(gcamreport)
+gcamreport::last_historical_year
 }
 }
 \keyword{datasets}

@@ -18,8 +18,8 @@ carbon content
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::carbon_content
+library(gcamreport)
+gcamreport::carbon_content
 }
 }
 \keyword{datasets}

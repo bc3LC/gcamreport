@@ -15,8 +15,8 @@ CO2 equivalency conversion
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::CO2_equivalent
+library(gcamreport)
+gcamreport::CO2_equivalent
 }
 }
 \keyword{datasets}

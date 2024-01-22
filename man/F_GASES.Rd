@@ -15,8 +15,8 @@ ghg emission conversion
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::F_GASES
+library(gcamreport)
+gcamreport::F_GASES
 }
 }
 \keyword{datasets}

@@ -18,8 +18,8 @@ ag maps
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::ag_prices_map
+library(gcamreport)
+gcamreport::ag_prices_map
 }
 }
 \keyword{datasets}

@@ -18,8 +18,8 @@ new CO2 market fragmented map
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::co2_market_frag_map
+library(gcamreport)
+gcamreport::co2_market_frag_map
 }
 }
 \keyword{datasets}

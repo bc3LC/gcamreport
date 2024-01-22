@@ -26,7 +26,7 @@ compute_height <- function(reg_all) {
 #' @export
 is_leaf <- function(tree) {
   if (length(tree) > 1 || length(tree[[1]]) > 1 || length(tree[[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]]) > 1 ||
-      length(tree[[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]][[1]]) > 1) {
+    length(tree[[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]]) > 1 || length(tree[[1]][[1]][[1]][[1]][[1]][[1]]) > 1) {
     return(FALSE)
   }
 
@@ -301,21 +301,21 @@ do_mount_tree <- function(df, column_names, current_column = 1, selec = TRUE, ii
 
       # add the nested list to the current level with the appropriate attributes
       current_list[[value]] <- structure(next_list,
-                                         sttype = "basic",
-                                         stopened = FALSE,
-                                         sticon = "glyphicon glyphicon-plus",
-                                         stselected = selec,
-                                         my_id = tmp_id
+        sttype = "basic",
+        stopened = FALSE,
+        sticon = "glyphicon glyphicon-plus",
+        stselected = selec,
+        my_id = tmp_id
       )
     }
 
     # add the current level to the list with the appropriate attributes
     structure(current_list,
-              sttype = "basic",
-              stopened = FALSE,
-              sticon = "glyphicon glyphicon-plus",
-              stselected = selec,
-              my_id = tmp_id
+      sttype = "basic",
+      stopened = FALSE,
+      sticon = "glyphicon glyphicon-plus",
+      stselected = selec,
+      my_id = tmp_id
     )
   }
 }

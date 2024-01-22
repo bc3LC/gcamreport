@@ -20,18 +20,20 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regi
   }
 
   dt <- data.frame()
-  xml <- read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
+  xml <- read_xml("inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml")
   qq <- xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
   for (sc in scenarios) {
     emiss_list <- gcamreport::emissions_list
     while (length(emiss_list) > 0) {
-      current_emis <- emiss_list[1:min(21,length(emiss_list))]
+      current_emis <- emiss_list[1:min(21, length(emiss_list))]
       qq_sec <- gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
 
       prj_tmp <- addSingleQuery(
         conn = localDBConn(db_path,
-                                  db_name,migabble = FALSE),
+          db_name,
+          migabble = FALSE
+        ),
         proj = prj_name,
         qn = type,
         query = qq_sec,
@@ -45,7 +47,7 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regi
 
       tmp <- data.frame(prj_tmp[[sc]][type])
       if (nrow(tmp) > 0) {
-        dt <- bind_rows(dt,tmp)
+        dt <- bind_rows(dt, tmp)
       }
       rm(prj_tmp)
 
@@ -95,13 +97,13 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
   if (is.null(scenarios)) {
     scenarios.global <<- listScenarios(prj)
   } else {
-    scenarios.global <<- intersect(scenarios,listScenarios(prj))
+    scenarios.global <<- intersect(scenarios, listScenarios(prj))
     # check the user input
     if (length(scenarios) > length(scenarios.global)) {
-      check_scen <- setdiff(scenarios,listScenarios(prj))
-      tmp <- paste(check_scen, collapse = ', ')
-      if (length(check_scen) > 1) stop("The desired scenarios ",tmp, " are not present in the loaded project.\n")
-      if (length(check_scen) == 1) stop("The desired scenario ",tmp, " is not present in the loaded project.\n")
+      check_scen <- setdiff(scenarios, listScenarios(prj))
+      tmp <- paste(check_scen, collapse = ", ")
+      if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the loaded project.\n")
+      if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the loaded project.\n")
     }
     # drop unnecessary scenarios
     for (i in listScenarios(prj)[!listScenarios(prj) %in% scenarios]) {
@@ -137,15 +139,17 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
   Internal_variable <- Variable <- required <- available_scenarios <- name <- NULL
 
   # check if the project already exists
-  file_name <- file.path(db_path, paste(db_name, prj_name, sep = '_'))
+  file_name <- file.path(db_path, paste(db_name, prj_name, sep = "_"))
   if (file.exists(file_name)) {
     load_project(file_name, desired_regions, scenarios)
   } else {
-    print('Creating project...')
+    print("Creating project...")
 
     # create the project
     conn <- localDBConn(db_path,
-                        db_name,migabble = FALSE)
+      db_name,
+      migabble = FALSE
+    )
 
     available_scenarios <- listScenariosInDB(conn) %>%
       pull(name)
@@ -154,21 +158,21 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
       scenarios <- available_scenarios
     } else {
       if (length(scenarios) > length(available_scenarios)) {
-        check_scen <- setdiff(scenarios,available_scenarios)
-        tmp <- paste(check_scen, collapse = ', ')
-        if (length(check_scen) > 1) stop("The desired scenarios ",tmp, " are not present in the database.\n")
-        if (length(check_scen) == 1) stop("The desired scenario ",tmp, " is not present in the database.\n")
+        check_scen <- setdiff(scenarios, available_scenarios)
+        tmp <- paste(check_scen, collapse = ", ")
+        if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the database.\n")
+        if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
       }
     }
 
     # read the queries file
-    queryFile <- 'inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml'
+    queryFile <- "inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml"
     queries_short <- parse_batch_query(queryFile)
-    queryFile <- 'inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml'
+    queryFile <- "inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml"
     queries_large <- parse_batch_query(queryFile)
 
     # subset the queries necessary for the selected variables
-    if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    if (!(length(desired_variables) == 1 && desired_variables == "All")) {
       # create a mapping with the Variables, Internal variables, functions to load
       # them, and the dependencies
       required_internal_variables <- gcamreport::var_fun_map %>%
@@ -184,12 +188,16 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
       # create a vector with the required queries for the desired variables
       required_queries <- c()
       for (req_int_var in unique(required_internal_variables %>%
-                       filter(required == TRUE) %>%
-                       pull(Variable))) {
-        required_queries <- c(required_queries,
-                             load_query(required_internal_variables[which(required_internal_variables$Variable == req_int_var),],
-                                        required_internal_variables,
-                                        c()))
+        filter(required == TRUE) %>%
+        pull(Variable))) {
+        required_queries <- c(
+          required_queries,
+          load_query(
+            required_internal_variables[which(required_internal_variables$Variable == req_int_var), ],
+            required_internal_variables,
+            c()
+          )
+        )
       }
       required_queries <- unique(required_queries[!is.na(required_queries)])
 
@@ -204,10 +212,10 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
 
     # load all queries for all desired scenarios informing the user
     for (sc in scenarios) {
-      print(paste('Start reading queries for',sc,'scenario'))
+      print(paste("Start reading queries for", sc, "scenario"))
 
-      for(qn in names(queries_touse_short)) {
-        print(paste('Read', qn, 'query'))
+      for (qn in names(queries_touse_short)) {
+        print(paste("Read", qn, "query"))
 
         bq <- queries_touse_short[[qn]]
 
@@ -216,60 +224,68 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
           bq$regions <- desired_regions
         }
 
-        table <- suppressMessages ({
+        table <- suppressMessages({
           runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
         })
         if (nrow(table) > 0) {
-          prj_tmp <- addQueryTable(project = prj_name, qdata = table,
-                                   queryname = qn, clobber = FALSE,
-                                   saveProj = FALSE, show_col_types = FALSE)
-          if (exists('prj')) {
-            prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+          prj_tmp <- addQueryTable(
+            project = prj_name, qdata = table,
+            queryname = qn, clobber = FALSE,
+            saveProj = FALSE, show_col_types = FALSE
+          )
+          if (exists("prj")) {
+            prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
           } else {
             prj <- prj_tmp
           }
-
         } else {
-          warning(paste(qn, 'query is empty!'))
+          warning(paste(qn, "query is empty!"))
         }
       }
     }
 
     # Add 'nonCO2' large queries manually (they are too big to use the usual method)
-    if (!'nonCO2 emissions by sector (excluding resource production)' %in% listQueries(prj) &&
-        'nonCO2 emissions by sector (excluding resource production)' %in% names(queries_touse_large)) {
-      print('nonCO2 emissions by sector (excluding resource production)')
-      dt_sec <- data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
-      prj_tmp <- addQueryTable(project = prj_name, qdata = dt_sec, saveProj = FALSE,
-                               queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
-      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
-
+    if (!"nonCO2 emissions by sector (excluding resource production)" %in% listQueries(prj) &&
+      "nonCO2 emissions by sector (excluding resource production)" %in% names(queries_touse_large)) {
+      print("nonCO2 emissions by sector (excluding resource production)")
+      dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)", db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp <- addQueryTable(
+        project = prj_name, qdata = dt_sec, saveProj = FALSE,
+        queryname = "nonCO2 emissions by sector (excluding resource production)", clobber = FALSE
+      )
+      prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
     }
-    if (!'nonCO2 emissions by region' %in% listQueries(prj) &&
-        'nonCO2 emissions by region' %in% names(queries_touse_large)) {
-      print('nonCO2 emissions by region')
-      dt_reg <- data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
-      prj_tmp <- addQueryTable(project = prj_name, qdata = dt_reg, saveProj = FALSE,
-                               queryname = 'nonCO2 emissions by region', clobber = FALSE)
-      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+    if (!"nonCO2 emissions by region" %in% listQueries(prj) &&
+      "nonCO2 emissions by region" %in% names(queries_touse_large)) {
+      print("nonCO2 emissions by region")
+      dt_reg <- data_query("nonCO2 emissions by region", db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp <- addQueryTable(
+        project = prj_name, qdata = dt_reg, saveProj = FALSE,
+        queryname = "nonCO2 emissions by region", clobber = FALSE
+      )
+      prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
     }
 
     # Fill with an empty datatable the possible 'CO2 price' query if necessary
-    if (!'CO2 prices' %in% listQueries(prj) &&
-        'CO2 prices' %in% names(queries_touse_short)) {
+    if (!"CO2 prices" %in% listQueries(prj) &&
+      "CO2 prices" %in% names(queries_touse_short)) {
       l <- length(listScenarios(prj))
-      dt <- data.frame(Units = rep(NA,l),
-                      scenario = listScenarios(prj),
-                      year = rep(NA,l),
-                      market = rep(NA,l),
-                      value = rep(NA,l))
-      prj_tmp <- addQueryTable(project = prj_name, qdata = dt,
-                               queryname = 'CO2 prices', clobber = TRUE)
-      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
+      dt <- data.frame(
+        Units = rep(NA, l),
+        scenario = listScenarios(prj),
+        year = rep(NA, l),
+        market = rep(NA, l),
+        value = rep(NA, l)
+      )
+      prj_tmp <- addQueryTable(
+        project = prj_name, qdata = dt,
+        queryname = "CO2 prices", clobber = TRUE
+      )
+      prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = TRUE, saveProj = FALSE)
     }
 
     # save the project
-    saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = '_')))
+    saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = "_")))
 
 
     scenarios.global <<- listScenarios(prj)
@@ -286,8 +302,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
 #' @keywords internal
 #' @return load variable.
 #' @export
-load_variable <- function(var){
-
+load_variable <- function(var) {
   # base case: if variable already loaded, return
   if (exists(var$name)) {
     return()
@@ -296,7 +311,7 @@ load_variable <- function(var){
   # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
-      load_variable(variables.global[which(variables.global$name == d),])
+      load_variable(variables.global[which(variables.global$name == d), ])
     }
   }
 
@@ -320,14 +335,15 @@ load_variable <- function(var){
 #' @keywords internal
 #' @return query name to be loaded.
 #' @export
-load_query <- function(var, base_data, final_queries){
-
+load_query <- function(var, base_data, final_queries) {
   # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
-      tmp <- load_query(base_data[which(base_data$Internal_variable == d),][1,],
-                       base_data,
-                       final_queries)
+      tmp <- load_query(
+        base_data[which(base_data$Internal_variable == d), ][1, ],
+        base_data,
+        final_queries
+      )
       final_queries <- c(final_queries, tmp)
     }
   }
@@ -349,7 +365,7 @@ available_regions <- function(print = TRUE) {
   continent <- region <- NULL
 
   av_reg <- gcamreport::reg_cont %>%
-    mutate(region = if_else(continent == 'World', 'World', region))
+    mutate(region = if_else(continent == "World", "World", region))
 
   if (print) {
     for (it in unique(av_reg$region)) {
@@ -446,7 +462,7 @@ available_variables <- function(print = TRUE) {
 #' @importFrom stringr str_sub str_locate
 #' @export
 generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
-               desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
+                            desired_variables = "All", desired_regions = "All", desired_continents = "All", save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
   continent <- region <- name <- Variable <- Internal_variable <- required <- NULL
 
   # check that desired_regions and desired_continents are not specified at the same time
@@ -460,16 +476,16 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   if (!(identical(desired_regions, "All"))) {
     check_reg <- setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
-      tmp <- paste(check_reg, collapse = ', ')
+      tmp <- paste(check_reg, collapse = ", ")
       if (length(check_reg) > 1) stop(paste0("The desired regions ", tmp, " are not available for reporting.\n"))
       if (length(check_reg) == 1) stop(paste0("The desired region ", tmp, " is not available for reporting.\n"))
     }
   }
   # check that the desired_continents are available
-  if (!(length(desired_continents) == 1 && desired_continents == 'All')) {
+  if (!(length(desired_continents) == 1 && desired_continents == "All")) {
     check_cont <- setdiff(desired_continents, available_continents(print = FALSE))
     if (length(check_cont) > 0) {
-      tmp <- paste(check_cont, collapse = ', ')
+      tmp <- paste(check_cont, collapse = ", ")
       if (length(check_cont) > 1) stop(paste0("The desired continent/regions' groups ", tmp, " are not available for reporting.\n"))
       if (length(check_cont) == 1) stop(paste0("The desired continent/regions' group ", tmp, " is not available for reporting.\n"))
     }
@@ -478,11 +494,11 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
       pull(region)
   }
   # check that the desired_variables are available
-  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+  if (!(length(desired_variables) == 1 && desired_variables == "All")) {
     original_desired_variables <- desired_variables
 
     # consider the * symbol
-    contains_star <- grepl('\\*', desired_variables)
+    contains_star <- grepl("\\*", desired_variables)
     if (sum(contains_star) > 0) {
       contains_star <- desired_variables[contains_star]
       avail_variables <- available_variables(F)
@@ -495,23 +511,23 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
         if (length(desired_variables) == length(tmp)) no_pattern <- c(no_pattern, elem)
         desired_variables <- tmp
       }
-      if (length(no_pattern) > 1) stop(paste0("There are no variables containing the patterns ", paste(no_pattern, collapse = ', '), " available for reporting.\n"))
+      if (length(no_pattern) > 1) stop(paste0("There are no variables containing the patterns ", paste(no_pattern, collapse = ", "), " available for reporting.\n"))
       if (length(no_pattern) == 1) stop(paste0("There is no variable containing the pattern ", no_pattern, " available for reporting.\n"))
 
       # remove elements containing '*'
       contains_star <- grepl("\\*", desired_variables)
-      desired_variables <- setdiff(desired_variables,desired_variables[contains_star])
+      desired_variables <- setdiff(desired_variables, desired_variables[contains_star])
     }
 
     # check the user input
     check_var <- setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
-      tmp <- paste(check_var, collapse = ', ')
+      tmp <- paste(check_var, collapse = ", ")
       if (length(check_var) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
       if (length(check_var) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
     }
     if (length(desired_variables) == 0) {
-      tmp <- paste(original_desired_variables, collapse = ', ')
+      tmp <- paste(original_desired_variables, collapse = ", ")
       if (length(original_desired_variables) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
       if (length(original_desired_variables) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
     }
@@ -545,10 +561,11 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
       if (length(not_null_items) == 1) stop("If ", paste(not_null_items, collapse = ", "), " is specified, ", paste(null_items, collapse = ", "), " must also be specified.")
     } else {
       # create project
-      create_project(db_path, db_name, prj_name, scenarios,
-                     desired_regions, desired_variables)
+      create_project(
+        db_path, db_name, prj_name, scenarios,
+        desired_regions, desired_variables
+      )
     }
-
   } else {
     # stop and display error
     stop("Specify either a project or a database to extract the data from.")
@@ -561,26 +578,29 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_year.global, by = 5)))
 
   # desired variables to have in the report
-  variables_base <- data.frame('name' = unique(gcamreport::template$Internal_variable)[!is.na(unique(gcamreport::template$Internal_variable)) & unique(gcamreport::template$Internal_variable) != ""],
-                                'required' = TRUE,
-                                stringsAsFactors = FALSE)
+  variables_base <- data.frame(
+    "name" = unique(gcamreport::template$Internal_variable)[!is.na(unique(gcamreport::template$Internal_variable)) & unique(gcamreport::template$Internal_variable) != ""],
+    "required" = TRUE,
+    stringsAsFactors = FALSE
+  )
 
   # consider only the desired variables
-  if (length(desired_variables) == 1 && desired_variables == 'All') {
+  if (length(desired_variables) == 1 && desired_variables == "All") {
     variables.global <<- variables_base
   } else {
     variables.global <<- variables_base %>%
       mutate(required = if_else(
         !name %in% unique(gcamreport::template %>%
-                            filter(Variable %in% desired_variables) %>%
-                            pull(Internal_variable)),
-        FALSE, required))
+          filter(Variable %in% desired_variables) %>%
+          pull(Internal_variable)),
+        FALSE, required
+      ))
   }
 
-  print('Loading data, performing checks, and saving output...')
+  print("Loading data, performing checks, and saving output...")
 
   # consider the dependencies and checking functions
-  variables.global <<- merge(variables.global,gcamreport::var_fun_map, by = 'name', all = TRUE) %>%
+  variables.global <<- merge(variables.global, gcamreport::var_fun_map, by = "name", all = TRUE) %>%
     replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
@@ -589,7 +609,7 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   desired_variables <<- desired_variables
   for (i in 1:nrow(variables.global)) {
     if (variables.global$required[i]) {
-      load_variable(variables.global[i,])
+      load_variable(variables.global[i, ])
     }
   }
 
@@ -597,22 +617,22 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
   if (is.null(output_file)) {
     if (!is.null(project_path)) {
       output_file <- gsub("\\.dat$", "", project_path)
-      output_file <- paste0(output_file,'_standardized')
+      output_file <- paste0(output_file, "_standardized")
     } else {
-      output_file <- file.path(db_path, paste0(gsub("\\.dat$", "", prj_name), '_standardized'))
+      output_file <- file.path(db_path, paste0(gsub("\\.dat$", "", prj_name), "_standardized"))
     }
   }
 
   # bind and save results
   do_bind_results()
-  save(report, file = paste0(output_file,'.RData'))
+  save(report, file = paste0(output_file, ".RData"))
 
-  if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
-    if (save_output == TRUE || 'CSV' %in% save_output) {
-      write.csv(report, file.path(paste0(output_file,'.csv')), row.names = FALSE)
+  if (save_output == TRUE || save_output %in% c("CSV", "XLSX")) {
+    if (save_output == TRUE || "CSV" %in% save_output) {
+      write.csv(report, file.path(paste0(output_file, ".csv")), row.names = FALSE)
     }
-    if (save_output == TRUE || 'XLSX' %in% save_output) {
-      write_xlsx(report, file.path(paste0(output_file,'.xlsx')))
+    if (save_output == TRUE || "XLSX" %in% save_output) {
+      write_xlsx(report, file.path(paste0(output_file, ".xlsx")))
     }
   }
 
@@ -624,37 +644,38 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
     for (ch in variables.global$checks) {
       if (!is.na(ch)) {
         for (d in ch[[1]]) {
-          out = get(variables.global$fun[which(variables.global$name == d)])()
+          out <- get(variables.global$fun[which(variables.global$name == d)])()
           vetting_summary[[str_sub(as.character(out$message),
-                                   end = str_locate(as.character(out$message), ':') - 1)[1]]] = out
+            end = str_locate(as.character(out$message), ":") - 1
+          )[1]]] <- out
         }
       }
     }
-    vet = do_check_vetting()
-    print('Vetting summary:')
+    vet <- do_check_vetting()
+    print("Vetting summary:")
     vetting_summary[[str_sub(as.character(vet$message),
-                             end = str_locate(as.character(vet$message), ':') - 1)[1]]] = vet
+      end = str_locate(as.character(vet$message), ":") - 1
+    )[1]]] <- vet
     for (e in vetting_summary) {
       print(e$message)
     }
     vetting_summary <<- vetting_summary
     cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details\n')
-    cat('You can check the vetting figure in output/figure/vetting.tiff\n')
-    cat('==============================================================\n')
+    cat("You can check the vetting figure in output/figure/vetting.tiff\n")
+    cat("==============================================================\n")
   }
 
   # remove internal variables from the environment
   rm(list = loaded_internal_variables.global, envir = .GlobalEnv)
-  rm(list = c('loaded_internal_variables.global', 'variables.global'), envir = .GlobalEnv)
+  rm(list = c("loaded_internal_variables.global", "variables.global"), envir = .GlobalEnv)
   gc()
 
   if (launch_ui) {
-    print('Launching UI...')
+    print("Launching UI...")
 
     # launch ui
     launch_gcamreport_ui(data = report)
   }
-
 }
 
 
@@ -679,26 +700,26 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
 
   # load data
   if (!is.null(data_path)) {
-    data <- assign('data', get(load(data_path)))
+    data <- assign("data", get(load(data_path)))
   }
 
   # define the dataset for launching the ui
   sdata <<- suppressWarnings(
     data %>%
-      separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+      separate(Variable, into = c("col1", "col2", "col3", "col4", "col5", "col6", "col7"), sep = "([\\|])", extra = "merge", remove = FALSE)
   )
 
   # create vector of available years for launching the ui
   available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
 
   # develop a nested list of the variables and regions for launching the ui
-  cols.global <<- unique(sdata[, grepl('col', names(sdata))])
-  tree_vars <<- do_mount_tree(cols.global,names(cols.global),selec=TRUE)
+  cols.global <<- unique(sdata[, grepl("col", names(sdata))])
+  tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
 
-  tree_reg <<- do_mount_tree(gcamreport::reg_cont,names(gcamreport::reg_cont),selec=TRUE)
+  tree_reg <<- do_mount_tree(gcamreport::reg_cont, names(gcamreport::reg_cont), selec = TRUE)
 
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)
 
-  runApp('inst/gcamreport_ui')
+  runApp("inst/gcamreport_ui")
 }

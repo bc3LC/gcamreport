@@ -18,8 +18,8 @@ vetting values to test
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::global_vet_values
+library(gcamreport)
+gcamreport::global_vet_values
 }
 }
 \keyword{datasets}

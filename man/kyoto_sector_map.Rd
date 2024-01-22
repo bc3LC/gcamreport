@@ -18,8 +18,8 @@ emissions maps
 }
 \examples{
 \dontrun{
- library(gcamreport);
- gcamreport::kyoto_sector_map
+library(gcamreport)
+gcamreport::kyoto_sector_map
 }
 }
 \keyword{datasets}
