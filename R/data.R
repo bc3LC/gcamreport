@@ -3,6 +3,7 @@
 #' @source local
 #' @format vector
 #' @description nonCO2 pollutants list
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::emissions_list
@@ -14,6 +15,7 @@
 #' @source local
 #' @format .csv
 #' @description ghg adjuster
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::GWP_adjuster
@@ -25,6 +27,7 @@
 #' @source local
 #' @format .csv
 #' @description vetting values to test
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::global_vet_values
@@ -36,6 +39,7 @@
 #' @source local
 #' @format .csv
 #' @description mapping between regions and continents
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::reg_cont
@@ -47,6 +51,7 @@
 #' @source local
 #' @format .csv
 #' @description mapping between variables, functions to load them, dependent variables, and available verifications
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::var_fun_map
@@ -58,6 +63,7 @@
 #' @source github
 #' @format .csv
 #' @description read in template
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::template
@@ -69,6 +75,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::co2_sector_map
@@ -80,6 +87,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::co2_ets_sector_map
@@ -91,6 +99,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::co2_tech_map
@@ -102,6 +111,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::kyoto_sector_map
@@ -113,6 +123,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::nonco2_emis_sector_map
@@ -124,6 +135,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::nonco2_emis_resource_map
@@ -135,6 +147,7 @@
 #' @source github
 #' @format .csv
 #' @description emissions maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::carbon_seq_tech_map
@@ -146,6 +159,7 @@
 #' @source github
 #' @format .csv
 #' @description ag maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::ag_demand_map
@@ -157,6 +171,7 @@
 #' @source github
 #' @format .csv
 #' @description ag maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::ag_prices_map
@@ -168,6 +183,7 @@
 #' @source github
 #' @format .csv
 #' @description ag maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::land_use_map
@@ -179,6 +195,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::primary_energy_map
@@ -190,6 +207,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::production_map
@@ -201,6 +219,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::elec_gen_map
@@ -212,6 +231,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::capacity_map
@@ -223,6 +243,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::cf_gcam
@@ -234,6 +255,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::cf_rgn
@@ -245,6 +267,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::se_gen_map
@@ -256,6 +279,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::final_energy_map
@@ -267,6 +291,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::transport_final_en_map
@@ -278,6 +303,7 @@
 #' @source github
 #' @format .csv
 #' @description primary, secondary, final energy maps
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::energy_prices_map
@@ -289,6 +315,7 @@
 #' @source github
 #' @format .csv
 #' @description energy services
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::transport_en_service
@@ -300,6 +327,7 @@
 #' @source github
 #' @format .csv
 #' @description energy services
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::buildings_en_service
@@ -311,6 +339,7 @@
 #' @source github
 #' @format .csv
 #' @description capital update
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::capital_gcam
@@ -322,6 +351,7 @@
 #' @source github
 #' @format .csv
 #' @description capital investment
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::investment
@@ -333,6 +363,7 @@
 #' @source github
 #' @format .csv
 #' @description carbon content
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::carbon_content
@@ -344,6 +375,7 @@
 #' @source github
 #' @format .csv
 #' @description non CO2 content
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::nonCO2_content
@@ -355,6 +387,7 @@
 #' @source github
 #' @format .csv
 #' @description iea 2019 capacity
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::iea_capacity
@@ -366,6 +399,7 @@
 #' @source github
 #' @format .csv
 #' @description new CO2 market
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::CO2_market
@@ -377,6 +411,7 @@
 #' @source github
 #' @format .csv
 #' @description new CO2 market fragmented map
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::co2_market_frag_map
@@ -386,6 +421,7 @@
 #' CUMULATIVE_EMISSIONS_BUDGET_GOALS
 #'
 #' @description cumulative emissions budget goals list
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::CUMULATIVE_EMISSIONS_BUDGET_GOALS
@@ -395,6 +431,7 @@
 #' conv_thousand_million
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_thousand_million
@@ -404,6 +441,7 @@
 #' conv_million_billion
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_million_billion
@@ -413,6 +451,7 @@
 #' conv_90USD_10USD
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_90USD_10USD
@@ -422,6 +461,7 @@
 #' conv_75USD_10USD
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_75USD_10USD
@@ -431,6 +471,7 @@
 #' conv_15USD_10USD
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_15USD_10USD
@@ -440,6 +481,7 @@
 #' conv_19USD_75USD
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_19USD_75USD
@@ -449,6 +491,7 @@
 #' conv_C_CO2
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::conv_C_CO2
@@ -458,6 +501,7 @@
 #' hr_per_yr
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::hr_per_yr
@@ -467,6 +511,7 @@
 #' EJ_to_GWh
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::EJ_to_GWh
@@ -476,6 +521,7 @@
 #' bcm_to_EJ
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::bcm_to_EJ
@@ -485,6 +531,7 @@
 #' GJ_to_EJ
 #'
 #' @description units conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::GJ_to_EJ
@@ -494,6 +541,7 @@
 #' F_GASES
 #'
 #' @description ghg emission conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::F_GASES
@@ -503,6 +551,7 @@
 #' GHG_gases
 #'
 #' @description ghg emission conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::GHG_gases
@@ -512,6 +561,7 @@
 #' CO2_equivalent
 #'
 #' @description CO2 equivalency conversion
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::CO2_equivalent
@@ -521,6 +571,7 @@
 #' GCAM_years
 #'
 #' @description reporting years
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::GCAM_years
@@ -530,6 +581,7 @@
 #' reporting_years
 #'
 #' @description reporting years
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::reporting_years
@@ -539,6 +591,7 @@
 #' last_historical_year
 #'
 #' @description last historical years
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::last_historical_year
@@ -548,6 +601,7 @@
 #' long_columns
 #'
 #' @description reporting columns
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::long_columns
@@ -557,6 +611,7 @@
 #' reporting_columns
 #'
 #' @description reporting columns
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::reporting_columns
@@ -566,6 +621,7 @@
 #' state_names
 #'
 #' @description state names
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::state_names
@@ -575,6 +631,7 @@
 #' tech.color
 #'
 #' @description techology color
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::tech.color
@@ -584,6 +641,7 @@
 #' colScaleTech
 #'
 #' @description techology painting color
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::colScaleTech
@@ -593,6 +651,7 @@
 #' fillScaleTech
 #'
 #' @description techology filling color
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::fillScaleTech
@@ -602,6 +661,7 @@
 #' fuel.list
 #'
 #' @description fuels list
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::fuel.list
@@ -611,6 +671,7 @@
 #' fuel.color
 #'
 #' @description fuels color
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::fuel.color
@@ -620,6 +681,7 @@
 #' colScaleFuel
 #'
 #' @description fuels color to paint
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::colScaleFuel
@@ -629,6 +691,7 @@
 #' fillScaleFuel
 #'
 #' @description fuels color to fill
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::fillScaleFuel
@@ -638,6 +701,7 @@
 #' sector.list
 #'
 #' @description categorize sector
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::sector.list
@@ -647,6 +711,7 @@
 #' sector.color
 #'
 #' @description color by fuel
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::sector.color
@@ -656,6 +721,7 @@
 #' fillScaleSector
 #'
 #' @description final filling color scale
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::fillScaleSector
@@ -665,6 +731,7 @@
 #' tech.list
 #'
 #' @description techonolgies list
+#' @examples
 #' \dontrun{
 #'  library(gcamreport);
 #'  gcamreport::tech.list

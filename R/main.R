@@ -1,37 +1,36 @@
-## Main functions of the package
-library(usethis)
-library(magrittr)
-
 #' data_query
 #'
 #' Add nonCO2 large queries
-#' @param db_path: path of the database
-#' @param db_name: name of the database
-#' @param prj_name: name of the project
-#' @param scenarios: name of the scenarios to be considered
-#' @param type: either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' @param db_path path of the database
+#' @param db_name name of the database
+#' @param prj_name name of the project
+#' @param scenarios name of the scenarios to be considered
+#' @param type either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'
+#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return dataframe with the data from the query
+#' @importFrom rgcam addSingleQuery localDBConn
+#' @importFrom xml2 read_xml xml_find_first
+#' @importFrom dplyr bind_rows
 #' @export
-data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
+data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regions = 'All') {
   if (length(desired_regions) == 1 && desired_regions == 'All') {
-    desired_regions = NULL
+    desired_regions <- NULL
   }
 
-  dt = data.frame()
-  xml <- xml2::read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
-  qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
+  dt <- data.frame()
+  xml <- read_xml('inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml')
+  qq <- xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
   for (sc in scenarios) {
-    emiss_list = emissions_list
+    emiss_list <- emissions_list
     while (length(emiss_list) > 0) {
-      current_emis = emiss_list[1:min(21,length(emiss_list))]
-      qq_sec = gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
+      current_emis <- emiss_list[1:min(21,length(emiss_list))]
+      qq_sec <- gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
 
-      prj_tmp = rgcam::addSingleQuery(
-        conn = rgcam::localDBConn(db_path,
+      prj_tmp <- addSingleQuery(
+        conn = localDBConn(db_path,
                                   db_name,migabble = FALSE),
         proj = prj_name,
         qn = type,
@@ -44,16 +43,16 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
         warn.empty = FALSE
       )
 
-      tmp = data.frame(prj_tmp[[sc]][type])
+      tmp <- data.frame(prj_tmp[[sc]][type])
       if (nrow(tmp) > 0) {
-        dt = dplyr::bind_rows(dt,tmp)
+        dt <- bind_rows(dt,tmp)
       }
       rm(prj_tmp)
 
       if (length(emiss_list) > 21) {
         emiss_list <- emiss_list[(21 + 1):length(emiss_list)]
       } else {
-        emiss_list = c()
+        emiss_list <- c()
       }
     }
   }
@@ -68,17 +67,18 @@ data_query = function(type, db_path, db_name, prj_name, scenarios, desired_regio
 #' load_project
 #'
 #' Load specified project into the global environment
-#' @param prj_name: name of the project
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' @param project_path path of the project (including project name and extension)
+#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @return loaded project into global environment
+#' @importFrom rgcam addSingleQuery localDBConn
 #' @export
-load_project = function(project_path, desired_regions = 'All') {
+load_project <- function(project_path, desired_regions = 'All') {
   print('Loading project...')
 
   # load the project
-  prj = rgcam::loadProject(project_path)
+  prj <- loadProject(project_path)
 
   # filter the regions if not all of them are considered (desired_regions != 'All')
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
@@ -86,11 +86,11 @@ load_project = function(project_path, desired_regions = 'All') {
     for (s in names(prj)) {
       # for all variables in prj
       for (v in names(prj[[s]])) {
-        prj[[s]][[v]] = filter_loading_regions(prj[[s]][[v]], desired_regions, v)
+        prj[[s]][[v]] <- filter_loading_regions(prj[[s]][[v]], desired_regions, v)
       }
     }
   }
-  Scenarios <<- rgcam::listScenarios(prj)
+  Scenarios <<- listScenarios(prj)
 
   prj <<- prj
 }
@@ -99,25 +99,27 @@ load_project = function(project_path, desired_regions = 'All') {
 #' create_project
 #'
 #' Create specified project and load it into the global environment
-#' @param db_path: path of the database
-#' @param db_name: name of the database
-#' @param prj_name: name of the project
-#' @param scenarios: name of the scenarios to be considered
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' @param db_path path of the database
+#' @param db_name name of the database
+#' @param prj_name name of the project
+#' @param scenarios name of the scenarios to be considered
+#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
+#' @param desired_variables desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
 #' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
 #' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
 #' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".
 #' @return loaded project into global environment
+#' @import rgcam
+#' @import dplyr
 #' @export
-create_project = function(db_path, db_name, prj_name, scenarios,
-                          desired_regions = 'All', desired_variables = 'All') {
+create_project <- function(db_path, db_name, prj_name, scenarios,
+                           desired_regions = 'All', desired_variables = 'All') {
 
   # check if the project already exists
-  file_name = paste0(db_path, "/", db_name, '_', prj_name)
+  file_name <- file.path(db_path, paste(db_name, prj_name, sep = '_'))
   if (file.exists(file_name)) {
     load_project(file_name, desired_regions)
 
@@ -125,45 +127,45 @@ create_project = function(db_path, db_name, prj_name, scenarios,
     print('Creating project...')
 
     # create the project
-    conn <- rgcam::localDBConn(db_path,
-                               db_name,migabble = FALSE)
+    conn <- localDBConn(db_path,
+                        db_name,migabble = FALSE)
 
     # read the queries file
-    queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_complete.xml')
-    queries_short <- rgcam::parse_batch_query(queryFile)
-    queryFile = paste0('inst/extdata/queries/','queries_gcamreport_gcam7.0_nonCO2.xml')
-    queries_large <- rgcam::parse_batch_query(queryFile)
+    queryFile <- 'inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml'
+    queries_short <- parse_batch_query(queryFile)
+    queryFile <- 'inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml'
+    queries_large <- parse_batch_query(queryFile)
 
     # subset the queries necessary for the selected variables
     if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
       # create a mapping with the Variables, Internal variables, functions to load
       # them, and the dependencies
       required_internal_variables = var_fun_map %>%
-        dplyr::rename('Internal_variable' = 'name') %>%
-        dplyr::left_join(template %>%
-                           dplyr::filter(!is.na(Internal_variable)),
-                         by = 'Internal_variable') %>%
-        dplyr::mutate(required = dplyr::if_else(Variable %in% desired_variables, TRUE, FALSE))
+        rename('Internal_variable' = 'name') %>%
+        left_join(template %>%
+                    filter(!is.na(Internal_variable)),
+                  by = 'Internal_variable') %>%
+        mutate(required = if_else(Variable %in% desired_variables, TRUE, FALSE))
 
       # create a vector with the required queries for the desired variables
-      required_queries = c()
+      required_queries <- c()
       for (req_int_var in unique(required_internal_variables %>%
-                       dplyr::filter(required == TRUE) %>%
-                       dplyr::pull(Variable))) {
-        required_queries = c(required_queries,
+                       filter(required == TRUE) %>%
+                       pull(Variable))) {
+        required_queries <- c(required_queries,
                              load_query(required_internal_variables[which(required_internal_variables$Variable == req_int_var),],
                                         required_internal_variables,
                                         c()))
       }
-      required_queries = unique(required_queries[!is.na(required_queries)])
+      required_queries <- unique(required_queries[!is.na(required_queries)])
 
       # save the read-to-use queries in a vector
-      queries_touse_short = queries_short[names(queries_short) %in% required_queries]
-      queries_touse_large = queries_large[names(queries_large) %in% required_queries]
+      queries_touse_short <- queries_short[names(queries_short) %in% required_queries]
+      queries_touse_large <- queries_large[names(queries_large) %in% required_queries]
     } else {
       # save the read-to-use queries in a vector. These are all the possible queries
-      queries_touse_short = queries_short
-      queries_touse_large = queries_large
+      queries_touse_short <- queries_short
+      queries_touse_large <- queries_large
     }
 
     # load all queries for all desired scenarios informing the user
@@ -177,18 +179,20 @@ create_project = function(db_path, db_name, prj_name, scenarios,
 
         # subset regions if necessary
         if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
-          bq$regions = desired_regions
+          bq$regions <- desired_regions
         }
 
-        table <- rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
-        if(nrow(table) > 0) {
-          prj_tmp <- rgcam::addQueryTable(project = prj_name, qdata = table,
-                                          queryname = qn, clobber = FALSE,
-                                          saveProj = FALSE, show_col_types = FALSE)
+        table <- suppressMessages ({
+          runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
+        })
+        if (nrow(table) > 0) {
+          prj_tmp <- addQueryTable(project = prj_name, qdata = table,
+                                   queryname = qn, clobber = FALSE,
+                                   saveProj = FALSE, show_col_types = FALSE)
           if (exists('prj')) {
-            prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+            prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
           } else {
-            prj = prj_tmp
+            prj <- prj_tmp
           }
 
         } else {
@@ -198,43 +202,43 @@ create_project = function(db_path, db_name, prj_name, scenarios,
     }
 
     # Add 'nonCO2' large queries manually (they are too big to use the usual method)
-    if (!'nonCO2 emissions by sector (excluding resource production)' %in% rgcam::listQueries(prj) &&
+    if (!'nonCO2 emissions by sector (excluding resource production)' %in% listQueries(prj) &&
         'nonCO2 emissions by sector (excluding resource production)' %in% names(queries_touse_large)) {
       print('nonCO2 emissions by sector (excluding resource production)')
-      dt_sec = data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
-      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt_sec, saveProj = FALSE,
-                                      queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
-      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+      dt_sec <- data_query('nonCO2 emissions by sector (excluding resource production)', db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp <- addQueryTable(project = prj_name, qdata = dt_sec, saveProj = FALSE,
+                               queryname = 'nonCO2 emissions by sector (excluding resource production)', clobber = FALSE)
+      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
 
     }
-    if (!'nonCO2 emissions by region' %in% rgcam::listQueries(prj) &&
+    if (!'nonCO2 emissions by region' %in% listQueries(prj) &&
         'nonCO2 emissions by region' %in% names(queries_touse_large)) {
       print('nonCO2 emissions by region')
-      dt_reg = data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
-      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt_reg, saveProj = FALSE,
-                                      queryname = 'nonCO2 emissions by region', clobber = FALSE)
-      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
+      dt_reg <- data_query('nonCO2 emissions by region', db_path, db_name, prj_name, scenarios, desired_regions)
+      prj_tmp <- addQueryTable(project = prj_name, qdata = dt_reg, saveProj = FALSE,
+                               queryname = 'nonCO2 emissions by region', clobber = FALSE)
+      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = FALSE, saveProj = FALSE)
     }
 
     # Fill with an empty datatable the possible 'CO2 price' query if necessary
-    if (!'CO2 prices' %in% rgcam::listQueries(prj) &&
+    if (!'CO2 prices' %in% listQueries(prj) &&
         'CO2 prices' %in% names(queries_touse_short)) {
-      l = length(rgcam::listScenarios(prj))
-      dt = data.frame(Units = rep(NA,l),
-                      scenario = rgcam::listScenarios(prj),
+      l <- length(listScenarios(prj))
+      dt <- data.frame(Units = rep(NA,l),
+                      scenario = listScenarios(prj),
                       year = rep(NA,l),
                       market = rep(NA,l),
                       value = rep(NA,l))
-      prj_tmp = rgcam::addQueryTable(project = prj_name, qdata = dt,
-                                      queryname = 'CO2 prices', clobber = TRUE)
-      prj = rgcam::mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
+      prj_tmp <- addQueryTable(project = prj_name, qdata = dt,
+                               queryname = 'CO2 prices', clobber = TRUE)
+      prj <- mergeProjects(prj_name, list(prj,prj_tmp), clobber = TRUE, saveProj = FALSE)
     }
 
     # save the project
-    rgcam::saveProject(prj, file = paste0(db_path, "/", db_name, '_', prj_name))
+    saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = '_')))
 
 
-    Scenarios <<- rgcam::listScenarios(prj)
+    Scenarios <<- listScenarios(prj)
 
     prj <<- prj
   }
@@ -244,11 +248,11 @@ create_project = function(db_path, db_name, prj_name, scenarios,
 #' load_variable
 #'
 #' Recursive function to load the desired variable and its dependent variables
-#' @param var: variable to be loaded
+#' @param var variable to be loaded
 #' @keywords internal
 #' @return load variable
 #' @export
-load_variable = function(var){
+load_variable <- function(var){
 
   # base case: if variable already loaded, return
   if (exists(var$name)) {
@@ -276,39 +280,40 @@ load_variable = function(var){
 #' load_query
 #'
 #' Recursive function to load the necessary queries for the desired variables
-#' @param var: variable to be loaded
-#' @param base_data: dataframe with the required internal variables
-#' @param final_queries: vector of the queries to be loaded
+#' @param var variable to be loaded
+#' @param base_data dataframe with the required internal variables
+#' @param final_queries vector of the queries to be loaded
 #' @keywords internal
 #' @return query name to be loaded
 #' @export
-load_query = function(var, base_data, final_queries){
+load_query <- function(var, base_data, final_queries){
 
   # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
-      tmp = load_query(base_data[which(base_data$Internal_variable == d),][1,],
+      tmp <- load_query(base_data[which(base_data$Internal_variable == d),][1,],
                        base_data,
                        final_queries)
-      final_queries = c(final_queries, tmp)
+      final_queries <- c(final_queries, tmp)
     }
   }
 
   # record the required query
-  final_queries = c(final_queries, var$queries[[1]])
+  final_queries <- c(final_queries, var$queries[[1]])
   return(final_queries)
 }
 
 
 #' available_regions
 #'
-#' @param print: if TRUE, prints all available regions. TRUE by default.
+#' @param print if TRUE, prints all available regions. TRUE by default.
 #' @return Prints a list of all the available regions for the IAMC reporting dataset.
 #' It also returns them as a vector.
+#' @importFrom dplyr mutate if_else
 #' @export
-available_regions = function(print = TRUE) {
-  av_reg = reg_cont %>%
-    dplyr::mutate(region = dplyr::if_else(continent == 'World', 'World', region))
+available_regions <- function(print = TRUE) {
+  av_reg <- reg_cont %>%
+    mutate(region = if_else(continent == 'World', 'World', region))
 
   if (print) {
     for (it in unique(av_reg$region)) {
@@ -322,12 +327,12 @@ available_regions = function(print = TRUE) {
 
 #' available_continents
 #'
-#' @param print: if TRUE, prints all available continents/regions' groups. TRUE by default.
+#' @param print if TRUE, prints all available continents/regions' groups. TRUE by default.
 #' @return Prints a list of all the available continents/regions' groups for the
 #' IAMC reporting dataset. It also returns them as a vector.
 #' @export
-available_continents = function(print = TRUE) {
-  av_cont = unique(reg_cont$continent)
+available_continents <- function(print = TRUE) {
+  av_cont <- unique(reg_cont$continent)
 
   if (print) {
     for (it in av_cont) {
@@ -341,13 +346,14 @@ available_continents = function(print = TRUE) {
 
 #' available_variables
 #'
-#' @param print: if TRUE, prints all available variables. TRUE by default.
+#' @param print if TRUE, prints all available variables. TRUE by default.
 #' @return Prints a list of all the available variables for the IAMC reporting dataset.
 #' It also returns them as a vector.
+#' @importFrom dplyr filter
 #' @export
-available_variables = function(print = TRUE) {
-  av_var = template %>%
-    dplyr::filter(!is.na(Internal_variable) & Internal_variable != "")
+available_variables <- function(print = TRUE) {
+  av_var <- template %>%
+    filter(!is.na(Internal_variable) & Internal_variable != "")
 
   if (print) {
     for (it in unique(av_var$Variable)) {
@@ -367,82 +373,86 @@ available_variables = function(print = TRUE) {
 #' the User Interface. You can specify the regions and/or variables to be reported and point
 #' either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
 #' The resulting RData output can be used to manually call `launch_gcamreport_ui`.
-#' @param project_path: full path of the project with the project name. Possible extensions: .dat and .proj.
-#' @param db_path: full path of the database.
-#' @param db_name: name of the database.
-#' @param prj_name: name of the project.
-#' @param scenarios: name of the scenarios to be considered.
-#' @param final_year: final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
-#' @param desired_variables: desired variables to have in the report. Considered 'All' by default.
+#' @param project_path full path of the project with the project name. Possible extensions: .dat and .proj.
+#' @param db_path full path of the database.
+#' @param db_name name of the database.
+#' @param prj_name name of the project.
+#' @param scenarios name of the scenarios to be considered.
+#' @param final_year final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
+#' @param desired_variables desired variables to have in the report. Considered 'All' by default.
 #' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
 #' In case the project dataset needs to be created, it will be created containing only the specified variables.
 #' ATTENTION: global variables such as "Emissions" will be computed considering only the selected variables. As an example,
 #' if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not
 #' consider other variables, such as "Emissions|CH4" or "Emissions|NH3"
-#' @param desired_regions: desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
+#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param desired_continents: desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
+#' @param desired_continents desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
 #' the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
 #' continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
 #' specified continents/regions' groups.
-#' @param save_output: if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
+#' @param save_output if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
 #' 'save_output = XLSX', the data will be only saved in the specified format.
-#' @param output_file: file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
+#' @param output_file file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
 #' database or the project file, and using a default name containing the project name with 'standardized' tag.
 #' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
-#' @param launch_ui: if TRUE, launch User Interface, Do not launch it otherwise.
+#' @param launch_ui if TRUE, launch User Interface, Do not launch it otherwise.
 #' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
+#' @import dplyr
+#' @importFrom tidyr replace_na
+#' @importFrom writexl write_xlsx
+#' @importFrom stringr str_sub str_locate
 #' @export
-generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
+generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
                desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
 
   # check that desired_regions and desired_continents are not specified at the same time
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
     if (!(length(desired_regions) == 1 && desired_continents == 'All')) {
-      stop(paste0('ERROR: You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.\n'))
+      stop('ERROR: You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.\n')
     }
   }
 
   # check that the desired_regions are available
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
-    check_reg = setdiff(desired_regions, available_regions(print = FALSE))
+    check_reg <- setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
       stop(paste0('ERROR: You specified the region ',check_reg, ' which is not available for reporting.\n'))
     }
   }
   # check that the desired_continents are available
   if (!(length(desired_continents) == 1 && desired_continents == 'All')) {
-    check_cont = setdiff(desired_continents, available_continents(print = FALSE))
+    check_cont <- setdiff(desired_continents, available_continents(print = FALSE))
     if (length(check_cont) > 0) {
       stop(paste0("ERROR: You specified the continent/regions' group ",check_cont, ' which is not available for reporting.\n'))
     }
-    desired_regions = reg_cont %>%
-      dplyr::filter(continent %in% desired_continents) %>%
-      dplyr::pull(region)
+    desired_regions <- reg_cont %>%
+      filter(continent %in% desired_continents) %>%
+      pull(region)
   }
   # check that the desired_variables are available
   if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
-    original_desired_variables = desired_variables
+    original_desired_variables <- desired_variables
 
     # consider the * symbol
-    contains_star = grepl('\\*', desired_variables)
+    contains_star <- grepl('\\*', desired_variables)
     if (sum(contains_star) > 0) {
-      contains_star = desired_variables[contains_star]
-      avail_variables = available_variables(F)
+      contains_star <- desired_variables[contains_star]
+      avail_variables <- available_variables(F)
 
       for (elem in contains_star) {
-        pattern = sub("\\*.*", "", elem)
-        desired_variables = c(desired_variables, start_with_pattern(avail_variables,pattern))
+        pattern <- sub("\\*.*", "", elem)
+        desired_variables <- c(desired_variables, start_with_pattern(avail_variables,pattern))
       }
 
       # remove elements containing '*'
-      contains_star = grepl('\\*', desired_variables)
-      desired_variables = desired_variables[-contains_star]
+      contains_star <- grepl('\\*', desired_variables)
+      desired_variables <- desired_variables[-contains_star]
     }
 
     # check the user input
-    check_var = setdiff(desired_variables, available_variables(print = FALSE))
+    check_var <- setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
       stop(paste0("ERROR: You specified the variable ",check_var, ' which is not available for reporting.\n'))
     }
@@ -466,13 +476,13 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
 
     # check that all the paths are specified
     if (is.null(db_path) || is.null(db_name) || is.null(prj_name) || is.null(scenarios)) {
-      null_items = c()
-      not_null_items = c()
+      null_items <- c()
+      not_null_items <- c()
       for (item in c('db_path','db_name','prj_name','scenarios')) {
-        if (is.null(eval(parse(text=item)))) {
-          null_items = c(null_items, item)
+        if (is.null(eval(parse(text = item)))) {
+          null_items <- c(null_items, item)
         } else {
-          not_null_items = c(not_null_items, item)
+          not_null_items <- c(not_null_items, item)
         }
       }
 
@@ -509,10 +519,10 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
     variables <<- variables_base
   } else {
     variables <<- variables_base %>%
-      dplyr::mutate(required = dplyr::if_else(
+      mutate(required = if_else(
         !name %in% unique(template %>%
-                            dplyr::filter(Variable %in% desired_variables) %>%
-                            dplyr::pull(Internal_variable)),
+                            filter(Variable %in% desired_variables) %>%
+                            pull(Internal_variable)),
         FALSE, required))
   }
 
@@ -520,7 +530,7 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
 
   # consider the dependencies and checking functions
   variables <<- merge(variables,var_fun_map, by = 'name', all = TRUE) %>%
-    tidyr::replace_na(list(required = FALSE))
+    replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data
   loaded_internal_variables <<- c()
@@ -535,10 +545,10 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
   # set the default output_file based on the project_path or the db_path & db_name
   if (is.null(output_file)) {
     if (!is.null(project_path)) {
-      output_file = gsub("\\.dat$", "", project_path)
-      output_file = paste0(output_file,'_standardized')
+      output_file <- gsub("\\.dat$", "", project_path)
+      output_file <- paste0(output_file,'_standardized')
     } else {
-      output_file = paste0(db_path, "/", gsub("\\.dat$", "", prj_name), '_standardized')
+      output_file <- file.path(db_path, paste0(gsub("\\.dat$", "", prj_name), '_standardized'))
     }
   }
 
@@ -551,7 +561,7 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
       write.csv(report, file.path(paste0(output_file,'.csv')), row.names = FALSE)
     }
     if (save_output == TRUE || 'XLSX' %in% save_output) {
-      writexl::write_xlsx(report, file.path(paste0(output_file,'.xlsx')))
+      write_xlsx(report, file.path(paste0(output_file,'.xlsx')))
     }
   }
 
@@ -564,15 +574,15 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
       if (!is.na(ch)) {
         for (d in ch[[1]]) {
           out = get(variables$fun[which(variables$name == d)])()
-          vetting_summary[[stringr::str_sub(as.character(out$message),
-                                            end = stringr::str_locate(as.character(out$message), ':') - 1)[1]]] = out
+          vetting_summary[[str_sub(as.character(out$message),
+                                   end = str_locate(as.character(out$message), ':') - 1)[1]]] = out
         }
       }
     }
     vet = do_check_vetting()
     print('Vetting summary:')
-    vetting_summary[[stringr::str_sub(as.character(vet$message),
-                                      end = stringr::str_locate(as.character(vet$message), ':') - 1)[1]]] = vet
+    vetting_summary[[str_sub(as.character(vet$message),
+                             end = str_locate(as.character(vet$message), ':') - 1)[1]]] = vet
     for (e in vetting_summary) {
       print(e$message)
     }
@@ -600,11 +610,13 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
 #' launch_gcamreport_ui
 #'
 #' Launch shiny interactive user interface.
-#' @param data_path: RData dataset path containing the standardized data. You can obtain
+#' @param data_path RData dataset path containing the standardized data. You can obtain
 #' this dataset by using the function `gcamreport::generate_report`.
-#' @param data: dataset containing the standardized data. You can obtain
+#' @param data dataset containing the standardized data. You can obtain
 #' this dataset by using the function `gcamreport::generate_report`.
 #' @return launch shiny interactive ui
+#' @importFrom tidyr separate
+#' @importFrom shiny runApp
 #' @export
 launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
 
@@ -617,12 +629,14 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
 
   # load data
   if (!is.null(data_path)) {
-    data = assign('data', get(load(data_path)))
+    data <- assign('data', get(load(data_path)))
   }
 
   # define the dataset for launching the ui
-  sdata <<- data %>%
-    tidyr::separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+  sdata <<- suppressWarnings(
+    data %>%
+      separate(Variable, into = c('col1','col2','col3','col4','col5','col6','col7'), sep = "([\\|])", extra = 'merge', remove = FALSE)
+  )
 
   # create vector of available years for launching the ui
   available_years <<- as.numeric(names(sdata)[13:length(names(sdata))])
@@ -636,5 +650,5 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL){
   # save a list of all variables
   all_vars <<- do_collapse_df(cols)
 
-  shiny::runApp('inst/gcamreport_ui')
+  runApp('inst/gcamreport_ui')
 }
