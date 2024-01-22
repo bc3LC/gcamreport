@@ -397,6 +397,13 @@ available_variables = function(print = TRUE) {
 generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
                desired_variables = 'All', desired_regions = 'All', desired_continents = 'All', save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
 
+  # check that desired_regions and desired_continents are not specified at the same time
+  if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
+    if (!(length(desired_regions) == 1 && desired_continents == 'All')) {
+      stop(paste0('ERROR: You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.\n'))
+    }
+  }
+
   # check that the desired_regions are available
   if (!(length(desired_regions) == 1 && desired_regions == 'All')) {
     check_reg = setdiff(desired_regions, available_regions(print = FALSE))
@@ -537,14 +544,14 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
 
   # bind and save results
   do_bind_results()
-  save(final_data, file = paste0(output_file,'.RData'))
+  save(report, file = paste0(output_file,'.RData'))
 
   if (save_output == TRUE || save_output %in% c('CSV','XLSX')) {
     if (save_output == TRUE || 'CSV' %in% save_output) {
-      write.csv(final_data, file.path(paste0(output_file,'.csv')), row.names = FALSE)
+      write.csv(report, file.path(paste0(output_file,'.csv')), row.names = FALSE)
     }
     if (save_output == TRUE || 'XLSX' %in% save_output) {
-      writexl::write_xlsx(final_data, file.path(paste0(output_file,'.xlsx')))
+      writexl::write_xlsx(report, file.path(paste0(output_file,'.xlsx')))
     }
   }
 
@@ -584,7 +591,7 @@ generate_report = function(project_path = NULL, db_path = NULL, db_name = NULL, 
     print('Launching UI...')
 
     # launch ui
-    launch_gcamreport_ui(data = final_data)
+    launch_gcamreport_ui(data = report)
   }
 
 }

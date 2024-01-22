@@ -519,7 +519,7 @@ get_ghg_sector = function() {
     conv_ghg_co2e() %>%
     dplyr::filter(variable %in% GHG_gases) %>%
     dplyr::rename(ghg = variable) %>%
-    dplyr::left_join(filter_variables(kyoto_sector_map, 'ghg_sector_clean'), relationship = "many-to-many") %>%
+    dplyr::left_join(filter_variables(kyoto_sector_map, 'ghg_sector_clean')) %>%
     dplyr::select(all_of(long_columns)) %>%
     dplyr::bind_rows(LU_carbon_clean %>%
                        dplyr::mutate(var = "Emissions|Kyoto Gases"),
@@ -1590,13 +1590,13 @@ get_elec_capital = function() {
   # Capital costs from GCAM in $1975/kw -> convert to $2010/kw
   elec_capital <-
     capital_gcam %>%
-    dplyr::mutate(scenario = Scenarios[1]) %>%
+    dplyr::mutate(region = "USA", scenario = Scenarios[1]) %>%
     dplyr::select(-sector) %>%
+    tidyr::complete(tidyr::nesting(subsector, technology, year, capital.overnight),
+                    region = unique(cf_rgn_filteredReg$region), scenario = Scenarios) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
     dplyr::mutate(value = capital.overnight * conv_75USD_10USD) %>%
-    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output),
-                     by = c("subsector", "technology"),
-                     relationship = "many-to-many")
+    dplyr::left_join(filter_variables(elec_gen_map, 'elec_capital') %>% dplyr::select(-output), by = c("subsector", "technology"), multiple = "all")
 
   elec_capital_clean <<-
     filter_data_regions(elec_capital) %>%
@@ -1632,10 +1632,10 @@ get_elec_investment = function() {
                        dplyr::mutate(capital.overnight = replace(capital.overnight, technology=="wind_storage", capital.overnight[technology == "wind"]*.484),
                                      capital.overnight = replace(capital.overnight, technology=="CSP_storage", 760 * conv_19USD_75USD),
                                      capital.overnight = replace(capital.overnight, technology=="PV_storage", capital.overnight[technology == "PV"]*.518)),
-                     by = c("technology", "year", "region")) %>%
+                     by = c("technology", "year")) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
     dplyr::mutate(value = GW * capital.overnight / 1000 * conv_75USD_10USD) %>%
-    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output), by = c("technology"), relationship = "many-to-many") %>%
+    dplyr::left_join(filter_variables(elec_gen_map, 'elec_investment_clean') %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv,
                   var = sub("Secondary Energy", "Investment|Energy Supply", var)) %>%
@@ -1854,7 +1854,7 @@ do_bind_results = function() {
   GCAM_DATA_wGLOBAL <- GCAM_DATA_wGLOBAL %>% dplyr::filter(year <= final_db_year)
 
 
-  final_data <<-
+  report <<-
     template %>%
     dplyr::inner_join(GCAM_DATA_wGLOBAL %>%
                         na.omit %>%
@@ -1866,8 +1866,12 @@ do_bind_results = function() {
     #  dplyr::rename(Model = ?..Model) %>%
     dplyr::rename(Scenario = scenario) %>%
     dplyr::select(all_of(reporting_columns_fin)) %>%
-    dplyr::filter(!is.na(Region)) %>% # Drop variables we don't report
-    dplyr::filter(Variable %in% desired_variables)
+    dplyr::filter(!is.na(Region)) # Drop variables we don't report
+
+  if (!(length(desired_variables) == 1 && desired_variables == 'All')) {
+    report <<- report %>%
+      dplyr::filter(Variable %in% desired_variables)
+  }
 }
 
 #########################################################################
@@ -1918,7 +1922,7 @@ do_check_trade = function() {
 #' @export
 do_check_vetting = function() {
   # Check vetting results from SM
-  final_data_long_check <- final_data %>%
+  final_data_long_check <- report %>%
     tidyr::gather(year, value, -Model, -Variable, -Unit, -Scenario, -Region) %>%
     dplyr::rename(region = Region,
                   variable = Variable) %>%
@@ -1998,7 +2002,7 @@ do_check_vetting = function() {
 #' @return Updated template as .rda and as csv in the inst/extdata folder
 update_template = function() {
   data = merge(template,
-               data.frame(Variable = unique(final_data$Variable)) %>%
+               data.frame(Variable = unique(report$Variable)) %>%
                  dplyr::mutate('as_output' = TRUE),
                by = 'Variable', all = TRUE) %>%
     dplyr::select(colnames(template), as_output) %>%
