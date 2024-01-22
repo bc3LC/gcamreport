@@ -1629,13 +1629,13 @@ get_elec_capital = function() {
   # Capital costs from GCAM in $1975/kw -> convert to $2010/kw
   elec_capital <-
     capital_gcam %>%
-    dplyr::mutate(region = "USA", scenario = Scenarios[1]) %>%
+    dplyr::mutate(scenario = Scenarios[1]) %>%
     dplyr::select(-sector) %>%
-    tidyr::complete(tidyr::nesting(subsector, technology, year, capital.overnight),
-                    region = unique(cf_rgn_filteredReg$region), scenario = Scenarios) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
     dplyr::mutate(value = capital.overnight * conv_75USD_10USD) %>%
-    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output), by = c("subsector", "technology"), multiple = "all")
+    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output),
+                     by = c("subsector", "technology"),
+                     relationship = "many-to-many")
 
   elec_capital_clean <<-
     filter_data_regions(elec_capital) %>%
@@ -1671,10 +1671,10 @@ get_elec_investment = function() {
                        dplyr::mutate(capital.overnight = replace(capital.overnight, technology=="wind_storage", capital.overnight[technology == "wind"]*.484),
                                      capital.overnight = replace(capital.overnight, technology=="CSP_storage", 760 * conv_19USD_75USD),
                                      capital.overnight = replace(capital.overnight, technology=="PV_storage", capital.overnight[technology == "PV"]*.518)),
-                     by = c("technology", "year")) %>%
+                     by = c("technology", "year", "region")) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
     dplyr::mutate(value = GW * capital.overnight / 1000 * conv_75USD_10USD) %>%
-    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output), by = c("technology"), multiple = "all") %>%
+    dplyr::left_join(filter_variables(elec_gen_map) %>% dplyr::select(-output), by = c("technology"), relationship = "many-to-many") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv,
                   var = sub("Secondary Energy", "Investment|Energy Supply", var)) %>%

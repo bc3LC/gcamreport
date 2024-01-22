@@ -514,6 +514,7 @@ run = function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = N
   # for all desired variables, load the corresponding data
   loaded_internal_variables <<- c()
   desired_regions <<- desired_regions
+  desired_variables <<- desired_variables
   for (i in 1:nrow(variables)) {
     if (variables$required[i]) {
       load_variable(variables[i,])

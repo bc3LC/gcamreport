@@ -145,12 +145,9 @@ use_data(buildings_en_service, overwrite=T)
 
 
 # capital updates
-capital_gcam <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/L223.GlobalIntTechCapital_elec.csv"), skip = 2, na = "",
+capital_gcam <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/L223.StubTechCapital.csv"), skip = 2, na = "",
                          fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE) %>%
-  dplyr::rename(technology = intermittent.technology) %>%
-  dplyr::bind_rows(read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/L223.GlobalTechCapital_elec.csv"), skip = 2, na = "",
-                            stringsAsFactors = FALSE))%>%
-  dplyr::select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
+  dplyr::select(region, sector = supplysector, subsector = subsector, technology = stub.technology, year, capital.overnight)
 use_data(capital_gcam, overwrite=T)
 
 investment <- read.csv(paste0(rawDataFolder, "/inst/extdata/mappings", "/investment.csv"), na = "", stringsAsFactors = FALSE) %>%
