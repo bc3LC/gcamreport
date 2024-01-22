@@ -13,8 +13,4 @@ co2_ets_by reg and co2_ets_bysec global variables
 Get World's CO2 ETS emissions query.
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

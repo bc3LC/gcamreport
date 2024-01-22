@@ -15,6 +15,8 @@ transport_final_en_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::transport_final_en_map

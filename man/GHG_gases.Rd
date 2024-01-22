@@ -12,6 +12,8 @@ GHG_gases
 }
 \description{
 ghg emission conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::GHG_gases

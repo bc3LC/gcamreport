@@ -13,9 +13,5 @@ fe_sector global variable
 Get final energy demand by sector
 }
 \keyword{energy}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

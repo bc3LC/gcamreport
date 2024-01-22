@@ -15,6 +15,8 @@ global_vet_values
 }
 \description{
 vetting values to test
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::global_vet_values

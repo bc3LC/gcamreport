@@ -7,7 +7,7 @@
 do_collapse_df(basic_data)
 }
 \arguments{
-\item{basic_data:}{dataframe/datatable to be collapsed}
+\item{basic_data}{dataframe/datatable to be collapsed}
 }
 \value{
 Vector with the collapsed data

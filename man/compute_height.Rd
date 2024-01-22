@@ -7,7 +7,7 @@
 compute_height(reg_all)
 }
 \arguments{
-\item{reg_all:}{regions' vector}
+\item{reg_all}{regions' vector}
 }
 \description{
 Return perfect heigh of rendered plots with ungrouped regions

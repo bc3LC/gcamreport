@@ -7,7 +7,7 @@
 available_regions(print = TRUE)
 }
 \arguments{
-\item{print:}{if TRUE, prints all available regions. TRUE by default.}
+\item{print}{if TRUE, prints all available regions. TRUE by default.}
 }
 \value{
 Prints a list of all the available regions for the IAMC reporting dataset.

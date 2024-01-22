@@ -14,4 +14,3 @@ Get overall carbon revenue.
 }
 \keyword{internal}
 \keyword{revenue}
-\keyword{rgcam::getQuery}

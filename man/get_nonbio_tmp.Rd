@@ -13,8 +13,4 @@ nonbio_share global variable
 Get no bio CO2 emissions query by sector.
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

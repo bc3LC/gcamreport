@@ -15,6 +15,8 @@ capital_gcam
 }
 \description{
 capital update
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::capital_gcam

@@ -7,11 +7,11 @@
 do_mount_tree(df, column_names, current_column = 1, selec = TRUE, iid = NULL)
 }
 \arguments{
-\item{df:}{dataset}
+\item{df}{dataset}
 
-\item{column_names:}{names of the columns of the original dataset}
+\item{column_names}{names of the columns of the original dataset}
 
-\item{current_column:}{number of the current column}
+\item{current_column}{number of the current column}
 }
 \value{
 nested list

@@ -13,8 +13,4 @@ co2_clean global variable
 Get World's CO2 emissions query.
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

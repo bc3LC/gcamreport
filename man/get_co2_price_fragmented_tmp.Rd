@@ -13,9 +13,5 @@ co2_price_fragmented global variable
 Get fragmented co2 price.
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

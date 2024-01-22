@@ -13,8 +13,4 @@ ag_prices_clean global variable
 Calculate average mean for ag global index
 }
 \keyword{ag}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

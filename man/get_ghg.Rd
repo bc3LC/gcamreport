@@ -13,8 +13,4 @@ ghg_clean global variable
 Get total GHG emissions.
 }
 \keyword{ghg}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

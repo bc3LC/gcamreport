@@ -15,5 +15,4 @@ Get iron and steel CO2 emissions.
 \keyword{co2}
 \keyword{internal}
 \keyword{iron}
-\keyword{rgcam::getQuery}
 \keyword{steel}

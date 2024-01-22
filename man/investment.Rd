@@ -15,6 +15,8 @@ investment
 }
 \description{
 capital investment
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::investment

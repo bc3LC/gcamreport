@@ -13,8 +13,4 @@ ag_production_clean global variable
 Get agricultural production.
 }
 \keyword{ag}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

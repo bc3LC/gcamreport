@@ -12,6 +12,8 @@ CO2_equivalent
 }
 \description{
 CO2 equivalency conversion
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::CO2_equivalent

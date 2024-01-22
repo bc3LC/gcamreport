@@ -7,7 +7,7 @@
 available_variables(print = TRUE)
 }
 \arguments{
-\item{print:}{if TRUE, prints all available variables. TRUE by default.}
+\item{print}{if TRUE, prints all available variables. TRUE by default.}
 }
 \value{
 Prints a list of all the available variables for the IAMC reporting dataset.

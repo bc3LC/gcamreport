@@ -15,6 +15,8 @@ emissions_list
 }
 \description{
 nonCO2 pollutants list
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::emissions_list

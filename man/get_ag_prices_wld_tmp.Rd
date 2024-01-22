@@ -13,9 +13,5 @@ ag_prices_wld global variable
 Get ag price index.
 }
 \keyword{ag}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

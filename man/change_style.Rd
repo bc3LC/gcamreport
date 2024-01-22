@@ -7,11 +7,11 @@
 change_style(tree, type, tmp_vars = NULL)
 }
 \arguments{
-\item{tree:}{base tree to change the style on}
+\item{tree}{base tree to change the style on}
 
-\item{type:}{either regions or variables}
+\item{type}{either regions or variables}
 
-\item{tmp_vars:}{variables which require 'dis' style}
+\item{tmp_vars}{variables which require 'dis' style}
 }
 \description{
 Change the style of the tree nodes: 'dis' if needs to be disabled, 'basic' otherwise.

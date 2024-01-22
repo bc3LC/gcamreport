@@ -15,6 +15,8 @@ ag_demand_map
 }
 \description{
 ag maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::ag_demand_map

@@ -15,6 +15,8 @@ template
 }
 \description{
 read in template
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::template

@@ -7,7 +7,7 @@
 is_leaf(tree)
 }
 \arguments{
-\item{tree:}{tree node to be checked}
+\item{tree}{tree node to be checked}
 }
 \description{
 Return TRUE if it is a leaf node; FALSE otherwise.

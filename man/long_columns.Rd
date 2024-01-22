@@ -12,6 +12,8 @@ long_columns
 }
 \description{
 reporting columns
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::long_columns

@@ -11,13 +11,9 @@ An object of class \code{list} of length 12.
 convert
 }
 \description{
-<<<<<<< HEAD:man/GJ_to_EJ.Rd
-units conversion
-=======
 units conversion list
 }
 \examples{
->>>>>>> f4b3e58 (Review: fix global data items warnings and clean unnecessary items):man/convert.Rd
 \dontrun{
  library(gcamreport);
  gcamreport::convert

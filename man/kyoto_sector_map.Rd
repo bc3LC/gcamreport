@@ -15,6 +15,8 @@ kyoto_sector_map
 }
 \description{
 emissions maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::kyoto_sector_map

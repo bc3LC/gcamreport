@@ -15,6 +15,8 @@ CO2_market
 }
 \description{
 new CO2 market
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::CO2_market

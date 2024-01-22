@@ -15,6 +15,8 @@ reg_cont
 }
 \description{
 mapping between regions and continents
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::reg_cont

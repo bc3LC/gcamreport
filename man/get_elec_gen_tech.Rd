@@ -13,8 +13,4 @@ elec_gen_tech_clean global variable
 Get electricity generation
 }
 \keyword{electricity}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

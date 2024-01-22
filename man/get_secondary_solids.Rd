@@ -13,8 +13,4 @@ secondary_solids global variable
 Get secondary solids
 }
 \keyword{energy}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

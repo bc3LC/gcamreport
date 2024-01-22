@@ -15,6 +15,8 @@ elec_gen_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::elec_gen_map

@@ -15,6 +15,8 @@ land_use_map
 }
 \description{
 ag maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::land_use_map

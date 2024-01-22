@@ -12,6 +12,8 @@ GCAM_years
 }
 \description{
 reporting years
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::GCAM_years

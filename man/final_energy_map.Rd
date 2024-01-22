@@ -15,6 +15,8 @@ final_energy_map
 }
 \description{
 primary, secondary, final energy maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::final_energy_map

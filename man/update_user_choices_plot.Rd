@@ -13,15 +13,15 @@ update_user_choices_plot(
 )
 }
 \arguments{
-\item{selected_scen:}{user's selected scenarios}
+\item{selected_scen}{user's selected scenarios}
 
-\item{selected_years:}{user's selected years}
+\item{selected_years}{user's selected years}
 
-\item{tree_regions:}{user's selected regions}
+\item{tree_regions}{user's selected regions}
 
-\item{tree_variables:}{user's selected variables}
+\item{tree_variables}{user's selected variables}
 
-\item{sidebarItemExpanded:}{input sidebar expanded item}
+\item{sidebarItemExpanded}{input sidebar expanded item}
 }
 \description{
 Update dataframe to display plots with the user's choices

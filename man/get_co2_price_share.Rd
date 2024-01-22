@@ -14,9 +14,5 @@ Get co2 price between CO2 and CO2_ETS. If only one CO2 type present, share = 1;
 otherwise, each type has the share corresponding to the last historical year
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)
 \keyword{tmp}

@@ -15,6 +15,8 @@ ag_prices_map
 }
 \description{
 ag maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::ag_prices_map

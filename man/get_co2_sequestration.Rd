@@ -13,8 +13,4 @@ co2_sequestration_clean global variable
 Get carbon sequestration.
 }
 \keyword{co2}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

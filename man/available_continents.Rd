@@ -7,7 +7,7 @@
 available_continents(print = TRUE)
 }
 \arguments{
-\item{print:}{if TRUE, prints all available continents/regions' groups. TRUE by default.}
+\item{print}{if TRUE, prints all available continents/regions' groups. TRUE by default.}
 }
 \value{
 Prints a list of all the available continents/regions' groups for the

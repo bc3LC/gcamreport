@@ -14,4 +14,3 @@ Get population query and change units to [million].
 }
 \keyword{internal}
 \keyword{population}
-\keyword{rgcam::getQuery}

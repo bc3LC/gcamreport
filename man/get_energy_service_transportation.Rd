@@ -13,8 +13,4 @@ energy_service_transportation_clean global variable
 Get transport.
 }
 \keyword{energy}
-<<<<<<< HEAD
-\keyword{rgcam::getQuery}
-=======
 \keyword{internal}
->>>>>>> dc7f961 (Review: fix warning message undefined data)

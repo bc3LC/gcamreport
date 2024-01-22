@@ -15,4 +15,3 @@ Get land use CO2 emissions.
 \keyword{co2}
 \keyword{internal}
 \keyword{lu}
-\keyword{rgcam::getQuery}

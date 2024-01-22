@@ -1942,12 +1942,12 @@ get_elec_capital <- function() {
 
   # Capital costs from GCAM in $1975/kw -> convert to $2010/kw
   elec_capital <-
-    capital_gcam %>%
-    mutate(scenario = Scenarios[1]) %>%
+    gcamreport::capital_gcam %>%
+    mutate(scenario = scenarios.global[1]) %>%
     select(-sector) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
-    mutate(value = capital.overnight * conv_75USD_10USD) %>%
-    left_join(filter_variables(elec_gen_map) %>% select(-output),
+    mutate(value = capital.overnight * gcamreport::convert$conv_75USD_10USD) %>%
+    left_join(filter_variables(gcamreport::elec_gen_map, "elec_capital") %>% select(-output),
               by = c("subsector", "technology"),
               relationship = "many-to-many")
 
@@ -1992,8 +1992,8 @@ get_elec_investment <- function() {
                        capital.overnight = replace(capital.overnight, technology=="PV_storage", capital.overnight[technology == "PV"]*.518)),
               by = c("technology", "year", "region")) %>%
     # gw * 10e6 * $/kw / 10e9 = bill$
-    mutate(value = GW * capital.overnight / 1000 * conv_75USD_10USD) %>%
-    left_join(filter_variables(elec_gen_map, 'elec_investment_clean') %>% select(-output), by = c("technology"), relationship = "many-to-many") %>%
+    mutate(value = GW * capital.overnight / 1000 * gcamreport::convert$conv_75USD_10USD) %>%
+    left_join(filter_variables(gcamreport::elec_gen_map, "elec_investment_clean") %>% select(-output), by = c("technology"), relationship = "many-to-many") %>%
     filter(!is.na(var)) %>%
     mutate(value = value * unit_conv,
            var = sub("Secondary Energy", "Investment|Energy Supply", var)) %>%

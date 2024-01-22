@@ -9,7 +9,4 @@ gather_map(df)
 \description{
 Formats all maps into a long table
 }
-<<<<<<< HEAD
-=======
 \keyword{internal}
->>>>>>> f4b3e58 (Review: fix global data items warnings and clean unnecessary items)

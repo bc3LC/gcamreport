@@ -15,6 +15,8 @@ carbon_seq_tech_map
 }
 \description{
 emissions maps
+}
+\examples{
 \dontrun{
  library(gcamreport);
  gcamreport::carbon_seq_tech_map
