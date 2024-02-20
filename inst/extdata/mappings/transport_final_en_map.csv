@@ -1,64 +1,44 @@
-﻿#Transport Demand for Final Fuels,,,,,
-sector,input,mode,var1,var2,unit_conv
-trn_freight,delivered coal,Freight Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,1
-trn_freight_road,delivered gas,Light truck,,,1
-trn_pass_road,delivered gas,Bus,Final Energy|Transportation|Road|Passenger|Bus,,1
-trn_pass_road_LDV,delivered gas,2W and 3W,,,1
-trn_pass_road_LDV_4W,delivered gas,Car,,,1
-trn_pass_road_LDV_4W,delivered gas,Large Car and Truck,,,1
-trn_pass_road_LDV_4W,delivered gas,Mini Car,,,1
-trn_aviation_intl,elect_td_trn,International Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_freight,elect_td_trn,Domestic Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_freight,elect_td_trn,Freight Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,1
-trn_freight_road,elect_td_trn,Heavy truck,,,1
-trn_freight_road,elect_td_trn,Light truck,,,1
-trn_freight_road,elect_td_trn,Medium truck,,,1
-trn_pass,elect_td_trn,Domestic Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_pass,elect_td_trn,HSR,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,1
-trn_pass,elect_td_trn,Passenger Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,1
-trn_pass_road,elect_td_trn,Bus,Final Energy|Transportation|Road|Passenger|Bus,,1
-trn_pass_road_LDV,elect_td_trn,2W and 3W,,,1
-trn_pass_road_LDV_4W,elect_td_trn,Car,,,1
-trn_pass_road_LDV_4W,elect_td_trn,Large Car and Truck,,,1
-trn_pass_road_LDV_4W,elect_td_trn,Mini Car,,,1
-trn_shipping_intl,elect_td_trn,International Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_freight_road,H2 retail dispensing,Heavy truck,,,1
-trn_freight_road,H2 retail dispensing,Light truck,,,1
-trn_freight_road,H2 retail dispensing,Medium truck,,,1
-trn_pass_road,H2 retail dispensing,Bus,Final Energy|Transportation|Road|Passenger|Bus,,1
-trn_pass_road_LDV_4W,H2 retail dispensing,Car,,,1
-trn_pass_road_LDV_4W,H2 retail dispensing,Large Car and Truck,,,1
-trn_pass_road_LDV_4W,H2 retail dispensing,Mini Car,,,1
-trn_aviation_intl,H2 wholesale dispensing,International Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_freight,H2 wholesale dispensing,Domestic Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_freight,H2 wholesale dispensing,Freight Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,1
-trn_pass,H2 wholesale dispensing,Domestic Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_shipping_intl,H2 wholesale dispensing,International Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_aviation_intl,refined liquids enduse,International Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_freight,refined liquids enduse,Domestic Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_freight,refined liquids enduse,Freight Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,1
-trn_freight_road,refined liquids enduse,Heavy truck,,,1
-trn_freight_road,refined liquids enduse,Light truck,,,1
-trn_freight_road,refined liquids enduse,Medium truck,,,1
-trn_pass,refined liquids enduse,Domestic Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_pass,refined liquids enduse,Passenger Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,1
-trn_pass_road,refined liquids enduse,Bus,Final Energy|Transportation|Road|Passenger|Bus,,1
-trn_pass_road_LDV,refined liquids enduse,2W and 3W,,,1
-trn_pass_road_LDV_4W,refined liquids enduse,Car,,,1
-trn_pass_road_LDV_4W,refined liquids enduse,Large Car and Truck,,,1
-trn_pass_road_LDV_4W,refined liquids enduse,Mini Car,,,1
-trn_shipping_intl,refined liquids enduse,International Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_shipping_intl,refined liquids bunkers,International Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_aviation_intl,refined liquids bunkers,International Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_freight,refined liquids transport,Domestic Ship,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,1
-trn_freight,refined liquids transport,Freight Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,1
-trn_freight_road,refined liquids transport,Heavy truck,,,1
-trn_freight_road,refined liquids transport,Light truck,,,1
-trn_freight_road,refined liquids transport,Medium truck,,,1
-trn_pass,refined liquids transport,Domestic Aviation,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,1
-trn_pass,refined liquids transport,Passenger Rail,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,1
-trn_pass_road,refined liquids transport,Bus,Final Energy|Transportation|Road|Passenger|Bus,,1
-trn_pass_road_LDV,refined liquids transport,2W and 3W,,,1
-trn_pass_road_LDV_4W,refined liquids transport,Car,,,1
-trn_pass_road_LDV_4W,refined liquids transport,Large Car and Truck,,,1
-trn_pass_road_LDV_4W,refined liquids transport,Mini Car,,,1
+#Transport Demand for Final Fuels
+input,sector,mode,var1,var2,var3,var4,var5,var6,var7,var8,var9,unit_conv
+H2 wholesale dispensing,trn_aviation_intl,International Aviation,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+elect_td_trn,trn_aviation_intl,International Aviation,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+refined liquids bunkers,trn_aviation_intl,International Aviation,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+H2 wholesale dispensing,trn_freight,Domestic Ship,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
+elect_td_trn,trn_freight,Domestic Ship,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
+refined liquids transport,trn_freight,Domestic Ship,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
+H2 wholesale dispensing,trn_freight,Freight Rail,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,,1
+delivered coal,trn_freight,Freight Rail,Final Energy,Final Energy|Solids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Other,Final Energy|Transportation|Freight|Other,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,,1
+elect_td_trn,trn_freight,Freight Rail,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,,1
+refined liquids transport,trn_freight,Freight Rail,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Freight,,1
+H2 retail dispensing,trn_freight_road,Heavy truck,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+elect_td_trn,trn_freight_road,Heavy truck,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+refined liquids transport,trn_freight_road,Heavy truck,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+H2 retail dispensing,trn_freight_road,Light truck,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+elect_td_trn,trn_freight_road,Light truck,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+refined liquids transport,trn_freight_road,Light truck,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+H2 retail dispensing,trn_freight_road,Medium truck,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+elect_td_trn,trn_freight_road,Medium truck,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+refined liquids transport,trn_freight_road,Medium truck,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Freight,,1
+H2 wholesale dispensing,trn_pass,Domestic Aviation,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+elect_td_trn,trn_pass,Domestic Aviation,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+refined liquids transport,trn_pass,Domestic Aviation,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Aviation,Final Energy|Transportation|Aviation|Passenger,,1
+elect_td_trn,trn_pass,HSR,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,,1
+elect_td_trn,trn_pass,Passenger Rail,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,,1
+refined liquids transport,trn_pass,Passenger Rail,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Rail,Final Energy|Transportation|Rail|Passenger,,1
+H2 retail dispensing,trn_pass_road,Bus,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|Bus,1
+delivered gas transport,trn_pass_road,Bus,Final Energy,Final Energy|Gases,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Gases,Final Energy|Transportation|Passenger|Gases,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|Bus,1
+elect_td_trn,trn_pass_road,Bus,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|Bus,1
+refined liquids transport,trn_pass_road,Bus,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|Bus,1
+elect_td_trn,trn_pass_road_LDV,2W and 3W,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|2W&3W,1
+refined liquids transport,trn_pass_road_LDV,2W and 3W,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|2W&3W,1
+H2 retail dispensing,trn_pass_road_LDV_4W,Car,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+delivered gas transport,trn_pass_road_LDV_4W,Car,Final Energy,Final Energy|Gases,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Gases,Final Energy|Transportation|Passenger|Gases,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+elect_td_trn,trn_pass_road_LDV_4W,Car,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+refined liquids transport,trn_pass_road_LDV_4W,Car,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+H2 retail dispensing,trn_pass_road_LDV_4W,Large Car and Truck,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+delivered gas transport,trn_pass_road_LDV_4W,Large Car and Truck,Final Energy,Final Energy|Gases,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Gases,Final Energy|Transportation|Passenger|Gases,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+elect_td_trn,trn_pass_road_LDV_4W,Large Car and Truck,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Electricity,Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+refined liquids transport,trn_pass_road_LDV_4W,Large Car and Truck,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Passenger,Final Energy|Transportation|Liquids,Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Road,Final Energy|Transportation|Road|Passenger,Final Energy|Transportation|Road|Passenger|4W,1
+H2 wholesale dispensing,trn_shipping_intl,International Ship,Final Energy,Final Energy|Hydogen,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
+elect_td_trn,trn_shipping_intl,International Ship,Final Energy,Final Energy|Electricity,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Electricity,Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
+refined liquids bunkers,trn_shipping_intl,International Ship,Final Energy,Final Energy|Liquids,Final Energy|Transportation,Final Energy|Transportation|Freight,Final Energy|Transportation|Liquids,Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Maritime,Final Energy|Transportation|Maritime|Freight,,1
