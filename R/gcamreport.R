@@ -4,6 +4,6 @@
 #' \item Github: https://github.com/JGCRI/gcamreport
 #' \item Webpage: https://jgcri.github.io/gcamreport/}
 #'
-#' @docType package
+#' @docType _PACKAGE
 #' @name gcamreport
 NULL
