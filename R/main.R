@@ -238,6 +238,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
           } else {
             prj <- prj_tmp
           }
+          rm(prj_tmp)
         } else {
           warning(paste(qn, "query is empty!"))
         }
@@ -254,6 +255,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
         queryname = "nonCO2 emissions by sector (excluding resource production)", clobber = FALSE
       )
       prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+      rm(prj_tmp)
     }
     if (!"nonCO2 emissions by region" %in% listQueries(prj) &&
       "nonCO2 emissions by region" %in% names(queries_touse_large)) {
@@ -264,6 +266,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
         queryname = "nonCO2 emissions by region", clobber = FALSE
       )
       prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+      rm(prj_tmp)
     }
 
     # Fill with an empty datatable the possible 'CO2 price' query if necessary
@@ -282,6 +285,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
         queryname = "CO2 prices", clobber = TRUE
       )
       prj <- mergeProjects(prj_name, list(prj, prj_tmp), clobber = TRUE, saveProj = FALSE)
+      rm(prj_tmp)
     }
 
     # save the project
