@@ -8,8 +8,8 @@
 <meta name="description" content="gcamreport">
 <title>Step-by-step full example • gcamreport</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Step-by-step full example">
 <meta property="og:description" content="gcamreport">
@@ -124,14 +124,17 @@ provided database<a class="anchor" aria-label="anchor" href="#example-1-step-by-
 </h2>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker</p></li>
+guide</a> either with R Studio or Docker.</p></li>
 <li><p>Download the example <a href="https://zenodo.org/records/10258919" class="external-link">GCAM7.0 database</a>, store
-it inside <code>gcamreport/examples</code>, and unpack it.</p></li>
+it inside <code>gcamreport/examples</code>, and unpack it. Make sure
+that the database is directly located in
+<code>gcamreport/examples/database_basexdb_ref</code> and an
+intermediate folder has not appeared.</p></li>
 <li><p>Generate the standardized dataset:</p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
 <span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"examples"</span></span>
@@ -149,6 +152,8 @@ it inside <code>gcamreport/examples</code>, and unpack it.</p></li>
 <span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>, </span>
 <span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
 <span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>In case you expirence some trouble, check this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#troubleshooting-for-the-generate_report-function">troubleshooting
+section</a>.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Once the project has been generated and the standardized dataset
 created, the user interface will prompt. If you are using R Studio, it
@@ -191,7 +196,7 @@ guide</a> either with R Studio or Docker</p></li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
 <span><span class="va">projectpath</span> <span class="op">&lt;-</span> <span class="st">"examples/example2.dat"</span></span>
@@ -203,6 +208,8 @@ guide</a> either with R Studio or Docker</p></li>
 <span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>,</span>
 <span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
 <span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>In case you expirence some trouble, check this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#troubleshooting-for-the-generate_report-function">troubleshooting
+section</a>.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Once the project has been generated and the standardized dataset
 created, the user interface will prompt. If you are using R Studio, it
@@ -239,13 +246,15 @@ guide</a> either with R Studio or Docker</p></li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- load gcamreport library.</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JGCRI/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
 <span><span class="va">datapath</span> <span class="op">&lt;-</span> <span class="st">"examples/example3.RData"</span></span>
 <span></span>
 <span><span class="co">## -- launch the user interface</span></span>
 <span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data_path <span class="op">=</span> <span class="va">datapath</span><span class="op">)</span></span></code></pre></div>
+<p>In case you expirence some trouble, check this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html#troubleshooting-when-launching-the-ui-with-the-docker-installation">troubleshooting
+section</a>.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Once the project has been generated and the standardized dataset
 created, the user interface will prompt. If you are using R Studio, it
