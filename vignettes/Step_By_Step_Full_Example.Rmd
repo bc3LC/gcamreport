@@ -21,15 +21,15 @@ In this tutorial, we will 1) generate a dataset from a provided GCAM7.0 database
 
 ## Example 1: step-by-step standardized dataset generation from a provided database
 
-1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
 
-2) Download the example [GCAM7.0 database](https://zenodo.org/records/10258919), store it inside `gcamreport/examples`, and unpack it.
+2) Download the example [GCAM7.0 database](https://zenodo.org/records/10258919), store it inside `gcamreport/examples`, and unpack it. Make sure that the database is directly located in `gcamreport/examples/database_basexdb_ref` and an intermediate folder has not appeared.
 
 3) Generate the standardized dataset:
 
 ``` r
 ## -- load gcamreport library.
-library(gcamreport)
+devtools::load_all()
 
 ## -- store the database path, name, and scenarios in a variable.
 dbpath <- "examples"
@@ -48,6 +48,9 @@ generate_report(db_path = dbpath, db_name = dbname, scenarios = scen,
                 desired_variables = c('Agricultural*'), 
                 save_output = TRUE, launch_ui = TRUE)
 ```
+
+In case you expirence some trouble, check this [troubleshooting section](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#troubleshooting-for-the-generate_report-function).
+
 
 4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
@@ -79,7 +82,7 @@ generate_report(db_path = dbpath, db_name = dbname, scenarios = scen,
 
 ``` r
 ## -- load gcamreport library.
-library(gcamreport)
+devtools::load_all()
 
 ## -- store the database path, name, and scenarios in a variable.
 projectpath <- "examples/example2.dat"
@@ -92,6 +95,8 @@ generate_report(project_path = projectpath, final_year = 2050,
                 desired_variables = c('Agricultural*'), 
                 save_output = TRUE, launch_ui = TRUE)
 ```
+In case you expirence some trouble, check this [troubleshooting section](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#troubleshooting-for-the-generate_report-function).
+
 
 4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
@@ -121,7 +126,7 @@ generate_report(project_path = projectpath, final_year = 2050,
 
 ``` r
 ## -- load gcamreport library.
-library(gcamreport)
+devtools::load_all()
 
 ## -- store the database path, name, and scenarios in a variable.
 datapath <- "examples/example3.RData"
@@ -129,6 +134,8 @@ datapath <- "examples/example3.RData"
 ## -- launch the user interface
 launch_gcamreport_ui(data_path = datapath)
 ```
+In case you expirence some trouble, check this [troubleshooting section](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html#troubleshooting-when-launching-the-ui-with-the-docker-installation).
+
 
 4) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using R Studio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
