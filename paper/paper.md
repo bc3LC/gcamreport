@@ -46,14 +46,15 @@ In the case of the Global Change Analysis Model (GCAM) [@calvin2019], a well-reg
 
 ![**Figure 1:** Structure of the `gcamreport` package.\label{fig:scheme}](scheme_fig4_crop.png){width="75%"}
 
-The `gcamreport` package is accessible online at the public domain <https://github.com/bc3LC/gcamreport>. To run it to generate and save the dataset meeting the IAMC requirements and to launch the user interface, you can follow a detailed [step-by-step tutorial](https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.html) or this simplified code:
+The `gcamreport` package is accessible online at the public domain <https://github.com/bc3LC/gcamreport>. To run it to generate and save the dataset meeting the IAMC requirements and to launch the user interface, you can follow a detailed [step-by-step tutorial](https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.html) or this simplified code once the package has been cloned:
 
 ``` r
-# install the package
-remotes::install_github("bc3LC/gcamreport")
-library(gcamreport)
+# 1) open the gcamreport project
 
-# run the main function to produce the dataset report meeting the IAMC 
+# 2) load the package
+devtools::load_all()
+
+# 3) run the main function to produce the dataset report meeting the IAMC 
 # requirements and launch the user interface
 db_path <- "path/to/my-gcam-database"
 db_name <- "my-gcam-database"
