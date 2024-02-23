@@ -23,13 +23,15 @@ To see all possibilities of the `generate_report()` function, look [here](https:
 
 Assume you have a database called `myDb` in a folder named `dbFolder` and are willing to generate a standardized dataset for several scenarios: `scen1`, `scen2`, and `scen3`. With the `generate_report` function, it will be generated and automatically saved in the same folder where `myDb` is.
 
-1) Load `gcamreport` library.
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Load `gcamreport` library.
 
 ``` r
-library(gcamreport)
+devtools::load_all()
 ```
 
-2) Store the database path and name, the query path, the desired project name, and the considered scenarios in variables. In case you do not specify the scenarios, all the scenarios in the database will be considered for reporting.
+3) Store the database path and name, the query path, the desired project name, and the desired scenarios and reporting variables in variables. In case you do not specify the scenarios, all the scenarios in the database will be considered for reporting; and if the variables are not specified, all the available reporting variables will be used. For more details about scenarios and variables specification, look at the [regions' tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups) or at the [variables' tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables).
 
 ``` r
 dbpath <- "/path/to/database"
@@ -42,7 +44,7 @@ Notice that the extension is included in the project name. Accepted extensions: 
 
 **Note**: in case you followed the Docker installation, you should store your database inside the `gcamreport` folder and your root directory is called `/app`. Thus, your database path will be something like `/app/path/to/database`.
 
-3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
+4) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
 generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, 
@@ -53,9 +55,8 @@ generate_report(db_path = dbpath, query_path = querypath, db_name = dbname,
 **Note**: project generation requires approximately 30 minutes.
 
 Notice that the dataset will automatically be saved in `.RData`, `.csv` and `.xlsx` at `/path/to/database/awesomeProj_standardized.RData`, `/path/to/database/awesomeProj_standardized.csv`, and `/path/to/database/awesomeProj_standardized.xlsx`.
-TODO specify reg, continent, variables
 
-This procedure will generate a project file at `/path/to/database/dbname_prjname.dat` with all the necessary queries that you can use as indicated in [Example 2](#example2).
+This procedure will also generate a project file at `/path/to/database/dbname_prjname.dat` with all the necessary queries that you need for reporting. You can directly use it as indicated in [Example 2](#example2).
 
 The terminal will output the performed verifications and their final status.
 
@@ -75,14 +76,17 @@ The terminal will output the performed verifications and their final status.
 Assume you have a project called `myProj.dat` and are willing to generate a standardized dataset out of it. With the `generate_report` function, it will be generated and automatically saved in the same folder where `myProj.dat` is. Notice that `myProj.dat` should have all the required queries for the standardized dataset generation. If you are not sure you have all of them or you need to generate the project, see [Example1](#example1).
 
 
-1) Load `gcamreport` library.
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Load `gcamreport` library.
 
 ``` r
-library(gcamreport)
+devtools::load_all()
 ```
 
 
-2) Store the project path and the scenarios in a variable. In case you do not specify the scenarios, all the scenarios in the project will be considered for the reporting.
+3) Store the project path and the desired scenarios and reporting variables in variables. In case you do not specify the scenarios, all the scenarios in the database will be considered for reporting; and if the variables are not specified, all the available reporting variables will be used. For more details about scenarios and variables specification, look at the [regions' tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups) or at the [variables' tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables).
+
 
 ``` r
 mypath <- "/path/to/project/myProj.dat"
@@ -93,7 +97,7 @@ Notice that the extension is included. Accepted extensions: `.dat` & `.proj`.
 
 **Note**: in case you followed the Docker installation, you should store your database inside the `gcamreport` folder and your root directory is called `/app`. Thus, your database path will be something like `/app/path/to/database`.
 
-3) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
+4) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
 generate_report(project_path = mypath, scenarios = scen, final_year = 2050, 
@@ -121,14 +125,16 @@ The terminal will output the performed verifications and their final status.
 
 Assume you are in the situation of any of the previous examples but want to either not save the output, save it in `.csv`, `.xlsx`, or both extensions.
 
-1) Load `gcamreport` library.
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Load `gcamreport` library.
 
 ``` r
-library(gcamreport)
+devtools::load_all()
 ```
 
 
-2) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the output saving options through the `save_output` parameter
+3) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you would like to consider in the `generate_report` function (e.g., final year, desired scenarios...). Specify the output saving options through the `save_output` parameter
 
 ```r
 ## -- save the dataset in CSV and XLSX format
@@ -146,7 +152,7 @@ generate_report(..., save_output = FALSE)
 
 
 
-3) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the output directory and output file name through `file_name` parameter. This will save the output in the indicated path as `.csv` and `.xlsx`. To modify this, see the above explanation.
+4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the output directory and output file name through `file_name` parameter. This will save the output in the indicated path as `.csv` and `.xlsx`. To modify this, see the above explanation.
 
 ```r
 ## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'
@@ -162,13 +168,15 @@ generate_report(..., file_name = '/desired/directory/awesomeOutput')
 
 Assume you are in the situation of any of the previous examples but want to consider only some regions. You have two options to select them: you can directly specify the desired regions to consider or you can specify the regions' group/s to consider. In any case, the desired regions will make up *World*. Then, for example, the World's total crop land will be the sum of the crop land of **only** the picked regions. 
 
-1) Load `gcamreport` library.
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Load `gcamreport` library.
 
 ``` r
-library(gcamreport)
+devtools::load_all()
 ```
 
-2) Check which are the available regions or regions' groups. The following commands will print a list with all the possibilities.
+3) Check which are the available regions or regions' groups. The following commands will print a list with all the possibilities.
 
 ``` r
 available_regions()
@@ -182,7 +190,7 @@ avail_cont <- available_continents()
 ```
 
 
-3) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the regions through the `desired_regions` parameter or regions' group through the `desired_continents` parameter. Notice that not both can be specified at the same time.
+4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function (e.g., final final, desired scenarios...). Specify the regions through the `desired_regions` parameter or regions' group through the `desired_continents` parameter. Notice that not both can be specified at the same time.
 
 ```r
 ## -- specify the desired regions
@@ -201,15 +209,17 @@ generate_report(..., desired_continents = c('ASIA','REF'))
 
 ## Example 5: specify the variables
 
-Assume you are in the situation of any of the previous examples but want to consider only variables. 
+Assume you are in the situation of any of the previous examples but want to consider only variables.
 
-1) Load `gcamreport` library.
+1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+
+2) Load `gcamreport` library.
 
 ``` r
-library(gcamreport)
+devtools::load_all()
 ```
 
-2) Check which are the available variables. The following command will print a list with all the possibilities.
+3) Check which are the available variables. The following command will print a list with all the possibilities.
 
 ``` r
 available_variables()
@@ -221,7 +231,7 @@ avail_var <- available_variables(print = FALSE)
 ```
 
 
-3) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the variables through the `desired_variables` parameter. You can specify a vector with all the desired variables names fully written, or also consier all variables that start with the same name. This last feature, allows you to easily select all variables within a group, such as *Emissions*, *Emissions|CO2*, or *Agricultural Demand*
+4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function (e.g, final year, desired scenarios...). Specify the variables through the `desired_variables` parameter. You can specify a vector with all the desired variables names fully written, or also consider all variables that start with the same name. This last feature, allows you to easily select all variables within a group, such as *Emissions*, *Emissions|CO2*, or *Agricultural Demand*
 
 ```r
 ## -- specify the desired variables
@@ -248,9 +258,57 @@ In case you specify only some variables within a group, they will make up the to
 
 ## Troubleshooting for the `generate_report()` function
 
-#### A) Error on `generate_report("path/to/your/data/myData.dat")`
+#### A) Error on `generate_report` considering a database
 
-In your R console, you might see this error:
+When running `generate_report(db_path = "path/to/your/database", db_name = "database_name", prj_name = "project_name.dat")`, you might see this error in your R console:
+
+
+When running `generate_report("path/to/your/data/myData.dat")`, you might see this error in your R console:
+
+    > generate_report("path/to/your/data/myData.dat")
+    [1] "Creating project..."
+    /home/user/basex/.basex: writing new configuration file.
+    Error in localDBConn(db_path, db_name, migabble = FALSE) : 
+      Database does not exist or is invalid: examples/database_basexdb_ref
+    In addition: Warning messages:
+    1: In normalizePath(dbPath) :
+      path[1]="examples": No such file or directory
+    2: The following named parsers don't match the column names: name, date, version 
+
+This problem might be due to an incorrect package installation or an incorrect database placement.
+
+**Possible solution 1**: make sure that you cloned the repo. Check the instructions [here](https://bc3lc.github.io/gcamreport/index.html#installation-guide).
+
+**Possible solution 2**: make sure that you placed the database in the folder you are specifying. It can be, that if you extracted the database from a zip folder, an intermediate folder has appeared. In addition:
+
+-   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `db_path = C:\Users\username\Documents\path\to\your\database` if you are using a Windows distribution.
+
+-   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+
+    a)  make sure that your database is inside the `gcamreport` folder.
+
+    b)  make sure that you type correctly the path to your `gcamreport` folder when generate_reportning the docker image (5th step in the [Docker section](#with-docker))
+
+    c)  make sure that you are pointing correctly to your database. For example, if in the `gcamreport` folder you have a folder called `some_databases` with your database `amazingDatabase`, you should refer to it as
+
+``` r
+# option 1: full path
+generate_report(db_path = "/app/some_databases", db_name = "amazingDatabase")
+
+# option 2: partial path
+generate_report(db_path = "some_databases", db_name = "amazingDatabase")
+```
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+#### B) Error on `generate_report` considering a project
+
+When running `generate_report("path/to/your/data/myData.dat")`, you might see this error in your R console:
 
     > generate_report("path/to/your/data/myData.dat")
     [1] "Loading project..."
@@ -287,7 +345,7 @@ generate_report("amazingData/myData.dat")
 
 
 
-#### B) Error related to *system* when using the Docker installation.
+#### C) Error related to *system* when using the Docker installation.
 
 Once the R console is opened, you might see this message after introducing any command:
 
