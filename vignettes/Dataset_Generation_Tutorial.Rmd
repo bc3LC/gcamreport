@@ -281,13 +281,13 @@ This problem might be due to an incorrect package installation or an incorrect d
 
 **Possible solution 2**: make sure that you placed the database in the folder you are specifying. It can be, that if you extracted the database from a zip folder, an intermediate folder has appeared. In addition:
 
--   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `db_path = C:\Users\username\Documents\path\to\your\database` if you are using a Windows distribution.
+-   In case you are using the `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `db_path = C:\Users\username\Documents\path\to\your\database` if you are using a Windows distribution.
 
--   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+-   In case you are using the `gcamreport` package following the [Docker installation](#with-docker):
 
     a)  make sure that your database is inside the `gcamreport` folder.
 
-    b)  make sure that you type correctly the path to your `gcamreport` folder when generate_reportning the docker image (5th step in the [Docker section](#with-docker))
+    b)  make sure that you typed correctly the path to your `gcamreport` folder when generating the docker image (5th step in the [Docker section](#with-docker))
 
     c)  make sure that you are pointing correctly to your database. For example, if in the `gcamreport` folder you have a folder called `some_databases` with your database `amazingDatabase`, you should refer to it as
 
@@ -321,13 +321,13 @@ This problem is due to a wrong path specification.
 
 **Possible solution**: make sure that you specified correctly the path. In addition:
 
--   In case you are using `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
+-   In case you are using the `gcamreport` package following the [R installation](#with-r), try to copy the whole path to your data, for instance `C:\Users\username\Documents\path\to\your\data\myData.dat` if you are using a Windows distribution.
 
--   In case you are using `gcamreport` package following the [Docker installation](#with-docker):
+-   In case you are using the `gcamreport` package following the [Docker installation](#with-docker):
 
     a)  make sure that your data is inside the `gcamreport` folder.
 
-    b)  make sure that you type correctly the path to your `gcamreport` folder when generate_reportning the docker image (5th step in the [Docker section](#with-docker))
+    b)  make sure that you typed correctly the path to your `gcamreport` folder when generating the docker image (5th step in the [Docker section](#with-docker))
 
     c)  make sure that you are pointing correctly to your data. For example, if in the `gcamreport` folder you have a folder called `amazingData` with your dataset `myData.dat`, you should refer to it as
 
