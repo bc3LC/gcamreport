@@ -199,12 +199,12 @@
 <li><p>Open Docker Desktop (double-click the icon on your computer) and leave it running in the background.</p></li>
 <li><p>Inside a terminal (bash or cmd) pull the docker image:</p></li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:gcam-v7.0-v1</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull claudiarodes/gcamreport_docker:gcam-v7.0-v2</span></code></pre></div>
 <p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: this step requires 13.5GB of free space in your computer.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Run the Docker container using your full path to the <code>gcamreport</code> folder:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:gcam-v7.0-v1</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-v</span> /path/to/gcamreport:/app <span class="at">-p</span> 4000:3838 <span class="at">-it</span> claudiarodes/gcamreport_docker:gcam-v7.0-v2</span></code></pre></div>
 <p>This should prompt an R terminal in your console.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Install the <code>gcamreport</code> package in the new R console:</li>
