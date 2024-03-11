@@ -75,6 +75,7 @@ RUN addgroup --system app \
 # Update the package list to install Java JRE
 RUN echo 'export PATH=$PATH:/usr/java/jre1.6.0_24/bin/' >> /root/.bashrc
 RUN apt-get update && \
+    apt-get install libasound2-data=1.2.11-1 && \
     apt-get install -y openjdk-8-jre && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*

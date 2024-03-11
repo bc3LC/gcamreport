@@ -367,7 +367,7 @@ test_that("Test9_v7. CO2 ETS", {
   # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
   # testthat::expect_equal(prj$Reference$`CO2 prices`, testResult)
 
-  desired_regions <<- 'China'
+  desired_regions <<- "China"
   CO2_market_filteredReg <- filter_data_regions(gcamreport::CO2_market)
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.2.RData")))
   testthat::expect_equal(CO2_market_filteredReg, testResult)

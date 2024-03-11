@@ -80,7 +80,7 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regi
 #' @export
 load_project <- function(project_path, desired_regions = "All", scenarios = NULL) {
   # rm variable "prj" from the environment if exists
-  if (exists('prj')) rm(prj, envir = .GlobalEnv)
+  if (exists("prj")) rm(prj, envir = .GlobalEnv)
 
   rlang::inform("Loading project...")
 
@@ -142,7 +142,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   Internal_variable <- Variable <- required <- available_scenarios <- name <- NULL
 
   # rm variable "prj" from the environment if exists
-  if (exists('prj')) rm(prj, envir = .GlobalEnv)
+  if (exists("prj")) rm(prj, envir = .GlobalEnv)
 
   rlang::inform("Project does not exists. Creating project...")
 
@@ -252,7 +252,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
     rlang::inform("nonCO2 emissions by sector (excluding resource production)")
 
     # rm variable "prj_tmp" from the environment if exists
-    if (exists('prj_tmp')) rm(prj_tmp)
+    if (exists("prj_tmp")) rm(prj_tmp)
 
     dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)", db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- addQueryTable(
@@ -267,7 +267,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
     rlang::inform("nonCO2 emissions by region")
 
     # rm variable "prj_tmp" from the environment if exists
-    if (exists('prj_tmp')) rm(prj_tmp)
+    if (exists("prj_tmp")) rm(prj_tmp)
 
     dt_reg <- data_query("nonCO2 emissions by region", db_path, db_name, prj_name, scenarios, desired_regions)
     prj_tmp <- addQueryTable(
@@ -281,9 +281,8 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   # Fill with an empty datatable the possible 'CO2 price' query if necessary
   if (!"CO2 prices" %in% listQueries(prj) &&
     "CO2 prices" %in% names(queries_touse_short)) {
-
     # rm variable "prj_tmp" from the environment if exists
-    if (exists('prj_tmp')) rm(prj_tmp)
+    if (exists("prj_tmp")) rm(prj_tmp)
 
     l <- length(listScenarios(prj))
     dt <- data.frame(
@@ -308,7 +307,6 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   scenarios.global <<- listScenarios(prj)
 
   prj <<- prj
-
 }
 
 
@@ -557,9 +555,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   }
 
   # check that the prj_name is correctly defined
-  if (!endsWith(prj_name, '.dat') && !endsWith(prj_name, '.prj')) {
+  if (!endsWith(prj_name, ".dat") && !endsWith(prj_name, ".prj")) {
     # check the prj_name extension and fix it if necessary
-    prj_name = paste0(prj_name, '.dat')
+    prj_name <- paste0(prj_name, ".dat")
   }
 
   # load or create the GCAM prj

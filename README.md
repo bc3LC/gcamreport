@@ -114,7 +114,7 @@ git clone https://github.com/bc3LC/gcamreport.git
 4.  Inside a terminal (bash or cmd) pull the docker image:
 
 ``` bash
-docker pull claudiarodes/gcamreport_docker:gcam-v7.0-v1
+docker pull claudiarodes/gcamreport_docker:gcam-v7.0-v2
 ```
 
 **Note**:exclamation:: this step requires 13.5GB of free space in your computer.
@@ -122,7 +122,7 @@ docker pull claudiarodes/gcamreport_docker:gcam-v7.0-v1
 5.  Run the Docker container using your full path to the `gcamreport` folder:
 
 ``` bash
-docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:gcam-v7.0-v1
+docker run -v /path/to/gcamreport:/app -p 4000:3838 -it claudiarodes/gcamreport_docker:gcam-v7.0-v2
 ```
 
 This should prompt an R terminal in your console.

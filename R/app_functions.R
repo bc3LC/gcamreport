@@ -336,7 +336,7 @@ do_unmount_tree <- function(base_tree, type) {
   na.omit <- NULL
 
   if (length(base_tree) > 0) {
-    save(base_tree, file = 'test_unmount_tree_variables.RData')
+    save(base_tree, file = "test_unmount_tree_variables.RData")
     # transform dataset to list of items with delimiter |
     ll <- rrapply(
       base_tree,
