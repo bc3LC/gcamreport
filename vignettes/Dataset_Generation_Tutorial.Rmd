@@ -100,7 +100,7 @@ Notice that the extension is included. Accepted extensions: `.dat` & `.proj`.
 4) Generate the dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-generate_report(project_path = mypath, scenarios = scen, final_year = 2050, 
+generate_report(prj_name = mypath, scenarios = scen, final_year = 2050, 
                 launch_ui = FALSE)
 ```
 
@@ -152,11 +152,11 @@ generate_report(..., save_output = FALSE)
 
 
 
-4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the output directory and output file name through `file_name` parameter. This will save the output in the indicated path as `.csv` and `.xlsx`. To modify this, see the above explanation.
+4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function. Specify the output directory and output file name through `output_file` parameter. This will save the output in the indicated path as `.csv` and `.xlsx`. To modify this, see the above explanation.
 
 ```r
 ## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'
-generate_report(..., file_name = '/desired/directory/awesomeOutput')
+generate_report(..., output_file = '/desired/directory/awesomeOutput')
 ```
 <span style="color:white">newline</span>
 

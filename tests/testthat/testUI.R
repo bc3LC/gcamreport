@@ -3,7 +3,7 @@ library(testthat)
 library(magrittr)
 
 test_that("Test1. test tree functions", {
-  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
   # load data
   data <- report
   # define the dataset for launching the ui
@@ -20,16 +20,25 @@ test_that("Test1. test tree functions", {
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)
 
-
   # do_mount_tree with regions
   testResult1 <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
   testExpect1 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_1.RData")))
   testthat::expect_equal(testResult1, testExpect1)
 
+  # do_unmount_tree with regions
+  testResult1.2 <- do_unmount_tree(get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_unmount_tree_regions.RData"))), 'regions')
+  testExpect1.2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_1.2.RData")))
+  testthat::expect_equal(testResult1.2, testExpect1.2)
+
   # do_mount_tree with variables
   testResult2 <- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
   testExpect2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_2.RData")))
   testthat::expect_equal(testResult2, testExpect2)
+
+  # do_unmount_tree with variables
+  testResult2.2 <- do_unmount_tree(get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_unmount_tree_variables.RData"))), 'variables')
+  testExpect2.2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_2.2.RData")))
+  testthat::expect_equal(testResult2.2, testExpect2.2)
 
   # do_collapse_df
   testResult3 <- do_collapse_df(cols.global)
@@ -75,4 +84,54 @@ test_that("Test2. error messages", {
     launch_gcamreport_ui("dummy1", "dummy2"),
     "Specify either the dataset or the dataset path to be considered, not both"
   )
+
+  errorMessage1 <- check_user_choices_plot(vars = 'var1', scen = c("scen1", "scen2"),
+                                           years = NULL, reg = 'Africa', grouped = TRUE)
+  testthat::expect_equal(errorMessage1, 'ERROR: Select at least one year please.')
+
+  errorMessage2 <- check_user_choices_plot(vars = 'var1', scen = NULL,
+                                           years = 'year', reg = 'Africa', grouped = TRUE)
+  testthat::expect_equal(errorMessage2, 'ERROR: Select at least one scenario please.')
+
+  errorMessage3 <- check_user_choices_plot(vars = NULL, scen = 'scen1',
+                                           years = 'year', reg = 'Africa', grouped = TRUE)
+  testthat::expect_equal(errorMessage3, 'ERROR: Select at least one variable please.')
+
 })
+
+test_that("Test3. reset", {
+  sdata <<- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_3.RData")))
+  reset_first_load()
+
+  testthat::expect_equal(firstLoad, TRUE)
+  testthat::expect_equal(firstReg, TRUE)
+  testthat::expect_equal(firstVars, TRUE)
+  testthat::expect_equal(noReg, FALSE)
+  testthat::expect_equal(noVars, FALSE)
+  testthat::expect_equal(updatedVars, FALSE)
+  testthat::expect_equal(tree_reg,
+                         get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_3.a.RData"))))
+  testthat::expect_equal(cols.global,
+                         get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_3.b.RData"))))
+  testthat::expect_equal(all_varss,
+                         get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_3.c.RData"))))
+
+})
+
+#
+# test_that("Test4. launch ui", {
+#   launch_gcamreport_ui(data_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_launch_ui.RData"))
+#
+#   testthat::expect_equal(available_years, c(2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050))
+#   testthat::expect_equal(sdata,
+#                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_4.a.RData"))))
+#   testthat::expect_equal(cols.global,
+#                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_4.b.RData"))))
+#   testthat::expect_equal(tree_vars,
+#                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_4.c.RData"))))
+#   testthat::expect_equal(tree_reg,
+#                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_4.d.RData"))))
+#   testthat::expect_equal(all_varss,
+#                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_4.e.RData"))))
+#
+# })

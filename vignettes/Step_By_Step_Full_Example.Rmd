@@ -84,13 +84,13 @@ In case you expirence some trouble, check this [troubleshooting section](https:/
 ## -- load gcamreport library.
 devtools::load_all()
 
-## -- store the database path, name, and scenarios in a variable.
-projectpath <- "examples/example2.dat"
+## -- store the project path and name in a variable.
+prjname <- "examples/example2.dat"
 
 ## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
 ## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, 
 ## -- and lunch the user interface
-generate_report(project_path = projectpath, final_year = 2050, 
+generate_report(prj_name = prjname, final_year = 2050, 
                 desired_regions = c('EU-12', 'EU-15'),
                 desired_variables = c('Agricultural*'), 
                 save_output = TRUE, launch_ui = TRUE)
@@ -128,7 +128,7 @@ In case you expirence some trouble, check this [troubleshooting section](https:/
 ## -- load gcamreport library.
 devtools::load_all()
 
-## -- store the database path, name, and scenarios in a variable.
+## -- store the project path and name in a variable.
 datapath <- "examples/example3.RData"
 
 ## -- launch the user interface

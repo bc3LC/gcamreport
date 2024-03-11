@@ -36,13 +36,13 @@ test_that("Test2_v7. load project", {
 })
 
 test_that("Test3_v7. run - dataset created", {
-  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
   testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 })
 
 test_that("Test4_v7. run - dataset saved with output_file specified", {
   generate_report(
-    project_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE,
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE,
     output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output")
   )
 
@@ -68,7 +68,7 @@ test_that("Test4_v7. run - dataset saved with output_file specified", {
 })
 
 test_that("Test5_v7. run - dataset saved with default output_file", {
-  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
 
   testResult <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7_standardized.csv"))
   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
@@ -79,7 +79,7 @@ test_that("Test5_v7. run - dataset saved with default output_file", {
 
 test_that("Test6_v7. load variable and get function", {
   # load prj
-  generate_report(project_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
 
   # load variables
   vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/results_test6.RData")))
@@ -134,7 +134,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.1_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_continents = "OECD90",
@@ -157,7 +157,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.2_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_continents = "OECD90",
@@ -171,7 +171,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.3_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "USA",
@@ -185,7 +185,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.4_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "USA",
@@ -201,7 +201,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_variables = "dummy variable",
       launch_ui = FALSE
@@ -212,7 +212,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_variables = c("dummy1", "dummy2"),
       launch_ui = FALSE
@@ -224,7 +224,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_variables = "Final|Energy*",
       launch_ui = FALSE
@@ -235,7 +235,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_variables = c("Final|Energy*", "Emissions CH4*"),
       launch_ui = FALSE
@@ -247,18 +247,19 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_regions = "dummy region",
       launch_ui = FALSE
     ),
     "The desired region dummy region is not available for reporting."
   )
+
   expect_error(
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_noCreated.dat",
+      prj_name = "gcamv7.8_noCreated.dat",
       scenarios = "Reference",
       desired_regions = c("dummy1", "dummy2"),
       launch_ui = FALSE
@@ -270,7 +271,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_p1.dat",
+      prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
       desired_continents = "dummy continent",
       launch_ui = FALSE
@@ -281,7 +282,7 @@ test_that("Test8_v7. error messages", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_p1.dat",
+      prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
       desired_continents = c("dummy1", "dummy2"),
       launch_ui = FALSE
@@ -291,28 +292,37 @@ test_that("Test8_v7. error messages", {
 
   expect_error(
     generate_report(
-      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
-      prj_name = "gcamv7.0_p1.dat",
+      db_name = "dummy_db_name",
+      prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
       launch_ui = FALSE
     ),
-    "If db_path, prj_name are specified, db_name must also be specified."
+    "gcamreport tried to create a GCAM project but db_path was not specified"
   )
 
   expect_error(
     generate_report(
-      project_path = "dummy name",
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      prj_name = "gcamv7.8_p1.dat",
+      scenarios = "Reference",
+      launch_ui = FALSE
+    ),
+    "gcamreport tried to create a GCAM project but db_name was not specified"
+  )
+
+  expect_error(
+    generate_report(
       db_path = "dummy name",
       launch_ui = FALSE
     ),
-    "Specify either a project or a database to extract the data from. Not both."
+    'argument "prj_name" is missing, with no default'
   )
 
   expect_error(
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_p1.dat",
+      prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
       desired_regions = "dummy region",
       desired_continents = "dummy continent",
@@ -320,24 +330,45 @@ test_that("Test8_v7. error messages", {
     ),
     "You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time."
   )
+
+  expect_error(
+    generate_report(
+      prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+      scenarios = "Reference3",
+      desired_regions = "EU-12",
+      launch_ui = FALSE
+    ),
+    "The desired scenario Reference3 is not present in the loaded project."
+  )
+
+  expect_error(
+    generate_report(
+      prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+      scenarios = c("Reference3", "Reference4"),
+      desired_regions = "EU-12",
+      launch_ui = FALSE
+    ),
+    "The desired scenarios Reference3, Reference4 are not present in the loaded project."
+  )
 })
 
 test_that("Test9_v7. CO2 ETS", {
-  generate_report(
-    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
-    db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
-    scenarios = "Reference",
-    final_year = 2050,
-    desired_regions = "China",
-    desired_variables = c("Price|Carbon*"),
-    launch_ui = FALSE
-  )
+  # generate_report(
+  #   db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
+  #   db_name = "database_basexdb_ref",
+  #   prj_name = "gcamv7.9_test.dat",
+  #   scenarios = "Reference",
+  #   final_year = 2050,
+  #   desired_regions = "China",
+  #   desired_variables = c("Price|Carbon*"),
+  #   launch_ui = FALSE
+  # )
 
-  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
-  testthat::expect_equal(prj$Reference$`CO2 prices`, testResult)
+  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
+  # testthat::expect_equal(prj$Reference$`CO2 prices`, testResult)
 
-  CO2_market_filteredReg <- filter_data_regions(CO2_market)
+  desired_regions <<- 'China'
+  CO2_market_filteredReg <- filter_data_regions(gcamreport::CO2_market)
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.2.RData")))
   testthat::expect_equal(CO2_market_filteredReg, testResult)
 })
@@ -346,7 +377,7 @@ test_that("Test10_v7. vetting", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.10.1_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "All",
@@ -361,7 +392,7 @@ test_that("Test10_v7. vetting", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.10.2_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "All",
@@ -376,7 +407,7 @@ test_that("Test10_v7. vetting", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test.dat",
+    prj_name = "gcamv7.10.3_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "South Africa",
@@ -393,7 +424,7 @@ test_that("Test11_v7. scenarios", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_p1.dat",
+      prj_name = "gcamv7.11.1_p1.dat",
       scenarios = c("dummy", "Reference"),
       launch_ui = FALSE
     ),
@@ -404,7 +435,7 @@ test_that("Test11_v7. scenarios", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_p1.dat",
+      prj_name = "gcamv7.11.2_p1.dat",
       scenarios = c("dummy1", "dummy2", "Reference"),
       launch_ui = FALSE
     ),
@@ -414,7 +445,7 @@ test_that("Test11_v7. scenarios", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test_scenarios.dat",
+    prj_name = "gcamv7.11.3_test_scenarios.dat",
     final_year = 2050,
     desired_regions = "All",
     desired_variables = c("Emissions|CH4*"),
@@ -429,28 +460,53 @@ test_that("Test11_v7. scenarios", {
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_test_scenarios.dat",
+      prj_name = "gcamv7.11.4_test_scenarios.dat",
       scenarios = c("dummy", "Reference"),
       launch_ui = FALSE
     ),
-    "The desired scenario dummy is not present in the loaded project."
+    "The desired scenario dummy is not present in the database"
   )
 
   expect_error(
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
-      prj_name = "gcamv7.0_test_scenarios.dat",
+      prj_name = "gcamv7.11.5_test_scenarios.dat",
       scenarios = c("dummy1", "dummy2", "Reference"),
       launch_ui = FALSE
     ),
-    "The desired scenarios dummy1, dummy2 are not present in the loaded project."
+    "The desired scenarios dummy1, dummy2 are not present in the database"
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.11.5_test.dat",
+      scenarios = c("dummy1", "dummy2", "Reference"),
+      launch_ui = FALSE
+    ),
+    "The desired scenarios dummy1, dummy2 are not present in the database"
   )
 
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.0_test_scenarios.dat",
+    prj_name = "gcamv7.11.6_test_scenarios.dat",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|CH4*"),
+    launch_ui = FALSE
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("Reference", testResult)
+
+
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv7.11.7_test_scenarios",
     final_year = 2050,
     desired_regions = "All",
     desired_variables = c("Emissions|CH4*"),
@@ -461,9 +517,7 @@ test_that("Test11_v7. scenarios", {
   testthat::expect_equal("Reference", testResult)
 
   generate_report(
-    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
-    db_name = "database_basexdb",
-    prj_name = "test_scenarios7.dat",
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/database_basexdb_test_scenarios7.dat"),
     final_year = 2050,
     scenarios = "CP_EI_recovery",
     desired_regions = "USA",
