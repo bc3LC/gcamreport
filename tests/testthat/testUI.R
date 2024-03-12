@@ -40,6 +40,10 @@ test_that("Test1. test tree functions", {
   testExpect2.2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_2.2.RData")))
   testthat::expect_equal(testResult2.2, testExpect2.2)
 
+  # do_unmount_tree NULL
+  testResult2.3 <- do_unmount_tree(NULL, "variables")
+  testthat::expect_equal(testResult2.3, NULL)
+
   # do_collapse_df
   testResult3 <- do_collapse_df(cols.global)
   testExpect3 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_3.RData")))
@@ -127,6 +131,21 @@ test_that("Test3. reset", {
     get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_3.c.RData")))
   )
 })
+
+test_that("Test5. do_data_sample", {
+
+  # do_data_sample
+  sdata <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sdata.RData")))
+  sel_cols <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sel_cols.RData")))
+  sel_reg <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sel_reg.RData")))
+  sel_scen <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sel_scen.RData")))
+  sel_vars <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sel_vars.RData")))
+  sel_years <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.sel_years.RData")))
+  testResult <- do_data_sample(sdata, sel_scen, sel_years, sel_cols, sel_vars, sel_reg, 0, 0)
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_5.data_sample.RData")))
+  testthat::expect_equal(testResult, testExpect)
+})
+
 
 #
 # test_that("Test4. launch ui", {

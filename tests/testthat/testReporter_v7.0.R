@@ -183,6 +183,17 @@ test_that("Test7_v7. specify variables, regions, continents", {
 
   rm(list = ls())
   generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "USA",
+    desired_variables = "Price|Carbon",
+    launch_ui = FALSE
+  )
+  testthat::expect_equal(unique(report$Region), c("USA", "World"))
+
+  rm(list = ls())
+  generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
     db_name = "database_basexdb_ref",
     prj_name = "gcamv7.4_test.dat",
@@ -527,4 +538,54 @@ test_that("Test11_v7. scenarios", {
 
   testResult <- rgcam::listScenarios(prj)
   testthat::expect_equal("CP_EI_recovery", testResult)
+})
+
+
+test_that("Test12_v7. other functions", {
+  # gather_map
+  co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings", "CO2_sector_map.csv"),
+                             skip = 1, na = "",
+                             stringsAsFactors = FALSE
+  ) %>% gather_map()
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test12.1.RData")))
+  testthat::expect_equal(co2_sector_map, testExpect)
+
+  # approx_fun
+  expect_error(
+    approx_fun(2030, 3, rule = 3),
+    "Use fill_exp_decay_extrapolate!"
+  )
+
+  # get_iron_steel_map & get_co2_iron_steel
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_regions = "USA",
+    desired_variables = "Emissions|CO2|Energy|Demand|Industry|Steel",
+    launch_ui = FALSE
+  )
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test12.2.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  # get_ghg
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_regions = "USA",
+    desired_variables = "Emissions|Kyoto Gases*",
+    launch_ui = FALSE
+  )
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test12.3.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  # get_regional_emission
+  testResult <- get_regional_emission()
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test12.4.RData")))
+  testthat::expect_equal(testResult, testExpect)
+
 })
