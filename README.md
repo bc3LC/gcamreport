@@ -1,8 +1,9 @@
 # gcamreport
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10371722.svg)](https://doi.org/10.5281/zenodo.10371722)
-[![paper](https://github.com/bc3LC/gcamreport/actions/workflows/draft-pdf.yml/badge.svg?branch=paper)](https://github.com/bc3LC/gcamreport/blob/paper/paper/paper.pdf)
+[![docs](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docs.yaml) [![pages-build-deployment](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/pages/pages-build-deployment) [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml) [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml) [![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10371722.svg)](https://doi.org/10.5281/zenodo.10371722)
+[![paper](https://github.com/bc3LC/gcamreport/actions/workflows/draft-pdf.yml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/blob/gcam-v7.0/paper/paper.pdf)
 [![status](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19/status.svg)](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19)
 
 <!-- ------------------------>
@@ -73,23 +74,12 @@ There are two equivalent possibilities to make use of this package:
 git clone https://github.com/bc3LC/gcamreport.git
 ```
 
-3.  Load `gcamreport` package. There are two options:
+3.  Load `gcamreport` package: Open the `gcamreport` folder you just cloned and double-click the `gcamreport.Rproj` file. RStudio should open the project. Load the library:
 
-    a) Open the `gcamreport` folder you just cloned and double-click the `gcamreport.Rproj` file. RStudio should open the project. Load the library:
-
-    ``` r
-    install.packages('devtools')
-    devtools::load_all()
-    ```
-    
-    b) Open Rstudio (it does not matter the Rproject) and load the library:
-    
-    ``` r
-    install.packages('remotes')
-    remotes::install_github("bc3LC/gcamreport") #you can skip all updates in case you are asked
-    library(gcamreport)
-    ```
-<br>
+``` r
+install.packages('devtools')
+devtools::load_all()
+```
 
 Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
