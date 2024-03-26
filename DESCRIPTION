@@ -16,12 +16,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
 Imports:
-    usethis,
-    knitr,
   	markdown,
     rlang,
     readr,
-    data.table,
     magrittr,
     dplyr,
     tibble,
@@ -29,7 +26,6 @@ Imports:
     rgcam,
     ggplot2,
     stringr,
-    stringi,
     here,
     xml2,
     shiny,
@@ -42,6 +38,8 @@ Imports:
     rrapply (>= 1.2.6),
     rpackageutils
 Suggests:
+    usethis,
+    knitr,
     rprojroot,
     rmarkdown,
     testthat (>= 3.0.0),

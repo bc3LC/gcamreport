@@ -229,7 +229,7 @@ reset_first_load <- function() {
 #' @keywords internal
 #' @importFrom magrittr %>%
 #' @importFrom dplyr filter select
-#' @importFrom data.table as.data.table
+#' @importFrom tibble as_tibble
 #' @return subseted dataset
 #' @export
 do_data_sample <- function(sdata, sel_scen, sel_years, sel_cols, sel_vars, sel_reg,
@@ -260,7 +260,7 @@ do_data_sample <- function(sdata, sel_scen, sel_years, sel_cols, sel_vars, sel_r
     filter(Variable %in% vars) %>%
     filter(Region %in% reg) %>%
     select(c(sel_cols, sel_years)) %>%
-    as.data.table()
+    as_tibble()
 
   return(data_sample)
 }
