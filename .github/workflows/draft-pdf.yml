@@ -1,4 +1,9 @@
-on: [push]
+name: draft-pdf
+
+on:
+  push:
+    branches:
+      - gcam-v7.0
 
 jobs:
   paper:
