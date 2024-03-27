@@ -6,6 +6,6 @@
 \title{gcamreport}
 \description{
 \itemize{
-\item Github: https://github.com/JGCRI/gcamreport
-\item Webpage: https://jgcri.github.io/gcamreport/}
+\item Github: https://github.com/bc3LC/gcamreport
+\item Webpage: https://bc3lc.github.io/gcamreport/}
 }
