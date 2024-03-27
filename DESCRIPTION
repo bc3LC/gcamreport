@@ -8,8 +8,8 @@ Authors@R: c(person("Rodés-Bachs", "Clàudia", email = "claudia.rodes@bc3resear
 		   person("Van de Ven", "Dirk-Jan", email = "dj.vandeven@bc3research.org", role = c("aut"),
 		   comment = c(ORCID = "0000-0001-9120-564X")))
 Description: R package to produce standard IPCC reports from GCAM output.
-URL: https://github.com/JGCRI/gcamreport
-BugReports: https://github.com/JGCRI/gcamreport/issues
+URL: https://github.com/bc3LC/gcamreport
+BugReports: https://github.com/bc3LC/gcamreport/issues
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
