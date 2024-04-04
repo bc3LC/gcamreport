@@ -35,11 +35,11 @@ the global variables such as "Emissions" will be computed considering only the s
 and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".}
 
 \item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
-gcamreport general queries file, compatible with the latest GCAM version and able to report all standardized variables.}
+gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}
 
 \item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
+gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
 }
 \value{
 loaded project into global environment and local saved project.

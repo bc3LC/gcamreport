@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-In this tutorial, we will modify some of the pre-build mappings of the `gcamreport` package
+In this tutorial, we will modify some of the pre-build mappings of the `gcamreport` package. It is necessary to have the `gcamreport` package installed either through the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or [Docker](https://bc3lc.github.io/gcamreport/index.html#with-docker)
 
 <span style="color:white">newline</span>
 
@@ -23,9 +23,9 @@ In this tutorial, we will modify some of the pre-build mappings of the `gcamrepo
 
 In this example, we assume that the GCAM version has a more detailed land-food system and reports a new food item called *AvocadoSeeds* and a new land-leaf called *AvocadoSeedsTrees*. Thus, we need to modify `gcamreport` to include these items in the reporting dataset. In this example, the new items add to the final *cropland* area and several pollutant *emissions*, but do not have their own category in the template.
 
-1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+1) Follow either the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker)
 
-2) Open the `gcamreport.Rprj`.
+2) Open the `gcamreport.Rproj`.
 
 3) To modify the mappings, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *NutsSeeds* and *NutsSeedsTree*. To see where the mapping modifications should be performed, search across all files (`Ctrl + Shift + F`) inside `inst/extdata/mappings` for the key words *NutsSeeds* and *NutsSeedsTree*.
    
@@ -64,21 +64,50 @@ In this example, we assume that the GCAM version has a more detailed land-food s
    AvocadoTrees,SO2_3_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
    AvocadoTrees,SO2_4_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
    ```
-5) Update the queries file (if necessary, as is in this example). To do it, open `inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml` and add these lines in the *aggregated land allocation* query.
+5) Modify the query file (if necessary, as is in this example). To do it, copy the default query file located at `inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml` and add these lines in the *aggregated land allocation* query.
    ```
    <rewrite from="AvocadoSeeds" to="crops" />
    <rewrite from="AvocadoSeedsTree" to="crops" />
    ```
+To use it when standardizing your GCAM output, run the `generate_report` function specifying the new query file path:
+``` r
+generate_report(..., queries_general_file = "path/to/your/new_queries_general_file.xml")
+```
+
+Another way to modify the query file is to update the default query file directly. To do this, open the default query file located at `inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml` and add the necessary lines. The next step (step 6) will embed the new version of the query file into the package. With this method, it is no longer necessary to specify the query file path, as it will be your default general query file.
+
 
 6) Update the pre-build mappings: 
    
    a) Run the file `inst/extdata/saveDataFiles.R`.
 
-   b) Build the document file: press `Ctrl + Shift + D`.
+   b) Build the document file: press `Ctrl + Shift + D` or click to `Build > More > Document`.
 
-   c) Install the modified package: `Build > install`.
+   c) Install the modified package: `Build > Install`.
 
 7) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+
+**Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
+
+``` bash
+# to clone the taged version "v6.0.1":
+git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
+
+# to clone the branch version "gcam-v6.0":
+git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
+```
+
+or when installing through Rstudio, for instance:
+``` r
+# to install the taged version "v6.0.1"
+devtools::install_github('bc3LC/gcamreport@v6.0.1')
+
+# to install the branch version "gcam-v6.0"
+devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
+```
+
+
+
 
 <span style="color:white">newline</span>
 
@@ -94,9 +123,9 @@ In this example, we assume that the GCAM version has a more detailed land-food s
 
 In this example, we assume that the GCAM version has a more detailed energy transportation freight service that considers *Bicycling and Walking*. We want to include this in the report as a new item: *Energy Service|Transportation|Passenger|Bicycling and Walking*. To do it, we need to modify the reporting template.
 
-1) Follow the [installation guide](https://bc3lc.github.io/gcamreport/index.html#installation-guide) either with R Studio or Docker.
+1) Follow either the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker)
 
-2) Open the `gcamreport.Rprj`.
+2) Open the `gcamreport.Rproj`.
 
 3) To modify the reporting template, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *Energy Service|Transportation|Freight|Road*. To see where the reporting template modifications should be performed, open the reporting template file (`inst/extdata/template/reporting_template.csv`) and search (`Ctrl + F`) for the key words *Energy Service|Transportation|Freight|Road*.
    
@@ -110,9 +139,28 @@ In this example, we assume that the GCAM version has a more detailed energy tran
    
    a) Run the file `inst/extdata/saveDataFiles.R`.
 
-   b) Build the document file: press `Ctrl + Shift + D`.
+   b) Build the document file: press `Ctrl + Shift + D` or click to `Build > More > Document`.
 
-   c) Install the modified package: `Build > install`.
+   c) Install the modified package: `Build > Install`.
 
 6) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+
+**Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
+
+``` bash
+# to clone the taged version "v6.0.1":
+git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
+
+# to clone the branch version "gcam-v6.0":
+git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
+```
+
+or when installing through Rstudio, for instance:
+``` r
+# to install the taged version "v6.0.1"
+devtools::install_github('bc3LC/gcamreport@v6.0.1')
+
+# to install the branch version "gcam-v6.0"
+devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
+```
 
