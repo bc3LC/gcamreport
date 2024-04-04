@@ -17,3 +17,5 @@ Find below all tutorials compatible with `gcamreport v6.0*` releases (i.e. `gcam
 [Dataset Generation Tutorial for gcamreport v6.0*](Dataset_Generation_Tutorial_v6-0.html)
 
 [Interactive UI Tutorial for gcamreport v6.0*](Interactive_UI_Tutorial_v6-0.html)
+
+**Note**: These versions and their documentation pages are no longer maintained.

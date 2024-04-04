@@ -11,7 +11,7 @@
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
 #' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 #' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
 #' @return dataframe with the data from the query.
 #' @importFrom rgcam addSingleQuery localDBConn
 #' @importFrom xml2 read_xml xml_find_first
@@ -142,10 +142,10 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
 #' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
 #' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".
 #' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
-#' gcamreport general queries file, compatible with the latest GCAM version and able to report all standardized variables.
+#' gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.
 #' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 #' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
 #' @return loaded project into global environment and local saved project.
 #' @import rgcam
 #' @import dplyr
@@ -179,7 +179,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
     if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
   }
 
-  # read the queries file
+  # read the query file
   if (is.list(queries_general_file)) {
     queries_short <- queries_general_file
   } else {
@@ -491,10 +491,10 @@ available_variables <- function(print = TRUE) {
 #' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
 #' @param launch_ui if TRUE, launch User Interface, Do not launch it otherwise.
 #' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
-#' gcamreport general queries file, compatible with the latest GCAM version and able to report all standardized variables.
+#' gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.
 #' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 #' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
 #' @return RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam
 #' project file (if created).
 #' @import dplyr

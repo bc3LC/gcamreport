@@ -58,7 +58,7 @@ launch_gcamreport_ui(data_path = /path/to/your/database/..._standardize.RData)
 
 ## Troubleshooting when launching the UI
 
-#### A) Error when launching the UI
+#### A) Large error when launching the UI
 
 When running `launch_gcamreport_ui(data_path = "path/to/your/data.RData")`, you might get this message:
 
@@ -125,8 +125,22 @@ generate_report(data_path = "examples/amazingDataset.RData")
 
 
 
+#### B) Short error when launching the UI
 
-#### B) Wired message when launching the UI using the Docker installation.
+When launching the UI either through R, Rstudio or Docker, you might get this message:
+
+
+    Error in `shinyAppDir()`:
+    ! No Shiny application exists at the path "inst/gcamreport_ui"
+
+
+**Possible solution 1**: make sure that you are using the `gcamreport` package through Rstudio (following the full R installation) or Docker. Otherwise the UI can not be launched. Check the installation instructions [here](https://bc3lc.github.io/gcamreport/index.html#installation-guide).
+
+**Possible solution 2**: make sure that you have a folder called `inst/gcamreport_ui` in your working session. It might be that your working directory has changed. To check it, run `getwd()` on your R console. If necessary, set again the working environment with `setwd()`.
+
+
+
+#### C) Wired message when launching the UI using the Docker installation.
 
 After using the functions `generate_report()` or `launch_gcamreport_ui()` to launch the UI, you might get this message:
 
@@ -150,7 +164,7 @@ or open this url <http://localhost:4000> in your favourite browser.
 
 
 
-#### C) Error when using the UI through Docker installation.
+#### D) Error when using the UI through Docker installation.
 
 When opening your *localhost*, you might see this error:
 
