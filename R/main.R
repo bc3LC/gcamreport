@@ -158,7 +158,11 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   if (file.exists(file_name)) {
     load_project(file_name, desired_regions, scenarios)
   } else {
-    print("Creating project...")
+    check_scen <- setdiff(scenarios, available_scenarios)
+    tmp <- paste(check_scen, collapse = ", ")
+    if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the database.\n")
+    if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
+  }
 
     # create the project
     conn <- localDBConn(db_path,
