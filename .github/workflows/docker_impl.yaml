@@ -3,7 +3,8 @@ name: docker
 on:
   push:
     branches:
-      - gcam-v6.0
+      - gcam-v7.0
+      - dev
 
 jobs:
   build:
