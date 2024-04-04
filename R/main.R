@@ -173,12 +173,10 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   if (is.null(scenarios)) {
     scenarios <- available_scenarios
   } else {
-    if (length(scenarios) > length(available_scenarios)) {
-      check_scen <- setdiff(scenarios, available_scenarios)
-      tmp <- paste(check_scen, collapse = ", ")
-      if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the database.\n")
-      if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
-    }
+    check_scen <- setdiff(scenarios, available_scenarios)
+    tmp <- paste(check_scen, collapse = ", ")
+    if (length(check_scen) > 1) stop("The desired scenarios ", tmp, " are not present in the database.\n")
+    if (length(check_scen) == 1) stop("The desired scenario ", tmp, " is not present in the database.\n")
   }
 
   # read the queries file
