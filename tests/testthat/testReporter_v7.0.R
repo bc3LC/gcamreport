@@ -532,7 +532,7 @@ test_that("Test13_v7. specify queries", {
   testExpect <- xml2::read_xml(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.1.xml"))
   testthat::expect_equal(testResult, testExpect)
 
-  # generate standardize report specifying the queries file
+  # generate standardize report specifying the query file
   db_path <- file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0")
   db_name <- "database_basexdb_ref"
   prj_name <- "gcamv7.0_test_specify_queries.dat"
@@ -540,7 +540,7 @@ test_that("Test13_v7. specify queries", {
   generate_report(db_path = db_path, db_name = db_name, prj_name = prj_name,
                   scenarios = scenarios, final_year = 2050, desired_variables = c('Price|Carbon*'),
                   save_output = T, launch_ui = F,
-                  queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml"))
+                  queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml"))
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.RData")))
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.2.RData")))
   testthat::expect_equal(testResult, testExpect)

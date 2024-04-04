@@ -31,7 +31,7 @@ In case the project dataset needs to be created, it will be produced with only t
 
 \item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
+gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
 }
 \value{
 dataframe with the data from the query.

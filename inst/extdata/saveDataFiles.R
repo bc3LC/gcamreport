@@ -299,7 +299,7 @@ use_data(long_columns, overwrite = T)
 # QUERY files
 
 # gcamreport7 queries complete
-queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml")
+queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml")
 queries_general <- parse_batch_query(queryFile)
 use_data(queries_general, overwrite = T)
 
