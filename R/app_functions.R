@@ -131,6 +131,7 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 #' @export
 update_user_choices_plot <- function(selected_scen, selected_years,
                                      tree_regions, tree_variables, sidebarItemExpanded) {
+
   # get selected regions and variables from input
   sel_reg_ini <- get_selected(tree_regions, format = "slices")
   sel_vars_ini <- get_selected(tree_variables, format = "slices")
@@ -336,7 +337,6 @@ do_unmount_tree <- function(base_tree, type) {
   na.omit <- NULL
 
   if (length(base_tree) > 0) {
-    save(base_tree, file = "test_unmount_tree_variables.RData")
     # transform dataset to list of items with delimiter |
     ll <- rrapply(
       base_tree,
