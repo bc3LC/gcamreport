@@ -9,18 +9,26 @@
 #' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 #' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 #' In case the project dataset needs to be created, it will be produced with only the specified regions.
+#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
+#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
+#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
 #' @return dataframe with the data from the query.
 #' @importFrom rgcam addSingleQuery localDBConn
 #' @importFrom xml2 read_xml xml_find_first
 #' @importFrom dplyr bind_rows
 #' @export
-data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regions = "All") {
+data_query <- function(type, db_path, db_name, prj_name, scenarios, desired_regions = "All",
+                       queries_nonCO2_file = gcamreport::queries_nonCO2) {
   if (identical(desired_regions, "All")) {
     desired_regions <- NULL
   }
 
   dt <- data.frame()
-  xml <- read_xml("inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml")
+  if (is.list(queries_nonCO2_file)) {
+    xml <- transform_to_xml(queries_nonCO2_file)
+  } else {
+    xml <- read_xml(queries_nonCO2_file)
+  }
   qq <- xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
   for (sc in scenarios) {
@@ -130,12 +138,19 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
 #' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
 #' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
 #' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".
-#' @return loaded project into global environment.
+#' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
+#' gcamreport general queries file, compatible with the latest GCAM version and able to report all standardized variables.
+#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
+#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
+#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' @return loaded project into global environment and local saved project.
 #' @import rgcam
 #' @import dplyr
 #' @export
-create_project <- function(db_path, db_name, prj_name, scenarios,
-                           desired_regions = "All", desired_variables = "All") {
+create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
+                           desired_regions = "All", desired_variables = "All",
+                           queries_general_file = gcamreport::queries_general,
+                           queries_nonCO2_file = gcamreport::queries_nonCO2) {
   Internal_variable <- Variable <- required <- available_scenarios <- name <- NULL
 
   # check if the project already exists
@@ -166,10 +181,16 @@ create_project <- function(db_path, db_name, prj_name, scenarios,
     }
 
     # read the queries file
-    queryFile <- "inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml"
-    queries_short <- parse_batch_query(queryFile)
-    queryFile <- "inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml"
-    queries_large <- parse_batch_query(queryFile)
+    if (is.list(queries_general_file)) {
+      queries_short <- queries_general_file
+    } else {
+      queries_short <- parse_batch_query(queries_general_file)
+    }
+    if (is.list(queries_nonCO2_file)) {
+      queries_large <- queries_nonCO2_file
+    } else {
+      queries_large <- parse_batch_query(queries_nonCO2_file)
+    }
 
     # subset the queries necessary for the selected variables
     if (!(length(desired_variables) == 1 && desired_variables == "All")) {
@@ -454,16 +475,28 @@ available_variables <- function(print = TRUE) {
 #' database or the project file, and using a default name containing the project name with 'standardized' tag.
 #' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
 #' @param launch_ui if TRUE, launch User Interface, Do not launch it otherwise.
-#' @return RData, CSV, and XLSX datafile with the desired variables & launches user interface.
+#' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
+#' gcamreport general queries file, compatible with the latest GCAM version and able to report all standardized variables.
+#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
+#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
+#' gcamreport nonCO2 queries file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' @return RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam
+#' project file (if created).
 #' @import dplyr
 #' @importFrom tidyr replace_na
 #' @importFrom utils write.csv
 #' @importFrom writexl write_xlsx
 #' @importFrom stringr str_sub str_locate
 #' @export
-generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL, prj_name = NULL, scenarios = NULL, final_year = 2100,
-                            desired_variables = "All", desired_regions = "All", desired_continents = "All", save_output = TRUE, output_file = NULL, launch_ui = TRUE) {
-  continent <- region <- name <- Variable <- Internal_variable <- required <- NULL
+generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios = NULL, final_year = 2100,
+                            desired_variables = "All", desired_regions = "All", desired_continents = "All",
+                            save_output = TRUE, output_file = NULL, launch_ui = TRUE,
+                            queries_general_file = gcamreport::queries_general,
+                            queries_nonCO2_file = gcamreport::queries_nonCO2) {
+  continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
+
+  # boolean variable
+  prj_loaded <- FALSE
 
   # check that desired_regions and desired_continents are not specified at the same time
   if (!(identical(desired_regions, "All"))) {
@@ -556,19 +589,12 @@ generate_report <- function(project_path = NULL, db_path = NULL, db_name = NULL,
         }
       }
 
-      # stop and display error
-      if (length(not_null_items) > 1) stop("If ", paste(not_null_items, collapse = ", "), " are specified, ", paste(null_items, collapse = ", "), " must also be specified.")
-      if (length(not_null_items) == 1) stop("If ", paste(not_null_items, collapse = ", "), " is specified, ", paste(null_items, collapse = ", "), " must also be specified.")
-    } else {
-      # create project
-      create_project(
-        db_path, db_name, prj_name, scenarios,
-        desired_regions, desired_variables
-      )
-    }
-  } else {
-    # stop and display error
-    stop("Specify either a project or a database to extract the data from.")
+    # create project
+    create_project(
+      db_path, db_name, prj_name, scenarios,
+      desired_regions, desired_variables,
+      queries_general_file, queries_nonCO2_file
+    )
   }
 
   # make final_year as a global variable

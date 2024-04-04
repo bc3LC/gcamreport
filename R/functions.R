@@ -5,6 +5,25 @@ options(dplyr.summarise.inform = FALSE)
 #########################################################################
 
 
+#' transform_to_xml
+#'
+#' Return xml document from a given queries list
+#' @param parsed_queries_list parsed list of queries
+#' @return xml document containing the given queries list
+#' @importFrom xml2 read_xml
+#' @keywords internal utils
+#' @export
+transform_to_xml <- function(parsed_queries_list) {
+  queries <- lapply(parsed_queries_list, function(query) {
+    query_title <- query$title
+    query_xml <- paste("<aQuery>\n  <all-regions/>\n", query$query, "</aQuery>\n", sep = "")
+    return(query_xml)
+  })
+  xml_string <- paste("<queries>", paste(queries, collapse = ""), "</queries>", sep = "")
+  xml_doc <- read_xml(xml_string)
+  return(xml_doc)
+}
+
 #' start_with_pattern
 #'
 #' Return the vector elements starting with the specified parameters
