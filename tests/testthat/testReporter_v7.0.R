@@ -541,9 +541,9 @@ test_that("Test13_v7. specify queries", {
                   scenarios = scenarios, final_year = 2050, desired_variables = c('Price|Carbon*'),
                   save_output = T, launch_ui = F,
                   queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/queries_gcamreport_gcam7.0_complete.xml"))
-  assign('testExpect',
-         rgcam::loadProject(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.2_prj.dat")))
-  testthat::expect_equal(prj$Reference, testExpect$Reference)
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.RData")))
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.2.RData")))
+  testthat::expect_equal(testResult, testExpect)
 
 })
 
