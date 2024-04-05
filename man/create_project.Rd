@@ -8,7 +8,7 @@ create_project(
   db_path,
   db_name,
   prj_name,
-  scenarios,
+  scenarios = NULL,
   desired_regions = "All",
   desired_variables = "All",
   queries_general_file = gcamreport::queries_general,

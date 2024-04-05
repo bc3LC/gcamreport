@@ -5,10 +5,9 @@
 \title{generate_report}
 \usage{
 generate_report(
-  project_path = NULL,
   db_path = NULL,
   db_name = NULL,
-  prj_name = NULL,
+  prj_name,
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
@@ -22,13 +21,12 @@ generate_report(
 )
 }
 \arguments{
-\item{project_path}{full path of the project with the project name. Possible extensions: .dat and .proj.}
+\item{db_path}{full path of the GCAM database.}
 
-\item{db_path}{full path of the database.}
+\item{db_name}{name of the GCAM database.}
 
-\item{db_name}{name of the database.}
-
-\item{prj_name}{name of the project.}
+\item{prj_name}{name of the rgcam project. This can be an existing project name, in which case the project will be loaded, or a new project name,
+in which case a new project will be created.. Possible extensions: .dat and .proj.}
 
 \item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project or the database are considered.}
 
@@ -74,6 +72,8 @@ project file (if created).
 Main function. Creates/loads a GCAM project, standardizes the data and saves it
 in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
 the User Interface. You can specify the regions and/or variables to be reported and point
-either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
+either the `db_path`, the `db_name`, the `prj_name`, and `scenarios` to create a new project
+and produce the standardized report; or the `prj_name` and `scenarios` to produce the report
+of an existing project.
 The resulting RData output can be used to manually call `launch_gcamreport_ui`.
 }
