@@ -8,8 +8,8 @@
 <meta name="description" content="gcamreport">
 <title>Dataset Generation Tutorial • gcamreport</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Dataset Generation Tutorial">
 <meta property="og:description" content="gcamreport">
@@ -110,25 +110,29 @@
 
     
     
-<p>To see all possibilities of the <code><a href="../reference/generate_report.html">generate_report()</a></code>
+<p>To see a formal description of the <code><a href="../reference/generate_report.html">generate_report()</a></code>
 function, look <a href="https://bc3lc.github.io/gcamreport/reference/generate_report.html">here</a>.</p>
 <p><span style="color:white">newline</span></p>
 <div class="section level2">
 <h2 id="example1">Example 1: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example1"></a>
 </h2>
-<p>Assume you have a database called <code>myDb</code> in a folder named
-<code>dbFolder</code> and are willing to generate a standardized dataset
-for several scenarios: <code>scen1</code>, <code>scen2</code>, and
-<code>scen3</code>. With the <code>generate_report</code> function, it
-will be generated and automatically saved in the same folder where
-<code>myDb</code> is.</p>
+<p>Suppose you have a database named <code>myDb</code> in a folder named
+<code>dbFolder</code> and you want to generate a standardized dataset
+for several scenarios: <code>scen1</code>, <code>scen2</code> and
+<code>scen3</code> using a <code>new_general_queries_file</code>. The
+<code>generate_report</code> function will generate it and automatically
+save it in the same folder where <code>myDb</code> is located.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker.</p></li>
-<li><p>Load <code>gcamreport</code> library.</p></li>
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Store the database path and name, the query path, the desired
 project name, and the desired scenarios and reporting variables in
@@ -138,59 +142,66 @@ are not specified, all the available reporting variables will be used.
 For more details about scenarios and variables specification, look at
 the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
 tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
-tutorial</a>.</li>
+tutorial</a>. If you want to specify the query files, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-queries">query
+files tutorial</a>.</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
 <span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
 <span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
-<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the extension is included in the project name. Accepted
-extensions: <code>.dat</code> &amp; <code>.proj</code>.</p>
-<p><strong>Note</strong>: in case you followed the Docker installation,
-you should store your database inside the <code>gcamreport</code> folder
-and your root directory is called <code>/app</code>. Thus, your database
-path will be something like <code>/app/path/to/database</code>.</p>
+extensions are <code>.dat</code> &amp; <code>.proj</code>.</p>
+<p><strong>Note</strong>: If you followed the Docker installation, you
+should place your database inside the <code>gcamreport</code> folder,
+which is now considered the root of the R session. Inside the R session
+it is referred to as <code>/app</code>. Thus, your database path will be
+something like <code>/app/path/to/database</code>.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Generate the dataset until the desired year. In this example, 2050.
-By default is 2100 and it should be at least 2025.</li>
+<li>Generate the standardized standardized dataset until the desired
+year. In this example, 2050. By default is 2100 and it should be at
+least 2025.</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, </span>
 <span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
 <span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p><strong>Note</strong>: project generation requires approximately 30
-minutes.</p>
+<p><strong>Note</strong>: The project generation might take some time,
+depending on the number of scenarios, regions, and variables you want to
+standardize.</p>
 <p>Notice that the dataset will automatically be saved in
 <code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
 <code>/path/to/database/awesomeProj_standardized.RData</code>,
 <code>/path/to/database/awesomeProj_standardized.csv</code>, and
 <code>/path/to/database/awesomeProj_standardized.xlsx</code>.</p>
 <p>This procedure will also generate a project file at
-<code>/path/to/database/dbname_prjname.dat</code> with all the necessary
-queries that you need for reporting. You can directly use it as
-indicated in <a href="#example2">Example 2</a>.</p>
-<p>The terminal will output the performed verifications and their final
-status.</p>
+<code>/path/to/database/dbname_prjname.dat</code> with all the loaded
+queries. You can directly use it as indicated in <a href="#example2">Example 2</a>.</p>
+<p>The terminal will output the performed vetting verifications and
+their final status.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
 <h2 id="example2">Example 2: generate a dataset from a project<a class="anchor" aria-label="anchor" href="#example2"></a>
 </h2>
-<p>Assume you have a project called <code>myProj.dat</code> and are
-willing to generate a standardized dataset out of it. With the
-<code>generate_report</code> function, it will be generated and
-automatically saved in the same folder where <code>myProj.dat</code> is.
-Notice that <code>myProj.dat</code> should have all the required queries
-for the standardized dataset generation. If you are not sure you have
-all of them or you need to generate the project, see <a href="#example1">Example1</a>.</p>
+<p>Suppose you have a project named <code>myProj.dat</code> and you want
+to generate a standardized dataset from it. The
+<code>generate_report</code> function will generate it and automatically
+save it in the same folder as <code>myProj.dat</code>. Note that
+<code>myProj.dat</code> should have all the queries needed to generate
+the standardized dataset. If you are not sure you have all of them, or
+if you need to generate the project, see <a href="#example1">Example1</a>.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker.</p></li>
-<li><p>Load <code>gcamreport</code> library.</p></li>
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Store the project path and the desired scenarios and reporting
 variables in variables. In case you do not specify the scenarios, all
@@ -199,22 +210,26 @@ the variables are not specified, all the available reporting variables
 will be used. For more details about scenarios and variables
 specification, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
 tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
-tutorial</a>.</li>
+tutorial</a>. Notice that only regions and variables already present in
+the rgcam project can be considered for reporting. If you wish to
+include new items in your project, consider generating the project again
+as detailed in <a href="#example1">Example1</a>.</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span></code></pre></div>
-<p>Notice that the extension is included. Accepted extensions:
+<p>Notice that the extension is included. Accepted extensions are
 <code>.dat</code> &amp; <code>.proj</code>.</p>
-<p><strong>Note</strong>: in case you followed the Docker installation,
-you should store your database inside the <code>gcamreport</code> folder
-and your root directory is called <code>/app</code>. Thus, your database
-path will be something like <code>/app/path/to/database</code>.</p>
+<p><strong>Note</strong>: If you followed the Docker installation, you
+should place your project file inside the <code>gcamreport</code>
+folder, which is now considered the root of the R session. Inside the R
+session it is referred to as <code>/app</code>. Thus, your project path
+will be something like <code>/app/path/to/project/myProj.dat</code>.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Generate the dataset until the desired year. In this example, 2050.
-By default is 2100 and it should be at least 2025.</li>
+<li>Generate the standardized dataset until the desired year. In this
+example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>prj_name <span class="op">=</span> <span class="va">mypath</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
 <span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
@@ -230,24 +245,28 @@ status.</p>
 <h2 id="example-3-save-or-not-the-output-and-specify-the-file-format-or-the-directory">Example 3: save or not the output and specify the file format or the
 directory<a class="anchor" aria-label="anchor" href="#example-3-save-or-not-the-output-and-specify-the-file-format-or-the-directory"></a>
 </h2>
-<p>Assume you are in the situation of any of the previous examples but
-want to either not save the output, save it in <code>.csv</code>,
-<code>.xlsx</code>, or both extensions.</p>
+<p>Suppose you are in the situation of one of the previous examples, but
+you want to either not save the standardized output, save it in
+<code>.csv</code>, <code>.xlsx</code>, or in both extensions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker.</p></li>
-<li><p>Load <code>gcamreport</code> library.</p></li>
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
 parameters that you would like to consider in the
 <code>generate_report</code> function (e.g., final year, desired
 scenarios…). Specify the output saving options through the
-<code>save_output</code> parameter</li>
+<code>save_output</code> parameter:</li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in CSV and XLSX format</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, save_output <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    <span class="co"># this is the default option</span></span>
 <span></span>
@@ -265,9 +284,9 @@ parameters that you consider in the <code>generate_report</code>
 function. Specify the output directory and output file name through
 <code>output_file</code> parameter. This will save the output in the
 indicated path as <code>.csv</code> and <code>.xlsx</code>. To modify
-this, see the above explanation.</li>
+the extension, check step 3.</li>
 </ol>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, output_file <span class="op">=</span> <span class="st">'/desired/directory/awesomeOutput'</span><span class="op">)</span></span></code></pre></div>
 <p><span style="color:white">newline</span></p>
@@ -275,42 +294,47 @@ this, see the above explanation.</li>
 <div class="section level2">
 <h2 id="example-4-specify-the-regions-or-regions-groups">Example 4: specify the regions or regions’ group/s<a class="anchor" aria-label="anchor" href="#example-4-specify-the-regions-or-regions-groups"></a>
 </h2>
-<p>Assume you are in the situation of any of the previous examples but
-want to consider only some regions. You have two options to select them:
-you can directly specify the desired regions to consider or you can
-specify the regions’ group/s to consider. In any case, the desired
-regions will make up <em>World</em>. Then, for example, the World’s
-total crop land will be the sum of the crop land of
-<strong>only</strong> the picked regions.</p>
+<p>Suppose you are in one of the previous situations, but you want to
+consider a standardized dataset with only some regions. You have two
+ways to select them: you can directly specify the desired regions to be
+considered, or you can specify the group(s) of regions to be considered.
+In either case, the desired regions will form <em>World</em>. Then, for
+example, the total arable land of the world will be the sum of the
+arable land of <strong>only</strong> the selected regions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker.</p></li>
-<li><p>Load <code>gcamreport</code> library.</p></li>
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
 </ol>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Check which are the available regions or regions’ groups. The
-following commands will print a list with all the possibilities.</li>
+<li>Check which are the available regions or regions’ groups for
+reporting. The following commands will print a list with all the
+possibilities.</li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/available_regions.html">available_regions</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/available_continents.html">available_continents</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>In case you want to save them in a vector, you can simply assign the
-output. You can also skip the regions’ console printing by setting
+<p>In case you want to store them in a vector, you can simply assign the
+output. You can also skip the console printing by setting
 <code>print = FALSE</code>.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">avail_reg</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_regions.html">available_regions</a></span><span class="op">(</span>print <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">avail_cont</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_continents.html">available_continents</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
 parameters that you consider in the <code>generate_report</code>
 function (e.g., final final, desired scenarios…). Specify the regions
-through the <code>desired_regions</code> parameter or regions’ group
-through the <code>desired_continents</code> parameter. Notice that not
-both can be specified at the same time.</li>
+through the <code>desired_regions</code> parameter or the
+<code>desired_continents</code> parameter. Notice that not both can be
+specified at the same time.</li>
 </ol>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- specify the desired regions</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-15'</span>,<span class="st">'EU-12'</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -321,25 +345,30 @@ both can be specified at the same time.</li>
 <div class="section level2">
 <h2 id="example-5-specify-the-variables">Example 5: specify the variables<a class="anchor" aria-label="anchor" href="#example-5-specify-the-variables"></a>
 </h2>
-<p>Assume you are in the situation of any of the previous examples but
-want to consider only variables.</p>
+<p>Suppose you are in the situation of one of the previous examples, but
+you want to consider only some variables in the standardized
+dataset.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
-guide</a> either with R Studio or Docker.</p></li>
-<li><p>Load <code>gcamreport</code> library.</p></li>
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
 </ol>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Check which are the available variables. The following command will
-print a list with all the possibilities.</li>
+<li>Check which are the available variables for reporting. The following
+command will print a list with all the possibilities.</li>
 </ol>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>In case you want to save them in a vector, you can simply assign the
-output. You can also skip the variables’ console printing by setting
+output. You can also skip the console printing by setting
 <code>print = FALSE</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">avail_var</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span>print <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
@@ -353,7 +382,7 @@ allows you to easily select all variables within a group, such as
 Demand</em>
 </li>
 </ol>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- specify the desired variables</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, </span>
 <span>              desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural Demand|Crops|Energy'</span>,</span>
@@ -366,10 +395,101 @@ Demand</em>
 <span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Transportation,</span></span>
 <span>                                                             <span class="co"># Emissions|BC|Energy|Supply</span></span></code></pre></div>
 <p>In case you specify only some variables within a group, they will
-make up the total value. As an example, if we select <em>Final
+make up the total value. For example, if we select <em>Final
 Energy|Electricity</em> and <em>Final Energy|Gases</em>, then <em>Final
 Energy</em> will be the sum of these two sectors, and will not consider
 <em>Final Energy|Industry</em> or <em>Final Energy|Heat</em>.</p>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="example-6-specify-the-query-files">Example 6: specify the query files<a class="anchor" aria-label="anchor" href="#example-6-specify-the-query-files"></a>
+</h2>
+<p>The <code>gcamreport</code> standardization procedure requires two
+query files. The <code><a href="../reference/queries_general.html">gcamreport::queries_general</a></code> is a query
+file that contains the necessary queries to standardize any variable.
+You can see the xml version of this file <a href="https://github.com/bc3LC/gcamreport/blob/gcam-v7.0/inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml" class="external-link">here</a>.
+In contrast, the <code><a href="../reference/queries_nonCO2.html">gcamreport::queries_nonCO2</a></code> contains only
+<em>nonCO2</em> queries. In particular, the queries
+<code>nonCO2 emissions by sector (excluding resource production</code>
+and <code>nonCO2 emissions by region</code>. These queries are
+particularly heavy, and to avoid crashing the R session, they are loaded
+in parts. You can see the xml version of the file <a href="https://github.com/bc3LC/gcamreport/blob/gcam-v7.0/inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml" class="external-link">here</a>.</p>
+<p>It is highly recommended not to modify these files. Although they
+specify a large set of queries to be loaded, not all of them will be
+included in the rgcam project. The <code>gcamreport</code> package
+generates the rgcam project with the minimum queries necessary to
+standardize the desired variables, thus avoiding loading extra queries.
+It is only possible to specify the query files when generating the rgcam
+project.</p>
+<p>Let’s start with the example: Suppose you have a database named
+<code>myDb</code> in a folder named <code>dbFolder</code> and you want
+to generate a standardized dataset for several scenarios
+(<code>scen1</code>, <code>scen2</code> and <code>scen3</code>) using a
+<code>new_general_queries_file</code>. The <code>generate_report</code>
+function will generate it and automatically save it in the same folder
+where <code>myDb</code> is located.</p>
+<ol style="list-style-type: decimal">
+<li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
+</ol>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Store the database path and name, the general query path, the
+desired project name, and the desired scenarios and reporting variables
+in variables. In case you do not specify the scenarios, all the
+scenarios in the database will be considered for reporting; and if the
+variables are not specified, all the available reporting variables will
+be used. For more details about scenarios and variables specification,
+look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
+tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
+tutorial</a>.</li>
+</ol>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
+<span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
+<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
+<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span>
+<span><span class="va">new_queries_general_file</span> <span class="op">&lt;-</span> <span class="st">"path/to/your/new_queries_file.xml"</span></span></code></pre></div>
+<p>Notice that the extension is included in the general query file
+(<code>.xml</code>) and in the project name (<code>.dat</code> or
+<code>.proj</code>).</p>
+<p><strong>Note</strong>: If you followed the Docker installation, you
+should place your database and the new query file inside the
+<code>gcamreport</code> folder, which is now considered the root of the
+R session. Inside the R session it is referred to as <code>/app</code>.
+Thus, your databse path will be something like
+<code>/app/path/to/database</code> and your query file path will be
+something like <code>/app/path/to/new_queries_file.xml</code>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Generate the standardized dataset until the desired year. In this
+example, 2050. By default is 2100 and it should be at least 2025.</li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, </span>
+<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span>, queries_general_file <span class="op">=</span> <span class="va">new_queries_general_file</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Note</strong>: The project generation might take some time,
+depending on the number of scenarios, regions, and variables you want to
+standardize.</p>
+<p>Notice that the dataset will automatically be saved in
+<code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
+<code>/path/to/database/awesomeProj_standardized.RData</code>,
+<code>/path/to/database/awesomeProj_standardized.csv</code>, and
+<code>/path/to/database/awesomeProj_standardized.xlsx</code>.</p>
+<p>This procedure will also generate a project file at
+<code>/path/to/database/dbname_prjname.dat</code> with all the loaded
+queries. You can directly use it as indicated in <a href="#example2">Example 2</a>.</p>
+<p>The terminal will output the performed vetting verifications and
+their final status.</p>
+<p>To specify the <em>nonCO2</em> query file you can proceed
+analogously. However, check carefully its default structure and the
+function where is used: <a href="file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/reference/data_query.html">data_query</a>.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -423,7 +543,7 @@ called <code>some_databases</code> with your database
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="st">"/app/some_databases"</span>, db_name <span class="op">=</span> <span class="st">"amazingDatabase"</span><span class="op">)</span></span>
 <span></span>
@@ -468,7 +588,7 @@ called <code>amazingData</code> with your dataset
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span></span>
