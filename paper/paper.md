@@ -17,6 +17,9 @@ authors:
 - name: Jon Sampedro
   orcid: "0000-0002-2277-1530"
   affiliation: 1
+- name: Russell Horowitz
+  orcid: "0000-0002-0270-3127"
+  affiliation: 1
 - name: "Dirk-Jan Van de Ven"
   orcid: "0000-0001-9120-564X"
   affiliation: 1
@@ -30,17 +33,17 @@ authors:
   affiliation: 2
 - name: Zarrar Khan
   orcid: "0000-0002-8147-8553"
-  affiliation: 3
+  affiliation: "3, 4"
 bibliography: paper.bib
 affiliations:
 - name: Basque Centre for Climate Change (BC3), Leioa, Spain
   index: 1
-- name: Center for Global Sustainability, School of Public Policy, University of Maryland,
-    College Park, MD, USA
+- name: Center for Global Sustainability, School of Public Policy, University of Maryland, College Park, MD, USA
   index: 2
-- name: Pacific Northwest National Laboratory's Joint Global Change Research Institute,
-    College Park, MD, USA
+- name: Abt; Abt Global, 6130 Executive Blvd, Rockville, MD 20852
   index: 3
+- name: Joint Global Change Research Institute, Pacific Northwest National Laboratory, 5825 University Research Ct, College Park, MD 20740, USA
+  index: 4
 ---
 
 # Summary
