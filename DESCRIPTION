@@ -1,11 +1,11 @@
 Package: gcamreport
 Title: gcamreport
-Version: 7.0.0
-Authors@R: c(person("Rodés-Bachs", "Clàudia", email = "claudia.rodes@bc3research.org", role = c("aut", "cre"),
+Version: 7.0.1
+Authors@R: c(person("Clàudia", "Rodés-Bachs", email = "claudia.rodes@bc3research.org", role = c("aut", "cre"),
 		   comment = c(ORCID = "0000-0001-6696-7685")),
-		   person("Sampedro", "Jon", email = "jon.sampedro@bc3research.org", role = c("aut"),
+		   person("Jon", "Sampedro", email = "jon.sampedro@bc3research.org", role = c("aut"),
 		   comment = c(ORCID = "0000-0002-2277-1530")),
-		   person("Van de Ven", "Dirk-Jan", email = "dj.vandeven@bc3research.org", role = c("aut"),
+		   person("Dirk-Jan", "Van de Ven", email = "dj.vandeven@bc3research.org", role = c("aut"),
 		   comment = c(ORCID = "0000-0001-9120-564X")))
 Description: R package to produce standard IPCC reports from GCAM output.
 URL: https://github.com/bc3LC/gcamreport

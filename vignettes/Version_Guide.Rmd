@@ -13,6 +13,7 @@ Find below a description of all the releases:
 
 | `gcamreport` tag-version | `GCAM` version and/or study        |
 |--------------------------|------------------------------------|
+| v7.0.1                     | GCAM 7.0                         |
 | v7.0.0                     | GCAM 7.0                         |
 | v6.0.1                     | GCAM 6.0                         |
 | v6.0.0                     | GCAM 6.0                         |
