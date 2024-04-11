@@ -4,13 +4,16 @@
     <loc>https://bc3lc.github.io/gcamreport/404.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/LICENSE-text.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/index.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html</loc>
@@ -34,37 +37,16 @@
     <loc>https://bc3lc.github.io/gcamreport/articles/Version_Guide.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v6-0.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/articles/index.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/authors.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/index.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/LICENSE-text.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/CO2_equivalent.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/CO2_market.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/F_GASES.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/GCAM_years.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/GWP_adjuster.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map.html</loc>
@@ -112,7 +94,13 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/CO2_equivalent.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/CO2_market.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map.html</loc>
@@ -127,13 +115,13 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/compute_height.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/convert.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/conv_EJ_GW.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/conv_ghg_co2e.html</loc>
-  </url>
-  <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/convert.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/create_project.html</loc>
@@ -184,16 +172,19 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/F_GASES.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/gather_map.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GCAM_years.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc>
@@ -206,6 +197,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc>
@@ -346,10 +340,10 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc>
@@ -367,10 +361,10 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc>
@@ -385,7 +379,13 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/global_vet_values.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GWP_adjuster.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity.html</loc>
