@@ -1466,19 +1466,27 @@ get_co2_price_fragmented_tmp <- function() {
       # apply the share between CO2 and CO2_ETS
       select(-market) %>%
       pivot_wider(names_from = "market_adj", values_from = "value") %>%
-      mutate(across(6:length(colnames(.)), ~ ifelse(is.na(.), 0, .))) %>%
+      mutate(across(5:length(colnames(.)), ~ ifelse(is.na(.), 0, .))) %>%
       left_join(
         co2_price_share_bysec %>%
           select(-year),
         by = c("scenario", "region")
-      ) %>%
+      )
+
+    if(!"CO2_ETS" %in% names(co2_price_fragmented)){
+      co2_price_fragmented <<- co2_price_fragmented %>%
+        mutate(CO2_ETS = 0)
+    }
+
+    co2_price_fragmented <<- co2_price_fragmented %>%
       mutate(value = CO2 + CO2_ETS * share_CO2_ETS) %>%
       select(Units, scenario, year, region, value, CO2, CO2_ETS, share_CO2_ETS, sector) %>%
       left_join(filter_variables(gcamreport::co2_market_frag_map, "co2_price_fragmented"), by = "sector", multiple = "all") %>%
       filter(complete.cases(.)) %>%
       complete(nesting(scenario, var, year, market, Units), region = regions.global, fill = list(value = 0)) %>%
       select(all_of(gcamreport::long_columns))
-  } else {
+
+  }else {
     co2_price_fragmented <<- NULL
   }
 }
