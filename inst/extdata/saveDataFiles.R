@@ -294,3 +294,17 @@ use_data(last_historical_year, overwrite = T)
 # Reporting columns
 long_columns <- c("scenario", "region", "var", "year", "value")
 use_data(long_columns, overwrite = T)
+
+
+# QUERY files
+
+# gcamreport7 queries complete
+queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml")
+queries_general <- parse_batch_query(queryFile)
+use_data(queries_general, overwrite = T)
+
+# gcamreport7 queries nonCO2
+queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml")
+queries_nonCO2 <- parse_batch_query(queryFile)
+use_data(queries_nonCO2, overwrite = T)
+

@@ -5,10 +5,9 @@
 \title{generate_report}
 \usage{
 generate_report(
-  project_path = NULL,
   db_path = NULL,
   db_name = NULL,
-  prj_name = NULL,
+  prj_name,
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
@@ -16,17 +15,18 @@ generate_report(
   desired_continents = "All",
   save_output = TRUE,
   output_file = NULL,
-  launch_ui = TRUE
+  launch_ui = TRUE,
+  queries_general_file = gcamreport::queries_general,
+  queries_nonCO2_file = gcamreport::queries_nonCO2
 )
 }
 \arguments{
-\item{project_path}{full path of the project with the project name. Possible extensions: .dat and .proj.}
+\item{db_path}{full path of the GCAM database.}
 
-\item{db_path}{full path of the database.}
+\item{db_name}{name of the GCAM database.}
 
-\item{db_name}{name of the database.}
-
-\item{prj_name}{name of the project.}
+\item{prj_name}{name of the rgcam project. This can be an existing project name, in which case the project will be loaded, or a new project name,
+in which case a new project will be created.. Possible extensions: .dat and .proj.}
 
 \item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project or the database are considered.}
 
@@ -56,14 +56,24 @@ database or the project file, and using a default name containing the project na
 In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.}
 
 \item{launch_ui}{if TRUE, launch User Interface, Do not launch it otherwise.}
+
+\item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
+gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}
+
+\item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
+"nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
+gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
 }
 \value{
-RData, CSV, and XLSX datafile with the desired variables & launches user interface.
+RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam
+project file (if created).
 }
 \description{
 Main function. Creates/loads a GCAM project, standardizes the data and saves it
 in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
 the User Interface. You can specify the regions and/or variables to be reported and point
-either the `project_path`, or the `db_path`, the `db_name`, the `prj_name`, and `scenarios`.
+either the `db_path`, the `db_name`, the `prj_name`, and `scenarios` to create a new project
+and produce the standardized report; or the `prj_name` and `scenarios` to produce the report
+of an existing project.
 The resulting RData output can be used to manually call `launch_gcamreport_ui`.
 }

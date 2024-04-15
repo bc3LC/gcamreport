@@ -8,9 +8,11 @@ create_project(
   db_path,
   db_name,
   prj_name,
-  scenarios,
+  scenarios = NULL,
   desired_regions = "All",
-  desired_variables = "All"
+  desired_variables = "All",
+  queries_general_file = gcamreport::queries_general,
+  queries_nonCO2_file = gcamreport::queries_nonCO2
 )
 }
 \arguments{
@@ -31,9 +33,16 @@ Otherwise, specify a vector with all the desired options. To know all possible o
 In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
 the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
 and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".}
+
+\item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
+gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}
+
+\item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
+"nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
+gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
 }
 \value{
-loaded project into global environment.
+loaded project into global environment and local saved project.
 }
 \description{
 Create specified project and load it into the global environment

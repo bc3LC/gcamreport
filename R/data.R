@@ -1,3 +1,29 @@
+#' queries_general
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport queries compatible with GCAM 7.0 version.
+#' Contain all queries except for nonCO2 queries
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::queries_general
+#' }
+"queries_general"
+
+#' queries_nonCO2
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport nonCO2 query compatible with GCAM 7.0 version.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::queries_nonCO2
+#' }
+"queries_nonCO2"
+
+
 #' emissions_list
 #'
 #' @source local
