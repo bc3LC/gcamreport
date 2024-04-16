@@ -700,7 +700,8 @@ get_ghg_sector <- function() {
     conv_ghg_co2e() %>%
     filter(variable %in% gcamreport::GHG_gases) %>%
     rename(ghg = variable) %>%
-    left_join(filter_variables(gcamreport::kyoto_sector_map, "ghg_sector_clean"), multiple = "all") %>%
+    left_join(filter_variables(gcamreport::kyoto_sector_map, "ghg_sector_clean"),
+              by = c('ghg', 'subsector', 'sector'), multiple = "all") %>%
     select(all_of(gcamreport::long_columns)) %>%
     bind_rows(
       LU_carbon_clean %>%
