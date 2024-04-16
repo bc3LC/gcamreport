@@ -1532,10 +1532,10 @@ get_gov_revenue_sector <- function() {
     left_join(
       co2_price_clean %>%
         mutate(
-          sector = ifelse(var == "Price|Carbon|Demand|Industry", "Carbon|Demand|Industry", NA),
-          sector = ifelse(var == "Price|Carbon|Demand|Residential and Commercial", "Carbon|Demand|Buildings", sector),
-          sector = ifelse(var == "Price|Carbon|Demand|Transportation", "Carbon|Demand|Transport", sector),
-          sector = ifelse(var == "Price|Carbon|Supply", "Carbon|Supply", sector)
+          sector = ifelse(var == "Price|Carbon|Energy|Demand|Industry", "Carbon|Demand|Industry", NA),
+          sector = ifelse(var == "Price|Carbon|Energy|Demand|Residential and Commercial", "Carbon|Demand|Buildings", sector),
+          sector = ifelse(var == "Price|Carbon|Energy|Demand|Transportation", "Carbon|Demand|Transport", sector),
+          sector = ifelse(var == "Price|Carbon|Energy|Supply", "Carbon|Supply", sector)
         ) %>%
         select(-var),
       by = c("scenario", "region", "sector", "year")
