@@ -242,6 +242,13 @@ co2_market_frag_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings"
 )
 use_data(co2_market_frag_map, overwrite = T)
 
+
+# iron and steel
+iron_steel_trade_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "iron_steel.csv"), skip = 1,
+                                 stringsAsFactors = FALSE) %>% gather_map()
+use_data(iron_steel_trade_map, overwrite = T)
+
+
 # List of Constants
 
 convert <- list(

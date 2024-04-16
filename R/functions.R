@@ -1195,6 +1195,69 @@ get_industry_production <- function() {
     select(all_of(gcamreport::long_columns))
 }
 
+#' get_iron_steel_imports
+#'
+#' Get iron steel imports
+#' @keywords internal industry tmp
+#' @return iron_steel_imports global variable
+#' @importFrom rgcam getQuery
+#' @importFrom dplyr filter ungroup group_by summarise select left_join
+#' @importFrom magrittr %>%
+#' @export
+get_iron_steel_imports <- function() {
+  var <- scenario <- region <- year <- value <- NULL
+
+  iron_steel_imports <<-
+    getQuery(prj, "regional iron and steel sources") %>%
+    filter(subsector == "domestic iron and steel") %>%
+    left_join(filter_variables(gcamreport::iron_steel_trade_map, "iron_steel_clean"), by = c("sector")) %>%
+    # filter variables that are in terms of Mt
+    group_by(scenario, region, var, year) %>%
+    summarise(value = sum(value, na.rm = T)) %>%
+    ungroup() %>%
+    select(all_of(gcamreport::long_columns))
+}
+
+#' get_iron_steel_exports
+#'
+#' Get iron steel production.
+#' @keywords internal industry tmp
+#' @return iron_steel_exports global variable
+#' @importFrom rgcam getQuery
+#' @importFrom stringr str_replace_all
+#' @importFrom dplyr filter ungroup group_by summarise select left_join
+#' @importFrom magrittr %>%
+#' @export
+get_iron_steel_exports <- function() {
+  var <- scenario <- region <- year <- value <- NULL
+
+  iron_steel_exports <<-
+    getQuery(prj, "traded iron and steel") %>%
+    left_join(filter_variables(gcamreport::iron_steel_trade_map, "iron_steel_clean"), by = c("sector")) %>%
+    # extract region
+    mutate(region = str_replace_all(subsector, " traded iron and steel", "")) %>%
+    # filter variables that are in terms of Mt
+    group_by(scenario, region, var, year) %>%
+    summarise(value = sum(value, na.rm = T)) %>%
+    ungroup() %>%
+    select(all_of(gcamreport::long_columns))
+}
+
+#' get_iron_steel_clean
+#'
+#' Get iron steel imports & exports
+#' @keywords internal industry
+#' @return iron_steel_clean global variable
+#' @importFrom dplyr filter ungroup group_by summarise select left_join
+#' @importFrom magrittr %>%
+#' @export
+get_iron_steel_clean <- function() {
+  iron_steel_clean <<- bind_rows(
+    iron_steel_imports,
+    iron_steel_exports
+  )
+}
+
 
 # Prices
 # ==============================================================================================
