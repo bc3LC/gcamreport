@@ -1745,15 +1745,18 @@ get_energy_price <- function() {
   energy_price_clean <<-
     energy_price %>%
     filter(grepl("Residential\\|Electricity", var) |
-      grepl("Residential\\|Gases", var) |
+      grepl("Residential\\|Gas", var) |
       grepl("Primary Energy\\|Coal", var) |
       grepl("Primary Energy\\|Biomass", var) |
       grepl("Primary Energy\\|Gas", var) |
       grepl("Primary Energy\\|Oil", var) |
       grepl("Secondary Energy\\|Electricity", var) |
-      grepl("Secondary Energy\\|Gases", var) |
+      grepl("Secondary Energy\\|Gas", var) |
+      grepl("Secondary Energy\\|Liquids", var) |
       grepl("Secondary Energy\\|Liquids\\|Biomass", var) |
       grepl("Secondary Energy\\|Liquids\\|Oil", var) |
+      grepl("Secondary Energy\\|Solids", var) |
+      grepl("Secondary Energy\\|Solids\\|Biomass", var) |
       grepl("Secondary Energy\\|Solids\\|Coal", var)) %>%
     mutate(var = paste(var, "Index", sep = "|")) %>%
     group_by(scenario, region, var) %>%
@@ -1761,6 +1764,14 @@ get_energy_price <- function() {
     ungroup() %>%
     select(all_of(gcamreport::long_columns)) %>%
     bind_rows(energy_price)
+
+  # sum by energy price var
+  energy_price_clean <<-
+    energy_price_clean %>%
+    group_by(scenario, region, var, year) %>%
+    mutate(value = sum(value, na.rm = T)) %>%
+    ungroup() %>%
+    unique()
 
   # average mean for global primary energy price
   energy_price_clean <<-
