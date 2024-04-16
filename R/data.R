@@ -432,6 +432,18 @@
 #' }
 "co2_market_frag_map"
 
+#' iron_steel_trade_map
+#'
+#' @source github
+#' @format .csv
+#' @description iron steel imports and exports map
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iron_steel_trade_map
+#' }
+"iron_steel_trade_map"
+
 #' convert
 #'
 #' @description units conversion list
