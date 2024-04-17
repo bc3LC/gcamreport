@@ -592,6 +592,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     # check if the project exists and load it if possible
     prj_loaded <- TRUE
     load_project(prj_name, desired_regions, scenarios)
+    # update desired_regions with the regions present in the project
+    desired_regions <- filter_desired_regions(desired_regions)
   } else {
     # create project
     # check that all the paths are specified

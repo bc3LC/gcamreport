@@ -5,6 +5,30 @@ options(dplyr.summarise.inform = FALSE)
 #########################################################################
 
 
+#' filter_desired_regions
+#'
+#' Return vector of the desired regions available in the loaded project
+#' @param des_reg vector of the user desired regions
+#' @return vector of the desired regions available in the loaded project
+#' @importFrom rgcam getQuery
+#' @export
+filter_desired_regions <- function(des_reg) {
+  r <- 1
+  rmax <- length(listQueries(prj))
+  while (r <= rmax) {
+    tmp <- getQuery(prj, listQueries(prj)[r])
+    if ("region" %in% colnames(tmp)) {
+      des_reg <- unique(tmp$region)
+      return(des_reg)
+    }
+    r <- r + 1
+  }
+  warning("Desired regions could not be filtered through the loaded project data. The standardize report will contain the regions specified by the user.")
+  return(des_reg)
+}
+
+
+
 #' transform_to_xml
 #'
 #' Return xml document from a given queries list
@@ -82,6 +106,13 @@ filter_loading_regions <- function(data, desired_regions = "All", variable) {
       "CO2 concentrations", "global mean temperature",
       "total climate forcing"
     ))) {
+      # check the desired regions are available in the data
+      avail_reg <- unique(data$region)
+      if (!desired_regions %in% avail_reg) {
+        not_avail <- setdiff(desired_regions, avail_reg)
+        if (length(not_avail) == 1) stop("The desired region ", paste(not_avail, collapse = ""), " is not available in the loaded project. In detail, it is not availabe in the query '", v, "'.")
+        if (length(not_avail) > 1) stop("The desired regions ", paste(not_avail, collapse = ", "), " are not available in the loaded project. In detail, they are not availabe in the query '", v, "'.")
+      }
       data <- data %>%
         filter(region %in% desired_regions)
     }
