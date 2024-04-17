@@ -732,7 +732,8 @@ get_ghg_sector <- function() {
     filter(variable %in% gcamreport::GHG_gases) %>%
     rename(ghg = variable) %>%
     left_join(filter_variables(gcamreport::kyoto_sector_map, "ghg_sector_clean"),
-              by = c('ghg', 'subsector', 'sector'), multiple = "all") %>%
+      by = c("ghg", "subsector", "sector"), multiple = "all"
+    ) %>%
     select(all_of(gcamreport::long_columns)) %>%
     bind_rows(
       LU_carbon_clean %>%
@@ -1267,6 +1268,7 @@ get_iron_steel_exports <- function() {
     left_join(filter_variables(gcamreport::iron_steel_trade_map, "iron_steel_clean"), by = c("sector")) %>%
     # extract region
     mutate(region = str_replace_all(subsector, " traded iron and steel", "")) %>%
+    filter(region %in% desired_regions) %>%
     # filter variables that are in terms of Mt
     group_by(scenario, region, var, year) %>%
     summarise(value = sum(value, na.rm = T)) %>%
@@ -1329,11 +1331,18 @@ get_ag_prices <- function() {
   ag_prices_clean <<-
     getQuery(prj, "prices by sector") %>%
     bind_rows(ag_prices_wld) %>%
-    left_join(filter_variables(gcamreport::ag_prices_map, "ag_prices_clean"), by = c("sector")) %>%
+    left_join(filter_variables(gcamreport::ag_prices_map, "ag_prices_clean"),
+      by = c("sector"), relationship = "many-to-many"
+    ) %>%
     filter(!is.na(var)) %>%
     group_by(scenario, region, sector) %>%
     mutate(value = value * unit_conv / value[year == 2005]) %>%
     ungroup() %>%
+    # do the mean by variable
+    group_by(scenario, region, var, year, ) %>%
+    summarise(value = mean(value)) %>%
+    ungroup() %>%
+    # rearrange dataset
     select(all_of(gcamreport::long_columns))
 }
 
@@ -1587,7 +1596,7 @@ get_co2_price_fragmented_tmp <- function() {
         by = c("scenario", "region")
       )
 
-    if(!"CO2_ETS" %in% names(co2_price_fragmented)){
+    if (!"CO2_ETS" %in% names(co2_price_fragmented)) {
       co2_price_fragmented <<- co2_price_fragmented %>%
         mutate(CO2_ETS = 0)
     }
@@ -1599,8 +1608,7 @@ get_co2_price_fragmented_tmp <- function() {
       filter(complete.cases(.)) %>%
       complete(nesting(scenario, var, year, market, Units), region = regions.global, fill = list(value = 0)) %>%
       select(all_of(gcamreport::long_columns))
-
-  }else {
+  } else {
     co2_price_fragmented <<- NULL
   }
 }
