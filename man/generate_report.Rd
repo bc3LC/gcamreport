@@ -17,7 +17,8 @@ generate_report(
   output_file = NULL,
   launch_ui = TRUE,
   queries_general_file = gcamreport::queries_general,
-  queries_nonCO2_file = gcamreport::queries_nonCO2
+  queries_nonCO2_file = gcamreport::queries_nonCO2,
+  verbose = FALSE
 )
 }
 \arguments{
@@ -63,6 +64,8 @@ gcamreport general query file, compatible with the latest GCAM version and able 
 \item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
 gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
+
+\item{verbose}{prints extra messages that help when debugging. FALSE by default.}
 }
 \value{
 RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam

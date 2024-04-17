@@ -333,10 +333,11 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 #'
 #' Recursive function to load the desired variable and its dependent variables
 #' @param var variable to be loaded.
+#' @param verbose prints the variable being loaded. FALSE by default. Helps when debugging.
 #' @keywords internal
 #' @return load variable.
 #' @export
-load_variable <- function(var) {
+load_variable <- function(var, verbose = F) {
   # base case: if variable already loaded, return
   if (exists(var$name)) {
     return()
@@ -345,12 +346,12 @@ load_variable <- function(var) {
   # if the variable has dependencies, load them
   if (!is.na(var$dependencies)) {
     for (d in var$dependencies[[1]]) {
-      load_variable(variables.global[which(variables.global$name == d), ])
+      load_variable(variables.global[which(variables.global$name == d), ], verbose)
     }
   }
 
   # print the variable's name
-  print(var$name)
+  if (verbose) print(var$name)
 
   # load the variable
   get(var$fun)()
@@ -495,6 +496,7 @@ available_variables <- function(print = TRUE) {
 #' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 #' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
 #' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
+#' @param verbose prints extra messages that help when debugging. FALSE by default.
 #' @return RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam
 #' project file (if created).
 #' @import dplyr
@@ -507,7 +509,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
                             desired_variables = "All", desired_regions = "All", desired_continents = "All",
                             save_output = TRUE, output_file = NULL, launch_ui = TRUE,
                             queries_general_file = gcamreport::queries_general,
-                            queries_nonCO2_file = gcamreport::queries_nonCO2) {
+                            queries_nonCO2_file = gcamreport::queries_nonCO2,
+                            verbose = FALSE) {
   continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
 
   # boolean variable
@@ -647,7 +650,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   desired_variables <<- desired_variables
   for (i in 1:nrow(variables.global)) {
     if (variables.global$required[i]) {
-      load_variable(variables.global[i, ])
+      load_variable(variables.global[i, ], verbose)
     }
   }
 

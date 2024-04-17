@@ -4,10 +4,12 @@
 \alias{load_variable}
 \title{load_variable}
 \usage{
-load_variable(var)
+load_variable(var, verbose = F)
 }
 \arguments{
 \item{var}{variable to be loaded.}
+
+\item{verbose}{prints the variable being loaded. FALSE by default. Helps when debugging.}
 }
 \value{
 load variable.
