@@ -31,13 +31,13 @@ Novelties:
 
 Novelties:
 
--Updated mappings to meet the GCAM 7.0 novelties.<br>
--Allow selection of regions and variables.<br>
--Add user error checks.<br>
--Simplify the UI launch.<br>
--Rename functions to make them more intuitive.<br>
--Fix: Report all the calculated elements.<br>
--Improve the documentation.<br>
+- Updated mappings to meet the GCAM 7.0 novelties.<br>
+- Allow selection of regions and variables.<br>
+- Add user error checks.<br>
+- Simplify the UI launch.<br>
+- Rename functions to make them more intuitive.<br>
+- Fix: Report all the calculated elements.<br>
+- Improve the documentation.<br>
 
 # gcamreport 6.0.1
 
@@ -47,9 +47,9 @@ Novelties:
 
 Novelties:
 
--Fix project creation.<br>
--Introduce user messages.<br>
--Add a step-by-step tutorial and other tutorial examples.<br>
+- Fix project creation.<br>
+- Introduce user messages.<br>
+- Add a step-by-step tutorial and other tutorial examples.<br>
 
 # gcamreport 6.0.0-gas
 
@@ -59,7 +59,7 @@ Novelties:
 
 Novelties:
 
--Mapping update to meet the new GCAM version requirements (with detailed gas trading features).<br>
+- Mapping update to meet the new GCAM version requirements (with detailed gas trading features).<br>
 
 
 # gcamreport 6.0.0
@@ -70,6 +70,6 @@ Novelties:
 
 Novelties:
 
--Creation of a template for the desired project following the IPCC requirements.<br>
--Friendly UI to view and subset the data items in a table, as well as to plot the desired variables choosing the desired regions and scenarios.<br>
+- Creation of a template for the desired project following the IPCC requirements.<br>
+- Friendly UI to view and subset the data items in a table, as well as to plot the desired variables choosing the desired regions and scenarios.<br>
 
