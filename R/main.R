@@ -674,9 +674,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     }
   }
 
-  if (!(identical(desired_regions, "All"))) {
-    rlang::inform("No checks or vetting performed since not all regions were selected.")
-  } else {
+  if (identical(desired_regions, "All") || length(desired_regions) == 32) {
     # checks, vetting, and errors summary
     vetting_summary <- list()
     for (ch in variables.global$checks) {
@@ -701,6 +699,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details\n')
     cat("You can check the vetting figure in output/figure/vetting.tiff\n")
     cat("==============================================================\n")
+  } else {
+    rlang::inform("No checks or vetting performed since not all regions were selected.")
   }
 
   # remove internal variables from the environment
