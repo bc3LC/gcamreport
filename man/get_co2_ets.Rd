@@ -4,7 +4,10 @@
 \alias{get_co2_ets}
 \title{get_co2_ets}
 \usage{
-get_co2_ets()
+get_co2_ets(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_ets_by reg and co2_ets_bysec global variables

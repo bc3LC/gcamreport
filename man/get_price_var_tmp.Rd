@@ -4,7 +4,10 @@
 \alias{get_price_var_tmp}
 \title{get_price_var_tmp}
 \usage{
-get_price_var_tmp()
+get_price_var_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 price_var global variable

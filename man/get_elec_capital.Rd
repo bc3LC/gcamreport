@@ -4,7 +4,10 @@
 \alias{get_elec_capital}
 \title{get_elec_capital}
 \usage{
-get_elec_capital()
+get_elec_capital(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 elec_capital_clean global variable

@@ -4,7 +4,10 @@
 \alias{get_temperature}
 \title{get_temperature}
 \usage{
-get_temperature()
+get_temperature(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 global_temp_clean global variable

@@ -4,7 +4,10 @@
 \alias{get_ag_demand}
 \title{get_ag_demand}
 \usage{
-get_ag_demand()
+get_ag_demand(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 ag_demand_clean global variable

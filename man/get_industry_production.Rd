@@ -4,7 +4,10 @@
 \alias{get_industry_production}
 \title{get_industry_production}
 \usage{
-get_industry_production()
+get_industry_production(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 industry_production_clean global variable

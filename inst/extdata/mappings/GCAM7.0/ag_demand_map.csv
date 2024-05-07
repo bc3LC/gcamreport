@@ -1,0 +1,15 @@
+# Agricultural demand balance,,,,,,,,,
+sector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,,,,,,1
+FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,,,,,,1
+FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,,,,,,1
+NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,,,,,,1
+regional corn for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional sugar for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,,,,,,1
+regional beef,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
+regional pork,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
+regional poultry,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
+regional sheepgoat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
+OtherMeat_Fish,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1

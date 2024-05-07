@@ -4,7 +4,10 @@
 \alias{get_prices_subsector}
 \title{get_prices_subsector}
 \usage{
-get_prices_subsector()
+get_prices_subsector(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 prices_subsector global variable

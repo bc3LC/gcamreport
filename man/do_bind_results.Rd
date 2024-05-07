@@ -4,7 +4,10 @@
 \alias{do_bind_results}
 \title{do_bind_results}
 \usage{
-do_bind_results()
+do_bind_results(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 Save results in an output file.

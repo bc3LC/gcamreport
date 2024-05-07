@@ -4,7 +4,10 @@
 \alias{get_elec_investment}
 \title{get_elec_investment}
 \usage{
-get_elec_investment()
+get_elec_investment(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 elec_investment_clean global variable

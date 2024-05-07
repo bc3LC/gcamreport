@@ -4,7 +4,10 @@
 \alias{get_co2}
 \title{get_co2}
 \usage{
-get_co2()
+get_co2(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_clean global variable

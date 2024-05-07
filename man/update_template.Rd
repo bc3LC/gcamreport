@@ -4,7 +4,10 @@
 \alias{update_template}
 \title{update_template}
 \usage{
-update_template()
+update_template(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 Updated template as .rda and as csv in the inst/extdata folder

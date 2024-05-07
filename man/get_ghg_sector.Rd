@@ -4,7 +4,10 @@
 \alias{get_ghg_sector}
 \title{get_ghg_sector}
 \usage{
-get_ghg_sector()
+get_ghg_sector(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 ghg_sector_clean global variable

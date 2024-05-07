@@ -4,7 +4,10 @@
 \alias{get_fe_transportation_tmp}
 \title{get_fe_transportation_tmp}
 \usage{
-get_fe_transportation_tmp()
+get_fe_transportation_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 fe_transportation global variable

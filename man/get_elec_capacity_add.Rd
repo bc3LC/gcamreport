@@ -4,7 +4,10 @@
 \alias{get_elec_capacity_add}
 \title{get_elec_capacity_add}
 \usage{
-get_elec_capacity_add()
+get_elec_capacity_add(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 elec_capacity_add_clean global variable

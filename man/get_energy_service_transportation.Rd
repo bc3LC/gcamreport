@@ -4,7 +4,10 @@
 \alias{get_energy_service_transportation}
 \title{get_energy_service_transportation}
 \usage{
-get_energy_service_transportation()
+get_energy_service_transportation(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 energy_service_transportation_clean global variable

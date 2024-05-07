@@ -4,7 +4,10 @@
 \alias{get_co2_tech_emissions_tmp}
 \title{get_co2_tech_emissions_tmp}
 \usage{
-get_co2_tech_emissions_tmp()
+get_co2_tech_emissions_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_tech_emissions global variable

@@ -4,7 +4,10 @@
 \alias{get_regional_emission}
 \title{get_regional_emission}
 \usage{
-get_regional_emission()
+get_regional_emission(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 regional_emission global variable

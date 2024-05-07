@@ -4,7 +4,10 @@
 \alias{get_ag_prices}
 \title{get_ag_prices}
 \usage{
-get_ag_prices()
+get_ag_prices(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 ag_prices_clean global variable

@@ -4,7 +4,10 @@
 \alias{get_co2_price_share}
 \title{get_co2_price_share}
 \usage{
-get_co2_price_share()
+get_co2_price_share(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_price_share_byreg and co2_price_share_bysec global variables
