@@ -25,9 +25,13 @@ ColombiaCO2,Colombia
 L-AmCO2,Colombia
 EFTACO2,European Free Trade Association
 EU12CO2,EU-12
+EU-12CO2,EU-12
+EU_12CO2,EU-12
 EUCO2,EU-12
 EU_ETSCO2_ETS,EU-12
 EU15CO2,EU-15
+EU-15CO2,EU-15
+EU_15CO2,EU-15
 EUCO2,EU-15
 EU_ETSCO2_ETS,EU-15
 Europe_EasternCO2,Europe_Eastern
@@ -36,6 +40,7 @@ GlobalCO2,Global
 globalCO2,Global
 IndiaCO2,India
 IndonesiaCO2,Indonesia
+PakistanCO2,Pakistan
 Rest AsiaCO2,Indonesia
 JapanCO2,Japan
 Rest AsiaCO2,Japan
@@ -48,6 +53,7 @@ South AfricaCO2,South Africa
 SSACO2,South Africa
 L-AmCO2,South America_Southern
 South America_SouthernCO2,South America_Southern
+South America_NorthernCO2,South America_Northern
 Rest AsiaCO2,South Asia
 South AsiaCO2,South Asia
 Rest AsiaCO2,South Korea
