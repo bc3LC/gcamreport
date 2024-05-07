@@ -1497,7 +1497,7 @@ get_co2_price_fragmented_tmp <- function() {
   if (nrow(co2_price_fragmented_pre) > 1) {
     CO2_market_filteredReg <- filter_data_regions(gcamreport::CO2_market)
 
-    co2_price_fragmented <<-
+    co2_price_fragmented <-
       co2_price_fragmented_pre %>%
       left_join(CO2_market_filteredReg, by = c("market"), multiple = "all") %>%
       filter(complete.cases(.)) %>%
@@ -1515,8 +1515,19 @@ get_co2_price_fragmented_tmp <- function() {
       ungroup() %>%
       # apply the share between CO2 and CO2_ETS
       select(-market) %>%
-      pivot_wider(names_from = "market_adj", values_from = "value") %>%
-      mutate(across(6:length(colnames(.)), ~ ifelse(is.na(.), 0, .))) %>%
+      pivot_wider(names_from = "market_adj", values_from = "value")
+
+    # if CO2_ETS or other CO2 markets are present, check if they have NAs and set them to 0
+    if (length(colnames(co2_price_fragmented)) >= 6) {
+      co2_price_fragmented <- co2_price_fragmented %>%
+        mutate(across(6:length(colnames(.)), ~ ifelse(is.na(.), 0, .)))
+    } else {
+      # otherwise, create a column called CO2_ETS with 0s for all regions
+      co2_price_fragmented <- co2_price_fragmented %>%
+        mutate(CO2_ETS = 0)
+    }
+
+    co2_price_fragmented <<- co2_price_fragmented %>%
       left_join(
         co2_price_share_bysec %>%
           select(-year),
