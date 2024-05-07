@@ -1,0 +1,68 @@
+cff-version: "1.2.0"
+authors:
+- family-names: Rodés-Bachs
+  given-names: Clàudia
+  orcid: "https://orcid.org/0000-0001-6696-7685"
+- family-names: Sampedro
+  given-names: Jon
+  orcid: "https://orcid.org/0000-0002-2277-1530"
+- family-names: Horowitz
+  given-names: Russell
+  orcid: "https://orcid.org/0000-0002-0270-3127"
+- family-names: Ven
+  given-names: Dirk-Jan Van
+  name-particle: de
+  orcid: "https://orcid.org/0000-0001-9120-564X"
+- family-names: Cui
+  given-names: Ryna Yiyun
+  orcid: "https://orcid.org/0000-0002-1186-8230"
+- family-names: Zhao
+  given-names: Alicia
+  orcid: "https://orcid.org/0000-0002-6054-8671"
+- family-names: Zwerling
+  given-names: Matthew
+- family-names: Khan
+  given-names: Zarrar
+  orcid: "https://orcid.org/0000-0002-8147-8553"
+doi: 10.5281/zenodo.10960370
+message: If you use this software, please cite our article in the
+  Journal of Open Source Software.
+preferred-citation:
+  authors:
+  - family-names: Rodés-Bachs
+    given-names: Clàudia
+    orcid: "https://orcid.org/0000-0001-6696-7685"
+  - family-names: Sampedro
+    given-names: Jon
+    orcid: "https://orcid.org/0000-0002-2277-1530"
+  - family-names: Horowitz
+    given-names: Russell
+    orcid: "https://orcid.org/0000-0002-0270-3127"
+  - family-names: Ven
+    given-names: Dirk-Jan Van
+    name-particle: de
+    orcid: "https://orcid.org/0000-0001-9120-564X"
+  - family-names: Cui
+    given-names: Ryna Yiyun
+    orcid: "https://orcid.org/0000-0002-1186-8230"
+  - family-names: Zhao
+    given-names: Alicia
+    orcid: "https://orcid.org/0000-0002-6054-8671"
+  - family-names: Zwerling
+    given-names: Matthew
+  - family-names: Khan
+    given-names: Zarrar
+    orcid: "https://orcid.org/0000-0002-8147-8553"
+  date-published: 2024-04-22
+  doi: 10.21105/joss.05975
+  issn: 2475-9066
+  issue: 96
+  journal: Journal of Open Source Software
+  publisher:
+    name: Open Journals
+  start: 5975
+  title: "gcamreport: An R tool to process and standardize GCAM outputs"
+  type: article
+  url: "https://joss.theoj.org/papers/10.21105/joss.05975"
+  volume: 9
+title: "gcamreport: An R tool to process and standardize GCAM outputs"
