@@ -1327,16 +1327,15 @@ get_co2_price_global_tmp <- function() {
 
   co2_price_global_pre <-
     getQuery(prj, "CO2 prices") %>%
-    filter(market %in% c("globalCO2","GlobalCO2","worldCO2","WorldCO2"))
+    filter(market %in% c("WorldCO2","globalCO2","GlobalCO2","worldCO2"))
 
   if (nrow(co2_price_global_pre) > 1) {
     co2_price_global <<-
       as_tibble(co2_price_global_pre) %>%
       mutate(value = value / gcamreport::convert$conv_C_CO2 * gcamreport::convert$conv_90USD_10USD) %>%
-      mutate(market = gsub("global", "", market)) %>%
+      mutate(market = gsub("global|Global|world|World", "", market)) %>%
       left_join(filter_variables(gcamreport::co2_market_frag_map, "co2_price_global"), by = "market", multiple = "all") %>%
-      filter(value != 0) %>%
-      expand_grid(tibble(region = regions.global)) %>%
+      expand_grid(tibble(region = unique(fe_sector_clean$region))) %>%
       select(all_of(gcamreport::long_columns))
   } else {
     co2_price_global <<- NULL
@@ -1424,7 +1423,7 @@ get_co2_price_fragmented_tmp <- function() {
   co2_price_fragmented_pre <<-
     getQuery(prj, "CO2 prices") %>%
     filter(!grepl("LUC", market)) %>%
-    filter(!market %in% c("globalCO2","GlobalCO2","worldCO2","WorldCO2")) %>%
+    filter(!grepl("global|Global|world|World", market)) %>%
     filter(Units == "1990$/tC")
 
   if (nrow(co2_price_fragmented_pre) > 1) {
@@ -1453,7 +1452,6 @@ get_co2_price_fragmented_tmp <- function() {
       filter(complete.cases(.)) %>%
       complete(nesting(scenario, var, year, market, Units), region = regions.global, fill = list(value = 0)) %>%
       select(all_of(gcamreport::long_columns))
-
   } else {
     co2_price_fragmented <<- NULL
   }

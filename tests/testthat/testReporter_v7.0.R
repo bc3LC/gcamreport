@@ -363,25 +363,25 @@ test_that("Test8_v7. error messages", {
   )
 })
 
-test_that("Test9_v7. CO2 ETS", {
-  # generate_report(
-  #   db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0"),
-  #   db_name = "database_basexdb_ref",
-  #   prj_name = "gcamv7.9_test.dat",
-  #   scenarios = "Reference",
-  #   final_year = 2050,
-  #   desired_regions = "China",
-  #   desired_variables = c("Price|Carbon*"),
-  #   launch_ui = FALSE
-  # )
+test_that("Test9_v7. CO2 Price", {
+  # World CO2 price
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/database_basexdb_CO2price_test.dat"),
+    desired_variables = c("Price|Carbon*"),
+    launch_ui = FALSE
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
+  testthat::expect_equal(report, testResult)
+  rm(list = ls())
 
-  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
-  # testthat::expect_equal(prj$Reference$`CO2 prices`, testResult)
-
-  desired_regions <<- "China"
-  CO2_market_filteredReg <- filter_data_regions(gcamreport::CO2_market)
+  # Regional CO2 price
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/database_basexdb_policy.dat"),
+    desired_variables = c("Price|Carbon*"),
+    launch_ui = FALSE
+  )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.2.RData")))
-  testthat::expect_equal(CO2_market_filteredReg, testResult)
+  testthat::expect_equal(report, testResult)
 })
 
 test_that("Test10_v7. vetting", {
