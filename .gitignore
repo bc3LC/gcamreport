@@ -53,3 +53,4 @@ tests/testthat/testInputs/v_7.0/database_basexdb_ref_gcamv7.0_test_specify_queri
 tests/testthat/testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.csv
 tests/testthat/testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.RData
 tests/testthat/testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.xlsx
+debug.R

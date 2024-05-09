@@ -152,17 +152,15 @@ filter_variables <- function(data, variable) {
 #'
 #' Formats all maps into a long table
 #' @keywords internal
-#' @importFrom tidyr gather
-#' @importFrom dplyr select filter
 #' @export
 gather_map <- function(df) {
   . <- identifier <- var <- NULL
 
   untouched_cols <- names(df) %>% .[!grepl("var", names(df))]
   df %>%
-    gather(identifier, var, -untouched_cols) %>%
-    select(-identifier) %>%
-    filter(!is.na(var), var != "") %>%
+    tidyr::gather(identifier, var, -untouched_cols) %>%
+    dplyr::select(-identifier) %>%
+    dplyr::filter(!is.na(var), var != "") %>%
     return()
 }
 
@@ -386,41 +384,6 @@ get_co2 <- function() {
   co2_clean <<-
     as_tibble(getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)")) %>%
     left_join(filter_variables(gcamreport::co2_sector_map, "co2_clean"), by = "sector", multiple = "all") %>%
-    mutate(value = value * unit_conv) %>%
-    group_by(scenario, region, year, var) %>% #
-    summarise(value = sum(value, na.rm = T)) %>%
-    ungroup() %>%
-    select(all_of(gcamreport::long_columns))
-}
-
-
-#' get_co2_ets
-#'
-#' Get World's CO2 ETS emissions query.
-#' @keywords internal co2
-#' @return co2_ets_by reg and co2_ets_bysec global variables
-#' @importFrom tibble as_tibble
-#' @importFrom rgcam getQuery
-#' @importFrom dplyr filter mutate select left_join group_by summarise ungroup
-#' @importFrom magrittr %>%
-#' @export
-get_co2_ets <- function() {
-  ghg <- value <- year <- unit_conv <- scenario <- region <- var <- NULL
-
-  co2_ets_byreg <<-
-    as_tibble(getQuery(prj, "nonCO2 emissions by region")) %>%
-    filter(ghg == "CO2_ETS") %>%
-    # change units to CO2 equivalent and set the variable
-    mutate(
-      value = value * gcamreport::convert$CO2_equivalent,
-      var = "Emissions|CO2_ETS|Energy and Industrial Processes"
-    ) %>%
-    select(all_of(gcamreport::long_columns))
-  co2_ets_bysec <<-
-    as_tibble(getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")) %>%
-    filter(ghg == "CO2_ETS") %>%
-    # change units to CO2 equivalent and group by sector
-    left_join(filter_variables(gcamreport::co2_ets_sector_map, "co2_ets_bysec"), by = "sector", multiple = "all") %>%
     mutate(value = value * unit_conv) %>%
     group_by(scenario, region, year, var) %>% #
     summarise(value = sum(value, na.rm = T)) %>%
@@ -669,7 +632,6 @@ get_fgas <- function() {
 
   f_gas_clean <<-
     getQuery(prj, "nonCO2 emissions by region") %>%
-    filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     filter(variable %in% gcamreport::F_GASES) %>%
     group_by(scenario, region, year) %>%
@@ -694,7 +656,6 @@ get_ghg <- function() {
 
   ghg_all <<-
     getQuery(prj, "nonCO2 emissions by region") %>%
-    filter(!grepl("CO2_ETS", ghg)) %>%
     conv_ghg_co2e() %>%
     filter(variable %in% gcamreport::GHG_gases) %>%
     bind_rows(LU_carbon_clean) %>%
@@ -721,7 +682,7 @@ get_ghg_sector <- function() {
 
   ghg_sector_clean <<-
     getQuery(prj, "nonCO2 emissions by sector (excluding resource production)") %>%
-    filter(!grepl("CO2", ghg), !grepl("CO2_ETS", ghg)) %>%
+    filter(!grepl("CO2", ghg),) %>%
     bind_rows(getQuery(prj, "nonCO2 emissions by resource production") %>%
       rename(sector = resource) %>%
       select(-subresource)) %>%
@@ -1366,7 +1327,7 @@ get_co2_price_global_tmp <- function() {
 
   co2_price_global_pre <-
     getQuery(prj, "CO2 prices") %>%
-    filter(market == "globalCO2")
+    filter(market %in% c("globalCO2","GlobalCO2","worldCO2","WorldCO2"))
 
   if (nrow(co2_price_global_pre) > 1) {
     co2_price_global <<-
@@ -1397,45 +1358,23 @@ get_co2_price_global_tmp <- function() {
 #' @export
 get_co2_price_share <- function() {
   var <- year <- region <- value <- . <- sector <-
-    CO2_ETS <- CO2 <- scenario <- share_CO2_ETS <- NULL
+    CO2 <- scenario <- share_CO2_ETS <- NULL
 
   co2_price_share_byreg <<- co2_clean %>%
-    filter(
+    dplyr::filter(
       var == "Emissions|CO2|Energy and Industrial Processes",
       year == gcamreport::last_historical_year
     ) %>%
-    rbind(co2_ets_byreg %>%
-      filter(
-        var == "Emissions|CO2_ETS|Energy and Industrial Processes",
-        year == gcamreport::last_historical_year
-      )) %>%
-    mutate(var = if_else(var == "Emissions|CO2|Energy and Industrial Processes", "CO2", "CO2_ETS")) %>%
-    pivot_wider(names_from = "var", values_from = "value")
-
-  # if CO2_ETS is not present, create a NA column
-  if (!("CO2_ETS" %in% colnames(co2_price_share_byreg))) {
-    co2_price_share_byreg <<- co2_price_share_byreg %>%
-      mutate(CO2_ETS = NA)
-  }
-
-  if (nrow(co2_price_share_byreg) < 1) {
-    co2_price_clean <<-
-      expand_grid(tibble(scenario = unique(fe_sector_clean$scenario))) %>%
-      expand_grid(tibble(year = unique(fe_sector_clean$year))) %>%
-      expand_grid(tibble(region = c(unique(fe_sector_clean$region), "Global"))) %>%
-      mutate(value = 0) %>%
-      select(all_of(gcamreport::long_columns))
-  }
-
-  co2_price_share_byreg <<- co2_price_share_byreg %>%
-    mutate(CO2_ETS = if_else(is.na(CO2_ETS), 0, CO2_ETS)) %>%
-    mutate(share_CO2_ETS = CO2_ETS / CO2) %>%
-    select(scenario, region, year, share_CO2_ETS)
+    # compute the World CO2 emissions
+    group_by(scenario, var, year) %>%
+    mutate(global_value = sum(value)) %>%
+    ungroup() %>%
+    # compute shares
+    mutate(share_CO2 = value / global_value) %>%
+    select(scenario, region, year, share_CO2)
 
   co2_price_share_bysec <<- co2_clean %>%
     filter(year == gcamreport::last_historical_year) %>%
-    rbind(co2_ets_bysec %>%
-      filter(year == gcamreport::last_historical_year)) %>%
     # select only reported sectors and do a right join, so that all sectors are present,
     # even if the value is NA
     right_join(expand.grid(
@@ -1444,31 +1383,25 @@ get_co2_price_share <- function() {
         "Emissions|CO2|Energy|Demand|Industry",
         "Emissions|CO2|Energy|Demand|Transportation",
         "Emissions|CO2|Energy|Demand|Residential and Commercial",
-        "Emissions|CO2|Energy|Supply",
-        "Emissions|CO2_ETS|Energy and Industrial Processes",
-        "Emissions|CO2_ETS|Energy|Demand|Industry",
-        "Emissions|CO2_ETS|Energy|Demand|Transportation",
-        "Emissions|CO2_ETS|Energy|Demand|Residential and Commercial",
-        "Emissions|CO2_ETS|Energy|Supply"
+        "Emissions|CO2|Energy|Supply"
       ),
       region = unique(co2_clean$region),
       scenario = unique(co2_clean$scenario),
-      year = 2015
+      year = gcamreport::last_historical_year
     )) %>%
     mutate(value = if_else(is.na(value), 0, value)) %>%
     # compute the share
-    mutate(
-      sector = sub(".*\\|([^|]+)$", "\\1", var),
-      ghg = sub("Emissions\\|([^|]+)\\|.*$", "\\1", var)
-    ) %>%
+    mutate(sector = sub(".*\\|([^|]+)$", "\\1", var)) %>%
     select(-var) %>%
     distinct(.) %>%
-    pivot_wider(names_from = "ghg", values_from = "value") %>%
-    mutate(CO2_ETS, if_else(is.na(CO2_ETS), 0, CO2_ETS)) %>%
-    mutate(share_CO2_ETS = CO2_ETS / CO2) %>%
-    # if the share is > 1, set it to 1 (seems that "biomass" is not accounted in the CO2 emissions query)
-    mutate(share_CO2_ETS = if_else(share_CO2_ETS > 1, 1, share_CO2_ETS)) %>%
-    select(scenario, region, year, sector, share_CO2_ETS)
+    # compute the World CO2 emissions
+    group_by(scenario, sector, year) %>%
+    mutate(global_value = sum(value)) %>%
+    ungroup() %>%
+    # compute shares
+    mutate(share_CO2 = value / global_value) %>%
+    select(scenario, region, year, sector, share_CO2)
+
 }
 
 
@@ -1486,59 +1419,41 @@ get_co2_price_share <- function() {
 #' @export
 get_co2_price_fragmented_tmp <- function() {
   market <- Units <- regions <- year <- value <- market_adj <- scenario <-
-    region <- CO2 <- CO2_ETS <- share_CO2_ETS <- sector <- var <- NULL
+    region <- CO2 <- sector <- var <- NULL
 
   co2_price_fragmented_pre <<-
     getQuery(prj, "CO2 prices") %>%
     filter(!grepl("LUC", market)) %>%
-    filter(market != "globalCO2") %>%
+    filter(!market %in% c("globalCO2","GlobalCO2","worldCO2","WorldCO2")) %>%
     filter(Units == "1990$/tC")
 
   if (nrow(co2_price_fragmented_pre) > 1) {
     CO2_market_filteredReg <- filter_data_regions(gcamreport::CO2_market)
 
-    co2_price_fragmented <-
+    co2_price_fragmented <<-
       co2_price_fragmented_pre %>%
       left_join(CO2_market_filteredReg, by = c("market"), multiple = "all") %>%
       filter(complete.cases(.)) %>%
       mutate(value = value / gcamreport::convert$conv_C_CO2 * gcamreport::convert$conv_90USD_10USD) %>%
-      mutate(
-        market_adj = "CO2",
-        market_adj = if_else(grepl("ETS", market), "CO2_ETS", market_adj),
-        market_adj = if_else(grepl("CO2BLD", market), "CO2BLD", market_adj),
-        market_adj = if_else(grepl("CO2IND", market), "CO2_ETS", market_adj),
-        market_adj = if_else(grepl("CO2TRAN", market), "CO2TRAN", market_adj)
-      ) %>%
-      # consider the value sum of by market (sum CO2_ETS coming from ETS and CO2IND)
+      mutate(market_adj = "CO2") %>%
+      # consider the value sum of by market
       group_by(Units, scenario, year, market, region) %>%
       mutate(value = sum(value)) %>%
       ungroup() %>%
-      # apply the share between CO2 and CO2_ETS
       select(-market) %>%
-      pivot_wider(names_from = "market_adj", values_from = "value")
-
-    # if CO2_ETS or other CO2 markets are present, check if they have NAs and set them to 0
-    if (length(colnames(co2_price_fragmented)) >= 6) {
-      co2_price_fragmented <- co2_price_fragmented %>%
-        mutate(across(6:length(colnames(.)), ~ ifelse(is.na(.), 0, .)))
-    } else {
-      # otherwise, create a column called CO2_ETS with 0s for all regions
-      co2_price_fragmented <- co2_price_fragmented %>%
-        mutate(CO2_ETS = 0)
-    }
-
-    co2_price_fragmented <<- co2_price_fragmented %>%
+      pivot_wider(names_from = "market_adj", values_from = "value") %>%
       left_join(
         co2_price_share_bysec %>%
           select(-year),
         by = c("scenario", "region")
       ) %>%
-      mutate(value = CO2 + CO2_ETS * share_CO2_ETS) %>%
-      select(Units, scenario, year, region, value, CO2, CO2_ETS, share_CO2_ETS, sector) %>%
+      mutate(value = CO2) %>%
+      select(Units, scenario, year, region, value, CO2, sector) %>%
       left_join(filter_variables(gcamreport::co2_market_frag_map, "co2_price_fragmented"), by = "sector", multiple = "all") %>%
       filter(complete.cases(.)) %>%
       complete(nesting(scenario, var, year, market, Units), region = regions.global, fill = list(value = 0)) %>%
       select(all_of(gcamreport::long_columns))
+
   } else {
     co2_price_fragmented <<- NULL
   }
@@ -1570,8 +1485,24 @@ get_co2_price <- function() {
       mutate(value = 0) %>%
       select(all_of(gcamreport::long_columns))
   } else {
-    co2_price_clean <<- co2_price_clean_pre %>%
-      complete(nesting(region, var, year), scenario = unique(fe_sector_clean$scenario), fill = list(value = 0)) %>%
+    co2_price_regional <- co2_price_clean_pre %>%
+      complete(nesting(region, var, year), scenario = unique(fe_sector_clean$scenario), fill = list(value = 0))
+
+    # compute Global value using the emission weights
+    co2_price_world <- co2_price_regional %>%
+      dplyr::left_join(co2_price_share_bysec %>%
+                         dplyr::left_join(filter_variables(gcamreport::co2_market_frag_map, "co2_price_fragmented"),
+                                          by = "sector", multiple = "all") %>%
+                         dplyr::select(-sector,-market,-year),
+                       by = c('region','scenario','var')) %>%
+      dplyr::mutate(weighted_value = value * share_CO2) %>%
+      dplyr::group_by(scenario, var, year) %>%
+      dplyr::summarise(value = sum(weighted_value)) %>%
+      dplyr::ungroup() %>%
+      dplyr::mutate(region = "Global")
+
+    co2_price_clean <<- co2_price_regional %>%
+      rbind(co2_price_world) %>%
       select(all_of(gcamreport::long_columns))
   }
 }

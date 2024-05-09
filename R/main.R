@@ -183,12 +183,12 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   if (is.list(queries_general_file)) {
     queries_short <- queries_general_file
   } else {
-    queries_short <- parse_batch_query(queries_general_file)
+    queries_short <- rgcam::parse_batch_query(queries_general_file)
   }
   if (is.list(queries_nonCO2_file)) {
     queries_large <- queries_nonCO2_file
   } else {
-    queries_large <- parse_batch_query(queries_nonCO2_file)
+    queries_large <- rgcam::parse_batch_query(queries_nonCO2_file)
   }
 
   # subset the queries necessary for the selected variables

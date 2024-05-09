@@ -7,7 +7,7 @@ rawDataFolder <- here::here()
 
 # emissions considered nonCO2
 emissions_list <- c(
-  "BC", "BC_AWB", "C2F6", "CF4", "CH4", "CH4_AGR", "CH4_AWB", "CO", "CO2", "CO_AWB", "CO2_ETS",
+  "BC", "BC_AWB", "C2F6", "CF4", "CH4", "CH4_AGR", "CH4_AWB", "CO", "CO2", "CO_AWB",
   "H2", "H2_AWB", "HFC125", "HFC134a", "HFC143a", "HFC152a", "HFC227ea", "HFC23", "HFC236fa",
   "HFC245fa", "HFC32", "HFC365mfc", "HFC43", "N2O", "N2O_AGR", "N2O_AWB", "NH3", "NH3_AGR",
   "NH3_AWB", "NMVOC", "NMVOC_AGR", "NMVOC_AWB", "NOx", "NOx_AGR", "NOx_AWB", "OC", "OC_AWB",
@@ -63,12 +63,6 @@ co2_sector_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "CO
   stringsAsFactors = FALSE
 ) %>% gather_map()
 use_data(co2_sector_map, overwrite = T)
-
-co2_ets_sector_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "CO2_ETS_sector_map.csv"),
-  skip = 1, na = "",
-  stringsAsFactors = FALSE
-) %>% gather_map()
-use_data(co2_ets_sector_map, overwrite = T)
 
 co2_tech_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "CO2_tech_map.csv"),
   skip = 1, na = "",
@@ -305,11 +299,11 @@ use_data(long_columns, overwrite = T)
 
 # gcamreport7 queries complete
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml")
-queries_general <- parse_batch_query(queryFile)
+queries_general <- rgcam::parse_batch_query(queryFile)
 use_data(queries_general, overwrite = T)
 
 # gcamreport7 queries nonCO2
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/queries_gcamreport_gcam7.0_nonCO2.xml")
-queries_nonCO2 <- parse_batch_query(queryFile)
+queries_nonCO2 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_nonCO2, overwrite = T)
 
