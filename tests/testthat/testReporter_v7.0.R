@@ -188,7 +188,8 @@ test_that("Test7_v7. specify variables, regions, continents", {
     final_year = 2050,
     desired_regions = "USA",
     desired_variables = "Price|Carbon",
-    launch_ui = FALSE
+    launch_ui = FALSE,
+    save_output = FALSE
   )
   testthat::expect_equal(unique(report$Region), c("USA", "World"))
 
