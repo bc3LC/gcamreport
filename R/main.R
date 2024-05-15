@@ -321,7 +321,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 
   # save the project
   saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = "_")))
-
+  rlang::inform(paste0("rgcam project saved in ",file.path(db_path, paste(db_name, prj_name, sep = "_"))))
 
   scenarios.global <<- listScenarios(prj)
 
@@ -668,9 +668,11 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   if (save_output == TRUE || save_output %in% c("CSV", "XLSX")) {
     if (save_output == TRUE || "CSV" %in% save_output) {
       write.csv(report, file.path(paste0(output_file, ".csv")), row.names = FALSE)
+      rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".csv"))))
     }
     if (save_output == TRUE || "XLSX" %in% save_output) {
       write_xlsx(report, file.path(paste0(output_file, ".xlsx")))
+      rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".xlsx"))))
     }
   }
 
