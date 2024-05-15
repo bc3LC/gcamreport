@@ -1726,12 +1726,12 @@ get_prices_subsector <- function() {
     select(-Units) %>%
     left_join(filter_variables(gcamreport::energy_prices_map, "prices_subsector") %>%
       filter(is.na(subsector)) %>%
-      unique(), by = c("sector"), multiple = "all") %>%
+      unique(), by = c("sector"), relationship = "many-to-many") %>%
     bind_rows(getQuery(prj, "costs by subsector") %>%
       left_join(
         filter_variables(gcamreport::energy_prices_map, "prices_subsector") %>%
           unique(),
-        by = c("sector", "subsector")
+        by = c("sector", "subsector"), relationship = "many-to-many"
       )) %>%
     filter(!is.na(var)) %>%
     # read in carbon content in kg C per GJ -> convert to tC per GJ
@@ -1766,8 +1766,9 @@ get_energy_price_fragmented <- function() {
     filter(!is.na(var)) %>%
     left_join(getQuery(prj, "CO2 prices") %>%
       filter(!grepl("LUC", market)) %>%
-      left_join(CO2_market_filteredReg, by = c("market"), multiple = "all") %>%
-      select(scenario, region, year, price_C = value), by = c("scenario", "region", "year")) %>%
+      left_join(CO2_market_filteredReg, by = c("market"), relationship = "many-to-many") %>%
+      select(scenario, region, year, price_C = value), by = c("scenario", "region", "year"),
+      relationship = "many-to-many") %>%
     replace_na(list(price_C = 0)) %>%
     # remove carbon price (subsidy) 1990$/tC from biomass 1975$/GJ
     mutate(
