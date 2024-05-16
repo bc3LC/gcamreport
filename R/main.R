@@ -95,16 +95,7 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
   # load the project
   prj <- loadProject(project_path)
 
-  # filter the regions if not all of them are considered (desired_regions != 'All')
-  if (!(identical(desired_regions, "All"))) {
-    # for all scenarios in prj
-    for (s in names(prj)) {
-      # for all variables in prj
-      for (v in names(prj[[s]])) {
-        prj[[s]][[v]] <- filter_loading_regions(prj[[s]][[v]], desired_regions, v)
-      }
-    }
-  }
+  # check the scnarios are present in the prj
   if (is.null(scenarios)) {
     scenarios.global <<- listScenarios(prj)
   } else {
@@ -119,6 +110,17 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
     # drop unnecessary scenarios
     for (i in listScenarios(prj)[!listScenarios(prj) %in% scenarios]) {
       prj <- dropScenarios(prj, i)
+    }
+  }
+
+  # filter the regions if not all of them are considered (desired_regions != 'All')
+  if (!(identical(desired_regions, "All"))) {
+    # for all scenarios in prj
+    for (s in names(prj)) {
+      # for all variables in prj
+      for (v in names(prj[[s]])) {
+        prj[[s]][[v]] <- filter_loading_regions(prj[[s]][[v]], desired_regions, v)
+      }
     }
   }
 

@@ -1296,7 +1296,7 @@ get_ag_prices <- function() {
     ) %>%
     filter(!is.na(var)) %>%
     group_by(scenario, region, sector) %>%
-    mutate(value = value * unit_conv / value[year == 2005]) %>%
+    mutate(value = value * unit_conv / value[year == 2015]) %>%
     ungroup() %>%
     # do the mean by variable
     group_by(scenario, region, var, year, ) %>%
@@ -1822,17 +1822,10 @@ get_energy_price <- function() {
       grepl("Primary Energy\\|Biomass", var) |
       grepl("Primary Energy\\|Gas", var) |
       grepl("Primary Energy\\|Oil", var) |
-      grepl("Secondary Energy\\|Electricity", var) |
-      grepl("Secondary Energy\\|Gas", var) |
-      grepl("Secondary Energy\\|Liquids", var) |
-      grepl("Secondary Energy\\|Liquids\\|Biomass", var) |
-      grepl("Secondary Energy\\|Liquids\\|Oil", var) |
-      grepl("Secondary Energy\\|Solids", var) |
-      grepl("Secondary Energy\\|Solids\\|Biomass", var) |
-      grepl("Secondary Energy\\|Solids\\|Coal", var)) %>%
+      grepl("Secondary Energy\\|Electricity", var)) %>%
     mutate(var = paste(var, "Index", sep = "|")) %>%
     group_by(scenario, region, var) %>%
-    mutate(value = value / value[year == 2020]) %>%
+    mutate(value = value / value[year == 2015]) %>%
     ungroup() %>%
     select(all_of(gcamreport::long_columns)) %>%
     bind_rows(energy_price)
@@ -2448,7 +2441,7 @@ do_bind_results <- function() {
   GCAM_DATA_wGLOBAL <- GCAM_DATA_wGLOBAL %>% filter(year <= final_year.global)
 
 
-  report <<-
+  report_pre <-
     gcamreport::template %>%
     inner_join(
       GCAM_DATA_wGLOBAL %>%
@@ -2460,7 +2453,15 @@ do_bind_results <- function() {
     #            by = c("scenario" = "GCAM_scenario")) %>%
     rename(Region = region) %>%
     #  rename(Model = ?..Model) %>%
-    rename(Scenario = scenario) %>%
+    rename(Scenario = scenario)
+
+  # Add year columns if not present
+  missing_cols <- setdiff(reporting_columns.global, colnames(report_pre))
+  for (col in missing_cols) {
+    report_pre <- report_pre %>% mutate(!!col := NA)
+  }
+
+  report <<- report_pre %>%
     select(all_of(reporting_columns.global)) %>%
     filter(!is.na(Region)) # Drop variables we don't report
 

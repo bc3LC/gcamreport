@@ -19,10 +19,4 @@ regional biomass,,Price|Primary Energy,Price|Primary Energy|Biomass,,,,,,,1
 regional coal,,Price|Primary Energy,Price|Primary Energy|Coal,,,,,,,1
 regional natural gas,,Price|Primary Energy,Price|Primary Energy|Gas,,,,,,,1
 regional oil,,Price|Primary Energy,Price|Primary Energy|Oil,,,,,,,1
-electricity,,Price|Secondary Energy,Price|Secondary Energy|Electricity,,,,,,,1
-gas processing,natural gas,Price|Secondary Energy,Price|Secondary Energy|Gases,Price|Secondary Energy|Gases|Gas,,,,,,1
-H2 central production,,Price|Secondary Energy,Price|Secondary Energy|Hydrogen,,,,,,,1
-refining,biomass liquids,Price|Secondary Energy,Price|Secondary Energy|Liquids,Price|Secondary Energy|Liquids|Biomass,,,,,,1
-refining,oil refining,Price|Secondary Energy,Price|Secondary Energy|Liquids,Price|Secondary Energy|Liquids|Oil,,,,,,1
-delivered biomass,,Price|Secondary Energy,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Biomass,,,,,,1
-delivered coal,,Price|Secondary Energy,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Coal,,,,,,1
+elect_td_ind,,Price|Secondary Energy,Price|Secondary Energy|Electricity,,,,,,,1
