@@ -95,16 +95,7 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
   # load the project
   prj <- loadProject(project_path)
 
-  # filter the regions if not all of them are considered (desired_regions != 'All')
-  if (!(identical(desired_regions, "All"))) {
-    # for all scenarios in prj
-    for (s in names(prj)) {
-      # for all variables in prj
-      for (v in names(prj[[s]])) {
-        prj[[s]][[v]] <- filter_loading_regions(prj[[s]][[v]], desired_regions, v)
-      }
-    }
-  }
+  # check the scnarios are present in the prj
   if (is.null(scenarios)) {
     scenarios.global <<- listScenarios(prj)
   } else {
@@ -119,6 +110,17 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
     # drop unnecessary scenarios
     for (i in listScenarios(prj)[!listScenarios(prj) %in% scenarios]) {
       prj <- dropScenarios(prj, i)
+    }
+  }
+
+  # filter the regions if not all of them are considered (desired_regions != 'All')
+  if (!(identical(desired_regions, "All"))) {
+    # for all scenarios in prj
+    for (s in names(prj)) {
+      # for all variables in prj
+      for (v in names(prj[[s]])) {
+        prj[[s]][[v]] <- filter_loading_regions(prj[[s]][[v]], desired_regions, v)
+      }
     }
   }
 
@@ -183,12 +185,12 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   if (is.list(queries_general_file)) {
     queries_short <- queries_general_file
   } else {
-    queries_short <- parse_batch_query(queries_general_file)
+    queries_short <- rgcam::parse_batch_query(queries_general_file)
   }
   if (is.list(queries_nonCO2_file)) {
     queries_large <- queries_nonCO2_file
   } else {
-    queries_large <- parse_batch_query(queries_nonCO2_file)
+    queries_large <- rgcam::parse_batch_query(queries_nonCO2_file)
   }
 
   # subset the queries necessary for the selected variables
@@ -321,7 +323,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 
   # save the project
   saveProject(prj, file = file.path(db_path, paste(db_name, prj_name, sep = "_")))
-
+  rlang::inform(paste0("rgcam project saved in ",file.path(db_path, paste(db_name, prj_name, sep = "_"))))
 
   scenarios.global <<- listScenarios(prj)
 
@@ -668,9 +670,11 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   if (save_output == TRUE || save_output %in% c("CSV", "XLSX")) {
     if (save_output == TRUE || "CSV" %in% save_output) {
       write.csv(report, file.path(paste0(output_file, ".csv")), row.names = FALSE)
+      rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".csv"))))
     }
     if (save_output == TRUE || "XLSX" %in% save_output) {
       write_xlsx(report, file.path(paste0(output_file, ".xlsx")))
+      rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".xlsx"))))
     }
   }
 
