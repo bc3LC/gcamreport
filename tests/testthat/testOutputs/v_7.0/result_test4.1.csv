@@ -12174,6 +12174,72 @@
 "GCAM 7.0","Reference","Taiwan","Price|Agriculture|Livestock|Other|Index","Index (2005 = 1)",1.19723361827509,1.15739306366795,1,1.00044810227129,1.00174250442384,1.00261167727487,1.00393519047985,1.00531900515058,1.00693154951894,1.00828209441546,0,0,0,0,0,0,0,0,0,0
 "GCAM 7.0","Reference","USA","Price|Agriculture|Livestock|Other|Index","Index (2005 = 1)",1.94515774991885,1.11086240744462,1,1.00285047379079,1.0074971788966,1.01131842141874,1.01534061925152,1.01864246958619,1.02154859253992,1.02413009537648,0,0,0,0,0,0,0,0,0,0
 "GCAM 7.0","Reference","World","Price|Agriculture|Livestock|Other|Index","Index (2005 = 1)",1.40358642674426,1.12379377449032,1,1.0049834719853,1.01218760891319,1.01809820639913,1.02421634490022,1.0300736259525,1.03585055362981,1.04088173692646,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Eastern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Northern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Southern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Western","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Argentina","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Australia_NZ","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Brazil","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Canada","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Central America and Caribbean","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Central Asia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","China","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Colombia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","EU-12","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","EU-15","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Europe_Eastern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Europe_Non_EU","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","European Free Trade Association","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","India","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Indonesia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Japan","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Mexico","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Middle East","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Pakistan","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Russia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Africa","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South America_Northern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South America_Southern","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Asia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Korea","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Southeast Asia","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Taiwan","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","USA","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","World","Price|Carbon","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Eastern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Northern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Southern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Africa_Western","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Argentina","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Australia_NZ","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Brazil","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Canada","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Central America and Caribbean","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Central Asia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","China","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Colombia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","EU-12","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","EU-15","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Europe_Eastern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Europe_Non_EU","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","European Free Trade Association","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","India","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Indonesia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Japan","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Mexico","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Middle East","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Pakistan","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Russia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Africa","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South America_Northern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South America_Southern","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Asia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","South Korea","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Southeast Asia","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","Taiwan","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","USA","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"GCAM 7.0","Reference","World","Price|Carbon|Energy","US$2010/t",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 "GCAM 7.0","Reference","Africa_Eastern","Price|Carbon|Energy|Demand|Industry","US$2010/t CO2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 "GCAM 7.0","Reference","Africa_Northern","Price|Carbon|Energy|Demand|Industry","US$2010/t CO2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 "GCAM 7.0","Reference","Africa_Southern","Price|Carbon|Energy|Demand|Industry","US$2010/t CO2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
