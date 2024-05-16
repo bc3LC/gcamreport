@@ -112,9 +112,6 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map.html</loc>
   </url>
   <url>
@@ -223,9 +220,6 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_ets.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc>
   </url>
   <url>
@@ -331,6 +325,15 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_map.html</loc>
   </url>
   <url>
@@ -398,6 +401,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/investment.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/is_leaf.html</loc>
