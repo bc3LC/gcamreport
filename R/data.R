@@ -36,17 +36,29 @@
 #' }
 "emissions_list"
 
-#' GWP_adjuster
+#' ghg_GWP_AR4
 #'
 #' @source local
 #' @format .csv
-#' @description ghg adjuster
+#' @description ghg adjuster - uses 100-yr GWPs from AR4 in GCAM unit
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::GWP_adjuster
+#' gcamreport::ghg_GWP_AR4
 #' }
-"GWP_adjuster"
+"ghg_GWP_AR4"
+
+#' ghg_GWP_AR6
+#'
+#' @source local
+#' @format .csv
+#' @description ghg adjuster - uses 100-yr GWPs from AR6 in GCAM unit
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ghg_GWP_AR6
+#' }
+"ghg_GWP_AR6"
 
 #' global_vet_values
 #'

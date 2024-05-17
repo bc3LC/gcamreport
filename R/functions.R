@@ -179,10 +179,12 @@ conv_ghg_co2e <- function(data) {
   # GHG emission conversion
   res <- suppressWarnings(
     data %>%
+      # aggregate by ghg (exclude sector)
       separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
       filter(variable %in% gcamreport::GHG_gases) %>%
-      left_join(gcamreport::GWP_adjuster, by = c("variable" = "GHG_gases")) %>%
+      left_join(ghg_GWP, by = c("variable" = "GHG_gases", "sector")) %>%
       mutate(value = value * GWP, Units = "CO2e") %>%
+      filter(!is.na(value)) %>% # remove NAs due to unexisting subsectors
       select(-GWP)
   )
 

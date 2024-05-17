@@ -492,6 +492,7 @@ available_variables <- function(print = TRUE) {
 #' database or the project file, and using a default name containing the project name with 'standardized' tag.
 #' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
 #' @param launch_ui if TRUE, launch User Interface, Do not launch it otherwise.
+#' @param ghg_GWP GWP conversion. Options: gcamreport::ghg_GWP_AR4 (default) and gcamreport::ghg_GWP_AR6.
 #' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
 #' gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.
 #' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
@@ -507,7 +508,7 @@ available_variables <- function(print = TRUE) {
 #' @export
 generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios = NULL, final_year = 2100,
                             desired_variables = "All", desired_regions = "All", desired_continents = "All",
-                            save_output = TRUE, output_file = NULL, launch_ui = TRUE,
+                            save_output = TRUE, output_file = NULL, launch_ui = TRUE, ghg_GWP = gcamreport::ghg_GWP_AR4,
                             queries_general_file = gcamreport::queries_general,
                             queries_nonCO2_file = gcamreport::queries_nonCO2) {
   continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
@@ -647,6 +648,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   loaded_internal_variables.global <<- c()
   desired_regions <<- desired_regions
   desired_variables <<- desired_variables
+  ghg_GWP <<- ghg_GWP
   for (i in 1:nrow(variables.global)) {
     if (variables.global$required[i]) {
       load_variable(variables.global[i, ])

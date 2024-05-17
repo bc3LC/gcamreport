@@ -34,11 +34,17 @@ var_fun_map$queries <- as.list(strsplit(var_fun_map$queries, ","))
 use_data(var_fun_map, overwrite = T)
 
 # ghg adjuster
-GWP_adjuster <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP.csv"),
+ghg_GWP_AR4 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR4.csv"),
   skip = 1, na = "",
   stringsAsFactors = FALSE
 )
-use_data(GWP_adjuster, overwrite = T)
+use_data(ghg_GWP_AR4, overwrite = T)
+
+ghg_GWP_AR6 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR6.csv"),
+  skip = 1, na = "",
+  stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR6, overwrite = T)
 
 # vetting test
 global_vet_values <- read.csv(file.path(rawDataFolder, "inst/extdata/vetting", "global_vet_values.csv"),
