@@ -613,3 +613,44 @@ test_that("Test13_v7. specify queries", {
 
 })
 
+
+test_that("Test14_v7. ghg GWP", {
+
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    ghg_GWP = gcamreport::ghg_GWP_AR4
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.1.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  rm(list = ls())
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    ghg_GWP = gcamreport::ghg_GWP_AR5
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.2.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  rm(list = ls())
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    ghg_GWP = gcamreport::ghg_GWP_AR6
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.3.RData")))
+  testthat::expect_equal(report, testExpect)
+
+})
+
+

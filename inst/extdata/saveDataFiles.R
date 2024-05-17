@@ -40,6 +40,12 @@ ghg_GWP_AR4 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_G
 )
 use_data(ghg_GWP_AR4, overwrite = T)
 
+ghg_GWP_AR5 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR5.csv"),
+  skip = 1, na = "",
+  stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR5, overwrite = T)
+
 ghg_GWP_AR6 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR6.csv"),
   skip = 1, na = "",
   stringsAsFactors = FALSE

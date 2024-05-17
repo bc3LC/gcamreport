@@ -16,7 +16,7 @@ generate_report(
   save_output = TRUE,
   output_file = NULL,
   launch_ui = TRUE,
-  ghg_GWP = gcamreport::ghg_GWP_AR4,
+  ghg_GWP = gcamreport::ghg_GWP_AR5,
   queries_general_file = gcamreport::queries_general,
   queries_nonCO2_file = gcamreport::queries_nonCO2
 )
@@ -58,7 +58,7 @@ In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/o
 
 \item{launch_ui}{if TRUE, launch User Interface, Do not launch it otherwise.}
 
-\item{ghg_GWP}{GWP conversion. Options: gcamreport::ghg_GWP_AR4 (default) and gcamreport::ghg_GWP_AR6.}
+\item{ghg_GWP}{GWP conversion. Options: gcamreport::ghg_GWP_AR4, gcamreport::ghg_GWP_AR5 (default), and gcamreport::ghg_GWP_AR6.}
 
 \item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
 gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}

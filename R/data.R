@@ -48,6 +48,18 @@
 #' }
 "ghg_GWP_AR4"
 
+#' ghg_GWP_AR5
+#'
+#' @source local
+#' @format .csv
+#' @description ghg adjuster - uses 100-yr GWPs from AR5 in GCAM unit
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ghg_GWP_AR5
+#' }
+"ghg_GWP_AR5"
+
 #' ghg_GWP_AR6
 #'
 #' @source local
