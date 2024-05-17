@@ -64,9 +64,6 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases.html</loc>
   </url>
   <url>
-    <loc>https://bc3lc.github.io/gcamreport/reference/GWP_adjuster.html</loc>
-  </url>
-  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map.html</loc>
   </url>
   <url>
@@ -389,6 +386,15 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/global_vet_values.html</loc>

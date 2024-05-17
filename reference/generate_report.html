@@ -117,6 +117,7 @@ The resulting RData output can be used to manually call `launch_gcamreport_ui`.<
 <span>  save_output <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  output_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  launch_ui <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  ghg_GWP <span class="op">=</span> <span class="fu">gcamreport</span><span class="fu">::</span><span class="va"><a href="ghg_GWP_AR5.html">ghg_GWP_AR5</a></span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="fu">gcamreport</span><span class="fu">::</span><span class="va"><a href="queries_general.html">queries_general</a></span>,</span>
 <span>  queries_nonCO2_file <span class="op">=</span> <span class="fu">gcamreport</span><span class="fu">::</span><span class="va"><a href="queries_nonCO2.html">queries_nonCO2</a></span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -180,6 +181,10 @@ In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/o
 
 <dt>launch_ui</dt>
 <dd><p>if TRUE, launch User Interface, Do not launch it otherwise.</p></dd>
+
+
+<dt>ghg_GWP</dt>
+<dd><p>GWP conversion. Options: gcamreport::ghg_GWP_AR4, gcamreport::ghg_GWP_AR5 (default), and gcamreport::ghg_GWP_AR6.</p></dd>
 
 
 <dt>queries_general_file</dt>
