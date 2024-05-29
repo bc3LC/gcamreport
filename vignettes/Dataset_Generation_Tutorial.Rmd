@@ -55,9 +55,8 @@ Notice that the extension is included in the project name. Accepted extensions a
 4) Generate the standardized standardized dataset until the desired year. In this example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, 
-                prj_name = prjname, scenarios = scen, final_year = 2050, 
-                launch_ui = FALSE)
+generate_report(db_path = dbpath, db_name = dbname, prj_name = prjname, 
+                scenarios = scen, final_year = 2050, launch_ui = FALSE)
 ```
 
 **Note**: The project generation might take some time, depending on the number of scenarios, regions, and variables you want to standardize.

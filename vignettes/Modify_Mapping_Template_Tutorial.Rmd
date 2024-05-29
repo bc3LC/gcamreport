@@ -90,7 +90,7 @@ Another way to modify the query file is to update the default query file directl
 **Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
 
 ``` bash
-# to clone the taged version "v6.0.1":
+# to clone the tagged version "v6.0.1":
 git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
 
 # to clone the branch version "gcam-v6.0":
@@ -99,7 +99,7 @@ git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
 
 or when installing through Rstudio, for instance:
 ``` r
-# to install the taged version "v6.0.1"
+# to install the tagged version "v6.0.1"
 devtools::install_github('bc3LC/gcamreport@v6.0.1')
 
 # to install the branch version "gcam-v6.0"
@@ -148,7 +148,7 @@ In this example, we assume that the GCAM version has a more detailed energy tran
 **Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
 
 ``` bash
-# to clone the taged version "v6.0.1":
+# to clone the tagged version "v6.0.1":
 git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
 
 # to clone the branch version "gcam-v6.0":
@@ -157,7 +157,7 @@ git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
 
 or when installing through Rstudio, for instance:
 ``` r
-# to install the taged version "v6.0.1"
+# to install the tagged version "v6.0.1"
 devtools::install_github('bc3LC/gcamreport@v6.0.1')
 
 # to install the branch version "gcam-v6.0"

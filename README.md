@@ -88,7 +88,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 **Note**:boom:: If you want to install specific `gcamreport` versions, indicate the tag or branch name when running the installation command. For instance:
 
 ``` r
-# to install the taged version "v6.0.1"
+# to install the tagged version "v6.0.1"
 devtools::install_github('bc3LC/gcamreport@v6.0.1')
 
 # to install the branch version "gcam-v6.0"
@@ -125,7 +125,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 **Note**:boom:: If you want to install specific `gcamreport` versions, indicate the tag or branch name when cloning the repository. For instance:
 
 ``` bash
-# to clone the taged version "v6.0.1":
+# to clone the tagged version "v6.0.1":
 git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
 
 # to clone the branch version "gcam-v6.0":
@@ -191,7 +191,7 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 **Note**:boom:: If you want to install previous `gcamreport` versions, indicate the tag or branch name when cloning the repository (step 2). For instance:
 
 ``` bash
-# to clone the taged version "v6.0.1":
+# to clone the tagged version "v6.0.1":
 git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
 
 # to clone the branch version "gcam-v6.0":
