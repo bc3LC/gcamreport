@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          install.packages(c("remotes","rcmdcheck"), repos = "https://cloud.r-project.org")
+          install.packages(c("remotes","rcmdcheck","htmlwidgets"), repos = "https://cloud.r-project.org")
           remotes::install_deps(dependencies = TRUE)
           remotes::install_github("JGCRI/rpackageutils")
           remotes::install_github("shinyTree/shinyTree")
