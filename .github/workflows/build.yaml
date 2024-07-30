@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - gcam-v7.0
-      - dev_co2price
+      - dev
 
 jobs:
   R-CMD:

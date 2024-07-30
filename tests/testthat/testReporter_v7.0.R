@@ -544,7 +544,7 @@ test_that("Test11_v7. scenarios", {
 
 test_that("Test12_v7. other functions", {
   # gather_map
-  co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings", "CO2_sector_map.csv"),
+  co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings/GCAM7.0", "CO2_sector_map.csv"),
                              skip = 1, na = "",
                              stringsAsFactors = FALSE
   ) %>% gather_map()
@@ -594,7 +594,7 @@ test_that("Test12_v7. other functions", {
 test_that("Test13_v7. specify queries", {
 
   # transform_to_xml ancillary function
-  testResult <- transform_to_xml(gcamreport::queries_nonCO2)
+  testResult <- transform_to_xml(gcamreport::queries_nonCO2_v7.0)
   testExpect <- xml2::read_xml(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.1.xml"))
   testthat::expect_equal(testResult, testExpect)
 
@@ -606,7 +606,7 @@ test_that("Test13_v7. specify queries", {
   generate_report(db_path = db_path, db_name = db_name, prj_name = prj_name,
                   scenarios = scenarios, final_year = 2050, desired_variables = c('Price|Carbon*'),
                   save_output = T, launch_ui = F,
-                  queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml"))
+                  queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/GCAM7.0/queries_gcamreport_general.xml"))
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/gcamv7.0_test_specify_queries_standardized.RData")))
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test13.2.RData")))
   testthat::expect_equal(testResult, testExpect)
@@ -622,7 +622,7 @@ test_that("Test14_v7. ghg GWP", {
     scenarios = "Reference",
     desired_variables = "Emissions*",
     launch_ui = FALSE,
-    ghg_GWP = gcamreport::ghg_GWP_AR4
+    GWP_version = 'AR4'
   )
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.1.RData")))
   testthat::expect_equal(report, testExpect)
@@ -634,7 +634,7 @@ test_that("Test14_v7. ghg GWP", {
     scenarios = "Reference",
     desired_variables = "Emissions*",
     launch_ui = FALSE,
-    ghg_GWP = gcamreport::ghg_GWP_AR5
+    GWP_version = 'AR5'
   )
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.2.RData")))
   testthat::expect_equal(report, testExpect)
@@ -646,7 +646,7 @@ test_that("Test14_v7. ghg GWP", {
     scenarios = "Reference",
     desired_variables = "Emissions*",
     launch_ui = FALSE,
-    ghg_GWP = gcamreport::ghg_GWP_AR6
+    GWP_version = 'AR6'
   )
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.3.RData")))
   testthat::expect_equal(report, testExpect)
