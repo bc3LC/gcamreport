@@ -4,7 +4,10 @@
 \alias{get_elec_cf_tmp}
 \title{get_elec_cf_tmp}
 \usage{
-get_elec_cf_tmp()
+get_elec_cf_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 elec_cf global variable

@@ -4,7 +4,10 @@
 \alias{get_ag_prices_wld_tmp}
 \title{get_ag_prices_wld_tmp}
 \usage{
-get_ag_prices_wld_tmp()
+get_ag_prices_wld_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 ag_prices_wld global variable

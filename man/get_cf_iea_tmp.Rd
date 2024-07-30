@@ -4,7 +4,10 @@
 \alias{get_cf_iea_tmp}
 \title{get_cf_iea_tmp}
 \usage{
-get_cf_iea_tmp()
+get_cf_iea_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 cf_iea global variable

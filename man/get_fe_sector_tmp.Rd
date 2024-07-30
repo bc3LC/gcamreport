@@ -4,7 +4,10 @@
 \alias{get_fe_sector_tmp}
 \title{get_fe_sector_tmp}
 \usage{
-get_fe_sector_tmp()
+get_fe_sector_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 fe_sector global variable

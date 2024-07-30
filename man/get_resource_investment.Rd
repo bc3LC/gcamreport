@@ -4,7 +4,10 @@
 \alias{get_resource_investment}
 \title{get_resource_investment}
 \usage{
-get_resource_investment()
+get_resource_investment(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 resource_investment_clean global variable

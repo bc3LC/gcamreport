@@ -4,7 +4,10 @@
 \alias{get_nonco2_emissions}
 \title{get_nonco2_emissions}
 \usage{
-get_nonco2_emissions()
+get_nonco2_emissions(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 nonco2_clean global variable

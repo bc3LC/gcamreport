@@ -11,7 +11,7 @@ An object of class \code{character} of length 20.
 GHG_gases
 }
 \description{
-ghg emission conversion
+ghg emission conversion.
 }
 \examples{
 \dontrun{

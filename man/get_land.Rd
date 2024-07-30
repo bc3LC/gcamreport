@@ -4,7 +4,10 @@
 \alias{get_land}
 \title{get_land}
 \usage{
-get_land()
+get_land(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 land_clean global variable

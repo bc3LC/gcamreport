@@ -1,0 +1,201 @@
+# CO2 emission by tech mapping,,,,,
+sector,subsector,technology,var1,var2,unit_conv
+agricultural energy use,mobile,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+agricultural energy use,stationary,biomass,,,3.666667
+agricultural energy use,stationary,coal,Emissions|CO2|Energy|Coal,,3.666667
+agricultural energy use,stationary,gas,Emissions|CO2|Energy|Gas,,3.666667
+agricultural energy use,stationary,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+airCO2,airCO2,airCO2,,,3.666667
+alumina,biomass,biomass,,,3.666667
+alumina,biomass,biomass CCS,,,3.666667
+alumina,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+alumina,coal,coal CCS,Emissions|CO2|Energy|Coal,,3.666667
+alumina,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+alumina,gas,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
+alumina,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+alumina,refined liquids,refined liquids CCS,Emissions|CO2|Energy|Oil,,3.666667
+backup_electricity,gas,gas (steam/CT),Emissions|CO2|Energy|Gas,,3.666667
+cement,cement,cement,,,3.666667
+cement,cement,cement CCS,,,3.666667
+chemical energy use,biomass,biomass,,,3.666667
+chemical energy use,biomass,biomass CCS,,,3.666667
+chemical energy use,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+chemical energy use,coal,coal CCS,Emissions|CO2|Energy|Coal,,3.666667
+chemical energy use,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+chemical energy use,gas,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
+chemical energy use,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+chemical energy use,refined liquids,refined liquids CCS,Emissions|CO2|Energy|Oil,,3.666667
+chemical feedstocks,coal,coal,,,3.666667
+chemical feedstocks,gas,gas,,,3.666667
+coal CCS retrofit,coal CCS retrofit,add CCS retrofit,Emissions|CO2|Energy|Coal,,3.666667
+coal CCS retrofit,coal CCS retrofit,existing coal,Emissions|CO2|Energy|Coal,,3.666667
+comm cooking,gas,gas range,Emissions|CO2|Energy|Gas,,3.666667
+comm cooking,gas,gas range hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+comm cooling,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+comm cooling,gas,gas cooling,Emissions|CO2|Energy|Gas,,3.666667
+comm heating,biomass,biomass,,,3.666667
+comm heating,biomass,biomass,,,3.666667
+comm heating,biomass,wood furnace,,,3.666667
+comm heating,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+comm heating,coal,coal furnace,Emissions|CO2|Energy|Coal,,3.666667
+comm heating,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+comm heating,gas,gas furnace,Emissions|CO2|Energy|Gas,,3.666667
+comm heating,gas,gas furnace hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+comm heating,refined liquids,fuel furnace,Emissions|CO2|Energy|Oil,,3.666667
+comm heating,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+comm hot water,gas,gas water heater,Emissions|CO2|Energy|Gas,,3.666667
+comm hot water,gas,gas water heater hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+comm hot water,refined liquids,fuel water heater,Emissions|CO2|Energy|Oil,,3.666667
+comm other,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+comm other,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+comm others,biomass,biomass,,,3.666667
+comm others,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+comm others,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+comm others,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+construction energy use,mobile,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+construction energy use,stationary,biomass,,,3.666667
+construction energy use,stationary,coal,Emissions|CO2|Energy|Coal,,3.666667
+construction energy use,stationary,gas,Emissions|CO2|Energy|Gas,,3.666667
+construction energy use,stationary,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+construction feedstocks,coal,coal,,,3.666667
+construction feedstocks,gas,gas,,,3.666667
+csp_backup,gas,CSP gas hybrid mode,Emissions|CO2|Energy|Gas,,3.666667
+delivered gas h2,delivered gas h2,delivered gas h2,Emissions|CO2|Energy|Gas,,3.666667
+district heat,biomass,biomass,,,3.666667
+district heat,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+district heat,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+district heat,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+electricity,biomass,biomass (conv CCS),,,3.666667
+electricity,biomass,biomass (conv),,,3.666667
+electricity,biomass,biomass (IGCC CCS),,,3.666667
+electricity,biomass,biomass (IGCC),,,3.666667
+electricity,coal,coal (conv pul CCS),Emissions|CO2|Energy|Coal,,3.666667
+electricity,coal,coal (conv pul),Emissions|CO2|Energy|Coal,,3.666667
+electricity,coal,coal (conv pul)_retire_2020,Emissions|CO2|Energy|Coal,,3.666667
+electricity,coal,coal (IGCC CCS),Emissions|CO2|Energy|Coal,,3.666667
+electricity,coal,coal (IGCC),Emissions|CO2|Energy|Coal,,3.666667
+electricity,gas,gas (CC CCS),Emissions|CO2|Energy|Gas,,3.666667
+electricity,gas,gas (CC),Emissions|CO2|Energy|Gas,,3.666667
+electricity,gas,gas (steam/CT),Emissions|CO2|Energy|Gas,,3.666667
+electricity,refined liquids,refined liquids (CC CCS),Emissions|CO2|Energy|Oil,,3.666667
+electricity,refined liquids,refined liquids (CC),Emissions|CO2|Energy|Oil,,3.666667
+electricity,refined liquids,refined liquids (steam/CT),Emissions|CO2|Energy|Oil,,3.666667
+gas pipeline,gas pipeline,gas pipeline,Emissions|CO2|Energy|Gas,,3.666667
+gas processing,biomass gasification,biomass gasification,,,3.666667
+gas processing,coal gasification,coal gasification,Emissions|CO2|Energy|Coal,,3.666667
+H2 central production,biomass,biomass to H2,,,3.666667
+H2 central production,biomass,biomass to H2 CCS,,,3.666667
+H2 central production,coal,coal chemical,Emissions|CO2|Energy|Coal,,3.666667
+H2 central production,coal,coal chemical CCS,Emissions|CO2|Energy|Coal,,3.666667
+H2 central production,gas,natural gas steam reforming,Emissions|CO2|Energy|Gas,,3.666667
+H2 central production,gas,natural gas steam reforming CCS,Emissions|CO2|Energy|Gas,,3.666667
+H2 wholesale dispensing,forecourt production,natural gas steam reforming,Emissions|CO2|Energy|Gas,,3.666667
+iron and steel,BLASTFUR,Biomass-based,,,3.666667
+iron and steel,BLASTFUR,BLASTFUR,,,3.666667
+iron and steel,BLASTFUR,BLASTFUR CCS,,,3.666667
+iron and steel,BLASTFUR,BLASTFUR with hydrogen,,,3.666667
+iron and steel,EAF with DRI,EAF with DRI,,,3.666667
+iron and steel,EAF with DRI,EAF with DRI CCS,,,3.666667
+iron and steel,EAF with scrap,EAF with scrap,,,3.666667
+mining energy use,mobile,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+mining energy use,stationary,biomass,,,3.666667
+mining energy use,stationary,coal,Emissions|CO2|Energy|Coal,,3.666667
+mining energy use,stationary,gas,Emissions|CO2|Energy|Gas,,3.666667
+mining energy use,stationary,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+N fertilizer,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+N fertilizer,coal,coal CCS,Emissions|CO2|Energy|Coal,,3.666667
+N fertilizer,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+N fertilizer,gas,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
+N fertilizer,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+other industrial energy use,biomass,biomass,,,3.666667
+other industrial energy use,biomass,biomass cogen,,,3.666667
+other industrial energy use,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+other industrial energy use,coal,coal cogen,Emissions|CO2|Energy|Coal,,3.666667
+other industrial energy use,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+other industrial energy use,gas,gas cogen,Emissions|CO2|Energy|Gas,,3.666667
+other industrial energy use,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+other industrial energy use,refined liquids,refined liquids cogen,Emissions|CO2|Energy|Oil,,3.666667
+other industrial feedstocks,coal,coal,,,3.666667
+other industrial feedstocks,gas,gas,,,3.666667
+process heat cement,biomass,biomass,,,3.666667
+process heat cement,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+process heat cement,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+process heat cement,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+process heat dac,gas CCS,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
+refining,biomass liquids,biodiesel,,,3.666667
+refining,biomass liquids,cellulosic ethanol,,,3.666667
+refining,biomass liquids,cellulosic ethanol CCS level 1,,,3.666667
+refining,biomass liquids,cellulosic ethanol CCS level 2,,,3.666667
+refining,biomass liquids,corn ethanol,,,3.666667
+refining,biomass liquids,FT biofuels,,,3.666667
+refining,biomass liquids,FT biofuels CCS level 1,,,3.666667
+refining,biomass liquids,FT biofuels CCS level 2,,,3.666667
+refining,coal to liquids,coal to liquids,Emissions|CO2|Energy|Coal,,3.666667
+refining,coal to liquids,coal to liquids CCS level 1,Emissions|CO2|Energy|Coal,,3.666667
+refining,coal to liquids,coal to liquids CCS level 2,Emissions|CO2|Energy|Coal,,3.666667
+refining,gas to liquids,gas to liquids,Emissions|CO2|Energy|Gas,,3.666667
+refining,oil refining,oil refining,Emissions|CO2|Energy|Oil,,3.666667
+regional biomass,regional biomass,regional biomass,,,3.666667
+regional biomassOil,regional biomassOil,OilCrop,,,3.666667
+regional biomassOil,regional biomassOil,PalmFruit,,,3.666667
+regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,,,3.666667
+regional sugar for ethanol,regional sugar for ethanol,regional sugar for ethanol,,,3.666667
+resid clothes dryers,gas,clothes dryer,Emissions|CO2|Energy|Gas,,3.666667
+resid cooking,gas,gas oven,Emissions|CO2|Energy|Gas,,3.666667
+resid cooking,gas,gas oven hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+resid cooking,refined liquids,lpg oven,Emissions|CO2|Energy|Oil,,3.666667
+resid cooking,refined liquids,lpg oven hi-eff,Emissions|CO2|Energy|Oil,,3.666667
+resid cooling,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid heating,biomass,biomass,,,3.666667
+resid heating,biomass,biomass,,,3.666667
+resid heating,biomass,wood furnace,,,3.666667
+resid heating,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+resid heating,coal,coal furnace,Emissions|CO2|Energy|Coal,,3.666667
+resid heating,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid heating,gas,gas furnace,Emissions|CO2|Energy|Gas,,3.666667
+resid heating,gas,gas furnace hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+resid heating,refined liquids,fuel furnace,Emissions|CO2|Energy|Oil,,3.666667
+resid heating,refined liquids,fuel furnace hi-eff,Emissions|CO2|Energy|Oil,,3.666667
+resid heating,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+resid hot water,gas,gas water heater,Emissions|CO2|Energy|Gas,,3.666667
+resid hot water,gas,gas water heater hi-eff,Emissions|CO2|Energy|Gas,,3.666667
+resid hot water,refined liquids,fuel water heater,Emissions|CO2|Energy|Oil,,3.666667
+resid hot water,refined liquids,fuel water heater hi-eff,Emissions|CO2|Energy|Oil,,3.666667
+resid other,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid other,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+resid others,biomass,biomass,,,3.666667
+resid others,biomass,biomass,,,3.666667
+resid others,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+resid others,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid others,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_aviation_intl,International Aviation,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight,Domestic Ship,Hybrid Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Freight|Shipping,3.666667
+trn_freight,Domestic Ship,Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Freight|Shipping,3.666667
+trn_freight,Freight Rail,Coal,Emissions|CO2|Energy|Coal,Emissions|CO2|Energy|Demand|Transportation|Freight|Rail,3.666667
+trn_freight,Freight Rail,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight,Freight Rail,Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Freight|Rail,3.666667
+trn_freight_road,Heavy truck,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight_road,Heavy truck,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight_road,Light truck,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight_road,Light truck,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight_road,Light truck,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_freight_road,Medium truck,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_freight_road,Medium truck,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass,Domestic Aviation,Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Passenger|Aviation,3.666667
+trn_pass,Passenger Rail,Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Passenger|Rail,3.666667
+trn_pass_road,Bus,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road,Bus,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road,Bus,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_pass_road_LDV,2W and 3W,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV,2W and 3W,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_pass_road_LDV_4W,Car,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Car,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Car,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_pass_road_LDV_4W,Large Car and Truck,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Large Car and Truck,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Large Car and Truck,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_pass_road_LDV_4W,Mini Car,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Mini Car,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_pass_road_LDV_4W,Mini Car,NG,Emissions|CO2|Energy|Gas,,3.666667
+trn_shipping_intl,International Ship,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
+trn_shipping_intl,International Ship,Liquids,Emissions|CO2|Energy|Oil,,3.666667

@@ -4,7 +4,10 @@
 \alias{get_se_gen_tech}
 \title{get_se_gen_tech}
 \usage{
-get_se_gen_tech()
+get_se_gen_tech(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 se_gen_tech_clean global variable

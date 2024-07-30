@@ -4,7 +4,10 @@
 \alias{get_energy_price_fragmented}
 \title{get_energy_price_fragmented}
 \usage{
-get_energy_price_fragmented()
+get_energy_price_fragmented(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 energy_price_fragmented global variable

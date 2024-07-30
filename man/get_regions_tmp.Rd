@@ -4,7 +4,10 @@
 \alias{get_regions_tmp}
 \title{get_regions_tmp}
 \usage{
-get_regions_tmp()
+get_regions_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 regions global variable

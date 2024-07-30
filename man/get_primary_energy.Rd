@@ -4,7 +4,10 @@
 \alias{get_primary_energy}
 \title{get_primary_energy}
 \usage{
-get_primary_energy()
+get_primary_energy(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 primary_energy_clean global variable

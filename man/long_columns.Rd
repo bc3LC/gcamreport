@@ -11,7 +11,7 @@ An object of class \code{character} of length 5.
 long_columns
 }
 \description{
-reporting columns
+reporting columns.
 }
 \examples{
 \dontrun{

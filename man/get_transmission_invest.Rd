@@ -4,7 +4,10 @@
 \alias{get_transmission_invest}
 \title{get_transmission_invest}
 \usage{
-get_transmission_invest()
+get_transmission_invest(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
 }
 \value{
 transmission_invest_clean global variable

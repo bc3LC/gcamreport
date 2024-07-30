@@ -58,16 +58,6 @@ global_vet_values <- read.csv(file.path(rawDataFolder, "inst/extdata/vetting", "
 )
 use_data(global_vet_values, overwrite = T)
 
-# Read in template
-template <- read.csv(file.path(rawDataFolder, "inst/extdata", "template/reporting_template.csv"),
-  fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE
-)
-decode_html <- function(text) {
-  xml2::xml_text(xml2::read_xml(paste0("<x>", text, "</x>")))
-}
-# Applying the function to decode HTML entities in col1
-template$Unit <- sapply(template$Unit, decode_html)
-use_data(template, overwrite = T)
 
 # emissions maps
 co2_sector_map <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "CO2_sector_map.csv"),
@@ -261,7 +251,6 @@ use_data(iron_steel_trade_map, overwrite = T)
 
 
 # List of Constants
-
 convert <- list(
   # Basic format conv_[from]_[to]
   conv_thousand_million = 1 / 1000,
@@ -295,19 +284,6 @@ use_data(F_GASES, overwrite = T)
 GHG_gases <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 use_data(GHG_gases, overwrite = T)
 
-
-# Reporting years
-GCAM_years <- c(1990, seq(2005, 2100, 5))
-use_data(GCAM_years, overwrite = T)
-
-reporting_years <- seq(2005, 2100, 5)
-use_data(reporting_years, overwrite = T)
-
-last_historical_year <- 2015
-use_data(last_historical_year, overwrite = T)
-
-
-# REPLACE with reporting years
 
 # Reporting columns
 long_columns <- c("scenario", "region", "var", "year", "value")
