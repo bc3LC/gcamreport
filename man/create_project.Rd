@@ -12,8 +12,8 @@ create_project(
   desired_regions = "All",
   desired_variables = "All",
   GCAM_version = "v7.0",
-  queries_general_file,
-  queries_nonCO2_file
+  queries_general_file = NULL,
+  queries_nonCO2_file = NULL
 )
 }
 \arguments{

@@ -151,7 +151,7 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
 create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
                            desired_regions = "All", desired_variables = "All",
                            GCAM_version = 'v7.0',
-                           queries_general_file, queries_nonCO2_file) {
+                           queries_general_file = NULL, queries_nonCO2_file = NULL) {
   Internal_variable <- Variable <- required <- available_scenarios <- name <- NULL
 
   # rm variable "prj" from the environment if exists
@@ -178,13 +178,14 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   }
 
   # read the query file
-  if (is.list(queries_general_file)) {
-    queries_short <- queries_general_file
+  if(is.null(queries_general_file)) {
+    queries_short <- get(paste('queries_general',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   } else {
     queries_short <- rgcam::parse_batch_query(queries_general_file)
   }
-  if (is.list(queries_nonCO2_file)) {
-    queries_large <- queries_nonCO2_file
+
+  if(is.null(queries_nonCO2_file)) {
+    queries_nonCO2_file <- queries_large <- get(paste('queries_nonCO2',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   } else {
     queries_large <- rgcam::parse_batch_query(queries_nonCO2_file)
   }
