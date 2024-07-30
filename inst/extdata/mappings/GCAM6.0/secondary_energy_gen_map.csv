@@ -1,0 +1,33 @@
+# Multiple load segments Electricity generation by technology (inc solar roofs),,,,,,,,,,,
+sector,subsector,technology,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+gas processing,biomass gasification,biomass gasification,Secondary Energy,Secondary Energy|Gases,Secondary Energy|Gases|Biomass,,,,,,1
+gas processing,coal gasification,coal gasification,Secondary Energy,Secondary Energy|Gases,Secondary Energy|Gases|Coal,,,,,,1
+gas processing,natural gas,natural gas,Secondary Energy,Secondary Energy|Gases,Secondary Energy|Gases|Natural Gas,,,,,,1
+H2 central production,biomass,biomass to H2,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Biomass,Secondary Energy|Hydrogen|Biomass|w/o CCS,,,,,1
+H2 central production,biomass,biomass to H2 CCS,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Biomass,Secondary Energy|Hydrogen|Biomass|w/ CCS,,,,,1
+H2 central production,coal,coal chemical,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/o CCS,Secondary Energy|Hydrogen|Coal,Secondary Energy|Hydrogen|Coal|w/o CCS,,,1
+H2 central production,coal,coal chemical CCS,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/ CCS,Secondary Energy|Hydrogen|Coal,Secondary Energy|Hydrogen|Coal|w/ CCS,,,1
+H2 central production,electricity,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,gas,natural gas steam reforming,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/o CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/o CCS,,,1
+H2 central production,gas,natural gas steam reforming CCS,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/ CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/ CCS,,,1
+H2 central production,nuclear,thermal splitting,Secondary Energy,Secondary Energy|Hydrogen,,,,,,,1
+H2 central production,solar,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,wind,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 industrial,forecourt production,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 wholesale dispensing,forecourt production,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 wholesale dispensing,forecourt production,natural gas steam reforming,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/o CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/o CCS,,,1
+refining,biomass liquids,FT biofuels,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1
+refining,biomass liquids,FT biofuels CCS level 1,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/ CCS,,,,,1
+refining,biomass liquids,FT biofuels CCS level 2,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/ CCS,,,,,1
+refining,biomass liquids,biodiesel,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1
+refining,biomass liquids,cellulosic ethanol,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1
+refining,biomass liquids,cellulosic ethanol CCS level 1,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/ CCS,,,,,1
+refining,biomass liquids,cellulosic ethanol CCS level 2,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/ CCS,,,,,1
+refining,biomass liquids,corn ethanol,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1
+refining,coal to liquids,coal to liquids,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Coal|w/o CCS,Secondary Energy|Liquids|Fossil,Secondary Energy|Liquids|Fossil|w/o CCS,,,1
+refining,coal to liquids,coal to liquids CCS level 1,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Coal|w/ CCS,Secondary Energy|Liquids|Fossil,Secondary Energy|Liquids|Fossil|w/ CCS,,,1
+refining,coal to liquids,coal to liquids CCS level 2,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Coal|w/ CCS,Secondary Energy|Liquids|Fossil,Secondary Energy|Liquids|Fossil|w/ CCS,,,1
+refining,gas to liquids,gas to liquids,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Gas,,Secondary Energy|Liquids|Fossil,Secondary Energy|Liquids|Fossil|w/o CCS,,,1
+refining,oil refining,oil refining,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Oil,,Secondary Energy|Liquids|Fossil,Secondary Energy|Liquids|Fossil|w/o CCS,,,1
+refining,biomass liquids,sugar cane ethanol,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1
+refining,biomass liquids,BTL with hydrogen,Secondary Energy,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,Secondary Energy|Liquids|Biomass|w/o CCS,,,,,1

@@ -14,7 +14,7 @@ local
 queries_general_v7.0
 }
 \description{
-gcamreport queries compatible with GCAM 7.0 version compatible with GCAM7.0.
+gcamreport queries compatible with GCAM 7.0 version.
 Contain all queries except for nonCO2 queries
 }
 \examples{

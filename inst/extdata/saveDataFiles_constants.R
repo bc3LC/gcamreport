@@ -6,6 +6,27 @@ library(magrittr)
 rawDataFolder <- here::here()
 
 
+# ghg adjusters
+ghg_GWP_AR4 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR4.csv"),
+                        skip = 1, na = "",
+                        stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR4, overwrite = T)
+
+ghg_GWP_AR5 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR5.csv"),
+                        skip = 1, na = "",
+                        stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR5, overwrite = T)
+
+ghg_GWP_AR6 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR6.csv"),
+                        skip = 1, na = "",
+                        stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR6, overwrite = T)
+
+
+
 # Reporting columns
 long_columns <- c("scenario", "region", "var", "year", "value")
 use_data(long_columns, overwrite = T)

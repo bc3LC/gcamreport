@@ -37,25 +37,6 @@ var_fun_map_v7.0$checks <- as.list(strsplit(var_fun_map_v7.0$checks, ","))
 var_fun_map_v7.0$queries <- as.list(strsplit(var_fun_map_v7.0$queries, ","))
 use_data(var_fun_map_v7.0, overwrite = T)
 
-# ghg adjusters
-ghg_GWP_AR4 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR4.csv"),
-  skip = 1, na = "",
-  stringsAsFactors = FALSE
-)
-use_data(ghg_GWP_AR4, overwrite = T)
-
-ghg_GWP_AR5 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR5.csv"),
-  skip = 1, na = "",
-  stringsAsFactors = FALSE
-)
-use_data(ghg_GWP_AR5, overwrite = T)
-
-ghg_GWP_AR6 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR6.csv"),
-  skip = 1, na = "",
-  stringsAsFactors = FALSE
-)
-use_data(ghg_GWP_AR6, overwrite = T)
-
 
 # Read in template
 template_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/template/GCAM7.0", "reporting_template.csv"),
@@ -312,10 +293,6 @@ use_data(F_GASES_v7.0, overwrite = T)
 GHG_gases_v7.0 <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
 use_data(GHG_gases_v7.0, overwrite = T)
 
-
-# Reporting columns
-long_columns <- c("scenario", "region", "var", "year", "value")
-use_data(long_columns, overwrite = T)
 
 
 # QUERY files

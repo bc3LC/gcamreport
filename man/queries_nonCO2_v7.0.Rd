@@ -14,7 +14,7 @@ local
 queries_nonCO2_v7.0
 }
 \description{
-gcamreport nonCO2 query compatible with GCAM 7.0 version compatible with GCAM7.0.
+gcamreport nonCO2 query compatible with GCAM 7.0 version.
 }
 \examples{
 \dontrun{

@@ -1,41 +1,3 @@
-#' queries_general_v7.0
-#'
-#' @source local
-#' @format vector
-#' @description gcamreport queries compatible with GCAM 7.0 version compatible with GCAM7.0.
-#' Contain all queries except for nonCO2 queries
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::queries_general_v7.0
-#' }
-"queries_general_v7.0"
-
-#' queries_nonCO2_v7.0
-#'
-#' @source local
-#' @format vector
-#' @description gcamreport nonCO2 query compatible with GCAM 7.0 version compatible with GCAM7.0.
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::queries_nonCO2_v7.0
-#' }
-"queries_nonCO2_v7.0"
-
-
-#' emissions_list_v7.0
-#'
-#' @source local
-#' @format vector
-#' @description nonCO2 pollutants list
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::emissions_list_v7.0
-#' }
-"emissions_list_v7.0"
-
 #' GCAM_regions_number
 #'
 #' @source local
@@ -131,6 +93,57 @@
 #' gcamreport::reg_cont
 #' }
 "reg_cont"
+
+#' long_columns
+#'
+#' @description reporting columns.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::long_columns
+#' }
+"long_columns"
+
+
+
+
+#' queries_general_v7.0
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport queries compatible with GCAM 7.0 version.
+#' Contain all queries except for nonCO2 queries
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::queries_general_v7.0
+#' }
+"queries_general_v7.0"
+
+#' queries_nonCO2_v7.0
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport nonCO2 query compatible with GCAM 7.0 version.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::queries_nonCO2_v7.0
+#' }
+"queries_nonCO2_v7.0"
+
+
+#' emissions_list_v7.0
+#'
+#' @source local
+#' @format vector
+#' @description nonCO2 pollutants list
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::emissions_list_v7.0
+#' }
+"emissions_list_v7.0"
 
 #' var_fun_map_v7.0
 #'
@@ -576,12 +589,485 @@
 #' }
 "last_historical_year_v7.0"
 
-#' long_columns
+
+#' queries_general_v6.0
 #'
-#' @description reporting columns.
+#' @source local
+#' @format vector
+#' @description gcamreport queries compatible with GCAM 6.0 version.
+#' Contain all queries except for nonCO2 queries
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::long_columns
+#' gcamreport::queries_general_v6.0
 #' }
-"long_columns"
+"queries_general_v6.0"
+
+#' queries_nonCO2_v6.0
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport nonCO2 query compatible with GCAM 6.0 version compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::queries_nonCO2_v6.0
+#' }
+"queries_nonCO2_v6.0"
+
+
+#' emissions_list_v6.0
+#'
+#' @source local
+#' @format vector
+#' @description nonCO2 pollutants list
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::emissions_list_v6.0
+#' }
+"emissions_list_v6.0"
+
+#' var_fun_map_v6.0
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between variables, functions to load them, dependent variables, and available verifications compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::var_fun_map_v6.0
+#' }
+"var_fun_map_v6.0"
+
+#' template_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description read in template compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::template_v6.0
+#' }
+"template_v6.0"
+
+#' co2_sector_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::co2_sector_map_v6.0
+#' }
+"co2_sector_map_v6.0"
+
+#' co2_ets_sector_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::co2_ets_sector_map_v6.0
+#' }
+"co2_ets_sector_map_v6.0"
+
+#' co2_tech_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::co2_tech_map_v6.0
+#' }
+"co2_tech_map_v6.0"
+
+#' kyoto_sector_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::kyoto_sector_map_v6.0
+#' }
+"kyoto_sector_map_v6.0"
+
+#' nonco2_emis_sector_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::nonco2_emis_sector_map_v6.0
+#' }
+"nonco2_emis_sector_map_v6.0"
+
+#' nonco2_emis_resource_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::nonco2_emis_resource_map_v6.0
+#' }
+"nonco2_emis_resource_map_v6.0"
+
+#' carbon_seq_tech_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description emissions maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_seq_tech_map_v6.0
+#' }
+"carbon_seq_tech_map_v6.0"
+
+#' ag_demand_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ag_demand_map_v6.0
+#' }
+"ag_demand_map_v6.0"
+
+#' ag_prices_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ag_prices_map_v6.0
+#' }
+"ag_prices_map_v6.0"
+
+#' land_use_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::land_use_map_v6.0
+#' }
+"land_use_map_v6.0"
+
+#' primary_energy_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::primary_energy_map_v6.0
+#' }
+"primary_energy_map_v6.0"
+
+#' production_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::production_map_v6.0
+#' }
+"production_map_v6.0"
+
+#' elec_gen_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::elec_gen_map_v6.0
+#' }
+"elec_gen_map_v6.0"
+
+#' capacity_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::capacity_map_v6.0
+#' }
+"capacity_map_v6.0"
+
+#' cf_gcam_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::cf_gcam_v6.0
+#' }
+"cf_gcam_v6.0"
+
+#' cf_rgn_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::cf_rgn_v6.0
+#' }
+"cf_rgn_v6.0"
+
+#' se_gen_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::se_gen_map_v6.0
+#' }
+"se_gen_map_v6.0"
+
+#' final_energy_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::final_energy_map_v6.0
+#' }
+"final_energy_map_v6.0"
+
+#' transport_final_en_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::transport_final_en_map_v6.0
+#' }
+"transport_final_en_map_v6.0"
+
+#' energy_prices_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::energy_prices_map_v6.0
+#' }
+"energy_prices_map_v6.0"
+
+#' transport_en_service_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description transport energy services compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::transport_en_service_v6.0
+#' }
+"transport_en_service_v6.0"
+
+#' buildings_en_service_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description buildings energy services compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::buildings_en_service_v6.0
+#' }
+"buildings_en_service_v6.0"
+
+#' capital_gcam_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description capital update compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::capital_gcam_v6.0
+#' }
+"capital_gcam_v6.0"
+
+#' investment_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description capital investment compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::investment_v6.0
+#' }
+"investment_v6.0"
+
+#' carbon_content_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description carbon content compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_content_v6.0
+#' }
+"carbon_content_v6.0"
+
+#' nonCO2_content_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description non CO2 content compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::nonCO2_content_v6.0
+#' }
+"nonCO2_content_v6.0"
+
+#' iea_capacity_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description iea 2019 capacity compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iea_capacity_v6.0
+#' }
+"iea_capacity_v6.0"
+
+#' CO2_market_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description new CO2 market compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::CO2_market_v6.0
+#' }
+"CO2_market_v6.0"
+
+#' co2_market_frag_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description new CO2 regional markets map compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::co2_market_frag_map_v6.0
+#' }
+"co2_market_frag_map_v6.0"
+
+#' iron_steel_trade_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description iron steel imports and exports map
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iron_steel_trade_map_v6.0
+#' }
+"iron_steel_trade_map_v6.0"
+
+#' convert_v6.0
+#'
+#' @description units conversion list
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::convert_v6.0
+#' }
+"convert_v6.0"
+
+#' F_GASES_v6.0
+#'
+#' @description ghg emission conversion.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::F_GASES_v6.0
+#' }
+"F_GASES_v6.0"
+
+#' GHG_gases_v6.0
+#'
+#' @description ghg emission conversion.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::GHG_gases_v6.0
+#' }
+"GHG_gases_v6.0"
+
+#' GCAM_years_v6.0
+#'
+#' @description reporting years compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::GCAM_years_v6.0
+#' }
+"GCAM_years_v6.0"
+
+#' reporting_years_v6.0
+#'
+#' @description reporting years compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::reporting_years_v6.0
+#' }
+"reporting_years_v6.0"
+
+#' last_historical_year_v6.0
+#'
+#' @description last historical year compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::last_historical_year_v6.0
+#' }
+"last_historical_year_v6.0"
