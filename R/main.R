@@ -551,10 +551,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   }
 
   # check that desired_regions and desired_continents are not specified at the same time
-  if (!(identical(desired_regions, "All"))) {
-    if (!(identical(desired_continents, "All"))) {
-      stop("You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time.\n")
-    }
+  if (!identical(desired_regions, "All") && !identical(desired_continents, "All")) {
+    stop("You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time.\n")
   }
 
   # check that the desired_regions are available
@@ -562,8 +560,11 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     check_reg <- dplyr::setdiff(desired_regions, available_regions(print = FALSE))
     if (length(check_reg) > 0) {
       tmp <- paste(check_reg, collapse = ", ")
-      if (length(check_reg) > 1) stop(paste0("The desired regions ", tmp, " are not available for reporting.\n"))
-      if (length(check_reg) == 1) stop(paste0("The desired region ", tmp, " is not available for reporting.\n"))
+      if (length(check_reg) > 1) {
+        stop(sprintf("The desired regions %s are not available for reporting. Please check the available regions by running `available_regions()` in your console.\nFurther information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
+      } else if (length(check_reg) == 1) {
+        stop(sprintf("The desired region %s is not available for reporting. Please check the available regions by running `available_regions()` in your console.\nFurther information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
+      }
     }
   }
   # check that the desired_continents are available
@@ -571,8 +572,13 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     check_cont <- dplyr::setdiff(desired_continents, available_continents(print = FALSE))
     if (length(check_cont) > 0) {
       tmp <- paste(check_cont, collapse = ", ")
-      if (length(check_cont) > 1) stop(paste0("The desired continent/regions' groups ", tmp, " are not available for reporting.\n"))
-      if (length(check_cont) == 1) stop(paste0("The desired continent/regions' group ", tmp, " is not available for reporting.\n"))
+      if (length(check_cont) > 1) {
+        stop(sprintf("The desired continent/region groups %s are not available for reporting. Please check the available continent/region groups by running `available_continents()` in your console.\n
+                     Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
+      } else if (length(check_cont) == 1) {
+        stop(sprintf("The desired continent/region group %s is not available for reporting. Please check the available continent/region groups by running `available_continents()` in your console.\n
+                     Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
+      }
     }
     desired_regions <- gcamreport::reg_cont %>%
       dplyr::filter(continent %in% desired_continents) %>%
@@ -596,8 +602,19 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
         if (length(desired_variables) == length(tmp)) no_pattern <- c(no_pattern, elem)
         desired_variables <- tmp
       }
-      if (length(no_pattern) > 1) stop(paste0("There are no variables containing the patterns ", paste(no_pattern, collapse = ", "), " available for reporting.\n"))
-      if (length(no_pattern) == 1) stop(paste0("There is no variable containing the pattern ", no_pattern, " available for reporting.\n"))
+      if (length(no_pattern) > 1) {
+        stop(sprintf(
+          "There are no variables containing the patterns %s available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.",
+          paste(no_pattern, collapse = ", ")
+        ))
+      } else if (length(no_pattern) == 1) {
+        stop(sprintf(
+          "There is no variable containing the pattern %s available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.",
+          no_pattern
+        ))
+      }
 
       # remove elements containing '*'
       contains_star <- grepl("\\*", desired_variables)
@@ -608,13 +625,23 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     check_var <- dplyr::setdiff(desired_variables, available_variables(print = FALSE))
     if (length(check_var) > 0) {
       tmp <- paste(check_var, collapse = ", ")
-      if (length(check_var) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
-      if (length(check_var) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
+      if (length(check_var) > 1) {
+        stop(sprintf("The variables %s are not available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.", tmp))
+      } else if (length(check_var) == 1) {
+        stop(sprintf("The variable %s is not available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.", tmp))
+      }
     }
     if (length(desired_variables) == 0) {
       tmp <- paste(original_desired_variables, collapse = ", ")
-      if (length(original_desired_variables) > 1) stop(paste0("The variables ", tmp, " are not available for reporting.\n"))
-      if (length(original_desired_variables) == 1) stop(paste0("The variable ", tmp, " is not available for reporting.\n"))
+      if (length(original_desired_variables) > 1) {
+        stop(sprintf("The variables %s are not available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.", tmp))
+      } else if (length(original_desired_variables) == 1) {
+        stop(sprintf("The variables %s are not available for reporting. Please check the available variables by running `available_variables()` in your console./n
+          Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables.", tmp))
+      }
     }
   }
 
@@ -634,8 +661,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   } else {
     # create project
     # check that all the paths are specified
-    if (is.null(db_path)) stop("gcamreport tried to create a GCAM project but db_path was not specified.")
-    if (is.null(db_name)) stop("gcamreport tried to create a GCAM project but db_name was not specified.")
+    if (is.null(db_path)) stop("The 'db_path' parameter is required to create a GCAM project but was not specified.")
+    if (is.null(db_name)) stop("The 'db_name' parameter is required to create a GCAM project but was not specified.")
 
     # create project
     if(is.null(queries_general_file)) {
@@ -742,11 +769,13 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
       print(e$message)
     }
     vetting_summary <<- vetting_summary
-    cat('Type "vetting_summary$`Trade flows`" or "vetting_summary$`Vetting variables`" to know the vetting summary details\n')
-    cat("You can check the vetting figure in output/figure/vetting.tiff\n")
+    cat("To view the vetting summary details, type:\n")
+    cat('  - `vetting_summary$`Trade flows``\n')
+    cat('  - `vetting_summary$`Vetting variables` \n')
+    cat("\nYou can find the vetting figure in: `output/figure/vetting.tiff`\n")
     cat("==============================================================\n")
   } else {
-    rlang::inform("No checks or vetting performed since not all regions were selected.")
+    rlang::inform("No checks or vetting were performed because no regions were selected.")
   }
 
   # remove internal variables from the environment

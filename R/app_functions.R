@@ -93,23 +93,23 @@ check_user_choices_plot <- function(vars, scen, years, reg, grouped) {
 
   # check that at least one scenario has been choosen
   if (length(unique(scen)) < 1) {
-    error_message <- c(error_message, "ERROR: dplyr::select at least one scenario please.")
+    error_message <- c(error_message, "ERROR: select at least one scenario please.")
   }
   # check that at least one year has been choosen
   if (length(unique(years)) < 1) {
-    error_message <- c(error_message, "ERROR: dplyr::select at least one year please.")
+    error_message <- c(error_message, "ERROR: select at least one year please.")
   }
   # check that at least one region has been choosen
   if (length(unique(reg)) < 1) {
-    error_message <- c(error_message, "ERROR: dplyr::select at least one region please.")
+    error_message <- c(error_message, "ERROR: select at least one region please.")
   }
   # check that at least one variable has been choosen
   if (length(unique(check_vars)) < 1) {
-    error_message <- c(error_message, "ERROR: dplyr::select at least one variable please.")
+    error_message <- c(error_message, "ERROR: select at least one variable please.")
   }
   # in case of grouped-variables' plot, check that at only variables from the same category have been choosen
   if (grouped & length(unique(check_vars)) > 1) {
-    error_message <- c(error_message, "ERROR: dplyr::select only variables from the same category please.")
+    error_message <- c(error_message, "ERROR: select only variables from the same category please.")
   }
 
   return(error_message)

@@ -107,8 +107,18 @@ filter_loading_regions <- function(data, desired_regions = "All", variable) {
       avail_reg <- unique(data$region)
       if (!desired_regions %in% avail_reg) {
         not_avail <- setdiff(desired_regions, avail_reg)
-        if (length(not_avail) == 1) stop("The desired region ", paste(not_avail, collapse = ""), " is not available in the loaded project. In detail, it is not availabe in the query '", variable, "'.")
-        if (length(not_avail) > 1) stop("The desired regions ", paste(not_avail, collapse = ", "), " are not available in the loaded project. In detail, they are not availabe in the query '", variable, "'.")      }
+        if (length(not_avail) == 1) {
+          stop(sprintf(
+            "The desired region '%s' is not available in the loaded project. Specifically, it is missing from the query '%s'. Please check the available regions in the project or update the query.",
+            not_avail, variable
+          ))
+        } else if (length(not_avail) > 1) {
+          stop(sprintf(
+            "The desired regions %s are not available in the loaded project. Specifically, they are missing from the query '%s'. Please check the available regions in the project or update the query.",
+            paste(shQuote(not_avail), collapse = ", "), variable
+          ))
+        }
+      }
       data <- data %>%
         dplyr::filter(region %in% desired_regions)
     }

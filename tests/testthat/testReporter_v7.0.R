@@ -218,7 +218,7 @@ test_that("Test8_v7. error messages", {
       desired_variables = "dummy variable",
       launch_ui = FALSE
     ),
-    "The variable dummy variable is not available for reporting"
+    "The variable dummy variable is not available for reporting."
   )
   expect_error(
     generate_report(
@@ -288,7 +288,7 @@ test_that("Test8_v7. error messages", {
       desired_continents = "dummy continent",
       launch_ui = FALSE
     ),
-    "The desired continent/regions' group dummy continent is not available for reporting."
+    "The desired continent/region group dummy continent is not available for reporting."
   )
   expect_error(
     generate_report(
@@ -299,7 +299,7 @@ test_that("Test8_v7. error messages", {
       desired_continents = c("dummy1", "dummy2"),
       launch_ui = FALSE
     ),
-    "The desired continent/regions' groups dummy1, dummy2 are not available for reporting."
+    "The desired continent/region groups dummy1, dummy2 are not available for reporting."
   )
 
   expect_error(
@@ -309,7 +309,7 @@ test_that("Test8_v7. error messages", {
       scenarios = "Reference",
       launch_ui = FALSE
     ),
-    "gcamreport tried to create a GCAM project but db_path was not specified"
+    "The 'db_path' parameter is required to create a GCAM project but was not specified."
   )
 
   expect_error(
@@ -319,7 +319,7 @@ test_that("Test8_v7. error messages", {
       scenarios = "Reference",
       launch_ui = FALSE
     ),
-    "gcamreport tried to create a GCAM project but db_name was not specified"
+    "The 'db_name' parameter is required to create a GCAM project but was not specified."
   )
 
   expect_error(
@@ -340,7 +340,7 @@ test_that("Test8_v7. error messages", {
       desired_continents = "dummy continent",
       launch_ui = FALSE
     ),
-    "You specified both the desired_regions and the desired_continents parameters. Only one can be specified at a time."
+    "You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time."
   )
 
   expect_error(

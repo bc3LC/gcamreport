@@ -81,31 +81,34 @@ test_that("Test1. test tree functions", {
 test_that("Test2. error messages", {
   expect_error(
     launch_gcamreport_ui(),
-    "Specify either the dataset or the dataset path to be considered."
+    "Error: Neither 'data_path' nor 'data' has been provided. Please specify at least one of these: 'data_path' to point to the location of the dataset file or 'data' to provide the dataset directly."
   )
 
   expect_error(
     launch_gcamreport_ui("dummy1", "dummy2"),
-    "Specify either the dataset or the dataset path to be considered, not both"
+    "Error: Both 'data_path' and 'data' have been provided. Please specify only one: either 'data_path' to point to the dataset file or 'data' to provide the dataset directly. Providing both is not allowed."
   )
 
   errorMessage1 <- check_user_choices_plot(
     vars = "var1", scen = c("scen1", "scen2"),
     years = NULL, reg = "Africa", grouped = TRUE
   )
-  testthat::expect_equal(errorMessage1, "ERROR: Select at least one year please.")
+  errorExpect1 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_error1.RData")))
+  testthat::expect_equal(errorMessage1, errorExpect1)
 
   errorMessage2 <- check_user_choices_plot(
     vars = "var1", scen = NULL,
     years = "year", reg = "Africa", grouped = TRUE
   )
-  testthat::expect_equal(errorMessage2, "ERROR: Select at least one scenario please.")
+  errorExpect2 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_error2.RData")))
+  testthat::expect_equal(errorMessage2, errorExpect2)
 
   errorMessage3 <- check_user_choices_plot(
     vars = NULL, scen = "scen1",
     years = "year", reg = "Africa", grouped = TRUE
   )
-  testthat::expect_equal(errorMessage3, "ERROR: Select at least one variable please.")
+  errorExpect3 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_error3.RData")))
+  testthat::expect_equal(errorMessage3, errorExpect3)
 })
 
 test_that("Test3. reset", {
