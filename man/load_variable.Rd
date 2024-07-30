@@ -4,10 +4,14 @@
 \alias{load_variable}
 \title{load_variable}
 \usage{
-load_variable(var)
+load_variable(var, GCAM_version = "v7.0", GWP_version = "AR5")
 }
 \arguments{
 \item{var}{variable to be loaded.}
+
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+
+\item{GWP_version}{Global Warming Potential values version: AR5 (default), AR6, or AR4.}
 }
 \value{
 load variable.

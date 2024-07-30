@@ -7,7 +7,7 @@
 get_energy_service_buildings(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 energy_service_buildings_clean global variable

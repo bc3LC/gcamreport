@@ -4,7 +4,10 @@
 \alias{get_population}
 \title{get_population}
 \usage{
-get_population()
+get_population(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 population_clean global variable

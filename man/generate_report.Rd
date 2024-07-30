@@ -16,9 +16,10 @@ generate_report(
   save_output = TRUE,
   output_file = NULL,
   launch_ui = TRUE,
-  ghg_GWP = gcamreport::ghg_GWP_AR5,
-  queries_general_file = gcamreport::queries_general,
-  queries_nonCO2_file = gcamreport::queries_nonCO2
+  GCAM_version = "v7.0",
+  GWP_version = "AR5",
+  queries_general_file = NULL,
+  queries_nonCO2_file = NULL
 )
 }
 \arguments{
@@ -58,14 +59,16 @@ In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/o
 
 \item{launch_ui}{if TRUE, launch User Interface, Do not launch it otherwise.}
 
-\item{ghg_GWP}{GWP conversion. Options: gcamreport::ghg_GWP_AR4, gcamreport::ghg_GWP_AR5 (default), and gcamreport::ghg_GWP_AR6.}
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+
+\item{GWP_version}{GWP_version Global Warming Potential values version: AR5 (default), AR6, or AR4.}
 
 \item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
-gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}
+gcamreport general query file compatible with the indicated `GCAM_version` and able to report all standardized variables.}
 
 \item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
+gcamreport nonCO2 query file, compatible with the indicated `GCAM_version` and necessary to report some of the standardized variables.}
 }
 \value{
 RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam

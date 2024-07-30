@@ -4,7 +4,7 @@
 \alias{conv_EJ_GW}
 \title{conv_EJ_GW}
 \usage{
-conv_EJ_GW(data, cf, EJ)
+conv_EJ_GW(data, cf, EJ, GCAM_version = "v7.0")
 }
 \arguments{
 \item{data}{dataset}
@@ -12,6 +12,8 @@ conv_EJ_GW(data, cf, EJ)
 \item{cf}{conversion factor}
 
 \item{EJ}{EJ amount}
+
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \description{
 Covert EJ to GW

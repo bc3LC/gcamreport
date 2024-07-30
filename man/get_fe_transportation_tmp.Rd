@@ -7,7 +7,7 @@
 get_fe_transportation_tmp(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 fe_transportation global variable

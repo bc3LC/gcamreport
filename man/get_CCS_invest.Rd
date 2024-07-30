@@ -7,7 +7,7 @@
 get_CCS_invest(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 CCS_invest_clean global variable

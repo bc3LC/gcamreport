@@ -15,7 +15,7 @@ filter_variables(data, variable)
 filtered dataframe
 }
 \description{
-Filter the desired regions of a GCAM project
+filter the desired regions of a GCAM project
 }
 \keyword{internal}
 \keyword{utils}

@@ -4,7 +4,10 @@
 \alias{get_co2_iron_steel}
 \title{get_co2_iron_steel}
 \usage{
-get_co2_iron_steel()
+get_co2_iron_steel(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_tech_ironsteel global variable

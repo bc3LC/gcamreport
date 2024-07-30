@@ -37,12 +37,24 @@ var_fun_map_v7.0$checks <- as.list(strsplit(var_fun_map_v7.0$checks, ","))
 var_fun_map_v7.0$queries <- as.list(strsplit(var_fun_map_v7.0$queries, ","))
 use_data(var_fun_map_v7.0, overwrite = T)
 
-# ghg adjuster
-GWP_adjuster_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "ghg_GWP.csv"),
-                         skip = 1, na = "",
-                         stringsAsFactors = FALSE
+# ghg adjusters
+ghg_GWP_AR4 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR4.csv"),
+  skip = 1, na = "",
+  stringsAsFactors = FALSE
 )
-use_data(GWP_adjuster_v7.0, overwrite = T)
+use_data(ghg_GWP_AR4, overwrite = T)
+
+ghg_GWP_AR5 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR5.csv"),
+  skip = 1, na = "",
+  stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR5, overwrite = T)
+
+ghg_GWP_AR6 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings", "ghg_GWP_AR6.csv"),
+  skip = 1, na = "",
+  stringsAsFactors = FALSE
+)
+use_data(ghg_GWP_AR6, overwrite = T)
 
 
 # Read in template
@@ -310,11 +322,11 @@ use_data(long_columns, overwrite = T)
 
 # gcamreport7 queries complete
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/GCAM7.0", "queries_gcamreport_general.xml")
-queries_general_v7.0 <- parse_batch_query(queryFile)
+queries_general_v7.0 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_general_v7.0, overwrite = T)
 
 # gcamreport7 queries nonCO2
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/GCAM7.0", "queries_gcamreport_nonCO2.xml")
-queries_nonCO2_v7.0 <- parse_batch_query(queryFile)
+queries_nonCO2_v7.0 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_nonCO2_v7.0, overwrite = T)
 

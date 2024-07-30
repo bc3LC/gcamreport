@@ -7,7 +7,7 @@
 get_co2_price_global_tmp(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{compatible GCAM version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 co2_price_global & regions global variable

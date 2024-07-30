@@ -4,7 +4,10 @@
 \alias{get_gdp_mer}
 \title{get_gdp_mer}
 \usage{
-get_gdp_mer()
+get_gdp_mer(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 GDP_MER_clean global variable

@@ -24,7 +24,7 @@
 "queries_nonCO2_v7.0"
 
 
-#' emissions_list
+#' emissions_list_v7.0
 #'
 #' @source local
 #' @format vector
@@ -32,15 +32,15 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::emissions_list
+#' gcamreport::emissions_list_v7.0
 #' }
-"emissions_list"
+"emissions_list_v7.0"
 
 #' ghg_GWP_AR4
 #'
 #' @source local
 #' @format .csv
-#' @description ghg adjuster - uses 100-yr GWPs from AR4 in GCAM unit
+#' @description Global Warming Potential vales - uses 100-yr GWPs from AR4 in GCAM unit
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
@@ -52,7 +52,7 @@
 #'
 #' @source local
 #' @format .csv
-#' @description ghg adjuster - uses 100-yr GWPs from AR5 in GCAM unit
+#' @description Global Warming Potential vales - uses 100-yr GWPs from AR5 in GCAM unit
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
@@ -64,7 +64,7 @@
 #'
 #' @source local
 #' @format .csv
-#' @description ghg adjuster - uses 100-yr GWPs from AR6 in GCAM unit
+#' @description Global Warming Potential vales - uses 100-yr GWPs from AR6 in GCAM unit
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
@@ -468,7 +468,7 @@
 #' }
 "co2_market_frag_map_v7.0"
 
-#' iron_steel_trade_map
+#' iron_steel_trade_map_v7.0
 #'
 #' @source github
 #' @format .csv
@@ -476,39 +476,39 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::iron_steel_trade_map
+#' gcamreport::iron_steel_trade_map_v7.0
 #' }
-"iron_steel_trade_map"
+"iron_steel_trade_map_v7.0"
 
-#' convert
+#' convert_v7.0
 #'
 #' @description units conversion list
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::convert
+#' gcamreport::convert_v7.0
 #' }
-"convert"
+"convert_v7.0"
 
-#' F_GASES
+#' F_GASES_v7.0
 #'
 #' @description ghg emission conversion.
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::F_GASES
+#' gcamreport::F_GASES_v7.0
 #' }
-"F_GASES"
+"F_GASES_v7.0"
 
-#' GHG_gases
+#' GHG_gases_v7.0
 #'
 #' @description ghg emission conversion.
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::GHG_gases
+#' gcamreport::GHG_gases_v7.0
 #' }
-"GHG_gases"
+"GHG_gases_v7.0"
 
 #' GCAM_years_v7.0
 #'

@@ -19,7 +19,7 @@ In case the project dataset needs to be created, it will be produced with only t
 filtered dataframe
 }
 \description{
-Filter the desired regions of a GCAM project
+filter the desired regions of a GCAM project
 }
 \keyword{internal}
 \keyword{utils}

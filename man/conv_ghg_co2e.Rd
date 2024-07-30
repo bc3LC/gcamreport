@@ -4,10 +4,14 @@
 \alias{conv_ghg_co2e}
 \title{conv_ghg_co2e}
 \usage{
-conv_ghg_co2e(data)
+conv_ghg_co2e(data, GCAM_version = "v7.0", GWP_version = "AR5")
 }
 \arguments{
 \item{data}{dataset}
+
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+
+\item{GWP_version}{Global Warming Potential values version: AR5 (default), AR6, or AR4.}
 }
 \description{
 Covert GHG to CO2e

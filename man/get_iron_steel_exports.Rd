@@ -4,7 +4,10 @@
 \alias{get_iron_steel_exports}
 \title{get_iron_steel_exports}
 \usage{
-get_iron_steel_exports()
+get_iron_steel_exports(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 iron_steel_exports global variable

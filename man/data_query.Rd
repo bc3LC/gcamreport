@@ -11,7 +11,8 @@ data_query(
   prj_name,
   scenarios,
   desired_regions = "All",
-  queries_nonCO2_file = gcamreport::queries_nonCO2
+  GCAM_version = "v7.0",
+  queries_nonCO2_file
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ data_query(
 \item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
 To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
 In case the project dataset needs to be created, it will be produced with only the specified regions.}
+
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 
 \item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
 "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the

@@ -14,7 +14,7 @@ local
 ghg_GWP_AR6
 }
 \description{
-ghg adjuster - uses 100-yr GWPs from AR6 in GCAM unit
+Global Warming Potential vales - uses 100-yr GWPs from AR6 in GCAM unit
 }
 \examples{
 \dontrun{

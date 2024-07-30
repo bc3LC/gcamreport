@@ -11,8 +11,9 @@ create_project(
   scenarios = NULL,
   desired_regions = "All",
   desired_variables = "All",
-  queries_general_file = gcamreport::queries_general,
-  queries_nonCO2_file = gcamreport::queries_nonCO2
+  GCAM_version = "v7.0",
+  queries_general_file,
+  queries_nonCO2_file
 )
 }
 \arguments{
@@ -33,6 +34,8 @@ Otherwise, specify a vector with all the desired options. To know all possible o
 In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
 the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
 and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".}
+
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 
 \item{queries_general_file}{full path to a general xml query file (including file name and extension). By default it points to the
 gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.}

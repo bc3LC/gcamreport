@@ -4,7 +4,10 @@
 \alias{get_gdp_ppp}
 \title{get_gdp_ppp}
 \usage{
-get_gdp_ppp()
+get_gdp_ppp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 GDP_PPP_clean global variable

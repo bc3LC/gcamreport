@@ -4,7 +4,12 @@
 \alias{get_fgas}
 \title{get_fgas}
 \usage{
-get_fgas()
+get_fgas(GCAM_version = "v7.0", GWP_version = "AR5")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+
+\item{GWP_version}{Global Warming Potential values version: AR5 (default), AR6, or AR4.}
 }
 \value{
 f_gas_clean global variable

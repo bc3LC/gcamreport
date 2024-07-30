@@ -4,7 +4,10 @@
 \alias{get_total_revenue}
 \title{get_total_revenue}
 \usage{
-get_total_revenue()
+get_total_revenue(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
 total_revenue global variable

@@ -10,7 +10,7 @@ filter_data_regions(data)
 data containing only the desired regions
 }
 \description{
-Filter the desired regions of some data with "regions" column
+filter the desired regions of some data with "regions" column
 }
 \keyword{internal}
 \keyword{process}
