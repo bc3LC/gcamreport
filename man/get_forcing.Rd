@@ -7,13 +7,13 @@
 get_forcing(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-forcing_clean global variable
+`forcing_clean` global variable.
 }
 \description{
-Get World's forcing query.
+Retrieves the global forcing query.
 }
 \keyword{forcing}
 \keyword{internal}

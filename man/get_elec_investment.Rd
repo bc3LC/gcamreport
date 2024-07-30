@@ -10,10 +10,10 @@ get_elec_investment(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-elec_investment_clean global variable
+`elec_investment_clean``` global variable
 }
 \description{
-Calculate electricity investment = annual capacity additions * capital costs
+Calculate electricity investment = annual capacity additions * capital costs.
 }
 \keyword{capital}
 \keyword{internal}

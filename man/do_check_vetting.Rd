@@ -10,7 +10,7 @@ do_check_vetting(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-Verification message indicating if the process was successful.
+A message confirming the success of the vetting process.
 }
 \description{
 Verify vetting and produce plot.

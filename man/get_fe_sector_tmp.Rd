@@ -10,10 +10,10 @@ get_fe_sector_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-fe_sector global variable
+`fe_sector` global variable
 }
 \description{
-Get final energy demand by sector
+Retrieve final energy demand by sector.
 }
 \keyword{energy}
 \keyword{internal}

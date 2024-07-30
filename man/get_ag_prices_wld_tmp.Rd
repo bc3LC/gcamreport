@@ -10,10 +10,10 @@ get_ag_prices_wld_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-ag_prices_wld global variable
+`ag_prices_wld` global variable
 }
 \description{
-Get ag price index.
+Retrieve agricultural price index.
 }
 \keyword{ag}
 \keyword{internal}

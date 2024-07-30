@@ -7,13 +7,13 @@
 get_gdp_ppp(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-GDP_PPP_clean global variable
+`GDP_PPP_clean` global variable.
 }
 \description{
-Get GDP (PPP) query, compute regional GDP, and change units to [10USD].
+Retrieves GDP (PPP) data, computes regional GDP, and converts units to 10 USD.
 }
 \keyword{GDP}
 \keyword{internal}

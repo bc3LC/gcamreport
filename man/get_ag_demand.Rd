@@ -7,10 +7,10 @@
 get_ag_demand(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-ag_demand_clean global variable
+`ag_demand_clean` global variable.
 }
 \description{
 Get agricultural demand.

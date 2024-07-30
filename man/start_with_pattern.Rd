@@ -7,15 +7,14 @@
 start_with_pattern(vector, pattern)
 }
 \arguments{
-\item{vector}{vector to check}
+\item{vector}{Vector to search within.}
 
-\item{pattern}{pattern to consider}
+\item{pattern}{Pattern to match at the beginning of vector elements.}
 }
 \value{
-subvector of `vector` whose elements start with `pattern`
+Subvector of `vector` containing elements that start with `pattern`.
 }
 \description{
-Return the vector elements starting with the specified parameters
+Returns elements of a vector that start with a specified pattern.
 }
 \keyword{internal}
-\keyword{utils}

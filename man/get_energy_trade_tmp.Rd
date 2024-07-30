@@ -7,10 +7,10 @@
 get_energy_trade_tmp()
 }
 \value{
-energy_trade_supply global variable
+`energy_trade_supply` global variable.
 }
 \description{
-Get energy trade supply. Query used to compute other variables.
+Retrieve energy trade supply data for calculating other variables.
 }
 \keyword{energy}
 \keyword{internal}

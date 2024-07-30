@@ -10,10 +10,10 @@ get_co2_price(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-co2_price_clean global variable
+`co2_price_clean` global variable
 }
 \description{
-Get co2 price.
+Retrieve co2 price.
 }
 \keyword{co2}
 \keyword{internal}

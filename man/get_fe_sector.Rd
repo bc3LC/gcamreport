@@ -2,19 +2,18 @@
 % Please edit documentation in R/functions.R
 \name{get_fe_sector}
 \alias{get_fe_sector}
-\title{get_fe_sector}
+\title{Compute and aggregate final energy by sector.}
 \usage{
 get_fe_sector()
 }
 \value{
-fe_sector_clean global variable
+`fe_sector_clean` global variable.
 }
 \description{
-Compute final energy.
-GPK 1/6/2022 - because some reporting categories are mapped from both the sector-level and subsector-level queries,
-we need a step of aggregation here. For example, international and domestic air are both assigned to
-aviation; international is mapped from the sector-level query, and domestic is mapped from the subsector (mode).
-Without this step there would be duplicate entries with different data for the same reporting categories.
+This function consolidates final energy data by handling overlaps between sector-level and subsector-level queries.
+For instance, both international and domestic air transport are categorized under aviation, but are sourced from different queries:
+international from the sector-level and domestic from the subsector-level. This aggregation step prevents duplicate entries
+with inconsistent data for the same reporting categories.
 }
 \keyword{energy}
 \keyword{internal}

@@ -1,30 +1,31 @@
 #' data_query
 #'
-#' Add nonCO2 large queries
-#' @param db_path path of the database.
-#' @param db_name name of the database.
-#' @param prj_name name of the project.
-#' @param scenarios name of the scenarios to be considered.
-#' @param type either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.
-#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-#' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
-#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
-#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
-#' @return dataframe with the data from the query.
+#' Retrieves non-CO2 emissions data based on large queries.
+#'
+#' This function allows you to specify and fetch non-CO2 emissions data from a GCAM project or database.
+#'
+#' @param db_path Path to the GCAM database. Required for accessing the database.
+#' @param db_name Name of the GCAM database. Required for identifying the database.
+#' @param prj_name Name of the GCAM project. Can be an existing project or a new one. Accepts extensions such as .dat and .proj.
+#' @param scenarios Names of the scenarios to consider. Defaults to all scenarios available in the project or database.
+#' @param type Type of non-CO2 emissions query. Must be one of 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.
+#' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
+#' @param GCAM_version GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.
+#' @param queries_nonCO2_file Full path to an XML query file (including file name and extension) for long non-CO2 queries: "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to the nonCO2 query file compatible with the specified `GCAM_version`.
+#'
+#' @return A dataframe containing the data retrieved from the specified non-CO2 emissions query.
 #' @export
 data_query <- function(type, db_path, db_name, prj_name, scenarios,
                        desired_regions = "All", GCAM_version = 'v7.0',
-                       queries_nonCO2_file) {
+                       queries_nonCO2_file = NULL) {
   if (identical(desired_regions, "All")) {
     desired_regions <- NULL
   }
 
   dt <- data.frame()
-  if (is.list(queries_nonCO2_file)) {
-    xml <- transform_to_xml(queries_nonCO2_file)
+
+  if(is.null(queries_nonCO2_file)) {
+    xml <- transform_to_xml(get(paste('queries_general',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
   } else {
     xml <- xml2::read_xml(queries_nonCO2_file)
   }
@@ -75,13 +76,15 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios,
 
 #' load_project
 #'
-#' Load specified project into the global environment
-#' @param project_path path of the project (including project name and extension).
-#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-#' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param scenarios name of the scenarios to be considered. By default, all the scenarios in the project are considered.
-#' @return loaded project into global environment.
+#' Loads a specified GCAM project into the global environment.
+#'
+#' This function imports a GCAM project from the specified path and makes it available in the global environment.
+#'
+#' @param project_path Full path to the GCAM project file, including the project name and extension (e.g., .dat, .proj). This file is loaded into the global environment.
+#' @param desired_regions Regions to include in the project data. Defaults to 'All'. Specify a vector to include specific regions. To view available regions, run `available_regions()`. Note: Only the specified regions will be included in the dataset, forming the "World" for the project.
+#' @param scenarios Names of the scenarios to consider from the project. Defaults to all scenarios available within the project. If specific scenarios are needed, provide a vector of scenario names.
+#'
+#' @return The function loads the specified GCAM project into the global environment. It does not return a value, but the project data becomes available for use in further analysis or reporting.
 #' @export
 load_project <- function(project_path, desired_regions = "All", scenarios = NULL) {
   # rm variable "prj" from the environment if exists
@@ -127,26 +130,21 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
 
 #' create_project
 #'
-#' Create specified project and load it into the global environment
-#' @param db_path path of the database.
-#' @param db_name name of the database.
-#' @param prj_name name of the project.
-#' @param scenarios name of the scenarios to be considered. By default, all the scenarios in the database are considered.
-#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-#' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param desired_variables desired variables to have in the report. Considered 'All' by default.
-#' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-#' In case the project dataset needs to be created, it will be produced with only the specified variables. ATTENTION:
-#' the global variables such as "Emissions" will be computed considering only the selected variables, for instance "Emissions|CO2",
-#' and will no account for other variables, such as "Emissions|CH4" or "Emissions|NH3".
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
-#' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
-#' gcamreport general query file, compatible with the latest GCAM version and able to report all standardized variables.
-#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
-#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.
-#' @return loaded project into global environment and local saved project.
+#' Creates and loads a specified GCAM project into the global environment.
+#'
+#' This function allows for the creation of a new GCAM project or loading an existing one. It sets up the project with specified scenarios, regions, and variables, and saves it locally if needed. The project is then made available in the global environment for further use.
+#'
+#' @param db_path Optional. Full path to the GCAM database. Required if creating a new project.
+#' @param db_name Optional. Name of the GCAM database. Required if creating a new project.
+#' @param prj_name Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.
+#' @param scenarios Names of the scenarios to include. Defaults to all scenarios available in the project or database.
+#' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, forming the "World" for the project.
+#' @param desired_variables Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. For example, selecting "Emissions" and "Emissions|CO2" will make "Emissions" account only for "Emissions|CO2", excluding other variables such as "Emissions|CH4" or "Emissions|NH3".
+#' @param GCAM_version GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.
+#' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
+#' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
+#'
+#' @return Loads the specified project into the global environment and saves the project locally if it is created. The function sets up the project with the given parameters and makes it available for further analysis and reporting.
 #' @export
 create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
                            desired_regions = "All", desired_variables = "All",
@@ -332,12 +330,17 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 
 #' load_variable
 #'
-#' Recursive function to load the desired variable and its dependent variables
-#' @param var variable to be loaded.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
-#' @param GWP_version Global Warming Potential values version: AR5 (default), AR6, or AR4.
+#' Recursively loads the specified variable and its dependent variables.
+#'
+#' This internal function is used to load a given variable from the GCAM project along with any dependent variables that are required for its proper context and calculations.
+#'
+#' @param var The name of the variable to be loaded. This should be specified as a character string.
+#' @param GCAM_version The version of GCAM to use. Options are 'v7.0' (default) or 'v6.0'.
+#' @param GWP_version The version of Global Warming Potential (GWP) values to use. Options are 'AR5' (default), 'AR6', or 'AR4'.
+#'
+#' @return Loads the specified variable and its dependencies into the environment. This function does not return a value but ensures that the variable and its dependencies are available for further processing.
+#'
 #' @keywords internal
-#' @return load variable.
 #' @export
 load_variable <- function(var, GCAM_version = "v7.0", GWP_version = 'AR5') {
   # base case: if variable already loaded, return
@@ -374,12 +377,17 @@ load_variable <- function(var, GCAM_version = "v7.0", GWP_version = 'AR5') {
 
 #' load_query
 #'
-#' Recursive function to load the necessary queries for the desired variables
-#' @param var variable to be loaded.
-#' @param base_data dataframe with the required internal variables.
-#' @param final_queries vector of the queries to be loaded.
+#' Recursively loads the necessary queries for the specified variables.
+#'
+#' This internal function is used to recursively load queries required for a given variable and its dependencies. It ensures that all necessary queries are available for processing the specified variables.
+#'
+#' @param var The name of the variable for which queries are to be loaded. This should be provided as a character string.
+#' @param base_data A dataframe containing the internal variables required for the queries. This dataframe should include necessary context and metadata for query loading.
+#' @param final_queries A vector of query names or identifiers that need to be loaded. This parameter specifies which queries are to be retrieved for the variable.
+#'
+#' @return The function ensures that the specified queries are loaded and available. It does not return a value directly but updates the internal state to include the necessary queries.
+#'
 #' @keywords internal
-#' @return query name to be loaded.
 #' @export
 load_query <- function(var, base_data, final_queries) {
   # if the variable has dependencies, load them
@@ -402,9 +410,14 @@ load_query <- function(var, base_data, final_queries) {
 
 #' available_regions
 #'
-#' @param print if TRUE, prints all available regions. TRUE by default.
-#' @return Prints a list of all the available regions for the IAMC reporting dataset.
-#' It also returns them as a vector.
+#' Retrieves and optionally prints a list of all available regions for the IAMC reporting dataset.
+#'
+#' This function provides a list of regions that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
+#'
+#' @param print Logical. If TRUE (default), prints the list of available regions to the console. If FALSE, suppresses the printing and only returns the list.
+#'
+#' @return A vector of character strings representing the names of all available regions. If `print` is TRUE, the function also prints this list to the console.
+#'
 #' @export
 available_regions <- function(print = TRUE) {
   continent <- region <- NULL
@@ -424,9 +437,14 @@ available_regions <- function(print = TRUE) {
 
 #' available_continents
 #'
-#' @param print if TRUE, prints all available continents/regions' groups. TRUE by default.
-#' @return Prints a list of all the available continents/regions' groups for the
-#' IAMC reporting dataset. It also returns them as a vector.
+#' Retrieves and optionally prints a list of all available continents/regions' groups for the IAMC reporting dataset.
+#'
+#' This function provides a list of regions' groups that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
+#'
+#' @param print Logical. If TRUE (default), prints the list of available regions' groups. to the console. If FALSE, suppresses the printing and only returns the list.
+#'
+#' @return A vector of character strings representing the names of all available regions' groups. If `print` is TRUE, the function also prints this list to the console.
+#'
 #' @export
 available_continents <- function(print = TRUE) {
   continent <- region <- NULL
@@ -445,9 +463,14 @@ available_continents <- function(print = TRUE) {
 
 #' available_variables
 #'
-#' @param print if TRUE, prints all available variables. TRUE by default.
-#' @return Prints a list of all the available variables for the IAMC reporting dataset.
-#' It also returns them as a vector.
+#' Retrieves and optionally prints a list of all available variables. for the IAMC reporting dataset.
+#'
+#' This function provides a list of variables that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
+#'
+#' @param print Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.
+#'
+#' @return A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.
+#'
 #' @export
 available_variables <- function(print = TRUE) {
   Internal_variable <- NULL
@@ -468,48 +491,36 @@ available_variables <- function(print = TRUE) {
 
 #' generate_report
 #'
-#' Main function. Creates/loads a GCAM project, standardizes the data and saves it
-#' in several forms (RData, CSV, and XLSX), runs vetting verifications, and launches
-#' the User Interface. You can specify the regions and/or variables to be reported and point
-#' either the `db_path`, the `db_name`, the `prj_name`, and `scenarios` to create a new project
-#' and produce the standardized report; or the `prj_name` and `scenarios` to produce the report
-#' of an existing project.
+#' Main function for generating a GCAM project report. This function handles:
+#' - Creating or loading a GCAM project.
+#' - Standardizing the data and saving it in RData, CSV, and XLSX formats.
+#' - Running vetting verifications.
+#' - Launching the User Interface (UI).
+#'
+#' You can specify the regions and/or variables to be reported and provide:
+#' - Either `db_path`, `db_name`, `prj_name`, and `scenarios` to create a new project
+#'   and generate the report.
+#' - Or `prj_name` and `scenarios` to produce a report from an existing project.
+#'
 #' The resulting RData output can be used to manually call `launch_gcamreport_ui`.
-#' @param db_path full path of the GCAM database.
-#' @param db_name name of the GCAM database.
-#' @param prj_name name of the rgcam project. This can be an existing project name, in which case the project will be loaded, or a new project name,
-#' in which case a new project will be created.. Possible extensions: .dat and .proj.
-#' @param scenarios name of the scenarios to be considered. By default, all the scenarios in the project or the database are considered.
-#' @param final_year final year of the data. By default = 2100. ATENTION: final_year must be at least 2025.
-#' @param desired_variables desired variables to have in the report. Considered 'All' by default.
-#' Otherwise, specify a vector with all the desired options. To know all possible options, run `available_variables()`.
-#' In case the project dataset needs to be created, it will be created containing only the specified variables.
-#' ATTENTION: global variables such as "Emissions" will be computed considering only the selected variables. As an example,
-#' if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not
-#' consider other variables, such as "Emissions|CH4" or "Emissions|NH3"
-#' @param desired_regions desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-#' To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-#' In case the project dataset needs to be created, it will be produced with only the specified regions.
-#' @param desired_continents desired continents/regions' groups to consider. By default, 'All'. Otherwise, specify a vector with all
-#' the considered continents/regions' groups. To know all possibilities, run `available_continents()`. ATTENTION: the considered
-#' continents/regions' groups will make up "World". In case the project dataset needs to be created, it will be produced with only the
-#' specified continents/regions' groups.
-#' @param save_output if TRUE, save reporting data in CSV and XLSX formats. If FALSE, do not save data. If 'save_output = CSV' or
-#' 'save_output = XLSX', the data will be only saved in the specified format.
-#' @param output_file file path and name of the saved data. Not used if data not saved. By default, saved in the same directory of the
-#' database or the project file, and using a default name containing the project name with 'standardized' tag.
-#' In case of specifying the `output_file`, introduce a whole path (e.g. /path/to/output/fileName) without extension tag, it will be automatically added.
-#' @param launch_ui if TRUE, launch User Interface, Do not launch it otherwise.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
-#' @param GWP_version GWP_version Global Warming Potential values version: AR5 (default), AR6, or AR4.
-#' @param queries_general_file full path to a general xml query file (including file name and extension). By default it points to the
-#' gcamreport general query file compatible with the indicated `GCAM_version` and able to report all standardized variables.
-#' @param queries_nonCO2_file full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
-#' "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-#' gcamreport nonCO2 query file, compatible with the indicated `GCAM_version` and necessary to report some of the standardized variables.
-#' @return RData, CSV, and XLSX saved datafiles with the desired standardized variables, launches user interface, and save the rgcam
-#' project file (if created).
-#' @import dplyr
+#'
+#' @param db_path Full path to the GCAM database. Required if creating a new project.
+#' @param db_name Name of the GCAM database. Required if creating a new project.
+#' @param prj_name Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.
+#' @param scenarios Names of the scenarios to consider. Defaults to all scenarios in the project or database.
+#' @param final_year Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025.
+#' @param desired_variables Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".
+#' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
+#' @param desired_continents Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".
+#' @param save_output If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.
+#' @param output_file File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.
+#' @param launch_ui If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.
+#' @param GCAM_version GCAM version to use: 'v7.0' (default) or 'v6.0'.
+#' @param GWP_version Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
+#' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
+#'
+#' @return Saves RData, CSV, and XLSX files with standardized variables, launches the user interface, and saves the GCAM project file if created.
 #' @export
 generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios = NULL, final_year = 2100,
                             desired_variables = "All", desired_regions = "All", desired_continents = "All",
@@ -795,12 +806,15 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 
 #' launch_gcamreport_ui
 #'
-#' Launch shiny interactive user interface.
-#' @param data_path RData dataset path containing the standardized data. You can obtain
-#' this dataset by using the function `gcamreport::generate_report`.
-#' @param data dataset containing the standardized data. You can obtain
-#' this dataset by using the function `gcamreport::generate_report`.
-#' @return launch shiny interactive ui.
+#' Launches the Shiny interactive user interface for exploring GCAM report data.
+#'
+#' This function starts a Shiny application that provides an interactive interface for exploring and analyzing the standardized data generated by the `gcamreport::generate_report` function.
+#'
+#' @param data_path Optional. Path to an RData file containing the standardized data. If provided, this file will be used to load the data into the Shiny application. You can obtain this dataset using `gcamreport::generate_report`.
+#' @param data Optional. An R dataframe or list containing the standardized data. If provided, this data will be used directly in the Shiny application. You can obtain this dataset using `gcamreport::generate_report`.
+#'
+#' @return Launches the Shiny interactive UI. This function does not return a value but starts the Shiny application for user interaction.
+#'
 #' @export
 launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
   # check the user input

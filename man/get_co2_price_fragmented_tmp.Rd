@@ -10,10 +10,10 @@ get_co2_price_fragmented_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-co2_price_fragmented global variable
+`co2_price_fragmented` global variable
 }
 \description{
-Get fragmented co2 price.
+Retrieve CO2 fragmented price.
 }
 \keyword{co2}
 \keyword{internal}

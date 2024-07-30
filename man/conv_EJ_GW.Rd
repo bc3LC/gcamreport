@@ -7,16 +7,16 @@
 conv_EJ_GW(data, cf, EJ, GCAM_version = "v7.0")
 }
 \arguments{
-\item{data}{dataset}
+\item{data}{Dataset containing energy data.}
 
-\item{cf}{conversion factor}
+\item{cf}{Conversion factor for EJ to GW.}
 
-\item{EJ}{EJ amount}
+\item{EJ}{Amount of energy in EJ.}
 
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \description{
-Covert EJ to GW
+Converts energy from EJ to GW.
 }
 \keyword{conversion}
 \keyword{internal}

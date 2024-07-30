@@ -7,13 +7,12 @@
 transform_to_xml(parsed_queries_list)
 }
 \arguments{
-\item{parsed_queries_list}{parsed list of queries}
+\item{parsed_queries_list}{List of parsed queries.}
 }
 \value{
-xml document containing the given queries list
+XML document generated from the provided queries list.
 }
 \description{
-Return xml document from a given queries list
+Converts a list of parsed queries into an XML document.
 }
 \keyword{internal}
-\keyword{utils}

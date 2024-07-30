@@ -10,10 +10,10 @@ get_elec_cf_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-elec_cf global variable
+`elec_cf``` global variable
 }
 \description{
-Calculate future capacity using GCAM
+Computes future capacity estimates using GCAM.
 }
 \keyword{capacity}
 \keyword{internal}

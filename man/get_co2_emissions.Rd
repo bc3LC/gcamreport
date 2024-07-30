@@ -7,10 +7,10 @@
 get_co2_emissions()
 }
 \value{
-co2_emissions_clean global variable
+`co2_emissions_clean` global variable.
 }
 \description{
-Combine CO2 emission queries.
+Combines CO2 emission queries into a single dataset.
 }
 \keyword{co2}
 \keyword{internal}

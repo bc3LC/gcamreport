@@ -2,15 +2,18 @@
 % Please edit documentation in R/functions.R
 \name{filter_data_regions}
 \alias{filter_data_regions}
-\title{filter_data_regions}
+\title{Filter data by desired regions.}
 \usage{
 filter_data_regions(data)
 }
+\arguments{
+\item{data}{The dataset to be filtered.}
+}
 \value{
-data containing only the desired regions
+A subset of the original data containing only the specified regions.
 }
 \description{
-filter the desired regions of some data with "regions" column
+This function filters a dataset based on the specified regions listed in the "regions" column.
 }
 \keyword{internal}
 \keyword{process}

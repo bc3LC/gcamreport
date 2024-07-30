@@ -7,10 +7,10 @@
 get_energy_trade()
 }
 \value{
-energy_trade_clean global variable
+`energy_trade_clean` global variable
 }
 \description{
-Get energy trade supply.
+Retrieve energy trade.
 }
 \keyword{energy}
 \keyword{internal}

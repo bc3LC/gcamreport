@@ -7,10 +7,10 @@
 get_secondary_solids()
 }
 \value{
-secondary_solids global variable
+`secondary_solids` global variable
 }
 \description{
-Get secondary solids
+Retrieve secondary solids.
 }
 \keyword{energy}
 \keyword{internal}

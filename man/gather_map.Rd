@@ -7,6 +7,6 @@
 gather_map(df)
 }
 \description{
-Formats all maps into a long table
+Formats multiple maps into a long-format table.
 }
 \keyword{internal}

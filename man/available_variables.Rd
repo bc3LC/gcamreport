@@ -7,12 +7,14 @@
 available_variables(print = TRUE)
 }
 \arguments{
-\item{print}{if TRUE, prints all available variables. TRUE by default.}
+\item{print}{Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.}
 }
 \value{
-Prints a list of all the available variables for the IAMC reporting dataset.
-It also returns them as a vector.
+A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.
 }
 \description{
-available_variables
+Retrieves and optionally prints a list of all available variables. for the IAMC reporting dataset.
+}
+\details{
+This function provides a list of variables that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 }

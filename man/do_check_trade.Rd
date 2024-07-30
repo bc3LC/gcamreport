@@ -7,7 +7,7 @@
 do_check_trade()
 }
 \value{
-Verification message indicating if the process was successful.
+A message confirming global trade is right.
 }
 \description{
 Check global trade is zero.

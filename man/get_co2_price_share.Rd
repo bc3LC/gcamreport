@@ -2,19 +2,19 @@
 % Please edit documentation in R/functions.R
 \name{get_co2_price_share}
 \alias{get_co2_price_share}
-\title{get_co2_price_share}
+\title{Get CO2 Price Share}
 \usage{
 get_co2_price_share(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{The GCAM version to use: v7.0 (default) or v6.0.}
 }
 \value{
-co2_price_share_byreg and co2_price_share_bysec global variables
+Global variables `co2_price_share_byreg` and `co2_price_share_bysec` containing CO2 price shares by region and sector, respectively.
 }
 \description{
-Get co2 price between CO2 and CO2_ETS. If only one CO2 type present, share = 1;
-otherwise, each type has the share corresponding to the last historical year
+Retrieves the CO2 price distribution between CO2 and CO2_ETS. If only one CO2 type is present, the share is set to 1.
+If both types are present, the share is determined based on the last historical year for each type.
 }
 \keyword{co2}
 \keyword{internal}

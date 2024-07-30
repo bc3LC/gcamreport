@@ -10,7 +10,7 @@ get_land(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-land_clean global variable
+`land_clean` global variable.
 }
 \description{
 Get land use area.

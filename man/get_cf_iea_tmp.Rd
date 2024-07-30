@@ -10,7 +10,7 @@ get_cf_iea_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-cf_iea global variable
+`cf_iea``` global variable
 }
 \description{
 Calculate cf for existing capacity checking global existing capacity from IEA.

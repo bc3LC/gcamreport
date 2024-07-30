@@ -7,15 +7,14 @@
 filter_variables(data, variable)
 }
 \arguments{
-\item{data}{dataframe to be filtered}
+\item{data}{Dataframe to filter.}
 
-\item{variable}{variable that requires this data}
+\item{variable}{Variable to use for filtering.}
 }
 \value{
-filtered dataframe
+Filtered dataframe.
 }
 \description{
-filter the desired regions of a GCAM project
+Filters a dataframe based on specified variables.
 }
 \keyword{internal}
-\keyword{utils}

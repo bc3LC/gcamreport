@@ -7,7 +7,7 @@
 get_energy_price()
 }
 \value{
-energy_price_clean global variable
+`energy_price_clean``` global variable
 }
 \description{
 Compute final energy price

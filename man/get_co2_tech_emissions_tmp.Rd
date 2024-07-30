@@ -7,13 +7,13 @@
 get_co2_tech_emissions_tmp(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version to use: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-co2_tech_emissions global variable
+`co2_tech_emissions` global variable.
 }
 \description{
-Get no bio CO2 emissions query by sector, subsector, and techonolgy.
+Retrieves the non-bio CO2 emissions query by sector, subsector, and technology.
 }
 \keyword{co2}
 \keyword{internal}

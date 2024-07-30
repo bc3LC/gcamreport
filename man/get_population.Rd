@@ -7,13 +7,13 @@
 get_population(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-population_clean global variable
+`population_clean` global variable.
 }
 \description{
-Get population query and change units to [million].
+Retrieves the population query and converts units to millions.
 }
 \keyword{internal}
 \keyword{population}

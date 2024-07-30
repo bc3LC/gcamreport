@@ -10,10 +10,10 @@ get_prices_subsector(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-prices_subsector global variable
+`prices_subsector` global variable
 }
 \description{
-Get energy prices - primary, secondary, and final
+Retreive primary, secondary, and final energy prices.
 }
 \keyword{internal}
 \keyword{prices}

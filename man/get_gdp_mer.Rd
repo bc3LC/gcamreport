@@ -7,13 +7,13 @@
 get_gdp_mer(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-GDP_MER_clean global variable
+`GDP_MER_clean` global variable.
 }
 \description{
-Get GDP (MER) query and change units to [10USD].
+Retrieves GDP (MER) data and converts units to 10 USD.
 }
 \keyword{GDP}
 \keyword{internal}

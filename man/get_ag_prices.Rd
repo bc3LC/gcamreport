@@ -10,10 +10,10 @@ get_ag_prices(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-ag_prices_clean global variable
+`ag_prices_clean` global variable
 }
 \description{
-Calculate average mean for ag global index
+Calculate average mean for agricultural global index.
 }
 \keyword{ag}
 \keyword{internal}

@@ -10,10 +10,10 @@ get_resource_investment(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-resource_investment_clean global variable
+`resource_investment_clean``` global variable
 }
 \description{
-Calculate investment of resource production
+Calculate investment of resource production.
 }
 \keyword{internal}
 \keyword{investment}

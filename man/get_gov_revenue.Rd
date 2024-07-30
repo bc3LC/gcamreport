@@ -7,10 +7,10 @@
 get_gov_revenue()
 }
 \value{
-gov_revenue_all global variable
+`gov_revenue_all``` global variable
 }
 \description{
-Get overall carbon revenue.
+Retreive overall carbon revenue.
 }
 \keyword{internal}
 \keyword{revenue}

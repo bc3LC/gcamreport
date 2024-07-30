@@ -7,11 +7,11 @@
 filter_desired_regions(des_reg)
 }
 \arguments{
-\item{des_reg}{vector of the user desired regions}
+\item{des_reg}{Vector of user-specified desired regions.}
 }
 \value{
-vector of the desired regions available in the loaded project
+Vector of desired regions that are available in the loaded project.
 }
 \description{
-Return vector of the desired regions available in the loaded project
+Filters and returns the desired regions available in the loaded project.
 }

@@ -10,7 +10,7 @@ get_regional_emission(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-regional_emission global variable
+`regional_emission``` global variable
 }
 \description{
 Compute regional nonCO2 emission: regional production * nonCO2 coef.

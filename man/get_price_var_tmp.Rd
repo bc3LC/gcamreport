@@ -10,10 +10,10 @@ get_price_var_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-price_var global variable
+`price_var` global variable
 }
 \description{
-Get price variables to compute carbon price.
+Retrieve price variables to compute carbon price.
 }
 \keyword{internal}
 \keyword{process}

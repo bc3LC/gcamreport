@@ -7,10 +7,10 @@
 get_co2_tech_nobio_tmp()
 }
 \value{
-co2_tech_nobio global variable
+`co2_tech_nobio` global variable.
 }
 \description{
-Get no bio CO2 emissions query by sector and techonolgy.
+Retrieves the non-bio CO2 emissions query by sector and technology.
 }
 \keyword{co2}
 \keyword{internal}

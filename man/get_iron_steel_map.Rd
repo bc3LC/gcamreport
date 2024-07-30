@@ -7,10 +7,10 @@
 get_iron_steel_map()
 }
 \value{
-iron_steel_map global variable
+`iron_steel_map` global variable.
 }
 \description{
-Get iron and steel emissions.
+Retrieves the iron and steel emissions data.
 }
 \keyword{internal}
 \keyword{iron}

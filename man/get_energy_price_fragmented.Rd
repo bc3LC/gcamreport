@@ -10,10 +10,10 @@ get_energy_price_fragmented(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-energy_price_fragmented global variable
+`energy_price_fragmented` global variable
 }
 \description{
-Get energy prices fragmented, join by region since price is different.
+Retrieves energy prices fragmented by region and joins them since prices vary by region.
 }
 \keyword{internal}
 \keyword{prices}

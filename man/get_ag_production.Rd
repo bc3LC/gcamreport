@@ -7,7 +7,7 @@
 get_ag_production()
 }
 \value{
-ag_production_clean global variable
+`ag_production_clean` global variable.
 }
 \description{
 Get agricultural production.

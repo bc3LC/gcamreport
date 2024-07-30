@@ -7,10 +7,10 @@
 get_iron_steel_clean()
 }
 \value{
-iron_steel_clean global variable
+`iron_steel_clean` global variable
 }
 \description{
-Get iron steel imports & exports
+Retrieve iron steel imports & exports
 }
 \keyword{industry}
 \keyword{internal}

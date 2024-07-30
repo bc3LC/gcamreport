@@ -7,10 +7,10 @@
 get_total_co2_emissions()
 }
 \value{
-tot_co2_clean global variable
+`tot_co2_clean` global variable.
 }
 \description{
-Compute total CO2 emission.
+Computes the total CO2 emissions.
 }
 \keyword{co2}
 \keyword{internal}

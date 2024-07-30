@@ -7,13 +7,13 @@
 get_temperature(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-global_temp_clean global variable
+`global_temp_clean` global variable.
 }
 \description{
-Get World's mean temperature query.
+Retrieves the global mean temperature query.
 }
 \keyword{internal}
 \keyword{temperature}

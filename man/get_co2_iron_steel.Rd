@@ -7,13 +7,13 @@
 get_co2_iron_steel(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version to use: v7.0 (default) or v6.0.}
 }
 \value{
-co2_tech_ironsteel global variable
+`co2_tech_ironsteel` global variable.
 }
 \description{
-Get iron and steel CO2 emissions.
+Retrieves CO2 emissions data for iron and steel.
 }
 \keyword{co2}
 \keyword{internal}

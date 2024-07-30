@@ -7,14 +7,14 @@
 conv_ghg_co2e(data, GCAM_version = "v7.0", GWP_version = "AR5")
 }
 \arguments{
-\item{data}{dataset}
+\item{data}{Dataset containing GHG emissions.}
 
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 
-\item{GWP_version}{Global Warming Potential values version: AR5 (default), AR6, or AR4.}
+\item{GWP_version}{Global Warming Potential version: 'AR5' (default), 'AR6', or 'AR4'.}
 }
 \description{
-Covert GHG to CO2e
+Converts GHG emissions to CO2e.
 }
 \keyword{conversion}
 \keyword{internal}

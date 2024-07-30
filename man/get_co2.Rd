@@ -7,13 +7,13 @@
 get_co2(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-co2_clean global variable
+`co2_clean` global variable.
 }
 \description{
-Get World's CO2 emissions query.
+Retrieves the global CO2 emissions query.
 }
 \keyword{co2}
 \keyword{internal}

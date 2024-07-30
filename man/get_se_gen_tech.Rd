@@ -10,10 +10,10 @@ get_se_gen_tech(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-se_gen_tech_clean global variable
+`se_gen_tech_clean` global variable
 }
 \description{
-Get other secondary energy production
+Retrieve other secondary energy production.
 }
 \keyword{energy}
 \keyword{internal}

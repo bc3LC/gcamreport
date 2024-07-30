@@ -7,17 +7,18 @@
 load_project(project_path, desired_regions = "All", scenarios = NULL)
 }
 \arguments{
-\item{project_path}{path of the project (including project name and extension).}
+\item{project_path}{Full path to the GCAM project file, including the project name and extension (e.g., .dat, .proj). This file is loaded into the global environment.}
 
-\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-In case the project dataset needs to be created, it will be produced with only the specified regions.}
+\item{desired_regions}{Regions to include in the project data. Defaults to 'All'. Specify a vector to include specific regions. To view available regions, run `available_regions()`. Note: Only the specified regions will be included in the dataset, forming the "World" for the project.}
 
-\item{scenarios}{name of the scenarios to be considered. By default, all the scenarios in the project are considered.}
+\item{scenarios}{Names of the scenarios to consider from the project. Defaults to all scenarios available within the project. If specific scenarios are needed, provide a vector of scenario names.}
 }
 \value{
-loaded project into global environment.
+The function loads the specified GCAM project into the global environment. It does not return a value, but the project data becomes available for use in further analysis or reporting.
 }
 \description{
-Load specified project into the global environment
+Loads a specified GCAM project into the global environment.
+}
+\details{
+This function imports a GCAM project from the specified path and makes it available in the global environment.
 }

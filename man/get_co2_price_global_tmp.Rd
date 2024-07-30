@@ -10,10 +10,10 @@ get_co2_price_global_tmp(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-co2_price_global & regions global variable
+`co2_price_global` & regions global variable
 }
 \description{
-Get global co2 price.
+Retrieve global co2 price.
 }
 \keyword{co2}
 \keyword{internal}

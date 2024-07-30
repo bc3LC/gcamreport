@@ -7,13 +7,13 @@
 do_bind_results(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{Main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-Save results in an output file.
+Saved results in an output file.
 }
 \description{
-Bind and save results
+Binds results and saves them to an output file.#'
 }
 \keyword{internal}
 \keyword{process}

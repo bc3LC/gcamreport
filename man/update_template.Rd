@@ -7,14 +7,13 @@
 update_template(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{The GCAM version to use: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
-Updated template as .rda and as csv in the inst/extdata folder
+Updated template saved as both .rda and .csv files in the `inst/extdata` folder.
 }
 \description{
-Update the template file. This function checks for new reported variables,
-as well as cleans no-reported variables
+Update the template file by incorporating new reported variables and removing unreported ones.
 }
 \keyword{internal}
 \keyword{template}

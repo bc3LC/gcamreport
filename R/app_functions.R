@@ -5,7 +5,7 @@
 
 #' compute_height
 #'
-#' Return perfect heigh of rendered plots with ungrouped regions
+#' Return perfect height of rendered plots with ungrouped regions
 #' @param reg_all regions' vector
 #' @keywords internal
 #' @export

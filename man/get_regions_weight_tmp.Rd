@@ -7,10 +7,10 @@
 get_regions_weight_tmp()
 }
 \value{
-region_weight global variable
+`region_weight` global variable
 }
 \description{
-Get regions weights to compute carbon price.
+Retrieve regions weights to compute carbon price.
 }
 \keyword{internal}
 \keyword{process}

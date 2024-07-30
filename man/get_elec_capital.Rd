@@ -10,10 +10,10 @@ get_elec_capital(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-elec_capital_clean global variable
+`elec_capital_clean``` global variable
 }
 \description{
-Calculate electricity capital
+Calculate electricity capital.
 }
 \keyword{capital}
 \keyword{internal}

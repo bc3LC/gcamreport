@@ -10,6 +10,6 @@ compute_height(reg_all)
 \item{reg_all}{regions' vector}
 }
 \description{
-Return perfect heigh of rendered plots with ungrouped regions
+Return perfect height of rendered plots with ungrouped regions
 }
 \keyword{internal}

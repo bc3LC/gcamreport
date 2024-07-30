@@ -7,14 +7,13 @@
 approx_fun(year, value, rule = 1)
 }
 \arguments{
-\item{year}{year to consider}
+\item{year}{Year(s) for interpolation or extrapolation.}
 
-\item{value}{values to extrapolate from}
+\item{value}{Values to interpolate or extrapolate from.}
 
-\item{rule}{number of points to extrapolate}
+\item{rule}{Number of points to use for extrapolation.}
 }
 \description{
-Interpolation function
+Performs interpolation or extrapolation on given values.
 }
 \keyword{internal}
-\keyword{utils}

@@ -7,13 +7,13 @@
 get_lu_co2(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version to use: v7.0 (default) or v6.0.}
 }
 \value{
-LU_carbon_clean global variable
+`LU_carbon_clean` global variable.
 }
 \description{
-Get land use CO2 emissions.
+Retrieves land use CO2 emissions data.
 }
 \keyword{co2}
 \keyword{internal}

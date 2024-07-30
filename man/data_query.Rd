@@ -12,33 +12,32 @@ data_query(
   scenarios,
   desired_regions = "All",
   GCAM_version = "v7.0",
-  queries_nonCO2_file
+  queries_nonCO2_file = NULL
 )
 }
 \arguments{
-\item{type}{either 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.}
+\item{type}{Type of non-CO2 emissions query. Must be one of 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.}
 
-\item{db_path}{path of the database.}
+\item{db_path}{Path to the GCAM database. Required for accessing the database.}
 
-\item{db_name}{name of the database.}
+\item{db_name}{Name of the GCAM database. Required for identifying the database.}
 
-\item{prj_name}{name of the project.}
+\item{prj_name}{Name of the GCAM project. Can be an existing project or a new one. Accepts extensions such as .dat and .proj.}
 
-\item{scenarios}{name of the scenarios to be considered.}
+\item{scenarios}{Names of the scenarios to consider. Defaults to all scenarios available in the project or database.}
 
-\item{desired_regions}{desired regions to consider. By default, 'All'. Otherwise, specify a vector with all the considered regions.
-To know all possible regions, run `available_regions()`. ATTENTION: the considered regions will make up "World".
-In case the project dataset needs to be created, it will be produced with only the specified regions.}
+\item{desired_regions}{Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".}
 
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.}
 
-\item{queries_nonCO2_file}{full path to an xml query file (including file name and extension) designed to load long nonCO2 queries:
-"nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". By default it points to the
-gcamreport nonCO2 query file, compatible with the latest GCAM version and necessary to report some of the standardized variables.}
+\item{queries_nonCO2_file}{Full path to an XML query file (including file name and extension) for long non-CO2 queries: "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to the nonCO2 query file compatible with the specified `GCAM_version`.}
 }
 \value{
-dataframe with the data from the query.
+A dataframe containing the data retrieved from the specified non-CO2 emissions query.
 }
 \description{
-Add nonCO2 large queries
+Retrieves non-CO2 emissions data based on large queries.
+}
+\details{
+This function allows you to specify and fetch non-CO2 emissions data from a GCAM project or database.
 }

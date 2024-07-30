@@ -10,10 +10,10 @@ get_energy_service_transportation(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-energy_service_transportation_clean global variable
+`energy_service_transportation_clean` global variable
 }
 \description{
-Get transport.
+Retrieve transport service.
 }
 \keyword{energy}
 \keyword{internal}

@@ -7,10 +7,10 @@
 get_nonbio_tmp()
 }
 \value{
-nonbio_share global variable
+`nonbio_share` global variable.
 }
 \description{
-Get no bio CO2 emissions query by sector.
+Retrieves the non-bio CO2 emissions query by sector.
 }
 \keyword{co2}
 \keyword{internal}

@@ -10,10 +10,10 @@ get_industry_production(GCAM_version = "v7.0")
 \item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
 }
 \value{
-industry_production_clean global variable
+`industry_production_clean` global variable
 }
 \description{
-Get industry production.
+Retrieve industry production.
 }
 \keyword{energy}
 \keyword{internal}
