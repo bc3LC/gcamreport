@@ -520,6 +520,36 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   # boolean variable
   prj_loaded <- FALSE
 
+  # check that GCAM_version is available
+  if (is.character(GCAM_version)) {
+    if (!GCAM_version %in% gcamreport::available_GCAM_versions) {
+      stop(sprintf(
+        "Invalid GCAM_version '%s'. Available versions are: %s. Please choose one of these versions.",
+        GCAM_version, paste(gcamreport::available_GCAM_versions, collapse = ", ")
+      ))
+    }
+  } else {
+    stop(sprintf(
+      "GCAM_version must be a character string, but you provided a value of type '%s'. Please specify the GCAM_version as a string, e.g., GCAM_version = 'v7.0'.",
+      class(GCAM_version)
+    ))
+  }
+
+  # check that GWP_version os available
+  if (is.character(GWP_version)) {
+    if (!GWP_version %in% gcamreport::available_GWP_versions) {
+      stop(sprintf(
+        "Invalid GWP_version '%s'. Available versions are: %s. Please choose one of these versions.",
+        GWP_version, paste(gcamreport::available_GWP_versions, collapse = ", ")
+      ))
+    }
+  } else {
+    stop(sprintf(
+      "GWP_version must be a character string, but you provided a value of type '%s'. Please specify the GWP_version as a string, e.g., GWP_version = 'AR5'.",
+      class(GWP_version)
+    ))
+  }
+
   # check that desired_regions and desired_continents are not specified at the same time
   if (!(identical(desired_regions, "All"))) {
     if (!(identical(desired_continents, "All"))) {
@@ -690,7 +720,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     }
   }
 
-  if (identical(desired_regions, "All") || length(desired_regions) == 32) {
+  if (identical(desired_regions, "All") || length(desired_regions) == gcamreport::GCAM_regions_number) {
     # checks, vetting, and errors summary
     vetting_summary <- list()
     for (ch in variables.global$checks) {
@@ -745,9 +775,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
   # check the user input
   if (is.null(data_path) && is.null(data)) {
-    stop("Specify either the dataset or the dataset path to be considered.")
+    stop("Error: Neither 'data_path' nor 'data' has been provided. Please specify at least one of these: 'data_path' to point to the location of the dataset file or 'data' to provide the dataset directly.")
   } else if (!is.null(data_path) && !is.null(data)) {
-    stop("Specify either the dataset or the dataset path to be considered, not both.")
+    stop("Error: Both 'data_path' and 'data' have been provided. Please specify only one: either 'data_path' to point to the dataset file or 'data' to provide the dataset directly. Providing both is not allowed.")
   }
 
   # load data

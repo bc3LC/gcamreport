@@ -651,6 +651,59 @@ test_that("Test14_v7. ghg GWP", {
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test14.3.RData")))
   testthat::expect_equal(report, testExpect)
 
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GWP_version = 4
+    ),
+    "GWP_version must be a character string, but you provided a value of type 'numeric'. Please specify the GWP_version as a string, e.g., GWP_version = 'AR5'."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GWP_version = '4'
+    ),
+    "Invalid GWP_version '4'. Available versions are: AR4, AR5, AR6. Please choose one of these versions."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = 4
+    ),
+    "GCAM_version must be a character string, but you provided a value of type 'numeric'. Please specify the GCAM_version as a string, e.g., GCAM_version = 'v7.0'."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = '4'
+    ),
+    "Invalid GCAM_version '4'. Available versions are: v6.0, v7.0, v7.1. Please choose one of these versions."
+  )
+
+
 })
 
 

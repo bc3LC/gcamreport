@@ -36,6 +36,42 @@
 #' }
 "emissions_list_v7.0"
 
+#' GCAM_regions_number
+#'
+#' @source local
+#' @format .csv
+#' @description number of GCAM regions
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::GCAM_regions_number
+#' }
+"GCAM_regions_number"
+
+#' available_GCAM_versions
+#'
+#' @source local
+#' @format .csv
+#' @description available GCAM_versions
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::available_GCAM_versions
+#' }
+"available_GCAM_versions"
+
+#' available_GWP_versions
+#'
+#' @source local
+#' @format .csv
+#' @description available GWP_versions
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::available_GWP_versions
+#' }
+"available_GWP_versions"
+
 #' ghg_GWP_AR4
 #'
 #' @source local
