@@ -1,4 +1,4 @@
-zoptions(dplyr.summarise.inform = FALSE)
+options(dplyr.summarise.inform = FALSE)
 
 #########################################################################
 #                           ANCILLARY FUNCTIONS                         #
@@ -397,45 +397,6 @@ get_co2 <- function(GCAM_version = "v7.0") {
 }
 
 
-<<<<<<< HEAD
-=======
-#' get_co2_ets
-#'
-#' Get World's CO2 ETS emissions query.
-#' @param GCAM_version compatible GCAM version: v7.0 (default) or v6.0.
-#' @keywords internal co2
-#' @return co2_ets_by reg and co2_ets_bysec global variables
-#' @importFrom tibble as_tibble
-#' @importFrom rgcam getQuery
-#' @importFrom dplyr filter mutate select left_join group_by summarise ungroup
-#' @importFrom magrittr %>%
-#' @export
-get_co2_ets <- function(GCAM_version = "v7.0") {
-  ghg <- value <- year <- unit_conv <- scenario <- region <- var <- NULL
-
-  co2_ets_byreg <<-
-    as_tibble(getQuery(prj, "nonCO2 emissions by region")) %>%
-    filter(ghg == "CO2_ETS") %>%
-    # change units to CO2 equivalent and set the variable
-    mutate(
-      value = value * gcamreport::convert$CO2_equivalent,
-      var = "Emissions|CO2_ETS|Energy and Industrial Processes"
-    ) %>%
-    select(all_of(gcamreport::long_columns))
-  co2_ets_bysec <<-
-    as_tibble(getQuery(prj, "nonCO2 emissions by sector (excluding resource production)")) %>%
-    filter(ghg == "CO2_ETS") %>%
-    # change units to CO2 equivalent and group by sector
-    left_join(filter_variables(get(paste('co2_ets_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_ets_bysec"), by = "sector", multiple = "all") %>%
-    mutate(value = value * unit_conv) %>%
-    group_by(scenario, region, year, var) %>% #
-    summarise(value = sum(value, na.rm = T)) %>%
-    ungroup() %>%
-    select(all_of(gcamreport::long_columns))
-}
-
-
->>>>>>> dev_newstructure
 # Get CO2 emissions by tech, to break out ships vs rail vs aviation
 # and to get Emissions|CO2|Energy| Coal vs Gas vs Oil.
 # Must create CO2 emissions by tech (no bio) output first to be consistent. There is no query for this
