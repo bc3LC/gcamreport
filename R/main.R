@@ -26,6 +26,8 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios,
 
   if(is.null(queries_nonCO2_file)) {
     xml <- transform_to_xml(get(paste('queries_general',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+  } else if (is.list(queries_nonCO2_file)) {
+    xml <- transform_to_xml(queries_nonCO2_file)
   } else {
     xml <- xml2::read_xml(queries_nonCO2_file)
   }
@@ -677,12 +679,6 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     if (is.null(db_name)) stop("The 'db_name' parameter is required to create a GCAM project but was not specified.")
 
     # create project
-    if(is.null(queries_general_file)) {
-      queries_general_file = get(paste('queries_general',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
-    }
-    if(is.null(queries_nonCO2_file)) {
-      queries_nonCO2_file = get(paste('queries_nonCO2',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
-    }
     create_project(
       db_path = db_path, db_name = db_name, prj_name = prj_name, scenarios = scenarios,
       desired_regions = desired_regions, desired_variables = desired_variables,
