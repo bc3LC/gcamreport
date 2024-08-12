@@ -1437,7 +1437,7 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
     dplyr::filter(year == get(paste('last_historical_year',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
     # dplyr::select only reported sectors and do a right join, so that all sectors are present,
     # even if the value is NA
-    right_join(expand.grid(
+    dplyr::right_join(expand.grid(
       var = c(
         "Emissions|CO2|Energy and Industrial Processes",
         "Emissions|CO2|Energy|Demand|Industry",
@@ -2417,7 +2417,7 @@ do_bind_results <- function(GCAM_version = "v7.0") {
 
   report_pre <<-
     get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
-    inner_join(
+    dplyr::inner_join(
       GCAM_DATA_wGLOBAL %>%
         na.omit() %>%
         tidyr::pivot_wider(names_from = "year", values_from = "value"),
