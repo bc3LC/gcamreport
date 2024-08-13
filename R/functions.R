@@ -2407,7 +2407,7 @@ do_bind_results <- function(GCAM_version = "v7.0") {
   GCAM_DATA_wGLOBAL <-
     GCAM_DATA_WORLD %>%
     dplyr::bind_rows(GCAM_DATA %>% dplyr::filter(!(region == "World" & var %in% unique(GCAM_DATA_WORLD$var)))) %>%
-    tidyr::complete(tidyr::nesting(scenario, region, var), year = get(paste('reporting_years',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
+    tidyr::complete(tidyr::nesting(scenario, region, var), year = gcamreport::available_reporting_years) %>%
     tidyr::replace_na(list(value = 0)) %>%
     dplyr::distinct(.)
 

@@ -70,6 +70,30 @@
 #' }
 "ghg_GWP_AR6"
 
+#' available_reporting_years
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport reporting available years
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::available_reporting_years
+#' }
+"available_reporting_years"
+
+#' available_final_year
+#'
+#' @source local
+#' @format vector
+#' @description gcamreport available final years
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::available_final_year
+#' }
+"available_final_year"
+
 #' global_vet_values
 #'
 #' @source local
@@ -559,26 +583,6 @@
 #' }
 "GHG_gases_v7.0"
 
-#' GCAM_years_v7.0
-#'
-#' @description reporting years compatible with GCAM7.0.
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::GCAM_years_v7.0
-#' }
-"GCAM_years_v7.0"
-
-#' reporting_years_v7.0
-#'
-#' @description reporting years compatible with GCAM7.0.
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::reporting_years_v7.0
-#' }
-"reporting_years_v7.0"
-
 #' last_historical_year_v7.0
 #'
 #' @description last historical year compatible with GCAM7.0.
@@ -1041,26 +1045,6 @@
 #' gcamreport::GHG_gases_v6.0
 #' }
 "GHG_gases_v6.0"
-
-#' GCAM_years_v6.0
-#'
-#' @description reporting years compatible with GCAM6.0.
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::GCAM_years_v6.0
-#' }
-"GCAM_years_v6.0"
-
-#' reporting_years_v6.0
-#'
-#' @description reporting years compatible with GCAM6.0.
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::reporting_years_v6.0
-#' }
-"reporting_years_v6.0"
 
 #' last_historical_year_v6.0
 #'

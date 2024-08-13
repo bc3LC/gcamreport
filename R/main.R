@@ -510,7 +510,7 @@ available_variables <- function(print = TRUE) {
 #' @param db_name Name of the GCAM database. Required if creating a new project.
 #' @param prj_name Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.
 #' @param scenarios Names of the scenarios to consider. Defaults to all scenarios in the project or database.
-#' @param final_year Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025.
+#' @param final_year Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025 and must align with available 5-year intervals, such as 2025, 2030, 2035, 2040, etc.
 #' @param desired_variables Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".
 #' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
 #' @param desired_continents Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".
@@ -549,7 +549,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     ))
   }
 
-  # check that GWP_version os available
+  # check that GWP_version is available
   if (is.character(GWP_version)) {
     if (!GWP_version %in% gcamreport::available_GWP_versions) {
       stop(sprintf(
@@ -562,6 +562,19 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
       "GWP_version must be a character string, but you provided a value of type '%s'. Please specify the GWP_version as a string, e.g., GWP_version = 'AR5'.",
       class(GWP_version)
     ))
+  }
+
+  # check that final_year is >= 2025
+  if (final_year < 2025) {
+    stop(sprintf(
+      "'final_year' is set to '%s' but must be at least 2025. Please select a valid year: '%s.\n",
+      final_year, paste(gcamreport::available_final_year, collapse = ", ")))
+  }
+  # check that final_year is availabe (5-year interval)
+  if (!final_year %in% gcamreport::available_final_year) {
+    stop(sprintf(
+      "'final_year' is set to '%s' but must align with available 5-year intervals. Please select a valid year: '%s.\n",
+      final_year, paste(gcamreport::available_final_year, collapse = ", ")))
   }
 
   # check that desired_regions and desired_continents are not specified at the same time

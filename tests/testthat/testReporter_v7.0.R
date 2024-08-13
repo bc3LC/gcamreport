@@ -362,6 +362,31 @@ test_that("Test8_v7. error messages", {
     ),
     "The desired scenarios Reference3, Reference4 are not present in the loaded project."
   )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.9_noCreated.dat",
+      scenarios = "Reference",
+      final_year = 2009,
+      launch_ui = FALSE
+    ),
+    "'final_year' is set to '2009' but must be at least 2025. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv7.9_noCreated.dat",
+      scenarios = "Reference",
+      final_year = 2031,
+      launch_ui = FALSE
+    ),
+    "'final_year' is set to '2031' but must align with available 5-year intervals. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
+  )
+
 })
 
 test_that("Test9_v7. CO2 Price", {

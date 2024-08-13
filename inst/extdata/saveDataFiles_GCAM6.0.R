@@ -246,12 +246,6 @@ use_data(iron_steel_trade_map_v6.0, overwrite = T)
 
 
 # Reporting years
-GCAM_years_v6.0 <- c(1990, seq(2005, 2100, 5))
-use_data(GCAM_years_v6.0, overwrite = T)
-
-reporting_years_v6.0 <- seq(2005, 2100, 5)
-use_data(reporting_years_v6.0, overwrite = T)
-
 last_historical_year_v6.0 <- 2015
 use_data(last_historical_year_v6.0, overwrite = T)
 

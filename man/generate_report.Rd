@@ -31,7 +31,7 @@ generate_report(
 
 \item{scenarios}{Names of the scenarios to consider. Defaults to all scenarios in the project or database.}
 
-\item{final_year}{Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025.}
+\item{final_year}{Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025 and must align with available 5-year intervals, such as 2025, 2030, 2035, 2040, etc.}
 
 \item{desired_variables}{Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".}
 
