@@ -63,6 +63,3 @@ elec_investment_clean;get_elec_investment;elec_capacity_add;;
 transmission_invest_clean;get_transmission_invest;elec_capacity_add_clean;;
 CCS_invest_clean;get_CCS_invest;co2_sequestration_clean;;
 resource_investment_clean;get_resource_investment;;;resource production by tech and vintage,regional primary energy prices
-iron_steel_imports;get_iron_steel_imports;;;regional iron and steel sources
-iron_steel_exports;get_iron_steel_exports;;;traded iron and steel
-iron_steel_clean;get_iron_steel_clean;iron_steel_imports,iron_steel_exports;;

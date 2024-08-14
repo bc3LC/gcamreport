@@ -25,7 +25,7 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios,
   dt <- data.frame()
 
   if(is.null(queries_nonCO2_file)) {
-    xml <- transform_to_xml(get(paste('queries_general',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+    xml <- transform_to_xml(get(paste('queries_nonCO2',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
   } else if (is.list(queries_nonCO2_file)) {
     xml <- transform_to_xml(queries_nonCO2_file)
   } else {
@@ -194,7 +194,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   if (!(length(desired_variables) == 1 && desired_variables == "All")) {
     # create a mapping with the Variables, Internal variables, functions to load
     # them, and the dependencies
-    required_internal_variables <- gcamreport::var_fun_map %>%
+    required_internal_variables <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
       dplyr::rename("Internal_variable" = "name") %>%
       dplyr::left_join(
         get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
@@ -265,25 +265,39 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   }
 
   # Add 'nonCO2' large queries manually (they are too big to use the usual method)
-  if (!"nonCO2 emissions by sector (excluding resource production)" %in% rgcam::listQueries(prj) &&
-    "nonCO2 emissions by sector (excluding resource production)" %in% names(queries_touse_large)) {
-    rlang::inform("nonCO2 emissions by sector (excluding resource production)")
+  if (
+    (GCAM_version == 'v6.0' &&
+     !"nonCO2 emissions by sector" %in% rgcam::listQueries(prj) &&
+     "nonCO2 emissions by sector" %in% names(queries_touse_large))
+    ||
+    (GCAM_version == 'v7.0' &&
+    !"nonCO2 emissions by sector (excluding resource production)" %in% rgcam::listQueries(prj) &&
+    "nonCO2 emissions by sector (excluding resource production)" %in% names(queries_touse_large))
+    ) {
 
     # rm variable "prj_tmp" from the environment if exists
     if (exists("prj_tmp")) rm(prj_tmp)
 
-    dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)",
-                         db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
-    prj_tmp <- rgcam::addQueryTable(
-      project = prj_name, qdata = dt_sec, saveProj = FALSE,
-      queryname = "nonCO2 emissions by sector (excluding resource production)", clobber = FALSE
-    )
+    if (GCAM_version == 'v6.0') {
+      dt_sec <- data_query("nonCO2 emissions by sector",
+                           db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
+      prj_tmp <- rgcam::addQueryTable(
+        project = prj_name, qdata = dt_sec, saveProj = FALSE,
+        queryname = "nonCO2 emissions by sector", clobber = FALSE
+      )
+    } else if (GCAM_version == 'v7.0') {
+      dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)",
+                           db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
+      prj_tmp <- rgcam::addQueryTable(
+        project = prj_name, qdata = dt_sec, saveProj = FALSE,
+        queryname = "nonCO2 emissions by sector (excluding resource production)", clobber = FALSE
+      )
+    }
     prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
     rm(prj_tmp)
   }
   if (!"nonCO2 emissions by region" %in% rgcam::listQueries(prj) &&
     "nonCO2 emissions by region" %in% names(queries_touse_large)) {
-    rlang::inform("nonCO2 emissions by region")
 
     # rm variable "prj_tmp" from the environment if exists
     if (exists("prj_tmp")) rm(prj_tmp)
@@ -470,14 +484,15 @@ available_continents <- function(print = TRUE) {
 #' This function provides a list of variables that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.
+#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.
 #'
 #' @export
-available_variables <- function(print = TRUE) {
+available_variables <- function(print = TRUE, GCAM_version = "v7.0") {
   Internal_variable <- NULL
 
-  av_var <- gcamreport::template %>%
+  av_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
     dplyr::filter(!is.na(Internal_variable) & Internal_variable != "")
 
   if (print) {
@@ -619,7 +634,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     contains_star <- grepl("\\*", desired_variables)
     if (sum(contains_star) > 0) {
       contains_star <- desired_variables[contains_star]
-      avail_variables <- available_variables(F)
+      avail_variables <- available_variables(print = F, GCAM_version = GCAM_version)
 
       no_pattern <- c()
       for (elem in contains_star) {
@@ -649,7 +664,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     }
 
     # check the user input
-    check_var <- dplyr::setdiff(desired_variables, available_variables(print = FALSE))
+    check_var <- dplyr::setdiff(desired_variables, available_variables(print = FALSE, GCAM_version = GCAM_version))
     if (length(check_var) > 0) {
       tmp <- paste(check_var, collapse = ", ")
       if (length(check_var) > 1) {
@@ -708,8 +723,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_year.global, by = 5)))
 
   # desired variables to have in the report
+  template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
   variables_base <- data.frame(
-    "name" = unique(gcamreport::template$Internal_variable)[!is.na(unique(gcamreport::template$Internal_variable)) & unique(gcamreport::template$Internal_variable) != ""],
+    "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
     "required" = TRUE,
     stringsAsFactors = FALSE
   )
@@ -720,7 +736,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   } else {
     variables.global <<- variables_base %>%
       dplyr::mutate(required = dplyr::if_else(
-        !name %in% unique(gcamreport::template %>%
+        !name %in% unique(get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
                             dplyr::filter(Variable %in% desired_variables) %>%
                             dplyr::pull(Internal_variable)),
         FALSE, required
@@ -730,7 +746,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   rlang::inform("Loading data, performing checks, and saving output...")
 
   # consider the dependencies and checking functions
-  variables.global <<- merge(variables.global, gcamreport::var_fun_map, by = "name", all = TRUE) %>%
+  variables.global <<- merge(variables.global,
+                             get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
+                             by = "name", all = TRUE) %>%
     tidyr::replace_na(list(required = FALSE))
 
   # for all desired variables, load the corresponding data

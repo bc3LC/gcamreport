@@ -4,10 +4,12 @@
 \alias{available_variables}
 \title{available_variables}
 \usage{
-available_variables(print = TRUE)
+available_variables(print = TRUE, GCAM_version = "v7.0")
 }
 \arguments{
 \item{print}{Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.}
+
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
 A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.

@@ -395,10 +395,13 @@ get_co2_concentration <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2 <- function(GCAM_version = "v7.0") {
-  value <- unit_conv <- scenario <- region <- year <- var <- NULL
+  value <- unit_conv <- scenario <- region <- year <- var <- queryItem1 <- NULL
+
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  queryItem1 <- var_fun_map[var_fun_map$name == "co2_clean", "queries"][[1]]
 
   co2_clean <<-
-    tibble::as_tibble(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)")) %>%
+    tibble::as_tibble(rgcam::getQuery(prj, queryItem1)) %>%
     dplyr::left_join(filter_variables(get(paste('co2_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_clean"), by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
@@ -418,16 +421,21 @@ get_co2 <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the non-bio CO2 emissions query by sector.
 #'
+#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
 #' @return `nonbio_share` global variable.
 #' @keywords internal co2
 #' @importFrom magrittr %>%
 #' @export
-get_nonbio_tmp <- function() {
-  value.y <- value.x <- NULL
+get_nonbio_tmp <- function(GCAM_version = "v7.0") {
+  value.y <- value.x <- queryItem1 <- queryItem2 <- NULL
+
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  queryItem1 <- var_fun_map[var_fun_map$name == "nonbio_share", "queries"][[1]][1]
+  queryItem2 <- var_fun_map[var_fun_map$name == "nonbio_share", "queries"][[1]][2]
 
   nonbio_share <<-
-    rgcam::getQuery(prj, "CO2 emissions by sector (excluding resource production)") %>%
-    dplyr::left_join(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)"), by = c("region", "scenario", "year", "sector", "Units")) %>%
+    rgcam::getQuery(prj, queryItem1) %>%
+    dplyr::left_join(rgcam::getQuery(prj, queryItem2), by = c("region", "scenario", "year", "sector", "Units")) %>%
     dplyr::mutate(
       value.y = dplyr::if_else(is.na(value.y), value.x, value.y),
       percent = value.y / value.x
@@ -440,15 +448,19 @@ get_nonbio_tmp <- function() {
 #'
 #' Retrieves the non-bio CO2 emissions query by sector and technology.
 #'
+#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
 #' @return `co2_tech_nobio` global variable.
 #' @keywords internal co2 tmp
 #' @importFrom magrittr %>%
 #' @export
-get_co2_tech_nobio_tmp <- function() {
-  value <- percent <- NULL
+get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
+  value <- percent <- queryItem1 <- NULL
+
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  queryItem1 <- var_fun_map[var_fun_map$name == "co2_tech_nobio", "queries"][[1]]
 
   co2_tech_nobio <<-
-    rgcam::getQuery(prj, "CO2 emissions by tech (excluding resource production)") %>%
+    rgcam::getQuery(prj, queryItem1) %>%
     dplyr::left_join(nonbio_share, by = c("region", "scenario", "year", "sector", "Units")) %>%
     dplyr::mutate(value = value * percent) %>%
     dplyr::select(-percent)
@@ -620,13 +632,18 @@ get_total_co2_emissions <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_nonco2_emissions <- function(GCAM_version = "v7.0") {
-  value <- unit_conv <- scenario <- region <- year <- var <- NULL
+  value <- unit_conv <- scenario <- region <- year <- var <-
+    queryItem1 <- queryItem2 <- NULL
+
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  queryItem1 <- var_fun_map[var_fun_map$name == "nonco2_clean", "queries"][[1]][1]
+  queryItem2 <- var_fun_map[var_fun_map$name == "nonco2_clean", "queries"][[1]][2]
 
   nonco2_clean <<-
-    rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)") %>%
+    rgcam::getQuery(prj, queryItem1) %>%
     dplyr::left_join(filter_variables(get(paste('nonco2_emis_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "nonco2_clean"),
               by = c("ghg", "sector"), multiple = "all") %>%
-    dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
+    dplyr::bind_rows(rgcam::getQuery(prj, queryItem2) %>%
       dplyr::left_join(filter_variables(get(paste('nonco2_emis_resource_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "nonco2_clean"),
                 by = c("ghg", "resource"), multiple = "all")) %>%
     dplyr::mutate(value = value * unit_conv) %>%
@@ -698,15 +715,20 @@ get_ghg <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #' @export
 get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
   ghg <- resource <- subresource <- sector <- variable <- scenario <-
-    region <- var <- year <- value <- NULL
+    region <- var <- year <- value <- queryItem1 <- queryItem2 <- queryItem3 <- NULL
+
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  queryItem1 <- var_fun_map[var_fun_map$name == "ghg_sector_clean", "queries"][[1]][1]
+  queryItem2 <- var_fun_map[var_fun_map$name == "ghg_sector_clean", "queries"][[1]][2]
+  queryItem3 <- var_fun_map[var_fun_map$name == "ghg_sector_clean", "queries"][[1]][3]
 
   ghg_sector_clean <<-
-    rgcam::getQuery(prj, "nonCO2 emissions by sector (excluding resource production)") %>%
+    rgcam::getQuery(prj, queryItem1) %>%
     dplyr::filter(!grepl("CO2", ghg),) %>%
-    dplyr::bind_rows(rgcam::getQuery(prj, "nonCO2 emissions by resource production") %>%
+    dplyr::bind_rows(rgcam::getQuery(prj, queryItem2) %>%
       dplyr::rename(sector = resource) %>%
       dplyr::select(-subresource)) %>%
-    dplyr::bind_rows(rgcam::getQuery(prj, "CO2 emissions by sector (no bio) (excluding resource production)") %>%
+    dplyr::bind_rows(rgcam::getQuery(prj, queryItem3) %>%
       dplyr::mutate(ghg = "CO2")) %>%
     dplyr::mutate(subsector = sector) %>%
     conv_ghg_co2e(GWP_version = GWP_version) %>%

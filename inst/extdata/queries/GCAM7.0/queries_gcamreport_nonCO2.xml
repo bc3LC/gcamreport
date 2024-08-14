@@ -3,7 +3,7 @@
    
       <aQuery>
            	<all-regions/>
-<emissionsQueryBuilder title="nonCO2 emissions by sector (excluding resource production)">
+            <emissionsQueryBuilder title="nonCO2 emissions by sector (excluding resource production)">
                 <axis1 name="GHG">GHG</axis1>
                 <axis2 name="Year">emissions</axis2>
                 <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector']//*[@type = 'GHG' and current_emis]/emissions/node()</xPath>

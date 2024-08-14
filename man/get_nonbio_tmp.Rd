@@ -4,7 +4,10 @@
 \alias{get_nonbio_tmp}
 \title{get_nonbio_tmp}
 \usage{
-get_nonbio_tmp()
+get_nonbio_tmp(GCAM_version = "v7.0")
+}
+\arguments{
+\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
 }
 \value{
 `nonbio_share` global variable.
