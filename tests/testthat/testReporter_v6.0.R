@@ -412,7 +412,7 @@ test_that("Test8_v6. error messages", {
 })
 
 test_that("Test9_v6. CO2 Price", {
-  # # World CO2 price
+  # # World CO2 price - TODO
   # generate_report(
   #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_CO2price_test.dat"),
   #   desired_variables = c("Price|Carbon*"),
@@ -423,15 +423,15 @@ test_that("Test9_v6. CO2 Price", {
   # testthat::expect_equal(report, testResult)
   # rm(list = ls())
 
-  # # Regional CO2 price - TODO
-  # generate_report(
-  #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_policy.dat"),
-  #   desired_variables = c("Price|Carbon*"),
-  #   launch_ui = FALSE,
-  #   GCAM_version = 'v6.0'
-  # )
-  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.2.RData")))
-  # testthat::expect_equal(report, testResult)
+  # Regional CO2 price
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_policy.dat"),
+    desired_variables = c("Price|Carbon*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.2.RData")))
+  testthat::expect_equal(report, testResult)
 })
 
 test_that("Test10_v6. vetting", {
