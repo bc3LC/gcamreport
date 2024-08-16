@@ -1,7 +1,7 @@
-# library(gcamreport)
-# library(testthat)
-# library(magrittr)
-#
+library(gcamreport)
+library(testthat)
+library(magrittr)
+
 # test_that("Test1_v6. download db, create project, and run", {
 #   # load a reference GCAM db form a Zenodo repository
 #   db_path <- file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0")
@@ -39,74 +39,74 @@
 #   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
 #   testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 # })
-#
-# test_that("Test4_v6. run - dataset saved with output_file specified", {
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE,
-#     output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output"), GCAM_version = 'v6.0'
-#   )
-#
-#   testResult1 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output.csv"))
-#   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-#   testResult2 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test4.1.csv"))
-#   testthat::expect_equal(
-#     testResult1 %>%
-#       dplyr::select(-Unit),
-#     testResult2 %>%
-#       dplyr::select(-Unit)
-#   )
-#
-#   testResult1 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output.xlsx"))
-#   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-#   testResult2 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test4.2.xlsx"))
-#   testthat::expect_equal(
-#     testResult1 %>%
-#       dplyr::select(-Unit),
-#     testResult2 %>%
-#       dplyr::select(-Unit)
-#   )
-# })
-#
-# test_that("Test5_v6. run - dataset saved with default output_file", {
-#   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
-#
-#   testResult <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6_standardized.csv"))
-#   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-#
-#   testResult <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6_standardized.xlsx"))
-#   testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-# })
-#
-# test_that("Test6_v6. load variable and get function", {
-#   # load prj
-#   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
-#
-#   # load variables
-#   vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/results_test6.RData")))
-#   loaded_internal_variables.global <<- c()
-#   desired_regions <<- "All"
-#   desired_variables <<- "All"
-#   GCAM_version <- "v6.0"
-#   template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
-#   variables_base <- data.frame(
-#     "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
-#     "required" = TRUE,
-#     stringsAsFactors = FALSE
-#   )
-#   variables.global <<- merge(variables_base, var_fun_map, by = "name", all = TRUE) %>%
-#     tidyr::replace_na(list(required = FALSE))
-#
-#   # test
-#   load_variable(vv, GCAM_version = GCAM_version)
-#
-#   testthat::expect(exists("ag_prices_wld"), "Loading variables function is broken.")
-#
-#   get_elec_capital()
-#   testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
-#   testthat::expect_equal(elec_capital_clean, testResult)
-# })
-#
+
+test_that("Test4_v6. run - dataset saved with output_file specified", {
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE,
+    output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output"), GCAM_version = 'v6.0'
+  )
+
+  testResult1 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output.csv"))
+  testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+  testResult2 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test4.1.csv"))
+  testthat::expect_equal(
+    testResult1 %>%
+      dplyr::select(-Unit),
+    testResult2 %>%
+      dplyr::select(-Unit)
+  )
+
+  testResult1 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test6_output.xlsx"))
+  testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+  testResult2 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test4.2.xlsx"))
+  testthat::expect_equal(
+    testResult1 %>%
+      dplyr::select(-Unit),
+    testResult2 %>%
+      dplyr::select(-Unit)
+  )
+})
+
+test_that("Test5_v6. run - dataset saved with default output_file", {
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
+
+  testResult <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6_standardized.csv"))
+  testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+
+  testResult <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6_standardized.xlsx"))
+  testthat::expect(dplyr::n_distinct(testResult) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+})
+
+test_that("Test6_v6. load variable and get function", {
+  # load prj
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
+
+  # load variables
+  vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/results_test6.RData")))
+  loaded_internal_variables.global <<- c()
+  desired_regions <<- "All"
+  desired_variables <<- "All"
+  GCAM_version <- "v6.0"
+  template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
+  variables_base <- data.frame(
+    "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
+    "required" = TRUE,
+    stringsAsFactors = FALSE
+  )
+  variables.global <<- merge(variables_base, var_fun_map, by = "name", all = TRUE) %>%
+    tidyr::replace_na(list(required = FALSE))
+
+  # test
+  load_variable(vv, GCAM_version = GCAM_version)
+
+  testthat::expect(exists("ag_prices_wld"), "Loading variables function is broken.")
+
+  get_elec_capital()
+  testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.RData")))
+  testthat::expect_equal(elec_capital_clean, testResult)
+})
+
 # test_that("test6_v6. specify variables, regions, continents", {
 #   test_regions <- available_regions(T)
 #   testResult_regions <- c(
