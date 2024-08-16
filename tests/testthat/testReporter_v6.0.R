@@ -13,7 +13,7 @@ test_that("Test1_v6. download db, create project, and run", {
 
   # create the prj
   db_name <- "database_basexdb_ref"
-  prj_name <- "gcamv6.0_test2.dat"
+  prj_name <- "gcamv6.0_test.dat"
   scenarios <- "Reference"
 
   create_project(db_path, db_name, prj_name, scenarios, GCAM_version = 'v6.0')
