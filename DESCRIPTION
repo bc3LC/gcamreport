@@ -37,8 +37,7 @@ Imports:
     writexl,
     readxl,
     rrapply (>= 1.2.6),
-    rpackageutils,
-    data.table
+    rpackageutils
 Suggests:
     knitr,
     rprojroot,

@@ -265,7 +265,7 @@ approx_fun <- function(year, value, rule = 1) {
 #' @importFrom magrittr %>%
 #' @export
 get_population <- function(GCAM_version = "v7.0") {
-  value <- population_clean <- NULL
+  value <- NULL
 
   population_clean <<-
     rgcam::getQuery(prj, "population by region") %>%
@@ -288,7 +288,7 @@ get_population <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_gdp_ppp <- function(GCAM_version = "v7.0") {
-  value <- pop_mill <- GDP_PPP_clean <- NULL
+  value <- pop_mill <- NULL
 
   GDP_PPP_clean <<-
     rgcam::getQuery(prj, "GDP per capita PPP by region") %>%
@@ -310,7 +310,7 @@ get_gdp_ppp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_gdp_mer <- function(GCAM_version = "v7.0") {
-  value <- GDP_MER_clean <- NULL
+  value <- NULL
 
   GDP_MER_clean <<-
     rgcam::getQuery(prj, "GDP MER by region") %>%
@@ -395,7 +395,7 @@ get_co2_concentration <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2 <- function(GCAM_version = "v7.0") {
-  value <- unit_conv <- scenario <- region <- year <- var <- queryItem1 <- co2_clean <- NULL
+  value <- unit_conv <- scenario <- region <- year <- var <- queryItem1 <- NULL
 
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   queryItem1 <- var_fun_map[var_fun_map$name == "co2_clean", "queries"][[1]]
@@ -454,7 +454,7 @@ get_nonbio_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
-  value <- percent <- queryItem1 <- co2_tech_nobio <- NULL
+  value <- percent <- queryItem1 <- NULL
 
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   queryItem1 <- var_fun_map[var_fun_map$name == "co2_tech_nobio", "queries"][[1]]
@@ -477,7 +477,7 @@ get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
-  var <- value <- unit_conv <- scenario <- region <- year <- co2_tech_emissions <- NULL
+  var <- value <- unit_conv <- scenario <- region <- year <- NULL
 
   co2_tech_emissions <<-
     co2_tech_nobio %>%
@@ -504,7 +504,7 @@ get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_map <- function() {
-  sector <- input <- value <- Units <- scenario <- iron_steel_map <- NULL
+  sector <- input <- value <- Units <- scenario <- NULL
 
   iron_steel_map <<-
     rgcam::getQuery(prj, "industry final energy by tech and fuel") %>%
@@ -564,7 +564,7 @@ get_co2_iron_steel <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_lu_co2 <- function(GCAM_version = "v7.0") {
-  year <- scenario <- region <- value <- var <- LU_carbon_clean <- NULL
+  year <- scenario <- region <- value <- var <- NULL
 
   LU_carbon_clean <<-
     # Land use CO2
@@ -591,7 +591,7 @@ get_lu_co2 <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_emissions <- function() {
-  scenario <- region <- year <- var <- value <- co2_emissions_clean <- NULL
+  scenario <- region <- year <- var <- value <- NULL
 
   co2_emissions_clean <<-
     dplyr::bind_rows(co2_clean, LU_carbon_clean, co2_tech_emissions) %>%
@@ -758,7 +758,7 @@ get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_sequestration <- function(GCAM_version = "v7.0") {
-  scenario <- region <- year <- var <- value <- unit_conv <- co2_sequestration_clean <- NULL
+  scenario <- region <- year <- var <- value <- unit_conv <- NULL
 
   co2_sequestration_clean <<- suppressWarnings(
     rgcam::getQuery(prj, "CO2 sequestration by tech") %>%
@@ -896,7 +896,7 @@ get_primary_energy <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_energy_trade_prod <- function() {
-  Units <- resource <- scenario <- region <- year <- value <- energy_trade_prod <- NULL
+  Units <- resource <- scenario <- region <- year <- value <- NULL
 
   energy_trade_prod <<-
     rgcam::getQuery(prj, "resource production") %>%
@@ -920,7 +920,7 @@ get_energy_trade_prod <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_energy_trade_tmp <- function() {
-  market <- resource <- scenario <- region <- year <- value <- energy_trade_supply <- NULL
+  market <- resource <- scenario <- region <- year <- value <- NULL
 
   energy_trade_supply <<- suppressWarnings(
     rgcam::getQuery(prj, "supply of all markets") %>%
@@ -995,7 +995,7 @@ get_elec_gen_tech <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_secondary_solids <- function() {
-  input <- scenario <- region <- year <- value <- secondary_solids <- NULL
+  input <- scenario <- region <- year <- value <- NULL
 
   secondary_solids <<-
     rgcam::getQuery(prj, "inputs by sector") %>%
@@ -1062,7 +1062,7 @@ get_se_gen_tech <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_fe_sector_tmp <- function(GCAM_version = "v7.0") {
-  var <- value <- unit_conv <- scenario <- region <- year <- fe_sector <- NULL
+  var <- value <- unit_conv <- scenario <- region <- year <- NULL
 
   fe_sector <<-
     rgcam::getQuery(prj, "final energy consumption by sector and fuel") %>%
@@ -1090,7 +1090,7 @@ get_fe_sector_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_fe_transportation_tmp <- function(GCAM_version = "v7.0") {
-  var <- value <- unit_conv <- scenario <- region <- year <- fe_transportation <- NULL
+  var <- value <- unit_conv <- scenario <- region <- year <- NULL
 
   fe_transportation <<-
     rgcam::getQuery(prj, "transport final energy by mode and fuel") %>%
@@ -1122,7 +1122,7 @@ get_fe_transportation_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_fe_sector <- function() {
-  scenario <- region <- var <- year <- value <- fe_sector_clean <- NULL
+  scenario <- region <- var <- year <- value <- NULL
 
   fe_sector_clean <<-
     dplyr::bind_rows(fe_sector, fe_transportation) %>%
@@ -1215,7 +1215,7 @@ get_industry_production <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_imports <- function(GCAM_version = "v7.0") {
-  var <- scenario <- region <- year <- value <- iron_steel_imports <- NULL
+  var <- scenario <- region <- year <- value <- NULL
 
   iron_steel_imports <<-
     rgcam::getQuery(prj, "regional iron and steel sources") %>%
@@ -1237,7 +1237,7 @@ get_iron_steel_imports <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_exports <- function(GCAM_version = "v7.0") {
-  var <- scenario <- region <- year <- value <- iron_steel_exports <- NULL
+  var <- scenario <- region <- year <- value <- NULL
 
   iron_steel_exports <<-
     rgcam::getQuery(prj, "traded iron and steel") %>%
@@ -1278,7 +1278,7 @@ get_iron_steel_clean <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
-  var <- scenario <- sector <- year <- value <- ag_prices_wld <- NULL
+  var <- scenario <- sector <- year <- value <- NULL
 
   ag_prices_wld <<-
     rgcam::getQuery(prj, "prices by sector") %>%
@@ -1405,7 +1405,7 @@ get_regions_weight_tmp <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_price_global_tmp <- function(GCAM_version = "v7.0") {
-  market <- value <- co2_price_global_pre <- co2_price_global <- regions <- NULL
+  market <- value <- co2_price_global_pre <- regions <- NULL
 
   co2_price_global_pre <-
     rgcam::getQuery(prj, "CO2 prices") %>%
@@ -1439,8 +1439,8 @@ get_co2_price_global_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_price_share <- function(GCAM_version = "v7.0") {
-  var <- year <- region <- value <- . <- sector <- co2_price_share_byreg <-
-    CO2 <- scenario <- share_CO2 <- co2_price_share_bysec <- NULL
+  var <- year <- region <- value <- . <- sector <-
+    CO2 <- scenario <- share_CO2_ETS <- NULL
 
   co2_price_share_byreg <<- co2_clean %>%
     dplyr::filter(
@@ -1497,8 +1497,8 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
-  market <- Units <- regions <- year <- value <- market_adj <- scenario <- region <-
-    CO2 <- sector <- var <- co2_price_fragmented <- co2_price_fragmented_pre <- NULL
+  market <- Units <- regions <- year <- value <- market_adj <- scenario <-
+    region <- CO2 <- sector <- var <- NULL
 
   co2_price_fragmented_pre <<-
     rgcam::getQuery(prj, "CO2 prices") %>%
@@ -1550,8 +1550,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_price <- function(GCAM_version = "v7.0") {
-  co2_price_clean_pre <- region <- var <- year <- sector <- co2_price_clean <- co2_price_world <-
-    scenario <- market <- value <- share_CO2 <- weighted_value <- co2_price_regional <- NULL
+  co2_price_clean_pre <- region <- var <- year <- NULL
 
   co2_price_clean_pre <-
     dplyr::bind_rows(co2_price_global, co2_price_fragmented)
@@ -1596,7 +1595,7 @@ get_co2_price <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_gov_revenue_sector <- function() {
-  var <- sector <- value <- emiss <- gov_revenue_sector <- NULL
+  var <- sector <- value <- emiss <- NULL
 
   gov_revenue_sector <<-
     co2_clean %>%
@@ -1657,7 +1656,7 @@ get_gov_revenue <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_prices_subsector <- function(GCAM_version = "v7.0") {
-  Units <- subsector <- var <- PrimaryFuelCO2Coef.name <- PrimaryFuelCO2Coef <- prices_subsector <- NULL
+  Units <- subsector <- var <- PrimaryFuelCO2Coef.name <- PrimaryFuelCO2Coef <- NULL
 
   prices_subsector <<-
     rgcam::getQuery(prj, "prices by sector") %>%
@@ -1692,8 +1691,8 @@ get_prices_subsector <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
-  var <- market <- scenario <- region <- year <- energy_price_fragmented <-
-    value <- PrimaryFuelCO2Coef <- price_C <- unit_conv <- CO2_market_filteredReg <- NULL
+  var <- market <- scenario <- region <- year <-
+    value <- PrimaryFuelCO2Coef <- price_C <- unit_conv <- NULL
 
   CO2_market_filteredReg <- filter_data_regions(get(paste('CO2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
 
@@ -1803,8 +1802,6 @@ get_regional_emission <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_energy_price_tmp <- function() {
-  energy_price <- NULL
-
   energy_price <<-
     energy_price_fragmented %>%
     dplyr::select(all_of(gcamreport::long_columns))
@@ -1819,7 +1816,7 @@ get_energy_price_tmp <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_energy_price <- function() {
-  var <- scenario <- region <- value <- year <- energy_price_clean <- NULL
+  var <- scenario <- region <- value <- year <- NULL
 
   energy_price_clean <<-
     energy_price %>%
@@ -2011,7 +2008,7 @@ get_elec_capacity_tot <- function(GCAM_version = "v7.0") {
 #' @export
 get_elec_capacity_add_tmp <- function() {
   output <- technology <- vintage <- scenario <-
-    region <- year <- value <- gw <- EJ <- elec_capacity_add <- NULL
+    region <- year <- value <- gw <- EJ <- NULL
 
   elec_capacity_add <<- suppressWarnings(
     rgcam::getQuery(prj, "elec gen by gen tech and cooling tech and vintage") %>%
@@ -2058,7 +2055,7 @@ get_elec_capacity_add_tmp <- function() {
 #' @export
 get_elec_capacity_add <- function(GCAM_version = "v7.0") {
   output <- EJ <- value <- var <- GW <- unit_conv <- scenario <- vintage <-
-    region <- year <- gw <- output <- technology <- scenario <- elec_capacity_add_clean <- NULL
+    region <- year <- gw <- output <- technology <- scenario <- NULL
 
   # check calculations for this
   elec_capacity_add_clean <<-
@@ -2101,7 +2098,7 @@ get_elec_capacity_add <- function(GCAM_version = "v7.0") {
 #' @export
 get_elec_capital <- function(GCAM_version = "v7.0") {
   sector <- subsector <- technology <- year <- capital.overnight <- output <-
-    var <- value <- unit_conv <- scenario <- region <- elec_capital_clean <- elec_capital <- NULL
+    var <- value <- unit_conv <- scenario <- region <- NULL
 
   cf_rgn_filteredReg <- filter_data_regions(get(paste('cf_rgn',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
 
@@ -2404,11 +2401,9 @@ get_resource_investment <- function(GCAM_version = "v7.0") {
 #' @keywords internal process
 #' @return Saved results in an output file.
 #' @importFrom magrittr %>%
-#' @importFrom data.table :=
 #' @export
 do_bind_results <- function(GCAM_version = "v7.0") {
-  region <- var <- scenario <- year <- value <- . <- na.omit <- Region <- Variable <-
-    report_pre <- report <- NULL
+  region <- var <- scenario <- year <- value <- . <- na.omit <- Region <- Variable <- NULL
 
   vars <- variables.global[variables.global$required == TRUE, "name"]
   GCAM_DATA <-
@@ -2463,7 +2458,7 @@ do_bind_results <- function(GCAM_version = "v7.0") {
   }
 
   report <<- report_pre %>%
-    dplyr::select(dplyr::all_of(reporting_columns.global)) %>%
+    dplyr::select(all_of(reporting_columns.global)) %>%
     dplyr::filter(!is.na(Region)) # Drop variables we don't report
 
   if (!(length(desired_variables) == 1 && desired_variables == "All")) {
@@ -2638,7 +2633,7 @@ do_check_vetting <- function(GCAM_version = "v7.0") {
 #' @keywords internal template
 #' @return Updated template saved as both .rda and .csv files in the `inst/extdata` folder.
 update_template <- function(GCAM_version = "v7.0") {
-  as_output <- Internal_variable <- Variable <- write.csv <- NULL
+  as_output <- Internal_variable <- Variable <- NULL
 
   data <- merge(get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
     data.frame(Variable = unique(report$Variable)) %>%
