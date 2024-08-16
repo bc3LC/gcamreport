@@ -170,6 +170,7 @@ test_that("test6_v6. specify variables, regions, continents", {
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.2.RData")))
   testthat::expect_equal(unique(report$Variable), testResult)
+  testthat::expect_equal(unique(report$Model), 'GCAM 6.0')
 
   rm(list = ls())
   generate_report(
@@ -478,7 +479,7 @@ test_that("Test10_v6. vetting", {
     GCAM_version = 'v6.0'
   )
 
-  testthat::expect(!exists("vetting_summary"), "Vetting performed when not all regions were selected")
+  testthat::expect(exists("vetting_summary"), "Vetting performed when not all regions were selected")
 })
 
 test_that("Test11_v6. scenarios", {

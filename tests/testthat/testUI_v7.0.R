@@ -169,6 +169,8 @@ test_that("Test5. do_data_sample", {
 test_that("Test6. update_user_choices_plot", {
 
   # update_user_choices_plot
+  firstReg <- firstVars <- T
+  noReg <- noVars <- F
   selected_scen <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_6.selected_scen.RData")))
   selected_years <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_6.selected_years.RData")))
   sidebarItemExpanded <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test_ui_6.sidebarItemExpanded.RData")))

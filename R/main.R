@@ -772,7 +772,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   }
 
   # bind and save results
-  do_bind_results()
+  do_bind_results(GCAM_version)
   save(report, file = paste0(output_file, ".RData"))
 
   if (save_output == TRUE || save_output %in% c("CSV", "XLSX")) {

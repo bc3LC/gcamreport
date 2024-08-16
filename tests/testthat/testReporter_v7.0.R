@@ -166,6 +166,7 @@ test_that("Test7_v7. specify variables, regions, continents", {
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test7.2.RData")))
   testthat::expect_equal(unique(report$Variable), testResult)
+  testthat::expect_equal(unique(report$Model), 'GCAM 7.0')
 
   rm(list = ls())
   generate_report(
