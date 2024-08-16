@@ -587,18 +587,18 @@ test_that("Test11_v6. scenarios", {
   testResult <- rgcam::listScenarios(prj)
   testthat::expect_equal("Reference", testResult)
 
-  # generate_report( -- TODO
-  #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_ssps.dat"),
-  #   final_year = 2030,
-  #   scenarios = "SSP2",
-  #   desired_regions = "USA",
-  #   desired_variables = "Emissions|CH4*",
-  #   launch_ui = FALSE,
-  #   GCAM_version = 'v6.0'
-  # )
-  #
-  # testResult <- rgcam::listScenarios(prj)
-  # testthat::expect_equal("SSP2", testResult)
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_ssps.dat"),
+    final_year = 2030,
+    scenarios = "GCAM_SSP4",
+    desired_regions = "USA",
+    desired_variables = "Emissions|CH4*",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("GCAM_SSP4", testResult)
 })
 
 
