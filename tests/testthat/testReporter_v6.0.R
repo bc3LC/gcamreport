@@ -78,28 +78,28 @@ test_that("Test5_v6. run - dataset saved with default output_file", {
 })
 
 test_that("Test6_v6. load variable and get function", {
-  # # load prj
-  # generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
-  #
-  # # load variables
-  # vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.RData")))
-  # loaded_internal_variables.global <<- c()
-  # desired_regions <<- "All"
-  # desired_variables <<- "All"
-  # GCAM_version <- "v6.0"
-  # template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
-  # variables_base <- data.frame(
-  #   "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
-  #   "required" = TRUE,
-  #   stringsAsFactors = FALSE
-  # )
-  # variables.global <<- merge(variables_base, var_fun_map, by = "name", all = TRUE) %>%
-  #   tidyr::replace_na(list(required = FALSE))
-  #
-  # # test
-  # load_variable(vv, GCAM_version = GCAM_version)
-  #
-  # testthat::expect(exists("ag_prices_wld"), "Loading variables function is broken.")
+  # load prj
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
+
+  # load variables
+  vv <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.RData")))
+  loaded_internal_variables.global <<- c()
+  desired_regions <<- "All"
+  desired_variables <<- "All"
+  GCAM_version <- "v6.0"
+  template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
+  variables_base <- data.frame(
+    "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
+    "required" = TRUE,
+    stringsAsFactors = FALSE
+  )
+  variables.global <<- merge(variables_base, var_fun_map, by = "name", all = TRUE) %>%
+    tidyr::replace_na(list(required = FALSE))
+
+  # test
+  load_variable(vv, GCAM_version = GCAM_version)
+
+  testthat::expect(exists("ag_prices_wld"), "Loading variables function is broken.")
   rm(list = ls())
 
   get_elec_capital()
