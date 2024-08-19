@@ -411,77 +411,77 @@ test_that("Test8_v6. error messages", {
 
 })
 
-# test_that("Test9_v6. CO2 Price", {
-#   # # World CO2 price - TODO
-#   # generate_report(
-#   #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_CO2price_test.dat"),
-#   #   desired_variables = c("Price|Carbon*"),
-#   #   launch_ui = FALSE,
-#   #   GCAM_version = 'v6.0'
-#   # )
-#   # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.1.RData")))
-#   # testthat::expect_equal(report, testResult)
-#   # rm(list = ls())
-#
-#   # Regional CO2 price
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_policy.dat"),
-#     desired_variables = c("Price|Carbon*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.2.RData")))
-#   testthat::expect_equal(report, testResult)
-# })
-#
-# test_that("Test10_v6. vetting", {
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.10.1_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "All",
-#     desired_variables = c("Emissions|CH4*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test10.1.RData")))
-#   testthat::expect_equal(vetting_summary, testResult)
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.10.2_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "All",
-#     desired_variables = c("Emissions|Sulfur*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test10.2.RData")))
-#   testthat::expect_equal(vetting_summary, testResult)
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.10.3_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "South Africa",
-#     desired_variables = c("Final Energy*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testthat::expect(exists("vetting_summary"), "Vetting performed when not all regions were selected")
-# })
-#
+test_that("Test9_v6. CO2 Price", {
+  # # World CO2 price - TODO
+  # generate_report(
+  #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_CO2price_test.dat"),
+  #   desired_variables = c("Price|Carbon*"),
+  #   launch_ui = FALSE,
+  #   GCAM_version = 'v6.0'
+  # )
+  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.1.RData")))
+  # testthat::expect_equal(report, testResult)
+  # rm(list = ls())
+
+  # Regional CO2 price
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_policy.dat"),
+    desired_variables = c("Price|Carbon*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test9.2.RData")))
+  testthat::expect_equal(report, testResult)
+})
+
+test_that("Test10_v6. vetting", {
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.10.1_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|CH4*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test10.1.RData")))
+  testthat::expect_equal(vetting_summary, testResult)
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.10.2_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|Sulfur*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test10.2.RData")))
+  testthat::expect_equal(vetting_summary, testResult)
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.10.3_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "South Africa",
+    desired_variables = c("Final Energy*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testthat::expect(exists("vetting_summary"), "Vetting performed when not all regions were selected")
+})
+
 # test_that("Test11_v6. scenarios", {
 #   # check when creating project
 #   expect_error(
@@ -600,7 +600,7 @@ test_that("Test8_v6. error messages", {
 #   testResult <- rgcam::listScenarios(prj)
 #   testthat::expect_equal("GCAM_SSP4", testResult)
 # })
-#
+
 #
 # test_that("Test12_v6. other functions", {
 #   # gather_map
