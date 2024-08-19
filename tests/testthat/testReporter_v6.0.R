@@ -107,310 +107,310 @@ test_that("Test6_v6. load variable and get function", {
   testthat::expect_equal(elec_capital_clean, testResult)
 })
 
-# test_that("test6_v6. specify variables, regions, continents", {
-#   test_regions <- available_regions(T)
-#   testResult_regions <- c(
-#     "Africa_Eastern", "Africa_Northern", "Africa_Southern",
-#     "Africa_Western", "Argentina", "Australia_NZ",
-#     "Brazil", "Canada", "Central America and Caribbean",
-#     "Central Asia", "China", "Colombia",
-#     "European Free Trade Association", "EU-12", "EU-15",
-#     "Europe_Eastern", "Europe_Non_EU", "India",
-#     "Indonesia", "Japan", "Mexico",
-#     "Middle East", "Pakistan", "Russia",
-#     "South Africa", "South America_Northern", "South America_Southern",
-#     "South Asia", "South Korea", "Southeast Asia",
-#     "Taiwan", "USA", "World"
-#   )
-#   testthat::expect_equal(test_regions, testResult_regions)
-#
-#   test_continents <- available_continents(T)
-#   testResult_continents <- c("MAF", "LAM", "OECD90", "REF", "ASIA", "World")
-#   testthat::expect_equal(test_continents, testResult_continents)
-#
-#   test_variables <- available_variables(T, GCAM_version = 'v6.0')
-#   testResult_variables <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
-#   testthat::expect_equal(test_variables, testResult_variables)
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.1_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_continents = "OECD90",
-#     desired_variables = available_variables(F, GCAM_version = 'v6.0')[c(1, 3, 10, 11)],
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testthat::expect_equal(unique(report$Variable), c(
-#     "Agricultural Demand",
-#     "Agricultural Demand|Crops|Energy",
-#     "Agricultural Production",
-#     "Capacity Additions|Electricity|Biomass"
-#   ))
-#   testthat::expect_equal(unique(report$Region), c(
-#     "Australia_NZ", "Canada", "EU-12", "EU-15",
-#     "Europe_Non_EU", "European Free Trade Association",
-#     "Japan", "USA", "World"
-#   ))
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.2_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_continents = "OECD90",
-#     desired_variables = "Emissions*",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.2.RData")))
-#   testthat::expect_equal(unique(report$Variable), testResult)
-#   testthat::expect_equal(unique(report$Model), 'GCAM 6.0')
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.3_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "USA",
-#     desired_variables = "Price|Carbon",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.3.RData")))
-#   testthat::expect_equal(unique(report$Variable), testResult)
-#
-#   rm(list = ls())
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "USA",
-#     desired_variables = "Price|Carbon",
-#     launch_ui = FALSE,
-#     save_output = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testthat::expect_equal(unique(report$Region), c("USA", "World"))
-#
-#   rm(list = ls())
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.4_test.dat",
-#     scenarios = "Reference",
-#     final_year = 2050,
-#     desired_regions = "USA",
-#     desired_variables = "Price|Carbon*",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.4.RData")))
-#   testthat::expect_equal(unique(report$Variable), testResult)
-# })
-#
-# test_that("Test8_v6. error messages", {
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = "dummy variable",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The variable dummy variable is not available for reporting."
-#   )
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The variables dummy1, dummy2 are not available for reporting"
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = "Final|Energy*",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "There is no variable containing the pattern Final|Energy* available for reporting."
-#   )
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("Final|Energy*", "Emissions CH4*"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "There are no variables containing the patterns Final|Energy*, Emissions CH4* available for reporting"
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_regions = "dummy region",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired region dummy region is not available for reporting."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_regions = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired regions dummy1, dummy2 are not available for reporting."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_p1.dat",
-#       scenarios = "Reference",
-#       desired_continents = "dummy continent",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired continent/region group dummy continent is not available for reporting."
-#   )
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_p1.dat",
-#       scenarios = "Reference",
-#       desired_continents = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired continent/region groups dummy1, dummy2 are not available for reporting."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_name = "dummy_db_name",
-#       prj_name = "gcamv6.8_p1.dat",
-#       scenarios = "Reference",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The 'db_path' parameter is required to create a GCAM project but was not specified."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       prj_name = "gcamv6.8_p1.dat",
-#       scenarios = "Reference",
-#       launch_ui = FALSE
-#     ),
-#     "The 'db_name' parameter is required to create a GCAM project but was not specified."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = "dummy name",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     'argument "prj_name" is missing, with no default'
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_p1.dat",
-#       scenarios = "Reference",
-#       desired_regions = "dummy region",
-#       desired_continents = "dummy continent",
-#       launch_ui = FALSE
-#     ),
-#     "You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#       scenarios = "Reference3",
-#       desired_regions = "EU-12",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenario Reference3 is not present in the loaded project."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#       scenarios = c("Reference3", "Reference4"),
-#       desired_regions = "EU-12",
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenarios Reference3, Reference4 are not present in the loaded project."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.9_noCreated.dat",
-#       scenarios = "Reference",
-#       final_year = 2009,
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "'final_year' is set to '2009' but must be at least 2025. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.9_noCreated.dat",
-#       scenarios = "Reference",
-#       final_year = 2031,
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "'final_year' is set to '2031' but must align with available 5-year intervals. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
-#   )
-#
-# })
-#
+test_that("test6_v6. specify variables, regions, continents", {
+  test_regions <- available_regions(T)
+  testResult_regions <- c(
+    "Africa_Eastern", "Africa_Northern", "Africa_Southern",
+    "Africa_Western", "Argentina", "Australia_NZ",
+    "Brazil", "Canada", "Central America and Caribbean",
+    "Central Asia", "China", "Colombia",
+    "European Free Trade Association", "EU-12", "EU-15",
+    "Europe_Eastern", "Europe_Non_EU", "India",
+    "Indonesia", "Japan", "Mexico",
+    "Middle East", "Pakistan", "Russia",
+    "South Africa", "South America_Northern", "South America_Southern",
+    "South Asia", "South Korea", "Southeast Asia",
+    "Taiwan", "USA", "World"
+  )
+  testthat::expect_equal(test_regions, testResult_regions)
+
+  test_continents <- available_continents(T)
+  testResult_continents <- c("MAF", "LAM", "OECD90", "REF", "ASIA", "World")
+  testthat::expect_equal(test_continents, testResult_continents)
+
+  test_variables <- available_variables(T, GCAM_version = 'v6.0')
+  testResult_variables <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
+  testthat::expect_equal(test_variables, testResult_variables)
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.1_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_continents = "OECD90",
+    desired_variables = available_variables(F, GCAM_version = 'v6.0')[c(1, 3, 10, 11)],
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testthat::expect_equal(unique(report$Variable), c(
+    "Agricultural Demand",
+    "Agricultural Demand|Crops|Energy",
+    "Agricultural Production",
+    "Capacity Additions|Electricity|Biomass"
+  ))
+  testthat::expect_equal(unique(report$Region), c(
+    "Australia_NZ", "Canada", "EU-12", "EU-15",
+    "Europe_Non_EU", "European Free Trade Association",
+    "Japan", "USA", "World"
+  ))
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.2_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_continents = "OECD90",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.2.RData")))
+  testthat::expect_equal(unique(report$Variable), testResult)
+  testthat::expect_equal(unique(report$Model), 'GCAM 6.0')
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.3_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "USA",
+    desired_variables = "Price|Carbon",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.3.RData")))
+  testthat::expect_equal(unique(report$Variable), testResult)
+
+  rm(list = ls())
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "USA",
+    desired_variables = "Price|Carbon",
+    launch_ui = FALSE,
+    save_output = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testthat::expect_equal(unique(report$Region), c("USA", "World"))
+
+  rm(list = ls())
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.4_test.dat",
+    scenarios = "Reference",
+    final_year = 2050,
+    desired_regions = "USA",
+    desired_variables = "Price|Carbon*",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.4.RData")))
+  testthat::expect_equal(unique(report$Variable), testResult)
+})
+
+test_that("Test8_v6. error messages", {
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = "dummy variable",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The variable dummy variable is not available for reporting."
+  )
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The variables dummy1, dummy2 are not available for reporting"
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = "Final|Energy*",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "There is no variable containing the pattern Final|Energy* available for reporting."
+  )
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("Final|Energy*", "Emissions CH4*"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "There are no variables containing the patterns Final|Energy*, Emissions CH4* available for reporting"
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_regions = "dummy region",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired region dummy region is not available for reporting."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_regions = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired regions dummy1, dummy2 are not available for reporting."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_p1.dat",
+      scenarios = "Reference",
+      desired_continents = "dummy continent",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired continent/region group dummy continent is not available for reporting."
+  )
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_p1.dat",
+      scenarios = "Reference",
+      desired_continents = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired continent/region groups dummy1, dummy2 are not available for reporting."
+  )
+
+  expect_error(
+    generate_report(
+      db_name = "dummy_db_name",
+      prj_name = "gcamv6.8_p1.dat",
+      scenarios = "Reference",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The 'db_path' parameter is required to create a GCAM project but was not specified."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      prj_name = "gcamv6.8_p1.dat",
+      scenarios = "Reference",
+      launch_ui = FALSE
+    ),
+    "The 'db_name' parameter is required to create a GCAM project but was not specified."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = "dummy name",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    'argument "prj_name" is missing, with no default'
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_p1.dat",
+      scenarios = "Reference",
+      desired_regions = "dummy region",
+      desired_continents = "dummy continent",
+      launch_ui = FALSE
+    ),
+    "You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time."
+  )
+
+  expect_error(
+    generate_report(
+      prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+      scenarios = "Reference3",
+      desired_regions = "EU-12",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenario Reference3 is not present in the loaded project."
+  )
+
+  expect_error(
+    generate_report(
+      prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+      scenarios = c("Reference3", "Reference4"),
+      desired_regions = "EU-12",
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenarios Reference3, Reference4 are not present in the loaded project."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.9_noCreated.dat",
+      scenarios = "Reference",
+      final_year = 2009,
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "'final_year' is set to '2009' but must be at least 2025. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.9_noCreated.dat",
+      scenarios = "Reference",
+      final_year = 2031,
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "'final_year' is set to '2031' but must align with available 5-year intervals. Please select a valid year: '2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100."
+  )
+
+})
+
 # test_that("Test9_v6. CO2 Price", {
 #   # # World CO2 price - TODO
 #   # generate_report(
