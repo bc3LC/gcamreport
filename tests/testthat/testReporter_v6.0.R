@@ -653,124 +653,124 @@ test_that("Test12_v6. other functions", {
 
 })
 
-# test_that("Test13_v6. specify queries", {
-#
-#   # transform_to_xml ancillary function
-#   testResult <- transform_to_xml(gcamreport::queries_nonCO2_v6.0)
-#   testExpect <- xml2::read_xml(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test13.1.xml"))
-#   testthat::expect_equal(testResult, testExpect)
-#
-#   # generate standardize report specifying the query file
-#   db_path <- file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0")
-#   db_name <- "database_basexdb_ref"
-#   prj_name <- "gcamv6.0_test_specify_queries.dat"
-#   scenarios <- "Reference"
-#   generate_report(db_path = db_path, db_name = db_name, prj_name = prj_name,
-#                   scenarios = scenarios, final_year = 2050, desired_variables = c('Price|Carbon*'),
-#                   save_output = T, launch_ui = F, GCAM_version = 'v6.0',
-#                   queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/GCAM6.0/queries_gcamreport_general.xml"))
-#   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/gcamv6.0_test_specify_queries_standardized.RData")))
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test13.2.RData")))
-#   testthat::expect_equal(testResult, testExpect)
-#
-# })
-#
-#
-# test_that("Test14_v6. ghg GWP", {
-#
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     final_year = 2050,
-#     scenarios = "Reference",
-#     desired_variables = "Emissions*",
-#     launch_ui = FALSE,
-#     GWP_version = 'AR4',
-#     GCAM_version = 'v6.0'
-#   )
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.1.RData")))
-#   testthat::expect_equal(report, testExpect)
-#
-#   rm(list = ls())
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     final_year = 2050,
-#     scenarios = "Reference",
-#     desired_variables = "Emissions*",
-#     launch_ui = FALSE,
-#     GWP_version = 'AR5',
-#     GCAM_version = 'v6.0'
-#   )
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.2.RData")))
-#   testthat::expect_equal(report, testExpect)
-#
-#   rm(list = ls())
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     final_year = 2050,
-#     scenarios = "Reference",
-#     desired_variables = "Emissions*",
-#     launch_ui = FALSE,
-#     GWP_version = 'AR6',
-#     GCAM_version = 'v6.0'
-#   )
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.3.RData")))
-#   testthat::expect_equal(report, testExpect)
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GWP_version = 4,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "GWP_version must be a character string, but you provided a value of type 'numeric'. Please specify the GWP_version as a string, e.g., GWP_version = 'AR5'."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GWP_version = '4',
-#       GCAM_version = 'v6.0'
-#     ),
-#     "Invalid GWP_version '4'. Available versions are: AR4, AR5, AR6. Please choose one of these versions."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GCAM_version = 4
-#     ),
-#     "GCAM_version must be a character string, but you provided a value of type 'numeric'. Please specify the GCAM_version as a string, e.g., GCAM_version = 'v7.0'."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.8_noCreated.dat",
-#       scenarios = "Reference",
-#       desired_variables = c("dummy1", "dummy2"),
-#       launch_ui = FALSE,
-#       GCAM_version = '4'
-#     ),
-#     "Invalid GCAM_version '4'. Available versions are: v6.0, v7.0, v7.1. Please choose one of these versions."
-#   )
-#
-#
-# })
+test_that("Test13_v6. specify queries", {
+
+  # transform_to_xml ancillary function
+  testResult <- transform_to_xml(gcamreport::queries_nonCO2_v6.0)
+  testExpect <- xml2::read_xml(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test13.1.xml"))
+  testthat::expect_equal(testResult, testExpect)
+
+  # generate standardize report specifying the query file
+  db_path <- file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0")
+  db_name <- "database_basexdb_ref"
+  prj_name <- "gcamv6.0_test_specify_queries.dat"
+  scenarios <- "Reference"
+  generate_report(db_path = db_path, db_name = db_name, prj_name = prj_name,
+                  scenarios = scenarios, final_year = 2050, desired_variables = c('Price|Carbon*'),
+                  save_output = T, launch_ui = F, GCAM_version = 'v6.0',
+                  queries_general_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/queries/GCAM6.0/queries_gcamreport_general.xml"))
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/gcamv6.0_test_specify_queries_standardized.RData")))
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test13.2.RData")))
+  testthat::expect_equal(testResult, testExpect)
+
+})
+
+
+test_that("Test14_v6. ghg GWP", {
+
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    GWP_version = 'AR4',
+    GCAM_version = 'v6.0'
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.1.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  rm(list = ls())
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    GWP_version = 'AR5',
+    GCAM_version = 'v6.0'
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.2.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  rm(list = ls())
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_variables = "Emissions*",
+    launch_ui = FALSE,
+    GWP_version = 'AR6',
+    GCAM_version = 'v6.0'
+  )
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test14.3.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GWP_version = 4,
+      GCAM_version = 'v6.0'
+    ),
+    "GWP_version must be a character string, but you provided a value of type 'numeric'. Please specify the GWP_version as a string, e.g., GWP_version = 'AR5'."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GWP_version = '4',
+      GCAM_version = 'v6.0'
+    ),
+    "Invalid GWP_version '4'. Available versions are: AR4, AR5, AR6. Please choose one of these versions."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = 4
+    ),
+    "GCAM_version must be a character string, but you provided a value of type 'numeric'. Please specify the GCAM_version as a string, e.g., GCAM_version = 'v7.0'."
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.8_noCreated.dat",
+      scenarios = "Reference",
+      desired_variables = c("dummy1", "dummy2"),
+      launch_ui = FALSE,
+      GCAM_version = '4'
+    ),
+    "Invalid GCAM_version '4'. Available versions are: v6.0, v7.0, v7.1. Please choose one of these versions."
+  )
+
+
+})
 
 
