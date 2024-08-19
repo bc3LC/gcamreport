@@ -103,9 +103,9 @@ test_that("Test6_v6. load variable and get function", {
   rm(list = ls())
 
   get_elec_capital()
-  # testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
-  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
-  # testthat::expect_equal(elec_capital_clean, testResult)
+  testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
+  testthat::expect_equal(elec_capital_clean, testResult)
   rm(list = ls())
 })
 #
