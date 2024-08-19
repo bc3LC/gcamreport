@@ -482,177 +482,177 @@ test_that("Test10_v6. vetting", {
   testthat::expect(exists("vetting_summary"), "Vetting performed when not all regions were selected")
 })
 
-# test_that("Test11_v6. scenarios", {
-#   # check when creating project
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.11.1_p1.dat",
-#       scenarios = c("dummy", "Reference"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenario dummy is not present in the database."
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.11.2_p1.dat",
-#       scenarios = c("dummy1", "dummy2", "Reference"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenarios dummy1, dummy2 are not present in the database."
-#   )
-#
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.11.3_test_scenarios.dat",
-#     final_year = 2050,
-#     desired_regions = "All",
-#     desired_variables = c("Emissions|CH4*"),
-#     launch_ui = FALSE
-#   )
-#
-#   testResult <- rgcam::listScenarios(prj)
-#   testthat::expect_equal("Reference", testResult)
-#
-#   # check when loading project
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.11.4_test_scenarios.dat",
-#       scenarios = c("dummy", "Reference"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenario dummy is not present in the database"
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.11.5_test_scenarios.dat",
-#       scenarios = c("dummy1", "dummy2", "Reference"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenarios dummy1, dummy2 are not present in the database"
-#   )
-#
-#   expect_error(
-#     generate_report(
-#       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
-#       db_name = "database_basexdb_ref",
-#       prj_name = "gcamv6.11.5_test.dat",
-#       scenarios = c("dummy1", "dummy2", "Reference"),
-#       launch_ui = FALSE,
-#       GCAM_version = 'v6.0'
-#     ),
-#     "The desired scenarios dummy1, dummy2 are not present in the database"
-#   )
-#
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.11.6_test_scenarios.dat",
-#     final_year = 2050,
-#     desired_regions = "All",
-#     desired_variables = c("Emissions|CH4*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testResult <- rgcam::listScenarios(prj)
-#   testthat::expect_equal("Reference", testResult)
-#
-#
-#   generate_report(
-#     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
-#     db_name = "database_basexdb_ref",
-#     prj_name = "gcamv6.11.7_test_scenarios",
-#     final_year = 2050,
-#     desired_regions = "All",
-#     desired_variables = c("Emissions|CH4*"),
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testResult <- rgcam::listScenarios(prj)
-#   testthat::expect_equal("Reference", testResult)
-#
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_ssps.dat"),
-#     final_year = 2030,
-#     scenarios = "GCAM_SSP4",
-#     desired_regions = "USA",
-#     desired_variables = "Emissions|CH4*",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testResult <- rgcam::listScenarios(prj)
-#   testthat::expect_equal("GCAM_SSP4", testResult)
-# })
+test_that("Test11_v6. scenarios", {
+  # check when creating project
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.11.1_p1.dat",
+      scenarios = c("dummy", "Reference"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenario dummy is not present in the database."
+  )
 
-#
-# test_that("Test12_v6. other functions", {
-#   # gather_map
-#   co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings/GCAM6.0", "CO2_sector_map.csv"),
-#                              skip = 1, na = "",
-#                              stringsAsFactors = FALSE
-#   ) %>% gather_map()
-#
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.1.RData")))
-#   testthat::expect_equal(co2_sector_map, testExpect)
-#
-#   # approx_fun
-#   expect_error(
-#     approx_fun(2030, 3, rule = 3),
-#     "Use fill_exp_decay_extrapolate!"
-#   )
-#
-#   # get_iron_steel_map & get_co2_iron_steel
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     final_year = 2050,
-#     scenarios = "Reference",
-#     desired_regions = "USA",
-#     desired_variables = "Emissions|CO2|Energy|Demand|Industry|Steel",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.2.RData")))
-#   testthat::expect_equal(report, testExpect)
-#
-#   # get_ghg
-#   generate_report(
-#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
-#     final_year = 2050,
-#     scenarios = "Reference",
-#     desired_regions = "USA",
-#     desired_variables = "Emissions|Kyoto Gases*",
-#     launch_ui = FALSE,
-#     GCAM_version = 'v6.0'
-#   )
-#
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.3.RData")))
-#   testthat::expect_equal(report, testExpect)
-#
-#   # get_regional_emission
-#   testResult <- get_regional_emission()
-#   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.4.RData")))
-#   testthat::expect_equal(testResult, testExpect)
-#
-# })
-#
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.11.2_p1.dat",
+      scenarios = c("dummy1", "dummy2", "Reference"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenarios dummy1, dummy2 are not present in the database."
+  )
+
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.11.3_test_scenarios.dat",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|CH4*"),
+    launch_ui = FALSE
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("Reference", testResult)
+
+  # check when loading project
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.11.4_test_scenarios.dat",
+      scenarios = c("dummy", "Reference"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenario dummy is not present in the database"
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.11.5_test_scenarios.dat",
+      scenarios = c("dummy1", "dummy2", "Reference"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenarios dummy1, dummy2 are not present in the database"
+  )
+
+  expect_error(
+    generate_report(
+      db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/"),
+      db_name = "database_basexdb_ref",
+      prj_name = "gcamv6.11.5_test.dat",
+      scenarios = c("dummy1", "dummy2", "Reference"),
+      launch_ui = FALSE,
+      GCAM_version = 'v6.0'
+    ),
+    "The desired scenarios dummy1, dummy2 are not present in the database"
+  )
+
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.11.6_test_scenarios.dat",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|CH4*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("Reference", testResult)
+
+
+  generate_report(
+    db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0"),
+    db_name = "database_basexdb_ref",
+    prj_name = "gcamv6.11.7_test_scenarios",
+    final_year = 2050,
+    desired_regions = "All",
+    desired_variables = c("Emissions|CH4*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("Reference", testResult)
+
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/database_basexdb_ssps.dat"),
+    final_year = 2030,
+    scenarios = "GCAM_SSP4",
+    desired_regions = "USA",
+    desired_variables = "Emissions|CH4*",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("GCAM_SSP4", testResult)
+})
+
+
+test_that("Test12_v6. other functions", {
+  # gather_map
+  co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings/GCAM6.0", "CO2_sector_map.csv"),
+                             skip = 1, na = "",
+                             stringsAsFactors = FALSE
+  ) %>% gather_map()
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.1.RData")))
+  testthat::expect_equal(co2_sector_map, testExpect)
+
+  # approx_fun
+  expect_error(
+    approx_fun(2030, 3, rule = 3),
+    "Use fill_exp_decay_extrapolate!"
+  )
+
+  # get_iron_steel_map & get_co2_iron_steel
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_regions = "USA",
+    desired_variables = "Emissions|CO2|Energy|Demand|Industry|Steel",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.2.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  # get_ghg
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"),
+    final_year = 2050,
+    scenarios = "Reference",
+    desired_regions = "USA",
+    desired_variables = "Emissions|Kyoto Gases*",
+    launch_ui = FALSE,
+    GCAM_version = 'v6.0'
+  )
+
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.3.RData")))
+  testthat::expect_equal(report, testExpect)
+
+  # get_regional_emission
+  testResult <- get_regional_emission()
+  testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test12.4.RData")))
+  testthat::expect_equal(testResult, testExpect)
+
+})
+
 # test_that("Test13_v6. specify queries", {
 #
 #   # transform_to_xml ancillary function
@@ -772,5 +772,5 @@ test_that("Test10_v6. vetting", {
 #
 #
 # })
-#
-#
+
+
