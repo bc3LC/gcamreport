@@ -41,6 +41,7 @@ library(magrittr)
 # })
 
 test_that("Test4_v7. run - dataset saved with output_file specified", {
+  rm(list = ls())
   generate_report(
     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE,
     output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output")
