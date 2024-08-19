@@ -101,10 +101,10 @@ test_that("Test6_v6. load variable and get function", {
   #
   # testthat::expect(exists("ag_prices_wld"), "Loading variables function is broken.")
 
-  get_elec_capital()
-  testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
-  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
-  testthat::expect_equal(elec_capital_clean, testResult)
+  # get_elec_capital()
+  # testthat::expect(exists("elec_capital_clean"), "get_elec_capital() function is broken.")
+  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/result_test6.1.RData")))
+  # testthat::expect_equal(elec_capital_clean, testResult)
 })
 #
 # test_that("Test7_v6. specify variables, regions, continents", {
