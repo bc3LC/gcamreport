@@ -5,6 +5,7 @@ on:
     branches:
       - gcam-v7.0
       - dev
+      - dev_gcam7.1
 
 jobs:
   R-CMD:

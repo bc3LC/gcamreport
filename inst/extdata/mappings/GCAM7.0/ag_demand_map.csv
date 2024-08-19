@@ -8,8 +8,8 @@ regional corn for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricult
 regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
 regional sugar for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
 NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,,,,,,1
-regional beef,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
-regional pork,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
-regional poultry,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
-regional sheepgoat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
 OtherMeat_Fish,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
+FooderHerb_Residue,,,,,,,,,1
+Pasture_FooderGrass,,,,,,,,,1
+regional_forest,,,,,,,,,1
+traded_forest,,,,,,,,,1

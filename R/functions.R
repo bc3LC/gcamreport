@@ -5,6 +5,33 @@ options(summarise.inform = FALSE)
 #########################################################################
 
 
+#' left_join_error_no_match
+#'
+#' A restrictive version of \code{\link{left_join}}. Function from \code{\link{gcamdata}}.
+#'
+#' @param d Data frame (typically from pipeline)
+#' @param ... Rest of call to \code{\link{left_join}}
+#' @param ignore_columns Optional column name(s) to ignore, character vector
+#' @return Joined data.
+#' @details Restrictive version of dplyr::left_join meant for replacing `match` calls.
+# Ensures that number of rows of data doesn't change, and everything has matched data.
+#' @export
+left_join_error_no_match <- function (d, ..., ignore_columns = NULL) {
+  d = tibble::as_tibble(d)
+  assertthat::assert_that(tibble::is_tibble(d))
+  dnames <- names(d)
+  drows <- nrow(d)
+  d <- dplyr::left_join(d, ...)
+  if (nrow(d) != drows) {
+    stop("left_join_no_match: number of rows in data changed")
+  }
+  names_to_check <- dplyr::setdiff(names(d), dnames) %>% dplyr::setdiff(ignore_columns)
+  if (any(is.na(d[names_to_check]))) {
+    stop("left_join_no_match: NA values in new data columns")
+  }
+  d
+}
+
 #' filter_desired_regions
 #'
 #' Filters and returns the desired regions available in the loaded project.
@@ -192,8 +219,9 @@ conv_ghg_co2e <- function(data, GCAM_version = 'v7.0', GWP_version = 'AR5') {
     data %>%
       # aggregate by ghg (exclude sector)
       tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
-      dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
-      dplyr::left_join(get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport")), by = c("variable" = "GHG_gases", "sector")) %>%
+      dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
+                    sector %in% get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
+      left_join_error_no_match(get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport")), by = c("variable" = "GHG_gases", "sector")) %>%
       dplyr::mutate(value = value * GWP, Units = "CO2e") %>%
       dplyr::filter(!is.na(value)) %>% # remove NAs due to unexisting subsectors
       dplyr::select(-GWP)
@@ -292,7 +320,7 @@ get_gdp_ppp <- function(GCAM_version = "v7.0") {
 
   GDP_PPP_clean <<-
     rgcam::getQuery(prj, "GDP per capita PPP by region") %>%
-    dplyr::left_join(population_clean %>% dplyr::rename(pop_mill = value), by = c("scenario", "region", "year")) %>%
+    left_join_error_no_match(population_clean %>% dplyr::rename(pop_mill = value), by = c("scenario", "region", "year")) %>%
     dplyr::mutate(
       value = value * pop_mill * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']],      var = "GDP|PPP"
     ) %>%
@@ -799,7 +827,7 @@ get_ag_demand <- function(GCAM_version = "v7.0") {
     # Adjust OtherMeat_Fish
     dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
     dplyr::left_join(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
-              by = c("sector"), multiple = "all") %>%
+              by = c("sector"), multiple = "all") %>% # TODO - left_join question
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
