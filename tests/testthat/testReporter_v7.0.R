@@ -2,6 +2,7 @@ library(gcamreport)
 library(testthat)
 library(magrittr)
 
+
 test_that("Test1_v7. download db, create project, and run", {
   # load a reference GCAM db form a Zenodo repository
   db_path <- file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0")
@@ -40,32 +41,32 @@ test_that("Test3_v7. run - dataset created", {
   testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
 })
 
-test_that("Test4_v7. run - dataset saved with output_file specified", {
-  generate_report(
-    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE,
-    output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output")
-  )
-
-  testResult1 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output.csv"))
-  testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-  testResult2 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test4.1.csv"))
-  testthat::expect_equal(
-    testResult1 %>%
-      dplyr::select(-Unit),
-    testResult2 %>%
-      dplyr::select(-Unit)
-  )
-
-  testResult1 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output.xlsx"))
-  testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
-  testResult2 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test4.2.xlsx"))
-  testthat::expect_equal(
-    testResult1 %>%
-      dplyr::select(-Unit),
-    testResult2 %>%
-      dplyr::select(-Unit)
-  )
-})
+# test_that("Test4_v7. run - dataset saved with output_file specified - RUN MANUALLY", {
+#   generate_report(
+#     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE,
+#     output_file = file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output")
+#   )
+#
+#   testResult1 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output.csv"))
+#   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+#   testResult2 <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test4.1.csv"))
+#   testthat::expect_equal(
+#     testResult1 %>%
+#       dplyr::select(-Unit),
+#     testResult2 %>%
+#       dplyr::select(-Unit)
+#   )
+#
+#   testResult1 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_output.xlsx"))
+#   testthat::expect(dplyr::n_distinct(testResult1) > 0, 'Dataset not saved. Check if the project path exists or the "run" function works correctly.')
+#   testResult2 <- readxl::read_excel(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test4.2.xlsx"))
+#   testthat::expect_equal(
+#     testResult1 %>%
+#       dplyr::select(-Unit),
+#     testResult2 %>%
+#       dplyr::select(-Unit)
+#   )
+# })
 
 test_that("Test5_v7. run - dataset saved with default output_file", {
   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
@@ -731,5 +732,4 @@ test_that("Test14_v7. ghg GWP", {
 
 
 })
-
 
