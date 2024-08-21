@@ -1,4 +1,4 @@
-# CO2 emission by sector mapping,,,,,,,,
+# CO2 emission by sector mapping
 sector,var1,var2,var3,var4,var5,var6,var7,unit_conv
 agricultural energy use,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Demand,Emissions|CO2|Energy|Demand|AFOFI,,,,3.666667
 airCO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Other Removal,Emissions|CO2|Other Removal|DACCS,,,,,3.666667

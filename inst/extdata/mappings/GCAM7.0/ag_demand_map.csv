@@ -9,7 +9,7 @@ regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural D
 regional sugar for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
 NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,,,,,,1
 OtherMeat_Fish,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
-FodderHerb_Residue,NoReport,,,,,,,,1
-Pasture_FodderGrass,NoReport,,,,,,,,1
-regional forest,NoReport,,,,,,,,1
-traded forest,NoReport,,,,,,,,1
+FodderHerb_Residue,NoReported,,,,,,,,1
+Pasture_FodderGrass,NoReported,,,,,,,,1
+regional forest,NoReported,,,,,,,,1
+traded forest,NoReported,,,,,,,,1

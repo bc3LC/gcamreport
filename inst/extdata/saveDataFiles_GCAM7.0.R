@@ -230,8 +230,8 @@ use_data(nonCO2_content_v7.0, overwrite = T)
 iea_capacity_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "IEAWEO2019_Capacity.csv"), stringsAsFactors = FALSE)
 use_data(iea_capacity_v7.0, overwrite = T)
 
-CO2_market_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "CO2market_new.csv"), skip = 1, stringsAsFactors = FALSE)
-use_data(CO2_market_v7.0, overwrite = T)
+co2_market_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "CO2market_new.csv"), skip = 1, stringsAsFactors = FALSE)
+use_data(co2_market_v7.0, overwrite = T)
 
 co2_market_frag_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "CO2market_frag_map.csv"),
                                 skip = 1,

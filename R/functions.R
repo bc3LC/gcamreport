@@ -241,7 +241,7 @@ filter_variables <- function(data, variable) {
     if (!(length(desired_variables) == 1 && desired_variables == "All")) {
       if ("var" %in% colnames(data)) {
         data <- data %>%
-          dplyr::filter(var %in% desired_variables)
+          dplyr::filter(var %in% c(desired_variables,'NoReported'))
       }
     }
   }
@@ -497,7 +497,7 @@ get_co2 <- function(GCAM_version = "v7.0") {
 
   co2_clean <<-
     tibble::as_tibble(rgcam::getQuery(prj, queryItem1)) %>%
-    dplyr::left_join(filter_variables(get(paste('co2_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_clean"), by = "sector", multiple = "all") %>%
+    left_join_strict(filter_variables(get(paste('co2_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_clean"), by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -576,8 +576,8 @@ get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
 
   co2_tech_emissions <<-
     co2_tech_nobio %>%
-    dplyr::left_join(filter_variables(get(paste('co2_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_tech_emissions"),
-              by = c("sector", "subsector", "technology"), multiple = "all") %>%
+    left_join_strict(filter_variables(get(paste('co2_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_tech_emissions"),
+                     by = c("sector", "subsector", "technology"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -897,7 +897,7 @@ get_ag_demand <- function(GCAM_version = "v7.0") {
     dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
     left_join_strict(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
               by = c("sector"), multiple = "all") %>%
-    dplyr::filter(var != 'NoReport') %>%
+    dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -1488,7 +1488,7 @@ filter_data_regions <- function(data) {
 #' @importFrom magrittr %>%
 #' @export
 get_regions_tmp <- function(GCAM_version = "v7.0") {
-  CO2_market_filteredReg <- filter_data_regions(get(paste('CO2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+  CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
   regions.global <<-
     unique(CO2_market_filteredReg$region)
 }
@@ -1626,7 +1626,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
     dplyr::filter(Units == "1990$/tC")
 
   if (nrow(co2_price_fragmented_pre) > 1) {
-    CO2_market_filteredReg <- filter_data_regions(get(paste('CO2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+    CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
 
     co2_price_fragmented <<-
       co2_price_fragmented_pre %>%
@@ -1826,7 +1826,28 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
   var <- market <- scenario <- region <- year <-
     value <- PrimaryFuelCO2Coef <- price_C <- unit_conv <- NULL
 
-  CO2_market_filteredReg <- filter_data_regions(get(paste('CO2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+  CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
+
+  tmp1 <- rgcam::getQuery(prj, "CO2 prices") %>%
+    dplyr::filter(!grepl("LUC", market))
+  if (NA %in% unique(tmp1$market)) {
+    warning('ATTENTION: At least one scenario does not contain CO2 price')
+  }
+  if (!dplyr::all_of(unique(tmp1$market) %in% c(unique(CO2_market_filteredReg$market),NA))) {
+    missing_markets <- setdiff(unique(CO2_market_filteredReg$market), unique(CO2_market_filteredReg$market))
+    warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `CO2_market_new` mapping file.',
+                    paste(missing_markets, collapse = ", ")))
+
+    # user response
+    user_input <- readline(prompt = "Do you want to add them before continue (Y/N)? Press Y or N: ")
+
+    # handling user response
+    if (toupper(user_input) %in% c("n","N")) {
+      stop("Manual check requested. Stopping execution.")
+    } else if (!toupper(user_input) %in% c("y","Y")) {
+      stop("Invalid input. Stopping execution.")
+    }
+  }
 
   energy_price_fragmented <<-
     prices_subsector %>%

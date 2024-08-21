@@ -517,7 +517,7 @@
 #' }
 "iea_capacity_v7.0"
 
-#' CO2_market_v7.0
+#' co2_market_v7.0
 #'
 #' @source github
 #' @format .csv
@@ -525,9 +525,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::CO2_market_v7.0
+#' gcamreport::co2_market_v7.0
 #' }
-"CO2_market_v7.0"
+"co2_market_v7.0"
 
 #' co2_market_frag_map_v7.0
 #'
@@ -992,7 +992,7 @@
 #' }
 "iea_capacity_v6.0"
 
-#' CO2_market_v6.0
+#' co2_market_v6.0
 #'
 #' @source github
 #' @format .csv
@@ -1000,9 +1000,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::CO2_market_v6.0
+#' gcamreport::co2_market_v6.0
 #' }
-"CO2_market_v6.0"
+"co2_market_v6.0"
 
 #' co2_market_frag_map_v6.0
 #'
