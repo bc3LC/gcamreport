@@ -3,7 +3,8 @@
 # library(magrittr)
 #
 # test_that("Test1. test tree functions", {
-#   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test6.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
+#   GCAM_version <<- 'v6.0'
+#   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test7.dat"), launch_ui = FALSE, GCAM_version = 'v6.0')
 #   # load data
 #   data <- report
 #   # define the dataset for launching the ui
@@ -16,12 +17,12 @@
 #   # develop a nested list of the variables and regions for launching the ui
 #   cols.global <<- unique(sdata[, grepl("col", names(sdata))])
 #   tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
-#   tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+#   tree_reg <<- do_mount_tree(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
 #   # save a list of all variables
 #   all_varss <<- do_collapse_df(cols.global)
 #
 #   # do_mount_tree with regions
-#   testResult1 <- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+#   testResult1 <- do_mount_tree(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
 #   testExpect1 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_1.RData")))
 #   testthat::expect_equal(testResult1, testExpect1)
 #
@@ -69,7 +70,7 @@
 #   testthat::expect_equal(testResult7, testExpect7)
 #
 #   # compute_height
-#   testResult8 <- compute_height(c(reg_cont[, 2], "World"))
+#   testResult8 <- compute_height(c(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[, 2], "World"))
 #   testExpect8 <- 960
 #   testthat::expect_equal(testResult8, testExpect8)
 #
@@ -113,6 +114,7 @@
 #
 # test_that("Test3. reset", {
 #   sdata <<- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test_ui_3.RData")))
+#   GCAM_version <<- 'v6.0'
 #   reset_first_load()
 #
 #   testthat::expect_equal(firstLoad, TRUE)
@@ -165,12 +167,12 @@
 #   testthat::expect_equal(testResult, testExpect)
 # })
 #
-#
 # test_that("Test6. update_user_choices_plot", {
 #
 #   # update_user_choices_plot
-#   firstReg <- firstVars <- T
-#   noReg <- noVars <- F
+#   firstReg <<- firstVars <<- T
+#   noReg <<- noVars <<- F
+#   GCAM_version <<- 'v6.0'
 #   selected_scen <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test_ui_6.selected_scen.RData")))
 #   selected_years <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test_ui_6.selected_years.RData")))
 #   sidebarItemExpanded <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test_ui_6.sidebarItemExpanded.RData")))
@@ -181,3 +183,22 @@
 #   testthat::expect_equal(testResult, testExpect)
 #
 # })
+#
+#
+# #
+# # test_that("Test4. launch ui", {
+# #   launch_gcamreport_ui(data_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_6.0/test_launch_ui.RData"))
+# #
+# #   testthat::expect_equal(available_years, c(2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050))
+# #   testthat::expect_equal(sdata,
+# #                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_4.a.RData"))))
+# #   testthat::expect_equal(cols.global,
+# #                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_4.b.RData"))))
+# #   testthat::expect_equal(tree_vars,
+# #                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_4.c.RData"))))
+# #   testthat::expect_equal(tree_reg,
+# #                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_4.d.RData"))))
+# #   testthat::expect_equal(all_varss,
+# #                          get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_6.0/test_ui_4.e.RData"))))
+# #
+# # })

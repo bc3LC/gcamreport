@@ -301,7 +301,8 @@ queryFile <- file.path(rawDataFolder, "inst/extdata/queries/GCAM7.0", "queries_g
 queries_nonCO2_v7.0 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_nonCO2_v7.0, overwrite = T)
 
-# TEMPLATE
+
+# TEMPLATE & VARIABLES
 
 # Read in template
 template_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata", "template/GCAM7.0/reporting_template.csv"),
@@ -313,4 +314,15 @@ decode_html <- function(text) {
 # Applying the function to decode HTML entities in col1
 template_v7.0$Unit <- sapply(template_v7.0$Unit, decode_html)
 use_data(template_v7.0, overwrite = T)
+
+# variables_functions_mapping
+var_fun_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata", "mappings/GCAM7.0/variables_functions_mapping.csv"),
+                             sep = ";", header = T, na.strings = c("", "NA"), stringsAsFactors = FALSE
+)
+
+var_fun_map_v7.0$dependencies <- as.list(strsplit(var_fun_map_v7.0$dependencies, ","))
+var_fun_map_v7.0$checks <- as.list(strsplit(var_fun_map_v7.0$checks, ","))
+var_fun_map_v7.0$queries <- as.list(strsplit(var_fun_map_v7.0$queries, ","))
+use_data(var_fun_map_v7.0, overwrite = T)
+
 

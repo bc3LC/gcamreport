@@ -87,12 +87,16 @@ test_that("Test6_v7. load variable and get function", {
   loaded_internal_variables.global <<- c()
   desired_regions <<- "All"
   desired_variables <<- "All"
+  GCAM_version <<- "v7.0"
+  template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
   variables_base <- data.frame(
-    "name" = unique(template$Internal_variable)[!is.na(unique(template$Internal_variable)) & unique(template$Internal_variable) != ""],
+    "name" = unique(template_internal_variable)[!is.na(unique(template_internal_variable)) & unique(template_internal_variable) != ""],
     "required" = TRUE,
     stringsAsFactors = FALSE
   )
-  variables.global <<- merge(variables_base, var_fun_map, by = "name", all = TRUE) %>%
+  variables.global <<- merge(variables_base,
+                             get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
+                             by = "name", all = TRUE) %>%
     tidyr::replace_na(list(required = FALSE))
 
   # test
@@ -107,7 +111,7 @@ test_that("Test6_v7. load variable and get function", {
 })
 
 test_that("Test7_v7. specify variables, regions, continents", {
-  test_regions <- available_regions(T)
+  test_regions <- available_regions(T, GCAM_version = 'v7.0')
   testResult_regions <- c(
     "Africa_Eastern", "Africa_Northern", "Africa_Southern",
     "Africa_Western", "Argentina", "Australia_NZ",
@@ -423,7 +427,6 @@ test_that("Test10_v7. vetting", {
     desired_variables = c("Emissions|CH4*"),
     launch_ui = FALSE
   )
-
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.1.RData")))
   testthat::expect_equal(vetting_summary, testResult)
 
@@ -438,7 +441,6 @@ test_that("Test10_v7. vetting", {
     desired_variables = c("Emissions|Sulfur*"),
     launch_ui = FALSE
   )
-
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.2.RData")))
   testthat::expect_equal(vetting_summary, testResult)
 
@@ -453,7 +455,6 @@ test_that("Test10_v7. vetting", {
     desired_variables = c("Final Energy*"),
     launch_ui = FALSE
   )
-
   testthat::expect(exists("vetting_summary"), "Vetting performed when not all regions were selected")
 })
 
@@ -568,7 +569,6 @@ test_that("Test11_v7. scenarios", {
   testthat::expect_equal("CP_EI_recovery", testResult)
 })
 
-
 test_that("Test12_v7. other functions", {
   # gather_map
   co2_sector_map <- read.csv(file.path(rprojroot::find_root(rprojroot::is_testthat), "inst/extdata/mappings/GCAM7.0", "CO2_sector_map.csv"),
@@ -639,7 +639,6 @@ test_that("Test13_v7. specify queries", {
   testthat::expect_equal(testResult, testExpect)
 
 })
-
 
 test_that("Test14_v7. ghg GWP", {
 

@@ -431,11 +431,12 @@ load_query <- function(var, base_data, final_queries) {
 #' This function provides a list of regions that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available regions to the console. If FALSE, suppresses the printing and only returns the list.
+#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available regions. If `print` is TRUE, the function also prints this list to the console.
 #'
 #' @export
-available_regions <- function(print = TRUE) {
+available_regions <- function(print = TRUE, GCAM_version = 'v7.0') {
   continent <- region <- NULL
 
   av_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
@@ -458,11 +459,12 @@ available_regions <- function(print = TRUE) {
 #' This function provides a list of regions' groups that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available regions' groups. to the console. If FALSE, suppresses the printing and only returns the list.
+#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available regions' groups. If `print` is TRUE, the function also prints this list to the console.
 #'
 #' @export
-available_continents <- function(print = TRUE) {
+available_continents <- function(print = TRUE, GCAM_version = 'v7.0') {
   continent <- region <- NULL
 
   av_cont <- unique(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['continent']])
@@ -599,7 +601,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 
   # check that the desired_regions are available
   if (!(identical(desired_regions, "All"))) {
-    check_reg <- dplyr::setdiff(desired_regions, available_regions(print = FALSE))
+    check_reg <- dplyr::setdiff(desired_regions, available_regions(print = FALSE, GCAM_version = GCAM_version))
     if (length(check_reg) > 0) {
       tmp <- paste(check_reg, collapse = ", ")
       if (length(check_reg) > 1) {
@@ -611,7 +613,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   }
   # check that the desired_continents are available
   if (!(length(desired_continents) == 1 && desired_continents == "All")) {
-    check_cont <- dplyr::setdiff(desired_continents, available_continents(print = FALSE))
+    check_cont <- dplyr::setdiff(desired_continents, available_continents(print = FALSE, GCAM_version = GCAM_version))
     if (length(check_cont) > 0) {
       tmp <- paste(check_cont, collapse = ", ")
       if (length(check_cont) > 1) {

@@ -135,6 +135,7 @@ agricultural energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Ener
 construction energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
 mining energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
 iron and steel,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,Final Energy|Industry|Steel,Final Energy|Industry|Steel|Hydrogen,,,1
+chemical energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Hydrogen,,,1
 agricultural energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,,,,,1
 alumina,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,Final Energy|Industry|Non-ferrous metals,Final Energy|Industry|Non-ferrous metals|Liquids,,,1
 chemical energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Liquids,,,1

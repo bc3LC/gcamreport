@@ -287,7 +287,7 @@ conv_ghg_co2e <- function(data, GCAM_version = 'v7.0', GWP_version = 'AR5') {
       # aggregate by ghg (exclude sector)
       tidyr::separate(ghg, into = c("variable", "sector"), sep = "_", fill = "right") %>%
       dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                    sector %in% get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
+                    sector %in% unique(get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport"))[['sector']])) %>%
       left_join_error_no_match(get(paste('ghg_GWP',GWP_version,sep='_'), envir = asNamespace("gcamreport")), by = c("variable" = "GHG_gases", "sector")) %>%
       dplyr::mutate(value = value * GWP, Units = "CO2e") %>%
       dplyr::filter(!is.na(value)) %>% # remove NAs due to unexisting subsectors
@@ -789,7 +789,7 @@ get_ghg <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
   ghg_all <<-
     rgcam::getQuery(prj, "nonCO2 emissions by region") %>%
     conv_ghg_co2e(GWP_version = GWP_version) %>%
-    dplyr::filter(variable %in% get(paste('GHG_GASES',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
+    dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
     dplyr::bind_rows(LU_carbon_clean) %>%
     dplyr::group_by(scenario, region, year) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -829,7 +829,9 @@ get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
     conv_ghg_co2e(GWP_version = GWP_version) %>%
     dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
     dplyr::rename(ghg = variable) %>%
-    left_join_strict(filter_variables(get(paste('kyoto_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ghg_sector_clean"), by = c("ghg", "subsector", "sector"), multiple = "all") %>%
+    left_join_strict(filter_variables(get(paste('kyoto_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ghg_sector_clean") %>%
+                       dplyr::select(-unit_conv),
+                     by = c("ghg", "subsector", "sector"), multiple = "all") %>%
     dplyr::select(all_of(gcamreport::long_columns)) %>%
     dplyr::bind_rows(
       LU_carbon_clean %>%
@@ -893,8 +895,9 @@ get_ag_demand <- function(GCAM_version = "v7.0") {
     ) %>%
     # Adjust OtherMeat_Fish
     dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
-    dplyr::left_join(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
-              by = c("sector"), multiple = "all") %>% # TODO - left_join question
+    left_join_strict(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
+              by = c("sector"), multiple = "all") %>%
+    dplyr::filter(var != 'NoReport') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -1686,7 +1689,7 @@ get_co2_price <- function(GCAM_version = "v7.0") {
     # compute Global value using the emission weights
     co2_price_world <- co2_price_regional %>%
       dplyr::left_join(co2_price_share_bysec %>%
-                         dplyr::left_join(filter_variables(gcamreport::co2_market_frag_map, "co2_price_fragmented"),
+                         dplyr::left_join(filter_variables(get(paste('co2_market_frag_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_price_fragmented"),
                                           by = "sector", multiple = "all") %>%
                          dplyr::select(-sector,-market,-year),
                        by = c('region','scenario','var')) %>%
