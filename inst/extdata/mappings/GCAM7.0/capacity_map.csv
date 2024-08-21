@@ -14,6 +14,7 @@ electricity,gas,gas (CC CCS),Secondary Energy|Electricity,Secondary Energy|Elect
 electricity,gas,gas (CC),Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,,,,,1
 electricity,gas,gas (steam/CT),Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,,,,,1
 electricity,gas,gas cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,,,,,1
+electricity,gas,desalinated water,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,,,,,1
 electricity,geothermal,geothermal,Secondary Energy|Electricity,Secondary Energy|Electricity|Geothermal,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
 electricity,hydro,hydro,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydro,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
 electricity,nuclear,Gen_II_LWR,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,,1

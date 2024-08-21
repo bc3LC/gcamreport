@@ -51,3 +51,14 @@ use_data(available_final_year, overwrite = T)
 available_reporting_years <- seq(2005, 2100, by = 5)
 use_data(available_reporting_years, overwrite = T)
 
+# gcam model years
+gcam_years <- c(1990, seq(2005, 2100, by = 5))
+use_data(gcam_years, overwrite = T)
+
+
+# vetting test
+global_vet_values <- read.csv(file.path(rawDataFolder, "inst/extdata/vetting", "global_vet_values.csv"),
+                              stringsAsFactors = FALSE
+)
+use_data(global_vet_values, overwrite = T)
+

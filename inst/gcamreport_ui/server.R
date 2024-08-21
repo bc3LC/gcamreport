@@ -19,12 +19,14 @@ server <- function(input, output, session) {
 
   ## -- select all/none regions
   observeEvent(input$select_all_regions, {
-    tree_reg <<- do_mount_tree(gcamreport::reg_cont, names(gcamreport::reg_cont), selec = TRUE)
+    reg_cont <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = tree_reg)
     noReg <<- FALSE
   })
   observeEvent(input$select_none_regions, {
-    tree_reg <<- do_mount_tree(gcamreport::reg_cont, names(gcamreport::reg_cont), selec = FALSE)
+    reg_cont <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+    tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = FALSE)
     updateTree(session = getDefaultReactiveDomain(), treeId = "tree_regions", data = tree_reg)
     noReg <<- TRUE
   })
@@ -110,7 +112,7 @@ server <- function(input, output, session) {
   observeEvent(input$tree_variables, {
     updateTreeInput(session = getDefaultReactiveDomain(), "tree_variables", input$tree_variables)
     if (firstReg) {
-      sel_reg_vec <- gcamreport::reg_cont$region %>%
+      sel_reg_vec <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']] %>%
         tidyr::replace_na("World")
     } else {
       sel_reg <- shinyTree::get_selected(input$tree_regions, format = "slices")
@@ -169,7 +171,7 @@ server <- function(input, output, session) {
         firstLoad <<- FALSE
         # set selected variables and regions to all possiblities
         sel_vars <- unique(cols.global$col1)
-        sel_reg <- gcamreport::reg_cont$region
+        sel_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
         # set basic_reg and basic_vars to TRUE
         basic_reg <- TRUE
         basic_vars <- TRUE
@@ -179,7 +181,7 @@ server <- function(input, output, session) {
 
         # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
         if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-          sel_reg <- gcamreport::reg_cont$region
+          sel_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
           basic_reg <- 1
         }
 
@@ -818,7 +820,7 @@ server <- function(input, output, session) {
         sdata,
         input$selected_scen, input$selected_years,
         input$selected_cols, unique(cols.global$col1),
-        gcamreport::reg_cont$region, TRUE, TRUE
+        get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']], TRUE, TRUE
       )
     } else {
       basic_reg <- 0
@@ -826,7 +828,7 @@ server <- function(input, output, session) {
 
       # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
       if (firstReg && ((!is.null(input$sidebarItemExpanded) && input$sidebarItemExpanded != "Regions") || is.null(input$sidebarItemExpanded))) {
-        sel_reg <- gcamreport::reg_cont$region
+        sel_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
         basic_reg <- 1
       }
 

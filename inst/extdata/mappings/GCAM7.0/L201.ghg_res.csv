@@ -1,5 +1,5 @@
-# Take GHG emissions for the energy system, filter to include only resources,,,,,
-# in model base years, and rename to regional SO2.,,,,,
+# Take GHG emissions for the energy system, filter to include only resources
+# in model base years, and rename to regional SO2.
 region,resource,subresource,technology,year,Non.CO2,emiss.coef
 USA,coal,coal,coal,1975,CH4,0.191830215
 USA,coal,coal,coal,1975,N2O,0

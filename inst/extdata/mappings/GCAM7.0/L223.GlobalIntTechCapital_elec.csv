@@ -1,5 +1,5 @@
-# Intermittent technologies from L113.globaltech_capital_ATB and values interpolated from assumptions,,,,,,
-# Values determined by an exponential function with terms for minimum achievable cost and pace of reduction,,,,,,
+# Intermittent technologies from L113.globaltech_capital_ATB and values interpolated from assumptions
+# Values determined by an exponential function with terms for minimum achievable cost and pace of reduction
 sector.name,subsector.name,intermittent.technology,year,input.capital,capital.overnight,fixed.charge.rate
 elect_td_bld,rooftop_pv,rooftop_pv,1975,capital,1083,0.1
 elect_td_bld,rooftop_pv,rooftop_pv,1990,capital,1083,0.1

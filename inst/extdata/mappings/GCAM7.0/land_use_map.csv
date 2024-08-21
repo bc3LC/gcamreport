@@ -12,17 +12,3 @@ rock and desert,Land Cover,Land Cover|Other Land,,,,,,,0.1
 shrubs,Land Cover,Land Cover|Pasture,,,,,,,0.1
 tundra,Land Cover,Land Cover|Other Land,,,,,,,0.1
 urban,Land Cover,Land Cover|Built-up Area,,,,,,,0.1
-CornC4,Land Cover,Land Cover|Cropland,,,,,,,0.1
-Fruits,Land Cover,Land Cover|Cropland,,,,,,,0.1
-FruitsTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
-Legumes,Land Cover,Land Cover|Cropland,,,,,,,0.1
-MiscCropTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
-NutsSeeds,Land Cover,Land Cover|Cropland,,,,,,,0.1
-NutsSeedsTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
-OilCropTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
-OilPalmTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
-OtherGrainC4,Land Cover,Land Cover|Cropland,,,,,,,0.1
-Soybean,Land Cover,Land Cover|Cropland,,,,,,,0.1
-SugarCropC4,Land Cover,Land Cover|Cropland,,,,,,,0.1
-Vegetables,Land Cover,Land Cover|Cropland,,,,,,,0.1
-FodderHerbC4,Land Cover,Land Cover|Cropland,,,,,,,0.1

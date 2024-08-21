@@ -178,13 +178,13 @@ use_data(energy_prices_map_v7.0, overwrite = T)
 
 
 # Energy Service maps
-transport_en_service_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "energy_service_transportation.csv"),
+transport_en_service_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "transport_en_service.csv"),
                                  skip = 1,
                                  stringsAsFactors = FALSE
 ) %>% gather_map()
 use_data(transport_en_service_v7.0, overwrite = T)
 
-buildings_en_service_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "energy_service_buildings.csv"),
+buildings_en_service_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "buildings_en_service.csv"),
                                  skip = 1,
                                  stringsAsFactors = FALSE
 ) %>% gather_map()
@@ -240,7 +240,7 @@ co2_market_frag_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mapp
 use_data(co2_market_frag_map_v7.0, overwrite = T)
 
 # iron and steel
-iron_steel_trade_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "iron_steel.csv"), skip = 1,
+iron_steel_trade_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "iron_steel_trade.csv"), skip = 1,
                                  stringsAsFactors = FALSE) %>% gather_map()
 use_data(iron_steel_trade_map_v7.0, overwrite = T)
 
@@ -284,7 +284,7 @@ F_GASES_v7.0 <- c(
 )
 use_data(F_GASES_v7.0, overwrite = T)
 
-GHG_gases_v7.0 <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
+GHG_gases_v7.0 <- c("CH4", "N2O", F_GASES_v7.0, "CO2", "CO2LUC")
 use_data(GHG_gases_v7.0, overwrite = T)
 
 
@@ -300,4 +300,17 @@ use_data(queries_general_v7.0, overwrite = T)
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/GCAM7.0", "queries_gcamreport_nonCO2.xml")
 queries_nonCO2_v7.0 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_nonCO2_v7.0, overwrite = T)
+
+# TEMPLATE
+
+# Read in template
+template_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata", "template/GCAM7.0/reporting_template.csv"),
+                          fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE
+)
+decode_html <- function(text) {
+  xml2::xml_text(xml2::read_xml(paste0("<x>", text, "</x>")))
+}
+# Applying the function to decode HTML entities in col1
+template_v7.0$Unit <- sapply(template_v7.0$Unit, decode_html)
+use_data(template_v7.0, overwrite = T)
 

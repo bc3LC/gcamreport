@@ -438,7 +438,7 @@ load_query <- function(var, base_data, final_queries) {
 available_regions <- function(print = TRUE) {
   continent <- region <- NULL
 
-  av_reg <- gcamreport::reg_cont %>%
+  av_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
     dplyr::mutate(region = dplyr::if_else(continent == "World", "World", region))
 
   if (print) {
@@ -465,7 +465,7 @@ available_regions <- function(print = TRUE) {
 available_continents <- function(print = TRUE) {
   continent <- region <- NULL
 
-  av_cont <- unique(gcamreport::reg_cont$continent)
+  av_cont <- unique(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['continent']])
 
   if (print) {
     for (it in av_cont) {
@@ -622,7 +622,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
                      Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
       }
     }
-    desired_regions <- gcamreport::reg_cont %>%
+    desired_regions <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
       dplyr::filter(continent %in% desired_continents) %>%
       dplyr::pull(region)
   }
@@ -869,7 +869,8 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
   cols.global <<- unique(sdata[, grepl("col", names(sdata))])
   tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
 
-  tree_reg <<- do_mount_tree(gcamreport::reg_cont, names(gcamreport::reg_cont), selec = TRUE)
+  reg_cont <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
 
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)

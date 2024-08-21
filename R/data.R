@@ -70,6 +70,18 @@
 #' }
 "ghg_GWP_AR6"
 
+#' gcam_years
+#'
+#' @source local
+#' @format vector
+#' @description GCAM model years
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::gcam_years
+#' }
+"gcam_years"
+
 #' available_reporting_years
 #'
 #' @source local
@@ -105,18 +117,6 @@
 #' gcamreport::global_vet_values
 #' }
 "global_vet_values"
-
-#' reg_cont
-#'
-#' @source local
-#' @format .csv
-#' @description mapping between regions and continents
-#' @examples
-#' \dontrun{
-#' library(gcamreport)
-#' gcamreport::reg_cont
-#' }
-"reg_cont"
 
 #' long_columns
 #'
@@ -593,6 +593,18 @@
 #' }
 "last_historical_year_v7.0"
 
+#' reg_cont_v7.0
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between regions and continents compatible with GCAM7.0
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::reg_cont_v7.0
+#' }
+"reg_cont_v7.0"
+
 
 #' queries_general_v6.0
 #'
@@ -1055,3 +1067,15 @@
 #' gcamreport::last_historical_year_v6.0
 #' }
 "last_historical_year_v6.0"
+
+#' reg_cont_v6.0
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between regions and continents compatible with GCAM6.0
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::reg_cont_v6.0
+#' }
+"reg_cont_v6.0"

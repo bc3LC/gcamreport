@@ -137,7 +137,7 @@ update_user_choices_plot <- function(selected_scen, selected_years,
   basic_vars <- 0
   # if it's the first time loading regions and there is a sidebarItem expanded different than regions, choose all possible regions
   if (firstReg && ((!is.null(sidebarItemExpanded) && sidebarItemExpanded != "Regions") || is.null(sidebarItemExpanded))) {
-    sel_reg_ini <- gcamreport::reg_cont$region
+    sel_reg_ini <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
     basic_reg <- 1
   }
 
@@ -202,7 +202,8 @@ update_user_choices_plot <- function(selected_scen, selected_years,
 #' @importFrom magrittr %>%
 #' @export
 reset_first_load <- function() {
-  tree_reg <<- do_mount_tree(gcamreport::reg_cont, names(gcamreport::reg_cont), selec = TRUE)
+  reg_cont <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
   cols.global <<- unique(sdata[, grepl("col", names(sdata))])
   tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
   firstLoad <<- TRUE

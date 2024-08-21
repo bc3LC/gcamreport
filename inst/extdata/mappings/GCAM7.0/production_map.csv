@@ -1,19 +1,19 @@
-﻿# Production mapping,,,,
+﻿# Production mapping
 sector,var1,var2,var3,GCAM output unit
 iron and steel,Production|Steel,,,Mt
 N fertilizer,Production|Chemicals,,,Mt N
-airCO2,,,,
+airCO2,NoReported,,,
 agricultural energy use,Production|Agriculture,,,EJ
-alumina,,,,
+alumina,NoReported,,,
 aluminum,Production|Non-ferrous metals,,,Mt
 cement,Production|Cement,,,Mt
 chemical energy use,Production|Chemicals,,,EJ
-chemical feedstocks,,,,EJ
-CO2 removal,,,,
+chemical feedstocks,NoReported,,,EJ
+CO2 removal,NoReported,,,
 construction energy use,Production|Construction,,,EJ
-construction feedstocks,,,,EJ
+construction feedstocks,NoReported,,,EJ
 other industrial energy use,Production|Other,,,EJ
-other industrial feedstocks,,,,EJ
+other industrial feedstocks,NoReported,,,EJ
 mining energy use,Production|Mining,,,EJ
-process heat cement,,,,
-process heat dac,,,,
+process heat cement,NoReported,,,
+process heat dac,NoReported,,,

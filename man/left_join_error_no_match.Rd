@@ -20,5 +20,5 @@ Joined data.
 A restrictive version of \code{\link{left_join}}. Function from \code{\link{gcamdata}}.
 }
 \details{
-Restrictive version of dplyr::left_join meant for replacing `match` calls.
+Restrictive version of `dplyr::left_join()` meant for replacing `match` calls.
 }

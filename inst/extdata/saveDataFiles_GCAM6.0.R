@@ -284,7 +284,7 @@ F_GASES_v6.0 <- c(
 )
 use_data(F_GASES_v6.0, overwrite = T)
 
-GHG_gases_v6.0 <- c("CH4", "N2O", F_GASES, "CO2", "CO2LUC")
+GHG_gases_v6.0 <- c("CH4", "N2O", F_GASES_v6.0, "CO2", "CO2LUC")
 use_data(GHG_gases_v6.0, overwrite = T)
 
 
@@ -300,4 +300,18 @@ use_data(queries_general_v6.0, overwrite = T)
 queryFile <- file.path(rawDataFolder, "inst/extdata/queries/GCAM6.0", "queries_gcamreport_nonCO2.xml")
 queries_nonCO2_v6.0 <- rgcam::parse_batch_query(queryFile)
 use_data(queries_nonCO2_v6.0, overwrite = T)
+
+
+# TEMPLATE
+
+# Read in template
+template_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata", "template/GCAM6.0/reporting_template.csv"),
+                          fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE
+)
+decode_html <- function(text) {
+  xml2::xml_text(xml2::read_xml(paste0("<x>", text, "</x>")))
+}
+# Applying the function to decode HTML entities in col1
+template_v6.0$Unit <- sapply(template_v6.0$Unit, decode_html)
+use_data(template_v6.0, overwrite = T)
 
