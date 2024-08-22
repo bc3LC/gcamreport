@@ -50,7 +50,7 @@ gov_revenue_clean;get_gov_revenue;gov_revenue_sector;;
 prices_subsector;get_prices_subsector;;;prices by sector,costs by subsector
 energy_price_fragmented;get_energy_price_fragmented;prices_subsector;;CO2 prices
 total_revenue;get_total_revenue;;;resource production,prices by sector
-regional_emission;get_regional_emission;nonCO2_content;;resource production
+regional_emission;get_regional_emission;nonco2_content;;resource production
 energy_price;get_energy_price_tmp;energy_price_fragmented;;
 energy_price_clean;get_energy_price;energy_price;;
 cf_iea;get_cf_iea_tmp;elec_gen_tech_clean;;

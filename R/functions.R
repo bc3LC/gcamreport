@@ -1911,7 +1911,7 @@ get_regional_emission <- function(GCAM_version = "v7.0") {
     region <- resource <- value <- regional_production <- NULL
 
   regional_emission <<- suppressWarnings(
-    get(paste('nonCO2_content',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+    get(paste('nonco2_content',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
       dplyr::filter(year == 2005) %>%
       tidyr::spread(Non.CO2, emiss.coef) %>%
       dplyr::rename(

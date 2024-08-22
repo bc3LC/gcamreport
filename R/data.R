@@ -157,7 +157,7 @@
 "queries_nonCO2_v7.0"
 
 
-#' emissions_list_v7.0
+#' nonco2_emissions_list_v7.0
 #'
 #' @source local
 #' @format vector
@@ -165,9 +165,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::emissions_list_v7.0
+#' gcamreport::nonco2_emissions_list_v7.0
 #' }
-"emissions_list_v7.0"
+"nonco2_emissions_list_v7.0"
 
 #' var_fun_map_v7.0
 #'
@@ -493,7 +493,7 @@
 #' }
 "carbon_content_v7.0"
 
-#' nonCO2_content_v7.0
+#' nonco2_content_v7.0
 #'
 #' @source github
 #' @format .csv
@@ -501,9 +501,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::nonCO2_content_v7.0
+#' gcamreport::nonco2_content_v7.0
 #' }
-"nonCO2_content_v7.0"
+"nonco2_content_v7.0"
 
 #' iea_capacity_v7.0
 #'
@@ -632,7 +632,7 @@
 "queries_nonCO2_v6.0"
 
 
-#' emissions_list_v6.0
+#' nonco2_emissions_list_v6.0
 #'
 #' @source local
 #' @format vector
@@ -640,9 +640,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::emissions_list_v6.0
+#' gcamreport::nonco2_emissions_list_v6.0
 #' }
-"emissions_list_v6.0"
+"nonco2_emissions_list_v6.0"
 
 #' var_fun_map_v6.0
 #'
@@ -968,7 +968,7 @@
 #' }
 "carbon_content_v6.0"
 
-#' nonCO2_content_v6.0
+#' nonco2_content_v6.0
 #'
 #' @source github
 #' @format .csv
@@ -976,9 +976,9 @@
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::nonCO2_content_v6.0
+#' gcamreport::nonco2_content_v6.0
 #' }
-"nonCO2_content_v6.0"
+"nonco2_content_v6.0"
 
 #' iea_capacity_v6.0
 #'

@@ -34,7 +34,7 @@ data_query <- function(type, db_path, db_name, prj_name, scenarios,
   qq <- xml2::xml_find_first(xml, paste0("//*[@title='", type, "']"))
 
   for (sc in scenarios) {
-    emiss_list <- get(paste('emissions_list',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+    emiss_list <- get(paste('nonco2_emissions_list',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
     while (length(emiss_list) > 0) {
       current_emis <- emiss_list[1:min(21, length(emiss_list))]
       qq_sec <- gsub("current_emis", paste0("(@name = '", paste(current_emis, collapse = "' or @name = '"), "')"), qq)
