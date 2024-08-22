@@ -1,0 +1,10 @@
+# emiss
+sector,technology,var1,var2,var3,var4,var5,var6,var7,var8,var9,unit_conv
+alumina,biomass CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Biomass,Carbon Sequestration|CCS|Biomass|Energy,Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry,,,,,,3.666667
+alumina,coal CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
+alumina,gas CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
+alumina,refined liquids CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Liquids|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
+chemical feedstocks,refined liquids,Carbon Sequestration|Feedstocks,Carbon Sequestration|Feedstocks|Liquids,,,,,,,,3.666667
+construction feedstocks,refined liquids,Carbon Sequestration|Feedstocks,Carbon Sequestration|Feedstocks|Liquids,,,,,,,,3.666667
+iron and steel,BLASTFUR CCS,Carbon Sequestration|CCS,Carbon Sequestration|CCS|Fossil,Carbon Sequestration|CCS|Fossil|Energy,Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry,,,,,,3.666667
+other industrial feedstocks,refined liquids,Carbon Sequestration|Feedstocks,Carbon Sequestration|Feedstocks|Liquids,,,,,,,,3.666667

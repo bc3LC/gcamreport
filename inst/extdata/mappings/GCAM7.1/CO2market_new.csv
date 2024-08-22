@@ -1,0 +1,46 @@
+# mapping file for CO2 markets
+market,region
+Africa_EasternCO2,Africa_Eastern
+Africa_NorthernCO2,Africa_Northern
+Africa_SouthernCO2,Africa_Southern
+Africa_WesternCO2,Africa_Western
+ArgentinaCO2,Argentina
+Australia_NZCO2,Australia_NZ
+BrazilCO2,Brazil
+CanadaCO2,Canada
+Central America and CaribbeanCO2,Central America and Caribbean
+Central AsiaCO2,Central Asia
+ChinaCO2,China
+ColombiaCO2,Colombia
+EFTACO2,European Free Trade Association
+EUCO2_ETS,EU-12
+EUCO2_ETS,EU-15
+European Free Trade AssociationCO2_ETS,European Free Trade Association
+European Free Trade AssociationCO2,European Free Trade Association
+EU12CO2,EU-12
+EU-12CO2,EU-12
+EU_12CO2,EU-12
+EUCO2,EU-12
+EU_ETSCO2_ETS,EU-12
+EU15CO2,EU-15
+EU-15CO2,EU-15
+EU_15CO2,EU-15
+EUCO2,EU-15
+EU_ETSCO2_ETS,EU-15
+Europe_EasternCO2,Europe_Eastern
+Europe_Non_EUCO2,Europe_Non_EU
+IndiaCO2,India
+IndonesiaCO2,Indonesia
+PakistanCO2,Pakistan
+JapanCO2,Japan
+MexicoCO2,Mexico
+Middle EastCO2,Middle East
+RussiaCO2,Russia
+South AfricaCO2,South Africa
+South America_SouthernCO2,South America_Southern
+South America_NorthernCO2,South America_Northern
+South AsiaCO2,South Asia
+South KoreaCO2,South Korea
+Southeast AsiaCO2,Southeast Asia
+TaiwanCO2,Taiwan
+USACO2,USA
