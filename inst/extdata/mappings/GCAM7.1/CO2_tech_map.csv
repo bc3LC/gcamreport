@@ -147,6 +147,10 @@ N fertilizer,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
 N fertilizer,gas,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
 N fertilizer,hydrogen,hydrogen,NoReported,,3.666667
 N fertilizer,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+ammonia,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+ammonia,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+ammonia,hydrogen,hydrogen,NoReported,,3.666667
+ammonia,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
 other industrial energy use,biomass,biomass,NoReported,,3.666667
 other industrial energy use,biomass,biomass cogen,NoReported,,3.666667
 other industrial energy use,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
@@ -162,6 +166,20 @@ process heat cement,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
 process heat cement,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
 process heat cement,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
 process heat dac,gas CCS,gas CCS,Emissions|CO2|Energy|Gas,,3.666667
+process heat food processing,biomass,biomass,NoReported,,3.666667
+process heat food processing,biomass,biomass cogen,NoReported,,3.666667
+process heat food processing,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+process heat food processing,coal,coal cogen,Emissions|CO2|Energy|Coal,,3.666667
+process heat food processing,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+process heat food processing,gas,gas cogen,Emissions|CO2|Energy|Gas,,3.666667
+process heat food processing,gas,gas with solar,Emissions|CO2|Energy|Gas,,3.666667
+process heat food processing,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+process heat food processing,refined liquids,refined liquids cogen,Emissions|CO2|Energy|Oil,,3.666667
+process heat paper,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+process heat paper,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+process heat paper,gas,gas cogen,Emissions|CO2|Energy|Gas,,3.666667
+process heat paper,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+process heat paper,refined liquids,refined liquids cogen,Emissions|CO2|Energy|Oil,,3.666667
 refining,biomass liquids,BTL with hydrogen,NoReported,,3.666667
 refining,biomass liquids,biodiesel,NoReported,,3.666667
 refining,biomass liquids,cellulosic ethanol,NoReported,,3.666667
@@ -183,34 +201,33 @@ regional biomassOil,regional biomassOil,PalmFruit,NoReported,,3.666667
 regional biomassOil,regional biomassOil,Soybean,NoReported,,3.666667
 regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,NoReported,,3.666667
 regional sugar for ethanol,regional sugar for ethanol,regional sugar for ethanol,NoReported,,3.666667
+regional woodpulp for energy,regional woodpulp for energy,regional woodpulp for energy,NoReported,,3.666667
 resid clothes dryers,gas,clothes dryer,Emissions|CO2|Energy|Gas,,3.666667
 resid cooking,gas,gas oven,Emissions|CO2|Energy|Gas,,3.666667
 resid cooking,gas,gas oven hi-eff,Emissions|CO2|Energy|Gas,,3.666667
 resid cooking,refined liquids,lpg oven,Emissions|CO2|Energy|Oil,,3.666667
 resid cooking,refined liquids,lpg oven hi-eff,Emissions|CO2|Energy|Oil,,3.666667
-resid cooling,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
-resid heating,biomass,biomass,NoReported,,3.666667
-resid heating,biomass,biomass,NoReported,,3.666667
+resid cooling modern,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid heating modern,biomass,biomass,NoReported,,3.666667
 resid heating,biomass,wood furnace,NoReported,,3.666667
-resid heating,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+resid heating coal,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
 resid heating,coal,coal furnace,Emissions|CO2|Energy|Coal,,3.666667
-resid heating,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid heating modern,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
 resid heating,gas,gas furnace,Emissions|CO2|Energy|Gas,,3.666667
 resid heating,gas,gas furnace hi-eff,Emissions|CO2|Energy|Gas,,3.666667
 resid heating,refined liquids,fuel furnace,Emissions|CO2|Energy|Oil,,3.666667
 resid heating,refined liquids,fuel furnace hi-eff,Emissions|CO2|Energy|Oil,,3.666667
-resid heating,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+resid heating modern,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
 resid hot water,gas,gas water heater,Emissions|CO2|Energy|Gas,,3.666667
 resid hot water,gas,gas water heater hi-eff,Emissions|CO2|Energy|Gas,,3.666667
 resid hot water,refined liquids,fuel water heater,Emissions|CO2|Energy|Oil,,3.666667
 resid hot water,refined liquids,fuel water heater hi-eff,Emissions|CO2|Energy|Oil,,3.666667
 resid other,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
 resid other,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
-resid others,biomass,biomass,NoReported,,3.666667
-resid others,biomass,biomass,NoReported,,3.666667
-resid others,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
-resid others,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
-resid others,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+resid others modern,biomass,biomass,NoReported,,3.666667
+resid others coal,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
+resid others modern,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
+resid others modern,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
 trn_aviation_intl,International Aviation,Liquids,Emissions|CO2|Energy|Oil,,3.666667
 trn_freight,Domestic Ship,Hybrid Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Freight|Shipping,3.666667
 trn_freight,Domestic Ship,Liquids,Emissions|CO2|Energy|Oil,Emissions|CO2|Energy|Demand|Transportation|Freight|Shipping,3.666667
@@ -242,3 +259,5 @@ trn_pass_road_LDV_4W,Mini Car,Liquids,Emissions|CO2|Energy|Oil,,3.666667
 trn_pass_road_LDV_4W,Mini Car,NG,Emissions|CO2|Energy|Gas,,3.666667
 trn_shipping_intl,International Ship,Hybrid Liquids,Emissions|CO2|Energy|Oil,,3.666667
 trn_shipping_intl,International Ship,Liquids,Emissions|CO2|Energy|Oil,,3.666667
+waste biomass for paper,biomass,biomass,NoReported,,3.666667
+waste biomass for paper,biomass,biomass cogen,NoReported,,3.666667

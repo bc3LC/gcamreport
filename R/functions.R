@@ -490,13 +490,23 @@ get_co2_concentration <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2 <- function(GCAM_version = "v7.0") {
-  value <- unit_conv <- scenario <- region <- year <- var <- queryItem1 <- NULL
+  value <- unit_conv <- scenario <- region <- year <- var <- queryItem1 <- tmp <- NULL
 
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   queryItem1 <- var_fun_map[var_fun_map$name == "co2_clean", "queries"][[1]]
 
+  # gather deciles if necessary
+  tmp <- tibble::as_tibble(rgcam::getQuery(prj, queryItem1))
+  if(GCAM_version == 'v7.1') {
+    tmp <- tmp %>%
+      tidyr::separate(sector, into = c("sector", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
+      dplyr::group_by(Units, scenario, region, sector, year) %>%
+      dplyr::summarise(value = sum(value)) %>%
+      dplyr::ungroup()
+  }
+
   co2_clean <<-
-    tibble::as_tibble(rgcam::getQuery(prj, queryItem1)) %>%
+    tmp %>%
     left_join_strict(filter_variables(get(paste('co2_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_clean"), by = "sector", multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>% #
@@ -549,16 +559,28 @@ get_nonbio_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
-  value <- percent <- queryItem1 <- NULL
+  value <- percent <- queryItem1 <- co2_tech_nobio_tmp <- co2_tech_nobio <- NULL
 
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
   queryItem1 <- var_fun_map[var_fun_map$name == "co2_tech_nobio", "queries"][[1]]
 
-  co2_tech_nobio <<-
+  co2_tech_nobio_tmp <-
     rgcam::getQuery(prj, queryItem1) %>%
-    dplyr::left_join(nonbio_share, by = c("region", "scenario", "year", "sector", "Units")) %>%
+    dplyr::left_join(nonbio_share, by = c("region", "scenario", "year", "sector")) %>%
     dplyr::mutate(value = value * percent) %>%
-    dplyr::select(-percent)
+    dplyr::select(-percent, -Units.x, -Units.y)
+
+  # gather deciles if necessary
+  if(GCAM_version == 'v7.1') {
+    co2_tech_nobio_tmp %>%
+      tidyr::separate(sector, into = c("sector", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
+      dplyr::group_by(scenario, region, sector, subsector, technology, year, ghg) %>%
+      dplyr::summarise(value = sum(value)) %>%
+      dplyr::ungroup() ->> co2_tech_nobio
+  } else {
+    co2_tech_nobio_tmp ->> co2_tech_nobio
+  }
+
 }
 
 
@@ -573,6 +595,7 @@ get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
 #' @export
 get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
   var <- value <- unit_conv <- scenario <- region <- year <- NULL
+
 
   co2_tech_emissions <<-
     co2_tech_nobio %>%
@@ -810,7 +833,7 @@ get_ghg <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #' @importFrom magrittr %>%
 #' @export
 get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
-  ghg <- resource <- subresource <- sector <- variable <- scenario <-
+  ghg <- resource <- subresource <- sector <- variable <- scenario <- tmp <-
     region <- var <- year <- value <- queryItem1 <- queryItem2 <- queryItem3 <- NULL
 
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
@@ -818,8 +841,8 @@ get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
   queryItem2 <- var_fun_map[var_fun_map$name == "ghg_sector_clean", "queries"][[1]][2]
   queryItem3 <- var_fun_map[var_fun_map$name == "ghg_sector_clean", "queries"][[1]][3]
 
-  ghg_sector_clean <<-
-    rgcam::getQuery(prj, queryItem1) %>%
+  # gather deciles if necessary
+  tmp <- rgcam::getQuery(prj, queryItem1) %>%
     dplyr::filter(!grepl("CO2", ghg),) %>%
     dplyr::bind_rows(rgcam::getQuery(prj, queryItem2) %>%
       dplyr::rename(sector = resource) %>%
@@ -830,8 +853,20 @@ get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
     conv_ghg_co2e(GWP_version = GWP_version) %>%
     dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
     dplyr::rename(ghg = variable) %>%
+    dplyr::mutate(sector = dplyr::if_else(is.na(sector), 'none', sector))
+
+  if(GCAM_version == 'v7.1') {
+    tmp <- tmp %>%
+      tidyr::separate(subsector, into = c("subsector", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
+      dplyr::group_by(Units, scenario, region, ghg, sector, subsector, year) %>%
+      dplyr::summarise(value = sum(value)) %>%
+      dplyr::ungroup()
+  }
+
+  ghg_sector_clean <<- tmp %>%
     left_join_strict(filter_variables(get(paste('kyoto_sector_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ghg_sector_clean") %>%
-                       dplyr::select(-unit_conv),
+                       dplyr::select(-unit_conv) %>%
+                       dplyr::mutate(sector = dplyr::if_else(is.na(sector), 'none', sector)),
                      by = c("ghg", "subsector", "sector"), multiple = "all") %>%
     dplyr::select(all_of(gcamreport::long_columns)) %>%
     dplyr::bind_rows(
@@ -861,6 +896,7 @@ get_co2_sequestration <- function(GCAM_version = "v7.0") {
   co2_sequestration_clean <<- suppressWarnings(
     rgcam::getQuery(prj, "CO2 sequestration by tech") %>%
       left_join_strict(filter_variables(get(paste('carbon_seq_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_sequestration_clean"), by = c("sector", "technology"), multiple = "all") %>%
+      dplyr::filter(var != 'NoReported') %>%
       tidyr::complete(tidyr::nesting(scenario, region, year),
         var = unique(var),
         fill = list(value = 0)
@@ -1162,11 +1198,21 @@ get_se_gen_tech <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_fe_sector_tmp <- function(GCAM_version = "v7.0") {
-  var <- value <- unit_conv <- scenario <- region <- year <- NULL
+  var <- value <- unit_conv <- scenario <- region <- year <- tmp <- NULL
+
+  # gather deciles if necessary
+  tmp <- rgcam::getQuery(prj, "final energy consumption by sector and fuel") %>%
+    dplyr::filter(!stringr::str_starts(sector, 'trn'))
+  if(GCAM_version == 'v7.1') {
+    tmp <- tmp %>%
+      tidyr::separate(sector, into = c("sector", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
+      dplyr::group_by(Units, scenario, region, sector, input, year) %>%
+      dplyr::summarise(value = sum(value)) %>%
+      dplyr::ungroup()
+  }
 
   fe_sector <<-
-    rgcam::getQuery(prj, "final energy consumption by sector and fuel") %>%
-    dplyr::filter(!stringr::str_starts(sector, 'trn')) %>%
+    tmp %>%
     left_join_strict(filter_variables(get(paste('final_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "fe_sector"),
                      by = c("sector", "input"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
@@ -1272,8 +1318,18 @@ get_energy_service_transportation <- function(GCAM_version = "v7.0") {
 get_energy_service_buildings <- function(GCAM_version = "v7.0") {
   var <- value <- unit_conv <- scenario <- region <- year <- NULL
 
+  # gather deciles if necessary
+  tmp <- rgcam::getQuery(prj, "building floorspace")
+  if(GCAM_version == 'v7.1') {
+    tmp <- tmp %>%
+      tidyr::separate(building, into = c("building", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
+      dplyr::group_by(Units, scenario, region, building, nodeinput, `building-node-input`, year) %>%
+      dplyr::summarise(value = sum(value)) %>%
+      dplyr::ungroup()
+  }
+
   energy_service_buildings_clean <<-
-    rgcam::getQuery(prj, "building floorspace") %>%
+    tmp %>%
     left_join_strict(filter_variables(get(paste('buildings_en_service',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "energy_service_buildings_clean"), by = c("building"), multiple = "all") %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%

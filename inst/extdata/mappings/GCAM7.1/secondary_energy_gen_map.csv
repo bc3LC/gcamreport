@@ -11,8 +11,10 @@ H2 central production,electricity,electrolysis,Secondary Energy,Secondary Energy
 H2 central production,gas,natural gas steam reforming,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/o CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/o CCS,,,1
 H2 central production,gas,natural gas steam reforming CCS,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/ CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/ CCS,,,1
 H2 central production,nuclear,thermal splitting,Secondary Energy,Secondary Energy|Hydrogen,,,,,,,1
+H2 central production,nuclear,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,,,,,,,1
 H2 central production,solar,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
 H2 central production,wind,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 industrial,onsite production,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
 H2 industrial,forecourt production,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
 H2 wholesale dispensing,forecourt production,electrolysis,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
 H2 wholesale dispensing,forecourt production,natural gas steam reforming,Secondary Energy,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Fossil|w/o CCS,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Gas|w/o CCS,,,1

@@ -2,6 +2,7 @@
 sector,var1,var2,var3,GCAM output unit
 iron and steel,Production|Steel,,,Mt
 N fertilizer,Production|Chemicals,,,Mt N
+ammonia,Production|Chemicals,,,Mt N
 airCO2,NoReported,,,
 agricultural energy use,Production|Agriculture,,,EJ
 alumina,NoReported,,,
@@ -16,4 +17,9 @@ other industrial energy use,Production|Other,,,EJ
 other industrial feedstocks,NoReported,,,EJ
 mining energy use,Production|Mining,,,EJ
 process heat cement,NoReported,,,
+process heat food processing,NoReported,,,
+process heat paper,NoReported,,,
 process heat dac,NoReported,,,
+waste biomass for paper,NoReported,,,
+paper,NoReported,,,
+food processing,NoReported,,,

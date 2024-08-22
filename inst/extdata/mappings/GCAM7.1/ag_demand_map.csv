@@ -21,3 +21,7 @@ traded beef,NoReported,,,,,,,,1
 traded pork,NoReported,,,,,,,,1
 traded poultry,NoReported,,,,,,,,1
 traded sheepgoat,NoReported,,,,,,,,1
+NonFoodDemand_sawnwood,NoReported,,,,,,,,1
+regional industrial_roundwood,NoReported,,,,,,,,1
+traded industrial_roundwood,NoReported,,,,,,,,1
+woodpulp_energy,NoReported,,,,,,,,1

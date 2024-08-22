@@ -6,7 +6,9 @@ CO2,,agricultural energy use,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,
 CH4,,alumina,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Non-Ferrous Metals,,,,,,1
 N2O,,alumina,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Non-Ferrous Metals,,,,,,1
 CO2,,alumina,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Non-Ferrous Metals,,,,,,1
+CH4,,backup_electricity,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Electricity,,,,,,,1
 CO2,,backup_electricity,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Electricity,,,,,,,1
+N2O,,backup_electricity,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Electricity,,,,,,,1
 CH4,AGR,Beef,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,Beef,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,biomass,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
@@ -102,6 +104,9 @@ N2O,AWB,MiscCrop,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Ky
 CH4,,N fertilizer,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
 N2O,,N fertilizer,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
 CO2,,N fertilizer,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
+CH4,,ammonia,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
+N2O,,ammonia,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
+CO2,,ammonia,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Chemicals,,,,,,1
 CH4,,natural gas,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 N2O,,natural gas,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 N2O,AGR,OilCrop,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|AFOLU,,,,,,,1
@@ -127,6 +132,12 @@ N2O,AGR,Poultry,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyo
 CO2,,process heat cement,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
 CH4,,process heat cement,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
 N2O,,process heat cement,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
+CO2,,process heat food processing,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+CH4,,process heat food processing,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+N2O,,process heat food processing,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+CO2,,process heat paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+CH4,,process heat paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+N2O,,process heat paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
 CO2,,refined liquids enduse,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 CO2,,refined liquids industrial,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 CO2,,refined liquids feedstocks,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
@@ -135,20 +146,30 @@ CO2,,refined liquids transport,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energ
 CH4,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 N2O,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
 CO2,,refining,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Other,,,,,,,1
-HFC125,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-HFC134a,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-HFC143a,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-HFC23,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-HFC32,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CH4,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-N2O,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CO2,,resid cooling,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CH4,,resid heating,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-N2O,,resid heating,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CO2,,resid heating,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CH4,,resid others,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-N2O,,resid others,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
-CO2,,resid others,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Cement,,,,,,1
+HFC125,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+HFC134a,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+HFC143a,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+HFC23,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+HFC32,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CO2,,resid cooling modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid heating modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid heating modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CO2,,resid heating modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid heating coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid heating coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CO2,,resid heating coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid heating TradBio,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid heating TradBio,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid others modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid others modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CO2,,resid others modern,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid others coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid others coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CO2,,resid others coal,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+CH4,,resid others TradBio,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
+N2O,,resid others TradBio,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial,,,,,,,1
 CH4,AGR,Rice,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 N2O,AGR,Rice,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
 CH4,AWB,Rice,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
@@ -216,3 +237,6 @@ CO2,,desalinated water,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissi
 CO2,,elec_coal (IGCC CCS),Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Supply,Emissions|Kyoto Gases|Energy|Supply|Electricity,,,,,,,1
 CO2,,airCO2,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Other,,,,,,,,,1
 CO2,,process heat dac,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+CH4,,waste biomass for paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+CO2,,waste biomass for paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1
+N2O,,waste biomass for paper,Emissions|Kyoto Gases,Emissions|Kyoto Gases|Energy,Emissions|Kyoto Gases|Energy|Demand,Emissions|Kyoto Gases|Energy|Demand|Industry,Emissions|Kyoto Gases|Energy|Demand|Industry|Other Industry,,,,,,1

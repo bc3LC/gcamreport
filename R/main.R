@@ -270,7 +270,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
      !"nonCO2 emissions by sector" %in% rgcam::listQueries(prj) &&
      "nonCO2 emissions by sector" %in% names(queries_touse_large))
     ||
-    (GCAM_version == 'v7.0' &&
+    (GCAM_version != 'v6.0' &&
     !"nonCO2 emissions by sector (excluding resource production)" %in% rgcam::listQueries(prj) &&
     "nonCO2 emissions by sector (excluding resource production)" %in% names(queries_touse_large))
     ) {
@@ -285,7 +285,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
         project = prj_name, qdata = dt_sec, saveProj = FALSE,
         queryname = "nonCO2 emissions by sector", clobber = FALSE
       )
-    } else if (GCAM_version == 'v7.0') {
+    } else if (GCAM_version != 'v6.0') {
       dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)",
                            db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
       prj_tmp <- rgcam::addQueryTable(
