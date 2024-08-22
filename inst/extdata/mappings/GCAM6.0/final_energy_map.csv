@@ -100,7 +100,7 @@ mining energy use,gas,Final Energy,Final Energy|Gases,,,Final Energy|Industry,,F
 N fertilizer,gas,Final Energy,Final Energy|Gases,,Final Energy|Industry,Final Energy|Industry|Gases,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Gases,,Final Energy|Industry|Chemicals|Ammonia,Final Energy|Industry|Chemicals|Ammonia|Gases,,1
 other industrial energy use,gas,Final Energy,Final Energy|Gases,,,Final Energy|Industry,,Final Energy|Industry|Gases,,,,,,1
 other industrial feedstocks,gas,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
-process heat cement,gas,Final Energy,Final Energy|Industry,,,Final Energy|Industry,,Final Energy|Industry|Gases,,Final Energy|Industry|Cement,Final Energy|Industry|Cement|Gases,,,1
+process heat cement,gas,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
 process heat dac,gas,Final Energy,Final Energy|Other Sector,Final Energy|Other Sector|Gas,,,,,,,,,,1
 resid cooling,gas,Final Energy,Final Energy|Gases,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Residential|Gases,Final Energy|Residential and Commercial|Cooling,,,Final Energy|Residential and Commercial|Residential|Cooling,1
 resid heating,gas,Final Energy,Final Energy|Gases,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Residential|Gases,Final Energy|Residential and Commercial|Heating|Space,,,Final Energy|Residential and Commercial|Residential|Heating|Space,1
