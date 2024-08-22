@@ -1,4 +1,4 @@
-#Demand for Final Fuels
+# Demand for Final Fuels
 sector,input,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12,unit_conv
 agricultural energy use,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
 alumina,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,Final Energy|Industry|Non-ferrous metals,Final Energy|Industry|Non-ferrous metals|Solids,Final Energy|Industry|Non-ferrous metals|Solids|Bioenergy,,1

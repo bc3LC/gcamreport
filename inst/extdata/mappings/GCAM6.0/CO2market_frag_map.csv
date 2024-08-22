@@ -1,4 +1,4 @@
-# mapping file for CO2 markets fragmentation,
+# mapping file for CO2 markets fragmentation
 market,var,sector
 CO2,Price|Carbon,Energy and Industrial Processes
 CO2,Price|Carbon|Energy,Energy and Industrial Processes

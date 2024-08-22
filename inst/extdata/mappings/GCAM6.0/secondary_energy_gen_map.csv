@@ -1,4 +1,4 @@
-# Multiple load segments Electricity generation by technology (inc solar roofs),,,,,,,,,,,
+# Multiple load segments Electricity generation by technology (inc solar roofs)
 sector,subsector,technology,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
 gas processing,biomass gasification,biomass gasification,Secondary Energy,Secondary Energy|Gases,Secondary Energy|Gases|Biomass,,,,,,1
 gas processing,coal gasification,coal gasification,Secondary Energy,Secondary Energy|Gases,Secondary Energy|Gases|Coal,,,,,,1

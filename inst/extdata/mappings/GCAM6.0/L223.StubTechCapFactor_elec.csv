@@ -1,4 +1,4 @@
-# Average annual utilization of renewable technologies, calculated using regional solar irradiance data and wind resource curves to adjust default assumptions,,,,
+# Average annual utilization of renewable technologies, calculated using regional solar irradiance data and wind resource curves to adjust default assumptions
 region,supplysector,subsector,stub.technology,year,capacity.factor
 Africa_Eastern,electricity,wind,wind_storage,1975,0.41
 Africa_Eastern,electricity,wind,wind_storage,1990,0.41

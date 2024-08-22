@@ -1,5 +1,5 @@
-# Non-intermittent technologies from L113.globaltech_capital_ATB and values interpolated from assumptions,,,,,,
-# Values determined by an exponential function with terms for minimum achievable cost and pace of reduction,,,,,,
+# Non-intermittent technologies from L113.globaltech_capital_ATB and values interpolated from assumptions
+# Values determined by an exponential function with terms for minimum achievable cost and pace of reduction
 sector.name,subsector.name,technology,year,input.capital,capital.overnight,fixed.charge.rate
 electricity,biomass,biomass (conv CCS),1975,capital,2051,0.13
 electricity,biomass,biomass (conv CCS),1990,capital,2051,0.13

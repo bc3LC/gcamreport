@@ -1,5 +1,5 @@
-# Data can be generated in 3 ways. 1. Using GCAM 3.0 assumptions 2. Using global average emissions,,
-# coefficients based on CDIAC inventory and IEA energy balances or 3. Using region-specific average emissions coefficients based on CDIAC inventory and IEA energy balances,,
+# Data can be generated in 3 ways. 1. Using GCAM 3.0 assumptions 2. Using global average emissions
+# coefficients based on CDIAC inventory and IEA energy balances or 3. Using region-specific average emissions coefficients based on CDIAC inventory and IEA energy balances
 region,PrimaryFuelCO2Coef.name,PrimaryFuelCO2Coef
 Africa_Eastern,biomass,0
 Africa_Eastern,regional biomass,23

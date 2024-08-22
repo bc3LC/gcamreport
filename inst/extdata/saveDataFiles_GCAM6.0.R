@@ -178,13 +178,13 @@ use_data(energy_prices_map_v6.0, overwrite = T)
 
 
 # Energy Service maps
-transport_en_service_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "energy_service_transportation.csv"),
+transport_en_service_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "transport_en_service.csv"),
                                       skip = 1,
                                       stringsAsFactors = FALSE
 ) %>% gather_map()
 use_data(transport_en_service_v6.0, overwrite = T)
 
-buildings_en_service_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "energy_service_buildings.csv"),
+buildings_en_service_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "buildings_en_service.csv"),
                                       skip = 1,
                                       stringsAsFactors = FALSE
 ) %>% gather_map()
@@ -240,7 +240,7 @@ co2_market_frag_map_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mapp
 use_data(co2_market_frag_map_v6.0, overwrite = T)
 
 # iron and steel
-iron_steel_trade_map_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "iron_steel.csv"), skip = 1,
+iron_steel_trade_map_v6.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM6.0", "iron_steel_trade.csv"), skip = 1,
                                       stringsAsFactors = FALSE) %>% gather_map()
 use_data(iron_steel_trade_map_v6.0, overwrite = T)
 

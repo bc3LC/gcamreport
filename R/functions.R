@@ -578,6 +578,7 @@ get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
     co2_tech_nobio %>%
     left_join_strict(filter_variables(get(paste('co2_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_tech_emissions"),
                      by = c("sector", "subsector", "technology"), multiple = "all") %>%
+    dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -945,6 +946,7 @@ get_land <- function(GCAM_version = "v7.0") {
 
   land_clean <<-
     rgcam::getQuery(prj, "aggregated land allocation") %>%
+    dplyr::filter(grepl('^[a-z]',landleaf)) %>%
     left_join_strict(filter_variables(get(paste('land_use_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "land_clean"), by = c("landleaf"), multiple = "all") %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -1387,6 +1389,7 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::filter(Units == "1975$/kg", !grepl('region|traded|^[a-z]',sector)) %>%
     left_join_strict(filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld"), by = c("sector")) %>%
+    dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::group_by(scenario, sector, year) %>%
     dplyr::summarise(value = mean(value, na.rm = T)) %>%

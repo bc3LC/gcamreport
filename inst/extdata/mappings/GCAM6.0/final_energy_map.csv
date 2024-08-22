@@ -1,4 +1,4 @@
-#Demand for Final Fuels
+# Demand for Final Fuels
 sector,input,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12,unit_conv
 agricultural energy use,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
 alumina,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,Final Energy|Industry|Non-ferrous metals,Final Energy|Industry|Non-ferrous metals|Solids,Final Energy|Industry|Non-ferrous metals|Solids|Bioenergy,,1
@@ -134,6 +134,8 @@ other industrial energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final 
 agricultural energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
 construction energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
 mining energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+iron and steel,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,Final Energy|Industry|Steel,Final Energy|Industry|Steel|Hydrogen,,,1
+chemical energy use,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Hydrogen,,,1
 agricultural energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,,,,,1
 alumina,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,Final Energy|Industry|Non-ferrous metals,Final Energy|Industry|Non-ferrous metals|Liquids,,,1
 chemical energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Liquids,,,1
@@ -144,7 +146,7 @@ construction energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Fina
 construction feedstocks,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
 industrial energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,,,,,1
 industrial feedstocks,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
-iron and steel,refined liquids,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,Final Energy|Industry|Steel,Final Energy|Industry|Steel|Hydrogen,,,1
+iron and steel,refined liquids,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,Final Energy|Industry|Steel,Final Energy|Industry|Steel|Liquids,,,1
 mining energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,,,,,1
 N fertilizer,refined liquids,Final Energy,Final Energy|Liquids,,Final Energy|Industry,Final Energy|Industry|Liquids,,Final Energy|Industry|Chemicals,Final Energy|Industry|Chemicals|Liquids,,Final Energy|Industry|Chemicals|Ammonia,Final Energy|Industry|Chemicals|Ammonia|Liquids,,1
 other industrial energy use,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Industry,,Final Energy|Industry|Liquids,,,,,,1
