@@ -1383,17 +1383,10 @@ get_iron_steel_clean <- function() {
 get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
   var <- scenario <- sector <- year <- value <- ag_prices_map <- NULL
 
-  ag_prices_map <- filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld")
-
-  # check if the mapping file has a mismatch with the query
-  if (sum(unique(rgcam::getQuery(prj, "prices by sector")$sector) %in% unique(ag_prices_map$sector)) != 24) {
-    handle_warning(mapping_name1 = 'ag_prices_map', query_name = 'prices by sector')
-  }
-
   ag_prices_wld <<-
     rgcam::getQuery(prj, "prices by sector") %>%
-    dplyr::filter(sector %in% unique(ag_prices_map$sector)) %>%
-    left_join_strict(ag_prices_map, by = c("sector")) %>%
+    dplyr::filter(Units == "1975$/kg", !grepl('region|traded|^[a-z]',sector)) %>%
+    left_join_strict(filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld"), by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::group_by(scenario, sector, year) %>%
     dplyr::summarise(value = mean(value, na.rm = T)) %>%
@@ -1412,17 +1405,10 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
 get_ag_prices <- function(GCAM_version = "v7.0") {
   var <- scenario <- region <- sector <- value <- unit_conv <- year <- NULL
 
-  ag_prices_map <- filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld")
-
-  # check if the mapping file has a mismatch with the query
-  if (sum(unique(rgcam::getQuery(prj, "prices by sector")$sector) %in% unique(ag_prices_map$sector)) != 24) {
-    handle_warning(mapping_name1 = 'ag_prices_map', query_name = 'prices by sector')
-  }
-
   ag_prices_clean <<-
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::bind_rows(ag_prices_wld) %>%
-    dplyr::filter(sector %in% unique(ag_prices_map$sector)) %>%
+    dplyr::filter(Units == "1975$/kg", !grepl('region|traded|^[a-z]',sector)) %>%
     left_join_strict(filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_clean"), by = c("sector")) %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::group_by(scenario, region, sector) %>%
@@ -1835,7 +1821,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
   }
   if (!dplyr::all_of(unique(tmp1$market) %in% c(unique(CO2_market_filteredReg$market),NA))) {
     missing_markets <- setdiff(unique(CO2_market_filteredReg$market), unique(CO2_market_filteredReg$market))
-    warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `CO2_market_new` mapping file.',
+    warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `co2_market_new` mapping file.',
                     paste(missing_markets, collapse = ", ")))
 
     # user response
