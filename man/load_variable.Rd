@@ -9,9 +9,9 @@ load_variable(var, GCAM_version = "v7.0", GWP_version = "AR5")
 \arguments{
 \item{var}{The name of the variable to be loaded. This should be specified as a character string.}
 
-\item{GCAM_version}{The version of GCAM to use. Options are 'v7.0' (default) or 'v6.0'.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 
-\item{GWP_version}{The version of Global Warming Potential (GWP) values to use. Options are 'AR5' (default), 'AR6', or 'AR4'.}
+\item{GWP_version}{Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.}
 }
 \value{
 Loads the specified variable and its dependencies into the environment. This function does not return a value but ensures that the variable and its dependencies are available for further processing.

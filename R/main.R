@@ -10,7 +10,7 @@
 #' @param scenarios Names of the scenarios to consider. Defaults to all scenarios available in the project or database.
 #' @param type Type of non-CO2 emissions query. Must be one of 'nonCO2 emissions by region' or 'nonCO2 emissions by sector'.
 #' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
-#' @param GCAM_version GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @param queries_nonCO2_file Full path to an XML query file (including file name and extension) for long non-CO2 queries: "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to the nonCO2 query file compatible with the specified `GCAM_version`.
 #'
 #' @return A dataframe containing the data retrieved from the specified non-CO2 emissions query.
@@ -142,7 +142,7 @@ load_project <- function(project_path, desired_regions = "All", scenarios = NULL
 #' @param scenarios Names of the scenarios to include. Defaults to all scenarios available in the project or database.
 #' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, forming the "World" for the project.
 #' @param desired_variables Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. For example, selecting "Emissions" and "Emissions|CO2" will make "Emissions" account only for "Emissions|CO2", excluding other variables such as "Emissions|CH4" or "Emissions|NH3".
-#' @param GCAM_version GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
 #' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
 #'
@@ -263,52 +263,52 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
       }
     }
   }
+  if (!exists("prj")) {
+    prj <- NULL
+  }
 
   # Add 'nonCO2' large queries manually (they are too big to use the usual method)
-  if (
-    (GCAM_version == 'v6.0' &&
-     !"nonCO2 emissions by sector" %in% rgcam::listQueries(prj) &&
-     "nonCO2 emissions by sector" %in% names(queries_touse_large))
-    ||
-    (GCAM_version != 'v6.0' &&
-    !"nonCO2 emissions by sector (excluding resource production)" %in% rgcam::listQueries(prj) &&
-    "nonCO2 emissions by sector (excluding resource production)" %in% names(queries_touse_large))
-    ) {
+  var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+
+  nonCO2_emiss_sec_query <- var_fun_map[var_fun_map$name == 'co2_price_share_bysec',][["queries"]][[1]][2]
+  if (!nonCO2_emiss_sec_query %in% rgcam::listQueries(prj) &&
+     nonCO2_emiss_sec_query %in% names(queries_touse_large)) {
 
     # rm variable "prj_tmp" from the environment if exists
     if (exists("prj_tmp")) rm(prj_tmp)
 
-    if (GCAM_version == 'v6.0') {
-      dt_sec <- data_query("nonCO2 emissions by sector",
-                           db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
-      prj_tmp <- rgcam::addQueryTable(
-        project = prj_name, qdata = dt_sec, saveProj = FALSE,
-        queryname = "nonCO2 emissions by sector", clobber = FALSE
-      )
-    } else if (GCAM_version != 'v6.0') {
-      dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)",
-                           db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
-      prj_tmp <- rgcam::addQueryTable(
-        project = prj_name, qdata = dt_sec, saveProj = FALSE,
-        queryname = "nonCO2 emissions by sector (excluding resource production)", clobber = FALSE
-      )
+    dt_sec <- data_query(nonCO2_emiss_sec_query,
+                         db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
+    prj_tmp <- rgcam::addQueryTable(
+      project = prj_name, qdata = dt_sec, saveProj = FALSE,
+      queryname = nonCO2_emiss_sec_query, clobber = FALSE
+    )
+
+    if (!is.null(prj)) {
+      prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+    } else {
+      prj <- prj_tmp
     }
-    prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
     rm(prj_tmp)
   }
-  if (!"nonCO2 emissions by region" %in% rgcam::listQueries(prj) &&
-    "nonCO2 emissions by region" %in% names(queries_touse_large)) {
+  nonCO2_emiss_reg_query <- var_fun_map[var_fun_map$name == 'co2_price_share_bysec',][["queries"]][[1]][1]
+  if (!nonCO2_emiss_reg_query %in% rgcam::listQueries(prj) &&
+      nonCO2_emiss_reg_query %in% names(queries_touse_large)) {
 
     # rm variable "prj_tmp" from the environment if exists
     if (exists("prj_tmp")) rm(prj_tmp)
 
-    dt_reg <- data_query("nonCO2 emissions by region",
+    dt_reg <- data_query(nonCO2_emiss_reg_query,
                          db_path, db_name, prj_name, scenarios, desired_regions, GCAM_version, queries_nonCO2_file)
     prj_tmp <- rgcam::addQueryTable(
       project = prj_name, qdata = dt_reg, saveProj = FALSE,
-      queryname = "nonCO2 emissions by region", clobber = FALSE
+      queryname = nonCO2_emiss_reg_query, clobber = FALSE
     )
-    prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+    if (!is.null(prj)) {
+      prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+    } else {
+      prj <- prj_tmp
+    }
     rm(prj_tmp)
   }
 
@@ -330,7 +330,11 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
       project = prj_name, qdata = dt,
       queryname = "CO2 prices", clobber = TRUE
     )
-    prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = TRUE, saveProj = FALSE)
+    if (!is.null(prj)) {
+      prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = TRUE, saveProj = FALSE)
+    } else {
+      prj <- prj_tmp
+    }
     rm(prj_tmp)
   }
 
@@ -351,8 +355,8 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 #' This internal function is used to load a given variable from the GCAM project along with any dependent variables that are required for its proper context and calculations.
 #'
 #' @param var The name of the variable to be loaded. This should be specified as a character string.
-#' @param GCAM_version The version of GCAM to use. Options are 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version The version of Global Warming Potential (GWP) values to use. Options are 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #'
 #' @return Loads the specified variable and its dependencies into the environment. This function does not return a value but ensures that the variable and its dependencies are available for further processing.
 #'
@@ -431,7 +435,7 @@ load_query <- function(var, base_data, final_queries) {
 #' This function provides a list of regions that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available regions to the console. If FALSE, suppresses the printing and only returns the list.
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available regions. If `print` is TRUE, the function also prints this list to the console.
 #'
@@ -459,7 +463,7 @@ available_regions <- function(print = TRUE, GCAM_version = 'v7.0') {
 #' This function provides a list of regions' groups that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available regions' groups. to the console. If FALSE, suppresses the printing and only returns the list.
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available regions' groups. If `print` is TRUE, the function also prints this list to the console.
 #'
@@ -486,7 +490,7 @@ available_continents <- function(print = TRUE, GCAM_version = 'v7.0') {
 #' This function provides a list of variables that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
 #'
 #' @param print Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #'
 #' @return A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.
 #'
@@ -534,8 +538,8 @@ available_variables <- function(print = TRUE, GCAM_version = "v7.0") {
 #' @param save_output If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.
 #' @param output_file File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.
 #' @param launch_ui If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.
-#' @param GCAM_version GCAM version to use: 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
 #' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
 #'
