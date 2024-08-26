@@ -273,8 +273,8 @@ gather_map <- function(df) {
 #' Converts GHG emissions to CO2e.
 #'
 #' @param data Dataset containing GHG emissions.
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version Global Warming Potential version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #' @importFrom magrittr %>%
 #' @keywords internal conversion
 #' @export
@@ -305,7 +305,7 @@ conv_ghg_co2e <- function(data, GCAM_version = 'v7.0', GWP_version = 'AR5') {
 #' @param data Dataset containing energy data.
 #' @param cf Conversion factor for EJ to GW.
 #' @param EJ Amount of energy in EJ.
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @importFrom magrittr %>%
 #' @keywords internal conversion
 #' @export
@@ -354,7 +354,7 @@ approx_fun <- function(year, value, rule = 1) {
 #'
 #' Retrieves the population query and converts units to millions.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `population_clean` global variable.
 #' @keywords internal population
 #' @importFrom magrittr %>%
@@ -377,7 +377,7 @@ get_population <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves GDP (PPP) data, computes regional GDP, and converts units to 10 USD.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `GDP_PPP_clean` global variable.
 #' @keywords internal GDP
 #' @importFrom magrittr %>%
@@ -399,7 +399,7 @@ get_gdp_ppp <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves GDP (MER) data and converts units to 10 USD.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `GDP_MER_clean` global variable.
 #' @keywords internal GDP
 #' @importFrom magrittr %>%
@@ -424,7 +424,7 @@ get_gdp_mer <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the global forcing query.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `forcing_clean` global variable.
 #' @keywords internal forcing
 #' @importFrom magrittr %>%
@@ -444,7 +444,7 @@ get_forcing <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the global mean temperature query.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `global_temp_clean` global variable.
 #' @keywords internal temperature
 #' @importFrom magrittr %>%
@@ -464,7 +464,7 @@ get_temperature <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the global CO2 concentration query.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `co2_concentration_clean` global variable.
 #' @keywords internal co2
 #' @importFrom magrittr %>%
@@ -484,7 +484,7 @@ get_co2_concentration <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the global CO2 emissions query.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `co2_clean` global variable.
 #' @keywords internal co2
 #' @importFrom magrittr %>%
@@ -526,7 +526,7 @@ get_co2 <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the non-bio CO2 emissions query by sector.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `nonbio_share` global variable.
 #' @keywords internal co2
 #' @importFrom magrittr %>%
@@ -553,7 +553,7 @@ get_nonbio_tmp <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the non-bio CO2 emissions query by sector and technology.
 #'
-#' @param GCAM_version GCAM version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `co2_tech_nobio` global variable.
 #' @keywords internal co2 tmp
 #' @importFrom magrittr %>%
@@ -588,7 +588,7 @@ get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves the non-bio CO2 emissions query by sector, subsector, and technology.
 #'
-#' @param GCAM_version GCAM version to use: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `co2_tech_emissions` global variable.
 #' @keywords internal co2 tmp
 #' @importFrom magrittr %>%
@@ -645,7 +645,7 @@ get_iron_steel_map <- function() {
 #'
 #' Retrieves CO2 emissions data for iron and steel.
 #'
-#' @param GCAM_version GCAM version to use: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `co2_tech_ironsteel` global variable.
 #' @keywords internal iron steel co2
 #' @importFrom magrittr %>%
@@ -677,7 +677,7 @@ get_co2_iron_steel <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieves land use CO2 emissions data.
 #'
-#' @param GCAM_version GCAM version to use: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `LU_carbon_clean` global variable.
 #' @keywords internal lu co2
 #' @importFrom magrittr %>%
@@ -745,7 +745,7 @@ get_total_co2_emissions <- function() {
 #'
 #' Retrieves non-CO2 emissions data.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `nonco2_clean` global variable.
 #' @keywords internal nonco2
 #' @importFrom magrittr %>%
@@ -776,8 +776,8 @@ get_nonco2_emissions <- function(GCAM_version = "v7.0") {
 #'
 #' Computes F-Gases emissions.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #' @return `f_gas_clean` global variable.
 #' @keywords internal f-gases process
 #' @importFrom magrittr %>%
@@ -801,8 +801,8 @@ get_fgas <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #'
 #' Get total GHG emissions.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #' @return `ghg_clean` global variable.
 #' @keywords internal ghg
 #' @importFrom magrittr %>%
@@ -826,8 +826,8 @@ get_ghg <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #'
 #' Get sectorial GHG emissions.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
-#' @param GWP_version Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
 #' @return `ghg_sector_clean` global variable.
 #' @keywords internal ghg
 #' @importFrom magrittr %>%
@@ -885,7 +885,7 @@ get_ghg_sector <- function(GCAM_version = "v7.0", GWP_version = 'AR5') {
 #'
 #' Get carbon sequestration.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2
 #' @return `co2_sequestration_clean` global variable.
 #' @importFrom magrittr %>%
@@ -917,7 +917,7 @@ get_co2_sequestration <- function(GCAM_version = "v7.0") {
 #'
 #' Get agricultural demand.
 #'
-#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal ag
 #' @return `ag_demand_clean` global variable.
 #' @importFrom magrittr %>%
@@ -972,7 +972,7 @@ get_ag_production <- function() {
 #'
 #' Get land use area.
 #'
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal ag
 #' @return `land_clean` global variable.
 #' @importFrom magrittr %>%
@@ -996,7 +996,7 @@ get_land <- function(GCAM_version = "v7.0") {
 #' get_primary_energy
 #'
 #' Retrieve primary energy consumption data by technology.
-#' @param GCAM_version GCAM version to use: 'v7.0' (default) or 'v6.0'.
+#'@param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy
 #' @return `primary_energy_clean` global variable.
 #' @importFrom magrittr %>%
@@ -1099,7 +1099,7 @@ get_energy_trade <- function() {
 #' get_elec_gen_tech
 #'
 #' Retrieve electricity generation.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal electricity
 #' @return `elec_gen_tech_clean` global variable
 #' @importFrom magrittr %>%
@@ -1156,7 +1156,7 @@ get_secondary_solids <- function() {
 #' get_se_gen_tech
 #'
 #' Retrieve other secondary energy production.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy
 #' @return `se_gen_tech_clean` global variable
 #' @importFrom magrittr %>%
@@ -1192,7 +1192,7 @@ get_se_gen_tech <- function(GCAM_version = "v7.0") {
 #' get_fe_sector_tmp
 #'
 #' Retrieve final energy demand by sector.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy tmp
 #' @return `fe_sector` global variable
 #' @importFrom magrittr %>%
@@ -1231,7 +1231,7 @@ get_fe_sector_tmp <- function(GCAM_version = "v7.0") {
 #' get_fe_transportation_tmp
 #'
 #' Retrieve mode-specific transport final energy, including rail, ship, and domestic air.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy  tmp
 #' @return `fe_transportation` global variable
 #' @importFrom magrittr %>%
@@ -1286,7 +1286,7 @@ get_fe_sector <- function() {
 #' get_energy_service_transportation
 #'
 #' Retrieve transport service.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy
 #' @return `energy_service_transportation_clean` global variable
 #' @importFrom magrittr %>%
@@ -1310,7 +1310,7 @@ get_energy_service_transportation <- function(GCAM_version = "v7.0") {
 #' get_energy_service_buildings
 #'
 #' Get ES buildings.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy
 #' @return energy_service_buildings_clean global variable
 #' @importFrom magrittr %>%
@@ -1347,7 +1347,7 @@ get_energy_service_buildings <- function(GCAM_version = "v7.0") {
 #' get_industry_production
 #'
 #' Retrieve industry production.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal energy
 #' @return `industry_production_clean` global variable
 #' @importFrom magrittr %>%
@@ -1371,7 +1371,7 @@ get_industry_production <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieve iron steel imports.
 #' @keywords internal industry tmp
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `iron_steel_imports` global variable
 #' @importFrom magrittr %>%
 #' @export
@@ -1393,7 +1393,7 @@ get_iron_steel_imports <- function(GCAM_version = "v7.0") {
 #'
 #' Retrieve iron steel production.
 #' @keywords internal industry tmp
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `iron_steel_exports``` global variable
 #' @importFrom magrittr %>%
 #' @export
@@ -1433,7 +1433,7 @@ get_iron_steel_clean <- function() {
 #' get_ag_prices_wld_tmp
 #'
 #' Retrieve agricultural price index.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal ag tmp
 #' @return `ag_prices_wld` global variable
 #' @importFrom magrittr %>%
@@ -1456,7 +1456,7 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
 #' get_ag_prices
 #'
 #' Calculate average mean for agricultural global index.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal ag
 #' @return `ag_prices_clean` global variable
 #' @importFrom magrittr %>%
@@ -1491,7 +1491,7 @@ get_ag_prices <- function(GCAM_version = "v7.0") {
 #' get_price_var_tmp
 #'
 #' Retrieve price variables to compute carbon price.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal internal tmp process
 #' @return `price_var` global variable
 #' @importFrom magrittr %>%
@@ -1527,7 +1527,7 @@ filter_data_regions <- function(data) {
 #' get_regions_tmp
 #'
 #' Retrieve regions for carbon price computation. This function fetches the regions necessary for calculating carbon prices.
-#' @param GCAM_version GCAM version to use: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal tmp process
 #' @return The regions data as a global variable.
 #' @importFrom magrittr %>%
@@ -1563,7 +1563,7 @@ get_regions_weight_tmp <- function() {
 #' get_co2_price_global_tmp
 #'
 #' Retrieve global co2 price.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2 tmp
 #' @return `co2_price_global` & regions global variable
 #' @importFrom magrittr %>%
@@ -1597,7 +1597,7 @@ get_co2_price_global_tmp <- function(GCAM_version = "v7.0") {
 #' Retrieves the CO2 price distribution between CO2 and CO2_ETS. If only one CO2 type is present, the share is set to 1.
 #' If both types are present, the share is determined based on the last historical year for each type.
 #'
-#' @param GCAM_version The GCAM version to use: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2 tmp
 #' @return Global variables `co2_price_share_byreg` and `co2_price_share_bysec` containing CO2 price shares by region and sector, respectively.
 #' @importFrom magrittr %>%
@@ -1655,7 +1655,7 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
 #' get_co2_price_fragmented_tmp
 #'
 #' Retrieve CO2 fragmented price.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2 tmp
 #' @return `co2_price_fragmented` global variable
 #' @importFrom magrittr %>%
@@ -1708,7 +1708,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
 #' get_co2_price
 #'
 #' Retrieve co2 price.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2
 #' @return `co2_price_clean` global variable
 #' @importFrom magrittr %>%
@@ -1814,7 +1814,7 @@ get_gov_revenue <- function() {
 #' get_prices_subsector
 #'
 #' Retreive primary, secondary, and final energy prices.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal prices
 #' @return `prices_subsector` global variable
 #' @importFrom magrittr %>%
@@ -1862,7 +1862,7 @@ get_prices_subsector <- function(GCAM_version = "v7.0") {
 #' get_energy_price_fragmented
 #'
 #' Retrieves energy prices fragmented by region and joins them since prices vary by region.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal prices process
 #' @return `energy_price_fragmented` global variable
 #' @importFrom magrittr %>%
@@ -1917,7 +1917,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
 #'
 #' Compute total revenue: total production * global price.
 #' @keywords internal revenue
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return `total_revenue``` global variable
 #' @importFrom magrittr %>%
 #' @export
@@ -1957,7 +1957,7 @@ get_total_revenue <- function(GCAM_version = "v7.0") {
 #' get_regional_emission
 #'
 #' Compute regional nonCO2 emission: regional production * nonCO2 coef.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal nonco2
 #' @return `regional_emission``` global variable
 #' @importFrom magrittr %>%
@@ -2058,7 +2058,7 @@ get_energy_price <- function() {
 #' get_cf_iea_tmp
 #'
 #' Calculate cf for existing capacity checking global existing capacity from IEA.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process tmp
 #' @return `cf_iea``` global variable
 #' @importFrom magrittr %>%
@@ -2115,7 +2115,7 @@ get_cf_iea_tmp <- function(GCAM_version = "v7.0") {
 #' get_elec_cf_tmp
 #'
 #' Computes future capacity estimates using GCAM.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process tmp
 #' @return `elec_cf``` global variable
 #' @importFrom magrittr %>%
@@ -2165,7 +2165,7 @@ get_elec_cf_tmp <- function(GCAM_version = "v7.0") {
 #' get_elec_capacity_tot
 #'
 #' Calculate total electricity capacity.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process
 #' @return `elec_capacity_tot_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2264,7 +2264,7 @@ get_elec_capacity_add_tmp <- function() {
 #' get_elec_capacity_add
 #'
 #' Calculate final total added capacity.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process
 #' @return `elec_capacity_add_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2307,7 +2307,7 @@ get_elec_capacity_add <- function(GCAM_version = "v7.0") {
 #' get_elec_capital
 #'
 #' Calculate electricity capital.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capital process
 #' @return `elec_capital_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2356,7 +2356,7 @@ get_elec_capital <- function(GCAM_version = "v7.0") {
 #' get_elec_investment
 #'
 #' Calculate electricity investment = annual capacity additions * capital costs.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capital process
 #' @return `elec_investment_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2400,7 +2400,7 @@ get_elec_investment <- function(GCAM_version = "v7.0") {
 #'
 #' Calculate Investment in Electricity Transmission and Distribution. Scales 2020 numbers based on the average of other model results from Mcollion et al. 2018.
 #' Converts 2015 values to 2010 dollars.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
 #' @return `transmission_invest_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2443,7 +2443,7 @@ get_transmission_invest <- function(GCAM_version = "v7.0") {
 #' get_CCS_invest
 #'
 #' Calculate CSS investment.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
 #' @return `CCS_invest_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2488,7 +2488,7 @@ get_CCS_invest <- function(GCAM_version = "v7.0") {
 #' get_resource_investment
 #'
 #' Calculate investment of resource production.
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
 #' @return `resource_investment_clean``` global variable
 #' @importFrom magrittr %>%
@@ -2616,7 +2616,7 @@ get_resource_investment <- function(GCAM_version = "v7.0") {
 #' do_bind_results
 #'
 #' Binds results and saves them to an output file.#'
-#' @param GCAM_version Main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal process
 #' @return Saved results in an output file.
 #' @importFrom magrittr %>%
@@ -2742,7 +2742,7 @@ do_check_trade <- function() {
 #'
 #' Verify vetting and produce plot.
 #' @keywords internal check
-#' @param GCAM_version main GCAM compatible version: v7.0 (default) or v6.0.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @return A message confirming the success of the vetting process.
 #' @import ggplot2
 #' @importFrom magrittr %>%
@@ -2848,7 +2848,7 @@ do_check_vetting <- function(GCAM_version = "v7.0") {
 #' update_template
 #'
 #' Update the template file by incorporating new reported variables and removing unreported ones.
-#' @param GCAM_version The GCAM version to use: 'v7.0' (default) or 'v6.0'.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal template
 #' @return Updated template saved as both .rda and .csv files in the `inst/extdata` folder.
 update_template <- function(GCAM_version = "v7.0") {

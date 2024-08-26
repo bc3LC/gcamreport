@@ -9,7 +9,7 @@ available_continents(print = TRUE, GCAM_version = "v7.0")
 \arguments{
 \item{print}{Logical. If TRUE (default), prints the list of available regions' groups. to the console. If FALSE, suppresses the printing and only returns the list.}
 
-\item{GCAM_version}{GCAM version: 'v7.0' (default) or 'v6.0'.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
 A vector of character strings representing the names of all available regions' groups. If `print` is TRUE, the function also prints this list to the console.

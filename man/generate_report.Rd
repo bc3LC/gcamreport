@@ -45,9 +45,9 @@ generate_report(
 
 \item{launch_ui}{If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.}
 
-\item{GCAM_version}{GCAM version to use: 'v7.0' (default) or 'v6.0'.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 
-\item{GWP_version}{Global Warming Potential values version: 'AR5' (default), 'AR6', or 'AR4'.}
+\item{GWP_version}{Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.}
 
 \item{queries_general_file}{Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.}
 

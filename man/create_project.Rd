@@ -29,7 +29,7 @@ create_project(
 
 \item{desired_variables}{Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. For example, selecting "Emissions" and "Emissions|CO2" will make "Emissions" account only for "Emissions|CO2", excluding other variables such as "Emissions|CH4" or "Emissions|NH3".}
 
-\item{GCAM_version}{GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 
 \item{queries_general_file}{Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.}
 
