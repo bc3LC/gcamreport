@@ -7,7 +7,7 @@
 get_co2_price_share(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{The GCAM version to use: v7.0 (default) or v6.0.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
 Global variables `co2_price_share_byreg` and `co2_price_share_bysec` containing CO2 price shares by region and sector, respectively.

@@ -28,7 +28,7 @@ data_query(
 
 \item{desired_regions}{Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".}
 
-\item{GCAM_version}{GCAM version to use. Options are 'v7.0' (default) or 'v6.0'.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 
 \item{queries_nonCO2_file}{Full path to an XML query file (including file name and extension) for long non-CO2 queries: "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to the nonCO2 query file compatible with the specified `GCAM_version`.}
 }

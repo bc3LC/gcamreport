@@ -7,7 +7,7 @@
 get_se_gen_tech(GCAM_version = "v7.0")
 }
 \arguments{
-\item{GCAM_version}{main GCAM compatible version: v7.0 (default) or v6.0.}
+\item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
 `se_gen_tech_clean` global variable
