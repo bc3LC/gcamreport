@@ -135,29 +135,29 @@ other industrial feedstocks,gas,Final Energy|Non-Energy Use,Final Energy|Non-Ene
 other industrial feedstocks,wholesale gas feedstocks,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
 other industrial feedstocks,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
 other industrial feedstocks,refined liquids feedstocks,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
-paper,electricity,Final Energy,Final Energy|Electricity,,,,,,,,,,,1
-process heat cement,biomass,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Biomass,,,,,,,,,,,1
-process heat cement,delivered biomass industry,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Biomass,,,,,,,,,,,1
-process heat cement,coal,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Coal,,,,,,,,,,,1
-process heat cement,delivered coal industry,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Coal,,,,,,,,,,,1
-process heat cement,gas,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
-process heat cement,H2 industrial,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Hydrogen,,,,,,,,,,,1
-process heat cement,hydrogen,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Hydrogen,,,,,,,,,,,1
-process heat cement,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
-process heat food processing,biomass,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Biomass,,,,,,,,,,,1
-process heat food processing,coal,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Coal,,,,,,,,,,,1
-process heat food processing,electricity,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Electricity,,,,,,,,,,,1
-process heat food processing,gas,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
-process heat food processing,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
-process heat food processing,solar,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Solar,,,,,,,,,,,1
-process heat food processing,district heat,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Heat,,,,,,,,,,,1
-process heat paper,coal,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Coal,,,,,,,,,,,1
-process heat paper,electricity,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Electricity,,,,,,,,,,,1
-process heat paper,gas,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Gas,,,,,,,,,,,1
-process heat paper,refined liquids,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Oil,,,,,,,,,,,1
-process heat paper,district heat,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Heat,,,,,,,,,,,1
-process heat dac,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Other Sector,Final Energy|Other Sector|Electricity,,,,,,,1
-process heat dac,gas,Final Energy,Final Energy|Other Sector,Final Energy|Other Sector|Gas,,,,,,,,,,1
+paper,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Industry,,Final Energy|Industry|Electricity,Final Energy|Industry|Paper,Final Energy|Industry|Paper|Electricity,,,,1
+process heat cement,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
+process heat cement,delivered biomass industry,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
+process heat cement,coal,Final Energy,Final Energy|Solids,Final Energy|Solids|Coal,,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Coal,,,,,1
+process heat cement,delivered coal industry,Final Energy,Final Energy|Solids,Final Energy|Solids|Coal,,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Coal,,,,,1
+process heat cement,gas,Final Energy,Final Energy|Gases,,,Final Energy|Industry,,Final Energy|Industry|Gases,,,,,,1
+process heat cement,H2 industrial,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+process heat cement,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+process heat cement,refined liquids,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+process heat food processing,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
+process heat food processing,coal,Final Energy,Final Energy|Solids,Final Energy|Solids|Coal,,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Coal,,,,,1
+process heat food processing,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Industry,,Final Energy|Industry|Electricity,,,,,,1
+process heat food processing,gas,Final Energy,Final Energy|Gases,,,Final Energy|Industry,,Final Energy|Industry|Gases,,,,,,1
+process heat food processing,refined liquids,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+process heat food processing,solar,Final Energy,Final Energy|Solar,,,Final Energy|Industry,,Final Energy|Industry|Solar,,,,,,1
+process heat food processing,district heat,Final Energy,Final Energy|Heat,,,Final Energy|Industry,,Final Energy|Industry|Heat,,,,,,1
+process heat paper,coal,Final Energy,Final Energy|Solids,Final Energy|Solids|Coal,,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Coal,,,,,1
+process heat paper,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Industry,,Final Energy|Industry|Electricity,,,,,,1
+process heat paper,gas,Final Energy,Final Energy|Gases,,,Final Energy|Industry,,Final Energy|Industry|Gases,,,,,,1
+process heat paper,refined liquids,Final Energy,Final Energy|Hydrogen,,,Final Energy|Industry,,Final Energy|Industry|Hydrogen,,,,,,1
+process heat paper,district heat,Final Energy,Final Energy|Heat,,,Final Energy|Industry,,Final Energy|Industry|Heat,,,,,,1
+process heat dac,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Carbon Removal,Final Energy|Carbon Removal|Electricity,Final Energy|Carbon Removal|Direct Air Capture,Final Energy|Carbon Removal|Direct Air Capture|Electricity,,,,,1
+process heat dac,gas,Final Energy,Final Energy|Gases,,,Final Energy|Carbon Removal,Final Energy|Carbon Removal|Gases,Final Energy|Carbon Removal|Direct Air Capture,Final Energy|Carbon Removal|Direct Air Capture|Gases,,,,,1
 resid cooling modern,electricity,Final Energy,Final Energy|Electricity,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Electricity,Final Energy|Residential and Commercial|Residential|Electricity,Final Energy|Residential and Commercial|Cooling,,,Final Energy|Residential and Commercial|Residential|Cooling,1
 resid cooling modern,gas,Final Energy,Final Energy|Gases,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Residential|Gases,Final Energy|Residential and Commercial|Cooling,,,Final Energy|Residential and Commercial|Residential|Cooling,1
 resid heating modern,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Solids,Final Energy|Residential and Commercial|Solids|Biomass,Final Energy|Residential and Commercial|Heating|Space,,,Final Energy|Residential and Commercial|Residential|Heating|Space,1
@@ -178,4 +178,4 @@ resid others modern,H2 retail delivery,Final Energy,Final Energy|Hydrogen,,,Fina
 resid others modern,hydrogen,Final Energy,Final Energy|Hydrogen,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Hydrogen,Final Energy|Residential and Commercial|Residential|Hydrogen,,,,,1
 resid others modern,refined liquids,Final Energy,Final Energy|Liquids,,,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Liquids,Final Energy|Residential and Commercial|Residential|Liquids,,,,,1
 resid others TradBio,traditional biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Traditional,Final Energy|Residential and Commercial,Final Energy|Residential and Commercia|Residential,Final Energy|Residential and Commercial|Solids,Final Energy|Residential and Commercial|Solids|Biomass,,Final Energy|Residential and Commercial|Solids|Biomass|Traditional,,,1
-waste biomass for paper,biomass,Final Energy|Non-Energy Use,Final Energy|Non-Energy Use|Biomass,,,,,,,,,,,1
+waste biomass for paper,biomass,Final Energy,Final Energy|Solids,Final Energy|Solids|Biomass,Final Energy|Solids|Biomass|Modern,Final Energy|Industry,,Final Energy|Industry|Solids,Final Energy|Industry|Solids|Biomass,,,,,1
