@@ -1594,8 +1594,7 @@ get_co2_price_global_tmp <- function(GCAM_version = "v7.0") {
 
 #' Get CO2 Price Share
 #'
-#' Retrieves the CO2 price distribution between CO2 and CO2_ETS. If only one CO2 type is present, the share is set to 1.
-#' If both types are present, the share is determined based on the last historical year for each type.
+#' Retrieves the CO2 price share of each region or sector compared to the total CO2 price.
 #'
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal co2 tmp
@@ -1621,7 +1620,7 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
 
   co2_price_share_bysec <<- co2_clean %>%
     dplyr::filter(year == get(paste('last_historical_year',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
-    # dplyr::select only reported sectors and do a right join, so that all sectors are present,
+    # select only reported sectors and do a right join, so that all sectors are present,
     # even if the value is NA
     dplyr::right_join(expand.grid(
       var = c(
@@ -1675,7 +1674,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
 
     co2_price_fragmented <<-
       co2_price_fragmented_pre %>%
-      dplyr::left_join(CO2_market_filteredReg, by = c("market"), multiple = "all") %>%
+      left_join_strict(CO2_market_filteredReg, by = c("market"), multiple = "all") %>%
       dplyr::filter(stats::complete.cases(.)) %>%
       dplyr::mutate(value = value /
                get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_C_CO2']] *
@@ -1733,7 +1732,7 @@ get_co2_price <- function(GCAM_version = "v7.0") {
 
     # compute Global value using the emission weights
     co2_price_world <- co2_price_regional %>%
-      dplyr::left_join(co2_price_share_bysec %>%
+      left_join_strict(co2_price_share_bysec %>%
                          dplyr::left_join(filter_variables(get(paste('co2_market_frag_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "co2_price_fragmented"),
                                           by = "sector", multiple = "all") %>%
                          dplyr::select(-sector,-market,-year),
@@ -1879,7 +1878,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
     warning('ATTENTION: At least one scenario does not contain CO2 price')
   }
   if (!dplyr::all_of(unique(tmp1$market) %in% c(unique(CO2_market_filteredReg$market),NA))) {
-    missing_markets <- setdiff(unique(CO2_market_filteredReg$market), unique(CO2_market_filteredReg$market))
+    missing_markets <- setdiff(unique(tmp1$market), unique(CO2_market_filteredReg$market))
     warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `co2_market_new` mapping file.',
                     paste(missing_markets, collapse = ", ")))
 

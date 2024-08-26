@@ -13,8 +13,7 @@ get_co2_price_share(GCAM_version = "v7.0")
 Global variables `co2_price_share_byreg` and `co2_price_share_bysec` containing CO2 price shares by region and sector, respectively.
 }
 \description{
-Retrieves the CO2 price distribution between CO2 and CO2_ETS. If only one CO2 type is present, the share is set to 1.
-If both types are present, the share is determined based on the last historical year for each type.
+Retrieves the CO2 price share of each region or sector compared to the total CO2 price.
 }
 \keyword{co2}
 \keyword{internal}
