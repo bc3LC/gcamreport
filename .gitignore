@@ -205,3 +205,5 @@ tests/testthat/testInputs/v_7.1/test7.1_standardized.RData
 tests/testthat/testInputs/v_7.1/test7.1_standardized.xlsx
 gcamv7.3_test.dat
 gcamv7.4_test.dat
+tests/testthat/testInputs/v_6.0/database_basexdb_ref_gcamv6.0_test.dat
+tests/testthat/testInputs/v_7.0/database_basexdb_ref_gcamv7.0_test.dat
