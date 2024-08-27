@@ -3,10 +3,10 @@ name: build
 on:
   push:
     branches:
-      - gcam-v7.0
+      - gcam-core
+      - gcam-iamcompact
       - dev
-      - dev_gcam7.1
-
+      
 jobs:
   R-CMD:
     runs-on: ${{ matrix.config.os }}
