@@ -832,6 +832,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     rlang::inform("Launching UI...")
 
     # launch ui
+    GCAM_version <<- GCAM_version
     launch_gcamreport_ui(data = report)
   }
 }
