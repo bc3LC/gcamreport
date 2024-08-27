@@ -31,3 +31,4 @@ SugarCrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agricultur
 Vegetables,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Vegetables|Index,,,,,1
 Wheat,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Wheat|Index,,,,,1
 biomass,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Energy|Index,,,,,,1
+CO2 removal,NoReported,,,,,,,,1

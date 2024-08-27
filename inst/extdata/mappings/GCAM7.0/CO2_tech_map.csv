@@ -27,6 +27,7 @@ chemical energy use,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.
 chemical energy use,refined liquids,refined liquids CCS,Emissions|CO2|Energy|Oil,,3.666667
 chemical feedstocks,coal,coal,NoReported,,3.666667
 chemical feedstocks,gas,gas,NoReported,,3.666667
+chemical feedstocks,refined liquids,refined liquids,NoReported,,3.666667
 coal CCS retrofit,coal CCS retrofit,add CCS retrofit,Emissions|CO2|Energy|Coal,,3.666667
 coal CCS retrofit,coal CCS retrofit,existing coal,Emissions|CO2|Energy|Coal,,3.666667
 comm cooking,gas,gas range,Emissions|CO2|Energy|Gas,,3.666667
@@ -67,6 +68,15 @@ district heat,biomass,biomass,NoReported,,3.666667
 district heat,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
 district heat,gas,gas,Emissions|CO2|Energy|Gas,,3.666667
 district heat,refined liquids,refined liquids,Emissions|CO2|Energy|Oil,,3.666667
+elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),NoReported,,3.666667
+elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through),NoReported,,3.666667
+elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),NoReported,,3.666667
+elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),NoReported,,3.666667
+elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling),NoReported,,3.666667
+elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through),NoReported,,3.666667
+elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating),NoReported,,3.666667
+elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater),NoReported,,3.666667
+elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (cooling pond),NoReported,,3.666667
 elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling),NoReported,,3.666667
 elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through),NoReported,,3.666667
 elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating),NoReported,,3.666667
@@ -76,6 +86,15 @@ elec_biomass (conv),biomass (conv),biomass (conv) (once through),NoReported,,3.6
 elec_biomass (conv),biomass (conv),biomass (conv) (recirculating),NoReported,,3.666667
 elec_biomass (conv),biomass (conv),biomass (conv) (seawater),NoReported,,3.666667
 elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond),NoReported,,3.666667
+elec_coal (IGCC CCS),coal (IGCC CCS),coal (IGCC CCS) (dry cooling),NoReported,,3.666667
+elec_coal (IGCC CCS),coal (IGCC CCS),coal (IGCC CCS) (once through),NoReported,,3.666667
+elec_coal (IGCC CCS),coal (IGCC CCS),coal (IGCC CCS) (recirculating),NoReported,,3.666667
+elec_coal (IGCC CCS),coal (IGCC CCS),coal (IGCC CCS) (seawater),NoReported,,3.666667
+elec_coal (conv pul CCS),coal (conv pul CCS),coal (conv pul CCS) (dry cooling),NoReported,,3.666667
+elec_coal (conv pul CCS),coal (conv pul CCS),coal (conv pul CCS) (once through),NoReported,,3.666667
+elec_coal (conv pul CCS),coal (conv pul CCS),coal (conv pul CCS) (recirculating),NoReported,,3.666667
+elec_coal (conv pul CCS),coal (conv pul CCS),coal (conv pul CCS) (seawater),NoReported,,3.666667
+elec_coal (conv pul CCS),coal (conv pul CCS),coal (conv pul CCS) (cooling pond),NoReported,,3.666667
 elec_coal (IGCC),coal (IGCC),coal (IGCC) (dry cooling),NoReported,,3.666667
 elec_coal (IGCC),coal (IGCC),coal (IGCC) (once through),NoReported,,3.666667
 elec_coal (IGCC),coal (IGCC),coal (IGCC) (recirculating),NoReported,,3.666667
@@ -85,6 +104,11 @@ elec_coal (conv pul),coal (conv pul),coal (conv pul) (once through),NoReported,,
 elec_coal (conv pul),coal (conv pul),coal (conv pul) (recirculating),NoReported,,3.666667
 elec_coal (conv pul),coal (conv pul),coal (conv pul) (seawater),NoReported,,3.666667
 elec_coal (conv pul),coal (conv pul),coal (conv pul) (cooling pond),NoReported,,3.666667
+elec_gas (CC CCS),gas (CC CCS),gas (CC CCS) (dry cooling),NoReported,,3.666667
+elec_gas (CC CCS),gas (CC CCS),gas (CC CCS) (once through),NoReported,,3.666667
+elec_gas (CC CCS),gas (CC CCS),gas (CC CCS) (recirculating),NoReported,,3.666667
+elec_gas (CC CCS),gas (CC CCS),gas (CC CCS) (seawater),NoReported,,3.666667
+elec_gas (CC CCS),gas (CC CCS),gas (CC CCS) (cooling pond),NoReported,,3.666667
 elec_gas (CC),gas (CC),gas (CC) (dry cooling),NoReported,,3.666667
 elec_gas (CC),gas (CC),gas (CC) (once through),NoReported,,3.666667
 elec_gas (CC),gas (CC),gas (CC) (recirculating),NoReported,,3.666667
@@ -95,6 +119,10 @@ elec_gas (steam/CT),gas (steam/CT),gas (steam/CT) (once through),NoReported,,3.6
 elec_gas (steam/CT),gas (steam/CT),gas (steam/CT) (recirculating),NoReported,,3.666667
 elec_gas (steam/CT),gas (steam/CT),gas (steam/CT) (seawater),NoReported,,3.666667
 elec_gas (steam/CT),gas (steam/CT),gas (steam/CT) (cooling pond),NoReported,,3.666667
+elec_refined liquids (CC CCS),refined liquids (CC CCS),refined liquids (CC CCS) (dry cooling),NoReported,,3.666667
+elec_refined liquids (CC CCS),refined liquids (CC CCS),refined liquids (CC CCS) (once through),NoReported,,3.666667
+elec_refined liquids (CC CCS),refined liquids (CC CCS),refined liquids (CC CCS) (recirculating),NoReported,,3.666667
+elec_refined liquids (CC CCS),refined liquids (CC CCS),refined liquids (CC CCS) (seawater),NoReported,,3.666667
 elec_refined liquids (CC),refined liquids (CC),refined liquids (CC) (dry cooling),NoReported,,3.666667
 elec_refined liquids (CC),refined liquids (CC),refined liquids (CC) (once through),NoReported,,3.666667
 elec_refined liquids (CC),refined liquids (CC),refined liquids (CC) (recirculating),NoReported,,3.666667
@@ -157,6 +185,7 @@ other industrial energy use,refined liquids,refined liquids,Emissions|CO2|Energy
 other industrial energy use,refined liquids,refined liquids cogen,Emissions|CO2|Energy|Oil,,3.666667
 other industrial feedstocks,coal,coal,NoReported,,3.666667
 other industrial feedstocks,gas,gas,NoReported,,3.666667
+other industrial feedstocks,refined liquids,refined liquids,NoReported,,3.666667
 process heat cement,biomass,biomass,NoReported,,3.666667
 process heat cement,coal,coal,Emissions|CO2|Energy|Coal,,3.666667
 process heat cement,gas,gas,Emissions|CO2|Energy|Gas,,3.666667

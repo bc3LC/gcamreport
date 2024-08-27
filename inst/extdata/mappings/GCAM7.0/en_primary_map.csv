@@ -20,8 +20,8 @@ traded coal,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,P
 traded natural gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded oil,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Oil,Primary Energy|Oil|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded oil CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Oil,Primary Energy|Oil|w/ CCS,Primary Energy|Secondary Energy Trade,1
-desalination,,,,,,,1
-desalination CCS,,,,,,,1
+desalination,NoReported,,,,,,1
+desalination CCS,NoReported,,,,,,1
 traded natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,Primary Energy|Secondary Energy Trade,1
 traded coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,Primary Energy|Secondary Energy Trade,1
 traded Afr_MidE pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
@@ -38,3 +38,46 @@ traded LA pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|F
 traded PAC pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded Afr_MidE pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded PAC pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
+adv-biofuel-target,NoReported,,,,,,1
+Bio_Policy,NoReported,,,,,,1
+Bio_Policy CCS,NoReported,,,,,,1
+biodiesel-target,NoReported,,,,,,1
+biodiesel-target-OLD,NoReported,,,,,,1
+biodiesel-target-OLD CCS,NoReported,,,,,,1
+biofuel-target,NoReported,,,,,,1
+biofuel-target,NoReported,,,,,,1
+biofuel-target-OLD,NoReported,,,,,,1
+biofuel-target-OLD CCS,NoReported,,,,,,1
+coal-cap,NoReported,,,,,,1
+coal-cap CCS,NoReported,,,,,,1
+fe-constraint,NoReported,,,,,,1
+fe-constraint CCS,NoReported,,,,,,1
+FE_ELEC,NoReported,,,,,,1
+FE_ELEC CCS,NoReported,,,,,,1
+energy-constraint,NoReported,,,,,,1
+energy-constraint CCS,NoReported,,,,,,1
+geo-target,NoReported,,,,,,1
+geo-target CCS,NoReported,,,,,,1
+green_h2,NoReported,,,,,,1
+green_H2,NoReported,,,,,,1
+green_h2 CCS,NoReported,,,,,,1
+green_H2 CCS,NoReported,,,,,,1
+H2-target,NoReported,,,,,,1
+H2-target CCS,NoReported,,,,,,1
+nuclear-target,NoReported,,,,,,1
+nuclear-target CCS,NoReported,,,,,,1
+PV-target,NoReported,,,,,,1
+PV-target CCS,NoReported,,,,,,1
+RES-target,NoReported,,,,,,1
+RES-target CCS,NoReported,,,,,,1
+solar-H2 renewable CCS,NoReported,,,,,,1
+solar-target,NoReported,,,,,,1
+solar-target CCS,NoReported,,,,,,1
+TPES-GAS,NoReported,,,,,,1
+TPES-GAS CCS,NoReported,,,,,,1
+TPES-RES,NoReported,,,,,,1
+TPES-RES CCS,NoReported,,,,,,1
+TPES_GAS,NoReported,,,,,,1
+TPES_GAS CCS,NoReported,,,,,,1
+TPES_RES,NoReported,,,,,,1
+TPES_RES CCS,NoReported,,,,,,1
