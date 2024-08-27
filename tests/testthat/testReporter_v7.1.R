@@ -139,7 +139,7 @@ test_that("Test7_v7.1 specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.1_test.dat",
+    prj_name = "gcamv7.1.1_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_continents = "OECD90",
@@ -163,7 +163,7 @@ test_that("Test7_v7.1 specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.2_test.dat",
+    prj_name = "gcamv7.1.2_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_continents = "OECD90",
@@ -179,7 +179,7 @@ test_that("Test7_v7.1 specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.3_test.dat",
+    prj_name = "gcamv7.1.3_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "USA",
@@ -207,7 +207,7 @@ test_that("Test7_v7.1 specify variables, regions, continents", {
   generate_report(
     db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1"),
     db_name = "database_basexdb_ref",
-    prj_name = "gcamv7.4_test.dat",
+    prj_name = "gcamv7.1.4_test.dat",
     scenarios = "Reference",
     final_year = 2050,
     desired_regions = "USA",
