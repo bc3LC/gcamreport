@@ -1880,8 +1880,8 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
   if (NA %in% unique(tmp1$market)) {
     warning('ATTENTION: At least one scenario does not contain CO2 price')
   }
-  if (!dplyr::all_of(unique(tmp1$market) %in% c(unique(CO2_market_filteredReg$market),NA))) {
-    missing_markets <- setdiff(unique(tmp1$market), unique(CO2_market_filteredReg$market))
+  missing_markets <- setdiff(unique(tmp1$market), unique(CO2_market_filteredReg$market))
+  if (length(missing_markets) != 0) {
     warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `co2_market_new` mapping file.',
                     paste(missing_markets, collapse = ", ")))
 
