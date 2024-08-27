@@ -567,7 +567,7 @@ get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
 
   co2_tech_nobio_tmp <-
     rgcam::getQuery(prj, queryItem1) %>%
-    left_join_strict(nonbio_share, by = c("region", "scenario", "year", "sector")) %>%
+    dplyr::left_join(nonbio_share, by = c("region", "scenario", "year", "sector")) %>%
     dplyr::mutate(value = value * percent) %>%
     dplyr::select(-percent, -Units.x, -Units.y)
 
@@ -1685,10 +1685,11 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
              ) %>%
       dplyr::mutate(market_adj = "CO2") %>%
       # consider the value sum of by market
-      dplyr::group_by(Units, scenario, year, market, region) %>%
+      dplyr::group_by(Units, scenario, year, market_adj, region) %>%
       dplyr::mutate(value = sum(value)) %>%
       dplyr::ungroup() %>%
       dplyr::select(-market) %>%
+      dplyr::distinct() %>%
       tidyr::pivot_wider(names_from = "market_adj", values_from = "value") %>%
       left_join_strict(
         co2_price_share_bysec %>%
@@ -1880,7 +1881,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
   if (NA %in% unique(tmp1$market)) {
     warning('ATTENTION: At least one scenario does not contain CO2 price')
   }
-  missing_markets <- setdiff(unique(tmp1$market), unique(CO2_market_filteredReg$market))
+  missing_markets <- setdiff(unique(tmp1$market), c(unique(CO2_market_filteredReg$market),NA))
   if (length(missing_markets) != 0) {
     warning(sprintf('ATTENTION: The CO2 markets %s are not present in the `co2_market_new` mapping file.',
                     paste(missing_markets, collapse = ", ")))
@@ -2773,7 +2774,8 @@ do_check_vetting <- function(GCAM_version = "v7.0") {
       unit_vet = unit,
       value_vet = value
     ) %>%
-    left_join_strict(final_data_long_check, by = c("variable", "region", "year")) %>%
+    # dplyr left_join since you an vet only some items
+    dplyr::left_join(final_data_long_check, by = c("variable", "region", "year")) %>%
     tidyr::unnest(value) %>%
     dplyr::mutate(value = dplyr::if_else(grepl("Traditional", variable), value * -1, value)) %>%
     dplyr::select(Scenario, variable = adj_var2, region, year, value, unit = Unit, value_vet, unit_vet, range) %>%
