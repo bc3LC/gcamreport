@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - gcam-core
-      - gcam-iamcompact
       - dev
       
 jobs:
