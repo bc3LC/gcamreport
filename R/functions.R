@@ -1706,9 +1706,10 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
     dplyr::mutate(global_value = sum(value)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(var = dplyr::if_else(grepl("ETS", var), "CO2_ETS", "CO2")) %>%
+    dplyr::filter(var == 'CO2') %>% # only CO2 emissions are accounted to do the regional shares, since CO2_ETS is already accounted
     # compute shares
     dplyr::mutate(share_CO2_world = value / global_value) %>%
-    dplyr::select(scenario, region, year, var, share_CO2_world)
+    dplyr::select(scenario, region, year, share_CO2_world)
 
   co2_price_share_byreg <<- merge(
     co2_price_share_byreg_share_CO2_ETS,
@@ -1762,9 +1763,10 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
     dplyr::group_by(scenario, sector, year) %>%
     dplyr::mutate(global_value = sum(value)) %>%
     dplyr::ungroup() %>%
+    dplyr::filter(ghg == 'CO2') %>%  # only CO2 emissions are accounted to do the regional shares, since CO2_ETS is already accounted
     # compute shares
     dplyr::mutate(share_CO2_world = value / global_value) %>%
-    dplyr::select(scenario, region, year, sector, ghg, share_CO2_world)
+    dplyr::select(scenario, region, year, sector, share_CO2_world)
 
   co2_price_share_bysec <<- merge(
     co2_price_share_bysec_share_CO2_ETS,
@@ -1824,7 +1826,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
       dplyr::mutate(dplyr::across(5:length(colnames(.)), ~ ifelse(is.na(.), 0, .))) %>%
       left_join_strict(
         co2_price_share_bysec %>%
-          dplyr::select(-'year', -'share_CO2_world', -'ghg') %>%
+          dplyr::select(-'year', -'share_CO2_world') %>%
           dplyr::distinct(),
         by = c("scenario", "region")
       )
@@ -2336,7 +2338,7 @@ get_elec_capacity_tot <- function(GCAM_version = "v7.0") {
         dplyr::group_by(scenario, region, technology, vintage, year) %>%
         dplyr::summarise(value = sum(value, na.rm = T)) %>%
         dplyr::ungroup()) %>%
-      left_join_strict(elec_cf %>%
+      dplyr::left_join(elec_cf %>% # dplyr left_join for iamcompact
                          dplyr::select(-cf.rgn), by = c("region", "technology", "vintage")) %>%
       dplyr::mutate(EJ = value) %>%
       conv_EJ_GW() %>%
@@ -2394,9 +2396,10 @@ get_elec_capacity_add_tmp <- function() {
       dplyr::summarise(value = sum(value, na.rm = T)) %>%
       dplyr::ungroup() %>%
       # use GCAM cf for capacity additions
-      left_join_strict(elec_cf %>%
-                         dplyr::select(-'cf.rgn'),
-                       by = c("region", "technology", "year" = "vintage")) %>%
+      dplyr::left_join(elec_cf %>% # dplyr left_join for iam compact
+                         dplyr::select(-'cf.rgn') %>%
+                         dplyr::rename("year" = "vintage"),
+                       by = c("region", "technology", "year")) %>%
       # use average annual additions
       dplyr::mutate(EJ = value / 5) %>%
       conv_EJ_GW() %>%

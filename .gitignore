@@ -223,3 +223,4 @@ tests/testthat/testInputs/v_7.1/gcamv7.1.3_test_standardized.xlsx
 tests/testthat/testInputs/v_7.1/gcamv7.1.4_test_standardized.csv
 tests/testthat/testInputs/v_7.1/gcamv7.1.4_test_standardized.RData
 tests/testthat/testInputs/v_7.1/gcamv7.1.4_test_standardized.xlsx
+examples/database_basexdb_2100_prj_study1_rep.dat
