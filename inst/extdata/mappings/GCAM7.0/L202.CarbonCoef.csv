@@ -4,6 +4,7 @@ region,PrimaryFuelCO2Coef.name,PrimaryFuelCO2Coef
 Africa_Eastern,biomass,0
 Africa_Eastern,regional biomass,23
 Africa_Eastern,delivered biomass,23
+Africa_Eastern,delivered biomass industry,23
 Africa_Eastern,regional biomassOil,19.6
 Africa_Eastern,regional sugar for ethanol,19.6
 Africa_Eastern,regional corn for ethanol,19.6
@@ -27,6 +28,7 @@ Africa_Eastern,limestone,0.08
 Africa_Northern,biomass,0
 Africa_Northern,regional biomass,23
 Africa_Northern,delivered biomass,23
+Africa_Northern,delivered biomass industry,23
 Africa_Northern,regional biomassOil,19.6
 Africa_Northern,regional sugar for ethanol,19.6
 Africa_Northern,regional corn for ethanol,19.6
@@ -50,6 +52,7 @@ Africa_Northern,limestone,1.08
 Africa_Southern,biomass,0
 Africa_Southern,regional biomass,23
 Africa_Southern,delivered biomass,23
+Africa_Southern,delivered biomass industry,23
 Africa_Southern,regional biomassOil,19.6
 Africa_Southern,regional sugar for ethanol,19.6
 Africa_Southern,regional corn for ethanol,19.6
@@ -73,6 +76,7 @@ Africa_Southern,limestone,2.08
 Africa_Western,biomass,0
 Africa_Western,regional biomass,23
 Africa_Western,delivered biomass,23
+Africa_Western,delivered biomass industry,23
 Africa_Western,regional biomassOil,19.6
 Africa_Western,regional sugar for ethanol,19.6
 Africa_Western,regional corn for ethanol,19.6
@@ -96,6 +100,7 @@ Africa_Western,limestone,3.08
 Argentina,biomass,0
 Argentina,regional biomass,23
 Argentina,delivered biomass,23
+Argentina,delivered biomass industry,23
 Argentina,regional biomassOil,19.6
 Argentina,regional sugar for ethanol,19.6
 Argentina,regional corn for ethanol,19.6
@@ -119,6 +124,7 @@ Argentina,limestone,4.08
 Australia_NZ,biomass,0
 Australia_NZ,regional biomass,23
 Australia_NZ,delivered biomass,23
+Australia_NZ,delivered biomass industry,23
 Australia_NZ,regional biomassOil,19.6
 Australia_NZ,regional sugar for ethanol,19.6
 Australia_NZ,regional corn for ethanol,19.6
@@ -142,6 +148,7 @@ Australia_NZ,limestone,5.08
 Brazil,biomass,0
 Brazil,regional biomass,23
 Brazil,delivered biomass,23
+Brazil,delivered biomass industry,23
 Brazil,regional biomassOil,19.6
 Brazil,regional sugar for ethanol,19.6
 Brazil,regional corn for ethanol,19.6
@@ -165,6 +172,7 @@ Brazil,limestone,6.08
 Canada,biomass,0
 Canada,regional biomass,23
 Canada,delivered biomass,23
+Canada,delivered biomass industry,23
 Canada,regional biomassOil,19.6
 Canada,regional sugar for ethanol,19.6
 Canada,regional corn for ethanol,19.6
@@ -188,6 +196,7 @@ Canada,limestone,7.08
 Central America and Caribbean,biomass,0
 Central America and Caribbean,regional biomass,23
 Central America and Caribbean,delivered biomass,23
+Central America and Caribbean,delivered biomass industry,23
 Central America and Caribbean,regional biomassOil,19.6
 Central America and Caribbean,regional sugar for ethanol,19.6
 Central America and Caribbean,regional corn for ethanol,19.6
@@ -211,6 +220,7 @@ Central America and Caribbean,limestone,8.08
 Central Asia,biomass,0
 Central Asia,regional biomass,23
 Central Asia,delivered biomass,23
+Central Asia,delivered biomass industry,23
 Central Asia,regional biomassOil,19.6
 Central Asia,regional sugar for ethanol,19.6
 Central Asia,regional corn for ethanol,19.6
@@ -234,6 +244,7 @@ Central Asia,limestone,9.08
 China,biomass,0
 China,regional biomass,23
 China,delivered biomass,23
+China,delivered biomass industry,23
 China,regional biomassOil,19.6
 China,regional sugar for ethanol,19.6
 China,regional corn for ethanol,19.6
@@ -257,6 +268,7 @@ China,limestone,10.08
 Colombia,biomass,0
 Colombia,regional biomass,23
 Colombia,delivered biomass,23
+Colombia,delivered biomass industry,23
 Colombia,regional biomassOil,19.6
 Colombia,regional sugar for ethanol,19.6
 Colombia,regional corn for ethanol,19.6
@@ -280,6 +292,7 @@ Colombia,limestone,11.08
 EU-12,biomass,0
 EU-12,regional biomass,23
 EU-12,delivered biomass,23
+EU-12,delivered biomass industry,23
 EU-12,regional biomassOil,19.6
 EU-12,regional sugar for ethanol,19.6
 EU-12,regional corn for ethanol,19.6
@@ -303,6 +316,7 @@ EU-12,limestone,16.08
 EU-15,biomass,0
 EU-15,regional biomass,23
 EU-15,delivered biomass,23
+EU-15,delivered biomass industry,23
 EU-15,regional biomassOil,19.6
 EU-15,regional sugar for ethanol,19.6
 EU-15,regional corn for ethanol,19.6
@@ -326,6 +340,7 @@ EU-15,limestone,17.08
 Europe_Eastern,biomass,0
 Europe_Eastern,regional biomass,23
 Europe_Eastern,delivered biomass,23
+Europe_Eastern,delivered biomass industry,23
 Europe_Eastern,regional biomassOil,19.6
 Europe_Eastern,regional sugar for ethanol,19.6
 Europe_Eastern,regional corn for ethanol,19.6
@@ -349,6 +364,7 @@ Europe_Eastern,limestone,18.08
 Europe_Non_EU,biomass,0
 Europe_Non_EU,regional biomass,23
 Europe_Non_EU,delivered biomass,23
+Europe_Non_EU,delivered biomass industry,23
 Europe_Non_EU,regional biomassOil,19.6
 Europe_Non_EU,regional sugar for ethanol,19.6
 Europe_Non_EU,regional corn for ethanol,19.6
@@ -372,6 +388,7 @@ Europe_Non_EU,limestone,19.08
 European Free Trade Association,biomass,0
 European Free Trade Association,regional biomass,23
 European Free Trade Association,delivered biomass,23
+European Free Trade Association,delivered biomass industry,23
 European Free Trade Association,regional biomassOil,19.6
 European Free Trade Association,regional sugar for ethanol,19.6
 European Free Trade Association,regional corn for ethanol,19.6
@@ -395,6 +412,7 @@ European Free Trade Association,limestone,12.08
 India,biomass,0
 India,regional biomass,23
 India,delivered biomass,23
+India,delivered biomass industry,23
 India,regional biomassOil,19.6
 India,regional sugar for ethanol,19.6
 India,regional corn for ethanol,19.6
@@ -418,6 +436,7 @@ India,limestone,20.08
 Indonesia,biomass,0
 Indonesia,regional biomass,23
 Indonesia,delivered biomass,23
+Indonesia,delivered biomass industry,23
 Indonesia,regional biomassOil,19.6
 Indonesia,regional sugar for ethanol,19.6
 Indonesia,regional corn for ethanol,19.6
@@ -441,6 +460,7 @@ Indonesia,limestone,21.08
 Japan,biomass,0
 Japan,regional biomass,23
 Japan,delivered biomass,23
+Japan,delivered biomass industry,23
 Japan,regional biomassOil,19.6
 Japan,regional sugar for ethanol,19.6
 Japan,regional corn for ethanol,19.6
@@ -464,6 +484,7 @@ Japan,limestone,22.08
 Mexico,biomass,0
 Mexico,regional biomass,23
 Mexico,delivered biomass,23
+Mexico,delivered biomass industry,23
 Mexico,regional biomassOil,19.6
 Mexico,regional sugar for ethanol,19.6
 Mexico,regional corn for ethanol,19.6
@@ -487,6 +508,7 @@ Mexico,limestone,24.08
 Middle East,biomass,0
 Middle East,regional biomass,23
 Middle East,delivered biomass,23
+Middle East,delivered biomass industry,23
 Middle East,regional biomassOil,19.6
 Middle East,regional sugar for ethanol,19.6
 Middle East,regional corn for ethanol,19.6
@@ -510,6 +532,7 @@ Middle East,limestone,25.08
 Pakistan,biomass,0
 Pakistan,regional biomass,23
 Pakistan,delivered biomass,23
+Pakistan,delivered biomass industry,23
 Pakistan,regional biomassOil,19.6
 Pakistan,regional sugar for ethanol,19.6
 Pakistan,regional corn for ethanol,19.6
@@ -533,6 +556,7 @@ Pakistan,limestone,26.08
 Russia,biomass,0
 Russia,regional biomass,23
 Russia,delivered biomass,23
+Russia,delivered biomass industry,23
 Russia,regional biomassOil,19.6
 Russia,regional sugar for ethanol,19.6
 Russia,regional corn for ethanol,19.6
@@ -556,6 +580,7 @@ Russia,limestone,28.08
 South Africa,biomass,0
 South Africa,regional biomass,23
 South Africa,delivered biomass,23
+South Africa,delivered biomass industry,23
 South Africa,regional biomassOil,19.6
 South Africa,regional sugar for ethanol,19.6
 South Africa,regional corn for ethanol,19.6
@@ -579,6 +604,7 @@ South Africa,limestone,29.08
 South America_Northern,biomass,0
 South America_Northern,regional biomass,23
 South America_Northern,delivered biomass,23
+South America_Northern,delivered biomass industry,23
 South America_Northern,regional biomassOil,19.6
 South America_Northern,regional sugar for ethanol,19.6
 South America_Northern,regional corn for ethanol,19.6
@@ -602,6 +628,7 @@ South America_Northern,limestone,30.08
 South America_Southern,biomass,0
 South America_Southern,regional biomass,23
 South America_Southern,delivered biomass,23
+South America_Southern,delivered biomass industry,23
 South America_Southern,regional biomassOil,19.6
 South America_Southern,regional sugar for ethanol,19.6
 South America_Southern,regional corn for ethanol,19.6
@@ -625,6 +652,7 @@ South America_Southern,limestone,31.08
 South Asia,biomass,0
 South Asia,regional biomass,23
 South Asia,delivered biomass,23
+South Asia,delivered biomass industry,23
 South Asia,regional biomassOil,19.6
 South Asia,regional sugar for ethanol,19.6
 South Asia,regional corn for ethanol,19.6
@@ -648,6 +676,7 @@ South Asia,limestone,32.08
 South Korea,biomass,0
 South Korea,regional biomass,23
 South Korea,delivered biomass,23
+South Korea,delivered biomass industry,23
 South Korea,regional biomassOil,19.6
 South Korea,regional sugar for ethanol,19.6
 South Korea,regional corn for ethanol,19.6
@@ -671,6 +700,7 @@ South Korea,limestone,33.08
 Southeast Asia,biomass,0
 Southeast Asia,regional biomass,23
 Southeast Asia,delivered biomass,23
+Southeast Asia,delivered biomass industry,23
 Southeast Asia,regional biomassOil,19.6
 Southeast Asia,regional sugar for ethanol,19.6
 Southeast Asia,regional corn for ethanol,19.6
@@ -694,6 +724,7 @@ Southeast Asia,limestone,34.08
 Taiwan,biomass,0
 Taiwan,regional biomass,23
 Taiwan,delivered biomass,23
+Taiwan,delivered biomass industry,23
 Taiwan,regional biomassOil,19.6
 Taiwan,regional sugar for ethanol,19.6
 Taiwan,regional corn for ethanol,19.6
@@ -717,6 +748,7 @@ Taiwan,limestone,35.08
 USA,biomass,0
 USA,regional biomass,23
 USA,delivered biomass,23
+USA,delivered biomass industry,23
 USA,regional biomassOil,19.6
 USA,regional sugar for ethanol,19.6
 USA,regional corn for ethanol,19.6

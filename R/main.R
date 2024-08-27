@@ -230,39 +230,39 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   }
 
   # load all queries for all desired scenarios informing the user
-  # for (sc in scenarios) {
-  #   rlang::inform(paste("Start reading queries for", sc, "scenario"))
-  #
-  #   for (qn in names(queries_touse_short)) {
-  #     rlang::inform(paste("Read", qn, "query"))
-  #
-  #     bq <- queries_touse_short[[qn]]
-  #
-  #     # subset regions if necessary
-  #     if (!(identical(desired_regions, "All"))) {
-  #       bq$regions <- desired_regions
-  #     }
-  #
-  #     table <- suppressMessages({
-  #       rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
-  #     })
-  #     if (nrow(table) > 0) {
-  #       prj_tmp <- rgcam::addQueryTable(
-  #         project = prj_name, qdata = table,
-  #         queryname = qn, clobber = FALSE,
-  #         saveProj = FALSE, show_col_types = FALSE
-  #       )
-  #       if (exists("prj")) {
-  #         prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
-  #       } else {
-  #         prj <- prj_tmp
-  #       }
-  #       rm(prj_tmp)
-  #     } else {
-  #       warning(paste(qn, "query is empty!"))
-  #     }
-  #   }
-  # }
+  for (sc in scenarios) {
+    rlang::inform(paste("Start reading queries for", sc, "scenario"))
+
+    for (qn in names(queries_touse_short)) {
+      rlang::inform(paste("Read", qn, "query"))
+
+      bq <- queries_touse_short[[qn]]
+
+      # subset regions if necessary
+      if (!(identical(desired_regions, "All"))) {
+        bq$regions <- desired_regions
+      }
+
+      table <- suppressMessages({
+        rgcam::runQuery(conn, bq$query, sc, bq$regions, warn.empty = FALSE)
+      })
+      if (nrow(table) > 0) {
+        prj_tmp <- rgcam::addQueryTable(
+          project = prj_name, qdata = table,
+          queryname = qn, clobber = FALSE,
+          saveProj = FALSE, show_col_types = FALSE
+        )
+        if (exists("prj")) {
+          prj <- rgcam::mergeProjects(prj_name, list(prj, prj_tmp), clobber = FALSE, saveProj = FALSE)
+        } else {
+          prj <- prj_tmp
+        }
+        rm(prj_tmp)
+      } else {
+        warning(paste(qn, "query is empty!"))
+      }
+    }
+  }
   if (!exists("prj")) {
     prj <- NULL
   }
@@ -833,6 +833,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     rlang::inform("Launching UI...")
 
     # launch ui
+    GCAM_version <<- GCAM_version
     launch_gcamreport_ui(data = report)
   }
 }

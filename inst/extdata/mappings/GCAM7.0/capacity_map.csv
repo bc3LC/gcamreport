@@ -1,4 +1,4 @@
-# Multiple load segments Electricity generation by technology (inc solar roofs),,,,,,,,,,
+# Multiple load segments Electricity generation by technology (inc solar roofs)
 output,subsector,technology,var1,var2,var3,var4,var6,var7,var8,unit_conv
 electricity,biomass,biomass (conv CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/ CCS,,,,,1
 electricity,biomass,biomass (conv),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,,,,,1
@@ -32,3 +32,6 @@ electricity,wind,wind_offshore,Secondary Energy|Electricity,Secondary Energy|Ele
 electricity,wind,wind_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,Secondary Energy|Electricity|Wind|Onshore,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
 electricity,hydrogen,hydrogen cogen,Secondary Energy|Electricity,,,,,,,1
 elect_td_bld,rooftop_pv,rooftop_pv,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
+,,RES-target,NoReported,,,,,,,1
+,,FE_ELEC,NoReported,,,,,,,1
+,,TPES_RES,NoReported,,,,,,,1
