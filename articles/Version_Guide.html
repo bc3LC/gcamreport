@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,8 @@
     <li><a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a></li>
     <li><a class="dropdown-item" href="../articles/Modify_Mapping_Template_Tutorial.html">Modify Mappings and Template Tutorial</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Documentation and tutorials for gcamreport v6.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v7-0.html">Depracted documentation and tutorials for gcamreport v7.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
   </ul>
 </li>
 <li class="active nav-item"><a class="nav-link" href="../articles/Version_Guide.html"><span class="fa fa-solid fa-seedling"></span> Version Guide</a></li>
@@ -63,24 +64,64 @@
       <h1>Version Guide</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/gcam-core/vignettes/Version_Guide.Rmd" class="external-link"><code>vignettes/Version_Guide.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/dev/vignettes/Version_Guide.Rmd" class="external-link"><code>vignettes/Version_Guide.Rmd</code></a></small>
       <div class="d-none name"><code>Version_Guide.Rmd</code></div>
     </div>
 
     
     
-<p>Each <code>gcamreport</code> release is linked either to a
-<code>GCAM</code> version or a study where GCAM was used. We follow a
-specific naming and tagging procedure for each release: they are all
-linked to a tag, whose name firstly contains two numbers indicating the
-compatible GCAM version (e.g. <strong>v6.0</strong> indicates that it is
-compatible with GCAM 6.0); the next number indicates the version release
-(e.g. v6.0.<strong>0</strong> indicates that it is the
-<strong>first</strong> release compatible with GCAM 6.0). This
-numeration starts from 0. Finally, if the release is linked to a
-project, the tag’s name contains a hyphen and a key work
-(e.g. v6.0.0<strong>-gas</strong>).</p>
-<p>Find below a description of all the releases:</p>
+<p>The <code>gcamreport</code> package is compatible with the main
+versions of GCAM: <a href="https://zenodo.org/records/6619287" class="external-link">6.0</a>,
+<a href="https://zenodo.org/records/8010145" class="external-link">7.0</a>, and <a href="https://zenodo.org/records/11481167" class="external-link">7.1</a>. To use these
+versions, ensure that you have cloned the <code>gcam-core</code> branch
+(the default branch) and specify the GCAM version using the
+<code>GCAM_version</code> parameter in the <a href="https://bc3lc.github.io/gcamreport/reference/generate_report.html"><code>generate_report</code></a>
+or <a href="https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html"><code>launch_gcamreport_ui</code></a>
+functions, as demonstrated in this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-GWP-or-GCAM-version">example</a>.
+If you need to modify mappings to better suit your GCAM version, refer
+to this <a href="TODO">tutorial</a> and remember to tag the version to
+ensure reproducibility of the results ;)</p>
+<p>This approach allows users to access the full range of
+<code>gcamreport</code> functionalities regardless of the GCAM version
+they are using. Additionally, it streamlines the process of bug fixing
+and updating <code>gcamreport</code> to stay in line with GCAM-core
+updates. Future versions of <code>gcamreport</code> will be released
+under the following naming convention: <code>gcamreport a.b.c</code>,
+where <em>a.b.c</em> denotes the release version of
+<code>gcamreport</code> (e.g., <em>1.0.0</em>, <em>1.0.1</em>,
+<em>1.2.0</em>, …). Major releases will increment the first digit
+(<em>a</em>), while minor updates will increment the second (<em>b</em>)
+or third (<em>c</em>) digit.</p>
+<p><span style="color:white">newline</span></p>
+<p>Previous <code>gcamreport</code> versions were linked either to a
+<code>GCAM</code> version or a study where GCAM was used. We followed a
+specific naming and tagging procedure for each release: they were all
+linked to a tag, whose name firstly contained two numbers indicating the
+compatible GCAM version (e.g. <em>v6.0</em> indicates that it is
+compatible with GCAM 6.0); the next number indicated the version release
+(e.g. v6.0.<em>0</em> indicates that it is the <em>first</em> release
+compatible with GCAM 6.0). This numeration started from 0. Finally, if
+the release was linked to a project, the tag’s name contained a hyphen
+and a key work (e.g. v6.0.0<em>-gas</em>). Currently, this procedure is
+<strong>depracated</strong>, but the tags are still available if you
+want to reproduce some versions.</p>
+<p>To install previous <code>gcamreport</code> versions, indicate the
+tag or branch name when cloning the repository. For instance:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># to clone the tagged version "v6.0.1-depracated":</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--branch</span> v6.0.1-depracated <span class="at">--single-branch</span> https://github.com/bc3LC/gcamreport.git</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># to clone the branch version "gcam-v6.0-depracated":</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--branch</span> gcam-v6.0-depracated https://github.com/bc3LC/gcamreport.git</span></code></pre></div>
+<p>Or install the suitable version in your R session:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># to install the tagged version "v6.0.1-depracated"</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'bc3LC/gcamreport@v6.0.1-depracated'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># to install the branch version "gcam-v6.0-depracated"</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'bc3LC/gcamreport@gcam-v6.0-depracated'</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
+<p>Find below a description of all the previous releases (currently
+depracted):</p>
 <table class="table">
 <thead><tr class="header">
 <th>
@@ -119,7 +160,7 @@ corresponding versions <a href="https://bc3lc.github.io/gcamreport/news/index.ht
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Dirk-Jan Van de Ven.</p>
+  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Russell Horowitz, Dirk-Jan Van de Ven.</p>
 </div>
 
 <div class="pkgdown-footer-right">

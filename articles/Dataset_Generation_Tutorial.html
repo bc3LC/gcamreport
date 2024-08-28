@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,8 @@
     <li><a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a></li>
     <li><a class="dropdown-item" href="../articles/Modify_Mapping_Template_Tutorial.html">Modify Mappings and Template Tutorial</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Documentation and tutorials for gcamreport v6.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v7-0.html">Depracted documentation and tutorials for gcamreport v7.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../articles/Version_Guide.html"><span class="fa fa-solid fa-seedling"></span> Version Guide</a></li>
@@ -63,7 +64,7 @@
       <h1>Dataset Generation Tutorial</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/gcam-core/vignettes/Dataset_Generation_Tutorial.Rmd" class="external-link"><code>vignettes/Dataset_Generation_Tutorial.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/dev/vignettes/Dataset_Generation_Tutorial.Rmd" class="external-link"><code>vignettes/Dataset_Generation_Tutorial.Rmd</code></a></small>
       <div class="d-none name"><code>Dataset_Generation_Tutorial.Rmd</code></div>
     </div>
 
@@ -75,10 +76,10 @@ function, look <a href="https://bc3lc.github.io/gcamreport/reference/generate_re
 <div class="section level2">
 <h2 id="example1">Example 1: generate a dataset from a database<a class="anchor" aria-label="anchor" href="#example1"></a>
 </h2>
-<p>Suppose you have a database named <code>myDb</code> in a folder named
-<code>dbFolder</code> and you want to generate a standardized dataset
-for several scenarios: <code>scen1</code>, <code>scen2</code> and
-<code>scen3</code> using a <code>new_general_queries_file</code>. The
+<p>Suppose you have a database from GCAM version <em>v7.1</em> named
+<code>myDb</code> in a folder named <code>dbFolder</code> and you want
+to generate a standardized dataset for several scenarios:
+<code>scen1</code>, <code>scen2</code> and <code>scen3</code>. The
 <code>generate_report</code> function will generate it and automatically
 save it in the same folder where <code>myDb</code> is located.</p>
 <ol style="list-style-type: decimal">
@@ -94,21 +95,23 @@ Rstudio or Docker, run</p></li>
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Store the database path and name, the query path, the desired
-project name, and the desired scenarios and reporting variables in
-variables. In case you do not specify the scenarios, all the scenarios
-in the database will be considered for reporting; and if the variables
-are not specified, all the available reporting variables will be used.
-For more details about scenarios and variables specification, look at
-the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
+project name, the GCAM-core compatible version, and the desired
+scenarios and reporting variables in variables. In case you do not
+specify the scenarios, all the scenarios in the database will be
+considered for reporting; and if the variables are not specified, all
+the available reporting variables will be used. For more details about
+scenarios and variables specification, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
 tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
-tutorial</a>. If you want to specify the query files, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-query-files">query
+tutorial</a>. If you want to specify the GWP version look at <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-GWP-or-GCAM-version">GWP
+tutorial</a> and if you want to specify the query files, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-7-specify-the-query-files">query
 files tutorial</a>.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
 <span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
 <span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
-<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
 <p>Notice that the extension is included in the project name. Accepted
 extensions are <code>.dat</code> &amp; <code>.proj</code>.</p>
 <p><strong>Note</strong>: If you followed the Docker installation, you
@@ -117,13 +120,13 @@ which is now considered the root of the R session. Inside the R session
 it is referred to as <code>/app</code>. Thus, your database path will be
 something like <code>/app/path/to/database</code>.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Generate the standardized standardized dataset until the desired
-year. In this example, 2050. By default is 2100 and it should be at
-least 2025.</li>
+<li>Generate the standardized dataset until the desired year. In this
+example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, </span>
-<span>                scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>,</span>
+<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: The project generation might take some time,
 depending on the number of scenarios, regions, and variables you want to
 standardize.</p>
@@ -135,20 +138,20 @@ standardize.</p>
 <p>This procedure will also generate a project file at
 <code>/path/to/database/dbname_prjname.dat</code> with all the loaded
 queries. You can directly use it as indicated in <a href="#example2">Example 2</a>.</p>
-<p>The terminal will output the performed vetting verifications and
-their final status.</p>
+<p>The terminal will output the performed vetting verification and their
+final status.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
 <h2 id="example2">Example 2: generate a dataset from a project<a class="anchor" aria-label="anchor" href="#example2"></a>
 </h2>
-<p>Suppose you have a project named <code>myProj.dat</code> and you want
-to generate a standardized dataset from it. The
-<code>generate_report</code> function will generate it and automatically
-save it in the same folder as <code>myProj.dat</code>. Note that
-<code>myProj.dat</code> should have all the queries needed to generate
-the standardized dataset. If you are not sure you have all of them, or
-if you need to generate the project, see <a href="#example1">Example1</a>.</p>
+<p>Suppose you have a project named <code>myProj.dat</code> obtained
+through GCAM 7.1 and you want to generate a standardized dataset from
+it. The <code>generate_report</code> function will generate it and
+automatically save it in the same folder as <code>myProj.dat</code>.
+Note that <code>myProj.dat</code> should have all the queries needed to
+generate the standardized dataset. If you are not sure you have all of
+them, or if you need to generate the project, see <a href="#example1">Example1</a>.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
 guide</a> either with R or Docker.</p></li>
@@ -161,12 +164,12 @@ Rstudio or Docker, run</p></li>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Store the project path and the desired scenarios and reporting
-variables in variables. In case you do not specify the scenarios, all
-the scenarios in the database will be considered for reporting; and if
-the variables are not specified, all the available reporting variables
-will be used. For more details about scenarios and variables
-specification, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
+<li>Store the project path, the GCAM version, the desired scenarios, and
+reporting variables in variables. In case you do not specify the
+scenarios, all the scenarios in the database will be considered for
+reporting; and if the variables are not specified, all the available
+reporting variables will be used. For more details about scenarios and
+variables specification, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
 tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
 tutorial</a>. Notice that only regions and variables already present in
 the rgcam project can be considered for reporting. If you wish to
@@ -175,7 +178,8 @@ as detailed in <a href="#example1">Example1</a>.</li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span>
-<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
 <p>Notice that the extension is included. Accepted extensions are
 <code>.dat</code> &amp; <code>.proj</code>.</p>
 <p><strong>Note</strong>: If you followed the Docker installation, you
@@ -189,7 +193,7 @@ example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>prj_name <span class="op">=</span> <span class="va">mypath</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
-<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
 <code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
 <code>/path/to/project/myProj_standardized.RData</code>,
@@ -360,7 +364,45 @@ Energy</em> will be the sum of these two sectors, and will not consider
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
-<h2 id="example-6-specify-the-query-files">Example 6: specify the query files<a class="anchor" aria-label="anchor" href="#example-6-specify-the-query-files"></a>
+<h2 id="example-6-specify-the-gwp-or-the-gcam-version">Example 6: specify the GWP or the GCAM version<a class="anchor" aria-label="anchor" href="#example-6-specify-the-gwp-or-the-gcam-version"></a>
+</h2>
+<p>Suppose you are in the situation of one of the previous examples, but
+you want to consider some specific GWP values to standardize the
+dataset, which is from a certain GCAM version.</p>
+<ol style="list-style-type: decimal">
+<li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
+guide</a> either with R or Docker.</p></li>
+<li><p>Load the <code>gcamreport</code> library. If you are using
+Rstudio or Docker, run</p></li>
+</ol>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and if you are using R, run</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Check which are the available GWP and CAM versions for reporting.
+The following command will print a list with all the possibilities.</li>
+</ol>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/available_GCAM_versions.html">available_GCAM_versions</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/available_GWP_versions.html">available_GWP_versions</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
+parameters that you consider in the <code>generate_report</code>
+function (e.g, final year, desired scenarios…). Specify the GWP version
+through the <code>GWP_version</code> parameter and the GCAM version
+through the <code>GCAM_version</code> parameter. Notice that the GCAM
+version should match the GCAM version used to produce the data. By
+default the reporting process uses GCAM7.0 and AR5.</li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## -- specify the desired variables</span></span>
+<span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="va">...</span>, GCAM_version <span class="op">=</span> <span class="st">"v6.0"</span>, GWP_version <span class="op">=</span> <span class="st">"AR4"</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
+<h2 id="example-7-specify-the-query-files">Example 7: specify the query files<a class="anchor" aria-label="anchor" href="#example-7-specify-the-query-files"></a>
 </h2>
 <p>The <code>gcamreport</code> standardization procedure requires two
 query files. The <code>gcamreport::queries_general</code> is a query
@@ -380,8 +422,8 @@ standardize the desired variables, thus avoiding loading extra queries.
 It is only possible to specify the query files when generating the rgcam
 project.</p>
 <p>Let’s start with the example: Suppose you have a database named
-<code>myDb</code> in a folder named <code>dbFolder</code> and you want
-to generate a standardized dataset for several scenarios
+<code>myDb</code> of GCAM 7.1 in a folder named <code>dbFolder</code>
+and you want to generate a standardized dataset for several scenarios
 (<code>scen1</code>, <code>scen2</code> and <code>scen3</code>) using a
 <code>new_general_queries_file</code>. The <code>generate_report</code>
 function will generate it and automatically save it in the same folder
@@ -392,27 +434,28 @@ guide</a> either with R or Docker.</p></li>
 <li><p>Load the <code>gcamreport</code> library. If you are using
 Rstudio or Docker, run</p></li>
 </ol>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>and if you are using R, run</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Store the database path and name, the general query path, the
-desired project name, and the desired scenarios and reporting variables
-in variables. In case you do not specify the scenarios, all the
-scenarios in the database will be considered for reporting; and if the
-variables are not specified, all the available reporting variables will
-be used. For more details about scenarios and variables specification,
-look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
+desired project name, the GCAM version, and the desired scenarios and
+reporting variables in variables. In case you do not specify the
+scenarios, all the scenarios in the database will be considered for
+reporting; and if the variables are not specified, all the available
+reporting variables will be used. For more details about scenarios and
+variables specification, look at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups">regions’
 tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables">variables’
 tutorial</a>.</li>
 </ol>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
 <span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
 <span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
 <span><span class="va">new_queries_general_file</span> <span class="op">&lt;-</span> <span class="st">"path/to/your/new_queries_file.xml"</span></span></code></pre></div>
 <p>Notice that the extension is included in the general query file
 (<code>.xml</code>) and in the project name (<code>.dat</code> or
@@ -428,10 +471,11 @@ something like <code>/app/path/to/new_queries_file.xml</code>.</p>
 <li>Generate the standardized dataset until the desired year. In this
 example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, </span>
 <span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
-<span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span>, queries_general_file <span class="op">=</span> <span class="va">new_queries_general_file</span><span class="op">)</span></span></code></pre></div>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span>, </span>
+<span>                queries_general_file <span class="op">=</span> <span class="va">new_queries_general_file</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: The project generation might take some time,
 depending on the number of scenarios, regions, and variables you want to
 standardize.</p>
@@ -457,11 +501,8 @@ function where is used: <a href="file:///C:/Users/claudia.rodes/Documents/IAM_CO
 <h4 id="a-error-on-generate_report-considering-a-database">A) Error on <code>generate_report</code> considering a database<a class="anchor" aria-label="anchor" href="#a-error-on-generate_report-considering-a-database"></a>
 </h4>
 <p>When running
-<code>generate_report(db_path = "path/to/your/database", db_name = "database_name", prj_name = "project_name.dat")</code>,
+<code>generate_report(db_path = "path/to/your/data/myData.dat"")</code>,
 you might see this error in your R console:</p>
-<p>When running
-<code>generate_report("path/to/your/data/myData.dat")</code>, you might
-see this error in your R console:</p>
 <pre><code>&gt; generate_report("path/to/your/data/myData.dat")
 [1] "Creating project..."
 /home/user/basex/.basex: writing new configuration file.
@@ -473,9 +514,9 @@ In addition: Warning messages:
 2: The following named parsers don't match the column names: name, date, version </code></pre>
 <p>This problem might be due to an incorrect package installation or an
 incorrect database placement.</p>
-<p><strong>Possible solution 1</strong>: make sure that you cloned the
+<p><strong>Possible solution 1</strong>: ensure that you cloned the
 repo. Check the instructions <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">here</a>.</p>
-<p><strong>Possible solution 2</strong>: make sure that you placed the
+<p><strong>Possible solution 2</strong>: ensure that you placed the
 database in the folder you are specifying. It can be, that if you
 extracted the database from a zip folder, an intermediate folder has
 appeared. In addition:</p>
@@ -489,28 +530,57 @@ if you are using a Windows distribution.</p></li>
 <p>In case you are using the <code>gcamreport</code> package
 following the <a href="#with-docker">Docker installation</a>:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>make sure that your database is inside the
-<code>gcamreport</code> folder.</p></li>
-<li><p>make sure that you typed correctly the path to your
+<li><p>ensure that your database is inside the <code>gcamreport</code>
+folder.</p></li>
+<li><p>ensure that you typed correctly the path to your
 <code>gcamreport</code> folder when generating the docker image (5th
 step in the <a href="#with-docker">Docker section</a>)</p></li>
-<li><p>make sure that you are pointing correctly to your database. For
+<li><p>ensure that you are pointing correctly to your database. For
 example, if in the <code>gcamreport</code> folder you have a folder
 called <code>some_databases</code> with your database
 <code>amazingDatabase</code>, you should refer to it as</p></li>
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="st">"/app/some_databases"</span>, db_name <span class="op">=</span> <span class="st">"amazingDatabase"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># option 2: partial path</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="st">"some_databases"</span>, db_name <span class="op">=</span> <span class="st">"amazingDatabase"</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Possible solution 3</strong>: ensure that you <strong>did
+not</strong> place the database in the main <code>gcamreport</code>
+folder. The database should be placed in any subfolder within
+<code>gcamreport</code> or in any folder outside
+<code>gcamreport</code>. Due tot a known issue with the
+<code>rgcam</code> package, placing the database in the man folder is
+not supported.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level4">
-<h4 id="b-error-on-generate_report-considering-a-project">B) Error on <code>generate_report</code> considering a project<a class="anchor" aria-label="anchor" href="#b-error-on-generate_report-considering-a-project"></a>
+<h4 id="b-error-on-generate_report-with-left_join_strict">B) Error on <code>generate_report</code> with
+<code>left_join_strict</code><a class="anchor" aria-label="anchor" href="#b-error-on-generate_report-with-left_join_strict"></a>
+</h4>
+<p>When running <code><a href="../reference/generate_report.html">generate_report()</a></code>, you might see this error
+in your R console:</p>
+<pre><code>  &gt; generate_report(...)
+  Loading project...
+  Loading data, performing checks, and saving output...
+  [1] "ag_demand_clean"
+
+  Error in left_join_strict(., filter_variables(get(paste("ag_demand_map", :
+    Error: Some rows in the left dataset do not have matching keys in the right dataset.</code></pre>
+<p>This problem is due to a mismatch in the <code>ag_demand_map</code>
+map.</p>
+<p><strong>Possible solution 1</strong>: ensure that you specified
+correctly the <code>GCAM_verions</code> parameter in the
+<code>generate_report</code> function.</p>
+<p><strong>Possible solution 2</strong>: have a look at this <a href="https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html#example-1-step-by-step-to-adapt-current-mappings-to-your-GCAM-version">tutorial</a>
+to know more about how to update the mappings.</p>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level4">
+<h4 id="c-error-on-generate_report-considering-a-project">C) Error on <code>generate_report</code> considering a project<a class="anchor" aria-label="anchor" href="#c-error-on-generate_report-considering-a-project"></a>
 </h4>
 <p>When running
 <code>generate_report("path/to/your/data/myData.dat")</code>, you might
@@ -522,7 +592,7 @@ see this error in your R console:</p>
 Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
   getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.</code></pre>
 <p>This problem is due to a wrong path specification.</p>
-<p><strong>Possible solution</strong>: make sure that you specified
+<p><strong>Possible solution</strong>: ensure that you specified
 correctly the path. In addition:</p>
 <ul>
 <li><p>In case you are using the <code>gcamreport</code> package
@@ -534,19 +604,19 @@ you are using a Windows distribution.</p></li>
 <p>In case you are using the <code>gcamreport</code> package
 following the <a href="#with-docker">Docker installation</a>:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>make sure that your data is inside the <code>gcamreport</code>
+<li><p>ensure that your data is inside the <code>gcamreport</code>
 folder.</p></li>
-<li><p>make sure that you typed correctly the path to your
+<li><p>ensure that you typed correctly the path to your
 <code>gcamreport</code> folder when generating the docker image (5th
 step in the <a href="#with-docker">Docker section</a>)</p></li>
-<li><p>make sure that you are pointing correctly to your data. For
-example, if in the <code>gcamreport</code> folder you have a folder
-called <code>amazingData</code> with your dataset
-<code>myData.dat</code>, you should refer to it as</p></li>
+<li><p>ensure that you are pointing correctly to your data. For example,
+if in the <code>gcamreport</code> folder you have a folder called
+<code>amazingData</code> with your dataset <code>myData.dat</code>, you
+should refer to it as</p></li>
 </ol>
 </li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># option 1: full path</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span><span class="st">"/app/amazingData/myData.dat"</span><span class="op">)</span></span>
 <span></span>
@@ -555,8 +625,8 @@ called <code>amazingData</code> with your dataset
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level4">
-<h4 id="c-error-related-to-system-when-using-the-docker-installation-">C) Error related to <em>system</em> when using the Docker
-installation.<a class="anchor" aria-label="anchor" href="#c-error-related-to-system-when-using-the-docker-installation-"></a>
+<h4 id="d-error-related-to-system-when-using-the-docker-installation-">D) Error related to <em>system</em> when using the Docker
+installation.<a class="anchor" aria-label="anchor" href="#d-error-related-to-system-when-using-the-docker-installation-"></a>
 </h4>
 <p>Once the R console is opened, you might see this message after
 introducing any command:</p>
@@ -576,7 +646,7 @@ and run your command again.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Dirk-Jan Van de Ven.</p>
+  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Russell Horowitz, Dirk-Jan Van de Ven.</p>
 </div>
 
 <div class="pkgdown-footer-right">

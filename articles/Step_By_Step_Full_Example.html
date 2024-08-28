@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,8 @@
     <li><a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a></li>
     <li><a class="dropdown-item" href="../articles/Modify_Mapping_Template_Tutorial.html">Modify Mappings and Template Tutorial</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Documentation and tutorials for gcamreport v6.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v7-0.html">Depracted documentation and tutorials for gcamreport v7.0*</a></li>
+    <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../articles/Version_Guide.html"><span class="fa fa-solid fa-seedling"></span> Version Guide</a></li>
@@ -63,18 +64,18 @@
       <h1>Step-by-step full example</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/gcam-core/vignettes/Step_By_Step_Full_Example.Rmd" class="external-link"><code>vignettes/Step_By_Step_Full_Example.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/dev/vignettes/Step_By_Step_Full_Example.Rmd" class="external-link"><code>vignettes/Step_By_Step_Full_Example.Rmd</code></a></small>
       <div class="d-none name"><code>Step_By_Step_Full_Example.Rmd</code></div>
     </div>
 
     
     
-<p>In this tutorial, we will 1) generate a dataset from a provided
-GCAM7.0 database and launch the associated user interface, 2) generate a
-dataset from a provided project and launch the corresponding user
-interface, and 3) launch the user interface from a provided standardized
-dataset. To know more about the <code>gcamreport</code> package
-possibilities, look at these tutorials: <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">dataset
+<p>In this tutorial, we will 1) generate a dataset from a provided GCAM
+database and launch the associated user interface, 2) generate a dataset
+from a provided project and launch the corresponding user interface, and
+3) launch the user interface from a provided standardized dataset. To
+know more about the <code>gcamreport</code> package possibilities, look
+at these tutorials: <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">dataset
 generation tutorial</a> and <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html">user
 interface tutorial</a>.</p>
 <p><span style="color:white">newline</span></p>
@@ -85,7 +86,7 @@ provided database<a class="anchor" aria-label="anchor" href="#example-1-step-by-
 <ol style="list-style-type: decimal">
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
 guide</a> either with R or Docker.</p></li>
-<li><p>Download the example <a href="https://zenodo.org/records/10258919" class="external-link">GCAM7.0 database</a>, store
+<li><p>Download the example <a href="https://zenodo.org/records/13361605" class="external-link">GCAM7.1 database</a>, store
 it inside <code>gcamreport/examples</code>, and unpack it. Make sure
 that the database is directly located in
 <code>gcamreport/examples/database_basexdb_ref</code> and an
@@ -106,15 +107,16 @@ Rstudio or Docker, run</p></li>
 <span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"examples"</span></span>
 <span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"database_basexdb_ref"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="st">"Reference"</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
 <span></span>
 <span><span class="co">## -- choose a project name</span></span>
-<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"example1.dat"</span></span>
+<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"example1_v7.1.dat"</span></span>
 <span></span>
 <span><span class="co">## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the </span></span>
 <span><span class="co">## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, </span></span>
 <span><span class="co">## -- and lunch the user interface</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, </span>
-<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>,</span>
 <span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>, </span>
 <span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
 <span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -136,23 +138,28 @@ installation</a>.</p>
 <ol start="6" style="list-style-type: decimal">
 <li><p>Check the generated dataset: look in the <code>examples</code>
 folder and you should see two files named
-<code>example1_standardized.csv</code> and
-<code>example1_standardized.xlsx</code> containing the standardized
+<code>example1_v7.1_standardized.csv</code> and
+<code>example1_v7.1_standardized.xlsx</code> containing the standardized
 dataset.</p></li>
 <li><p>Note that a file called
-<code>database_basexdb_ref_example1.dat</code> has appeared in the
+<code>database_basexdb_ref_example1_v7.1.dat</code> has appeared in the
 <code>examples</code> folder. This is the generated project file from
 the provided database. If you want to rebuild the standardized dataset
 or launch the user interface, you can use this file directly and avoid
 rebuilding the project. If you want to proceed as mentioned, you can
 follow <a href="#example2">Example 2</a>.</p></li>
-<li><p>Note that a file named <code>example1_standardized.RData</code>
-has appeared in the <code>examples</code> folder. This is the report
-file generated from the provided database. If you want to launch the
-user interface in the future, you can use this file directly and avoid
-creating or loading the project again. If you want to proceed as
-mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
+<li><p>Note that a file named
+<code>example1_v7.1_standardized.RData</code> has appeared in the
+<code>examples</code> folder. This is the report file generated from the
+provided database. If you want to launch the user interface in the
+future, you can use this file directly and avoid creating or loading the
+project again. If you want to proceed as mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
 </ol>
+<p><strong>Note</strong>: You can do this step-by-step example using the
+provided <a href="https://zenodo.org/records/10258919" class="external-link">GCAM7.0
+database</a>, the default <a href="https://zenodo.org/record/8162970" class="external-link">GCAM6.0 database</a>, or your
+own database! Remember to indicate the <code>GCAM_version</code> when
+generating the report ;)</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -163,7 +170,7 @@ provided project<a class="anchor" aria-label="anchor" href="#example2"></a>
 <li><p>Follow the <a href="https://bc3lc.github.io/gcamreport/index.html#installation-guide">installation
 guide</a> either with R or Docker</p></li>
 <li><p>In this example we will use an example rgcam project stored in
-<code>examples</code> called <code>example2.dat</code></p></li>
+<code>examples</code> called <code>example2_v7.1.dat</code></p></li>
 <li><p>Load the <code>gcamreport</code> library. If you are using
 Rstudio or Docker, run</p></li>
 </ol>
@@ -177,12 +184,13 @@ Rstudio or Docker, run</p></li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- store the project path and name in a variable.</span></span>
-<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"examples/example2.dat"</span></span>
+<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"examples/example2_v7.1.dat"</span></span>
 <span></span>
 <span><span class="co">## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the </span></span>
 <span><span class="co">## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, </span></span>
 <span><span class="co">## -- and lunch the user interface</span></span>
 <span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>prj_name <span class="op">=</span> <span class="va">prjname</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                GCAM_version <span class="op">=</span> <span class="st">'v7.1'</span>,</span>
 <span>                desired_regions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'EU-12'</span>, <span class="st">'EU-15'</span><span class="op">)</span>,</span>
 <span>                desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural*'</span><span class="op">)</span>, </span>
 <span>                save_output <span class="op">=</span> <span class="cn">TRUE</span>, launch_ui <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -204,16 +212,21 @@ installation</a>.</p>
 <ol start="6" style="list-style-type: decimal">
 <li><p>Check the generated dataset: look in the <code>examples</code>
 folder and you should see two files named
-<code>example2_standardized.csv</code> and
+<code>example2_v7.1_standardized.csv</code> and
 <code>example2_standardized.xlsx</code> containing the standardized
 dataset.</p></li>
-<li><p>Note that a file called <code>example2_standardized.RData</code>
-has appeared in the <code>examples</code> folder. This is the report
-file generated from the provided database. If you want to launch the
-user interface in the future, you can use this file directly and avoid
-creating or loading the project again. If you want to proceed as
-mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
+<li><p>Note that a file called
+<code>example2_v7.1_standardized.RData</code> has appeared in the
+<code>examples</code> folder. This is the report file generated from the
+provided database. If you want to launch the user interface in the
+future, you can use this file directly and avoid creating or loading the
+project again. If you want to proceed as mentioned, you can follow <a href="#example3">Example 3</a>.</p></li>
 </ol>
+<p><strong>Note</strong>: You can do this step-by-step example using the
+provided <code>example2_v7.0.dat</code> or
+<code>example2_v6.0.dat</code> projects, or the projects generated
+through your own database! Remember to indicate the
+<code>GCAM_version</code> when generating the report ;)</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -229,7 +242,8 @@ installation</a>.</p>
 guide</a> either with the R full installation or the Docker
 installation.</p></li>
 <li><p>In this example we will use a standardized example dataset stored
-in <code>examples</code> called <code>example3.RData</code>.</p></li>
+in <code>examples</code> called
+<code>example3_v7.1.RData</code>.</p></li>
 <li><p>Load the <code>gcamreport</code> library:</p></li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -243,10 +257,11 @@ in <code>examples</code> called <code>example3.RData</code>.</p></li>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span> <span class="co"># if using R</span></span>
 <span></span>
 <span><span class="co">## -- store the project path and name in a variable.</span></span>
-<span><span class="va">datapath</span> <span class="op">&lt;-</span> <span class="st">"examples/example3.RData"</span></span>
+<span><span class="va">datapath</span> <span class="op">&lt;-</span> <span class="st">"examples/example3_v7.1.RData"</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
 <span></span>
 <span><span class="co">## -- launch the user interface</span></span>
-<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data_path <span class="op">=</span> <span class="va">datapath</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data_path <span class="op">=</span> <span class="va">datapath</span>, GCAM_version <span class="op">=</span> <span class="va">GCAMv</span><span class="op">)</span></span></code></pre></div>
 <p>In case you experience some trouble, check this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html#troubleshooting-when-launching-the-ui-with-the-docker-installation">troubleshooting
 section</a>.</p>
 <ol start="5" style="list-style-type: decimal">
@@ -270,9 +285,15 @@ the user interface:</li>
 <span></span>
 <span><span class="co">## -- store the database path, name, and scenarios in a variable.</span></span>
 <span><span class="va">dataname</span> <span class="op">&lt;-</span> <span class="st">"report"</span></span>
+<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
 <span></span>
 <span><span class="co">## -- launch the user interface</span></span>
-<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">dataname</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/launch_gcamreport_ui.html">launch_gcamreport_ui</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">dataname</span>, GCAM_version <span class="op">=</span> <span class="va">GCAMv</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Note</strong>: You can do this step-by-step example using the
+provided <code>example3_v7.0.RData</code> or
+<code>example3_v6.0.RData</code> files, or the files generated through
+your own database! Remember to indicate the <code>GCAM_version</code>
+when generating the report ;)</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -281,7 +302,7 @@ the user interface:</li>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Dirk-Jan Van de Ven.</p>
+  <p>Developed by Clàudia Rodés-Bachs, Jon Sampedro, Russell Horowitz, Dirk-Jan Van de Ven.</p>
 </div>
 
 <div class="pkgdown-footer-right">
