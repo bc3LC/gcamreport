@@ -47,7 +47,7 @@ RUN R -e "remotes::install_github('JGCRI/rpackageutils')"
 
 # clone repo
 RUN apt-get install -y git
-RUN git clone -b gcam-v7.0 https://github.com/bc3LC/gcamreport.git /root/gcamreport
+RUN git clone -b gcam-core https://github.com/bc3LC/gcamreport.git /root/gcamreport
 
 # shiny dependencies
 RUN apt-get --allow-releaseinfo-change update
