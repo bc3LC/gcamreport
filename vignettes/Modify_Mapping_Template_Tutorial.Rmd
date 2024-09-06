@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-In this tutorial, we will modify some of the pre-build mappings of the `gcamreport` package. It is necessary to have the `gcamreport` package installed either through the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or [Docker](https://bc3lc.github.io/gcamreport/index.html#with-docker)
+In this tutorial, we will modify some of the pre-build mappings of the `gcamreport` package. It is necessary to have the `gcamreport` package installed either through the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or [Docker](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 
 <span style="color:white">newline</span>
 
@@ -19,34 +19,207 @@ In this tutorial, we will modify some of the pre-build mappings of the `gcamrepo
 
 
 
-## Example 1: step-by-step to add a new mapping item - *AvocadoSeeds* and *AvocadoSeedsTrees*
+## Example 1: step-by-step to adapt current mappings to your GCAM version
 
-In this example, we assume that the GCAM version has a more detailed land-food system and reports a new food item called *AvocadoSeeds* and a new land-leaf called *AvocadoSeedsTrees*. Thus, we need to modify `gcamreport` to include these items in the reporting dataset. In this example, the new items add to the final *cropland* area and several pollutant *emissions*, but do not have their own category in the template.
+In this example, we assume that the GCAM version is a modified version of GCAM core 7.0, with additional or altered agricultural items. The goal is to run the `generate_report` function and adjust the mapping files as directed by the messages displayed in the console by the `gcamreport` package.
+
+
+
+1) Follow either the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker).
+
+2) Open the `gcamreport.Rproj`.
+
+3) Run the `generate_report` function pointing to your database and indicating the most similar GCAM-core version:
+
+```r
+generate_report(db_path = '../path/to/your/db', db_name = 'name_of_the_db',
+                prj_name = 'name_of_the_project.dat', scenarios = c('scenarios','list'),
+                final_year = XXX, GCAM_version = 'v7.0')
+```
+
+The project file will be generated, which may take some time. Once completed, the reporting standardization will begin. The first error you encounter may look something like this:
+
+```r
+Loading data, performing checks, and saving output...
+[1] "ag_demand_clean"
+
+Error in left_join_strict(., filter_variables(get(paste("ag_demand_map", :
+ Error: Some rows in the left dataset do not have matching keys in the right dataset.
+```
+
+This error indicates that the mapping file `ag_demand_map` does not contain all the required items when computing the `ag_demand_clean` variable. To resolve this, follow these steps:
+
+&nbsp;&nbsp; 3.1) Locate the variable generation code:
+    
+&nbsp;&nbsp;&nbsp;&nbsp; a) Open the file `R/functions.R` in the `gcamreport` folder.
+
+&nbsp;&nbsp;&nbsp;&nbsp; b) Search (`Ctrl + F`) for the variable `ag_demand_clean`, which is generated within the `get_ag_demand()` function.
+
+&nbsp;&nbsp; 3.2) Identify the missing items:
+  
+&nbsp;&nbsp;&nbsp;&nbsp; a) Navigate to the section of the code that uses the `left_join_strict()` function:
+
+    ```r
+    dplyr::bind_rows(
+      rgcam::getQuery(prj, "demand balances by crop commodity"),
+      rgcam::getQuery(prj, "demand balances by meat and dairy commodity")
+    ) %>%
+    # Adjust OtherMeat_Fish
+    dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
+    left_join_strict(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
+              by = c("sector"), multiple = "all")
+    ...
+    ```
+
+&nbsp;&nbsp;&nbsp;&nbsp; b) Add a break point at the beginning of the section and re-run the `generate_report` function again, this time pointing to your project file instead of the database to avoid regenerating the project and to stop at the breaking point:
+
+```r
+generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
+                scenarios = c('scenarios','list'),
+                final_year = XXX, GCAM_version = 'v7.0')
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp; c) To find the missing items, assign the lines before the `left_join_strict` function to a variable and the mapping items to another variable. Then, compare the two by `sector` as intended by the `left_join_strict` function. Use the following example:
+    
+  ```r
+  GCAM_version <- "v7.0"
+  
+  left_df <- dplyr::bind_rows(
+                rgcam::getQuery(prj, "demand balances by crop commodity"),
+                rgcam::getQuery(prj, "demand balances by meat and dairy commodity")
+              ) %>%
+              # Adjust OtherMeat_Fish
+              dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector))
+
+  right_df <- filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean")
+
+  result <- dplyr::left_join(left_df, right_df, by = c("sector"), multiple = "all")
+
+  unmatched <- result %>%
+    dplyr::filter(if_any(-one_of(names(left_df)), is.na))
+
+  View(unmatched)
+  ```
+
+&nbsp;&nbsp; 3.3) Update the pre-build mappings:
+  
+&nbsp;&nbsp;&nbsp;&nbsp; a) Add the missing items to the `ag_demand_map` mapping file. Note that mapping files can sometimes be saved under different names. To find the correct file, open `inst/extdata/saveDataFiles_GCAM7.0.R` and search (`Ctrl + F`) for `ag_demand_map`:
+
+  ```r
+  ag_demand_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "ag_demand_map.csv"),
+                                 skip = 1, stringsAsFactors = FALSE) %>% gather_map()
+
+  ```
+
+  In this example, the mapping file is located at `inst/extdata/mappings/GCAM7.0/ag_demand_map.csv`. Open the file, add the missing items, and save the changes.
+
+  
+  **Note**: If you don't want to include certain items in the report, you can add a line with the new item indicating `NoReported` as variable:
+  
+  ```r
+  newItemName,NoReported,,,,,,,,1
+  ```
+  
+  **Note**: If the error persists and you prefer not to update the mapping file further, you can modify the `left_join_strict` call in the code to `dplyr::left_join.` However, **please be aware that this approach is not recommended, as it may compromise the strict matching intended in the data processing**. If you choose this option, please follow the next Step 3.4, source the `R/functions.R` file, and use Step 3.5 to ensure the new chuck will be read.
+
+
+
+&nbsp;&nbsp; 3.4) Stop the debugging process.
+
+
+&nbsp;&nbsp; 3.5) Update the package data:
+  
+&nbsp;&nbsp;&nbsp;&nbsp; a) Run the `inst/extdata/saveDataFiles_GCAM7.0.R` script to update the package data.
+
+&nbsp;&nbsp;&nbsp;&nbsp; b) Rebuild the package documentation using `Ctrl + Shift + D` or navigate to `Build > More > Document`.
+    
+&nbsp;&nbsp;&nbsp;&nbsp; c) Install the updated package by going to `Build > Install`.
+
+4) Run the `generate_report` function again, this time pointing to your project file instead of the database to avoid regenerating the project:
+
+```r
+generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
+                scenarios = c('scenarios','list'),
+                final_year = XXX, GCAM_version = 'v7.0')
+```
+
+The reporting procedure will start immediately and if the `ag_demand_map` mapping was arranged correctly, a new error will prompt regarding the `ag_prices_map`:
+
+```r
+Loading data, performing checks, and saving output...
+[1] "ag_demand_clean"
+[1] "ag_prices_clean"
+
+Error in left_join_strict(., filter_variables(get(paste("ag_prices_map", :
+ Error: Some rows in the left dataset do not have matching keys in the right dataset.
+```
+
+Repeat the procedure outlined in Step 3 to correct the `ag_prices_map` file.
+
+5) Iterate Step 4 until the standardization process is complete. Occasionally, it may be necessary to clear all environment variables and restart R to ensure the updated mapping files are properly loaded.
+
+
+6) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+
+**Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
+
+``` bash
+# to clone the tagged version "vUpdated":
+git clone --branch vUpdated --single-branch https://github.com/bc3LC/gcamreport.git
+
+# to clone the branch version "vUpdated":
+git clone --branch vUpdated https://github.com/bc3LC/gcamreport.git
+```
+
+or when installing through Rstudio, for instance:
+``` r
+# to install the tagged version "vUpdated"
+devtools::install_github('bc3LC/gcamreport@vUpdated')
+
+# to install the branch version "vUpdated"
+devtools::install_github('bc3LC/gcamreport@vUpdated')
+```
+
+
+
+
+<span style="color:white">newline</span>
+
+
+
+
+
+
+
+
+## Example 2: step-by-step to add a new mapping item - *AvocadoSeeds* and *AvocadoSeedsTrees*
+
+In this example, we assume that the GCAM version is a modification of the GCAM core 7.0 version with a more detailed land-food system which reports a new food item called *AvocadoSeeds* and a new land-leaf called *AvocadoSeedsTrees*. Thus, we need to modify `gcamreport` to include these items in the reporting dataset. In this example, the new items add to the final *cropland* area and several pollutant *emissions*, but do not have their own category in the template.
 
 1) Follow either the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker)
 
 2) Open the `gcamreport.Rproj`.
 
-3) To modify the mappings, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *NutsSeeds* and *NutsSeedsTree*. To see where the mapping modifications should be performed, search across all files (`Ctrl + Shift + F`) inside `inst/extdata/mappings` for the key words *NutsSeeds* and *NutsSeedsTree*.
-   
+3) To modify the mappings, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *NutsSeeds* and *NutsSeedsTree*. To see where the mapping modifications should be performed, search across all files (`Ctrl + Shift + F`) inside `inst/extdata/mappings/GCAM7.0` for the key words *NutsSeeds* and *NutsSeedsTree*.
+
 4) Using the previous point method, we can see that we should add some lines to the following files stored in `inst/extdata/mappings`:
-   
-   a. `ag_prices_map.csv`. Add this line: 
+
+  a) `ag_prices_map.csv`. Add this line:
    ```
    AvocadoTrees,,,,,,,,,1
    ```
-   b. `Kyotogas_sector.csv`. Add these lines: 
+  b) `Kyotogas_sector.csv`. Add these lines:
    ```
    CH4,AWB,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
    N2O,AGR,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
    N2O,AWB,AvocadoTrees,Emissions|Kyoto Gases,Emissions|Kyoto Gases|AFOLU,,,,,,,,,1
    ```
-   c. `land_use_map.csv`. Add these line
+  c) `land_use_map.csv`. Add these line
    ```
    AvocadoTrees,Land Cover,Land Cover|Cropland,,,,,,,0.1
    AvocadoTreesTree,Land Cover,Land Cover|Cropland,,,,,,,0.1
    ```
-   d. `nonCO2_emissions_sector_map.csv`. Add these lines
+  d) `nonCO2_emissions_sector_map.csv`. Add these lines
    ```
    AvocadoTrees,BC_AWB,Emissions|BC,Emissions|BC|AFOLU,,,,,,,1
    AvocadoTrees,CH4_AWB,Emissions|CH4,Emissions|CH4|AFOLU,,,,,,,1
@@ -64,7 +237,7 @@ In this example, we assume that the GCAM version has a more detailed land-food s
    AvocadoTrees,SO2_3_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
    AvocadoTrees,SO2_4_AWB,Emissions|Sulfur,Emissions|Sulfur|AFOLU,,,,,,,1
    ```
-5) Modify the query file (if necessary, as is in this example). To do it, copy the default query file located at `inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml` and add these lines in the *aggregated land allocation* query.
+5) Modify the query file (if necessary, as is in this example). To do it, copy the default query file located at `inst/extdata/queries/GCAM7.0/queries_gcamreport_general.xml` and add these lines in the *aggregated land allocation* query.
    ```
    <rewrite from="AvocadoSeeds" to="crops" />
    <rewrite from="AvocadoSeedsTree" to="crops" />
@@ -74,36 +247,37 @@ To use it when standardizing your GCAM output, run the `generate_report` functio
 generate_report(..., queries_general_file = "path/to/your/new_queries_general_file.xml")
 ```
 
-Another way to modify the query file is to update the default query file directly. To do this, open the default query file located at `inst/extdata/queries/queries_gcamreport_gcam7.0_general.xml` and add the necessary lines. The next step (step 6) will embed the new version of the query file into the package. With this method, it is no longer necessary to specify the query file path, as it will be your default general query file.
+Another way to modify the query file is to update the default query file directly. To do this, open the default query file located at `inst/extdata/queries/GCAM7.0/queries_gcamreport_general.xml` and add the necessary lines. The next step (Step 6) will embed the new version of the query file into the package. With this method, it is no longer necessary to specify the query file path, as it will be your default general query file.
 
 
-6) Update the pre-build mappings: 
-   
-   a) Run the file `inst/extdata/saveDataFiles.R`.
+6) Update the package data:
 
-   b) Build the document file: press `Ctrl + Shift + D` or click to `Build > More > Document`.
+  a) Run the `inst/extdata/saveDataFiles_GCAM7.0.R` script to update the package data.
 
-   c) Install the modified package: `Build > Install`.
+  b) Rebuild the package documentation using `Ctrl + Shift + D` or navigate to `Build > More > Document`.
+  
+  c) Install the updated package by going to `Build > Install`.
+
 
 7) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
 
 **Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
 
 ``` bash
-# to clone the tagged version "v6.0.1":
-git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
+# to clone the tagged version "vAvocado":
+git clone --branch vAvocado --single-branch https://github.com/bc3LC/gcamreport.git
 
-# to clone the branch version "gcam-v6.0":
-git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
+# to clone the branch version "vAvocado":
+git clone --branch vAvocado https://github.com/bc3LC/gcamreport.git
 ```
 
 or when installing through Rstudio, for instance:
 ``` r
-# to install the tagged version "v6.0.1"
-devtools::install_github('bc3LC/gcamreport@v6.0.1')
+# to install the tagged version "vAvocado"
+devtools::install_github('bc3LC/gcamreport@vAvocado')
 
-# to install the branch version "gcam-v6.0"
-devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
+# to install the branch version "vAvocado"
+devtools::install_github('bc3LC/gcamreport@vAvocado')
 ```
 
 
@@ -119,48 +293,48 @@ devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
 
 
 
-## Example 2: step-by-step to add/modify a template item - *Energy Service|Transportation|Freight|Bicycling and Walking*
+## Example 3: step-by-step to add/modify a template item - *Energy Service|Transportation|Freight|Bicycling and Walking*
 
-In this example, we assume that the GCAM version has a more detailed energy transportation freight service that considers *Bicycling and Walking*. We want to include this in the report as a new item: *Energy Service|Transportation|Passenger|Bicycling and Walking*. To do it, we need to modify the reporting template.
+In this example, we assume that the GCAM version is a modification of the GCAM core 7.0 version a more detailed energy transportation freight service that considers *Bicycling and Walking*. We want to include this in the report as a new item: *Energy Service|Transportation|Passenger|Bicycling and Walking*. To do it, we need to modify the reporting template.
 
 1) Follow either the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker)
 
 2) Open the `gcamreport.Rproj`.
 
 3) To modify the reporting template, it is best to relay on some similar item that is already present in the mappings. In this case, we relay on *Energy Service|Transportation|Freight|Road*. To see where the reporting template modifications should be performed, open the reporting template file (`inst/extdata/template/reporting_template.csv`) and search (`Ctrl + F`) for the key words *Energy Service|Transportation|Freight|Road*.
-   
+
 4) Using the previous point method, we can see that we should add one line to the reporting template:
    ```
    "GCAM 7.0","Energy Service|Transportation|Freight|Bicycling and Walking","billion pkm/yr","energy_service_transportation_clean"
    ```
    It contains the following columns: GCAM version, item name, units, and internal variable storing its value.
 
-5) Update the pre-build reporting template:
-   
-   a) Run the file `inst/extdata/saveDataFiles.R`.
+5) Update the package data reporting template:
 
-   b) Build the document file: press `Ctrl + Shift + D` or click to `Build > More > Document`.
+  a) Run the `inst/extdata/saveDataFiles_GCAM7.0.R` script to update the package data.
 
-   c) Install the modified package: `Build > Install`.
+  b) Rebuild the package documentation using `Ctrl + Shift + D` or navigate to `Build > More > Document`.
+  
+  c) Install the updated package by going to `Build > Install`.
 
 6) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
 
 **Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
 
 ``` bash
-# to clone the tagged version "v6.0.1":
-git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
+# to clone the tagged version "vTransport":
+git clone --branch vTransport --single-branch https://github.com/bc3LC/gcamreport.git
 
-# to clone the branch version "gcam-v6.0":
-git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
+# to clone the branch version "vTransport":
+git clone --branch vTransport https://github.com/bc3LC/gcamreport.git
 ```
 
 or when installing through Rstudio, for instance:
 ``` r
-# to install the tagged version "v6.0.1"
-devtools::install_github('bc3LC/gcamreport@v6.0.1')
+# to install the tagged version "vTransport"
+devtools::install_github('bc3LC/gcamreport@vTransport')
 
-# to install the branch version "gcam-v6.0"
-devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
+# to install the branch version "vTransport"
+devtools::install_github('bc3LC/gcamreport@vTransport')
 ```
 

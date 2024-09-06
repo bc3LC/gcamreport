@@ -846,11 +846,12 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 #'
 #' @param data_path Optional. Path to an RData file containing the standardized data. If provided, this file will be used to load the data into the Shiny application. You can obtain this dataset using `gcamreport::generate_report`.
 #' @param data Optional. An R dataframe or list containing the standardized data. If provided, this data will be used directly in the Shiny application. You can obtain this dataset using `gcamreport::generate_report`.
+#' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #'
 #' @return Launches the Shiny interactive UI. This function does not return a value but starts the Shiny application for user interaction.
 #'
 #' @export
-launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
+launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = 'v7.0') {
   # check the user input
   if (is.null(data_path) && is.null(data)) {
     stop("Error: Neither 'data_path' nor 'data' has been provided. Please specify at least one of these: 'data_path' to point to the location of the dataset file or 'data' to provide the dataset directly.")
@@ -862,6 +863,9 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL) {
   if (!is.null(data_path)) {
     data <- assign("data", get(load(data_path)))
   }
+
+  # make GCAM_version a global variable
+  GCAM_version <<- GCAM_version
 
   # define the dataset for launching the ui
   sdata <<- suppressWarnings(

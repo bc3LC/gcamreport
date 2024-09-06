@@ -6,6 +6,8 @@
 [![paper](https://github.com/bc3LC/gcamreport/actions/workflows/draft-pdf.yml/badge.svg?branch=gcam-v7.0)](https://github.com/bc3LC/gcamreport/blob/gcam-v7.0/paper/paper.pdf)
 [![status](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19/status.svg)](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19)
 
+<br>
+
 <!-- ------------------------>
 
 <!-- ------------------------>
@@ -32,7 +34,10 @@
 
 -   [Getting Started](#get-started)
 
--   [Warnings and Error Messages](#bugs)
+-   [Top common Warnings and Error Messages](#bugs)
+
+
+<br>
 
 <!-- ------------------------>
 
@@ -46,7 +51,9 @@
 
 [Back to Contents](#contents)
 
-`gcamreport` is a tool that generates a consistent dataset from any scenario run by the Global Change Analysis Model ([GCAM](http://www.globalchange.umd.edu/gcam/)) that meets the reporting requirements of the Integrated Assessment Modeling Consortium ([IAMC](https://www.iamconsortium.org/)). In addition, `gcamreport` includes an interactive user widget that allows users to generate and download plots live, as well as download reduced versions of the formatted dataset in spreadsheet format.
+`gcamreport` is a tool designed to generate consistent datasets from any scenario run by the Global Change Analysis Model ([GCAM](http://www.globalchange.umd.edu/gcam/)), ensuring they meet the reporting standards of the Integrated Assessment Modeling Consortium ([IAMC](https://www.iamconsortium.org/)). In addition, `gcamreport` features an interactive user interface that allows users to create and download plots in real time and export reduced, formatted datasets in spreadsheet format. The tool is currently compatible with GCAM-core versions [6.0](https://zenodo.org/records/6619287), [7.0](https://zenodo.org/records/8010145), and [7.1](https://zenodo.org/records/11481167), as outlined in the [version guide](file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/articles/Version_Guide.html).
+
+<br>
 
 <!-- ------------------------>
 
@@ -85,15 +92,6 @@ devtools::install_github('bc3LC/gcamreport')
 
 Now `gcamreport` package is fully loaded. Enjoy! :smile:
 
-**Note**:boom:: If you want to install specific `gcamreport` versions, indicate the tag or branch name when running the installation command. For instance:
-
-``` r
-# to install the tagged version "v6.0.1"
-devtools::install_github('bc3LC/gcamreport@v6.0.1')
-
-# to install the branch version "gcam-v6.0"
-devtools::install_github('bc3LC/gcamreport@gcam-v6.0')
-```
 
 <br>
 
@@ -121,16 +119,6 @@ devtools::load_all()
 ```
 
 Now `gcamreport` package is fully loaded. Enjoy! :smile:
-
-**Note**:boom:: If you want to install specific `gcamreport` versions, indicate the tag or branch name when cloning the repository. For instance:
-
-``` bash
-# to clone the tagged version "v6.0.1":
-git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
-
-# to clone the branch version "gcam-v6.0":
-git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
-```
 
 
 <br>
@@ -188,15 +176,6 @@ Now `gcamreport` package is fully loaded. Enjoy! :smile:
 <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-v7.0/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"/>
 
 
-**Note**:boom:: If you want to install previous `gcamreport` versions, indicate the tag or branch name when cloning the repository (step 2). For instance:
-
-``` bash
-# to clone the tagged version "v6.0.1":
-git clone --branch v6.0.1 --single-branch https://github.com/bc3LC/gcamreport.git
-
-# to clone the branch version "gcam-v6.0":
-git clone --branch gcam-v6.0 https://github.com/bc3LC/gcamreport.git
-```
 
 <br>
 
@@ -216,7 +195,7 @@ The `gcamreport` package consists of a set of functions divided into two differe
 
 - Dataset generation: It creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of the [IAMC](https://www.iamconsortium.org/). Main function: `generate_report()`. For more information, see this [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html) or type `??generate_report` in your R console. If you get any warning or error messages, you might want to look at the [Warnings and Error Messages](#bugs) section.
 
-- Interactive user block: it launches an interactive widget that displays the dataset in tabular form, with the ability to filter, reorder and download live. It also displays plots and allows them to be downloaded, aggregated by variables, regions and scenarios. Main function: `launch_gcamreport_ui()`. For more information see this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `??launch_gcamreport_ui` in your R console. If you get any warning or error messages, it might be useful to have a look at the [Warnings and Error Messages](#bugs) section.
+- Interactive user block: it launches an interactive widget that displays the dataset in tabular form, with the ability to filter, reorder and download live. It also displays plots and allows them to be downloaded, aggregated by variables, regions and scenarios. Main function: `launch_gcamreport_ui()`. For more information see this [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html) or type `??launch_gcamreport_ui` in your R console. If you get any warning or error messages, it might be useful to have a look at the [Top common Warnings and Error Messages](#bugs) section.
 
 
 The package also includes some default input files (.Rda) that are read by the different functions. These can be changed by the user as detailed in [this tutorial](https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html).
@@ -227,7 +206,7 @@ The package also includes some default input files (.Rda) that are read by the d
 
 <!-- ------------------------>
 
-## <a name="bugs"></a>Warnings and Error Messages
+## <a name="bugs"></a>Top common Warnings and Error Messages
 
 <!-- ------------------------>
 
@@ -237,13 +216,14 @@ The package also includes some default input files (.Rda) that are read by the d
 
 Some typical and already-known errors that can be easily solved! :bulb:
 
-:computer: Error on "run("path/to/your/data/myData.dat")"
+:computer: Error on "generate_report(prj_name = "path/to/your/data/myData.dat")"
 
 In your R console, you might see this error:
 
       > generate_report("path/to/your/data/myData.dat")
-      [1] "Loading project..."
-      [1] "Loading data, performing checks, and saving output..."
+      Loading project...
+      Loading data, performing checks, and saving output...
+      
       [1] "ag_demand_clean"
       Error in rgcam::getQuery(prj, "demand balances by crop commodity") :
         getQuery: Query demand balances by crop commodity is not in any scenarios in the data set.
@@ -271,6 +251,28 @@ This problem is due to a wrong path specification. Thus, make sure that you spec
   # option 2: partial path
   generate_report("amazingData/myData.dat")
 ```
+
+</details>
+
+<br>
+
+:computer: Error on "generate_report(...)"
+
+In your R console, you might see this error:
+
+      > generate_report(...)
+      Loading project...
+      Loading data, performing checks, and saving output...
+      [1] "ag_demand_clean"
+
+      Error in left_join_strict(., filter_variables(get(paste("ag_demand_map", :
+        Error: Some rows in the left dataset do not have matching keys in the right dataset.
+
+<details>
+
+<summary>**Possible solution**</summary>
+
+This problem is due to a mismatch in the `ag_demand_map` map. Thus, make sure that you specified correctly the `GCAM_verions` parameter in the `generate_report` function. If the error persists, have a look at this [tutorial](https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html#example-1-step-by-step-to-adapt-current-mappings-to-your-GCAM-version).
 
 </details>
 

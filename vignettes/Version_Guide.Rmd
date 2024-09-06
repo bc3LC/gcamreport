@@ -7,16 +7,44 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Each `gcamreport` release is linked either to a `GCAM` version or a study where GCAM was used. We follow a specific naming and tagging procedure for each release: they are all linked to a tag, whose name firstly contains two numbers indicating the compatible GCAM version (e.g. **v6.0** indicates that it is compatible with GCAM 6.0); the next number indicates the version release (e.g. v6.0.**0** indicates that it is the **first** release compatible with GCAM 6.0). This numeration starts from 0. Finally, if the release is linked to a project, the tag's name contains a hyphen and a key work (e.g. v6.0.0**-gas**).
+The `gcamreport` package is compatible with the main versions of GCAM: [6.0](https://zenodo.org/records/6619287), [7.0](https://zenodo.org/records/8010145), and [7.1](https://zenodo.org/records/11481167). To use these versions, ensure that you have cloned the `gcam-core` branch (the default branch) and specify the closest GCAM version using the `GCAM_version` parameter in the [`generate_report`](https://bc3lc.github.io/gcamreport/reference/generate_report.html) or [`launch_gcamreport_ui`](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html) functions, as demonstrated in this [example](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-GWP-or-GCAM-version). If you need to modify mappings to better suit your GCAM version, refer to this [tutorial](https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html#example-1-step-by-step-to-adapt-current-mappings-to-your-gcam-version) and remember to tag the version to ensure reproducibility of the results ;)
 
-Find below a description of all the releases:
+This approach allows users to access the full range of `gcamreport` functionalities regardless of the GCAM version they are using. Additionally, it streamlines the process of bug fixing and updating `gcamreport` to stay in line with GCAM-core updates. Future versions of `gcamreport` will be released under the following naming convention: `gcamreport a.b.c`, where *a.b.c* denotes the release version of `gcamreport` (e.g., *1.0.0*, *1.0.1*, *1.2.0*, ...). Major releases will increment the first digit (*a*), while minor updates will increment the second (*b*) or third (*c*) digit.
 
-| `gcamreport` tag-version | `GCAM` version and/or study        |
+<span style="color:white">newline</span>
+
+Previous `gcamreport` versions were linked either to a `GCAM` version or a study where GCAM was used. We followed a specific naming and tagging procedure for each release: they were all linked to a tag, whose name firstly contained two numbers indicating the compatible GCAM version (e.g. *v6.0* indicates that it is compatible with GCAM 6.0); the next number indicated the version release (e.g. v6.0.*0* indicates that it is the *first* release compatible with GCAM 6.0). This numeration started from 0. Finally, if the release was linked to a project, the tag's name contained a hyphen and a key work (e.g. v6.0.0*-gas*). Currently, this procedure is **depracated**, but the tags are still available if you want to reproduce some versions.
+
+To install previous `gcamreport` versions, indicate the tag or branch name when cloning the repository. For instance:
+
+``` bash
+# to clone the tagged version "v6.0.1-depracated":
+git clone --branch v6.0.1-depracated --single-branch https://github.com/bc3LC/gcamreport.git
+
+# to clone the branch version "gcam-v6.0-depracated":
+git clone --branch gcam-v6.0-depracated https://github.com/bc3LC/gcamreport.git
+```
+Or install the suitable version in your R session:
+
+``` R
+# to install the tagged version "v6.0.1-depracated"
+devtools::install_github('bc3LC/gcamreport@v6.0.1-depracated')
+
+# to install the branch version "gcam-v6.0-depracated"
+devtools::install_github('bc3LC/gcamreport@gcam-v6.0-depracated')
+```
+
+<span style="color:white">newline</span>
+
+Find below a description of all the `gcamreport` releases:
+
+| `gcamreport` tag-version | compatible `GCAM` version and/or study        |
 |--------------------------|------------------------------------|
-| v7.0.1                     | GCAM 7.0                         |
-| v7.0.0                     | GCAM 7.0                         |
-| v6.0.1                     | GCAM 6.0                         |
-| v6.0.0                     | GCAM 6.0                         |
-| v6.0.0-gas                 | GCAM 6.0 with gas extra features |
+| v1.0.0                     | GCAM 6.0, GCAM 7.0, and GCAM 7.1                         |
+| depracted_v7.0.1                     | GCAM 7.0                         |
+| depracted_v7.0.0                     | GCAM 7.0                         |
+| depracted_v6.0.1                     | GCAM 6.0                         |
+| depracted_v6.0.0                     | GCAM 6.0                         |
+| depracted_v6.0.0-gas                 | GCAM 6.0 with gas extra features |
 
 You can see the new feature of each release and download the corresponding versions [here](https://bc3lc.github.io/gcamreport/news/index.html).
