@@ -426,15 +426,16 @@ test_that("Test9v_7.1 CO2 Price", {
   # testthat::expect_equal(report, testResult)
   # rm(list = ls())
 
-  # # Regional CO2 price - TODO
-  # generate_report(
-  #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/database_basexdb_policy.dat"),
-  #   desired_variables = c("Price|Carbon*"),
-  #   launch_ui = FALSE,
-  #   GCAM_version = 'v7.1'
-  # )
-  # testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.1/result_test9.2.RData")))
-  # testthat::expect_equal(report, testResult)
+  # Regional CO2 price
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/database_basexdb_policy.dat"),
+    final_year = 2050,
+    desired_variables = c("Price|Carbon*"),
+    launch_ui = FALSE,
+    GCAM_version = 'v7.1'
+  )
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.1/result_test9.2.RData")))
+  testthat::expect_equal(report, testResult)
 })
 
 test_that("Test10v_7.1 vetting", {
@@ -590,18 +591,18 @@ test_that("Test11v_7.1 scenarios", {
   testResult <- rgcam::listScenarios(prj)
   testthat::expect_equal("Reference", testResult)
 
-  # generate_report( - TODO
-  #   prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/database_basexdb_ssps.dat"),
-  #   final_year = 2030,
-  #   scenarios = "GCAM_SSP4",
-  #   desired_regions = "USA",
-  #   desired_variables = "Emissions|CH4*",
-  #   launch_ui = FALSE,
-  #   GCAM_version = 'v7.1'
-  # )
-  #
-  # testResult <- rgcam::listScenarios(prj)
-  # testthat::expect_equal("GCAM_SSP4", testResult)
+  generate_report(
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/database_basexdb_ssp.dat"),
+    final_year = 2030,
+    scenarios = "GCAM_SSP4",
+    desired_regions = "USA",
+    desired_variables = "Emissions|CH4*",
+    launch_ui = FALSE,
+    GCAM_version = 'v7.1'
+  )
+
+  testResult <- rgcam::listScenarios(prj)
+  testthat::expect_equal("GCAM_SSP4", testResult)
 })
 
 test_that("Test12v_7.1 other functions", {
