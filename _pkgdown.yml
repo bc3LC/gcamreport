@@ -26,7 +26,9 @@ navbar:
       -  text: Modify Mappings and Template Tutorial
          href: articles/Modify_Mapping_Template_Tutorial.html
       -  text: -----
-      -  text: Documentation and tutorials for gcamreport v6.0*
+      -  text: Depracted documentation and tutorials for gcamreport v7.0*
+         href: articles/gcamreport_v7-0.html
+      -  text: Depracted documentation and tutorials for gcamreport v6.0*
          href: articles/gcamreport_v6-0.html
     - text: "Version Guide"
       icon: fa-solid fa-seedling
