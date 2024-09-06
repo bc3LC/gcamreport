@@ -1,3 +1,25 @@
+# gcamreport 1.0.0
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13711003.svg)](https://doi.org/10.5281/zenodo.13711003)
+
+`gcamreport` package with a new structure!!!💥
+Compatible with GCAM 6.0, 7.0, and 7.1!
+
+
+Novelties:
+
+- Compatibility with GCAM 7.1.
+- New structure to maintain all the pkg capabilities regardless of the compatible GCAM-core version.
+- Improved robustness so that the pkg indicates which mappings need to be modified.
+- Improved error and warning messages.
+- New tutorials.
+- New tagging system.
+
+
+**Full Changelog**: https://github.com/bc3LC/gcamreport/commits/v1.0.0
+
+
+
 # gcamreport 7.0.1
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10960370.svg)](https://doi.org/10.5281/zenodo.10960370)
