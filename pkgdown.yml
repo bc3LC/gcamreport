@@ -1,23 +1,24 @@
-pandoc: 3.1.11
-pkgdown: 2.1.0
+pandoc: 2.19.2
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
+  Dataset_Generation_Tutorial: Dataset_Generation_Tutorial.html
   Dataset_Generation_Tutorial_v6-0: Dataset_Generation_Tutorial_v6-0.html
   Dataset_Generation_Tutorial_v7-0: Dataset_Generation_Tutorial_v7-0.html
-  Dataset_Generation_Tutorial: Dataset_Generation_Tutorial.html
   gcamreport_v6-0: gcamreport_v6-0.html
   gcamreport_v7-0: gcamreport_v7-0.html
+  Interactive_UI_Tutorial: Interactive_UI_Tutorial.html
   Interactive_UI_Tutorial_v6-0: Interactive_UI_Tutorial_v6-0.html
   Interactive_UI_Tutorial_v7-0: Interactive_UI_Tutorial_v7-0.html
-  Interactive_UI_Tutorial: Interactive_UI_Tutorial.html
   Modify_Mapping_Template_Tutorial: Modify_Mapping_Template_Tutorial.html
   README_v6-0: README_v6-0.html
   README_v7-0: README_v7-0.html
+  Step_By_Step_Full_Example: Step_By_Step_Full_Example.html
   Step_By_Step_Full_Example_v6-0: Step_By_Step_Full_Example_v6-0.html
   Step_By_Step_Full_Example_v7-0: Step_By_Step_Full_Example_v7-0.html
-  Step_By_Step_Full_Example: Step_By_Step_Full_Example.html
   Version_Guide: Version_Guide.html
-last_built: 2024-09-06T08:59Z
+last_built: 2024-09-06T11:48Z
 urls:
   reference: https://bc3lc.github.io/gcamreport/reference
   article: https://bc3lc.github.io/gcamreport/articles
+
