@@ -389,7 +389,7 @@ get_gdp_ppp <- function(GCAM_version = "v7.0") {
     rgcam::getQuery(prj, "GDP per capita PPP by region") %>%
     left_join_error_no_match(population_clean %>% dplyr::rename(pop_mill = value), by = c("scenario", "region", "year")) %>%
     dplyr::mutate(
-      value = value * pop_mill * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']],      var = "GDP|PPP"
+      value = value * pop_mill * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']], var = "GDP|PPP"
     ) %>%
     dplyr::select(all_of(gcamreport::long_columns))
 }
@@ -1483,10 +1483,6 @@ get_ag_prices <- function(GCAM_version = "v7.0") {
 }
 
 
-# carbon price
-# sectoral CO2 prices are the same for all scenarios except for d_rap
-# CO2 prices are global except for d_delfrag
-
 # calculate co2 price for all scenarios except for d_rap and d_delfrag
 
 #' get_price_var_tmp
@@ -1541,18 +1537,18 @@ get_regions_tmp <- function(GCAM_version = "v7.0") {
 }
 
 
-#' get_regions_weight_tmp
+#' get_regions_en_weight_tmp
 #'
-#' Retrieve regions weights to compute carbon price.
+#' Retrieve regions final energy weights to compute carbon price.
 #' @keywords internal internal tmp process
-#' @return `region_weight` global variable
+#' @return `region_en_weight` global variable
 #' @importFrom magrittr %>%
 #' @export
-get_regions_weight_tmp <- function() {
+get_regions_en_weight_tmp <- function() {
   var <- scenario <- year <- value <- NULL
 
   # for scenarios w/ different regional carbon prices, weigh regional price by final energy to get global CO2 price
-  region_weight <<-
+  region_en_weight <<-
     fe_sector_clean %>%
     dplyr::filter(var == "Final Energy") %>%
     dplyr::group_by(scenario, year) %>%
@@ -2642,9 +2638,15 @@ do_bind_results <- function(GCAM_version = "v7.0") {
   GCAM_DATA_WORLD <-
     GCAM_DATA %>%
     dplyr::filter(
-      region != "World", # excl. Temperature|Forcing|Concentration
-      # excl. price and costs variables - already calculated global average
-      !grepl("Price|Capital Cost", var)
+      region != "World",
+      # excl. price and costs variables - already calculated global value
+      !grepl("Price\\|Capital Cost", var),
+      !grepl("Price\\|Carbon", var),
+      !grepl("Price\\|", var),# agriculture, final/primary/secondary energy
+      # excl. Temperature|Forcing|Concentration
+      !grepl("Forcing", var),
+      !grepl("Temperature\\|Global Mean", var),
+      !grepl("Concentration\\|CO2", var),
     ) %>%
     dplyr::group_by(scenario, year, var) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%

@@ -363,6 +363,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
 #' @keywords internal
 #' @export
 load_variable <- function(var, GCAM_version = "v7.0", GWP_version = 'AR5') {
+
   # base case: if variable already loaded, return
   if (exists(var$name)) {
     return()
