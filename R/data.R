@@ -300,6 +300,18 @@
 #' }
 "ag_prices_map_v7.1"
 
+#' ag_demand_prices_map_v7.1
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM7.1.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ag_demand_prices_map_v7.1
+#' }
+"ag_demand_prices_map_v7.1"
+
 #' land_use_map_v7.1
 #'
 #' @source github

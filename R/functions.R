@@ -934,7 +934,7 @@ get_ag_demand <- function(GCAM_version = "v7.0") {
     # Adjust OtherMeat_Fish
     dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
     left_join_strict(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
-              by = c("sector"), multiple = "all") %>%
+              by = c("input","sector"), multiple = "all") %>%
     dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
@@ -1440,7 +1440,20 @@ get_iron_steel_clean <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
-  var <- scenario <- sector <- year <- value <- ag_prices_map <- NULL
+  var <- scenario <- sector <- year <- value <- ag_prices_map <- ag_demand_weights <- NULL
+
+  # compute annual good demand weights by region
+  ag_demand_weights <- ag_demand_clean %>%
+    dplyr::rename('ag_demand_variable' = 'var') %>%
+    left_join_strict(filter_variables(get(paste('ag_demand_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld"), by = c("ag_demand_variable")) %>%
+    dplyr::filter(ag_price_variable != 'NoReported') %>%
+    dplyr::group_by(scenario, ag_demand_variable, year) %>%
+    dplyr::mutate(total = sum(value)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(weight = value / total) %>%
+    dplyr::select(scenario, region, year, var = ag_price_variable, weight) %>%
+    tidyr::complete(tidyr::nesting(scenario, year, var), region = unique(ag_demand_clean$region), fill = list(weight = 0))
+
 
   ag_prices_wld <<-
     rgcam::getQuery(prj, "prices by sector") %>%
@@ -1448,10 +1461,23 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
     left_join_strict(filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld"), by = c("sector")) %>%
     dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
-    dplyr::group_by(scenario, sector, year) %>%
-    dplyr::summarise(value = mean(value, na.rm = T)) %>%
+    # add weights
+    dplyr::filter(year <= final_year, year >= 1990) %>%
+    left_join_strict(ag_demand_weights, by = c('scenario', 'region', 'year', 'var')) %>%
+    dplyr::mutate(value = value * weight) %>%
+    # compute Global values
+    dplyr::group_by(scenario, sector, var, unit_conv, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(region = "World")
+    dplyr::mutate(region = "World") %>%
+    # compute index
+    dplyr::group_by(scenario, region, sector) %>%
+    dplyr::mutate(value = value * unit_conv / value[year == 2015]) %>%
+    dplyr::ungroup() %>%
+    # do the mean by variable
+    dplyr::group_by(scenario, region, var, year) %>%
+    dplyr::summarise(value = mean(value)) %>%
+    dplyr::ungroup()
 }
 
 #' get_ag_prices
@@ -1467,17 +1493,20 @@ get_ag_prices <- function(GCAM_version = "v7.0") {
 
   ag_prices_clean <<-
     rgcam::getQuery(prj, "prices by sector") %>%
-    dplyr::bind_rows(ag_prices_wld) %>%
     dplyr::filter(Units == "1975$/kg", !grepl('region|traded|^[a-z]',sector)) %>%
     left_join_strict(filter_variables(get(paste('ag_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_clean"), by = c("sector")) %>%
+    dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
+    # compute index
     dplyr::group_by(scenario, region, sector) %>%
     dplyr::mutate(value = value * unit_conv / value[year == 2015]) %>%
     dplyr::ungroup() %>%
     # do the mean by variable
-    dplyr::group_by(scenario, region, var, year, ) %>%
+    dplyr::group_by(scenario, region, var, year) %>%
     dplyr::summarise(value = mean(value)) %>%
     dplyr::ungroup() %>%
+    # add World values
+    dplyr::bind_rows(ag_prices_wld) %>%
     # rearrange dataset
     dplyr::select(all_of(gcamreport::long_columns))
 }
@@ -1555,6 +1584,7 @@ get_regions_en_weight_tmp <- function() {
     dplyr::mutate(weight = value / sum(value)) %>%
     dplyr::ungroup() %>%
     dplyr::select(-value, -var)
+
 }
 
 
