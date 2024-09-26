@@ -30,6 +30,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.1.html</loc></url>
@@ -168,8 +169,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regional_emission.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_en_weight_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_weight_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc></url>

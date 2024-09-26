@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   Dataset_Generation_Tutorial_v6-0: Dataset_Generation_Tutorial_v6-0.html
@@ -17,7 +17,7 @@ articles:
   Step_By_Step_Full_Example_v7-0: Step_By_Step_Full_Example_v7-0.html
   Step_By_Step_Full_Example: Step_By_Step_Full_Example.html
   Version_Guide: Version_Guide.html
-last_built: 2024-09-06T12:18Z
+last_built: 2024-09-26T10:09Z
 urls:
   reference: https://bc3lc.github.io/gcamreport/reference
   article: https://bc3lc.github.io/gcamreport/articles
