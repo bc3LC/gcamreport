@@ -40,7 +40,9 @@ ag_prices_wld;get_ag_prices_wld_tmp;ag_demand_clean;;prices by sector
 ag_prices_clean;get_ag_prices;ag_prices_wld;;prices by sector
 price_var;get_price_var_tmp;;;
 regions.global;get_regions_tmp;;;
-region_en_weight;get_regions_en_weight_tmp;fe_sector_clean;;Final Energy
+region_fe_weight;get_regions_en_weight_tmp;fe_sector_clean;;Final Energy
+region_pe_weight;get_regions_en_weight_tmp;fe_sector_clean;;Primary Energy
+region_se_weight;get_regions_en_weight_tmp;fe_sector_clean;;Secondary Energy
 co2_price_share_bysec;get_co2_price_share;co2_clean;;nonCO2 emissions by region,nonCO2 emissions by sector (excluding resource production)
 co2_price_global;get_co2_price_global_tmp;regions.global,price_var;;CO2 prices
 co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,region_en_weight,regions.global,co2_price_share_bysec;;CO2 prices
@@ -52,7 +54,7 @@ energy_price_fragmented;get_energy_price_fragmented;prices_subsector;;CO2 prices
 total_revenue;get_total_revenue;;;resource production,prices by sector
 regional_emission;get_regional_emission;nonco2_content;;resource production
 energy_price;get_energy_price_tmp;energy_price_fragmented;;
-energy_price_clean;get_energy_price;energy_price;;
+energy_price_clean;get_energy_price;energy_price,region_fe_weight,region_pe_weight,region_se_weight;;
 cf_iea;get_cf_iea_tmp;elec_gen_tech_clean;;
 elec_cf;get_elec_cf_tmp;cf_iea;;
 elec_capacity_tot_clean;get_elec_capacity_tot;elec_cf;;elec gen by gen tech and cooling tech and vintage

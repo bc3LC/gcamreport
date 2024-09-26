@@ -36,7 +36,7 @@ fe_sector_clean;get_fe_sector;fe_sector,fe_transportation;
 energy_service_transportation_clean;get_energy_service_transportation;;;transport service output by mode
 energy_service_buildings_clean;get_energy_service_buildings;;;building floorspace
 industry_production_clean;get_industry_production;;;industry primary output by sector
-ag_prices_wld;get_ag_prices_wld_tmp;;;prices by sector
+ag_prices_wld;get_ag_prices_wld_tmp;ag_demand_clean;;prices by sector
 ag_prices_clean;get_ag_prices;ag_prices_wld;;prices by sector
 price_var;get_price_var_tmp;;;
 regions.global;get_regions_tmp;;;

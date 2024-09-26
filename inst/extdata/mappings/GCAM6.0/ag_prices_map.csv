@@ -1,33 +1,60 @@
 # Prices by sector
 sector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
-Beef,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Beef|Index,,,,,1
-Corn,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Corn|Index,,,,,1
-Dairy,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Dairy|Index,,,,,1
-FiberCrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|FiberCrop|Index,,,,,1
+regional beef,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Beef|Index,,,,,1
+regional corn,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Corn|Index,,,,,1
+regional dairy,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Dairy|Index,,,,,1
+regional fibercrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|FiberCrop|Index,,,,,1
 FeedCrops,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Feed|Index,,,,,,1
 FodderGrass,NoReported,,,,,,,,1
 FodderHerb,NoReported,,,,,,,,1
 FodderHerb_Residue,NoReported,,,,,,,,1
 Forest,NoReported,,,,,,,,1
-Fruits,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Fruits|Index,,,,,1
-Legumes,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Legumes|Index,,,,,1
-MiscCrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|MiscCrop|Index,,,,,1
+regional fruits,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Fruits|Index,,,,,1
+regional legumes,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Legumes|Index,,,,,1
+regional misccrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|MiscCrop|Index,,,,,1
 NonFoodDemand_Crops,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Other|Index,,,,,,1
 NonFoodDemand_Meat,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Other|Index,,,,,,1
-NutsSeeds,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|NutsSeeds|Index,,,,,1
-OilCrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OilCrop|Index,,,,,1
-OilPalm,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OilPalm|Index,,,,,1
-OtherGrain,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OtherGrain|Index,,,,,1
+regional nuts_seeds,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|NutsSeeds|Index,,,,,1
+regional oilcrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OilCrop|Index,,,,,1
+regional oilpalm,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OilPalm|Index,,,,,1
+regional othergrain,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|OtherGrain|Index,,,,,1
+OtherMeat_Fish,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Fish|Index,,,,,1
 Pasture,NoReported,,,,,,,,1
 Pasture_FodderGrass,NoReported,,,,,,,,1
-Pork,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Pork|Index,,,,,1
-Poultry,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Poultry|Index,,,,,1
-Rice,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Rice|Index,,,,,1
-RootTuber,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|RootTuber|Index,,,,,1
+regional pork,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Pork|Index,,,,,1
+regional poultry,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|Poultry|Index,,,,,1
+regional rice,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Rice|Index,,,,,1
+regional root_tuber,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|RootTuber|Index,,,,,1
 Scavenging_Other,NoReported,,,,,,,,1
-SheepGoat,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|SheepGoat|Index,,,,,1
-Soybean,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Soybean|Index,,,,,1
-SugarCrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|SugarCrop|Index,,,,,1
-Vegetables,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Vegetables|Index,,,,,1
-Wheat,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Wheat|Index,,,,,1
+regional sheepgoat,Price|Agriculture|Index,Price|Agriculture|Livestock|Index,Price|Agriculture|Livestock|Food|Index,Price|Agriculture|Livestock|Food|SheepGoat|Index,,,,,1
+regional soybean,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Soybean|Index,,,,,1
+regional sugarcrop,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|SugarCrop|Index,,,,,1
+regional vegetables,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Vegetables|Index,,,,,1
+regional wheat,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Food|Index,Price|Agriculture|Crops|Food|Wheat|Index,,,,,1
 biomass,Price|Agriculture|Index,Price|Agriculture|Crops|Index,Price|Agriculture|Crops|Energy|Index,,,,,,1
+Beef,NoReported,,,,,,,,1
+Corn,NoReported,,,,,,,,1
+Dairy,NoReported,,,,,,,,1
+FiberCrop,NoReported,,,,,,,,1
+Fruits,NoReported,,,,,,,,1
+Legumes,NoReported,,,,,,,,1
+MiscCrop,NoReported,,,,,,,,1
+NutsSeeds,NoReported,,,,,,,,1
+OilCrop,NoReported,,,,,,,,1
+OilPalm,NoReported,,,,,,,,1
+OtherGrain,NoReported,,,,,,,,1
+Pork,NoReported,,,,,,,,1
+Poultry,NoReported,,,,,,,,1
+Rice,NoReported,,,,,,,,1
+RootTuber,NoReported,,,,,,,,1
+SheepGoat,NoReported,,,,,,,,1
+Soybean,NoReported,,,,,,,,1
+SugarCrop,NoReported,,,,,,,,1
+Vegetables,NoReported,,,,,,,,1
+Wheat,NoReported,,,,,,,,1
+alumina,NoReported,,,,,,,,1
+aluminum,NoReported,,,,,,,,1
+cement,NoReported,,,,,,,,1
+iron and steel,NoReported,,,,,,,,1
+regional iron and steel,NoReported,,,,,,,,1
+paper,NoReported,,,,,,,,1

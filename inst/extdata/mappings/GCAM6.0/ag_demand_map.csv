@@ -1,23 +1,79 @@
 # Agricultural demand balance
-sector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
-FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,,,,,,1
-FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,,,,,,1
-FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,,,,,,1
-NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,,,,,,1
-regional corn for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
-regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
-regional sugar for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
-NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,,,,,,1
-OtherMeat_Fish,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,,,,,,1
-FodderHerb_Residue,NoReported,,,,,,,,1
-Pasture_FodderGrass,NoReported,,,,,,,,1
-regional forest,NoReported,,,,,,,,1
-traded forest,NoReported,,,,,,,,1
-regional beef,NoReported,,,,,,,,1
-regional pork,NoReported,,,,,,,,1
-regional poultry,NoReported,,,,,,,,1
-regional sheepgoat,NoReported,,,,,,,,1
-traded beef,NoReported,,,,,,,,1
-traded pork,NoReported,,,,,,,,1
-traded poultry,NoReported,,,,,,,,1
-traded sheepgoat,NoReported,,,,,,,,1
+input,sector,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+regional corn,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Corn,,,,,1
+regional fibercrop,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Fibercrop,,,,,1
+regional fruits,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Fruits,,,,,1
+regional legumes,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Legumes,,,,,1
+regional misccrop,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|MiscCrop,,,,,1
+regional nuts_seeds,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|NutsSeeds,,,,,1
+regional oilcrop,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|OilCrop,,,,,1
+regional oilpalm,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|OilPalm,,,,,1
+regional othergrain,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|OtherGrain,,,,,1
+regional rice,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Rice,,,,,1
+regional root_tuber,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|RootTuber,,,,,1
+regional soybean,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Soybean,,,,,1
+regional sugarcrop,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|SugarCrop,,,,,1
+regional vegetables,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Vegetables,,,,,1
+regional wheat,FeedCrops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Feed,Agricultural Demand|Crops|Feed|Wheat,,,,,1
+regional corn,FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Corn,,,,,1
+regional othergrain,FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|OtherGrain,,,,,1
+regional rice,FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Rice,,,,,1
+regional root_tuber,FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|RootTuber,,,,,1
+regional wheat,FoodDemand_Staples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Wheat,,,,,1
+regional fibercrop,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|FiberCrop,,,,,1
+regional fruits,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Fruits,,,,,1
+regional legumes,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Legumes,,,,,1
+regional misccrop,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|MiscCrop,,,,,1
+regional nuts_seeds,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|NutsSeeds,,,,,1
+regional oilcrop,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|OilCrop,,,,,1
+regional oilpalm,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|OilPalm,,,,,1
+regional soybean,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|SoyBean,,,,,1
+regional sugarcrop,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|SugarCrop,,,,,1
+regional vegetables,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Food,Agricultural Demand|Crops|Food|Vegetables,,,,,1
+regional beef,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|Beef,,,,,1
+regional dairy,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|Dairy,,,,,1
+regional pork,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|Pork,,,,,1
+regional poultry,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|Poultry,,,,,1
+regional sheepgoat,FoodDemand_NonStaples,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|SheepGoat,,,,,1
+regional corn,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Corn,,,,,1
+regional fibercrop,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|FiberCrop,,,,,1
+regional fruits,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Fruits,,,,,1
+regional legumes,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Legumes,,,,,1
+regional misccrop,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|MiscCrop,,,,,1
+regional nuts_seeds,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|NutsSeeds,,,,,1
+regional oilcrop,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|OilCrop,,,,,1
+regional oilpalm,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|OilPalm,,,,,1
+regional othergrain,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|OtherGrain,,,,,1
+regional rice,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Rice,,,,,1
+regional root_tuber,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|RootTuber,,,,,1
+regional soybean,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|SoyBean,,,,,1
+regional sugarcrop,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|SugarCrop,,,,,1
+regional vegetables,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Vegetables,,,,,1
+regional wheat,NonFoodDemand_Crops,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Other,Agricultural Demand|Crops|Other|Wheat,,,,,1
+FodderHerb,NonFoodDemand_Crops,NoReported,,,,,,,,1
+FodderGrass,NonFoodDemand_Crops,NoReported,,,,,,,,1
+regional corn,regional corn for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional oilcrop,regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional oilpalm,regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional soybean,regional biomassOil,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional sugarcrop,regional sugar for ethanol,Agricultural Demand,Agricultural Demand|Crops,Agricultural Demand|Crops|Energy,,,,,,1
+regional beef,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|Beef,,,,,1
+regional dairy,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|Dairy,,,,,1
+regional pork,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|Pork,,,,,1
+regional poultry,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|Poultry,,,,,1
+regional sheepgoat,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|SheepGoat,,,,,1
+OtherMeat_Fish,NonFoodDemand_Meat,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Other,Agricultural Demand|Livestock|Other|Fish,,,,,1
+OtherMeat_Fish,OtherMeat_Fish,Agricultural Demand,Agricultural Demand|Livestock,Agricultural Demand|Livestock|Food,Agricultural Demand|Livestock|Food|Fish,,,,,1
+FodderHerb,FodderHerb_Residue,NoReported,,,,,,,,1
+FodderGrass,Pasture_FodderGrass,NoReported,,,,,,,,1
+Pasture,Pasture_FodderGrass,NoReported,,,,,,,,1
+Forest,regional forest,NoReported,,,,,,,,1
+Forest,traded forest,NoReported,,,,,,,,1
+regional beef,regional beef,NoReported,,,,,,,,1
+regional pork,regional pork,NoReported,,,,,,,,1
+regional poultry,regional poultry,NoReported,,,,,,,,1
+regional sheepgoat,regional sheepgoat,NoReported,,,,,,,,1
+,traded beef,NoReported,,,,,,,,1
+,traded pork,NoReported,,,,,,,,1
+,traded poultry,NoReported,,,,,,,,1
+,traded sheepgoat,NoReported,,,,,,,,1

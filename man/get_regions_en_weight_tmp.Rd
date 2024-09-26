@@ -7,10 +7,10 @@
 get_regions_en_weight_tmp()
 }
 \value{
-`region_fe_weight`,`region_pe_weight`,`region_se_weight` global variables
+`region_en_weight` global variable
 }
 \description{
-Retrieve regions final/primary/energy energy weights to compute energy price.
+Retrieve regions final energy weights to compute carbon price.
 }
 \keyword{internal}
 \keyword{process}
