@@ -1,15 +1,12 @@
-# map to pair en_demand and en_prices to compute the World en_prices weighted by en_demand
+# map to pair en_demand and en_prices to compute the World en_prices weighted by en_demand,
 en_demand_variable,en_price_variable
 Final Energy,Price|Final Energy
 Final Energy|Electricity,Price|Final Energy|Electricity
 Final Energy|Gases,
 Final Energy|Heat,
-Final Energy|Hydogen,
 Final Energy|Hydrogen,
 Final Energy|Industry,Price|Final Energy|Industry
-Final Energy|Industry|Cement,
 Final Energy|Industry|Cement|Electricity,
-Final Energy|Industry|Chemicals,
 Final Energy|Industry|Chemicals|Ammonia,
 Final Energy|Industry|Chemicals|Ammonia|Gases,
 Final Energy|Industry|Chemicals|Ammonia|Hydrogen,
@@ -36,8 +33,8 @@ Final Energy|Industry|Non-ferrous metals|Liquids,
 Final Energy|Industry|Non-ferrous metals|Solids,
 Final Energy|Industry|Non-ferrous metals|Solids|Bioenergy,
 Final Energy|Industry|Non-ferrous metals|Solids|Fossil,
-Final Energy|Industry|Paper,
-Final Energy|Industry|Paper|Electricity,
+Final Energy|Industry|Pupl and Paper,
+Final Energy|Industry|Pupl and Paper|Electricity,
 Final Energy|Industry|Solar,
 Final Energy|Industry|Solids,
 Final Energy|Industry|Solids|Biomass,
@@ -59,9 +56,8 @@ Final Energy|Residential and Commercia|Residential,Price|Final Energy|Buildings|
 Final Energy|Residential and Commercial,Price|Final Energy|Buildings
 Final Energy|Residential and Commercial|Commercial|Cooling,
 Final Energy|Residential and Commercial|Commercial|Electricity,
-Final Energy|Residential and Commercial|Commercial|Gas,
 Final Energy|Residential and Commercial|Commercial|Gases,
-Final Energy|Residential and Commercial|Commercial|Heat,
+Final Energy|Residential and Commercial|Commercial|Heating,
 Final Energy|Residential and Commercial|Commercial|Heating|Space,
 Final Energy|Residential and Commercial|Commercial|Hydrogen,
 Final Energy|Residential and Commercial|Commercial|Liquids,
@@ -71,18 +67,18 @@ Final Energy|Residential and Commercial|Commercial|Solids|Coal,
 Final Energy|Residential and Commercial|Cooling,
 Final Energy|Residential and Commercial|Electricity,
 Final Energy|Residential and Commercial|Gases,
-Final Energy|Residential and Commercial|Heat,
+Final Energy|Residential and Commercial|Heating,
 Final Energy|Residential and Commercial|Heating|Space,
 Final Energy|Residential and Commercial|Hydrogen,
 Final Energy|Residential and Commercial|Liquids,
 Final Energy|Residential and Commercial|Residential|Cooling,
-Final Energy|Residential and Commercial|Residential|Electricity,Price|Final Energy|Buildings|Residential|Electricity|Index
 Final Energy|Residential and Commercial|Residential|Electricity,Price|Final Energy|Buildings|Residential|Electricity
+Final Energy|Residential and Commercial|Residential|Electricity,Price|Final Energy|Buildings|Residential|Electricity|Index
 Final Energy|Residential and Commercial|Residential|Gases,Price|Final Energy|Buildings|Residential|Gases
 Final Energy|Residential and Commercial|Residential|Gases,Price|Final Energy|Buildings|Residential|Gases|Gas
 Final Energy|Residential and Commercial|Residential|Gases,Price|Final Energy|Buildings|Residential|Gases|Index
 Final Energy|Residential and Commercial|Residential|Gases,Price|Final Energy|Buildings|Residential|Gases|Gas|Index
-Final Energy|Residential and Commercial|Residential|Heat,
+Final Energy|Residential and Commercial|Residential|Heating,
 Final Energy|Residential and Commercial|Residential|Heating|Space,
 Final Energy|Residential and Commercial|Residential|Hydrogen,
 Final Energy|Residential and Commercial|Residential|Liquids,Price|Final Energy|Buildings|Residential|Liquids

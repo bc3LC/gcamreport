@@ -1,0 +1,33 @@
+﻿# energy blocks. Each column is a block which contains all the items that start with this strings and end up forming the previous ones present in the block,,,,,,,
+final_energy_input,final_energy_sector,final_energy_industry_sectors1,final_energy_industry_sectors2,final_energy_residcomm_sectors,final_energy_residcomm_space,final_energy_transport_mode,final_energy_transport_sector
+Final Energy_makeup,Final Energy_makeup,Final Energy\|Industry_makeup,Final Energy\|Industry\|Chemicals_makeup,Final Energy\|Residential and Commercial_makeup,Final Energy\|Residential and Commercial_makeup,Final Energy\|Transportation,Final Energy\|Transportation
+Final Energy\|Electricity,Final Energy\|Carbon Removal,Final Energy\|Industry\|NoReported,Final Energy\|Industry\|Chemicals\|NoReported,Final Energy\|Residential and Commercial\|Commercial,Final Energy\|Residential and Commercial\|NoReported,Final Energy\|Transportation\|Freight,Final Energy\|Transportation\|Aviation
+Final Energy\|Gases,Final Energy\|Carbon Removal\|Direct Air Capture,Final Energy\|Industry\|Cement,Final Energy\|Industry\|Chemicals\|Ammonia,Final Energy\|Residential and Commercial\|Residential,Final Energy\|Residential and Commercial\|Cooling,Final Energy\|Transportation\|Passenger,Final Energy\|Transportation\|Maritime
+Final Energy\|Heat,Final Energy\|Carbon Removal\|Direct Air Capture\|Electricity,Final Energy\|Industry\|Chemicals\|Electricity,,,Final Energy\|Residential and Commercial\|Heating,,Final Energy\|Transportation\|Road
+Final Energy\|Hydrogen,Final Energy\|Industry,Final Energy\|Industry\|Chemicals\|Gases,,,,,Final Energy\|Transportation\|Rail
+Final Energy\|Liquids,Final Energy\|Industry\|Electricity,Final Energy\|Industry\|Chemicals\|Heat,,,,,
+Final Energy\|Non-Energy Use,Final Energy\|Industry\|Gases,Final Energy\|Industry\|Chemicals\|Hydrogen,,,,,
+Final Energy\|Solar,Final Energy\|Industry\|Heat,Final Energy\|Industry\|Chemicals\|Liquids,,,,,
+Final Energy\|Solids,Final Energy\|Industry\|Hydrogen,Final Energy\|Industry\|Chemicals\|Solids,,,,,
+,Final Energy\|Industry\|Liquids,Final Energy\|Industry\|Non-ferrous metals,,,,,
+,Final Energy\|Industry\|Solar,Final Energy\|Industry\|Pulp and Paper,,,,,
+,Final Energy\|Industry\|Solids\|Biomass,Final Energy\|Industry\|Steel,,,,,
+,Final Energy\|Industry\|Solids\|Coal,,,,,,
+,Final Energy\|Other,,,,,,
+,Final Energy\|Other\|Electricity,,,,,,
+,Final Energy\|Other\|Gases,,,,,,
+,Final Energy\|Other\|Liquids,,,,,,
+,Final Energy\|Residential and Commercial,,,,,,
+,Final Energy\|Residential and Commercial\|Electricity,,,,,,
+,Final Energy\|Residential and Commercial\|Gases,,,,,,
+,Final Energy\|Residential and Commercial\|Heating,,,,,,
+,Final Energy\|Residential and Commercial\|Hydrogen,,,,,,
+,Final Energy\|Residential and Commercial\|Liquids,,,,,,
+,Final Energy\|Residential and Commercial\|Solids,,,,,,
+,Final Energy\|Residential and Commercial\|Solids\|Biomass,,,,,,
+,Final Energy\|Residential and Commercial\|Solids\|Coal,,,,,,
+,Final Energy\|Transportation,,,,,,
+,Final Energy\|Transportation\|Electricity,,,,,,
+,Final Energy\|Transportation\|Gases,,,,,,
+,Final Energy\|Transportation\|Hydrogen,,,,,,
+,Final Energy\|Transportation\|Liquids,,,,,,

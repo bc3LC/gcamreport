@@ -33,6 +33,9 @@ navbar:
     - text: "Version Guide"
       icon: fa-solid fa-seedling
       href: articles/Version_Guide.html
+    - text: "Reporting Variables"
+      icon: fa-solid fa-globe
+      href: articles/Reporting_Variables.html
     - text: "Reference"
       icon: fa-file-code-o
       href: reference/index.html
