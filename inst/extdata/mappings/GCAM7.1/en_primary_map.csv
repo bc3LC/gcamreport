@@ -14,6 +14,7 @@ e nuclear,Primary Energy,Primary Energy|Nuclear,,,,,1
 f hydro,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Hydro,,,,1
 g wind,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Wind,,,,1
 h solar,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Solar,,,,1
+global solar resource,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Solar,,,,1
 i geothermal,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Non-Biomass Renewables|Geothermal,,,,1
 j traditional biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|Traditional,,,,1
 traded coal,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Coal,Primary Energy|Coal|w/o CCS,Primary Energy|Secondary Energy Trade,1
@@ -24,6 +25,8 @@ desalination,,,,,,,1
 desalination CCS,,,,,,,1
 traded natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,Primary Energy|Secondary Energy Trade,1
 traded coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,Primary Energy|Secondary Energy Trade,1
+traded industrial_roundwood,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,Primary Energy|Biomass|Electricity,Primary Energy|Biomass|Residues,Primary Energy|Secondary Energy Trade,1
+traded woodpulp,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,Primary Energy|Biomass|Electricity,Primary Energy|Biomass|Residues,Primary Energy|Secondary Energy Trade,1
 traded Afr_MidE pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded N.Amer pipeline gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1
 traded N.Amer pipeline gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,Primary Energy|Secondary Energy Trade,1

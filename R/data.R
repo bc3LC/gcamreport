@@ -420,6 +420,18 @@
 #' }
 "final_energy_map_v7.1"
 
+#' en_demand_prices_map_v7.1
+#'
+#' @source github
+#' @format .csv
+#' @description primary, secondary, final energy demand - price maps compatible with GCAM7.1.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::en_demand_prices_map_v7.1
+#' }
+"en_demand_prices_map_v7.1"
+
 #' transport_final_en_map_v7.1
 #'
 #' @source github

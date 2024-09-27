@@ -170,6 +170,12 @@ final_energy_map_v7.1 <- read.csv(file.path(rawDataFolder, "inst/extdata/mapping
 ) %>% gather_map()
 use_data(final_energy_map_v7.1, overwrite = T)
 
+en_demand_prices_map_v7.1 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.1", "en_demand_prices_map.csv"),
+                                  skip = 1,
+                                  stringsAsFactors = FALSE
+)
+use_data(en_demand_prices_map_v7.1, overwrite = T)
+
 transport_final_en_map_v7.1 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.1", "transport_final_en_map.csv"),
                                         skip = 1, na = "",
                                         stringsAsFactors = FALSE

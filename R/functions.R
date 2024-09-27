@@ -4,6 +4,78 @@ options(summarise.inform = FALSE)
 #                           ANCILLARY FUNCTIONS                         #
 #########################################################################
 
+
+#' compute_reg_sec_weight
+#'
+#' An internal function designed to compute the regional weights of a set of variables. The World region
+#' is considered as the annual unit.
+#'
+#' @param dt dataset with the following columns: scenario, region, var (reporting variable), year, value
+#' @return dataset with `reg_sec_weight` column.
+#' @export
+compute_reg_sec_weight <- function(dt) {
+
+  # function to create cumulative segments
+  get_segments <- function(x) {
+    parts <- unlist(strsplit(x, "\\|"))
+    sapply(seq_along(parts), function(i) paste(parts[1:i], collapse = "|"))
+  }
+
+
+  # compute annual good demand weights by sector
+  weight_pre <- dt
+  # apply the function to each row of the strings column
+  segments_list <- lapply(weight_pre$var, get_segments)
+  # find the maximum length of the segments for padding
+  max_length <- max(sapply(segments_list, length))
+  # pad each list to ensure equal length by adding NAs
+  segments_list_padded <- lapply(segments_list, function(x) c(x, rep(NA, max_length - length(x))))
+  # convert the list of padded segments into a data frame
+  df_segments <- do.call(rbind, segments_list_padded)
+  # rename the columns based on the number of parts
+  colnames(df_segments) <- paste0("col", seq_len(ncol(df_segments)))
+  # combine with the original dataframe
+  weight_pre <- cbind(weight_pre, df_segments) %>%
+    tibble::as_tibble() %>%
+    dplyr::mutate(across(col1:paste0('col',max_length), ~ifelse(. == "NA", NA, .)))
+
+  # regional-sectorial weights. The World region weights 1 for each year
+  weight_dt <- weight_pre %>%
+    dplyr::mutate(reg_sec_weight = as.numeric(NA))
+  for (num in rev(seq(1,max_length,1))) {
+    cc = paste0('col',num)
+
+    tmp <- weight_pre %>%
+      dplyr::filter(!is.na(get(cc)))
+    if (num < max_length) {
+      tmp <- tmp %>%
+        dplyr::filter(is.na(get(paste0('col',num+1))))
+    }
+
+    tmp <- tmp %>%
+      dplyr::group_by(scenario, year, !!rlang::sym(paste0('col', num))) %>%
+      dplyr::mutate(total = sum(value)) %>%
+      dplyr::ungroup() %>%
+      dplyr::mutate(!!paste0('weights_', cc) := as.numeric(value / total)) %>%
+      dplyr::select(scenario, region, year, cc, !!rlang::sym(paste0('weights_col', num)))
+
+    weight_dt <- weight_dt %>%
+      dplyr::left_join(tmp, by = c('scenario', 'region', 'year', cc)) %>%
+      dplyr::mutate(reg_sec_weight = dplyr::if_else(is.na(reg_sec_weight), !!rlang::sym(paste0('weights_col', num)), reg_sec_weight))
+
+  }
+
+  weight_dt <- weight_dt %>%
+    dplyr::select(scenario, region, year, var, reg_sec_weight) %>%
+    tidyr::complete(tidyr::nesting(scenario, var), year = c(1975, 1990, available_reporting_years), region = unique(dt$region), fill = list(reg_sec_weight = 0))
+
+
+  return(weight_dt)
+
+}
+
+
+
 #' handle_warning
 #'
 #' An internal function designed to manage mismatches between mapping files and queries.
@@ -1216,6 +1288,7 @@ get_fe_sector_tmp <- function(GCAM_version = "v7.0") {
     tmp %>%
     left_join_strict(filter_variables(get(paste('final_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "fe_sector"),
                      by = c("sector", "input"), multiple = "all") %>%
+    dplyr::filter(var != 'NoReported') %>%
     dplyr::filter(!is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     dplyr::group_by(scenario, region, year, var) %>%
@@ -1444,97 +1517,8 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
     ag_demand_reg_sec_weights <- ag_demand_reg_sec_weights1 <-
     ag_demand_sec_weights <- ag_demand_sec_weights1 <- NULL
 
-  # function to create cumulative segments
-  get_segments <- function(x) {
-    parts <- unlist(strsplit(x, "\\|"))
-    sapply(seq_along(parts), function(i) paste(parts[1:i], collapse = "|"))
-  }
-
-  # compute annual good demand weights by sector
-  ag_demand_sec_weights_pre <- ag_demand_clean %>%
-    dplyr::rename('ag_demand_variable' = 'var') %>%
-    left_join_strict(filter_variables(get(paste('ag_demand_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_prices_wld"), by = c("ag_demand_variable")) %>%
-    dplyr::filter(ag_price_variable != 'NoReported')
-
-  # apply the function to each row of the strings column
-  segments_list <- lapply(ag_demand_sec_weights_pre$ag_demand_variable, get_segments)
-  # find the maximum length of the segments for padding
-  max_length <- max(sapply(segments_list, length))
-  # pad each list to ensure equal length by adding NAs
-  segments_list_padded <- lapply(segments_list, function(x) c(x, rep(NA, max_length - length(x))))
-  # convert the list of padded segments into a data frame
-  df_segments <- do.call(rbind, segments_list_padded)
-  # rename the columns based on the number of parts
-  colnames(df_segments) <- paste0("col", seq_len(ncol(df_segments)))
-  # combine with the original dataframe
-  ag_demand_sec_weights_pre <- cbind(ag_demand_sec_weights_pre, df_segments) %>%
-    tibble::as_tibble() %>%
-    dplyr::mutate(across(col1:paste0('col',max_length), ~ifelse(. == "NA", NA, .)))
-
-
-  # sectorial weights. Each individual region weights 1 for each year
-  ag_demand_sec_weights1 <- ag_demand_sec_weights_pre
-  for (num in rev(seq(2,max_length,1))) {
-    cc = paste0('col',num)
-
-    tmp <- ag_demand_sec_weights_pre %>%
-      dplyr::filter(!is.na(get(cc)))
-    if (num < max_length) {
-      tmp <- tmp %>%
-        dplyr::filter(is.na(get(paste0('col',num+1))))
-    }
-
-    tmp <- tmp %>%
-      dplyr::group_by(scenario, region, year, !!rlang::sym(paste0('col', num-1))) %>%
-      dplyr::mutate(total = sum(value)) %>%
-      dplyr::ungroup() %>%
-      dplyr::mutate(!!paste0('weights_', cc) := value / total) %>%
-      dplyr::select(scenario, region, year, cc, !!rlang::sym(paste0('weights_col', num)))
-
-    ag_demand_sec_weights1 <- ag_demand_sec_weights1 %>%
-      dplyr::left_join(tmp, by = c('scenario', 'region', 'year', cc))
-
-  }
-
-  to_multiply = paste(paste0('weights_col', seq(2, max_length, 1)), collapse = '*')
-  ag_demand_sec_weights <- ag_demand_sec_weights1 %>%
-    dplyr::mutate(across(starts_with('weights_'), ~ ifelse(is.na(.), 1, .))) %>%
-    dplyr::mutate(sec_weight = eval(parse(text = to_multiply))) %>%
-    dplyr::select(scenario, region, year, var = ag_price_variable, sec_weight) %>%
-    tidyr::complete(tidyr::nesting(scenario, var), year = c(1975, 1990, available_reporting_years), region = unique(ag_demand_clean$region), fill = list(sec_weight = 0))
-
-
   # regional-sectorial weights. The World region weights 1 for each year
-  ag_demand_reg_sec_weights1 <- ag_demand_sec_weights_pre %>%
-    dplyr::mutate(reg_sec_weight = as.numeric(NA))
-  for (num in rev(seq(1,max_length,1))) {
-    cc = paste0('col',num)
-
-    tmp <- ag_demand_sec_weights_pre %>%
-      dplyr::filter(!is.na(get(cc)))
-    if (num < max_length) {
-      tmp <- tmp %>%
-        dplyr::filter(is.na(get(paste0('col',num+1))))
-    }
-
-    tmp <- tmp %>%
-      dplyr::group_by(scenario, year, !!rlang::sym(paste0('col', num))) %>%
-      dplyr::mutate(total = sum(value)) %>%
-      dplyr::ungroup() %>%
-      dplyr::mutate(!!paste0('weights_', cc) := as.numeric(value / total)) %>%
-      dplyr::select(scenario, region, year, cc, !!rlang::sym(paste0('weights_col', num)))
-
-    ag_demand_reg_sec_weights1 <- ag_demand_reg_sec_weights1 %>%
-      dplyr::left_join(tmp, by = c('scenario', 'region', 'year', cc)) %>%
-      dplyr::mutate(reg_sec_weight = dplyr::if_else(is.na(reg_sec_weight), !!rlang::sym(paste0('weights_col', num)), reg_sec_weight))
-
-  }
-
-  ag_demand_reg_sec_weights <- ag_demand_reg_sec_weights1 %>%
-    dplyr::select(scenario, region, year, var = ag_price_variable, reg_sec_weight) %>%
-    tidyr::complete(tidyr::nesting(scenario, var), year = c(1975, 1990, available_reporting_years), region = unique(ag_demand_clean$region), fill = list(reg_sec_weight = 0))
-
-
+  ag_demand_reg_sec_weights <- compute_reg_sec_weight(ag_demand_clean)
 
   ag_prices_wld <<-
     rgcam::getQuery(prj, "prices by sector") %>%
@@ -1653,22 +1637,22 @@ get_regions_tmp <- function(GCAM_version = "v7.0") {
 
 #' get_regions_en_weight_tmp
 #'
-#' Retrieve regions final energy weights to compute carbon price.
+#' Retrieve regions final/primary/energy energy weights to compute energy price.
 #' @keywords internal internal tmp process
-#' @return `region_en_weight` global variable
+#' @return `region_fe_weight`,`region_pe_weight`,`region_se_weight` global variables
 #' @importFrom magrittr %>%
 #' @export
 get_regions_en_weight_tmp <- function() {
   var <- scenario <- year <- value <- NULL
 
-  # for scenarios w/ different regional carbon prices, weigh regional price by final energy to get global CO2 price
-  region_en_weight <<-
-    fe_sector_clean %>%
-    dplyr::filter(var == "Final Energy") %>%
-    dplyr::group_by(scenario, year) %>%
-    dplyr::mutate(weight = value / sum(value)) %>%
-    dplyr::ungroup() %>%
-    dplyr::select(-value, -var)
+  # Final Energy annual regional weights
+  region_fe_weight <<- compute_reg_sec_weight(fe_sector_clean)
+
+  # Primary Energy annual regional weights
+  region_pe_weight <<- compute_reg_sec_weight(primary_energy_clean)
+
+  # Secondary Energy annual regional weights
+  region_se_weight <<- compute_reg_sec_weight(elec_gen_tech_clean)
 
 }
 
@@ -1947,19 +1931,16 @@ get_prices_subsector <- function(GCAM_version = "v7.0") {
     handle_warning(mapping_name1 = 'energy_prices_map', query_name = 'costs by subsector')
   }
 
-  prices_subsector <<-
+  prices_subsector_pre <<-
     rgcam::getQuery(prj, "prices by sector") %>%
     dplyr::select(-Units) %>%
     dplyr::left_join(energy_prices_map %>% # left join already checked
                        dplyr::filter(is.na(subsector)) %>%
                        unique(), by = c("sector"), relationship = "many-to-many") %>%
-    dplyr::bind_rows(rgcam::getQuery(prj, "costs by subsector") %>%
-      dplyr::left_join( # left join already checked
-        energy_prices_map %>%
-          unique(),
-        by = c("sector", "subsector"), relationship = "many-to-many"
-      )) %>%
-    dplyr::filter(!is.na(var)) %>%
+    dplyr::filter(var != 'NoReported') %>%
+    dplyr::filter(!is.na(var))
+
+  prices_subsector_biomass <<- prices_subsector_pre %>%
     dplyr::filter(grepl("biomass", sector)) %>%
     # read in carbon content in kg C per GJ -> convert to tC per GJ
     left_join_strict(
@@ -2008,9 +1989,8 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
     }
   }
 
-  energy_price_fragmented <<-
-    prices_subsector %>%
-    dplyr::filter(!is.na(var)) %>%
+  energy_price_fragmented_biomass <-
+    prices_subsector_biomass %>%
     dplyr::left_join(rgcam::getQuery(prj, "CO2 prices") %>% # left_join already checked
       dplyr::filter(!grepl("LUC", market)) %>%
       dplyr::left_join(CO2_market_filteredReg, by = c("market"), relationship = "many-to-many") %>%
@@ -2025,6 +2005,19 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
         get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_75USD_10USD']] + price_C
     ) %>%
     dplyr::select(all_of(gcamreport::long_columns))
+
+  energy_price_fragmented_pre <-
+    prices_subsector_pre %>%
+    dplyr::filter(!grepl("biomass", sector)) %>%
+    dplyr::select(all_of(gcamreport::long_columns))
+
+  energy_price_fragmented <<-
+    rbind(energy_price_fragmented_pre,
+          energy_price_fragmented_biomass) %>%
+    dplyr::group_by(scenario, region, var, year) %>%
+    dplyr::summarise(value = sum(value)) %>%
+    dplyr::ungroup()
+
 }
 
 #' get_total_revenue
@@ -2154,7 +2147,71 @@ get_energy_price <- function() {
     dplyr::ungroup() %>%
     unique()
 
-  # average mean for global primary energy price
+  # weighted sum of energy prices by energy consumption
+  en_demand_prices_map <- filter_variables(get(paste('en_demand_prices_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "energy_price_clean")
+  # Final Energy
+  energy_price_clean_fe <- energy_price_clean %>%
+    dplyr::filter(stringr::str_starts(var, "Price\\|Final Energy")) %>%
+    dplyr::rename(en_price_variable = var) %>%
+    # add weights
+    left_join_strict(en_demand_prices_map,
+                     by = 'en_price_variable') %>%
+    left_join_strict(compute_reg_sec_weight(fe_sector_clean) %>%
+                       dplyr::rename(en_demand_variable = var),
+                     by = c('scenario', 'region', 'year', 'en_demand_variable'), relationship = "many-to-many") %>%
+    dplyr::mutate(value = value * reg_sec_weight) %>%
+    # compute Global values
+    dplyr::group_by(scenario, var = en_price_variable, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(region = "World")
+
+  # Primary Energy
+  pe_items <- en_demand_prices_map %>%
+    dplyr::filter(en_price_variable != "", stringr::str_starts(en_demand_variable, "Primary Energy")) %>%
+    dplyr::pull(en_demand_variable) %>%
+    as.vector()
+
+  energy_price_clean_fe <- energy_price_clean %>%
+    dplyr::filter(stringr::str_starts(var, "Price\\|Primary Energy")) %>%
+    dplyr::rename(en_price_variable = var) %>%
+    # add weights
+    left_join_strict(en_demand_prices_map,
+                     by = 'en_price_variable') %>%
+    left_join_strict(compute_reg_sec_weight(primary_energy_clean %>%
+                                              dplyr::filter(var %in% pe_items)) %>%
+                       dplyr::rename(en_demand_variable = var),
+                     by = c('scenario', 'region', 'year', 'en_demand_variable'), relationship = "many-to-many") %>%
+    dplyr::mutate(value = value * reg_sec_weight) %>%
+    # compute Global values
+    dplyr::group_by(scenario, var = en_price_variable, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(region = "World")
+
+  # Secondary Energy
+  se_items <- en_demand_prices_map %>%
+    dplyr::filter(en_price_variable != "", stringr::str_starts(en_demand_variable, "Primary Energy")) %>%
+    dplyr::pull(en_demand_variable) %>%
+    as.vector()
+
+  energy_price_clean_fe <- energy_price_clean %>%
+    dplyr::filter(stringr::str_starts(var, "Price\\|Secondary Energy")) %>%
+    dplyr::rename(en_price_variable = var) %>%
+    # add weights
+    left_join_strict(en_demand_prices_map,
+                     by = 'en_price_variable') %>%
+    left_join_strict(compute_reg_sec_weight(primary_energy_clean %>%
+                                              dplyr::filter(var %in% se_items)) %>%
+                       dplyr::rename(en_demand_variable = var),
+                     by = c('scenario', 'region', 'year', 'en_demand_variable'), relationship = "many-to-many") %>%
+    dplyr::mutate(value = value * reg_sec_weight) %>%
+    # compute Global values
+    dplyr::group_by(scenario, var = en_price_variable, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(region = "World")
+
   energy_price_clean <<-
     energy_price_clean %>%
     dplyr::group_by(scenario, var, year) %>%
