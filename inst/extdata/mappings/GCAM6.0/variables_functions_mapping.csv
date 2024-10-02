@@ -40,19 +40,19 @@ ag_prices_wld;get_ag_prices_wld_tmp;ag_demand_clean;;prices by sector
 ag_prices_clean;get_ag_prices;ag_prices_wld;;prices by sector
 price_var;get_price_var_tmp;;;
 regions.global;get_regions_tmp;;;
-region_en_weight;get_regions_weight_tmp;fe_sector_clean;;Final Energy
 co2_price_share_bysec;get_co2_price_share;co2_clean;;nonCO2 emissions by region,nonCO2 emissions by sector
-co2_price_global;get_co2_price_global_tmp;regions.global,price_var;;CO2 prices
-co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,region_en_weight,regions.global,co2_price_share_bysec;;CO2 prices
-co2_price_clean;get_co2_price;co2_price_fragmented,co2_price_global;;
+co2_price_global;get_co2_price_global_tmp;regions.global,price_var,fe_sector_clean;;CO2 prices
+co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,regions.global,co2_price_share_bysec;;CO2 prices
+co2_price_clean;get_co2_price;co2_price_fragmented,co2_price_global,fe_sector_clean;;
 gov_revenue_sector;get_gov_revenue_sector;co2_clean;;
 gov_revenue_clean;get_gov_revenue;gov_revenue_sector;;
-prices_subsector;get_prices_subsector;;;prices by sector,costs by subsector
-energy_price_fragmented;get_energy_price_fragmented;prices_subsector;;CO2 prices
+prices_subsector_pre;get_prices_subsector;;;prices by sector,costs by subsector
+prices_subsector_biomass;get_prices_subsector;;;prices by sector,costs by subsector
+energy_price_fragmented;get_energy_price_fragmented;prices_subsector_pre,prices_subsector_biomass;;CO2 prices
 total_revenue;get_total_revenue;;;resource production,prices by sector
 regional_emission;get_regional_emission;nonco2_content;;resource production
 energy_price;get_energy_price_tmp;energy_price_fragmented;;
-energy_price_clean;get_energy_price;energy_price;;
+energy_price_clean;get_energy_price;energy_price,fe_sector_clean,primary_energy_clean,elec_gen_tech_clean;;
 cf_iea;get_cf_iea_tmp;elec_gen_tech_clean;;
 elec_cf;get_elec_cf_tmp;cf_iea;;
 elec_capacity_tot_clean;get_elec_capacity_tot;elec_cf;;elec gen by gen tech and cooling tech and vintage
@@ -63,3 +63,6 @@ elec_investment_clean;get_elec_investment;elec_capacity_add;;
 transmission_invest_clean;get_transmission_invest;elec_capacity_add_clean;;
 CCS_invest_clean;get_CCS_invest;co2_sequestration_clean;;
 resource_investment_clean;get_resource_investment;;;resource production by tech and vintage,regional primary energy prices
+iron_steel_imports;get_iron_steel_imports;;;regional iron and steel sources
+iron_steel_exports;get_iron_steel_exports;;;traded iron and steel
+iron_steel_clean;get_iron_steel_clean;iron_steel_imports,iron_steel_exports;;

@@ -80,4 +80,6 @@ regional sheepgoat,regional sheepgoat,NoReported,,,,,,,,1
 Forest,NonFoodDemand_sawnwood,NoReported,,,,,,,,1
 Forest,regional industrial_roundwood,NoReported,,,,,,,,1
 Forest,traded industrial_roundwood,NoReported,,,,,,,,1
+regional sawnwood,NonFoodDemand_sawnwood,NoReported,,,,,,,,1
+regional woodpulp,woodpulp_energy,NoReported,,,,,,,,1
 ,woodpulp_energy,NoReported,,,,,,,,1

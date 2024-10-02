@@ -24,10 +24,10 @@ test_that("Test1_v7.1 download db, create project, and run", {
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector`, testResult$Reference$`nonCO2 emissions by sector`)
   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
 
-    # check nonCO2 emissions query
-    dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)", db_path, db_name, prj_name, scenarios, GCAM_version = 'v7.1')
-    testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.1/result_test1.RData")))
-    testthat::expect_equal(dt_sec, testResult)
+  # check nonCO2 emissions query
+  dt_sec <- data_query("nonCO2 emissions by sector (excluding resource production)", db_path, db_name, prj_name, scenarios, GCAM_version = 'v7.1')
+  testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.1/result_test1.RData")))
+  testthat::expect_equal(dt_sec, testResult)
 })
 
 test_that("Test2_v7.1 load project", {
@@ -38,6 +38,11 @@ test_that("Test2_v7.1 load project", {
 test_that("Test3_v7.1 run - dataset created", {
   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/test7.1.dat"), launch_ui = FALSE, GCAM_version = 'v7.1')
   testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
+})
+
+test_that("Test4_v7.1 standardize", {
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.1/test7.1.dat"), launch_ui = FALSE, GCAM_version = 'v7.1')
+  testthat::expect_equal(report, get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.1/test7.1_standardized.RData"))))
 })
 
 # test_that("Test4_v7.1 run - dataset saved with output_file specified - RUN MANUALLY", {

@@ -170,6 +170,12 @@ final_energy_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mapping
 ) %>% gather_map()
 use_data(final_energy_map_v7.0, overwrite = T)
 
+en_demand_prices_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "en_demand_prices_map.csv"),
+                                      skip = 1,
+                                      stringsAsFactors = FALSE
+)
+use_data(en_demand_prices_map_v7.0, overwrite = T)
+
 transport_final_en_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "transport_final_en_map.csv"),
                                    skip = 1, na = "",
                                    stringsAsFactors = FALSE
@@ -179,7 +185,9 @@ use_data(transport_final_en_map_v7.0, overwrite = T)
 energy_prices_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "energy_prices_map.csv"),
                               skip = 1, na = "",
                               stringsAsFactors = FALSE
-) %>% gather_map()
+) %>%
+  dplyr::mutate(var = dplyr::coalesce(!!!rlang::syms(paste0("var", 8:1)))) %>%
+  dplyr::select(sector, subsector, unit_conv, var)
 use_data(energy_prices_map_v7.0, overwrite = T)
 
 

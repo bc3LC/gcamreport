@@ -73,7 +73,11 @@ regional beef,regional beef,NoReported,,,,,,,,1
 regional pork,regional pork,NoReported,,,,,,,,1
 regional poultry,regional poultry,NoReported,,,,,,,,1
 regional sheepgoat,regional sheepgoat,NoReported,,,,,,,,1
-,traded beef,NoReported,,,,,,,,1
-,traded pork,NoReported,,,,,,,,1
-,traded poultry,NoReported,,,,,,,,1
-,traded sheepgoat,NoReported,,,,,,,,1
+Beef,traded beef,NoReported,,,,,,,,1
+Pork,traded pork,NoReported,,,,,,,,1
+Poultry,traded poultry,NoReported,,,,,,,,1
+SheepGoat,traded sheepgoat,NoReported,,,,,,,,1
+Beef,regional beef,NoReported,,,,,,,,1
+Pork,regional pork,NoReported,,,,,,,,1
+Poultry,regional poultry,NoReported,,,,,,,,1
+SheepGoat,regional sheepgoat,NoReported,,,,,,,,1

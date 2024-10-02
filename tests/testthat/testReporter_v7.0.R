@@ -18,9 +18,7 @@ test_that("Test1_v7. download db, create project, and run", {
   scenarios <- "Reference"
 
   create_project(db_path, db_name, prj_name, scenarios)
-  prj_tmp <- prj
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7.dat")))
-  prj <- prj_tmp
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by region`, testResult$Reference$`nonCO2 emissions by region`)
   testthat::expect_equal(prj$Reference$`nonCO2 emissions by sector (excluding resource production)`, testResult$Reference$`nonCO2 emissions by sector (excluding resource production)`)
   testthat::expect_equal(prj$Reference$`CO2 prices`, testResult$Reference$`CO2 prices`)
@@ -39,6 +37,11 @@ test_that("Test2_v7. load project", {
 test_that("Test3_v7. run - dataset created", {
   generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
   testthat::expect(!is.null(report) & dplyr::n_distinct(report) > 0, 'Empty dataset. Check if the project path exists or the "run" function works correctly.')
+})
+
+test_that("Test4_v7 standardize", {
+  generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"), launch_ui = FALSE)
+  testthat::expect_equal(report, get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test7_standardized.RData"))))
 })
 
 # test_that("Test4_v7. run - dataset saved with output_file specified - RUN MANUALLY", {
@@ -400,7 +403,8 @@ test_that("Test9_v7. CO2 Price", {
   generate_report(
     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/database_basexdb_CO2price_test.dat"),
     desired_variables = c("Price|Carbon*"),
-    launch_ui = FALSE
+    launch_ui = FALSE,
+    GCAM_version = "v7.0"
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test9.1.RData")))
   testthat::expect_equal(report, testResult)

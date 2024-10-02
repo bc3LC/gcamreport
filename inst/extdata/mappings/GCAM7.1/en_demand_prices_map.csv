@@ -51,8 +51,8 @@ Final Energy|Non-Energy Use,
 Final Energy|Non-Energy Use|Coal,
 Final Energy|Non-Energy Use|Gas,
 Final Energy|Non-Energy Use|Oil,
-Final Energy|Residential and Commercia|Commercial,
-Final Energy|Residential and Commercia|Residential,Price|Final Energy|Buildings|Residential
+Final Energy|Residential and Commercial|Commercial,
+Final Energy|Residential and Commercial|Residential,Price|Final Energy|Buildings|Residential
 Final Energy|Residential and Commercial,Price|Final Energy|Buildings
 Final Energy|Residential and Commercial|Commercial|Cooling,
 Final Energy|Residential and Commercial|Commercial|Electricity,

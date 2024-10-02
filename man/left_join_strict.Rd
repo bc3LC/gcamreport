@@ -4,14 +4,23 @@
 \alias{left_join_strict}
 \title{left_join_strict}
 \usage{
-left_join_strict(left_df, right_df, by = NULL, ...)
+left_join_strict(
+  left_df,
+  right_df,
+  by = NULL,
+  by_message = by,
+  mapping = "",
+  ...
+)
 }
 \arguments{
 \item{left_df}{A data frame. The left dataset in the join.}
 
 \item{right_df}{A data frame. The right dataset in the join.}
 
-\item{by}{A character vector of variables to join by. If `NULL`, the function will use all common variables.}
+\item{by}{A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.}
+
+\item{mapping}{Optional. Mapping name to be displayed in case of ERROR.}
 
 \item{...}{Additional arguments passed to `dplyr::left_join()`.}
 }

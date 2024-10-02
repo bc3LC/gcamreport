@@ -22,18 +22,18 @@ Agricultural Demand|Crops|Feed|Wheat,NoReported
 Agricultural Demand|Crops|Food,Price|Agriculture|Crops|Food|Index
 Agricultural Demand|Crops|Food|Corn,Price|Agriculture|Crops|Food|Corn|Index
 Agricultural Demand|Crops|Food|FiberCrop,Price|Agriculture|Crops|Food|FiberCrop|Index
-Agricultural Demand|Crops|Food|Fruits,Price|Agriculture|Crops|Food|Fruits|Index
-Agricultural Demand|Crops|Food|Legumes,Price|Agriculture|Crops|Food|Legumes|Index
+NoReported,Price|Agriculture|Crops|Food|Fruits|Index
+NoReported,Price|Agriculture|Crops|Food|Legumes|Index
 Agricultural Demand|Crops|Food|MiscCrop,Price|Agriculture|Crops|Food|MiscCrop|Index
-Agricultural Demand|Crops|Food|NutsSeeds,Price|Agriculture|Crops|Food|NutsSeeds|Index
+NoReported,Price|Agriculture|Crops|Food|NutsSeeds|Index
 Agricultural Demand|Crops|Food|OilCrop,Price|Agriculture|Crops|Food|OilCrop|Index
-Agricultural Demand|Crops|Food|OilPalm,Price|Agriculture|Crops|Food|OilPalm|Index
+NoReported,Price|Agriculture|Crops|Food|OilPalm|Index
 Agricultural Demand|Crops|Food|OtherGrain,Price|Agriculture|Crops|Food|OtherGrain|Index
 Agricultural Demand|Crops|Food|Rice,Price|Agriculture|Crops|Food|Rice|Index
 Agricultural Demand|Crops|Food|RootTuber,Price|Agriculture|Crops|Food|RootTuber|Index
-Agricultural Demand|Crops|Food|SoyBean,Price|Agriculture|Crops|Food|Soybean|Index
+NoReported,Price|Agriculture|Crops|Food|Soybean|Index
 Agricultural Demand|Crops|Food|SugarCrop,Price|Agriculture|Crops|Food|SugarCrop|Index
-Agricultural Demand|Crops|Food|Vegetables,Price|Agriculture|Crops|Food|Vegetables|Index
+NoReported,Price|Agriculture|Crops|Food|Vegetables|Index
 Agricultural Demand|Crops|Food|Wheat,Price|Agriculture|Crops|Food|Wheat|Index
 Agricultural Demand|Crops|Other,Price|Agriculture|Crops|Other|Index
 Agricultural Demand|Crops|Other|Corn,NoReported
@@ -53,12 +53,12 @@ Agricultural Demand|Crops|Other|Vegetables,NoReported
 Agricultural Demand|Crops|Other|Wheat,NoReported
 Agricultural Demand|Livestock,Price|Agriculture|Livestock|Index
 Agricultural Demand|Livestock|Food,Price|Agriculture|Livestock|Food|Index
-Agricultural Demand|Livestock|Food|Beef,Price|Agriculture|Livestock|Food|Beef|Index
-Agricultural Demand|Livestock|Food|Dairy,Price|Agriculture|Livestock|Food|Dairy|Index
+NoReported,Price|Agriculture|Livestock|Food|Beef|Index
+NoReported,Price|Agriculture|Livestock|Food|Dairy|Index
 Agricultural Demand|Livestock|Food|Fish,Price|Agriculture|Livestock|Food|Fish|Index
-Agricultural Demand|Livestock|Food|Pork,Price|Agriculture|Livestock|Food|Pork|Index
-Agricultural Demand|Livestock|Food|Poultry,Price|Agriculture|Livestock|Food|Poultry|Index
-Agricultural Demand|Livestock|Food|SheepGoat,Price|Agriculture|Livestock|Food|SheepGoat|Index
+NoReported,Price|Agriculture|Livestock|Food|Pork|Index
+NoReported,Price|Agriculture|Livestock|Food|Poultry|Index
+NoReported,Price|Agriculture|Livestock|Food|SheepGoat|Index
 Agricultural Demand|Livestock|Other,Price|Agriculture|Livestock|Other|Index
 Agricultural Demand|Livestock|Other|Beef,NoReported
 Agricultural Demand|Livestock|Other|Dairy,NoReported
