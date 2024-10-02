@@ -46,8 +46,9 @@ co2_price_fragmented;get_co2_price_fragmented_tmp;price_var,regions.global,co2_p
 co2_price_clean;get_co2_price;co2_price_fragmented,co2_price_global,fe_sector_clean;;
 gov_revenue_sector;get_gov_revenue_sector;co2_clean;;
 gov_revenue_clean;get_gov_revenue;gov_revenue_sector;;
-prices_subsector;get_prices_subsector;;;prices by sector,costs by subsector
-energy_price_fragmented;get_energy_price_fragmented;prices_subsector;;CO2 prices
+prices_subsector_pre;get_prices_subsector;;;prices by sector,costs by subsector
+prices_subsector_biomass;get_prices_subsector;;;prices by sector,costs by subsector
+energy_price_fragmented;get_energy_price_fragmented;prices_subsector_pre,prices_subsector_biomass;;CO2 prices
 total_revenue;get_total_revenue;;;resource production,prices by sector
 regional_emission;get_regional_emission;nonco2_content;;resource production
 energy_price;get_energy_price_tmp;energy_price_fragmented;;

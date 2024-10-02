@@ -128,6 +128,16 @@
 #' }
 "long_columns"
 
+#' en_blocks
+#'
+#' @description energy variables hierarchy
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::en_blocks
+#' }
+"en_blocks"
+
 
 
 #' queries_general_v7.1

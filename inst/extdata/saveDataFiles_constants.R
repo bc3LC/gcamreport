@@ -62,3 +62,11 @@ global_vet_values <- read.csv(file.path(rawDataFolder, "inst/extdata/vetting", "
 )
 use_data(global_vet_values, overwrite = T)
 
+
+# energy blocks
+en_blocks <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/common", "en_blocks.csv"),
+                      skip = 1,
+                      stringsAsFactors = FALSE,
+                      fileEncoding = "UTF-8-BOM"
+)
+use_data(en_blocks, overwrite = T)

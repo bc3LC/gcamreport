@@ -4,7 +4,7 @@
 \alias{get_energy_price}
 \title{get_energy_price}
 \usage{
-get_energy_price()
+get_energy_price(GCAM_version = "v7.0")
 }
 \value{
 `energy_price_clean``` global variable
