@@ -809,6 +809,18 @@
 #' }
 "ag_prices_map_v7.0"
 
+#' ag_demand_prices_map_v7.0
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM7.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ag_demand_prices_map_v7.0
+#' }
+"ag_demand_prices_map_v7.0"
+
 #' land_use_map_v7.0
 #'
 #' @source github
@@ -928,7 +940,7 @@
 #' gcamreport::en_demand_prices_map_v7.0
 #' }
 
-"en_demand_prices_map_v7.1"
+"en_demand_prices_map_v7.0"
 
 #' transport_final_en_map_v7.0
 #'
@@ -1296,6 +1308,18 @@
 #' gcamreport::ag_prices_map_v6.0
 #' }
 "ag_prices_map_v6.0"
+
+#' ag_demand_prices_map_v6.0
+#'
+#' @source github
+#' @format .csv
+#' @description ag maps compatible with GCAM6.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::ag_demand_prices_map_v6.0
+#' }
+"ag_demand_prices_map_v6.0"
 
 #' land_use_map_v6.0
 #'
