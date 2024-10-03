@@ -13,11 +13,12 @@ articles:
   Modify_Mapping_Template_Tutorial: Modify_Mapping_Template_Tutorial.html
   README_v6-0: README_v6-0.html
   README_v7-0: README_v7-0.html
+  Reporting_Variables: Reporting_Variables.html
   Step_By_Step_Full_Example_v6-0: Step_By_Step_Full_Example_v6-0.html
   Step_By_Step_Full_Example_v7-0: Step_By_Step_Full_Example_v7-0.html
   Step_By_Step_Full_Example: Step_By_Step_Full_Example.html
   Version_Guide: Version_Guide.html
-last_built: 2024-10-03T11:24Z
+last_built: 2024-10-03T11:27Z
 urls:
   reference: https://bc3lc.github.io/gcamreport/reference
   article: https://bc3lc.github.io/gcamreport/articles
