@@ -29,6 +29,7 @@ If any rows in the left dataset do not have matching keys in the right dataset, 
     <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../articles/Version_Guide.html"><span class="fa fa-solid fa-seedling"></span> Version Guide</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/Reporting_Variables.html"><span class="fa fa-solid fa-globe"></span> Reporting Variables</a></li>
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-file-code-o"></span> Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper-o"></span> News</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/bc3LC/gcamreport"><span class="fa fa-github fa-lg"></span></a></li>
@@ -52,7 +53,14 @@ If any rows in the left dataset do not have matching keys in the right dataset, 
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">left_join_strict</span><span class="op">(</span><span class="va">left_df</span>, <span class="va">right_df</span>, by <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">left_join_strict</span><span class="op">(</span></span>
+<span>  <span class="va">left_df</span>,</span>
+<span>  <span class="va">right_df</span>,</span>
+<span>  by <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  by_message <span class="op">=</span> <span class="va">by</span>,</span>
+<span>  mapping <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -68,7 +76,11 @@ If any rows in the left dataset do not have matching keys in the right dataset, 
 
 
 <dt id="arg-by">by<a class="anchor" aria-label="anchor" href="#arg-by"></a></dt>
-<dd><p>A character vector of variables to join by. If `NULL`, the function will use all common variables.</p></dd>
+<dd><p>A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.</p></dd>
+
+
+<dt id="arg-mapping">mapping<a class="anchor" aria-label="anchor" href="#arg-mapping"></a></dt>
+<dd><p>Optional. Mapping name to be displayed in case of ERROR.</p></dd>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
