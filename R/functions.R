@@ -1492,7 +1492,7 @@ get_energy_service_transportation <- function(GCAM_version = "v7.0") {
 #' @export
 get_energy_service_buildings <- function(GCAM_version = "v7.0") {
   var <- value <- unit_conv <- scenario <- region <- year <- building <-
-    nodeinput <- Units <- building-node-input <- NULL
+    nodeinput <- Units <- NULL
 
   # gather deciles if necessary
   tmp <- rgcam::getQuery(prj, "building floorspace")
@@ -1853,14 +1853,15 @@ get_co2_price_share <- function(GCAM_version = "v7.0") {
 #' @export
 get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
   market <- Units <- regions <- year <- value <- market_adj <- scenario <-
-    region <- CO2 <- sector <- var <- co2_price_fragmented_pre <-
-    CO2_market_filteredReg <- co2_price_fragmented <- co2_price_share_bysec <- NULL
+    region <- CO2 <- sector <- var <- CO2_market_filteredReg <-
+    co2_price_fragmented <- co2_price_share_bysec <- NULL
 
-  co2_price_fragmented_pre <<-
+  co2_price_fragmented_pre <-
     rgcam::getQuery(prj, "CO2 prices") %>%
     dplyr::filter(!grepl("LUC", market)) %>%
     dplyr::filter(!grepl("global|Global|world|World", market)) %>%
-    dplyr::filter(Units == "1990$/tC")
+    dplyr::filter(is.na(Units) || Units == "1990$/tC") %>%
+    tibble::as_tibble()
 
   if (nrow(co2_price_fragmented_pre) > 1) {
     CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
