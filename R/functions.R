@@ -201,7 +201,7 @@ handle_warning <- function(mapping_name1, mapping_name2 = NULL, query_name = NUL
 #' @param left_df A data frame. The left dataset in the join.
 #' @param right_df A data frame. The right dataset in the join.
 #' @param by A character vector of variables to join by. If `NULL`, the function will use all common variables.
-#' @param by A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.
+#' @param by_message A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.
 #' @param mapping Optional. Mapping name to be displayed in case of ERROR.
 #' @param ... Additional arguments passed to `dplyr::left_join()`.
 #' @return A data frame resulting from the left join. If any rows in `left_df` do not have matching keys in `right_df`, an error is thrown.
@@ -212,7 +212,7 @@ left_join_strict <- function(left_df, right_df, by = NULL, by_message = by, mapp
 
   # Identify unmatched rows (rows with NA in any of the columns from right_df)
   unmatched <- result %>%
-    dplyr::filter(if_any(-one_of(names(left_df)), is.na))
+    dplyr::filter(dplyr::if_any(-one_of(names(left_df)), is.na))
 
   # Check if there are any unmatched rows
   if (nrow(unmatched) > 0) {
@@ -754,7 +754,7 @@ get_co2_tech_nobio_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
-  var <- value <- unit_conv <- scenario <- region <- year <- NULL
+  var <- value <- unit_conv <- scenario <- region <- year <- co2_tech_emissions <- NULL
 
 
   co2_tech_emissions <<-
@@ -783,7 +783,7 @@ get_co2_tech_emissions_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_map <- function() {
-  sector <- input <- value <- Units <- scenario <- NULL
+  sector <- input <- value <- Units <- scenario <- iron_steel_map <- NULL
 
   iron_steel_map <<-
     rgcam::getQuery(prj, "industry final energy by tech and fuel") %>%
@@ -1142,7 +1142,7 @@ get_ag_production <- function() {
 #' @importFrom magrittr %>%
 #' @export
 get_land <- function(GCAM_version = "v7.0") {
-  value <- unit_conv <- scenario <- region <- year <- var <- land_clean <- NULL
+  value <- unit_conv <- scenario <- region <- year <- var <- land_clean <- landleaf <- NULL
 
   land_clean <<-
     rgcam::getQuery(prj, "aggregated land allocation") %>%
@@ -1443,7 +1443,7 @@ get_fe_transportation_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_fe_sector <- function() {
-  scenario <- region <- var <- year <- value <- NULL
+  scenario <- region <- var <- year <- value <- fe_sector_clean <- NULL
 
   fe_sector_clean <<-
     dplyr::bind_rows(fe_sector, fe_transportation) %>%
@@ -1552,7 +1552,7 @@ get_industry_production <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_imports <- function(GCAM_version = "v7.0") {
-  var <- scenario <- region <- year <- value <- subsector <- NULL
+  var <- scenario <- region <- year <- value <- subsector <- iron_steel_imports <- NULL
 
   iron_steel_imports <<-
     rgcam::getQuery(prj, "regional iron and steel sources") %>%
@@ -1574,7 +1574,7 @@ get_iron_steel_imports <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_exports <- function(GCAM_version = "v7.0") {
-  var <- scenario <- region <- year <- value <- NULL
+  var <- scenario <- region <- year <- value <- iron_steel_exports <- NULL
 
   iron_steel_exports <<-
     rgcam::getQuery(prj, "traded iron and steel") %>%
@@ -1667,7 +1667,7 @@ get_ag_prices_wld_tmp <- function(GCAM_version = "v7.0") {
 #' @importFrom magrittr %>%
 #' @export
 get_ag_prices <- function(GCAM_version = "v7.0") {
-  var <- scenario <- region <- sector <- value <- unit_conv <- year <- NULL
+  var <- scenario <- region <- sector <- value <- unit_conv <- year <- Units <- NULL
 
   ag_prices_clean <<-
     rgcam::getQuery(prj, "prices by sector") %>%
@@ -2575,7 +2575,7 @@ get_elec_capacity_add <- function(GCAM_version = "v7.0") {
 #' @export
 get_elec_capital <- function(GCAM_version = "v7.0") {
   sector <- subsector <- technology <- year <- capital.overnight <- output <-
-    var <- value <- unit_conv <- scenario <- region <- NULL
+    var <- value <- unit_conv <- scenario <- region <- elec_capital_clean <- NULL
 
   cf_rgn_filteredReg <- filter_data_regions(get(paste('cf_rgn',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
 

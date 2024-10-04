@@ -230,5 +230,4 @@ tests/testthat/testInputs/v_6.0/test6_standardized.xlsx
 examples/database_basexdb_2100_prj_study1_rep.dat
 gcamv7.0_test_specify_queries.dat
 
-IPCC*
-to_update.txt
+/harmonization_doc
