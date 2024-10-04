@@ -12,7 +12,6 @@ options(summarise.inform = FALSE)
 #'
 #' @param dt dataset with the following columns: scenario, region, var (reporting variable), year, value
 #' @return dataset with `reg_sec_weight` column.
-#' @importFrom data.table :=
 #' @export
 compute_reg_sec_weight <- function(dt) {
 
@@ -82,7 +81,6 @@ compute_reg_sec_weight <- function(dt) {
 #'
 #' @param dt dataset with the following columns: scenario, region, var (reporting variable), year, value
 #' @return dataset with `sec_prevsec_weight` column.
-#' @importFrom data.table :=
 #' @export
 compute_sec_prevsec_weight <- function(dt) {
 
@@ -2887,7 +2885,6 @@ get_resource_investment <- function(GCAM_version = "v7.0") {
 #' @keywords internal process
 #' @return Saved results in an output file.
 #' @importFrom magrittr %>%
-#' @importFrom data.table :=
 #' @export
 do_bind_results <- function(GCAM_version = "v7.0") {
   region <- var <- scenario <- year <- value <- . <- na.omit <- Region <- Variable <- NULL
