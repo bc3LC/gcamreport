@@ -270,7 +270,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
   # Add 'nonCO2' large queries manually (they are too big to use the usual method)
   var_fun_map <- get(paste('var_fun_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
 
-  nonCO2_emiss_sec_query <- var_fun_map[var_fun_map$name == 'co2_price_share_bysec',][["queries"]][[1]][2]
+  nonCO2_emiss_sec_query <- var_fun_map[var_fun_map$name == 'co2_price_share_bysec',][["queries"]][[1]][1]
   if (!nonCO2_emiss_sec_query %in% rgcam::listQueries(prj) &&
      nonCO2_emiss_sec_query %in% names(queries_touse_large)) {
 
@@ -291,7 +291,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
     }
     rm(prj_tmp)
   }
-  nonCO2_emiss_reg_query <- var_fun_map[var_fun_map$name == 'co2_price_share_bysec',][["queries"]][[1]][1]
+  nonCO2_emiss_reg_query <- var_fun_map[var_fun_map$name == 'co2_price_share_byreg',][["queries"]][[1]][1]
   if (!nonCO2_emiss_reg_query %in% rgcam::listQueries(prj) &&
       nonCO2_emiss_reg_query %in% names(queries_touse_large)) {
 

@@ -231,3 +231,5 @@ examples/database_basexdb_2100_prj_study1_rep.dat
 gcamv7.0_test_specify_queries.dat
 
 /harmonization_doc
+myenv.yml
+vetting.py
