@@ -10,7 +10,7 @@ get_elec_capital(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`elec_capital_clean``` global variable
+`elec_capital_clean` global variable
 }
 \description{
 Calculate electricity capital.

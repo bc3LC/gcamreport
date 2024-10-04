@@ -10,7 +10,7 @@ get_total_revenue(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`total_revenue``` global variable
+`total_revenue` global variable
 }
 \description{
 Compute total revenue: total production * global price.

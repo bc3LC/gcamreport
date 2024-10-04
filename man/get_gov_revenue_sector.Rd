@@ -7,7 +7,7 @@
 get_gov_revenue_sector()
 }
 \value{
-`gov_revenue_sector``` global variable
+`gov_revenue_sector` global variable
 }
 \description{
 Retreive overall carbon revenue.

@@ -1570,7 +1570,7 @@ get_iron_steel_imports <- function(GCAM_version = "v7.0") {
 #' Retrieve iron steel production.
 #' @keywords internal industry tmp
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
-#' @return `iron_steel_exports``` global variable
+#' @return `iron_steel_exports` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_iron_steel_exports <- function(GCAM_version = "v7.0") {
@@ -1951,7 +1951,7 @@ get_co2_price <- function(GCAM_version = "v7.0") {
 #'
 #' Retreive overall carbon revenue.
 #' @keywords internal revenue
-#' @return `gov_revenue_sector``` global variable
+#' @return `gov_revenue_sector` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_gov_revenue_sector <- function() {
@@ -2119,7 +2119,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
 #' Compute total revenue: total production * global price.
 #' @keywords internal revenue
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
-#' @return `total_revenue``` global variable
+#' @return `total_revenue` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_total_revenue <- function(GCAM_version = "v7.0") {
@@ -2160,7 +2160,7 @@ get_total_revenue <- function(GCAM_version = "v7.0") {
 #' Compute regional nonCO2 emission: regional production * nonCO2 coef.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal nonco2
-#' @return `regional_emission``` global variable
+#' @return `regional_emission` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_regional_emission <- function(GCAM_version = "v7.0") {
@@ -2197,7 +2197,7 @@ get_regional_emission <- function(GCAM_version = "v7.0") {
 #'
 #' Bind regional oil, gas, coal prices with other energy prices
 #' @keywords internal price tmp
-#' @return `energy_price``` global variable
+#' @return `energy_price` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_energy_price_tmp <- function() {
@@ -2211,7 +2211,7 @@ get_energy_price_tmp <- function() {
 #'
 #' Compute final energy price
 #' @keywords internal price process
-#' @return `energy_price_clean``` global variable
+#' @return `energy_price_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_energy_price <- function(GCAM_version = "v7.0") {
@@ -2312,7 +2312,7 @@ get_energy_price <- function(GCAM_version = "v7.0") {
 #' Calculate cf for existing capacity checking global existing capacity from IEA.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process tmp
-#' @return `cf_iea``` global variable
+#' @return `cf_iea` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_cf_iea_tmp <- function(GCAM_version = "v7.0") {
@@ -2371,7 +2371,7 @@ get_cf_iea_tmp <- function(GCAM_version = "v7.0") {
 #' Computes future capacity estimates using GCAM.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process tmp
-#' @return `elec_cf``` global variable
+#' @return `elec_cf` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_cf_tmp <- function(GCAM_version = "v7.0") {
@@ -2421,7 +2421,7 @@ get_elec_cf_tmp <- function(GCAM_version = "v7.0") {
 #' Calculate total electricity capacity.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process
-#' @return `elec_capacity_tot_clean``` global variable
+#' @return `elec_capacity_tot_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_capacity_tot <- function(GCAM_version = "v7.0") {
@@ -2476,7 +2476,7 @@ get_elec_capacity_tot <- function(GCAM_version = "v7.0") {
 #'
 #' Calculate added total capacity.
 #' @keywords internal capacity process tmp
-#' @return `elec_capacity_add``` global variable
+#' @return `elec_capacity_add` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_capacity_add_tmp <- function() {
@@ -2523,7 +2523,7 @@ get_elec_capacity_add_tmp <- function() {
 #' Calculate final total added capacity.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capacity process
-#' @return `elec_capacity_add_clean``` global variable
+#' @return `elec_capacity_add_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_capacity_add <- function(GCAM_version = "v7.0") {
@@ -2570,7 +2570,7 @@ get_elec_capacity_add <- function(GCAM_version = "v7.0") {
 #' Calculate electricity capital.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capital process
-#' @return `elec_capital_clean``` global variable
+#' @return `elec_capital_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_capital <- function(GCAM_version = "v7.0") {
@@ -2594,7 +2594,7 @@ get_elec_capital <- function(GCAM_version = "v7.0") {
                        dplyr::select(-output),
                      by = c("subsector", "technology"), mapping = paste('elec_gen_map',GCAM_version,sep='_'), multiple = "all")
 
-  elec_capital_clean <<-
+  elec_capital_clean <-
     filter_data_regions(elec_capital) %>%
     dplyr::filter(!is.na(var), var != "Secondary Energy|Electricity|Electricity Storage") %>%
     dplyr::mutate(
@@ -2607,13 +2607,15 @@ get_elec_capital <- function(GCAM_version = "v7.0") {
     dplyr::select(dplyr::all_of(gcamreport::long_columns))
 
   # average mean for global tech capital cost
-  elec_capital_clean <<-
+  elec_capital_clean <-
     elec_capital_clean %>%
     dplyr::group_by(scenario, var, year) %>%
     dplyr::summarise(value = mean(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(region = "World") %>%
     dplyr::bind_rows(elec_capital_clean)
+
+  elec_capital_clean <<- elec_capital_clean
 }
 
 #' get_elec_investment
@@ -2621,7 +2623,7 @@ get_elec_capital <- function(GCAM_version = "v7.0") {
 #' Calculate electricity investment = annual capacity additions * capital costs.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal capital process
-#' @return `elec_investment_clean``` global variable
+#' @return `elec_investment_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_elec_investment <- function(GCAM_version = "v7.0") {
@@ -2665,7 +2667,7 @@ get_elec_investment <- function(GCAM_version = "v7.0") {
 #' Converts 2015 values to 2010 dollars.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
-#' @return `transmission_invest_clean``` global variable
+#' @return `transmission_invest_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_transmission_invest <- function(GCAM_version = "v7.0") {
@@ -2709,7 +2711,7 @@ get_transmission_invest <- function(GCAM_version = "v7.0") {
 #' Calculate CSS investment.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
-#' @return `CCS_invest_clean``` global variable
+#' @return `CCS_invest_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_CCS_invest <- function(GCAM_version = "v7.0") {
@@ -2755,7 +2757,7 @@ get_CCS_invest <- function(GCAM_version = "v7.0") {
 #' Calculate investment of resource production.
 #' @param GCAM_version Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.
 #' @keywords internal investment process
-#' @return `resource_investment_clean``` global variable
+#' @return `resource_investment_clean` global variable
 #' @importFrom magrittr %>%
 #' @export
 get_resource_investment <- function(GCAM_version = "v7.0") {

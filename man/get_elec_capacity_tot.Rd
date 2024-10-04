@@ -10,7 +10,7 @@ get_elec_capacity_tot(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`elec_capacity_tot_clean``` global variable
+`elec_capacity_tot_clean` global variable
 }
 \description{
 Calculate total electricity capacity.

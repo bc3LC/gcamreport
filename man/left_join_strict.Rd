@@ -18,7 +18,9 @@ left_join_strict(
 
 \item{right_df}{A data frame. The right dataset in the join.}
 
-\item{by}{A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.}
+\item{by}{A character vector of variables to join by. If `NULL`, the function will use all common variables.}
+
+\item{by_message}{A character vector of variables to join by to output the ERROR message, if necessay. If `NULL`, the function will use the variables defined in the `by` parameter.}
 
 \item{mapping}{Optional. Mapping name to be displayed in case of ERROR.}
 

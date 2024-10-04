@@ -7,7 +7,7 @@
 get_elec_capacity_add_tmp()
 }
 \value{
-`elec_capacity_add``` global variable
+`elec_capacity_add` global variable
 }
 \description{
 Calculate added total capacity.

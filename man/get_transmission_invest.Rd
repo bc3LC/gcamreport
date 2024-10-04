@@ -10,7 +10,7 @@ get_transmission_invest(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`transmission_invest_clean``` global variable
+`transmission_invest_clean` global variable
 }
 \description{
 Calculate Investment in Electricity Transmission and Distribution. Scales 2020 numbers based on the average of other model results from Mcollion et al. 2018.

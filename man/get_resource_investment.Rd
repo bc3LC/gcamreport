@@ -10,7 +10,7 @@ get_resource_investment(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`resource_investment_clean``` global variable
+`resource_investment_clean` global variable
 }
 \description{
 Calculate investment of resource production.

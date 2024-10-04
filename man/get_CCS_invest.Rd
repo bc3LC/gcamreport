@@ -10,7 +10,7 @@ get_CCS_invest(GCAM_version = "v7.0")
 \item{GCAM_version}{Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.}
 }
 \value{
-`CCS_invest_clean``` global variable
+`CCS_invest_clean` global variable
 }
 \description{
 Calculate CSS investment.

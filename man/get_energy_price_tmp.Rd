@@ -7,7 +7,7 @@
 get_energy_price_tmp()
 }
 \value{
-`energy_price``` global variable
+`energy_price` global variable
 }
 \description{
 Bind regional oil, gas, coal prices with other energy prices
