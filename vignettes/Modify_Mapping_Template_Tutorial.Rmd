@@ -44,66 +44,16 @@ Loading data, performing checks, and saving output...
 [1] "ag_demand_clean"
 
 Error in left_join_strict(., filter_variables(get(paste("ag_demand_map", :
- Error: Some rows in the left dataset do not have matching keys in the right dataset.
+ Error: Some rows in the left dataset do not have matching keys in the right dataset. In particular, the mapping ag_demand_map_v7.0 misses the following rows:
+ inputs, sector
+ newproduct1, FoodDemand_Staples
+ newproduct2, FoodDemand_Staples
+ newproduct3, FoodDemand_NonStaples
 ```
 
-This error indicates that the mapping file `ag_demand_map` does not contain all the required items when computing the `ag_demand_clean` variable. To resolve this, follow these steps:
+This error indicates that the mapping file `ag_demand_map` does not contain all the required items when computing the `ag_demand_clean` variable. To resolve this error, add the missing items (indicated in the terminal) to the mapping file, in this example located at `inst\extdata\mappings\GCAM7.0\ag_demand_map.csv`. Save the changes and close the file. 
 
-&nbsp;&nbsp; 3.1) Locate the variable generation code:
-    
-&nbsp;&nbsp;&nbsp;&nbsp; a) Open the file `R/functions.R` in the `gcamreport` folder.
-
-&nbsp;&nbsp;&nbsp;&nbsp; b) Search (`Ctrl + F`) for the variable `ag_demand_clean`, which is generated within the `get_ag_demand()` function.
-
-&nbsp;&nbsp; 3.2) Identify the missing items:
-  
-&nbsp;&nbsp;&nbsp;&nbsp; a) Navigate to the section of the code that uses the `left_join_strict()` function:
-
-    ```r
-    dplyr::bind_rows(
-      rgcam::getQuery(prj, "demand balances by crop commodity"),
-      rgcam::getQuery(prj, "demand balances by meat and dairy commodity")
-    ) %>%
-    # Adjust OtherMeat_Fish
-    dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector)) %>%
-    left_join_strict(filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean"),
-              by = c("sector"), multiple = "all")
-    ...
-    ```
-
-&nbsp;&nbsp;&nbsp;&nbsp; b) Add a break point at the beginning of the section and re-run the `generate_report` function again, this time pointing to your project file instead of the database to avoid regenerating the project and to stop at the breaking point:
-
-```r
-generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
-                scenarios = c('scenarios','list'),
-                final_year = XXX, GCAM_version = 'v7.0')
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp; c) To find the missing items, assign the lines before the `left_join_strict` function to a variable and the mapping items to another variable. Then, compare the two by `sector` as intended by the `left_join_strict` function. Use the following example:
-    
-  ```r
-  GCAM_version <- "v7.0"
-  
-  left_df <- dplyr::bind_rows(
-                rgcam::getQuery(prj, "demand balances by crop commodity"),
-                rgcam::getQuery(prj, "demand balances by meat and dairy commodity")
-              ) %>%
-              # Adjust OtherMeat_Fish
-              dplyr::mutate(sector = dplyr::if_else(sector == "FoodDemand_NonStaples" & input == "OtherMeat_Fish", "OtherMeat_Fish", sector))
-
-  right_df <- filter_variables(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), "ag_demand_clean")
-
-  result <- dplyr::left_join(left_df, right_df, by = c("sector"), multiple = "all")
-
-  unmatched <- result %>%
-    dplyr::filter(if_any(-one_of(names(left_df)), is.na))
-
-  View(unmatched)
-  ```
-
-&nbsp;&nbsp; 3.3) Update the pre-build mappings:
-  
-&nbsp;&nbsp;&nbsp;&nbsp; a) Add the missing items to the `ag_demand_map` mapping file. Note that mapping files can sometimes be saved under different names. To find the correct file, open `inst/extdata/saveDataFiles_GCAM7.0.R` and search (`Ctrl + F`) for `ag_demand_map`:
+Note that mapping files can sometimes be saved under different names. To find the correct file name, open `inst/extdata/saveDataFiles_GCAM7.0.R` and search (`Ctrl + F`) for `ag_demand_map` to find the full path. In this example:
 
   ```r
   ag_demand_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "ag_demand_map.csv"),
@@ -111,23 +61,16 @@ generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
 
   ```
 
-  In this example, the mapping file is located at `inst/extdata/mappings/GCAM7.0/ag_demand_map.csv`. Open the file, add the missing items, and save the changes.
+If the error message is unclear and does not provide the mapping file name, consider debugging by setting breakpoints to the chunk where the variable is created. In this example, to the `ag_demand_clean` variable chunk.
 
-  
-  **Note**: If you don't want to include certain items in the report, you can add a line with the new item indicating `NoReported` as variable:
+  **Note**: If you don't want to include certain items in the report, you can add a line with the new item indicating `NoReported` as variable. In our example:
   
   ```r
-  newItemName,NoReported,,,,,,,,1
+  newproduct1,FoodDemand_Staples,NoReported,,,,,,,,1
   ```
-  
-  **Note**: If the error persists and you prefer not to update the mapping file further, you can modify the `left_join_strict` call in the code to `dplyr::left_join.` However, **please be aware that this approach is not recommended, as it may compromise the strict matching intended in the data processing**. If you choose this option, please follow the next Step 3.4, source the `R/functions.R` file, and use Step 3.5 to ensure the new chuck will be read.
 
 
-
-&nbsp;&nbsp; 3.4) Stop the debugging process.
-
-
-&nbsp;&nbsp; 3.5) Update the package data:
+4) Update the package data:
   
 &nbsp;&nbsp;&nbsp;&nbsp; a) Run the `inst/extdata/saveDataFiles_GCAM7.0.R` script to update the package data.
 
@@ -135,7 +78,7 @@ generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
     
 &nbsp;&nbsp;&nbsp;&nbsp; c) Install the updated package by going to `Build > Install`.
 
-4) Run the `generate_report` function again, this time pointing to your project file instead of the database to avoid regenerating the project:
+5) Run the `generate_report` function again, this time pointing to your project file instead of the database to avoid regenerating the project:
 
 ```r
 generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
@@ -143,7 +86,7 @@ generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
                 final_year = XXX, GCAM_version = 'v7.0')
 ```
 
-The reporting procedure will start immediately and if the `ag_demand_map` mapping was arranged correctly, a new error will prompt regarding the `ag_prices_map`:
+The reporting procedure will start immediately and if the `ag_demand_map` mapping was arranged correctly, a new error might prompt regarding the `ag_prices_map`:
 
 ```r
 Loading data, performing checks, and saving output...
@@ -151,15 +94,21 @@ Loading data, performing checks, and saving output...
 [1] "ag_prices_clean"
 
 Error in left_join_strict(., filter_variables(get(paste("ag_prices_map", :
- Error: Some rows in the left dataset do not have matching keys in the right dataset.
+ Error: Some rows in the left dataset do not have matching keys in the right dataset. In particular, the mapping ag_prices_map_v7.0 misses the following rows:
+ sector
+ newproduct1
+ newproduct2
+ newproduct3
 ```
 
-Repeat the procedure outlined in Step 3 to correct the `ag_prices_map` file.
+Add the missing items to the mapping located at `inst\extdata\mappings\GCAM7.0\ag_prices_map.csv`. Save the changes to the file and repeat the procedure detailed in Step 4.
 
-5) Iterate Step 4 until the standardization process is complete. Occasionally, it may be necessary to clear all environment variables and restart R to ensure the updated mapping files are properly loaded.
+6) Iterate Step 4 and 5 until the standardization process is complete. Occasionally, it may be necessary to clear all environment variables and restart R to ensure the updated mapping files are properly loaded.
+
+**Note**: If the error persists and you prefer not to update the mapping files further, you can change the `left_join_strict` call in the code to `dplyr::left_join.` However, **please be aware that this approach is not recommended, as it may compromise the strict matching intended in the data processing**. If you choose this option, please follow Step 4 sourcing the `R/functions.R` file to ensure the new chuck will be read.
 
 
-6) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
+7) Do not forget to push the changes to your branch and tag the new version to allow reproducibility and reusability!! :)
 
 **Note**: If you want to install this `gcamreport` version into other devices, indicate the tag or branch name when cloning the repository, for instance:
 
@@ -184,6 +133,7 @@ devtools::install_github('bc3LC/gcamreport@vUpdated')
 
 
 <span style="color:white">newline</span>
+
 
 
 

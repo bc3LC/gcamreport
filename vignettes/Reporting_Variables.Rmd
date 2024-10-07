@@ -9,8 +9,8 @@ vignette: >
 
 The `gcamreport` package standardizes variables for reporting, which facilitates multi-model comparison projects. It follows the naming conventions, definitions, and units established by the [`openentrance`](https://github.com/openENTRANCE/openentrance) project, ensuring consistency across models. To compute global values for reported variables, the package applies different methodologies based on the characteristics of each variable. Below, you'll find a detailed list of all reported variables and their respective computational procedures. In the standardized datasets, these global values are categorized under the ``World'' region.
 
-| Reported variable                                                       | World value computational procedure                                |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Reported variable                                                       | World value computational procedure                                            |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Agricultural Demand                                                     | Sum of regional values                                             |
 | Agricultural Demand\|Crops                                              | Sum of regional values                                             |
 | Agricultural Demand\|Crops\|Energy                                      | Sum of regional values                                             |
@@ -390,70 +390,70 @@ The `gcamreport` package standardizes variables for reporting, which facilitates
 | Land Cover\|Pasture                                                     | Sum of regional values                                             |
 | Population                                                              | Sum of regional values                                             |
 | Price\|Agriculture\|Crops\|Index                                        | Weighted sum of regional values by commodity                                           |
-| Price\|Agriculture\|Crops\|Food\|Index                                  | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Corn\|Index                            | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|FiberCrop\|Index                       | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Fruits\|Index                          | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Legumes\|Index                         | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|MiscCrop\|Index                        | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|NutsSeeds\|Index                       | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|OilCrop\|Index                         | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|OilPalm\|Index                         | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|OtherGrain\|Index                      | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Rice\|Index                            | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|RootTuber\|Index                       | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Soybean\|Index                         | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|SugarCrop\|Index                       | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Vegetables\|Index                      | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Food\|Wheat\|Index                           | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Feed\|Index                                  | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Energy\|Index                                | Mean of regional values                                            |
-| Price\|Agriculture\|Crops\|Other\|Index                                 | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|Index                              | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|Beef\|Index                        | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|Dairy\|Index                       | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|Pork\|Index                        | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|Poultry\|Index                     | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Food\|SheepGoat\|Index                   | Mean of regional values                                            |
-| Price\|Agriculture\|Livestock\|Other\|Index                             | Mean of regional values                                            |
+| Price\|Agriculture\|Crops\|Food\|Index                                  | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Corn\|Index                            | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|FiberCrop\|Index                       | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Fruits\|Index                          | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Legumes\|Index                         | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|MiscCrop\|Index                        | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|NutsSeeds\|Index                       | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|OilCrop\|Index                         | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|OilPalm\|Index                         | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|OtherGrain\|Index                      | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Rice\|Index                            | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|RootTuber\|Index                       | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Soybean\|Index                         | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|SugarCrop\|Index                       | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Vegetables\|Index                      | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Food\|Wheat\|Index                           | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Feed\|Index                                  | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Energy\|Index                                | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Crops\|Other\|Index                                 | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|Index                              | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|Beef\|Index                        | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|Dairy\|Index                       | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|Pork\|Index                        | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|Poultry\|Index                     | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Food\|SheepGoat\|Index                   | Weighted sum of regional values by commodity                                            |
+| Price\|Agriculture\|Livestock\|Other\|Index                             | Weighted sum of regional values by commodity                                            |
 | Price\|Carbon                                                           | Weighted sum of regional values by CO2 emissions                   |
-| Price\|Carbon\|Energy                                                   | Sum of regional values                                             |
-| Price\|Carbon\|Energy\|Demand\|Industry                                 | Sum of regional values                                             |
-| Price\|Carbon\|Energy\|Demand\|Residential and Commercial               | Sum of regional values                                             |
-| Price\|Carbon\|Energy\|Demand\|Transportation                           | Sum of regional values                                             |
-| Price\|Carbon\|Energy\|Supply                                           | Sum of regional values                                             |
-| Price\|Final Energy\|Buildings\|Residential                             | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Electricity                | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Electricity\|Index         | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Gases\|Gas                 | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Gases\|Gas\|Index          | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Liquids                    | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Solids                     | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Solids\|Biomass            | Mean of regional values                                            |
-| Price\|Final Energy\|Buildings\|Residential\|Solids\|Coal               | Mean of regional values                                            |
-| Price\|Final Energy\|Industry                                           | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Electricity                              | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Gases                                    | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Liquids                                  | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Solids                                   | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Solids\|Biomass                          | Mean of regional values                                            |
-| Price\|Final Energy\|Industry\|Solids\|Coal                             | Mean of regional values                                            |
-| Price\|Final Energy\|Transportation                                     | Mean of regional values                                            |
-| Price\|Final Energy\|Transportation\|Electricity                        | Mean of regional values                                            |
-| Price\|Final Energy\|Transportation\|Gases                              | Mean of regional values                                            |
-| Price\|Final Energy\|Transportation\|Liquids                            | Mean of regional values                                            |
-| Price\|Primary Energy                                                   | Mean of regional values                                            |
-| Price\|Primary Energy\|Biomass                                          | Mean of regional values                                            |
-| Price\|Primary Energy\|Biomass\|Index                                   | Mean of regional values                                            |
-| Price\|Primary Energy\|Coal                                             | Mean of regional values                                            |
-| Price\|Primary Energy\|Coal\|Index                                      | Mean of regional values                                            |
-| Price\|Primary Energy\|Gas                                              | Mean of regional values                                            |
-| Price\|Primary Energy\|Gas\|Index                                       | Mean of regional values                                            |
-| Price\|Primary Energy\|Oil                                              | Mean of regional values                                            |
-| Price\|Primary Energy\|Oil\|Index                                       | Mean of regional values                                            |
-| Price\|Secondary Energy                                                 | Mean of regional values                                            |
-| Price\|Secondary Energy\|Electricity                                    | Mean of regional values                                            |
-| Price\|Secondary Energy\|Electricity\|Index                             | Mean of regional values                                            |
+| Price\|Carbon\|Energy                                                   | Weighted sum of regional values by CO2 emissions                                             |
+| Price\|Carbon\|Energy\|Demand\|Industry                                 | Weighted sum of regional values by CO2 emissions                                             |
+| Price\|Carbon\|Energy\|Demand\|Residential and Commercial               | Weighted sum of regional values by CO2 emissions                                             |
+| Price\|Carbon\|Energy\|Demand\|Transportation                           | Weighted sum of regional values by CO2 emissions                                             |
+| Price\|Carbon\|Energy\|Supply                                           | Weighted sum of regional values by CO2 emissions                                             |
+| Price\|Final Energy\|Buildings\|Residential                             | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Electricity                | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Electricity\|Index         | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Gases\|Gas                 | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Gases\|Gas\|Index          | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Liquids                    | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Solids                     | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Solids\|Biomass            | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Buildings\|Residential\|Solids\|Coal               | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry                                           | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Electricity                              | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Gases                                    | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Liquids                                  | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Solids                                   | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Solids\|Biomass                          | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Industry\|Solids\|Coal                             | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Transportation                                     | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Transportation\|Electricity                        | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Transportation\|Gases                              | Weighted sum of regional values by commodity                                            |
+| Price\|Final Energy\|Transportation\|Liquids                            | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy                                                   | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Biomass                                          | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Biomass\|Index                                   | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Coal                                             | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Coal\|Index                                      | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Gas                                              | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Gas\|Index                                       | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Oil                                              | Weighted sum of regional values by commodity                                            |
+| Price\|Primary Energy\|Oil\|Index                                       | Weighted sum of regional values by commodity                                            |
+| Price\|Secondary Energy                                                 | Weighted sum of regional values by commodity                                            |
+| Price\|Secondary Energy\|Electricity                                    | Weighted sum of regional values by commodity                                            |
+| Price\|Secondary Energy\|Electricity\|Index                             | Weighted sum of regional values by commodity                                            |
 | Primary Energy                                                          | Sum of regional values                                             |
 | Primary Energy\|Biomass                                                 | Sum of regional values                                             |
 | Primary Energy\|Biomass\|1st Generation                                 | Sum of regional values                                             |
