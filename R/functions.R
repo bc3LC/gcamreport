@@ -1966,7 +1966,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
     rgcam::getQuery(prj, "CO2 prices") %>%
     dplyr::filter(!grepl("LUC", market)) %>%
     dplyr::filter(!grepl("global|Global|world|World", market)) %>%
-    dplyr::filter(is.na(Units) || Units == "1990$/tC") %>%
+    dplyr::filter(is.na(Units) | Units == "1990$/tC") %>%
     tibble::as_tibble()
 
   if (nrow(co2_price_fragmented_pre) > 1) {
