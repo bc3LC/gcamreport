@@ -1976,6 +1976,7 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.0") {
     co2_price_fragmented <-
       co2_price_fragmented_pre %>%
       left_join_strict(CO2_market_filteredReg, by = c("market"), mapping = paste('co2_market',GCAM_version,sep='_'), multiple = "all") %>%
+      dplyr::filter(region != 'NoReported') %>%
       dplyr::filter(stats::complete.cases(.)) %>%
       dplyr::mutate(value = value /
                       get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_C_CO2']] *
@@ -2210,6 +2211,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
     dplyr::left_join(rgcam::getQuery(prj, "CO2 prices") %>% # left_join already checked
                        dplyr::filter(!grepl("LUC", market)) %>%
                        dplyr::left_join(CO2_market_filteredReg, by = c("market"), relationship = "many-to-many") %>%
+                       dplyr::filter(region != 'NoReported') %>%
                        dplyr::select(scenario, region, year, price_C = value), by = c("scenario", "region", "year"),
                      relationship = "many-to-many") %>%
     tidyr::replace_na(list(price_C = 0)) %>%
@@ -2233,7 +2235,7 @@ get_energy_price_fragmented <- function(GCAM_version = "v7.0") {
 
   energy_price_fragmented <<- energy_price_fragmented
 }
-
+#
 #' get_total_revenue
 #'
 #' Compute total revenue: total production * global price.
