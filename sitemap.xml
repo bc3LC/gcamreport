@@ -1,270 +1,813 @@
-<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>https://bc3lc.github.io/gcamreport/404.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/LICENSE-text.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v6-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v7-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial_v6-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial_v7-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/README_v6-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/README_v7-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Reporting_Variables.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v6-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v7-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/Version_Guide.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v6-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v7-0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/articles/index.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/authors.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/index.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/news/index.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/GCAM_regions_number.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_GWP_versions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_continents.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_final_year.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_regions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_reporting_years.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/available_variables.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/change_style.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/compute_height.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/compute_reg_sec_weight.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/compute_sec_prevsec_weight.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/conv_EJ_GW.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/conv_ghg_co2e.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/convert_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/convert_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/convert_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/create_project.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/data_query.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_bind_results.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_check_trade.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_check_vetting.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_collapse_df.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_data_sample.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_mount_tree.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/do_unmount_tree.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_blocks.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/filter_data_regions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/filter_desired_regions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/filter_loading_regions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/filter_variables.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/gather_map.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/gcam_years.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_concentration.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_fragmented_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_global_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_byreg.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_bysec.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_sequestration.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_emissions_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_nobio_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_tot.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capital.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_gen_tech.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_investment.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_fragmented.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_buildings.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_transportation.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_prod.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_transportation_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_forcing.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_mer.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg_sector.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue_sector.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_map.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_land.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_lu_co2.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonbio_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonco2_emissions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_regional_emission.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_co2_emissions.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/global_vet_values.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/handle_warning.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/index.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/investment_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/investment_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/investment_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/is_leaf.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/left_join_error_no_match.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/left_join_strict.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/load_project.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/load_query.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/load_variable.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/long_columns.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/production_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/production_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/production_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/reset_first_load.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/template_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transform_to_xml.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/update_template.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/update_user_choices_plot.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.html</loc></url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/404.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v7-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/gcamreport_v7-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial_v7-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/README_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/README_v7-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Reporting_Variables.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v6-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v7-0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/Version_Guide.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/articles/World_values.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_continents.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_final_year.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_GWP_versions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_reporting_years.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/available_variables.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/change_style.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/compute_height.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/compute_reg_sec_weight.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/compute_sec_prevsec_weight.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/convert_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/convert_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/convert_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/conv_EJ_GW.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/conv_ghg_co2e.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/create_project.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/data_query.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_bind_results.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_check_trade.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_check_vetting.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_collapse_df.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_data_sample.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_mount_tree.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/do_unmount_tree.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/en_blocks.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_data_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_desired_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_loading_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/filter_variables.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/gather_map.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GCAM_regions_number.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/gcam_years.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_concentration.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_fragmented_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_global_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_byreg.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_bysec.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_sequestration.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_emissions_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_nobio_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_tot.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capital.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_gen_tech.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_investment.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_fragmented.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_buildings.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_transportation.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_prod.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_fe_transportation_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_forcing.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_mer.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_ghg_sector.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue_sector.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_map.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_land.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_lu_co2.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_nonbio_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_nonco2_emissions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_regional_emission.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_regions_en_weight_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_total_co2_emissions.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/global_vet_values.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/handle_warning.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/investment_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/investment_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/investment_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/is_leaf.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/left_join_error_no_match.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/left_join_strict.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/load_project.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/load_query.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/load_variable.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/long_columns.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/production_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/production_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/production_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_general_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/reset_first_load.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/template_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/template_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/template_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transform_to_xml.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.1.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/update_template.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/update_user_choices_plot.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v6.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.html</loc>
+  </url>
 </urlset>
-
