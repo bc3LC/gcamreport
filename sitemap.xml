@@ -37,6 +37,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/available_GWP_versions.html</loc></url>
@@ -79,7 +80,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.1.html</loc></url>
@@ -126,6 +126,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_stock.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_concentration.html</loc></url>
@@ -137,12 +139,10 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_global_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_bysec.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_sequestration.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_emissions_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_nobio_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_tot.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capital.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_gen_tech.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_investment.html</loc></url>
@@ -162,7 +162,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_mer.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg_sector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue_sector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc></url>
@@ -170,6 +169,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_map.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_kyoto_gases.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_land.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_lu_co2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonbio_tmp.html</loc></url>
@@ -184,7 +184,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_co2_emissions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc></url>
