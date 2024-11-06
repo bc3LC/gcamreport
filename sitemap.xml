@@ -126,6 +126,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_stock.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
@@ -258,6 +259,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/transform_to_xml.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.0.html</loc></url>
