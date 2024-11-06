@@ -152,9 +152,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_buildings.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_transportation.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_prod.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_trade_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_expenditure.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector_tmp.html</loc></url>
@@ -178,6 +175,9 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_lu_co2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonbio_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonco2_emissions.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_prod.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_supply.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc></url>
@@ -186,9 +186,13 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_gen_tech.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_trade.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_trade_prod.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_trade_supply.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_water_consumption.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_water_withdrawals.html</loc></url>
