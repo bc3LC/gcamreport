@@ -189,6 +189,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_water_consumption.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_water_withdrawals.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.html</loc></url>
@@ -269,6 +270,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/water_withdrawals_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/water_map_v7.1.html</loc></url>
 </urlset>
 
