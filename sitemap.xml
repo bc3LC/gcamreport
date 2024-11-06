@@ -159,6 +159,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_transportation_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_availability.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_intake.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_forcing.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_mer.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc></url>
@@ -187,6 +189,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_water_withdrawals.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.html</loc></url>
@@ -266,5 +269,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/water_withdrawals_map_v7.1.html</loc></url>
 </urlset>
 
