@@ -31,12 +31,12 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.html</loc></url>
@@ -122,8 +122,9 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand_weights.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_price_wld_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
