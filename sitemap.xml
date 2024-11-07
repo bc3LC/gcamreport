@@ -121,7 +121,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gcam_years.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_CCS_invest.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices_wld_tmp.html</loc></url>
@@ -130,8 +129,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_stock.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_concentration.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emiss.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_ets.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc></url>
@@ -164,6 +163,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_gross_co2_emiss.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
