@@ -104,12 +104,12 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_blocks.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_data_regions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_desired_regions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_loading_regions.html</loc></url>
@@ -122,11 +122,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gcamreport.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/generate_report.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_demand_weights.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_price_wld_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_prices.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_trade.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_weights.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_stock.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
@@ -147,6 +147,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_gen_tech.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_investment.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_en_weights.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_buildings.html</loc></url>
@@ -164,6 +165,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gross_co2_emiss.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_hydrogen_capacity_add_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
@@ -179,8 +181,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_supply.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_prices_subsector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_refliq_capacity_add_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regional_emission.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_resource_investment.html</loc></url>
