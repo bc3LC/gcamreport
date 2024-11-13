@@ -156,6 +156,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_transportation_tmp.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fert_consumption.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_fert_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_availability.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_intake.html</loc></url>
@@ -182,6 +184,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_production_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_refliq_capacity_add_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regional_emission.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_regions_tmp.html</loc></url>
@@ -191,6 +194,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_se_trade_supply.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_secondary_solids.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_temperature.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_investment.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_total_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_transmission_invest.html</loc></url>
