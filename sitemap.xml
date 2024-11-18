@@ -31,12 +31,13 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_demand_prices_map_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_prices_map_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/approx_fun.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.html</loc></url>
@@ -68,6 +69,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/change_style.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/check_queries.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/check_user_choices_plot.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.0.html</loc></url>
@@ -79,7 +81,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_market_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/co2_sector_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.1.html</loc></url>
@@ -103,12 +104,12 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/elec_gen_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_blocks.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_prices_map_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/energy_prices_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_data_regions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_desired_regions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/filter_loading_regions.html</loc></url>
@@ -116,7 +117,9 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_items_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/food_items_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gather_map.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/gcam_years.html</loc></url>
@@ -165,7 +168,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_forestry.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_mer.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gdp_ppp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_ghg.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_goods_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gross_co2_emiss.html</loc></url>
@@ -265,11 +267,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/reset_first_load.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v6.0.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/se_gen_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/transform_to_xml.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/transport_en_service_v6.0.html</loc></url>
@@ -283,6 +285,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v6.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/water_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/water_map_v7.1.html</loc></url>
 </urlset>
 
