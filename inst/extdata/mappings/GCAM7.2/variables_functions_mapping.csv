@@ -22,13 +22,13 @@ co2_sequestration_clean;get_co2_sequestration;LUC_emiss;CO2 sequestration by tec
 co2_sequestration_raw;get_co2_sequestration;LUC_emiss;CO2 sequestration by tech
 ag_demand_clean;get_ag_demand;;demand balances by crop commodity,demand balances by meat and dairy commodity,regional biomass consumption
 ag_production_clean;get_ag_production;;ag production by crop type
-land_clean;get_land;;aggregated land allocation
+land_clean;get_land;;land allocation by crop and water source
 primary_energy_clean;get_primary_energy;;primary energy consumption with CCS by region (direct equivalent)
 pe_trade_prod;get_pe_trade_prod;;resource production
 pe_trade_supply;get_pe_trade_supply;;supply of all markets
 pe_trade;get_pe_trade;pe_trade_prod,pe_trade_supply;
-secondary_energy_clean;get_elec_gen_tech;secondary_solids;elec gen by gen tech,gas production by tech,hydrogen production by tech,refined liquids production by tech
-secondary_energy_raw;get_elec_gen_tech;secondary_solids;elec gen by gen tech,gas production by tech,hydrogen production by tech,refined liquids production by tech
+secondary_energy_clean;get_elec_gen_tech;secondary_solids;elec gen by gen tech,gas production by tech,hydrogen production by tech,refined liquids production by tech,district heat production by subsector (fuel)
+secondary_energy_raw;get_elec_gen_tech;secondary_solids;elec gen by gen tech,gas production by tech,hydrogen production by tech,refined liquids production by tech,district heat production by subsector (fuel)
 secondary_solids;get_secondary_solids;;inputs by sector
 fe_sector;get_fe_sector_tmp;;final energy consumption by sector and fuel
 fe_sector_raw;get_fe_sector_tmp;;final energy consumption by sector and fuel
@@ -38,8 +38,8 @@ fe_sector_clean;get_fe_sector;fe_sector,fe_transportation;
 energy_service_transportation_clean;get_energy_service_transportation;;transport service output by mode
 energy_service_buildings_clean;get_energy_service_buildings;;building floorspace
 industry_production_clean;get_industry_production;;industry primary output by sector
-ag_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity
-ag_wld_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity
+ag_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity,regional biomass consumption
+ag_wld_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity,regional biomass consumption
 ag_price_wld;get_ag_price_wld_tmp;ag_wld_weights;prices by sector
 ag_price_clean;get_ag_price;ag_weights,ag_price_wld;prices by sector
 price_var;get_price_var_tmp;;
