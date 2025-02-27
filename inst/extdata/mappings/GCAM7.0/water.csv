@@ -1464,7 +1464,7 @@ Fruits,Fruits_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 Fruits,Fruits_UsaCstE,Water XX,Water XX|Irrigation,,,1
 Fruits,Fruits_UsaCstSE,Water XX,Water XX|Irrigation,,,1
 H2 central production,biomass,Water XX,Water XX|Industrial Water,,,1
-H2 central production,coal,Water XX,Water XX|Industrial Water,,,2
+H2 central production,coal,Water XX,Water XX|Industrial Water,,,1
 H2 central production,electricity,Water XX,Water XX|Industrial Water,,,1
 H2 central production,gas,Water XX,Water XX|Industrial Water,,,1
 H2 central production,nuclear,Water XX,Water XX|Industrial Water,,,1
