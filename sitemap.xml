@@ -229,6 +229,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/check_inf.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/check_match.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/check_queries.html</loc>
   </url>
   <url>
@@ -514,6 +517,9 @@
     <loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_nobio_tmp.html</loc>
   </url>
   <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_consumption_hh.html</loc>
+  </url>
+  <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add.html</loc>
   </url>
   <url>
@@ -521,6 +527,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_tot.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capital.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc>
@@ -593,6 +602,9 @@
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_hydrogen_capacity_add_tmp.html</loc>
+  </url>
+  <url>
+    <loc>https://bc3lc.github.io/gcamreport/reference/get_income.html</loc>
   </url>
   <url>
     <loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc>

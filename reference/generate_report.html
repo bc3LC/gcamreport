@@ -127,6 +127,7 @@
 <span>  save_output <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  output_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  launch_ui <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  interactive <span class="op">=</span> <span class="cn">F</span>,</span>
 <span>  GCAM_version <span class="op">=</span> <span class="st">"v7.1"</span>,</span>
 <span>  GWP_version <span class="op">=</span> <span class="st">"AR5"</span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -184,6 +185,10 @@
 <dd><p>If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.</p></dd>
 
 
+<dt>interactive</dt>
+<dd><p>If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.</p></dd>
+
+
 <dt>GCAM_version</dt>
 <dd><p>Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0', or 'v6.0'.</p></dd>
 
@@ -197,7 +202,7 @@
 
 
 <dt>queries_nonCO2_file</dt>
-<dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
+<dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
 
 </dl></div>
     <div class="section level2">
