@@ -11,7 +11,6 @@ articles:
   Interactive_UI_Tutorial_v6-0: Interactive_UI_Tutorial_v6-0.html
   Interactive_UI_Tutorial_v7-0: Interactive_UI_Tutorial_v7-0.html
   Modify_Mapping_Template_Tutorial: Modify_Mapping_Template_Tutorial.html
-  Package_Internals: Package_Internals.html
   README_v6-0: README_v6-0.html
   README_v7-0: README_v7-0.html
   Reporting_Variables: Reporting_Variables.html
@@ -19,7 +18,7 @@ articles:
   Step_By_Step_Full_Example_v6-0: Step_By_Step_Full_Example_v6-0.html
   Step_By_Step_Full_Example_v7-0: Step_By_Step_Full_Example_v7-0.html
   Version_Guide: Version_Guide.html
-last_built: 2025-03-05T10:53Z
+last_built: 2025-03-05T11:08Z
 urls:
   reference: https://bc3lc.github.io/gcamreport/reference
   article: https://bc3lc.github.io/gcamreport/articles

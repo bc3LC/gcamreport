@@ -49,13 +49,6 @@
   </div>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="../articles/Package_Internals.html">
-    <span class="fa fa-solid fa-gears"></span>
-     
-    Package Internals
-  </a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="../articles/Version_Guide.html">
     <span class="fa fa-solid fa-seedling"></span>
      
@@ -121,14 +114,12 @@
 <span>  scenarios <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  final_year <span class="op">=</span> <span class="fl">2100</span>,</span>
 <span>  desired_variables <span class="op">=</span> <span class="st">"All"</span>,</span>
-<span>  ignore <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  desired_regions <span class="op">=</span> <span class="st">"All"</span>,</span>
 <span>  desired_continents <span class="op">=</span> <span class="st">"All"</span>,</span>
 <span>  save_output <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  output_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  launch_ui <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  interactive <span class="op">=</span> <span class="cn">F</span>,</span>
-<span>  GCAM_version <span class="op">=</span> <span class="st">"v7.1"</span>,</span>
+<span>  GCAM_version <span class="op">=</span> <span class="st">"v7.0"</span>,</span>
 <span>  GWP_version <span class="op">=</span> <span class="st">"AR5"</span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  queries_nonCO2_file <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -161,10 +152,6 @@
 <dd><p>Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".</p></dd>
 
 
-<dt>ignore</dt>
-<dd><p>Policy names introduced by the user to ignore during gcamreport processing of physical quantities, since otherwise they will be flagged as names missing from mapping files and cause an error. Note: Currently having one of the specified name patterns in any column of the query results, such as sector, subsector, input, etc. will cause the error to be disregarded. Same behavior than adding the policy names to the corresponding mappings indicating `NoReported`.</p></dd>
-
-
 <dt>desired_regions</dt>
 <dd><p>Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".</p></dd>
 
@@ -185,12 +172,8 @@
 <dd><p>If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.</p></dd>
 
 
-<dt>interactive</dt>
-<dd><p>If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.</p></dd>
-
-
 <dt>GCAM_version</dt>
-<dd><p>Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0', or 'v6.0'.</p></dd>
+<dd><p>Main GCAM compatible version: 'v7.0' (default), 'v7.1', or 'v6.0'.</p></dd>
 
 
 <dt>GWP_version</dt>
@@ -202,7 +185,7 @@
 
 
 <dt>queries_nonCO2_file</dt>
-<dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
+<dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by sector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
 
 </dl></div>
     <div class="section level2">
