@@ -741,7 +741,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
       "'final_year' is set to '%s' but must be at least 2025. Please select a valid year: '%s.\n",
       final_year.global, paste(available_final_year, collapse = ", ")))
   }
-  # check that final_year is availabe (5-year interval)
+  # check that final_year is available (5-year interval)
   if (!final_year.global %in% available_final_year) {
     stop(sprintf(
       "'final_year' is set to '%s' but must align with the available years in your project data. Please select a valid year: '%s.\n",
@@ -750,7 +750,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 
 
   # final reporting columns
-  reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(seq(2005, final_year.global, by = 5)))
+  reporting_columns.global <<- append(c("Model", "Scenario", "Region", "Variable", "Unit"), as.character(sort(union(available_reporting_years, seq(2005, final_year.global, by = 5)))))
 
   # desired variables to have in the report
   template_internal_variable <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Internal_variable']]
