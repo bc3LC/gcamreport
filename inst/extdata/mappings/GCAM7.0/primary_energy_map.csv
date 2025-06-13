@@ -3,10 +3,12 @@ fuel,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,unit_conv
 a oil,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Oil,Primary Energy|Oil|w/o CCS,,,,,,1
 a oil CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Oil,Primary Energy|Oil|w/ CCS,,,,,,1
 b natural gas,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,,,,,,1
+gas pipeline,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Gas,Primary Energy|Gas|w/o CCS,,,,,,1
 b natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,,,,,,1
 c coal,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/o CCS,Primary Energy|Coal,Primary Energy|Coal|w/o CCS,,,,,,1
 c coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,,,,,,1
 d biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/o CCS,Primary Energy|Biomass|Energy Crops,,,,,1
+regional biomass,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/o CCS,Primary Energy|Biomass|Energy Crops,,,,,1
 d biomass CCS,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/ CCS,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/ CCS,Primary Energy|Biomass|Energy Crops,,,,,1
 d biomassOil,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,,,Primary Energy|Biomass|1st Generation,,,,,1
 d biomassOil CCS,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/ CCS,,,Primary Energy|Biomass|1st Generation,,,,,1
@@ -34,6 +36,8 @@ green_H2,NoReported,,,,,,,,,,1
 green_h2,NoReported,,,,,,,,,,1
 green_H2 CCS,NoReported,,,,,,,,,,1
 green_h2 CCS,NoReported,,,,,,,,,,1
+elect_td_en,NoReported,,,,,,,,,,1
+H2 industrial,NoReported,,,,,,,,,,1
 traded natural gas CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Gas,Primary Energy|Gas|w/ CCS,Primary Energy|Secondary Energy Trade,,,,,1
 traded coal CCS,Primary Energy,Primary Energy|Fossil,Primary Energy|Fossil|w/ CCS,Primary Energy|Coal,Primary Energy|Coal|w/ CCS,Primary Energy|Secondary Energy Trade,,,,,1
 traded industrial_roundwood,Primary Energy,Primary Energy|Biomass,Primary Energy|Biomass|w/o CCS,Primary Energy|Biomass|Electricity,Primary Energy|Biomass|Electricity|w/o CCS,Primary Energy|Biomass|Residues,Primary Energy|Biomass|Residues|Forest Residues,Primary Energy|Biomass|Modern,Primary Energy|Biomass|Modern|w/o CCS,Primary Energy|Secondary Energy Trade,1
