@@ -59,7 +59,8 @@ If any rows in the left dataset do not have matching keys in the right dataset, 
 <span>  by <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  by_message <span class="op">=</span> <span class="va">by</span>,</span>
 <span>  mapping <span class="op">=</span> <span class="st">""</span>,</span>
-<span>  ignore <span class="op">=</span> <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html" class="external-link">exists</a></span><span class="op">(</span><span class="st">"ignore.global"</span><span class="op">)</span><span class="op">)</span> <span class="va">ignore.global</span> <span class="kw">else</span> <span class="cn">NULL</span>,</span>
+<span>  ignore <span class="op">=</span> <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html" class="external-link">exists</a></span><span class="op">(</span><span class="st">"ignore.global"</span>, envir <span class="op">=</span> <span class="va">.myGlobals</span><span class="op">)</span><span class="op">)</span> <span class="va">.myGlobals</span><span class="op">$</span><span class="va">ignore.global</span> <span class="kw">else</span></span>
+<span>    <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -110,7 +111,7 @@ If any rows in the left dataset do not have matching keys in the right dataset, 
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
