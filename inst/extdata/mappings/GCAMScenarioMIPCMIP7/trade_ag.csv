@@ -5,7 +5,7 @@ traded corn,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Ce
 traded dairy,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Ruminant,Trade|Agriculture|Livestock|Ruminant|Dairy,,1
 traded fibercrop,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
 traded fruits,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
-traded industrial_roundwood,Trade|Forestry,Trade|Forestry|Roundwood|Industrial Roundwood,,,1
+traded industrial_roundwood,Trade|Forestry,Trade|Forestry|Roundwood|Industrial Roundwood,,,,1
 traded sawnwood,NoReported,,,,,1
 traded iron and steel,NoReported,,,,,1
 traded legumes,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
