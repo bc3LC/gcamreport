@@ -3899,13 +3899,13 @@ get_co2_price_fragmented_tmp <- function(GCAM_version = "v7.1") {
     dplyr::filter(!grepl("global|Global|world|World", market)) %>%
     dplyr::filter(Units == "1990$/tC") %>%
     tibble::as_tibble() %>%
-    dplyr::filter(!grepl(paste(ignore.global, collapse = "|"), market))
+    dplyr::filter(!grepl(paste(.myGlobals$ignore.global, collapse = "|"), market))
 
 
   if (nrow(co2_price_fragmented_pre) > 1) {
     CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
       dplyr::filter(region != 'NoReported') %>%
-      dplyr::filter(!grepl(paste(ignore.global, collapse = "|"), market))
+      dplyr::filter(!grepl(paste(.myGlobals$ignore.global, collapse = "|"), market))
 
     co2_price_fragmented <-
       co2_price_fragmented_pre %>%
@@ -4184,7 +4184,7 @@ get_energy_price_tmp <- function(GCAM_version = "v7.1") {
   check_queries("energy_price", GCAM_version)
 
   CO2_market_filteredReg <- filter_data_regions(get(paste('co2_market',GCAM_version,sep='_'), envir = asNamespace("gcamreport")))
-  for (ign in unique(ignore.global)) {
+  for (ign in unique(.myGlobals$ignore.global)) {
     CO2_market_filteredReg <- rbind(
       CO2_market_filteredReg,
       CO2_market_filteredReg %>%
