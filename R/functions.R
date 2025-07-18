@@ -2381,10 +2381,7 @@ get_kyoto_gases <- function(GCAM_version = "v7.1", GWP_version = 'AR5') {
     dplyr::bind_rows(check_inf(rgcam::getQuery(prj, queryItem3),
                                dataset_name = queryItem3) %>%
                        dplyr::mutate(ghg = "CO2") %>%
-                       dplyr::mutate(sec_subsector  = dplyr::if_else(subsector %in% unique(kyoto_sector_map$subsector),subsector,NA)) %>%
-                       dplyr::group_by(Units, scenario, region, sector, sec_subsector , ghg, year) %>%
-                       dplyr::summarise(value = sum(value)) %>%
-                       dplyr::ungroup()) %>%
+                       dplyr::mutate(sec_subsector = NA)) %>%
     dplyr::mutate(subsector = sector) %>%
     conv_ghg_co2e(GWP_version = GWP_version, GCAM_version = GCAM_version) %>%
     dplyr::filter(variable %in% get(paste('GHG_gases',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))) %>%
