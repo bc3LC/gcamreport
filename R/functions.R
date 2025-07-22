@@ -1882,7 +1882,7 @@ get_co2_emiss <- function(GCAM_version = "v7.1") {
   if(GCAM_version %in% get('deciles_GCAM_versions', envir = asNamespace("gcamreport"))) {
     tmp <- tmp %>%
       tidyr::separate(sector, into = c("sector", "decile"), sep = "_d", extra = "merge", fill = "right") %>%
-      dplyr::group_by(Units, scenario, region, sector, subsector, technology, year, ghg) %>%
+      dplyr::group_by(Units, scenario, region, sector, year, ghg) %>%
       dplyr::summarise(value = sum(value)) %>%
       dplyr::ungroup()
   }
@@ -1890,8 +1890,10 @@ get_co2_emiss <- function(GCAM_version = "v7.1") {
   # CO2 emissions by technology
   co2_emiss_tech <-
     tmp %>%
-    left_join_strict(get(paste('co2_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                     by = c("sector", "subsector", "technology"),
+    left_join_strict(get(paste('co2_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+                       dplyr::select(-subsector, -technology) %>%
+                       dplyr::distinct(),
+                     by = c("sector"),
                      mapping = paste('co2_tech_map',GCAM_version,sep='_'), multiple = "all") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables(extra = c("Emissions|CO2|Energy and Industrial Processes",
