@@ -68,7 +68,7 @@ iron_steel_exports;get_iron_steel_exports;;traded iron and steel
 iron_steel_clean;get_iron_steel_clean;iron_steel_imports,iron_steel_exports;
 capital_stock_clean;get_capital_stock;;National Account
 capital_formation_clean;get_capital_formation;capital_stock_clean;
-expenditure_clean;get_expenditure;;food demand prices,food consumption by type (general),costs of transport modes,transport service output by mode,building total final energy by service,building service costs
+expenditure_clean;get_expenditure;;food demand prices,food consumption by type (general),costs of transport techs,costs of transport modes,transport service output by mode,building total final energy by service,building service costs
 water_withdrawals_clean;get_water_withdrawals;;water withdrawals by subsector
 water_consumption_clean;get_water_consumption;;water consumption by subsector
 ag_trade;get_ag_trade;;ag export to the world center (USA) (Intl. Armington competition),ag import vs. domestic supply (Regional Armington competition)

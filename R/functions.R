@@ -1173,31 +1173,93 @@ get_expenditure <- function(GCAM_version = "v7.1") {
     filter_variables() %>%
     dplyr::select(dplyr::all_of(gcamreport::long_columns))
 
-  expenditure_trn <-
-    check_inf(rgcam::getQuery(prj, "costs of transport modes"),
-              dataset_name = "costs of transport modes") %>%
+  trn_cost1 <-
+    check_inf(rgcam::getQuery(prj, "costs of transport techs"),
+              dataset_name = "costs of transport techs") %>%
     dplyr::filter(year <= final_year.global, year >= 1990) %>%
     dplyr::rename(cost = value, cost_unit = Units) %>%
-    left_join_strict(check_inf(rgcam::getQuery(prj, "transport service output by mode"),
-                               dataset_name = "transport service output by mode") %>%
-                       tidyr::complete(tidyr::nesting(Units, scenario, region, sector),
-                                       year = gcam_years,
-                                       mode = unique(check_inf(rgcam::getQuery(prj, "transport service output by mode"),
-                                                               dataset_name = "transport service output by mode")$mode),
-                                       fill = list(value = 0)
-                       ) %>%
-                       dplyr::filter(year %in% gcam_years, year <= final_year.global) %>%
-                       dplyr::rename(demand = value, demand_unit = Units),
-                     by = c('scenario','region','sector','mode','year')) %>%
-    # dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    # filter_variables() %>%
-    # from 1990$ to 2010$
-    dplyr::mutate(demand = demand / get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_million_billion']],
+    # add Walk and Cycle with 0 cost
+    tidyr::complete(tidyr::nesting(scenario, region),
+                    year = gcam_years[gcam_years <= final_year.global & gcam_years >= 1990],
+                    subsector = c('Cycle','Walk'),
+                    fill = list(cost_unit = '1990$/pass-km',
+                                sector = 'trn_pass',
+                                cost = 0)
+    ) %>%
+    dplyr::mutate(technology = dplyr::if_else(is.na(technology), subsector, technology))
+  ref_combos <- trn_cost1 %>%
+    dplyr::distinct(sector, subsector, technology, cost_unit)
+  group_combos <- trn_cost1 %>%
+    dplyr::distinct(scenario, region, year)
+  trn_cost <- tidyr::crossing(group_combos, ref_combos) %>%
+    dplyr::left_join(trn_cost1, by = c("scenario", "region", "year", "sector", "subsector", "technology", "cost_unit")) %>%
+    dplyr::mutate(cost = tidyr::replace_na(cost, 0))
+
+  # # NOTE: "Car" and "Large Car and Truck" costs account for time costs.
+  # # To avoid accounting for these costs, we consider the difference
+  # # between "costs of transport modes" and "costs of transport tech" of
+  # # "4W" and apply the same cost reduction to them.
+  # trn_cost_timefactor <-
+  #   check_inf(rgcam::getQuery(prj, "costs of transport modes"),
+  #             dataset_name = "costs of transport modes") %>%
+  #   dplyr::filter(year <= final_year.global, year >= 1990,
+  #                 mode == '4W') %>%
+  #   dplyr::rename(cost_wTime = value, cost_unit = Units) %>%
+  #   left_join_strict(trn_cost2 %>%
+  #                      dplyr::filter(subsector == '4W') %>%
+  #                      dplyr::rename(cost_woTime = cost) %>%
+  #                      # compute cost by mode (cost by technology weighted by demand)
+  #                      left_join_strict(trn_demand,
+  #                                       by = c('region','scenario','year','sector','subsector','technology')) %>%
+  #                      dplyr::mutate(cost_woTime_x_demand = cost_woTime * demand) %>%
+  #                      dplyr::group_by(scenario, region, year, sector, mode = subsector, cost_unit, demand_unit) %>%
+  #                      dplyr::summarise(cost_woTime_x_demand = sum(cost_woTime_x_demand),
+  #                                       demand = sum(demand),
+  #                                       .groups = "drop") %>%
+  #                      dplyr::mutate(cost_woTime = cost_woTime_x_demand/demand) %>%
+  #                      dplyr::select(-c(demand, cost_woTime_x_demand)),
+  #                    by = c('cost_unit','region','scenario','year','sector','mode')) %>%
+  #   dplyr::mutate(cars_factor = cost_wTime - cost_woTime) %>%
+  #   dplyr::select(scenario, region, year, cars_factor)
+  #
+  # trn_cost <- trn_cost2 %>%
+  #   # left join because the factor is only available for cars
+  #   left_join_strict(trn_cost_timefactor,
+  #                    by = c('scenario','region','year')) %>%
+  #   dplyr::mutate(cost2 = dplyr::if_else(grepl('Car',subsector), cost - cars_factor, cost))
+
+  trn_demand1 <-
+    check_inf(rgcam::getQuery(prj, "transport service output by tech and vintage"),
+              dataset_name = "transport service output by tech and vintage") %>%
+    dplyr::filter(year <= final_year.global, year >= 1990) %>%
+    dplyr::rename(demand = value, demand_unit = Units) %>%
+    dplyr::mutate(technology = stringr::str_remove(technology, ",year=.*")) %>%
+    dplyr::group_by(across(-demand)) %>%
+    dplyr::summarise(demand = sum(demand), .groups = "drop")
+  ref_combos <- trn_demand1 %>%
+    dplyr::distinct(sector, subsector, technology, demand_unit)
+  group_combos <- trn_demand1 %>%
+    dplyr::distinct(scenario, region, year)
+  trn_demand <- tidyr::crossing(group_combos, ref_combos) %>%
+    dplyr::left_join(trn_demand1, by = c("scenario", "region", "year", "sector", "subsector", "technology", "demand_unit")) %>%
+    dplyr::mutate(demand = tidyr::replace_na(demand, 0))
+
+  expenditure_trn <- trn_demand %>%
+    left_join_strict(trn_cost,
+                     by = c('scenario','region','sector', 'subsector', 'technology','year')) %>%
+    dplyr::mutate(# from million km to km
+                  demand = demand * 1e6,
+                  # from 1990$/km to billion 2010$/km
                   cost = cost * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']] / 1e9) %>%
     dplyr::mutate(value = cost * demand) %>%
-    # select pass trn
-    dplyr::filter(grepl('trn_pass', sector),
-                  !mode %in% c('LDV','road','4W')) %>%
+    # select Car private trn - IAM COMPACT
+    dplyr::filter(grepl('Car', subsector)) %>%
+    # # select pass trn - general implementation
+    # dplyr::filter(grepl('trn_pass', sector),
+    #               !subsector %in% c('LDV','road','4W')) %>%
+    # add the expenditure by subsector
+    dplyr::group_by(across(-c(technology,demand,cost,value))) %>%
+    dplyr::summarise(value = sum(value), .groups = "drop") %>%
     # compute total HH trn expenditure
     dplyr::group_by(scenario, region, year) %>%
     dplyr::summarise(value = sum(value)) %>%
