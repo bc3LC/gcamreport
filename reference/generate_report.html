@@ -79,7 +79,8 @@
 <span>  GCAM_version <span class="op">=</span> <span class="st">"v7.1"</span>,</span>
 <span>  GWP_version <span class="op">=</span> <span class="st">"AR5"</span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  queries_nonCO2_file <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  queries_nonCO2_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  all_tier1 <span class="op">=</span> <span class="cn">F</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -153,6 +154,10 @@
 
 <dt id="arg-queries-nonco-file">queries_nonCO2_file<a class="anchor" aria-label="anchor" href="#arg-queries-nonco-file"></a></dt>
 <dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
+
+
+<dt id="arg-all-tier-">all_tier1<a class="anchor" aria-label="anchor" href="#arg-all-tier-"></a></dt>
+<dd><p>If `TRUE` (not default), introduce all Tier 1 Variables (as 0) in the standardized report.</p></dd>
 
 </dl></div>
     <div class="section level2">

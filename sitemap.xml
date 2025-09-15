@@ -141,6 +141,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/convert_v7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/convert_v8.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/convert_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/conveyance.eff_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/create_project.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/data_query.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/deciles_GCAM_versions.html</loc></url>
@@ -192,6 +197,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_production.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_ag_weights.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_biomass_shares.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_formation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_capital_stock.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_cf_iea_tmp.html</loc></url>
@@ -217,7 +223,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_en_weights.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_buildings.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_service_transportation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_expenditure.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_sector.html</loc></url>
@@ -225,6 +230,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fe_transportation_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fert_consumption.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_floor_space.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_availability.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_intake.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_forcing.html</loc></url>
