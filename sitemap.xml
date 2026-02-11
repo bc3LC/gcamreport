@@ -205,13 +205,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emiss.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_emissions.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_ets.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_iron_steel.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_fragmented_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_global_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_price_share_bysec.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_sequestration.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_co2_tech_nobio_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_consumption_hh.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_capacity_add_tmp.html</loc></url>
@@ -246,7 +244,6 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc></url>
-<url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_map.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_kyoto_gases.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_labor.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_land.html</loc></url>
