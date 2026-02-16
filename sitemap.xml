@@ -163,6 +163,10 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v8.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.2.html</loc></url>
@@ -178,6 +182,10 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_v8.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/final_energy_map_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/find_closest_values.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.2.html</loc></url>
@@ -218,6 +226,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_cf_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_gen_tech.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_elec_investment.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_en_expenditure.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_en_weights.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_energy_price_tmp.html</loc></url>
@@ -230,6 +239,8 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_fgas.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_floor_space.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_availability.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_demand.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_expenditure.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_food_intake.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_forcing.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_forestry.html</loc></url>
@@ -238,9 +249,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_goods_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gov_revenue.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_gross_co2_emiss.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_hdd_cdd.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_hydrogen_capacity_add_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_income.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_industry_production.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_inequality.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_clean.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_exports.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_iron_steel_imports.html</loc></url>
@@ -255,6 +268,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_supply.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_population.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_population_weights.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_poverty.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_price_var_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_primary_energy.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_production_price.html</loc></url>
@@ -281,6 +295,10 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/global_vet_values.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/handle_warning.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.2.html</loc></url>

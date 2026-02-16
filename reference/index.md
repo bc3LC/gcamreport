@@ -254,6 +254,14 @@
   : en_demand_price_map_v8.2
 - [`en_demand_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_vScenarioMIPCMIP7.md)
   : en_demand_price_map_vScenarioMIPCMIP7
+- [`en_multiplier_v7.1`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.1.md)
+  : en_multiplier_v7.1
+- [`en_multiplier_v7.2`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.2.md)
+  : en_multiplier_v7.2
+- [`en_multiplier_v8.2`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v8.2.md)
+  : en_multiplier_v8.2
+- [`en_multiplier_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.md)
+  : en_multiplier_vScenarioMIPCMIP7
 - [`energy_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.md)
   : energy_price_map_v7.0
 - [`energy_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.md)
@@ -278,6 +286,14 @@
   : final_energy_map_vScenarioMIPCMIP7
 - [`find_closest_values()`](https://bc3lc.github.io/gcamreport/reference/find_closest_values.md)
   : find_closest_values
+- [`food_expenditures_average_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.1.md)
+  : food_expenditures_average_v7.1
+- [`food_expenditures_average_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.2.md)
+  : food_expenditures_average_v7.2
+- [`food_expenditures_average_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v8.2.md)
+  : food_expenditures_average_v8.2
+- [`food_expenditures_average_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_vScenarioMIPCMIP7.md)
+  : food_expenditures_average_vScenarioMIPCMIP7
 - [`food_intake_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.0.md)
   : food_intake_map_v7.0
 - [`food_intake_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.1.md)
@@ -312,6 +328,14 @@
   : global_vet_values
 - [`handle_warning()`](https://bc3lc.github.io/gcamreport/reference/handle_warning.md)
   : handle_warning
+- [`hdd_cdd_v7.1`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.1.md)
+  : hdd_cdd_v7.1
+- [`hdd_cdd_v7.2`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.2.md)
+  : hdd_cdd_v7.2
+- [`hdd_cdd_v8.2`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v8.2.md)
+  : hdd_cdd_v8.2
+- [`hdd_cdd_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vScenarioMIPCMIP7.md)
+  : hdd_cdd_vScenarioMIPCMIP7
 - [`iea_capacity_v7.0`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.md)
   : iea_capacity_v7.0
 - [`iea_capacity_v7.1`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.1.md)

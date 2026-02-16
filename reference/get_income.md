@@ -16,4 +16,4 @@ get_income(GCAM_version = "v7.1")
 
 ## Value
 
-\`income_clean\` global variables.
+\`income_clean\` and \`income_raw\` global variables.

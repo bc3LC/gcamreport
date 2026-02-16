@@ -1,6 +1,6 @@
 # get_expenditure
 
-Computes food expenditure.
+Computes food + energy expenditure.
 
 ## Usage
 
@@ -16,4 +16,4 @@ get_expenditure(GCAM_version = "v7.1")
 
 ## Value
 
-\`expenditure_clean\` global variable.
+\`expenditure_per_clean\` global variable.

@@ -17,4 +17,5 @@ get_gdp_ppp(GCAM_version = "v7.1")
 
 ## Value
 
-\`GDP_PPP_clean\` and \`GDP_PPP_pc_growth_clean\` global variables.
+\`GDP_PPP_clean\`, \`GDP_PPP_pc_growth_clean\`, and
+\`GDP_PPP_pc_oecd_share_clean\` global variables.

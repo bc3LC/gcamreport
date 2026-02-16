@@ -10,7 +10,7 @@ convert_vScenarioMIPCMIP7
 
 ## Format
 
-An object of class `list` of length 16.
+An object of class `list` of length 18.
 
 ## Examples
 

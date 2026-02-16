@@ -21,4 +21,4 @@ get_fgas(GCAM_version = "v7.1", GWP_version = "AR5")
 
 ## Value
 
-\`f_gas_clean\` global variable.
+\`f_gases_total\`, \`f_gases_hfc\`, \`f_gases_pfc\` global variables.

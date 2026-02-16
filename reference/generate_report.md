@@ -24,6 +24,7 @@ generate_report(
   interactive = F,
   GCAM_version = "v7.1",
   GWP_version = "AR5",
+  ref_scen_name = NULL,
   queries_general_file = NULL,
   queries_nonCO2_file = NULL,
   all_tier1 = F
@@ -123,6 +124,13 @@ generate_report(
 
   Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or
   'AR4'.
+
+- ref_scen_name:
+
+  Name of the Reference scenario. Necessary to compute Expenditure
+  variables. If left empty, \`Reference\` and \`Baseline\` tags will be
+  looked for. If not encountered, the first scenario of your project
+  will be considered as the Reference.
 
 - queries_general_file:
 
