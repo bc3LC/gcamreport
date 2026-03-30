@@ -107,6 +107,7 @@
       </demographicsQuery>
    </aQuery>
    <aQuery>
+        <all-regions />
       <demographicsQuery title="subregional population">
          <axis1 name="region">region</axis1>
          <axis2 name="Year">subregional-population</axis2>
@@ -1152,50 +1153,30 @@ output-primary/physical-output/node()</xPath>
    </aQuery>
    <aQuery>
       <all-regions />
-      <emissionsQueryBuilder title="CO2 emissions by region">
-         <axis1 name="region">region</axis1>
-         <axis2 name="Year">emissions</axis2>
-         <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' (:collapse:) or @type = 'resource' (:collapse:)](: / *[@type = 'subresource' (: collapse :)] :)//*[((@name='CO2' or @name = 'CO2_FUG'))]/emissions/node()</xPath>
-         <comments />
-      </emissionsQueryBuilder>
+<emissionsQueryBuilder title="CO2 emissions by tech (nested subsector) (excluding resource production)">
+            <axis1 name="technology">technology</axis1>
+            <axis2 name="Year">emissions</axis2>
+            <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' ]/*[@type='subsector']//*[@type='technology']//
+        CO2/emissions/node()</xPath>
+            <comments/>
+        </emissionsQueryBuilder>
    </aQuery>
    <aQuery>
       <all-regions />
-      <emissionsQueryBuilder title="CO2 emissions by tech (nested subsector) (excluding resource production2)">
-         <axis1 name="subsector" optional="true">subsector</axis1>
-         <axis2 name="Year" optional="true">emissions</axis2>
-         <xPath buildList="true" dataName="emissions" group="false" sumAll="false" optional="true">
-            *[@type = 'sector' ]/*[@type='subsector']/CO2[emissions]/emissions/node()
-         </xPath>
-         <comments/>
-       </emissionsQueryBuilder>"
-   </aQuery>
-   <aQuery>
-      <all-regions />
-      <emissionsQueryBuilder title="CO2 emissions by tech (nested subsector) (excluding resource production)">
-         <axis1 name="technology">technology</axis1>
-         <axis2 name="Year">emissions</axis2>
-         <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' ]/*[@type='subsector']/*[@type='technology']//
-     CO2/emissions/node()</xPath>
-</emissionsQueryBuilder>"
-   </aQuery>
-   <aQuery>
       <emissionsQueryBuilder title="List sector names">
          <axis1 name="sector">sector</axis1>
-         <xPath buildList="true" dataName="sectorNames" group="false" sumAll="false" optional="true">
-           *[@type='sector']/@name
-         </xPath>
+         <xPath buildList="true" dataName="sectorNames" group="false" sumAll="false" optional="true">*[@type='sector']/@name</xPath>
        </emissionsQueryBuilder>
    </aQuery>
    <aQuery>
       <all-regions />
-      <emissionsQueryBuilder title="CO2 sequestration by tech">
-         <axis1 name="subsector">subsector</axis1>
-         <axis2 name="Year">emissions-sequestered</axis2>
-         <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' ]/*[@type='subsector']//*[@type='technology']//
-     CO2/emissions-sequestered/node()</xPath>
-         <comments/>
-      </emissionsQueryBuilder>
+      <emissionsQueryBuilder title="CO2 sequestration by tech (nested subsector)">
+            <axis1 name="subsector">subsector</axis1>
+            <axis2 name="Year">emissions-sequestered</axis2>
+            <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' ]/*[@type='subsector']//*[@type='technology']//
+        CO2/emissions-sequestered/node()</xPath>
+            <comments/>
+        </emissionsQueryBuilder>
    </aQuery>
    <aQuery>
       <all-regions />
@@ -1363,94 +1344,91 @@ A user can adjust the query to search for any of:
          <comments/>
      </supplyDemandQuery>
    </aQuery>
-
-
    <aQuery>
       <all-regions />
       <supplyDemandQuery title="water withdrawals by subsector">
-         <axis1 name="subsector">subsector</axis1>
-         <axis2 name="Year">demand-physical[@vintage]</axis2>
-         <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and not(contains(@name, 'water_td'))]/*[@type='subsector']//*[@type='input' (:collapse:)
-      and contains(@name,'water_td') and ends-with(@name,'_W')]/demand-physical/node()</xPath>
-         <comments/>
-         <labelRewriteList append-values="false">
-             <level name="sector">
-                 <rewrite from="elec_Gen_III" to="electricity"/>
-                 <rewrite from="elec_CSP_storage" to="electricity"/>
-                 <rewrite from="elec_refined liquids (steam/CT)" to="electricity"/>
-                 <rewrite from="elec_geothermal" to="electricity"/>
-                 <rewrite from="elec_refined liquids (CC)" to="electricity"/>
-                 <rewrite from="elec_Gen_II_LWR" to="electricity"/>
-                 <rewrite from="elec_gas (steam/CT)" to="electricity"/>
-                 <rewrite from="elec_coal (IGCC)" to="electricity"/>
-                 <rewrite from="elec_gas (CC)" to="electricity"/>
-                 <rewrite from="elec_biomass (IGCC)" to="electricity"/>
-                 <rewrite from="elec_coal (conv pul)" to="electricity"/>
-                 <rewrite from="elec_CSP" to="electricity"/>
-                 <rewrite from="elec_biomass (conv)" to="electricity"/>
-             </level>
-             <level name="subsector">
-                 <rewrite from="gas (CC)" to="gas"/>
-                 <rewrite from="CSP" to="solar"/>
-                 <rewrite from="biomass (conv)" to="biomass"/>
-                 <rewrite from="Gen_II_LWR" to="nuclear"/>
-                 <rewrite from="coal (conv pul)" to="coal"/>
-                 <rewrite from="coal (IGCC)" to="coal"/>
-                 <rewrite from="gas (steam/CT)" to="gas"/>
-                 <rewrite from="CSP_storage" to="solar"/>
-                 <rewrite from="biomass (IGCC)" to="biomass"/>
-                 <rewrite from="Gen_III" to="nuclear"/>
-                 <rewrite from="refined liquids (CC)" to="refined liquids"/>
-                 <rewrite from="geothermal" to="geothermal"/>
-                 <rewrite from="refined liquids (steam/CT)" to="refined liquids"/>
-             </level>
-         </labelRewriteList>
-     </supplyDemandQuery>
-   </aQuery>   
-
+            <axis1 name="subsector">subsector</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and not(contains(@name, 'water_td'))]/*[@type='subsector']//*[@type='input' (:collapse:)
+         and contains(@name,'water_td') and ends-with(@name,'_W')]/demand-physical/node()</xPath>
+            <comments/>
+            <labelRewriteList append-values="false">
+                <level name="sector">
+                    <rewrite from="elec_Gen_III" to="electricity"/>
+                    <rewrite from="elec_CSP_storage" to="electricity"/>
+                    <rewrite from="elec_refined liquids (steam/CT)" to="electricity"/>
+                    <rewrite from="elec_geothermal" to="electricity"/>
+                    <rewrite from="elec_refined liquids (CC)" to="electricity"/>
+                    <rewrite from="elec_Gen_II_LWR" to="electricity"/>
+                    <rewrite from="elec_gas (steam/CT)" to="electricity"/>
+                    <rewrite from="elec_coal (IGCC)" to="electricity"/>
+                    <rewrite from="elec_gas (CC)" to="electricity"/>
+                    <rewrite from="elec_biomass (IGCC)" to="electricity"/>
+                    <rewrite from="elec_coal (conv pul)" to="electricity"/>
+                    <rewrite from="elec_CSP" to="electricity"/>
+                    <rewrite from="elec_biomass (conv)" to="electricity"/>
+                </level>
+                <level name="subsector">
+                    <rewrite from="gas (CC)" to="gas"/>
+                    <rewrite from="CSP" to="solar"/>
+                    <rewrite from="biomass (conv)" to="biomass"/>
+                    <rewrite from="Gen_II_LWR" to="nuclear"/>
+                    <rewrite from="coal (conv pul)" to="coal"/>
+                    <rewrite from="coal (IGCC)" to="coal"/>
+                    <rewrite from="gas (steam/CT)" to="gas"/>
+                    <rewrite from="CSP_storage" to="solar"/>
+                    <rewrite from="biomass (IGCC)" to="biomass"/>
+                    <rewrite from="Gen_III" to="nuclear"/>
+                    <rewrite from="refined liquids (CC)" to="refined liquids"/>
+                    <rewrite from="geothermal" to="geothermal"/>
+                    <rewrite from="refined liquids (steam/CT)" to="refined liquids"/>
+                </level>
+            </labelRewriteList>
+        </supplyDemandQuery>
+   </aQuery>
    <aQuery>
       <all-regions />
       <supplyDemandQuery title="water consumption by subsector">
-         <axis1 name="subsector">subsector</axis1>
-         <axis2 name="Year">demand-physical[@vintage]</axis2>
-         <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and not(contains(@name, 'water_td'))]/*[@type='subsector']//*[@type='input' (:collapse:) and contains(@name,'water_td')
-      and ends-with(@name,'_C')]/demand-physical/node()</xPath>
-         <comments/>
-         <labelRewriteList append-values="false">
-             <level name="sector">
-                 <rewrite from="elec_Gen_III" to="electricity"/>
-                 <rewrite from="elec_CSP_storage" to="electricity"/>
-                 <rewrite from="elec_refined liquids (steam/CT)" to="electricity"/>
-                 <rewrite from="elec_geothermal" to="electricity"/>
-                 <rewrite from="elec_refined liquids (CC)" to="electricity"/>
-                 <rewrite from="elec_Gen_II_LWR" to="electricity"/>
-                 <rewrite from="elec_gas (steam/CT)" to="electricity"/>
-                 <rewrite from="elec_coal (IGCC)" to="electricity"/>
-                 <rewrite from="elec_gas (CC)" to="electricity"/>
-                 <rewrite from="elec_biomass (IGCC)" to="electricity"/>
-                 <rewrite from="elec_coal (conv pul)" to="electricity"/>
-                 <rewrite from="elec_CSP" to="electricity"/>
-                 <rewrite from="elec_biomass (conv)" to="electricity"/>
-             </level>
-             <level name="subsector">
-                 <rewrite from="gas (CC)" to="gas"/>
-                 <rewrite from="CSP" to="solar"/>
-                 <rewrite from="biomass (conv)" to="biomass"/>
-                 <rewrite from="Gen_II_LWR" to="nuclear"/>
-                 <rewrite from="coal (conv pul)" to="coal"/>
-                 <rewrite from="coal (IGCC)" to="coal"/>
-                 <rewrite from="gas (steam/CT)" to="gas"/>
-                 <rewrite from="CSP_storage" to="solar"/>
-                 <rewrite from="biomass (IGCC)" to="biomass"/>
-                 <rewrite from="Gen_III" to="nuclear"/>
-                 <rewrite from="refined liquids (CC)" to="refined liquids"/>
-                 <rewrite from="geothermal" to="geothermal"/>
-                 <rewrite from="refined liquids (steam/CT)" to="refined liquids"/>
-             </level>
-         </labelRewriteList>
-     </supplyDemandQuery>
-   </aQuery>   
-   <aQuery>   
+            <axis1 name="subsector">subsector</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and not(contains(@name, 'water_td'))]/*[@type='subsector']//*[@type='input' (:collapse:) and contains(@name,'water_td')
+         and ends-with(@name,'_C')]/demand-physical/node()</xPath>
+            <comments/>
+            <labelRewriteList append-values="false">
+                <level name="sector">
+                    <rewrite from="elec_Gen_III" to="electricity"/>
+                    <rewrite from="elec_CSP_storage" to="electricity"/>
+                    <rewrite from="elec_refined liquids (steam/CT)" to="electricity"/>
+                    <rewrite from="elec_geothermal" to="electricity"/>
+                    <rewrite from="elec_refined liquids (CC)" to="electricity"/>
+                    <rewrite from="elec_Gen_II_LWR" to="electricity"/>
+                    <rewrite from="elec_gas (steam/CT)" to="electricity"/>
+                    <rewrite from="elec_coal (IGCC)" to="electricity"/>
+                    <rewrite from="elec_gas (CC)" to="electricity"/>
+                    <rewrite from="elec_biomass (IGCC)" to="electricity"/>
+                    <rewrite from="elec_coal (conv pul)" to="electricity"/>
+                    <rewrite from="elec_CSP" to="electricity"/>
+                    <rewrite from="elec_biomass (conv)" to="electricity"/>
+                </level>
+                <level name="subsector">
+                    <rewrite from="gas (CC)" to="gas"/>
+                    <rewrite from="CSP" to="solar"/>
+                    <rewrite from="biomass (conv)" to="biomass"/>
+                    <rewrite from="Gen_II_LWR" to="nuclear"/>
+                    <rewrite from="coal (conv pul)" to="coal"/>
+                    <rewrite from="coal (IGCC)" to="coal"/>
+                    <rewrite from="gas (steam/CT)" to="gas"/>
+                    <rewrite from="CSP_storage" to="solar"/>
+                    <rewrite from="biomass (IGCC)" to="biomass"/>
+                    <rewrite from="Gen_III" to="nuclear"/>
+                    <rewrite from="refined liquids (CC)" to="refined liquids"/>
+                    <rewrite from="geothermal" to="geothermal"/>
+                    <rewrite from="refined liquids (steam/CT)" to="refined liquids"/>
+                </level>
+            </labelRewriteList>
+        </supplyDemandQuery>
+   </aQuery>
+   <aQuery>
       <all-regions />
          <supplyDemandQuery title="transport service output by tech and vintage">
          <axis1 name="technology">technology</axis1>
