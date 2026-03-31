@@ -48,7 +48,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>generate_report</h1>
-      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/gcam-core/R/main.R" class="external-link"><code>R/main.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/bc3LC/gcamreport/blob/HEAD/R/main.R" class="external-link"><code>R/main.R</code></a></small>
       <div class="d-none name"><code>generate_report.Rd</code></div>
     </div>
 
@@ -69,6 +69,7 @@
 <span>  scenarios <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  final_year <span class="op">=</span> <span class="fl">2100</span>,</span>
 <span>  desired_variables <span class="op">=</span> <span class="st">"All"</span>,</span>
+<span>  inverse_desired_variables <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  ignore <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  desired_regions <span class="op">=</span> <span class="st">"All"</span>,</span>
 <span>  desired_continents <span class="op">=</span> <span class="st">"All"</span>,</span>
@@ -110,7 +111,13 @@
 
 
 <dt id="arg-desired-variables">desired_variables<a class="anchor" aria-label="anchor" href="#arg-desired-variables"></a></dt>
-<dd><p>Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`. Note: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".</p></dd>
+<dd><p>Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`.
+Note1: You can use the `*` notation as detailed in [this](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables) tutorial to select multiple variables from the same family.
+Note2: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".</p></dd>
+
+
+<dt id="arg-inverse-desired-variables">inverse_desired_variables<a class="anchor" aria-label="anchor" href="#arg-inverse-desired-variables"></a></dt>
+<dd><p>If `TRUE` (not default), consider all but the detailed variables in the `desired_variables` parameter.</p></dd>
 
 
 <dt id="arg-ignore">ignore<a class="anchor" aria-label="anchor" href="#arg-ignore"></a></dt>

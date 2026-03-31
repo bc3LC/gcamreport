@@ -15,6 +15,7 @@ generate_report(
   scenarios = NULL,
   final_year = 2100,
   desired_variables = "All",
+  inverse_desired_variables = FALSE,
   ignore = NULL,
   desired_regions = "All",
   desired_continents = "All",
@@ -62,11 +63,20 @@ generate_report(
 
   Variables to include in the report. Defaults to 'All'. Specify a
   vector for specific variables. To view available options, run
-  \`available_variables()\`. Note: Global variables like "Emissions"
-  will only account for selected variables. E.g., if you select
-  "Emissions" and "Emissions\|CO2", "Emissions" will only account for
-  "Emissions\|CO2", and will not account for other variables such as
-  "Emissions\|CH4" or "Emissions\|NH3".
+  \`available_variables()\`. Note1: You can use the \`\*\` notation as
+  detailed in
+  \[this\](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables)
+  tutorial to select multiple variables from the same family. Note2:
+  Global variables like "Emissions" will only account for selected
+  variables. E.g., if you select "Emissions" and "Emissions\|CO2",
+  "Emissions" will only account for "Emissions\|CO2", and will not
+  account for other variables such as "Emissions\|CH4" or
+  "Emissions\|NH3".
+
+- inverse_desired_variables:
+
+  If \`TRUE\` (not default), consider all but the detailed variables in
+  the \`desired_variables\` parameter.
 
 - ignore:
 

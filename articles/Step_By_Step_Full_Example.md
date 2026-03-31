@@ -28,34 +28,37 @@ newline
     run
 
 ``` r
-devtools::load_all(".", reset = TRUE)
+
+devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
+
 library(gcamreport)
 ```
 
 4.  Generate the standardized dataset:
 
 ``` r
+
 ## -- store the database path, name, and scenarios in a variable.
 dbpath <- "examples"
 dbname <- "database_basexdb_ref"
 scen <- "Reference"
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 
 ## -- choose a project name
 prjname <- "example1_v7.1.dat"
 
 ## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
-## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, 
-## -- and lunch the user interface
+## -- Agricultural Productionvariables, save the output in .RData, .csv and 
+## -- .xlsx format, and lunch the user interface
 generate_report(db_path = dbpath, db_name = dbname, scenarios = scen, 
-                prj_name = prjname, final_year = 2050, GCAM_version = GCAMv,
+                prj_name = prjname, final_year = 2050, GCAM_version = GCAM_version,
                 desired_regions = c('EU-12', 'EU-15'), 
-                desired_variables = c('Agricultural*'), 
+                desired_variables = c('Agricultural Production*'), 
                 save_output = TRUE, launch_ui = TRUE)
 ```
 
@@ -117,28 +120,32 @@ newline
     run
 
 ``` r
-devtools::load_all(".", reset = TRUE)
+
+devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
+
 library(gcamreport)
 ```
 
 4.  Generate the standardized dataset:
 
 ``` r
+
 ## -- store the project path and name in a variable.
 prjname <- "examples/example2_v7.1.dat"
+GCAM_version = 'v7.1'
 
 ## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
-## -- Agricultural variables, save the output in .RData, .csv and .xlsx format, 
-## -- and lunch the user interface
+## -- Agricultural Production variables, save the output in .RData, .csv and
+## -- .xlsx format, and lunch the user interface
 generate_report(prj_name = prjname, final_year = 2050, 
-                GCAM_version = 'v7.1',
+                GCAM_version = GCAM_version,
                 desired_regions = c('EU-12', 'EU-15'),
-                desired_variables = c('Agricultural*'), 
+                desired_variables = c('Agricultural Production*'), 
                 save_output = TRUE, launch_ui = TRUE)
 ```
 
@@ -197,22 +204,24 @@ installation](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 3.  Load the `gcamreport` library:
 
 ``` r
-devtools::load_all(".", reset = TRUE)
+
+devtools::load_all()
 ```
 
 4.  Launch the user interface for the standardized dataset:
 
 ``` r
+
 ## -- load gcamreport library.
-devtools::load_all(".", reset = TRUE) # if using Rstudio or Docker
+devtools::load_all() # if using Rstudio or Docker
 library(gcamreport) # if using R
 
 ## -- store the project path and name in a variable.
 datapath <- "examples/example3_v7.1.RData"
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 
 ## -- launch the user interface
-launch_gcamreport_ui(data_path = datapath, GCAM_version = GCAMv)
+launch_gcamreport_ui(data_path = datapath, GCAM_version = GCAM_version)
 ```
 
 In case you experience some trouble, check this [troubleshooting
@@ -233,16 +242,17 @@ error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/re
     can also use it to launch the user interface:
 
 ``` r
+
 ## -- load gcamreport library.
-devtools::load_all(".", reset = TRUE) # if using Rstudio or Docker
+devtools::load_all() # if using Rstudio or Docker
 library(gcamreport) # if using R
 
 ## -- store the database path, name, and scenarios in a variable.
 dataname <- "report"
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 
 ## -- launch the user interface
-launch_gcamreport_ui(data = dataname, GCAM_version = GCAMv)
+launch_gcamreport_ui(data = dataname, GCAM_version = GCAM_version)
 ```
 
 **Note**: You can do this step-by-step example using the provided
