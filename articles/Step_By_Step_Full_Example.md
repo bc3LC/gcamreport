@@ -44,19 +44,19 @@ library(gcamreport)
 ``` r
 
 ## -- store the database path, name, and scenarios in a variable.
-dbpath <- "examples"
+db_path <- "examples"
 dbname <- "database_basexdb_ref"
 scen <- "Reference"
 GCAM_version <- "v7.1"
 
 ## -- choose a project name
-prjname <- "example1_v7.1.dat"
+prj_name <- "example1_v7.1.dat"
 
 ## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
 ## -- Agricultural Productionvariables, save the output in .RData, .csv and 
 ## -- .xlsx format, and lunch the user interface
-generate_report(db_path = dbpath, db_name = dbname, scenarios = scen, 
-                prj_name = prjname, final_year = 2050, GCAM_version = GCAM_version,
+generate_report(db_path = db_path, db_name = db_name, scenarios = scen, 
+                prj_name = prj_name, final_year = 2050, GCAM_version = GCAM_version,
                 desired_regions = c('EU-12', 'EU-15'), 
                 desired_variables = c('Agricultural Production*'), 
                 save_output = TRUE, launch_ui = TRUE)
@@ -136,13 +136,13 @@ library(gcamreport)
 ``` r
 
 ## -- store the project path and name in a variable.
-prjname <- "examples/example2_v7.1.dat"
+prj_name <- "examples/example2_v7.1.dat"
 GCAM_version = 'v7.1'
 
 ## -- generate the reporting dataset until 2050 for EU-12 and EU-15 for all the 
 ## -- Agricultural Production variables, save the output in .RData, .csv and
 ## -- .xlsx format, and lunch the user interface
-generate_report(prj_name = prjname, final_year = 2050, 
+generate_report(prj_name = prj_name, final_year = 2050, 
                 GCAM_version = GCAM_version,
                 desired_regions = c('EU-12', 'EU-15'),
                 desired_variables = c('Agricultural Production*'), 
@@ -217,11 +217,11 @@ devtools::load_all() # if using Rstudio or Docker
 library(gcamreport) # if using R
 
 ## -- store the project path and name in a variable.
-datapath <- "examples/example3_v7.1.RData"
+data_path <- "examples/example3_v7.1.RData"
 GCAM_version <- "v7.1"
 
 ## -- launch the user interface
-launch_gcamreport_ui(data_path = datapath, GCAM_version = GCAM_version)
+launch_gcamreport_ui(data_path = data_path, GCAM_version = GCAM_version)
 ```
 
 In case you experience some trouble, check this [troubleshooting

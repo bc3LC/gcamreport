@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,11 +108,11 @@ tutorial</a> and if you want to specify the query files, look at the <a href="ht
 files tutorial</a>.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
-<span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
-<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
+<code class="sourceCode R"><span><span class="va">db_path</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
+<span><span class="va">db_name</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
+<span><span class="va">prj_name</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span>
-<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
+<span><span class="va">GCAM_version</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
 <p>Notice that the extension is included in the project name. Accepted
 extensions are <code>.dat</code> &amp; <code>.proj</code>.</p>
 <p><strong>Note</strong>: If you followed the Docker installation, you
@@ -125,8 +125,8 @@ something like <code>/app/path/to/database</code>.</p>
 example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, prj_name <span class="op">=</span> <span class="va">prjname</span>, </span>
-<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">db_path</span>, db_name <span class="op">=</span> <span class="va">db_name</span>, prj_name <span class="op">=</span> <span class="va">prj_name</span>, </span>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAM_version</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>,</span>
 <span>                launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: The project generation might take some time,
 depending on the number of scenarios, regions, and variables you want to
@@ -137,7 +137,7 @@ standardize.</p>
 <code>/path/to/database/awesomeProj_standardized.csv</code>, and
 <code>/path/to/database/awesomeProj_standardized.xlsx</code>.</p>
 <p>This procedure will also generate a project file at
-<code>/path/to/database/dbname_prjname.dat</code> with all the loaded
+<code>/path/to/database/db_name_prj_name.dat</code> with all the loaded
 queries. You can directly use it as indicated in <a href="#example2">Example 2</a>.</p>
 <p>The terminal will output the performed vetting verification and their
 final status.</p>
@@ -180,7 +180,7 @@ as detailed in <a href="#example1">Example1</a>.</li>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mypath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/project/myProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'scen1'</span>, <span class="st">'scen2'</span>, <span class="st">'scen3'</span><span class="op">)</span></span>
-<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
+<span><span class="va">GCAM_version</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span></code></pre></div>
 <p>Notice that the extension is included. Accepted extensions are
 <code>.dat</code> &amp; <code>.proj</code>.</p>
 <p><strong>Note</strong>: If you followed the Docker installation, you
@@ -194,7 +194,7 @@ example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>prj_name <span class="op">=</span> <span class="va">mypath</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
-<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAM_version</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Notice that the dataset will automatically be saved in
 <code>.RData</code>, <code>.csv</code> and <code>.xlsx</code> at
 <code>/path/to/project/myProj_standardized.RData</code>,
@@ -205,8 +205,7 @@ status.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
-<h2 id="example-3-save-or-not-the-output-and-specify-the-file-format-or-the-directory">Example 3: save or not the output and specify the file format or the
-directory<a class="anchor" aria-label="anchor" href="#example-3-save-or-not-the-output-and-specify-the-file-format-or-the-directory"></a>
+<h2 id="example-3-output-management">Example 3: output management<a class="anchor" aria-label="anchor" href="#example-3-output-management"></a>
 </h2>
 <p>Suppose you are in the situation of one of the previous examples, but
 you want to either not save the standardized output, save it in
@@ -306,7 +305,7 @@ specified at the same time.</li>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
-<h2 id="example-5-specify-the-variables">Example 5: specify the variables<a class="anchor" aria-label="anchor" href="#example-5-specify-the-variables"></a>
+<h2 id="example-5-specify-the-desired-variables">Example 5: specify the desired variables<a class="anchor" aria-label="anchor" href="#example-5-specify-the-desired-variables"></a>
 </h2>
 <p>Suppose you are in the situation of one of the previous examples, but
 you want to consider only some variables in the standardized
@@ -324,26 +323,41 @@ Rstudio or Docker, run</p></li>
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Check which are the available variables for reporting. The following
-command will print a list with all the possibilities.</li>
+command will print a list with all the possibilities according to your
+<code>GCAM_version</code>.</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">available_variables</span>(<span class="at">GCAM_version =</span> <span class="st">'v7.1)</span></span></code></pre></div>
 <p>In case you want to save them in a vector, you can simply assign the
 output. You can also skip the console printing by setting
 <code>print = FALSE</code>.</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">avail_var</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/available_variables.html">available_variables</a></span><span class="op">(</span>print <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
-<li>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
+<li>To select an entire family of variables, use the <code>*</code>
+notation. For example, setting
+<code>desired_variables = Emissions|BC*</code> will include all
+sub-categories such as <code>Emissions|BC|AFOLU</code>,
+<code>Emissions|BC|Energy</code>, and
+<code>Emissions|BC|Industrial Processes</code>).</li>
+</ol>
+<p><strong>Note on aggregation</strong>: If you manually specify only
+certain variables within a group, the parent variable will be calculated
+as the sum of those specific selections. For instance, if you select
+only <code>Final Energy|Electricity</code> and
+<code>Final Energy|Gases</code>, the total <code>Final Energy</code>
+value will be the sum of these two, excluding other sectors like
+<code>Industry</code> or <code>Heat.</code></p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>If you want to exclude specific variables instead of selecting
+them, set <code>inverse_desired_variables = TRUE</code>. In this mode,
+the package will process all available variables except those listed in
+<code>desired_variables</code>.</p></li>
+<li><p>Use <a href="#example1">example1</a> database or <a href="#example2">example2</a> project description and add all the extra
 parameters that you consider in the <code>generate_report</code>
 function (e.g, final year, desired scenarios…). Specify the variables
 through the <code>desired_variables</code> parameter. You can specify a
 vector with all the desired variables names fully written, or also
-consider all variables that start with the same name. This last feature,
-allows you to easily select all variables within a group, such as
-<em>Emissions</em>, <em>Emissions|CO2</em>, or <em>Agricultural
-Demand</em>
-</li>
+consider the asterik notation.</p></li>
 </ol>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## -- specify the desired variables</span></span>
@@ -351,17 +365,13 @@ Demand</em>
 <span>              desired_variables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Agricultural Demand|Crops|Energy'</span>,</span>
 <span>                                    <span class="st">'Agricultural Demand|Crops|Feed'</span>,</span>
 <span>                                    <span class="st">'Capacity Additions|Electricity|Wind|Onshore'</span>, </span>
-<span>                                    <span class="st">'Emissions|BC|Energy*'</span><span class="op">)</span><span class="op">)</span> <span class="co"># This will select,</span></span>
-<span>                                                             <span class="co"># Emissions|BC|Energy,</span></span>
-<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Industry, </span></span>
-<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Residential and Commercial,</span></span>
-<span>                                                             <span class="co"># Emissions|BC|Energy|Demand|Transportation,</span></span>
-<span>                                                             <span class="co"># Emissions|BC|Energy|Supply</span></span></code></pre></div>
-<p>In case you specify only some variables within a group, they will
-make up the total value. For example, if we select <em>Final
-Energy|Electricity</em> and <em>Final Energy|Gases</em>, then <em>Final
-Energy</em> will be the sum of these two sectors, and will not consider
-<em>Final Energy|Industry</em> or <em>Final Energy|Heat</em>.</p>
+<span>                                    <span class="st">'Emissions|BC|Energy*'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Note</strong>: If you create a project from scratch with a
+limited variable selection, only the necessary queries will be loaded to
+save processing time and disk space. Please keep in mind that if you
+later decide to include additional variables, you might need to manually
+add the required queries or rebuild the project to ensure all data is
+available.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -382,7 +392,7 @@ Rstudio or Docker, run</p></li>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bc3LC/gcamreport" class="external-link">gcamreport</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Check which are the available GWP and CAM versions for reporting.
+<li>Check which are the available GWP and GCAM versions for reporting.
 The following command will print a list with all the possibilities.</li>
 </ol>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
@@ -452,11 +462,11 @@ tutorial</a> or at the <a href="https://bc3lc.github.io/gcamreport/articles/Data
 tutorial</a>.</li>
 </ol>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">dbpath</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
-<span><span class="va">dbname</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
-<span><span class="va">prjname</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
+<code class="sourceCode R"><span><span class="va">db_path</span> <span class="op">&lt;-</span> <span class="st">"/path/to/database"</span></span>
+<span><span class="va">db_name</span> <span class="op">&lt;-</span> <span class="st">"gcamdb_name"</span></span>
+<span><span class="va">prj_name</span> <span class="op">&lt;-</span> <span class="st">"awesomeProj.dat"</span></span>
 <span><span class="va">scen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"scen1"</span>, <span class="st">"scen2"</span>, <span class="st">"scen3"</span><span class="op">)</span></span>
-<span><span class="va">GCAMv</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
+<span><span class="va">GCAM_version</span> <span class="op">&lt;-</span> <span class="st">"v7.1"</span></span>
 <span><span class="va">new_queries_general_file</span> <span class="op">&lt;-</span> <span class="st">"path/to/your/new_queries_file.xml"</span></span></code></pre></div>
 <p>Notice that the extension is included in the general query file
 (<code>.xml</code>) and in the project name (<code>.dat</code> or
@@ -473,9 +483,9 @@ something like <code>/app/path/to/new_queries_file.xml</code>.</p>
 example, 2050. By default is 2100 and it should be at least 2025.</li>
 </ol>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">dbpath</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">dbname</span>, </span>
-<span>                prj_name <span class="op">=</span> <span class="va">prjname</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
-<span>                GCAM_version <span class="op">=</span> <span class="va">GCAMv</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span>, </span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/generate_report.html">generate_report</a></span><span class="op">(</span>db_path <span class="op">=</span> <span class="va">db_path</span>, query_path <span class="op">=</span> <span class="va">querypath</span>, db_name <span class="op">=</span> <span class="va">db_name</span>, </span>
+<span>                prj_name <span class="op">=</span> <span class="va">prj_name</span>, scenarios <span class="op">=</span> <span class="va">scen</span>, final_year <span class="op">=</span> <span class="fl">2050</span>, </span>
+<span>                GCAM_version <span class="op">=</span> <span class="va">GCAM_version</span>, launch_ui <span class="op">=</span> <span class="cn">FALSE</span>, </span>
 <span>                queries_general_file <span class="op">=</span> <span class="va">new_queries_general_file</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Note</strong>: The project generation might take some time,
 depending on the number of scenarios, regions, and variables you want to
@@ -486,13 +496,13 @@ standardize.</p>
 <code>/path/to/database/awesomeProj_standardized.csv</code>, and
 <code>/path/to/database/awesomeProj_standardized.xlsx</code>.</p>
 <p>This procedure will also generate a project file at
-<code>/path/to/database/dbname_prjname.dat</code> with all the loaded
+<code>/path/to/database/db_name_prj_name.dat</code> with all the loaded
 queries. You can directly use it as indicated in <a href="#example2">Example 2</a>.</p>
 <p>The terminal will output the performed vetting verifications and
 their final status.</p>
 <p>To specify the <em>nonCO2</em> query file you can proceed
 analogously. However, check carefully its default structure and the
-function where is used: <a href="file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/reference/data_query.html">data_query</a>.</p>
+function where is used: <a href="https://bc3lc.github.io/gcamreport/reference/data_query.html">data_query</a>.</p>
 <p><span style="color:white">newline</span></p>
 </div>
 <div class="section level2">
@@ -510,7 +520,7 @@ you might see this error in your R console:</p>
 Error in localDBConn(db_path, db_name, migabble = FALSE) : 
   Database does not exist or is invalid: examples/database_basexdb_ref
 In addition: Warning messages:
-1: In normalizePath(dbPath) :
+1: In normalizePath(db_path) :
   path[1]="examples": No such file or directory
 2: The following named parsers don't match the column names: name, date, version </code></pre>
 <p>This problem might be due to an incorrect package installation or an

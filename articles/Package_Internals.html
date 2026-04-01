@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,12 +85,14 @@ versions, the mappings must be tailored to each version.</li>
 <li>Package Structure
 <ul>
 <li>Data Storage: Located in <code>gcamreport/inst/extdata</code>.</li>
-<li>Codebase: Found in <code>gcamreport/R</code>.
+<li>Codebase: Basically located in <code>gcamreport/R</code>.
 <ul>
 <li>Codebase to run the package: Found in
 <code>gcamreport/R/main.R</code>.</li>
 <li>Codebase to compute each standardized variable: Found in
 <code>gcamreport/R/functions.R</code>.</li>
+<li>Codebase to run the UI: Found in
+<code>gcamreport/inst/gcamreport_ui</code>.</li>
 </ul>
 </li>
 </ul>
@@ -104,19 +106,20 @@ versions, the mappings must be tailored to each version.</li>
 <p>The user calls the <code>generate_report</code> function, specifying
 at least:</p>
 <ul>
-<li>A project or database.</li>
-<li>The variables to standardize.</li>
-<li>The GCAM version.</li>
+<li>A project or a database path.</li>
+<li>The variables to standardize (<code>All</code> by default).</li>
+<li>The GCAM version (<code>v7.1</code> by default).</li>
 </ul>
 <p><strong>2. Identifying Required Internal Variables</strong></p>
 <p>The package determines which internal variables must be computed to
-generate the desired output. This is done by examining the
-<em>Variable</em> and <em>Internal_Variable</em> columns in:
-<code>gcamreport/inst/extdata/template/GCAMversion/common-definitions-template.xlsx</code>
-(Variable sheet).</p>
-<p><strong>3. Determining Necessary Queries</strong></p>
-<p>If the specified project needs to be created from the database, the
-package identifies the required queries by:</p>
+generate the desired standardized output. This is done by examining the
+<em>Variable</em> and <em>Internal_Variable</em> columns in in the
+<code>gcamreport/inst/extdata/template/GCAM_version/common-definitions-template.csv</code>
+file. Notice that it is GCAM version dependent.</p>
+<p><strong>3. Determining Necessary Queries and Required Dependent
+Variables</strong></p>
+<p>The package automatically identifies all the required variables and
+queries (in case it create the project from a database) by:</p>
 <ul>
 <li>
 <a href="https://www.geeksforgeeks.org/introduction-to-recursion-2/" class="external-link">Recursively</a>
@@ -129,58 +132,57 @@ s.</li>
 the dependencies column), meaning their queries and dependencies must
 also be considered.</li>
 </ul>
+<p><em>Example</em>: To standardize the <code>Emissions</code> variable,
+the package identifies that it requires both CO2 and non-CO2 emissions.
+Since these are computed independently and rely on different queries,
+the package automatically detects and loads all necessary components to
+ensure a complete calculation.</p>
 <p><strong>4. Loading or Creating the Project</strong></p>
 <p>If the project already exists, it is loaded. Otherwise, a new project
 is created, including all required queries.</p>
-<p><strong>5. Selecting Standardized Variables</strong></p>
-<p>The package <a href="https://www.geeksforgeeks.org/introduction-to-recursion-2/" class="external-link">recursively</a>
-identifies the required queries:</p>
+<p><strong>5. Computing Standardized Variables</strong></p>
+<p>Once all the required variables (desired and dependent) are
+identified, <code>gcamreport</code> systematically computes them
+one-by-one by following a structured workflow:</p>
 <ul>
-<li>By searching the <em>Fun</em> column in
-<code>gcamreport/inst/extdata/mappings/GCAMversion/variables_functions_mapping.csv</code>,
-which corresponds to the function to compute the previously identified
-<em>Internal_Variable</em> s.</li>
-<li>It attempts to compute each variable one by one.</li>
-<li>If a variable depends on a previously uncomputed variable, that
-variable is calculated first. This process may require additional
-variables to be loaded recursively.</li>
-</ul>
-<p><strong>6. Computing Standardized Variables</strong></p>
-<p>Once a variable is identified as required, <code>gcamreport</code>
-systematically computes it by following a structured workflow:</p>
-<ul>
-<li>Function Trigger - The package determines which function to use
-based on the previous point. All functions are defined in
-<code>gcamreport/R/functions.R</code>.</li>
-<li>Query Verification – Before proceeding, the function ensures that
-all required queries for computation are present. If any are missing,
-the process halts.</li>
-<li>Query Loading and Validation – The function loads the necessary
-queries (if needed) and checks for infinite values. If any are detected,
-a warning message is displayed.</li>
-<li>Loading Mapping Files – The package retrieves mapping files stored
-in <code>gcamreport/inst/extdata/mappings/GCAMversion/</code>. During
-this step:
+<li>Step 0: Variable dependency - The package recursively determines if
+the variable depends on a previously uncomputed variable, which will be
+tackled first through the same following steps 1-6. Otherwise, the
+standardization of the selected variable starts.</li>
+<li>Step 1: Function Trigger - The package determines which function to
+use based on the <em>Fun</em> column in
+<code>gcamreport/inst/extdata/mappings/GCAMversion/variables_functions_mapping.csv</code>.
+All functions are defined in <code>gcamreport/R/functions.R</code>.</li>
+<li>Step 2: Query Verification – Before proceeding, the function ensures
+that all required queries for computation are present. If any are
+missing, the process halts.</li>
+<li>Step 3: Query Loading and Validation – The function loads the
+necessary queries (if needed) and checks for infinite values. If any are
+detected, a warning message is displayed.</li>
+<li>Step 4: Loading Mapping Files – The package retrieves mapping files
+stored in <code>gcamreport/inst/extdata/mappings/GCAMversion/</code>.
+During this step:
 <ul>
 <li>Items categorized as <em>NoReported</em> are removed.</li>
 <li>Items specified in the <code>ignore</code> parameter of
 <code>generate_report</code> are also excluded.</li>
 </ul>
 </li>
-<li>Variable Computation – The function executes the required
+<li>Step 5: Variable Computation – The function executes the required
 transformations to generate the standardized variable.</li>
-<li>Storing and Sharing – Finally, the computed standardized variable is
-made available in the global environment for further use.</li>
+<li>Step 6: Storing and Sharing – Finally, the computed standardized
+variable is made available in the global environment for further
+use.</li>
 </ul>
-<p><strong>7. Computing Global (World) Values</strong></p>
+<p><strong>6. Computing Global (World) Values</strong></p>
 <p>For variables where the global value is the sum of regional values,
 this step is performed after regional calculations. For other cases
 (e.g., weighted means), the global value is computed within the
 variable’s calculation process.</p>
-<p><strong>8. Checking NAs or Inf values</strong></p>
+<p><strong>7. Checking NAs or Inf values</strong></p>
 <p>The package automatically reports if there are NAs or infinite values
 in the standardized output. It displays an informative message.</p>
-<p><strong>9. Finalizing the Report</strong></p>
+<p><strong>8. Finalizing the Report</strong></p>
 <p>The standardized dataset is stored. If selected by the user, the user
 interface is launched for further exploration.</p>
 </div>

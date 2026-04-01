@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,6 +91,7 @@
 </ul>
 </li>
 <li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#contribute">How to contribute?</a></li>
 <li><a href="#top-common-warnings-and-error-messages">Top common Warnings and Error Messages</a></li>
 </ul>
 </li>
@@ -106,7 +107,7 @@
 <!-- ------------------------>
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
-<p><code>gcamreport</code> is a tool designed to generate consistent datasets from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), ensuring they meet the reporting standards of the Integrated Assessment Modeling Consortium (<a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>) defined in the <a href="https://github.com/IAMconsortium/common-definitions" class="external-link">Common Definitions</a> repository. In addition, <code>gcamreport</code> features an interactive user interface that allows users to create and download plots in real time and export reduced, formatted datasets in spreadsheet format. The tool is currently compatible with GCAM-core versions <a href="https://zenodo.org/records/6619287" class="external-link">6.0</a>, <a href="https://zenodo.org/records/8010145" class="external-link">7.0</a>, <a href="https://zenodo.org/records/11481167" class="external-link">7.1</a>, and <a href="https://zenodo.org/records/13946379" class="external-link">7.2</a>. Moreover, we support the 2015 and 2021 GCAM base years. Check the <a href="file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/articles/Version_Guide.html">version guide</a> to see how to run your version! <span class="emoji" data-emoji="rocket">🚀</span></p>
+<p><code>gcamreport</code> is a tool designed to generate consistent datasets from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), ensuring they meet the reporting standards of the Integrated Assessment Modeling Consortium (<a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>) defined in the <a href="https://github.com/IAMconsortium/common-definitions" class="external-link">Common Definitions</a> repository. In addition, <code>gcamreport</code> features an interactive user interface that allows users to create and download plots in real time and export reduced, formatted datasets in spreadsheet format. The tool is currently compatible with GCAM-core versions <a href="https://zenodo.org/records/6619287" class="external-link">6.0</a>, <a href="https://zenodo.org/records/8010145" class="external-link">7.0</a>, <a href="https://zenodo.org/records/11481167" class="external-link">7.1</a>, <a href="https://zenodo.org/records/13946379" class="external-link">7.2</a>, <a href="https://zenodo.org/records/15581174" class="external-link">8.2</a>, and the <a href="https://wcrp-cmip.org/mips/scenariomip/" class="external-link">ScenarioMIP project</a> Moreover, we support the 2015 and 2021 GCAM base years. Check the <a href="file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/articles/Version_Guide.html">version guide</a> to see how to run your version! <span class="emoji" data-emoji="rocket">🚀</span></p>
 <p><br></p>
 <!-- ------------------------>
 <!-- ------------------------>
@@ -123,7 +124,7 @@
 <h3 id="with-r">
 <a name="with-R"></a>With R<a class="anchor" aria-label="anchor" href="#with-r"></a>
 </h3>
-<p>There are two ways to install the <code>gcamreport</code> package through R. The <a href="#with-R-light-mode-installation">light mode installation</a> requires only R as it installs the <code>gcamreport</code> package directly from the GitHub repository. It is suitable for general use of the package but not compatible with the user interface. The <a href="#with-R-full-mode-installation">full mode installation</a> requires R, Rstudio and cloning the GitHub repository. It is suitable for general use of the package and allows you to launch the user interface. It is also the best option if you are actively developing or modifying the <code>gcamreport</code> package, as it allows you to modify the mappings and functions to create suitable versions for your GCAM model.</p>
+<p>There are two ways to install the <code>gcamreport</code> package through R. The <a href="#with-R-light-mode-installation">light mode installation</a> is the quickest method, as it installs the package directly from GitHub and only requires R. While suitable for general use, it is incompatible with the graphical user interface. The <a href="#with-R-full-mode-installation">full mode installation</a> requires R, Rstudio and cloning the GitHub repository. This version supports all package functions, including the UI, and is the recommended option for those actively developing or customizing the <code>gcamreport</code> package. This last option is essential if you need to modify mappings or core functions to ensure compatibility with specific versions of your GCAM model.</p>
 <div class="section level4">
 <h4 id="light-mode-installation">
 <a name="with-R-light-mode-installation"></a>Light mode installation<a class="anchor" aria-label="anchor" href="#light-mode-installation"></a>
@@ -221,10 +222,29 @@
 <p><a href="#contents">Back to Contents</a></p>
 <p>The <code>gcamreport</code> package consists of a set of functions divided into two different blocks:</p>
 <ul>
-<li><p>Dataset generation: It creates or loads an existing project and automatically saves the generated dataset that meets the reporting requirements of the <a href="https://www.iamconsortium.org/" class="external-link">IAMC</a> following the naming conventions, definitions, and units established by the <a href="https://github.com/IAMconsortium/common-definitions" class="external-link">Common Definitions</a> repository. Main function: <code><a href="reference/generate_report.html">generate_report()</a></code>. For more information, see this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code>??generate_report</code> in your R console. If you get any warning or error messages, you might want to look at the <a href="#bugs">Warnings and Error Messages</a> section.</p></li>
-<li><p>Interactive user block: it launches an interactive widget that displays the dataset in tabular form, with the ability to filter, reorder and download live. It also displays plots and allows them to be downloaded, aggregated by variables, regions and scenarios. Main function: <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>. For more information see this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html">tutorial</a> or type <code>??launch_gcamreport_ui</code> in your R console. If you get any warning or error messages, it might be useful to have a look at the <a href="#bugs">Top common Warnings and Error Messages</a> section.</p></li>
+<li><p><em>Dataset generation</em>: It creates or loads a GCAM project and automatically saves the generated dataset that meets the reporting requirements of the <a href="https://www.iamconsortium.org/" class="external-link">IAMC</a> —following the naming conventions, definitions, and units established by the <a href="https://github.com/IAMconsortium/common-definitions" class="external-link">Common Definitions</a> repository. The main function is <code><a href="reference/generate_report.html">generate_report()</a></code>. For more information, see this <a href="https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html">tutorial</a> or type <code>??generate_report</code> in your R console. If you get any warning or error messages, you might want to look at the <a href="#bugs">Warnings and Error Messages</a> section.</p></li>
+<li><p><em>Interactive user block</em>: it launches an interactive widget that displays the dataset in tabular form, with the ability to filter, reorder and download live. It also displays plots and allows them to be downloaded, aggregated by variables, regions and scenarios. The main function is <code><a href="reference/launch_gcamreport_ui.html">launch_gcamreport_ui()</a></code>. For more information see this <a href="https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html">tutorial</a> or type <code>??launch_gcamreport_ui</code> in your R console. If you get any warning or error messages, it might be useful to have a look at the <a href="#bugs">Top common Warnings and Error Messages</a> section.</p></li>
 </ul>
 <p>The package also includes some default input files (.Rda) that are read by the different functions. These can be changed by the user as detailed in <a href="https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html">this tutorial</a>.</p>
+<p><br></p>
+<!-- ------------------------>
+<!-- ------------------------>
+</div>
+<div class="section level2">
+<h2 id="how-to-contribute">
+<a name="contribute"></a>How to contribute?<a class="anchor" aria-label="anchor" href="#how-to-contribute"></a>
+</h2>
+<!-- ------------------------>
+<!-- ------------------------>
+<p><a href="#contents">Back to Contents</a></p>
+<p>You are welcome to contribute to this project! Follow the steps below to facilitate the implementation:</p>
+<ol style="list-style-type: decimal">
+<li>Fork this repository.</li>
+<li>Commit your modifications.</li>
+<li>Open a <a href="https://github.com/bc3LC/gcamreport/pulls" class="external-link">Pull Request (PR)</a> into this repository. Make sure you detail the goal of the modification and the changes performed.</li>
+<li>Set <a href="https://github.com/klau506" class="external-link">@klau506</a> as reviewers (or include this mention in the PR requested text).</li>
+<li>Once everything is tested, we will merge the PR for you.</li>
+</ol>
 <p><br></p>
 <!-- ------------------------>
 <!-- ------------------------>

@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">gcamreport</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,14 +77,35 @@ the <code>gcamreport</code> package. It is necessary to have the
 R installation</a> or <a href="https://bc3lc.github.io/gcamreport/index.html#with-docker">Docker</a>.</p>
 <p><span style="color:white">newline</span></p>
 <div class="section level2">
+<h2 id="important-note">Important note:<a class="anchor" aria-label="anchor" href="#important-note"></a>
+</h2>
+<p>Before performing modifications on the package, please ensure
+that:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>You understand the package internals:</strong> Review the <a href="https://bc3lc.github.io/gcamreport/articles/Package_Internals.html">Package
+Internals documentation</a> to understand how the code works under the
+hood.</li>
+<li>
+<strong>You know the best practices to contribute:</strong> Refer to
+the <a href="https://github.com/bc3LC/gcamreport?tab=readme-ov-file#contribute" class="external-link">Contribution
+Section</a> for guidelines on submitting changes to the project.</li>
+<li>
+<strong>You can ensure reproducibility:</strong> Read the <a href="https://bc3lc.github.io/gcamreport/articles/Version_Guide.html">Version
+Guide</a> to learn how to properly trace and document your custom
+version.</li>
+</ol>
+<p><span style="color:white">newline</span></p>
+</div>
+<div class="section level2">
 <h2 id="example-1-step-by-step-to-adapt-current-mappings-to-your-gcam-version">Example 1: step-by-step to adapt current mappings to your GCAM
 version<a class="anchor" aria-label="anchor" href="#example-1-step-by-step-to-adapt-current-mappings-to-your-gcam-version"></a>
 </h2>
 <p>In this example, we assume that the GCAM version is a modified
 version of GCAM core 7.0, with additional or altered agricultural items.
 The goal is to run the <code>generate_report</code> function and adjust
-the mapping files as directed by the messages displayed in the console
-by the <code>gcamreport</code> package.</p>
+the mapping files following the messages displayed in the console by the
+<code>gcamreport</code> package.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow either the <a href="https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation">full
 R installation</a> or the <a href="https://bc3lc.github.io/gcamreport/index.html#with-docker">Docker

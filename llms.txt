@@ -26,6 +26,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
       - [Full mode installation](#full-mode-installation)
     - [With Docker](#with-docker)
   - [Getting Started](#getting-started)
+  - [How to contribute?](#contribute)
   - [Top common Warnings and Error
     Messages](#top-common-warnings-and-error-messages)
 
@@ -47,9 +48,11 @@ and export reduced, formatted datasets in spreadsheet format. The tool
 is currently compatible with GCAM-core versions
 [6.0](https://zenodo.org/records/6619287),
 [7.0](https://zenodo.org/records/8010145),
-[7.1](https://zenodo.org/records/11481167), and
-[7.2](https://zenodo.org/records/13946379). Moreover, we support the
-2015 and 2021 GCAM base years. Check the [version
+[7.1](https://zenodo.org/records/11481167),
+[7.2](https://zenodo.org/records/13946379),
+[8.2](https://zenodo.org/records/15581174), and the [ScenarioMIP
+project](https://wcrp-cmip.org/mips/scenariomip/) Moreover, we support
+the 2015 and 2021 GCAM base years. Check the [version
 guide](file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/articles/Version_Guide.md)
 to see how to run your version! 🚀
 
@@ -64,16 +67,16 @@ There are multiple equivalent ways to install this package:
 ### With R
 
 There are two ways to install the `gcamreport` package through R. The
-[light mode installation](#with-R-light-mode-installation) requires only
-R as it installs the `gcamreport` package directly from the GitHub
-repository. It is suitable for general use of the package but not
-compatible with the user interface. The [full mode
+[light mode installation](#with-R-light-mode-installation) is the
+quickest method, as it installs the package directly from GitHub and
+only requires R. While suitable for general use, it is incompatible with
+the graphical user interface. The [full mode
 installation](#with-R-full-mode-installation) requires R, Rstudio and
-cloning the GitHub repository. It is suitable for general use of the
-package and allows you to launch the user interface. It is also the best
-option if you are actively developing or modifying the `gcamreport`
-package, as it allows you to modify the mappings and functions to create
-suitable versions for your GCAM model.
+cloning the GitHub repository. This version supports all package
+functions, including the UI, and is the recommended option for those
+actively developing or customizing the `gcamreport` package. This last
+option is essential if you need to modify mappings or core functions to
+ensure compatibility with specific versions of your GCAM model.
 
 #### Light mode installation
 
@@ -198,13 +201,13 @@ error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/re
 The `gcamreport` package consists of a set of functions divided into two
 different blocks:
 
-- Dataset generation: It creates or loads an existing project and
+- *Dataset generation*: It creates or loads a GCAM project and
   automatically saves the generated dataset that meets the reporting
-  requirements of the [IAMC](https://www.iamconsortium.org/) following
+  requirements of the [IAMC](https://www.iamconsortium.org/) —following
   the naming conventions, definitions, and units established by the
   [Common
   Definitions](https://github.com/IAMconsortium/common-definitions)
-  repository. Main function:
+  repository. The main function is
   [`generate_report()`](https://bc3lc.github.io/gcamreport/reference/generate_report.md).
   For more information, see this
   [tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html)
@@ -212,11 +215,11 @@ different blocks:
   or error messages, you might want to look at the [Warnings and Error
   Messages](#bugs) section.
 
-- Interactive user block: it launches an interactive widget that
+- *Interactive user block*: it launches an interactive widget that
   displays the dataset in tabular form, with the ability to filter,
   reorder and download live. It also displays plots and allows them to
-  be downloaded, aggregated by variables, regions and scenarios. Main
-  function:
+  be downloaded, aggregated by variables, regions and scenarios. The
+  main function is
   [`launch_gcamreport_ui()`](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.md).
   For more information see this
   [tutorial](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.html)
@@ -228,6 +231,25 @@ The package also includes some default input files (.Rda) that are read
 by the different functions. These can be changed by the user as detailed
 in [this
 tutorial](https://bc3lc.github.io/gcamreport/articles/Modify_Mapping_Template_Tutorial.html).
+
+  
+
+## How to contribute?
+
+[Back to Contents](#contents)
+
+You are welcome to contribute to this project! Follow the steps below to
+facilitate the implementation:
+
+1.  Fork this repository.
+2.  Commit your modifications.
+3.  Open a [Pull Request
+    (PR)](https://github.com/bc3LC/gcamreport/pulls) into this
+    repository. Make sure you detail the goal of the modification and
+    the changes performed.
+4.  Set [@klau506](https://github.com/klau506) as reviewers (or include
+    this mention in the PR requested text).
+5.  Once everything is tested, we will merge the PR for you.
 
   
 

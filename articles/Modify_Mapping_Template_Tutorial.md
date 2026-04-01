@@ -8,12 +8,30 @@ or [Docker](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 
 newline
 
+## Important note:
+
+Before performing modifications on the package, please ensure that:
+
+1.  **You understand the package internals:** Review the [Package
+    Internals
+    documentation](https://bc3lc.github.io/gcamreport/articles/Package_Internals.html)
+    to understand how the code works under the hood.
+2.  **You know the best practices to contribute:** Refer to the
+    [Contribution
+    Section](https://github.com/bc3LC/gcamreport?tab=readme-ov-file#contribute)
+    for guidelines on submitting changes to the project.
+3.  **You can ensure reproducibility:** Read the [Version
+    Guide](https://bc3lc.github.io/gcamreport/articles/Version_Guide.html)
+    to learn how to properly trace and document your custom version.
+
+newline
+
 ## Example 1: step-by-step to adapt current mappings to your GCAM version
 
 In this example, we assume that the GCAM version is a modified version
 of GCAM core 7.0, with additional or altered agricultural items. The
 goal is to run the `generate_report` function and adjust the mapping
-files as directed by the messages displayed in the console by the
+files following the messages displayed in the console by the
 `gcamreport` package.
 
 1.  Follow either the [full R

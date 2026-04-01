@@ -51,11 +51,11 @@ library(gcamreport)
 
 ``` r
 
-dbpath <- "/path/to/database"
-dbname <- "gcamdb_name"
-prjname <- "awesomeProj.dat"
+db_path <- "/path/to/database"
+db_name <- "gcamdb_name"
+prj_name <- "awesomeProj.dat"
 scen <- c("scen1", "scen2", "scen3")
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 ```
 
 Notice that the extension is included in the project name. Accepted
@@ -71,8 +71,8 @@ Thus, your database path will be something like `/app/path/to/database`.
 
 ``` r
 
-generate_report(db_path = dbpath, db_name = dbname, prj_name = prjname, 
-                GCAM_version = GCAMv, scenarios = scen, final_year = 2050,
+generate_report(db_path = db_path, db_name = db_name, prj_name = prj_name, 
+                GCAM_version = GCAM_version, scenarios = scen, final_year = 2050,
                 launch_ui = FALSE)
 ```
 
@@ -85,8 +85,8 @@ and `.xlsx` at `/path/to/database/awesomeProj_standardized.RData`,
 `/path/to/database/awesomeProj_standardized.xlsx`.
 
 This procedure will also generate a project file at
-`/path/to/database/dbname_prjname.dat` with all the loaded queries. You
-can directly use it as indicated in [Example 2](#example2).
+`/path/to/database/db_name_prj_name.dat` with all the loaded queries.
+You can directly use it as indicated in [Example 2](#example2).
 
 The terminal will output the performed vetting verification and their
 final status.
@@ -140,7 +140,7 @@ library(gcamreport)
 
 mypath <- "/path/to/project/myProj.dat"
 scen <- c('scen1', 'scen2', 'scen3')
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 ```
 
 Notice that the extension is included. Accepted extensions are `.dat` &
@@ -158,7 +158,7 @@ Thus, your project path will be something like
 ``` r
 
 generate_report(prj_name = mypath, scenarios = scen, final_year = 2050, 
-                GCAM_version = GCAMv, launch_ui = FALSE)
+                GCAM_version = GCAM_version, launch_ui = FALSE)
 ```
 
 Notice that the dataset will automatically be saved in `.RData`, `.csv`
@@ -171,7 +171,7 @@ status.
 
 newline
 
-## Example 3: save or not the output and specify the file format or the directory
+## Example 3: output management
 
 Suppose you are in the situation of one of the previous examples, but
 you want to either not save the standardized output, save it in `.csv`,
@@ -299,7 +299,7 @@ generate_report(..., desired_continents = c('ASIA','REF'))
 
 newline
 
-## Example 5: specify the variables
+## Example 5: specify the desired variables
 
 Suppose you are in the situation of one of the previous examples, but
 you want to consider only some variables in the standardized dataset.
@@ -324,11 +324,11 @@ library(gcamreport)
 ```
 
 3.  Check which are the available variables for reporting. The following
-    command will print a list with all the possibilities.
+    command will print a list with all the possibilities according to
+    your `GCAM_version`.
 
 ``` r
-
-available_variables()
+available_variables(GCAM_version = 'v7.1)
 ```
 
 In case you want to save them in a vector, you can simply assign the
@@ -340,15 +340,29 @@ output. You can also skip the console printing by setting
 avail_var <- available_variables(print = FALSE)
 ```
 
-4.  Use [example1](#example1) database or [example2](#example2) project
+4.  To select an entire family of variables, use the `*` notation. For
+    example, setting `desired_variables = Emissions|BC*` will include
+    all sub-categories such as `Emissions|BC|AFOLU`,
+    `Emissions|BC|Energy`, and `Emissions|BC|Industrial Processes`).
+
+**Note on aggregation**: If you manually specify only certain variables
+within a group, the parent variable will be calculated as the sum of
+those specific selections. For instance, if you select only
+`Final Energy|Electricity` and `Final Energy|Gases`, the total
+`Final Energy` value will be the sum of these two, excluding other
+sectors like `Industry` or `Heat.`
+
+5.  If you want to exclude specific variables instead of selecting them,
+    set `inverse_desired_variables = TRUE`. In this mode, the package
+    will process all available variables except those listed in
+    `desired_variables`.
+
+6.  Use [example1](#example1) database or [example2](#example2) project
     description and add all the extra parameters that you consider in
     the `generate_report` function (e.g, final year, desired
     scenarios…). Specify the variables through the `desired_variables`
     parameter. You can specify a vector with all the desired variables
-    names fully written, or also consider all variables that start with
-    the same name. This last feature, allows you to easily select all
-    variables within a group, such as *Emissions*, *Emissions\|CO2*, or
-    *Agricultural Demand*
+    names fully written, or also consider the asterik notation.
 
 ``` r
 
@@ -357,19 +371,14 @@ generate_report(...,
               desired_variables = c('Agricultural Demand|Crops|Energy',
                                     'Agricultural Demand|Crops|Feed',
                                     'Capacity Additions|Electricity|Wind|Onshore', 
-                                    'Emissions|BC|Energy*')) # This will select,
-                                                             # Emissions|BC|Energy,
-                                                             # Emissions|BC|Energy|Demand|Industry, 
-                                                             # Emissions|BC|Energy|Demand|Residential and Commercial,
-                                                             # Emissions|BC|Energy|Demand|Transportation,
-                                                             # Emissions|BC|Energy|Supply
+                                    'Emissions|BC|Energy*'))
 ```
 
-In case you specify only some variables within a group, they will make
-up the total value. For example, if we select *Final
-Energy\|Electricity* and *Final Energy\|Gases*, then *Final Energy* will
-be the sum of these two sectors, and will not consider *Final
-Energy\|Industry* or *Final Energy\|Heat*.
+**Note**: If you create a project from scratch with a limited variable
+selection, only the necessary queries will be loaded to save processing
+time and disk space. Please keep in mind that if you later decide to
+include additional variables, you might need to manually add the
+required queries or rebuild the project to ensure all data is available.
 
 newline
 
@@ -398,7 +407,7 @@ and if you are using R, run
 library(gcamreport)
 ```
 
-3.  Check which are the available GWP and CAM versions for reporting.
+3.  Check which are the available GWP and GCAM versions for reporting.
     The following command will print a list with all the possibilities.
 
 ``` r
@@ -485,11 +494,11 @@ library(gcamreport)
 
 ``` r
 
-dbpath <- "/path/to/database"
-dbname <- "gcamdb_name"
-prjname <- "awesomeProj.dat"
+db_path <- "/path/to/database"
+db_name <- "gcamdb_name"
+prj_name <- "awesomeProj.dat"
 scen <- c("scen1", "scen2", "scen3")
-GCAMv <- "v7.1"
+GCAM_version <- "v7.1"
 new_queries_general_file <- "path/to/your/new_queries_file.xml"
 ```
 
@@ -508,9 +517,9 @@ referred to as `/app`. Thus, your databse path will be something like
 
 ``` r
 
-generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, 
-                prj_name = prjname, scenarios = scen, final_year = 2050, 
-                GCAM_version = GCAMv, launch_ui = FALSE, 
+generate_report(db_path = db_path, query_path = querypath, db_name = db_name, 
+                prj_name = prj_name, scenarios = scen, final_year = 2050, 
+                GCAM_version = GCAM_version, launch_ui = FALSE, 
                 queries_general_file = new_queries_general_file)
 ```
 
@@ -523,15 +532,15 @@ and `.xlsx` at `/path/to/database/awesomeProj_standardized.RData`,
 `/path/to/database/awesomeProj_standardized.xlsx`.
 
 This procedure will also generate a project file at
-`/path/to/database/dbname_prjname.dat` with all the loaded queries. You
-can directly use it as indicated in [Example 2](#example2).
+`/path/to/database/db_name_prj_name.dat` with all the loaded queries.
+You can directly use it as indicated in [Example 2](#example2).
 
 The terminal will output the performed vetting verifications and their
 final status.
 
 To specify the *nonCO2* query file you can proceed analogously. However,
 check carefully its default structure and the function where is used:
-[data_query](file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/reference/data_query.md).
+[data_query](https://bc3lc.github.io/gcamreport/reference/data_query.html).
 
 newline
 
@@ -549,7 +558,7 @@ see this error in your R console:
     Error in localDBConn(db_path, db_name, migabble = FALSE) : 
       Database does not exist or is invalid: examples/database_basexdb_ref
     In addition: Warning messages:
-    1: In normalizePath(dbPath) :
+    1: In normalizePath(db_path) :
       path[1]="examples": No such file or directory
     2: The following named parsers don't match the column names: name, date, version 
 
