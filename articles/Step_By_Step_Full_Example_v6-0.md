@@ -31,7 +31,6 @@ newline
 3.  Generate the standardized dataset:
 
 ``` r
-
 ## -- load gcamreport library.
 library(gcamreport)
 
@@ -86,7 +85,6 @@ newline
 3.  Generate the standardized dataset:
 
 ``` r
-
 ## -- load gcamreport library.
 library(gcamreport)
 

@@ -45,7 +45,6 @@ files following the messages displayed in the console by the
     indicating the most similar GCAM-core version:
 
 ``` r
-
 generate_report(db_path = '../path/to/your/db', db_name = 'name_of_the_db',
                 prj_name = 'name_of_the_project.dat', scenarios = c('scenarios','list'),
                 final_year = XXX, GCAM_version = 'v7.0')
@@ -80,7 +79,6 @@ and search (`Ctrl + F`) for `ag_demand_map` to find the full path. In
 this example:
 
 ``` r
-
 ag_demand_map_v7.0 <- read.csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "ag_demand_map.csv"),
                                skip = 1, stringsAsFactors = FALSE) %>% gather_map()
 ```
@@ -113,7 +111,6 @@ navigate to `Build > More > Document`.
     project:
 
 ``` r
-
 generate_report(prj_name = '../path/to/your/dbname_of_the_project.dat',
                 scenarios = c('scenarios','list'),
                 final_year = XXX, GCAM_version = 'v7.0')
@@ -170,7 +167,6 @@ git clone --branch vUpdated https://github.com/bc3LC/gcamreport.git
 or when installing through Rstudio, for instance:
 
 ``` r
-
 # to install the tagged version "vUpdated"
 devtools::install_github('bc3LC/gcamreport@vUpdated')
 
@@ -262,7 +258,6 @@ not have their own category in the template.
     `generate_report` function specifying the new query file path:
 
     ``` r
-
     generate_report(..., queries_general_file = "path/to/your/new_queries_general_file.xml")
     ```
 
@@ -306,7 +301,6 @@ git clone --branch vAvocado https://github.com/bc3LC/gcamreport.git
 or when installing through Rstudio, for instance:
 
 ``` r
-
 # to install the tagged version "vAvocado"
 devtools::install_github('bc3LC/gcamreport@vAvocado')
 
@@ -381,7 +375,6 @@ git clone --branch vTransport https://github.com/bc3LC/gcamreport.git
 or when installing through Rstudio, for instance:
 
 ``` r
-
 # to install the tagged version "vTransport"
 devtools::install_github('bc3LC/gcamreport@vTransport')
 

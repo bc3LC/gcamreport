@@ -59,7 +59,6 @@ git clone --branch gcam-v6.0-depracated https://github.com/bc3LC/gcamreport.git
 Or install the suitable version in your R session:
 
 ``` r
-
 # to install the tagged version "v6.0.1-depracated"
 devtools::install_github('bc3LC/gcamreport@v6.0.1-depracated')
 
@@ -71,16 +70,16 @@ newline
 
 Find below a description of all the `gcamreport` releases:
 
-| `gcamreport` tag-version | compatible `GCAM` version and/or study |
-|----|----|
-| v1.0.2 | GCAM 7.0, GCAM 7.1, GCAM 7.2, GCAM8.2, GCAMScenarioMIP; 2015 and 2021 GCAM base year |
-| v1.0.1 | GCAM 7.0, GCAM 7.1, and GCAM 7.2; 2015 and 2021 GCAM base year |
-| v1.0.0 | GCAM 6.0, GCAM 7.0, and GCAM 7.1 |
-| depracted_v7.0.1 | GCAM 7.0 |
-| depracted_v7.0.0 | GCAM 7.0 |
-| depracted_v6.0.1 | GCAM 6.0 |
-| depracted_v6.0.0 | GCAM 6.0 |
-| depracted_v6.0.0-gas | GCAM 6.0 with gas extra features |
+| `gcamreport` tag-version | compatible `GCAM` version and/or study                                               |
+|--------------------------|--------------------------------------------------------------------------------------|
+| v1.0.2                   | GCAM 7.0, GCAM 7.1, GCAM 7.2, GCAM8.2, GCAMScenarioMIP; 2015 and 2021 GCAM base year |
+| v1.0.1                   | GCAM 7.0, GCAM 7.1, and GCAM 7.2; 2015 and 2021 GCAM base year                       |
+| v1.0.0                   | GCAM 6.0, GCAM 7.0, and GCAM 7.1                                                     |
+| depracted_v7.0.1         | GCAM 7.0                                                                             |
+| depracted_v7.0.0         | GCAM 7.0                                                                             |
+| depracted_v6.0.1         | GCAM 6.0                                                                             |
+| depracted_v6.0.0         | GCAM 6.0                                                                             |
+| depracted_v6.0.0-gas     | GCAM 6.0 with gas extra features                                                     |
 
 You can see the new feature of each release and download the
 corresponding versions

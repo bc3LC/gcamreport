@@ -23,14 +23,12 @@ the same folder where `myDb` is located.
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -48,7 +46,6 @@ library(gcamreport)
     tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-6-specify-the-query-files).
 
 ``` r
-
 dbpath <- "/path/to/database"
 dbname <- "gcamdb_name"
 prjname <- "awesomeProj.dat"
@@ -68,7 +65,6 @@ Thus, your database path will be something like `/app/path/to/database`.
     least 2025.
 
 ``` r
-
 generate_report(db_path = dbpath, db_name = dbname, prj_name = prjname, 
                 scenarios = scen, final_year = 2050, launch_ui = FALSE)
 ```
@@ -108,14 +104,12 @@ of them, or if you need to generate the project, see
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -134,7 +128,6 @@ library(gcamreport)
     detailed in [Example1](#example1).
 
 ``` r
-
 mypath <- "/path/to/project/myProj.dat"
 scen <- c('scen1', 'scen2', 'scen3')
 ```
@@ -152,7 +145,6 @@ Thus, your project path will be something like
     example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-
 generate_report(prj_name = mypath, scenarios = scen, final_year = 2050, 
                 launch_ui = FALSE)
 ```
@@ -181,14 +173,12 @@ you want to either not save the standardized output, save it in `.csv`,
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -199,7 +189,6 @@ library(gcamreport)
     `save_output` parameter:
 
 ``` r
-
 ## -- save the dataset in CSV and XLSX format
 generate_report(..., save_output = TRUE)    # this is the default option
 
@@ -221,7 +210,6 @@ generate_report(..., save_output = FALSE)
     extension, check step 3.
 
 ``` r
-
 ## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'
 generate_report(..., output_file = '/desired/directory/awesomeOutput')
 ```
@@ -246,14 +234,12 @@ arable land of **only** the selected regions.
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -262,7 +248,6 @@ library(gcamreport)
     possibilities.
 
 ``` r
-
 available_regions()
 available_continents()
 ```
@@ -272,7 +257,6 @@ output. You can also skip the console printing by setting
 `print = FALSE`.
 
 ``` r
-
 avail_reg <- available_regions(print = FALSE)
 avail_cont <- available_continents()
 ```
@@ -285,7 +269,6 @@ avail_cont <- available_continents()
     both can be specified at the same time.
 
 ``` r
-
 ## -- specify the desired regions
 generate_report(..., desired_regions = c('EU-15','EU-12'))
 
@@ -308,14 +291,12 @@ you want to consider only some variables in the standardized dataset.
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -323,7 +304,6 @@ library(gcamreport)
     command will print a list with all the possibilities.
 
 ``` r
-
 available_variables()
 ```
 
@@ -332,7 +312,6 @@ output. You can also skip the console printing by setting
 `print = FALSE`.
 
 ``` r
-
 avail_var <- available_variables(print = FALSE)
 ```
 
@@ -347,7 +326,6 @@ avail_var <- available_variables(print = FALSE)
     *Agricultural Demand*
 
 ``` r
-
 ## -- specify the desired variables
 generate_report(..., 
               desired_variables = c('Agricultural Demand|Crops|Energy',
@@ -405,14 +383,12 @@ it and automatically save it in the same folder where `myDb` is located.
     run
 
 ``` r
-
 devtools::load_all()
 ```
 
 and if you are using R, run
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -428,7 +404,6 @@ library(gcamreport)
     tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables).
 
 ``` r
-
 dbpath <- "/path/to/database"
 dbname <- "gcamdb_name"
 prjname <- "awesomeProj.dat"
@@ -450,7 +425,6 @@ referred to as `/app`. Thus, your databse path will be something like
     example, 2050. By default is 2100 and it should be at least 2025.
 
 ``` r
-
 generate_report(db_path = dbpath, query_path = querypath, db_name = dbname, 
                 prj_name = prjname, scenarios = scen, final_year = 2050, 
                 launch_ui = FALSE, queries_general_file = new_queries_general_file)
@@ -529,7 +503,6 @@ from a zip folder, an intermediate folder has appeared. In addition:
       refer to it as
 
 ``` r
-
 # option 1: full path
 generate_report(db_path = "/app/some_databases", db_name = "amazingDatabase")
 
@@ -576,7 +549,6 @@ In addition:
       it as
 
 ``` r
-
 # option 1: full path
 generate_report("/app/amazingData/myData.dat")
 

@@ -18,7 +18,6 @@ will be generated and automatically saved in the same folder where
 1.  Load `gcamreport` library.
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -26,7 +25,6 @@ library(gcamreport)
     project name, and the considered scenarios in variables.
 
 ``` r
-
 dbpath <- "/path/to/database"
 dbname <- "gcamdb_name"
 prjname <- "awesomeProj.dat"
@@ -45,7 +43,6 @@ called `/app`. Thus, your database path will be something like
     By default is 2100 and it should be at least 2025.
 
 ``` r
-
 run(db_path = dbpath, query_path = querypath, db_name = dbname, prj_name = prjname, scenarios = scen, final_year = 2050, launch_ui = FALSE)
 ```
 
@@ -77,14 +74,12 @@ have all of them or you need to generate the project, see
 1.  Load `gcamreport` library.
 
 ``` r
-
 library(gcamreport)
 ```
 
 2.  Store the project path in a variable.
 
 ``` r
-
 mypath <- "/path/to/project/myProj.dat"
 ```
 
@@ -100,7 +95,6 @@ called `/app`. Thus, your database path will be something like
     By default is 2100 and it should be at least 2025.
 
 ``` r
-
 run(project_path = mypath, final_year = 2050, launch_ui = FALSE)
 ```
 
@@ -122,7 +116,6 @@ extensions.
 1.  Load `gcamreport` library.
 
 ``` r
-
 library(gcamreport)
 ```
 
@@ -132,7 +125,6 @@ library(gcamreport)
     `save_output` parameter
 
 ``` r
-
 ## -- save the dataset in CSV and XLSX format
 run(..., save_output = TRUE)    # this is the default option
 
@@ -154,7 +146,6 @@ run(..., save_output = FALSE)
     explanation.
 
 ``` r
-
 ## -- save the dataset in '/desired/directory' and in a file called 'awesomeOutput'
 run(..., file_name = '/desired/directory/awesomeOutput')
 ```
@@ -199,7 +190,6 @@ In addition:
       it as
 
 ``` r
-
 # option 1: full path
 run("/app/amazingData/myData.dat")
 

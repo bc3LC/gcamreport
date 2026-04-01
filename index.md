@@ -87,7 +87,6 @@ ensure compatibility with specific versions of your GCAM model.
 2.  Open R and install the `gcamreport` package:
 
 ``` r
-
 install.packages('devtools')
 devtools::install_github('bc3LC/gcamreport')
 ```
@@ -118,9 +117,8 @@ git clone https://github.com/bc3LC/gcamreport.git
     open the project. Load the library:
 
 ``` r
-
 install.packages('devtools')
-devtools::load_all()
+devtools::load_all(".", reset = TRUE)
 ```
 
 Now `gcamreport` package is fully loaded. Enjoy! 😄
@@ -170,7 +168,6 @@ This should prompt an R console in your terminal.
 6.  Install the `gcamreport` package in the new R console:
 
 ``` r
-
 remotes::install_github("bc3LC/gcamreport") #you can skip all updates in case you are asked
 library(gcamreport)
 ```
@@ -298,7 +295,6 @@ you specified correctly the path. In addition:
       it as
 
 ``` r
-
   # option 1: full path
   generate_report("/app/amazingData/myData.dat")
   
