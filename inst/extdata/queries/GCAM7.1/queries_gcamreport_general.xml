@@ -1444,4 +1444,13 @@ A user can adjust the query to search for any of:
          <showAttribute attribute-name="year" level="technology"/>
       </supplyDemandQuery>
    </aQuery>
+   <aQuery>
+      <all-regions />
+      <supplyDemandQuery title="Capital investment demands by tech">
+         <axis1 name="technology">technology[@name]</axis1>
+         <axis2 name="Year">technology[@year]</axis2>
+         <xPath buildList="true" dataName="capital" group="false" sumAll="false">*[@type='sector']/*[@type = 'subsector']/*[@type = 'technology']/*[@type='input' (: collapse :)]/capital/text()</xPath>
+         <comments>Note: these are investment demands per timestep</comments>
+      </supplyDemandQuery>
+   </aQuery>
 </queries>
