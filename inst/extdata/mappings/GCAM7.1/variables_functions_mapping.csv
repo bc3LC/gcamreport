@@ -63,7 +63,8 @@ elec_capital_clean;get_elec_capital;;
 elec_investment_clean;get_elec_investment;elec_capacity_add;
 transmission_invest_clean;get_transmission_invest;elec_capacity_add_clean;
 resource_investment_clean;get_resource_investment;;resource production by tech and vintage,regional primary energy prices,prices of all markets
-total_investment_clean;get_total_investment;elec_investment_clean,resource_investment_clean;
+nonelec_investment_clean;get_nonelec_investment;;Capital investment demands by tech
+total_investment_clean;get_total_investment;elec_investment_clean,resource_investment_clean,nonelec_investment_clean;
 iron_steel_imports;get_iron_steel_imports;;regional iron and steel sources
 iron_steel_exports;get_iron_steel_exports;;traded iron and steel
 iron_steel_clean;get_iron_steel_clean;iron_steel_imports,iron_steel_exports;
