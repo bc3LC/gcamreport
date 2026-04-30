@@ -227,6 +227,11 @@ investment_v8.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappin
   dplyr::mutate(value = as.numeric(value))
 use_data(investment_v8.2, overwrite = T)
 
+nonelec_investment_map_v8.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM8.2", "nonelec_investment_map.csv"),
+                                               comment = "#", na = ""
+) %>% gather_map()
+use_data(nonelec_investment_map_v8.2, overwrite = T)
+
 
 carbon_content_v8.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM8.2", "L202.CarbonCoef.csv"),
                                 comment = "#", na = ""
