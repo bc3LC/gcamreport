@@ -85,6 +85,7 @@ git checkout tags/<tag name>
         Load the library:
 
     ``` r
+
     install.packages('devtools')
     devtools::load_all()
     ```
@@ -93,6 +94,7 @@ git checkout tags/<tag name>
         library spcifying the branch or the tag:
 
     ``` r
+
     install.packages('remotes')
     remotes::install_github("bc3LC/gcamreport@<branch or tag name>") #you can skip all updates in case you are asked
     library(gcamreport)
@@ -153,6 +155,7 @@ This should prompt an R terminal in your console.
     the new R console:
 
 ``` r
+
 remotes::install_github("bc3LC/gcamreport@<branch or tag name>") #you can skip all updates in case you are asked
 library(gcamreport)
 ```
@@ -254,6 +257,7 @@ you specified correctly the path. In addition:
       it as
 
 ``` r
+
   # option 1: full path
   run("/app/amazingData/myData.dat")
   

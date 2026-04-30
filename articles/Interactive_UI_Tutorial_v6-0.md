@@ -15,6 +15,7 @@ for more information), simply set `launch_ui` to `TRUE` or do not
 specify anything.
 
 ``` r
+
 run(..., launch_ui = TRUE)    # this is the default option
 ```
 
@@ -25,6 +26,7 @@ newline
 After generating the dataset with the `run()` function, simply run in R
 
 ``` r
+
 launch_gcamreport_ui()
 ```
 

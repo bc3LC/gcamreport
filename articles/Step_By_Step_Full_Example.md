@@ -28,18 +28,21 @@ newline
     run
 
 ``` r
+
 devtools::load_all(".", reset = TRUE)
 ```
 
 and if you are using R, run
 
 ``` r
+
 library(gcamreport)
 ```
 
 4.  Generate the standardized dataset:
 
 ``` r
+
 ## -- store the database path, name, and scenarios in a variable.
 db_path <- "examples"
 dbname <- "database_basexdb_ref"
@@ -117,18 +120,21 @@ newline
     run
 
 ``` r
+
 devtools::load_all(".", reset = TRUE)
 ```
 
 and if you are using R, run
 
 ``` r
+
 library(gcamreport)
 ```
 
 4.  Generate the standardized dataset:
 
 ``` r
+
 ## -- store the project path and name in a variable.
 prj_name <- "examples/example2_v7.1.dat"
 GCAM_version = 'v7.1'
@@ -198,12 +204,14 @@ installation](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 3.  Load the `gcamreport` library:
 
 ``` r
+
 devtools::load_all(".", reset = TRUE)
 ```
 
 4.  Launch the user interface for the standardized dataset:
 
 ``` r
+
 ## -- load gcamreport library.
 devtools::load_all(".", reset = TRUE) # if using Rstudio or Docker
 library(gcamreport) # if using R
@@ -234,6 +242,7 @@ error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/re
     can also use it to launch the user interface:
 
 ``` r
+
 ## -- load gcamreport library.
 devtools::load_all(".", reset = TRUE) # if using Rstudio or Docker
 library(gcamreport) # if using R

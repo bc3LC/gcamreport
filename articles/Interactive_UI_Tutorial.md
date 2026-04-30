@@ -20,6 +20,7 @@ for more information), simply set `launch_ui` to `TRUE` or do not
 specify anything since this is the default option.
 
 ``` r
+
 generate_report(..., launch_ui = TRUE)    # this is the default option
 ```
 
@@ -35,6 +36,7 @@ something like `/path/to/your/database/..._standardize.RData` or
 `/path/to/your/project_file/..._standardize.RData`.
 
 ``` r
+
 # lanuch the user interface specifying the dataset variable name
 launch_gcamreport_ui(data = report,           # report is the name of the  
                      GCAM_version = 'v7.1')   # standardized dataset generated  
@@ -124,6 +126,7 @@ Rproject and that the R session working directory points the
       refer to it as
 
 ``` r
+
 # option 1: full path
 generate_report(data_path = "/app/examples/amazingDataset.RData")
 
