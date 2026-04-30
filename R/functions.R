@@ -5449,7 +5449,11 @@ get_total_investment <- function(GCAM_version = "v7.1") {
 
   total_investment_clean <- dplyr::bind_rows(
     resource_investment_clean,
-    elec_investment_clean
+    elec_investment_clean,
+    nonelec_investment_clean %>%
+      dplyr::filter(var %in% c("Investment|Energy Supply|Hydrogen",
+                                "Investment|Energy Supply|Liquids",
+                                "Investment|Energy Supply|Gases"))
   ) %>%
     dplyr::group_by(scenario,region,year) %>%
     dplyr::summarise(value = sum(value)) %>%
@@ -5459,6 +5463,54 @@ get_total_investment <- function(GCAM_version = "v7.1") {
 
   total_investment_clean <<- total_investment_clean
 }
+
+
+#' get_nonelec_investment
+#'
+#' Calculate investment for non-electricity energy supply sectors (hydrogen,
+#' refining/liquids, gas processing) using GCAM's native "Capital investment
+#' demands by tech" query. Values are converted from 1975$/timestep to
+#' billion 2010$/yr.
+#' @param GCAM_version Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+#' @keywords internal investment process
+#' @return `nonelec_investment_clean` global variable
+#' @importFrom magrittr %>%
+#' @export
+get_nonelec_investment <- function(GCAM_version = "v7.1") {
+  sector <- subsector <- technology <- var <- value <-
+    nonelec_investment_clean <- NULL
+
+  check_queries("nonelec_investment_clean", GCAM_version)
+
+  inv_map <- get(paste('nonelec_investment_map', GCAM_version, sep = '_'),
+                 envir = asNamespace("gcamreport"))
+
+  raw <- check_inf(
+    rgcam::getQuery(prj, "Capital investment demands by tech"),
+    dataset_name = "Capital investment demands by tech"
+  ) %>%
+    dplyr::filter(sector %in% unique(inv_map$sector))
+
+  # timestep length: 5 years for all future periods
+  # annualize and convert 1975$ -> billion 2010$
+  conv <- get(paste('convert', GCAM_version, sep = '_'),
+              envir = asNamespace("gcamreport"))[['conv_75USD_10USD']]
+
+  nonelec_investment_clean <- raw %>%
+    dplyr::inner_join(inv_map, by = c("sector", "subsector", "technology")) %>%
+    dplyr::mutate(value = value * conv / 5) %>%
+    tidyr::pivot_longer(cols = dplyr::starts_with("var"),
+                        values_to = "var", values_drop_na = TRUE) %>%
+    dplyr::filter(var != "") %>%
+    dplyr::select(-name) %>%
+    dplyr::group_by(scenario, region, var, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = TRUE)) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(dplyr::all_of(gcamreport::long_columns))
+
+  nonelec_investment_clean <<- nonelec_investment_clean
+}
+
 
 # Transport
 # ==============================================================================================
