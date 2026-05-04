@@ -79,7 +79,6 @@
 <span>  interactive <span class="op">=</span> <span class="cn">F</span>,</span>
 <span>  GCAM_version <span class="op">=</span> <span class="st">"v7.1"</span>,</span>
 <span>  GWP_version <span class="op">=</span> <span class="st">"AR5"</span>,</span>
-<span>  ref_scen_name <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  queries_nonCO2_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  all_tier1 <span class="op">=</span> <span class="cn">F</span></span>
@@ -154,10 +153,6 @@ Note2: Global variables like "Emissions" will only account for selected variable
 
 <dt id="arg-gwp-version">GWP_version<a class="anchor" aria-label="anchor" href="#arg-gwp-version"></a></dt>
 <dd><p>Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.</p></dd>
-
-
-<dt id="arg-ref-scen-name">ref_scen_name<a class="anchor" aria-label="anchor" href="#arg-ref-scen-name"></a></dt>
-<dd><p>Name of the Reference scenario. Necessary to compute Expenditure variables. If left empty, `Reference` and `Baseline` tags will be looked for. If not encountered, the first scenario of your project will be considered as the Reference.</p></dd>
 
 
 <dt id="arg-queries-general-file">queries_general_file<a class="anchor" aria-label="anchor" href="#arg-queries-general-file"></a></dt>

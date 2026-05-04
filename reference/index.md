@@ -460,6 +460,16 @@
   : nonco2_emissions_list_v8.2
 - [`nonco2_emissions_list_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vScenarioMIPCMIP7.md)
   : nonco2_emissions_list_vScenarioMIPCMIP7
+- [`nonelec_investment_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.0.md)
+  : nonelec_investment_map_v7.0
+- [`nonelec_investment_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.1.md)
+  : nonelec_investment_map_v7.1
+- [`nonelec_investment_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.2.md)
+  : nonelec_investment_map_v7.2
+- [`nonelec_investment_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v8.2.md)
+  : nonelec_investment_map_v8.2
+- [`nonelec_investment_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_vScenarioMIPCMIP7.md)
+  : nonelec_investment_map_vScenarioMIPCMIP7
 - [`primary_energy_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.0.md)
   : primary_energy_map_v7.0
 - [`primary_energy_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.1.md)

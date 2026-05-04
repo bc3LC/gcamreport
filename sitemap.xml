@@ -268,6 +268,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_lu_co2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonbio_tmp.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonco2_emissions.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/get_nonelec_investment.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_prod.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/get_pe_trade_supply.html</loc></url>
@@ -365,6 +366,11 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v8.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.2.html</loc></url>
