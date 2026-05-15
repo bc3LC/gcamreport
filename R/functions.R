@@ -3054,12 +3054,12 @@ get_refliq_bioshare <- function(GCAM_version = "v7.1") {
 #'
 #' @param GCAM_version Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
 #' @keywords internal co2
-#' @return `co2_sequestration_clean` and `co2_removal_raw` global variables.
+#' @return `co2_sequestration_clean`, `co2_removal_raw`, and `gross_removals_clean` global variables.
 #' @importFrom magrittr %>%
 #' @export
 get_co2_sequestration <- function(GCAM_version = "v7.1") {
   scenario <- region <- year <- var <- value <- unit_conv <-
-    co2_removal_raw <- co2_sequestration <- NULL
+    co2_removal_raw <- co2_sequestration <- gross_removals_clean <- NULL
 
   check_queries("co2_sequestration_clean", GCAM_version)
   check_queries("co2_removal_raw", GCAM_version)
@@ -3126,20 +3126,6 @@ get_co2_sequestration <- function(GCAM_version = "v7.1") {
         )
 
 
-#
-#   # add Gross Removals|CO2 = Carbon Removal
-#   # add Gross Removals|CO2|AFOLU = Carbon Removal|Land Use"
-#   co2_sequestration_clean <- dplyr::bind_rows(
-#     co2_sequestration,
-#     co2_sequestration %>%
-#       dplyr::filter(var == 'Carbon Removal') %>%
-#       dplyr::mutate(var = 'Gross Removals|CO2'),
-#     co2_sequestration %>%
-#       dplyr::filter(var == 'Carbon Removal|Land Use') %>%
-#       dplyr::mutate(var = 'Gross Removals|CO2|AFOLU')
-#   )
-#
-
   # CO2 Removal items with further desegregation to compute later the Gross emissions
   co2_removal_raw_noLULUCF <- suppressWarnings(
     check_inf(rgcam::getQuery(prj, "CO2 sequestration by tech"),
@@ -3196,9 +3182,25 @@ get_co2_sequestration <- function(GCAM_version = "v7.1") {
     dplyr::ungroup()
 
 
+  # Gross Removals
+  # co2_removal_raw_LULUCF -> add to Gross Removals|CO2
+  # co2_removal_raw_LULUCF -> add to Gross Removals|CO2 & Gross Removals|CO2|AFOLU"
+
+  gross_removals_clean <- rbind(
+    co2_removal_raw_noLULUCF %>%
+      dplyr::filter(var == 'Emissions|CO2'),
+    co2_removal_raw_LULUCF # var is only Emissions|CO2 or Emissions|CO2|AFOLU
+  ) %>%
+    dplyr::mutate(var = stringr::str_replace(var, 'Emissions', 'Gross Removals')) %>%
+    dplyr::group_by(scenario, region, year, var) %>% #
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup()
+
+
 
   co2_removal_raw <<- co2_removal_raw
   co2_sequestration_clean <<- co2_sequestration_clean
+  gross_removals_clean <<- gross_removals_clean
 }
 
 
