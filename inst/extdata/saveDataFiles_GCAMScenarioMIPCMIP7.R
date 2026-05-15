@@ -27,6 +27,10 @@ reg_cont_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/ext
 use_data(reg_cont_vScenarioMIPCMIP7, overwrite = T)
 
 # emissions maps
+carbon_densities_vegsoil_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMScenarioMIPCMIP7", "carbon_densities_vegsoil.csv"),
+                                                        comment = "#", na = "")
+use_data(carbon_densities_vegsoil_vScenarioMIPCMIP7, overwrite = T)
+
 co2_ets_sector_map_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMScenarioMIPCMIP7", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = ""
 ) %>% gather_map()

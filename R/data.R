@@ -880,6 +880,18 @@
 #' }
 "co2_ets_sector_map_vScenarioMIPCMIP7"
 
+#' carbon_densities_vegsoil_vScenarioMIPCMIP7
+#'
+#' @source github
+#' @format .csv
+#' @description vegetation and soil carbon densities per basin compatible with GCAMScenarioMIPCMIP7.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_densities_vegsoil_vScenarioMIPCMIP7
+#' }
+"carbon_densities_vegsoil_vScenarioMIPCMIP7"
+
 #' co2_tech_map_vScenarioMIPCMIP7
 #'
 #' @source github

@@ -654,6 +654,27 @@ filter_variables <- function(data, variable = NULL, extra = NULL) {
 }
 
 
+#' gather_years
+#'
+#' Formats multiple years into a long-format table.
+#' Source: gcamdata
+#'
+#' @keywords internal
+#' @export
+gather_years <- function (d, value_col = "value", year_pattern = "^(1|2)[0-9]{3}$",
+                          na.rm = FALSE)
+{
+  assertthat::assert_that(tibble::is_tibble(d))
+  assertthat::assert_that(is.character(value_col))
+  assertthat::assert_that(is.character(year_pattern))
+
+  d %>%
+    tidyr::gather(year, value, matches(year_pattern), na.rm = na.rm) %>%
+    dplyr::mutate(year = as.integer(year)) %>%
+    stats::setNames(sub("value", value_col, names(.)))
+}
+
+
 #' gather_map
 #'
 #' Formats multiple maps into a long-format table.
@@ -803,10 +824,148 @@ check_match <- function(x, y, colmn_x, colmn_y = NULL, opt = "e") {
 
 
 #########################################################################
+#                      CDR & LAND HELPER FUNCTIONS                      #
+#########################################################################
+
+#' veg_alloc_S_curve
+#'
+#' Vegetation carbon: sigmoid allocation function ----#
+#' GCAM allocates vegetation carbon change using a sigmoid (S-curve) growth
+#' function. The annual flux is the incremental change in cumulative fraction
+#' between consecutive years.
+#' @param y Calendar year of emission accounting.
+#' @param y_conv Year of land-use conversion
+#' @param E_veg_t Total potential soil carbon change (tCO2/ha)
+#' @param M Mature age of vegetation (years); controls the growth rate
+#' @return Annual vegetation carbon flux (tCO2/ha/yr) for year y.
+#' @keywords internal
+#' @export
+veg_alloc_S_curve <- function(y, y_conv, E_veg_t, M) {
+  # Args:
+  #   y        Calendar year of emission accounting
+  #   y_conv   Year of land-use conversion
+  #   E_veg_t  Total potential vegetation carbon change (tCO2/ha)
+  #   M        Mature age of vegetation (years); controls the growth rate
+  #
+  # Returns:
+  #   Annual vegetation carbon flux (tCO2/ha/yr) for year y
+
+  age1 <- (y - y_conv) + 1
+  age0 <- (y - y_conv)
+
+  # Cumulative fractions from the sigmoid growth curve
+  frac1 <- (1 - exp(-3.0 * age1 / M))^2
+  frac0 <- (1 - exp(-3.0 * age0 / M))^2
+
+  # Annual flux = incremental change; zero before conversion occurs
+  alloc_frac <- ifelse(age0 < 0, 0, frac1 - frac0)
+
+  E_veg_t * alloc_frac
+}
+
+
+#' soil_alloc_exp_func
+#'
+#' Soil carbon: exponential allocation function ----
+#' GCAM allocates soil carbon change using a first-order exponential decay
+#' function parameterised by a soil timescale (s). The annual flux is the
+#' incremental change in cumulative fraction between consecutive years.
+#' @param y Calendar year of emission accounting.
+#' @param y_conv Year of land-use conversion.
+#' @param E_veg_t Total potential soil carbon change (tCO2/ha).
+#' @param s Soil turnover timescale parameter (years); half-life = s/10 * ln2.
+#' @return Annual soil carbon flux (tCO2/ha/yr) for year y.
+#' @keywords internal
+#' @export
+soil_alloc_exp_func <- function(y, y_conv, E_soil_t, s) {
+  # Args:
+  #   y        Calendar year of emission accounting
+  #   y_conv   Year of land-use conversion
+  #   E_soil_t Total potential soil carbon change (tCO2/ha)
+  #   s        Soil turnover timescale parameter (years); half-life = s/10 * ln2
+  #
+  # Returns:
+  #   Annual soil carbon flux (tCO2/ha/yr) for year y
+
+  kappa <- log(2) / (s / 10.0)
+  age1  <- (y - y_conv) + 1
+  age0  <- (y - y_conv)
+
+  frac1 <- ifelse(age1 < 0, 0, (1 - exp(-kappa * age1)))
+  frac0 <- ifelse(age0 < 0, 0, (1 - exp(-kappa * age0)))
+
+  alloc_frac <- frac1 - frac0
+  E_soil_t * alloc_frac
+}
+
+
+#' LUC_flux_MtCO2_intensity_dist
+#'
+#' Combined flux intensity lookup table ----
+#' Generates a wide-format lookup table of annual carbon flux intensity
+#' (tCO2/ha/yr) for both vegetation and soil, across all GCAM model years
+#' (1990–2100) and all possible conversion years (y_conv).
+#' Called once per region-basin-land combination in Step 3.
+#' @param E_soil_t Soil carbon potential (tCO2/ha); typically soil - min soil density.
+#' @param s Soil turnover timescale (years).
+#' @param E_veg_t Vegetation carbon potential (tCO2/ha).
+#' @param M Vegetation mature age (years).
+#' @return Wide data frame with columns: source, y_conv, and one column per year
+#' (1990–2100), giving the annual flux intensity (tCO2/ha/yr).
+#' @keywords internal
+#' @export
+LUC_flux_MtCO2_intensity_dist <- function(E_soil_t, s, E_veg_t, M) {
+  # Args:
+  #   E_soil_t  Soil carbon potential (tCO2/ha); typically soil - min soil density
+  #   s         Soil turnover timescale (years)
+  #   E_veg_t   Vegetation carbon potential (tCO2/ha)
+  #   M         Vegetation mature age (years)
+  #
+  # Returns:
+  #   Wide data frame with columns: source, y_conv, and one column per year
+  #   (1990–2100), giving the annual flux intensity (tCO2/ha/yr).
+
+  years  <- 1990:2100
+  # GCAM model years: 1990, 2005, then 5-year steps through 2100
+  y_convs <- c(1990, 2005, seq(2010, 2100, by = 5))
+
+  # Build soil flux intensity table across all conversion years
+  do.call(rbind, lapply(y_convs, function(conv) {
+    data.frame(
+      EmYear = years,
+      y_conv = conv,
+      value  = sapply(years, function(y) soil_alloc_exp_func(y, conv, E_soil_t, s))
+    )
+  })) ->
+    Soil_flux_intensity
+
+  # Build vegetation flux intensity table across all conversion years
+  do.call(rbind, lapply(y_convs, function(conv) {
+    data.frame(
+      EmYear = years,
+      y_conv = conv,
+      value  = sapply(years, function(y) veg_alloc_S_curve(y, conv, E_veg_t, M))
+    )
+  })) ->
+    Veg_flux_intensity
+
+  # Combine soil and vegetation, label by source, and pivot to wide format
+  Soil_flux_intensity %>%
+    dplyr::mutate(source = "Soil_flux_tCO2PerHa") %>%
+    dplyr::bind_rows(
+      Veg_flux_intensity %>%
+        dplyr::mutate(source = "Veg_flux_tCO2PerHa")
+    ) %>%
+    tidyr::spread(EmYear, value)
+}
+
+
+
+#########################################################################
 #                         LOAD QUERIES FUNCTIONS                        #
 #########################################################################
 
-# Scioeconomics
+# Socioeconomics
 # ==============================================================================================
 #' get_population
 #'
@@ -2493,14 +2652,18 @@ get_gross_co2_emiss <- function(GCAM_version = "v7.1") {
 
   check_queries("gross_co2_emiss_clean", GCAM_version)
 
+  # Gross emissions: Gross = Net - CDR_AR_MtCO2
+  # (since co2_removal_raw is negative, subtraction increases the gross total)
   gross_co2_emiss_clean <- rbind(
     co2_emissions_clean,
-    co2_removal_raw) %>%
+    co2_removal_raw %>%
+      dplyr::mutate(value = -value)) %>% # to perform the substraction as an aggregated sum
     dplyr::group_by(scenario, region, var, year) %>%
     dplyr::summarise(value = sum(value)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(var = gsub('Emissions', 'Gross Emissions', var)) %>%
-    dplyr::select(dplyr::all_of(gcamreport::long_columns))
+    dplyr::select(dplyr::all_of(gcamreport::long_columns)) %>%
+    filter_variables()
 
   gross_co2_emiss_clean <<- gross_co2_emiss_clean
 }
@@ -2901,7 +3064,8 @@ get_co2_sequestration <- function(GCAM_version = "v7.1") {
   check_queries("co2_sequestration_clean", GCAM_version)
   check_queries("co2_removal_raw", GCAM_version)
 
-  co2_sequestration <- suppressWarnings(
+  # CO2 sequestration -- all by LULUCF sector
+  co2_sequestration_noLULUCF <- suppressWarnings(
     check_inf(rgcam::getQuery(prj, "CO2 sequestration by tech"),
               dataset_name = "CO2 sequestration by tech") %>%
       left_join_strict(get(paste('carbon_seq_tech_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
@@ -2927,42 +3091,57 @@ get_co2_sequestration <- function(GCAM_version = "v7.1") {
       dplyr::summarise(value = sum(value, na.rm = T)) %>%
       dplyr::ungroup() %>%
       dplyr::select(dplyr::all_of(gcamreport::long_columns))
-  ) %>%
-    dplyr::bind_rows(
-      # Inverse of CO2_LUC when negative, zero when CO2_LUC is positive
-      # All Carbon Removal|Land Use emissions are considered as Re/Afforestation
-      LUC_emiss %>%
-        dplyr::filter(var == 'Emissions|CO2|AFOLU') %>%
-        dplyr::mutate(var = 'Carbon Removal') %>%
-        dplyr::mutate(value = dplyr::if_else(value < 0, -value, 0)),
-      LUC_emiss %>%
-        dplyr::filter(var == 'Emissions|CO2|AFOLU') %>%
-        dplyr::mutate(var = 'Carbon Removal|Land Use') %>%
-        dplyr::mutate(value = dplyr::if_else(value < 0, -value, 0)),
-      LUC_emiss %>%
-        dplyr::filter(var == 'Emissions|CO2|AFOLU') %>%
-        dplyr::mutate(var = 'Carbon Removal|Land Use|Re/Afforestation') %>%
-        dplyr::mutate(value = dplyr::if_else(value < 0, -value, 0))
-    ) %>%
-    dplyr::group_by(scenario, region, year, var) %>% #
-    dplyr::summarise(value = sum(value, na.rm = T)) %>%
-    dplyr::ungroup()
-
-  # add Gross Removals|CO2 = Carbon Removal
-  # add Gross Removals|CO2|AFOLU = Carbon Removal|Land Use"
-  co2_sequestration_clean <- dplyr::bind_rows(
-    co2_sequestration,
-    co2_sequestration %>%
-      dplyr::filter(var == 'Carbon Removal') %>%
-      dplyr::mutate(var = 'Gross Removals|CO2'),
-    co2_sequestration %>%
-      dplyr::filter(var == 'Carbon Removal|Land Use') %>%
-      dplyr::mutate(var = 'Gross Removals|CO2|AFOLU')
   )
 
+  # CO2 sequestration - LULUCF sector
+  co2_sequestration_LULUCF <- cdr_lulucf %>%
+    dplyr::filter(year <= final_year.global) %>%
+    dplyr::mutate('Carbon Removal|Land Use|Re/Afforestation' = CDR_AR_MtCO2,
+                  'Carbon Removal|Land Use' = CDR_AR_MtCO2,
+                  'Carbon Removal' = CDR_AR_MtCO2) %>%
+    dplyr::select(-Cum_AR_Mha, -CDR_AR_MtCO2) %>%
+    tidyr::pivot_longer(cols = starts_with('Carbon'),
+                        names_to = 'var',
+                        values_to = 'value')
+
+
+  # CO2 sequestration - all sectors
+  co2_sequestration_clean <- rbind(
+    co2_sequestration_LULUCF %>%
+      # currently all the LULUCF co2 sequestration are negative;
+      # change unit sign since values should be reported as positive.
+      dplyr::mutate(value = -value),
+    co2_sequestration_noLULUCF
+  ) %>%
+    dplyr::group_by(scenario, region, year, var) %>% #
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    # add 0 to Carbon Removal|Ocean since GCAM does not report it
+    rbind(
+      dplyr::select(co2_sequestration_noLULUCF,
+             scenario, region, year) %>%
+        dplyr::distinct() %>%
+        dplyr::mutate(var = 'Carbon Removal|Ocean',
+                      value = 0)
+        )
+
+
+#
+#   # add Gross Removals|CO2 = Carbon Removal
+#   # add Gross Removals|CO2|AFOLU = Carbon Removal|Land Use"
+#   co2_sequestration_clean <- dplyr::bind_rows(
+#     co2_sequestration,
+#     co2_sequestration %>%
+#       dplyr::filter(var == 'Carbon Removal') %>%
+#       dplyr::mutate(var = 'Gross Removals|CO2'),
+#     co2_sequestration %>%
+#       dplyr::filter(var == 'Carbon Removal|Land Use') %>%
+#       dplyr::mutate(var = 'Gross Removals|CO2|AFOLU')
+#   )
+#
 
   # CO2 Removal items with further desegregation to compute later the Gross emissions
-  co2_removal_raw <- suppressWarnings(
+  co2_removal_raw_noLULUCF <- suppressWarnings(
     check_inf(rgcam::getQuery(prj, "CO2 sequestration by tech"),
               dataset_name = "CO2 sequestration by tech") %>%
       # consider only carbon removal items
@@ -2992,33 +3171,255 @@ get_co2_sequestration <- function(GCAM_version = "v7.1") {
       ) %>%
       dplyr::filter(!is.na(var)) %>%
       dplyr::group_by(scenario, region, year, var) %>%
-      dplyr::summarise(value = sum(value, na.rm = T)) %>%
+      dplyr::summarise(value = -sum(value, na.rm = T)) %>%
       dplyr::ungroup() %>%
       dplyr::select(dplyr::all_of(gcamreport::long_columns))
+  )
+
+  co2_removal_raw_LULUCF <- cdr_lulucf %>%
+    dplyr::filter(year <= final_year.global) %>%
+    dplyr::mutate('Emissions|CO2|AFOLU' = CDR_AR_MtCO2,
+                  'Emissions|CO2' = CDR_AR_MtCO2) %>%
+    dplyr::select(-Cum_AR_Mha, -CDR_AR_MtCO2) %>%
+    tidyr::pivot_longer(cols = starts_with('Emissions'),
+                        names_to = 'var',
+                        values_to = 'value')
+
+
+  # join CO2 removal items
+  co2_removal_raw <- rbind(
+    co2_removal_raw_LULUCF,
+    co2_removal_raw_noLULUCF
   ) %>%
-    dplyr::bind_rows(
-      # Inverse of CO2_LUC when negative, zero when CO2_LUC is positive
-      LUC_emiss %>%
-        dplyr::mutate(value = dplyr::if_else(value < 0, -value, 0))
-    ) %>%
-    dplyr::group_by(scenario, region, year, var) %>%
+    dplyr::group_by(scenario, region, year, var) %>% #
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup()
 
 
-  # add 0 to Carbon Removal|Ocean since GCAM does not report it
-  co2_sequestration_clean <- rbind(
-    co2_sequestration_clean,
-    co2_sequestration_clean %>%
-      dplyr::mutate(var = 'Carbon Removal|Ocean',
-                    value = 0
-      ) %>%
-      dplyr::distinct()
-  )
 
   co2_removal_raw <<- co2_removal_raw
   co2_sequestration_clean <<- co2_sequestration_clean
 }
+
+
+
+#' get_cdr_lulucf
+#'
+#' Get carbon dioxide removal from LULUCF.
+#'
+#' @param GCAM_version Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+#' @keywords internal co2
+#' @return `cdr_lulucf` global variable.
+#' @importFrom magrittr %>%
+#' @export
+get_cdr_lulucf <- function(GCAM_version = "v7.1") {
+  scenario <- region <- year <- var <- value <- unit_conv <-
+    cdr_lulucf <- NULL
+
+  check_queries("cdr_lulucf", GCAM_version)
+
+  ## -- read data
+  detailed_land <- suppressWarnings(
+    check_inf(rgcam::getQuery(prj, "detailed land allocation"),
+              dataset_name = "detailed land allocation") %>%
+      dplyr::filter(year >= min(years_in_prj)))
+
+  luc_lut <- suppressWarnings(
+    check_inf(rgcam::getQuery(prj, "LUC emissions by LUT"),
+              dataset_name = "LUC emissions by LUT") %>%
+      dplyr::filter(year >= min(years_in_prj)))
+
+
+  # check: land and emission tables share the same region-landleaf combinations.
+  assertthat::assert_that(
+    detailed_land %>% dplyr::distinct(region, landleaf) %>%
+      dplyr::setdiff(luc_lut %>% dplyr::distinct(region, landleaf)) %>%
+      nrow() == 0,
+    msg = "Emissions and land not matching in region and land leaf"
+  )
+
+
+
+  ## -- preprocess data
+  # join land and emissions; convert units
+  detailed_land %>%
+    dplyr::transmute(scenario, region, landleaf, year,
+                     # thousand km2 -> Mha
+                     Mha = value / 10) %>%
+    left_join_error_no_match(
+      luc_lut %>%
+        dplyr::transmute(scenario, region, landleaf, year,
+                         # MtC -> MtCO2
+                         MtCO2 = value * get(paste('convert',GCAM_version,sep='_'),
+                                             envir = asNamespace("gcamreport"))[['conv_C_CO2']]),
+      by = c("scenario", "region", "landleaf", "year")) ->
+    land_ems_basin
+
+
+  # parse landleaf names into components:
+  # landleaf naming conventions differ between forest and non-forest types,
+  # and between GCAM versions that include or exclude biochar management.
+
+  # check whether this GCAM version uses a biochar column in non-forest leaves.
+  land_ems_basin %>%
+    dplyr::filter(!grepl("Forest", landleaf)) %>%
+    dplyr::filter(grepl("biochar", landleaf)) %>%
+    nrow() > 0 ->
+    version_BioChar
+
+  # Non-forest: split into land type, basin, irrigation, management (+ biochar if present)
+  # land_ems_basin_Forest := non-forest land and emissions (not used in AR analysis)
+  if (version_BioChar) {
+    land_ems_basin %>%
+      dplyr::filter(!grepl("Forest", landleaf)) %>%
+      tidyr::separate(
+        col  = landleaf,
+        into = c("land", "basin", "irr", "mgmt", "biochar"),
+        sep  = "_") ->
+      land_ems_basin_nonForest
+  } else {
+    land_ems_basin %>%
+      dplyr::filter(!grepl("Forest", landleaf)) %>%
+      tidyr::separate(
+        col  = landleaf,
+        into = c("land", "basin", "irr", "mgmt"),
+        sep  = "_") ->
+      land_ems_basin_nonForest
+  }
+
+  # Forest: split into land type and basin (dropping the intermediate "Forest" token)
+  # land_ems_basin_nonForest := forest land and emissions by region, basin, land type
+  land_ems_basin %>%
+    dplyr::filter(grepl("Forest", landleaf)) %>%
+    tidyr::separate(
+      col  = landleaf,
+      into = c("land", "forest", "basin"),
+      sep  = "_") %>%
+    dplyr::select(-forest) ->
+    land_ems_basin_Forest
+
+
+
+
+  ## -- build carbon flux intensity lookup table for forest land
+
+  # filter carbon density assumptions to forest land types and parse LandLeaf names
+  get(paste('carbon_densities_vegsoil',GCAM_version,sep='_'),
+      envir = asNamespace("gcamreport")) %>%
+    dplyr::filter(grepl("Forest", LandLeaf)) %>%
+    tidyr::separate(
+      col  = LandLeaf,
+      into = c("land", "forest", "basin"),
+      sep  = "_") %>%
+    dplyr::select(-forest) ->
+    GCAM_land_carbon_info_Forest
+
+  # For each region-basin-land combination, generate the annual flux intensity
+  # distribution using the sigmoid (veg) and exponential (soil) functions.
+  # Soil potential uses (soil - min soil) to account for the cropland carbon floor.
+  GCAM_land_carbon_info_Forest %>%
+    dplyr::rowwise() %>%
+    dplyr::mutate(intensity_dist =
+             list(LUC_flux_MtCO2_intensity_dist(
+               E_soil_t = soil.carbon.density - min.soil.carbon.density,
+               s        = SoilTime,
+               E_veg_t  = veg.carbon.density,
+               M        = mature.age
+             ))) %>%
+    tidyr::unnest(intensity_dist) ->
+    CarbonDensity_Dist_MinSoil
+
+  # pivot to long format and aggregate over hardwood/softwood sub-types within basin
+  CarbonDensity_Dist_MinSoil %>%
+    gather_years() %>%
+    dplyr::group_by_at(vars(region, basin, land, y_conv, EmYear = year, source)) %>%
+    dplyr::summarize(value = sum(value), .groups = "drop") ->
+    CarbonDensity_Dist_yr_MinSoil
+
+
+  ## -- derive annual AR land transitions
+  # AR is defined as a net increase in non-protected forest area within a 5-year period.
+  # LUC (land-use change) is expressed as Mha per year (period change divided by 5).
+  # y_conv records the start year of each 5-year transition period.
+  land_ems_basin_Forest %>%
+    dplyr::filter(!grepl("^Protected", land)) %>%
+    dplyr::filter(region == 'Africa_Eastern', land == 'Hardwood', basin == 'AfrCstE') %>%
+    dplyr::group_by(scenario, region, land, basin) %>%
+    dplyr::arrange(year) %>%
+    dplyr::mutate(LUC    = Mha - dplyr::lag(Mha),
+                  y_conv = dplyr::lag(year)) %>%
+    dplyr::ungroup() %>%
+    dplyr::filter(year != 1990) %>%
+    dplyr::mutate(LUC = pmax(0, LUC)) %>%   # only count area increases as AR
+    dplyr::filter(year >= 2025) ->
+    land_ems_basin_Forest_Yr
+
+
+  ## -- apply flux intensity to AR land transitions
+  # For each region-basin-land-y_conv combination, multiply AR area (Mha) by
+  # the flux intensity (tCO2/ha/yr) to get annual CDR (MtCO2/yr).
+  # Flux is set to zero in the conversion year itself (no same-year emissions).
+  # Sign convention: negative values = carbon removal (CDR).
+  land_ems_basin_Forest_Yr %>%
+    dplyr::left_join(
+      CarbonDensity_Dist_yr_MinSoil %>%
+        dplyr::filter(y_conv != 2100) %>%
+        dplyr::mutate(value = dplyr::if_else(EmYear == y_conv, 0, value)),
+      by = c("region", "land", "basin", "y_conv")
+    ) %>%
+    dplyr::mutate(
+      Ems = -LUC * value,
+      # Floor vegetation emissions at zero: AR should not produce positive veg flux
+      Ems = dplyr::if_else(source == "Veg_flux_tCO2PerHa" & Ems > 0, 0, Ems)
+    ) ->
+    ems_flux
+
+  # Aggregate soil + vegetation fluxes to annual CDR by region, land, basin
+  ems_flux %>%
+    dplyr::group_by(scenario, region, land, basin, EmYear, source) %>%
+    dplyr::summarize(Ems = sum(Ems), .groups = "drop") %>%
+    dplyr::filter(EmYear %in% seq(2010, 2100, 5)) ->
+    df_updated
+
+
+
+  ## -- assemble AR_Reporting output table
+  # AR_Reporting: primary output of this tool.
+  # CDR_AR_MtCO2: annual carbon removal from AR (negative = removal).
+  # Cum_AR_Mha:   cumulative afforested / reforested area since 2025.
+
+  # annual CDR (MtCO2/yr): sum soil + veg flux by region and land type
+  df_updated %>%
+    dplyr::group_by(region, scenario, land, year = EmYear) %>%
+    dplyr::summarize(CDR_AR_MtCO2 = sum(Ems), .groups = "drop") ->
+    AR_MtCO2_Annual
+
+  # cumulative AR area (Mha): running sum of annual AR transitions from 2025
+  land_ems_basin_Forest_Yr %>%
+    dplyr::group_by(scenario, region, land, year) %>%
+    dplyr::summarize(AR_Mha = sum(LUC), .groups = "drop") %>%
+    dplyr::group_by_at(vars(-year, -AR_Mha)) %>%
+    dplyr::mutate(Cum_AR_Mha = cumsum(AR_Mha)) %>%
+    dplyr::select(-AR_Mha) %>%
+    dplyr::ungroup() ->
+    AR_Mha_cumulative
+
+  # join CDR and area; fill years with no AR activity with Cum_AR_Mha = 0
+  AR_MtCO2_Annual %>%
+    dplyr::left_join(AR_Mha_cumulative,
+                     by = c("scenario", "region", "land", "year")) %>%
+    tidyr::replace_na(list(Cum_AR_Mha = 0)) ->
+    AR_Reporting
+
+  # aggregate by regions
+  cdr_lulucf <- AR_Reporting %>%
+    dplyr::group_by(scenario, region, year) %>%
+    dplyr::summarise(across(where(is.numeric), sum), .groups = "drop")
+
+
+  cdr_lulucf <<- cdr_lulucf
+}
+
 
 
 # Water
