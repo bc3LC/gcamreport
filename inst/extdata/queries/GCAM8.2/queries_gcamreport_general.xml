@@ -1497,4 +1497,23 @@ A user can adjust the query to search for any of:
          <comments>Note: these are investment demands per timestep</comments>
       </supplyDemandQuery>
    </aQuery>
+   <aQuery>
+      <all-regions />
+      <query title="detailed land allocation">
+         <axis1 name="LandLeaf">LandLeaf[@name]</axis1>
+         <axis2 name="Year">land-allocation[@year]</axis2>
+         <xPath buildList="true" dataName="LandLeaf" group="false" sumAll="false">/LandNode[@name='root' or @type='LandNode' (:collapse:)]//land-allocation/text()</xPath>
+         <comments/>
+      </query>   
+   </aQuery>
+   <aQuery>
+      <all-regions />
+      <query title="LUC emissions by LUT">
+            <axis1 name="LandLeaf">LandLeaf</axis1>
+            <axis2 name="Year">land-use-change-emission[@year]</axis2>
+            <xPath buildList="true" dataName="land-use-change-emission" group="false" sumAll="false">/LandNode[@name='root' or @type='LandNode' (:collapse:)]//
+            land-use-change-emission[@year&gt;1970]/text()</xPath>
+            <comments/>
+      </query>
+   </aQuery>
 </queries>

@@ -189,6 +189,18 @@
 #' }
 "co2_ets_sector_map_v8.2"
 
+#' carbon_densities_vegsoil_v8.2
+#'
+#' @source github
+#' @format .csv
+#' @description vegetation and soil carbon densities per basin compatible with GCAM8.2.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_densities_vegsoil_v8.2
+#' }
+"carbon_densities_vegsoil_v8.2"
+
 #' co2_tech_map_v8.2
 #'
 #' @source github
@@ -1609,6 +1621,18 @@
 #' }
 "co2_ets_sector_map_v7.2"
 
+#' carbon_densities_vegsoil_v7.2
+#'
+#' @source github
+#' @format .csv
+#' @description vegetation and soil carbon densities per basin compatible with GCAM7.2.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_densities_vegsoil_v7.2
+#' }
+"carbon_densities_vegsoil_v7.2"
+
 #' co2_tech_map_v7.2
 #'
 #' @source github
@@ -2301,6 +2325,18 @@
 #' }
 "co2_ets_sector_map_v7.1"
 
+#' carbon_densities_vegsoil_v7.1
+#'
+#' @source github
+#' @format .csv
+#' @description vegetation and soil carbon densities per basin compatible with GCAM7.1.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_densities_vegsoil_v7.1
+#' }
+"carbon_densities_vegsoil_v7.1"
+
 #' co2_tech_map_v7.1
 #'
 #' @source github
@@ -2992,6 +3028,18 @@
 #' gcamreport::co2_ets_sector_map_v7.0
 #' }
 "co2_ets_sector_map_v7.0"
+
+#' carbon_densities_vegsoil_v7.0
+#'
+#' @source github
+#' @format .csv
+#' @description vegetation and soil carbon densities per basin compatible with GCAM7.0.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::carbon_densities_vegsoil_v7.0
+#' }
+"carbon_densities_vegsoil_v7.0"
 
 #' co2_tech_map_v7.0
 #'

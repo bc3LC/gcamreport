@@ -28,6 +28,10 @@ use_data(reg_cont_v7.0, overwrite = T)
 
 
 # emissions maps
+carbon_densities_vegsoil_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "carbon_densities_vegsoil.csv"),
+                                                              comment = "#", na = "")
+use_data(carbon_densities_vegsoil_v7.0, overwrite = T)
+
 co2_ets_sector_map_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = ""
 ) %>% gather_map()
@@ -98,7 +102,7 @@ land_use_map_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mapp
 ) %>% gather_map()
 use_data(land_use_map_v7.0, overwrite = T)
 
-yield_map_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMScenarioMIPCMIP7", "yield_map.csv"),
+yield_map_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "yield_map.csv"),
                                                comment = "#"
 )
 use_data(yield_map_v7.0, overwrite = T)

@@ -27,6 +27,10 @@ reg_cont_v7.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings
 use_data(reg_cont_v7.1, overwrite = T)
 
 # emissions maps
+carbon_densities_vegsoil_v7.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.1", "carbon_densities_vegsoil.csv"),
+                                                 comment = "#", na = "")
+use_data(carbon_densities_vegsoil_v7.1, overwrite = T)
+
 co2_ets_sector_map_v7.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.1", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = ""
 ) %>% gather_map()
