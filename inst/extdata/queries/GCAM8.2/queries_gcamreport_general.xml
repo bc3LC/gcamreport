@@ -76,7 +76,7 @@
             <xPath buildList="true" dataName="demand" group="false" sumAll="false">gcam-consumer[@name='FoodDemand']//*[@type='input']/demand-physical/node()</xPath>
             <comments/>
 			<!--  For some scenarios (e.g., SUSMIP), we require to manually run this query and select the food-processing from Staples and NonStaples to have the demand by gcam-consumer
- *[@type='sector' and (@name='FoodDemand_Staples' 
+ *[@type='sector' and (@name='FoodDemand_Staples'
       or @name='FoodDemand_NonStaples'
       or @name='FoodDemand_NonStaples_Oils'
       or @name='FoodDemand_NonStaples_FruitsVeg'
@@ -89,7 +89,7 @@
       or @name='FoodDemand_NonStaples_Fish')]//
                   *[@type='input']/demand-physical/node()-->
 
-      </supplyDemandQuery>   
+      </supplyDemandQuery>
    </aQuery>
    <aQuery>
       <all-regions />
@@ -115,7 +115,7 @@
       <supplyDemandQuery title="food consumption by type (specific)">
          <axis1 name="technology">technology</axis1>
          <axis2 name="Year">physical-output[@vintage]</axis2>
-         <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and (@name='FoodDemand_Staples' 
+         <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and (@name='FoodDemand_Staples'
       or @name='FoodDemand_NonStaples'
       or @name='FoodDemand_NonStaples_Oils'
       or @name='FoodDemand_NonStaples_FruitsVeg'
@@ -164,7 +164,7 @@
          <axis1 name="fuel">input[@name]</axis1>
          <axis2 name="Year">demand-physical[@vintage]</axis2>
          <xPath buildList="true" dataName="input" group="false" sumAll="false"><![CDATA[
-              
+
         declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
               let $scn := $parent/ancestor::scenario,
                     $rgn := $parent (: /ancestor::region :)
@@ -178,18 +178,18 @@
                               }
                }
               (: I can get by with just the scenario and region
-             let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+             let $new_node := element {local-name($parent)} {$parent/@*, $append}
               return
               if(local-name($parent) != 'scenario')
               then local:append-heirarchy($parent/parent::*, $new_node)
               else document { $new_node } :)
-           }; 
+           };
            declare function local:generate-sector-input-coefs($outputNameQueue as xs:string*, $currTree as node(), $coefs as node()*, $is_usa as xs:boolean) as node()* {
           if(empty($outputNameQueue)) then $coefs
           else if( exists($coefs[@name = $outputNameQueue[1]]) or exists(index-of(('biomass',
 'traded oil', 'traded coal', 'traded natural gas', 'traded Afr_MidE pipeline gas', 'traded LA pipeline gas', 'traded PAC pipeline gas', 'traded N.Amer pipeline gas', 'traded RUS pipeline gas', 'traded EUR pipeline gas', 'traded LNG', 'regional corn for ethanol', 'regional biomassOil', 'regional sugar for ethanol', 'regional sugarbeet for ethanol', 'regional woodpulp for energy'),
 $outputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$outputNameQueue[1]]))
-then 
+then
 (:if(not($is_usa) and string-length($currTree/@name) = 2) then
 local:trace-inputs($outputName, $currTree/parent::*/*[@type='region' and @name='USA'], $outputs, true())
 else:)
@@ -238,7 +238,7 @@ local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs
                                                        }
                                              }
                                  }
-                 return 
+                 return
                        local:generate-sector-input-coefs(distinct-values(($newOutputNameQueue, $useInputs/@name)), $currTree, $new_coefs, $is_usa)
 };
  declare function local:generate-ccs-coefs($currTree as node(), $coefs as node()*) as node()* {
@@ -318,27 +318,27 @@ local:generate-sector-input-coefs(remove($outputNameQueue, 1), $currTree, $coefs
              $outputs :)
          }
  };
-declare function local:run-input-by-primary($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
-       unordered { 	
+declare function local:run-input-by-primary($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* {
+       unordered {
        let $regionsG := if(not($regions[1] = 'Global'))
                then $regions
                else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
        return
-       for $scenario in $scenarios, 	    
-       $region in $regionsG 	
-       let $scenario_split := tokenize($scenario, ' '), 	    
+       for $scenario in $scenarios,
+       $region in $regionsG
+       let $scenario_split := tokenize($scenario, ' '),
       $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
           $currInputs := $currTree/*[@type='sector' and (@name='unconventional oil production' or exists(child::keyword/@final-energy))]//*[@type='input' and empty(index-of(('trn_pass_road', 'limestone', 'process heat cement', 'industrial energy use', 'industrial feedstocks', 'renewable', 'trn_freight_road', 'trn_pass_road_LDV', 'trn_pass_road_LDV_2W', 'trn_pass_road_LDV_4W', 'unconventional oil', 'oil-credits', 'scrap', 'alumina', 'process heat paper', 'waste biomass for paper', 'process heat food processing', 'water_td_ind_W', 'water_td_ind_C'), @name))],
           $coefs := local:generate-sector-input-coefs(distinct-values($currInputs/@name), $currTree, (), false()),
           $ccs_coefs := local:generate-ccs-coefs($currTree, $coefs)
-      return 
+      return
          for $inputName in distinct-values($currInputs/@name)
          return local:append-heirarchy($currTree, local:apply-coefs($inputName, $currInputs[@name=$inputName]/demand-physical, $ccs_coefs, false()))//text()
-       } 
+       }
  };
 local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
-  
-  
+
+
          ]]></xPath>
          <comments>WARNING: Results are slightly inflated due to improper secondary-output accounting</comments>
          <labelRewriteList append-values="false">
@@ -556,7 +556,7 @@ local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
          </labelRewriteList>
          <showAttribute attribute-name="year" level="technology"/>
       </supplyDemandQuery>
-   </aQuery>   
+   </aQuery>
    <aQuery>
       <all-regions />
       <supplyDemandQuery title="refined liquids production by region">
@@ -614,7 +614,7 @@ local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
          <axis2 name="Year">demand-physical[@vintage]</axis2>
          <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or
  (exists(child::keyword/@final-energy)))]//*[@type='input' and
- not(@name='limestone' or @name='process heat cement' or @name='process heat food processing' or @name='industrial energy use' or @name='process heat paper' or @name='waste biomass for paper' or 
+ not(@name='limestone' or @name='process heat cement' or @name='process heat food processing' or @name='industrial energy use' or @name='process heat paper' or @name='waste biomass for paper' or
      @name='industrial feedstocks' or @name='renewable' or contains(@name, 'trn_') or @name='oil-credits')]/
  demand-physical[@unit='EJ']/node()</xPath>
          <comments/>
@@ -851,7 +851,7 @@ output-primary/physical-output/node()</xPath>
          <axis1 name="water">water[@name]</axis1>
          <axis2 name="Year">land-allocation[@year]</axis2>
          <xPath buildList="true" dataName="LandLeaf" group="false" sumAll="false"><![CDATA[
-              
+
      declare function local:nest-land-category($leaf as node(), $level as xs:string, $child as node()*) as node() {
          let $attrMatch := $leaf/@*[name()=$level],
              $attrValue := if(exists($attrMatch)) then string($attrMatch) else "NA"
@@ -860,14 +860,14 @@ output-primary/physical-output/node()</xPath>
              $child
          }
      };
-     declare function local:run-nest-land-categories($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
+     declare function local:run-nest-land-categories($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* {
          let $regionsG := if(not($regions[1] = 'Global'))
                           then $regions
                           else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
          return
-             for $scenario in $scenarios, 	    
-                 $region in $regionsG 	
-             let $scenario_split := tokenize($scenario, ' '), 	    
+             for $scenario in $scenarios,
+                 $region in $regionsG
+             let $scenario_split := tokenize($scenario, ' '),
                  $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
                  $landLeaves := $currTree//LandNode[@name='root' or @type='LandNode' (:collapse:)]//LandLeaf,
                  $ret := document {
@@ -892,8 +892,8 @@ output-primary/physical-output/node()</xPath>
              return $ret//text()
      };
      local:run-nest-land-categories((:scenarios:), (:regions:), (:collection:))
-     
-     
+
+
          ]]></xPath>
          <comments/>
      </query>
@@ -998,7 +998,7 @@ output-primary/physical-output/node()</xPath>
          <axis1 name="sector">sector[@name]</axis1>
          <axis2 name="Year">emissions[@year]</axis2>
          <xPath buildList="true" dataName="input" group="false" sumAll="false"><![CDATA[
-              
+
      declare function local:append-heirarchy($parent as node(), $append as node()*) as node() {
      let $scn := $parent/ancestor::scenario,
      $rgn := $parent (: /ancestor::region :)
@@ -1012,12 +1012,12 @@ output-primary/physical-output/node()</xPath>
      }
      }
      (: I can get by with just the scenario and region
-     let $new_node := element {local-name($parent)} {$parent/@*, $append} 	
+     let $new_node := element {local-name($parent)} {$parent/@*, $append}
      return
      if(local-name($parent) != 'scenario')
      then local:append-heirarchy($parent/parent::*, $new_node)
      else document { $new_node } :)
-     }; 
+     };
      declare function local:get-carbon-coef($good as xs:string) as xs:decimal {
      let $carbonCoefs := (
      <PrimaryFuelCO2Coef name="biomass">0</PrimaryFuelCO2Coef>,
@@ -1048,8 +1048,8 @@ output-primary/physical-output/node()</xPath>
      $currCoef := $carbonCoefs[@name=$good]/text()
      return if(exists($currCoef)) then $currCoef else 0.0
      };
-     
-     
+
+
      declare function local:is-carbonatious-fuel($good as xs:string) as xs:boolean {
      not(local:get-carbon-coef($good) = 0.0)
      };
@@ -1057,7 +1057,7 @@ output-primary/physical-output/node()</xPath>
      if(empty($inputNameQueue)) then $coefs
      else if( exists($coefs[@name = $inputNameQueue[1]]) or exists(index-of(('traded unconventional oil'),
      $inputNameQueue[1])) or not($currTree/*[@type='sector' and @name=$inputNameQueue[1]]) or not(local:is-carbonatious-fuel($inputNameQueue[1])))
-     then 
+     then
      local:generate-sector-output-coefs(remove($inputNameQueue, 1), $currTree, $coefs, $is_usa)
      else
      let $inputName := $inputNameQueue[1],
@@ -1094,7 +1094,7 @@ output-primary/physical-output/node()</xPath>
      })
      }
      }
-     return 
+     return
      local:generate-sector-output-coefs(distinct-values(($newInputNameQueue, $useSectors)), $currTree, $new_coefs, $is_usa)
      };
      declare function local:apply-coefs($outputName as xs:string, $emissions as node()*, $coefs as node()*) as node()* {
@@ -1118,7 +1118,7 @@ output-primary/physical-output/node()</xPath>
      $emissSum := sum($emissThisVintage),
      $shareThisVintage := $output/share[@vintage=$year],
      $carbonRatioThisVintage := 1.0 - $output/carbon_ratio[@vintage=$year],
-     $coefThisVintage := $shareThisVintage * $carbonRatioThisVintage 
+     $coefThisVintage := $shareThisVintage * $carbonRatioThisVintage
      where $coefThisVintage > 0
      return element { local-name($firstEmiss) } {
      $firstEmiss/@*,
@@ -1145,27 +1145,27 @@ output-primary/physical-output/node()</xPath>
      $emissions:)
      }
      };
-     declare function local:run-emiss-by-enduse($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
-     (:unordered { :) 	
+     declare function local:run-emiss-by-enduse($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* {
+     (:unordered { :)
      let $regionsG := if(not($regions[1] = 'Global'))
      then $regions
      else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
      return
-     for $scenario in $scenarios, 	    
-     $region in $regionsG 	
-     let $scenario_split := tokenize($scenario, ' '), 	    
+     for $scenario in $scenarios,
+     $region in $regionsG
+     let $scenario_split := tokenize($scenario, ' '),
      $currTree := collection($collection)/scenario[@name = $scenario_split[1] and @date = $scenario_split[2]]/world/*[@type='region' and @name=$region],
      $sector_emiss := $currTree/*[@type='sector' and not(@name='regional biomass' or @name='regional biomassOil' or @name='regional corn for ethanol' or @name='regional sugar for ethanol' or @name='regional sugarbeet for ethanol' or @name='regional woodpulp for energy')]//CO2[@type='GHG' (:collapse:) and @name='CO2']/emissions/text(),
      $currEmissSectors := $currTree/*[@type='sector' and (@name='regional biomass' or @name='regional biomassOil' or @name='regional corn for ethanol' or @name='regional sugar for ethanol' or @name='regional sugarbeet for ethanol' or @name='regional woodpulp for energy')],
      $coefs := local:generate-sector-output-coefs(distinct-values($currEmissSectors/@name), $currTree, (), false()),
      $downstream_emiss := for $sectorName in distinct-values($currEmissSectors/@name)
-     return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2[@name='CO2' or @name='CO2_FUG']/emissions, $coefs))//text() 
+     return local:append-heirarchy($currTree, local:apply-coefs($sectorName, $currEmissSectors[@name=$sectorName]//CO2[@name='CO2' or @name='CO2_FUG']/emissions, $coefs))//text()
      return ($sector_emiss, $downstream_emiss )
      (:  } :)
      };
      local:run-emiss-by-enduse((:scenarios:), (:regions:), (:collection:))
-     
-  
+
+
          ]]></xPath>
          <comments/>
          <labelRewriteList append-values="false">
@@ -1432,7 +1432,7 @@ A user can adjust the query to search for any of:
              </level>
          </labelRewriteList>
      </supplyDemandQuery>
-   </aQuery>   
+   </aQuery>
 
    <aQuery>
       <all-regions />
@@ -1475,8 +1475,8 @@ A user can adjust the query to search for any of:
              </level>
          </labelRewriteList>
      </supplyDemandQuery>
-   </aQuery>   
-   <aQuery>   
+   </aQuery>
+   <aQuery>
       <all-regions />
          <supplyDemandQuery title="transport service output by tech and vintage">
          <axis1 name="technology">technology</axis1>
@@ -1490,7 +1490,7 @@ A user can adjust the query to search for any of:
    </aQuery>
    <aQuery>
       <all-regions />
-      <supplyDemandQuery title="Capital investment demands by tech">
+      <supplyDemandQuery title="capital investment demands by tech">
          <axis1 name="technology">technology[@name]</axis1>
          <axis2 name="Year">technology[@year]</axis2>
          <xPath buildList="true" dataName="capital" group="false" sumAll="false">*[@type='sector']/*[@type = 'subsector']/*[@type = 'technology']/*[@type='input' (: collapse :)]/capital/text()</xPath>
@@ -1504,7 +1504,7 @@ A user can adjust the query to search for any of:
          <axis2 name="Year">land-allocation[@year]</axis2>
          <xPath buildList="true" dataName="LandLeaf" group="false" sumAll="false">/LandNode[@name='root' or @type='LandNode' (:collapse:)]//land-allocation/text()</xPath>
          <comments/>
-      </query>   
+      </query>
    </aQuery>
    <aQuery>
       <all-regions />

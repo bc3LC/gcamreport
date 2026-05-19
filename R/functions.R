@@ -6411,8 +6411,8 @@ get_nonelec_investment <- function(GCAM_version = "v7.1") {
                  envir = asNamespace("gcamreport"))
 
   raw <- check_inf(
-    rgcam::getQuery(prj, "Capital investment demands by tech"),
-    dataset_name = "Capital investment demands by tech"
+    rgcam::getQuery(prj, "capital investment demands by tech"),
+    dataset_name = "capital investment demands by tech"
   ) %>%
     dplyr::filter(sector %in% unique(inv_map$sector))
 
