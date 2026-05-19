@@ -16,3 +16,5 @@ exampleRepoCheatsheet.pdf
 ^\.github$
 ^_config.yml$
 ^articles$
+^\.positai$
+^\.claude$

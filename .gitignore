@@ -255,3 +255,4 @@ R/hands_on.R
 inst/extdata/template/GCAMScenarioMIPCMIP7/common-definitions-template_old.csv
 /extra_scripts
 /.vs
+.positai
