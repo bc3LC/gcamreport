@@ -6386,6 +6386,18 @@ get_total_investment <- function(GCAM_version = "v7.1") {
     dplyr::ungroup() %>%
     dplyr::select(dplyr::all_of(gcamreport::long_columns))
 
+  # Remove aggregated value from invest tibbles,
+  # now that summed value is in total_investment_clean
+  resource_investment_clean <<- resource_investment_clean |>
+      dplyr::filter(var != 'Investment|Energy Supply')
+
+  elec_investment_clean <<- elec_investment_clean |>
+    dplyr::filter(var != 'Investment|Energy Supply')
+
+  nonelec_investment_clean <<- nonelec_investment_clean |>
+  dplyr::filter(var != 'Investment|Energy Supply')
+
+
   total_investment_clean <<- total_investment_clean
 }
 
