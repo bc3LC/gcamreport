@@ -6,7 +6,7 @@ the "regions" column.
 ## Usage
 
 ``` r
-filter_data_regions(data, GCAM_version = "v7.1")
+filter_data_regions(data, GCAM_version = "v8.2")
 ```
 
 ## Arguments
@@ -17,7 +17,8 @@ filter_data_regions(data, GCAM_version = "v7.1")
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 ## Value
 

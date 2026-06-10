@@ -5,7 +5,7 @@ Compute resource extraction
 ## Usage
 
 ``` r
-get_resource_extraction(GCAM_version = "v7.1")
+get_resource_extraction(GCAM_version = "v8.2")
 ```
 
 ## Value

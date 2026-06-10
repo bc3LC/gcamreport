@@ -5,7 +5,7 @@ Converts GHG emissions to CO2e.
 ## Usage
 
 ``` r
-conv_ghg_co2e(data, GCAM_version = "v7.1", GWP_version = "AR5")
+conv_ghg_co2e(data, GCAM_version = "v8.2", GWP_version = "AR5")
 ```
 
 ## Arguments
@@ -16,7 +16,8 @@ conv_ghg_co2e(data, GCAM_version = "v7.1", GWP_version = "AR5")
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 - GWP_version:
 

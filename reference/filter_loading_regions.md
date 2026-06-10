@@ -9,7 +9,7 @@ filter_loading_regions(
   data,
   desired_regions = "All",
   variable,
-  GCAM_version = "v7.1"
+  GCAM_version = "v8.2"
 )
 ```
 
@@ -31,7 +31,8 @@ filter_loading_regions(
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 ## Value
 

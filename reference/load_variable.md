@@ -5,7 +5,7 @@ Recursively loads the specified variable and its dependent variables.
 ## Usage
 
 ``` r
-load_variable(var, GCAM_version = "v7.1", GWP_version = "AR5")
+load_variable(var, GCAM_version = "v8.2", GWP_version = "AR5")
 ```
 
 ## Arguments
@@ -17,7 +17,8 @@ load_variable(var, GCAM_version = "v7.1", GWP_version = "AR5")
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 - GWP_version:
 

@@ -6,14 +6,15 @@ materials-net-export + capital-net-export + energy-net-export
 ## Usage
 
 ``` r
-get_goods_trade(GCAM_version = "v7.1")
+get_goods_trade(GCAM_version = "v8.2")
 ```
 
 ## Arguments
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 ## Value
 

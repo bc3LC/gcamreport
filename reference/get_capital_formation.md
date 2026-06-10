@@ -5,14 +5,15 @@ Computes Capital Formation data.
 ## Usage
 
 ``` r
-get_capital_formation(GCAM_version = "v7.1")
+get_capital_formation(GCAM_version = "v8.2")
 ```
 
 ## Arguments
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 ## Value
 

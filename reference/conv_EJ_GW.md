@@ -5,7 +5,7 @@ Converts energy from EJ to GW.
 ## Usage
 
 ``` r
-conv_EJ_GW(data, cf, EJ, GCAM_version = "v7.1")
+conv_EJ_GW(data, cf, EJ, GCAM_version = "v8.2")
 ```
 
 ## Arguments
@@ -24,4 +24,5 @@ conv_EJ_GW(data, cf, EJ, GCAM_version = "v7.1")
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.

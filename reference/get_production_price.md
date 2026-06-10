@@ -5,7 +5,7 @@ Compute industry production prices
 ## Usage
 
 ``` r
-get_production_price(GCAM_version = "v7.1")
+get_production_price(GCAM_version = "v8.2")
 ```
 
 ## Value

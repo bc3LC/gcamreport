@@ -6,7 +6,7 @@ continents/regions' groups for the IAMC reporting dataset.
 ## Usage
 
 ``` r
-available_continents(print = TRUE, GCAM_version = "v7.1")
+available_continents(print = TRUE, GCAM_version = "v8.2")
 ```
 
 ## Arguments
@@ -19,7 +19,8 @@ available_continents(print = TRUE, GCAM_version = "v7.1")
 
 - GCAM_version:
 
-  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
 
 ## Value
 

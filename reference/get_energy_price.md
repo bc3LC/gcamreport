@@ -5,7 +5,7 @@ Compute final energy price
 ## Usage
 
 ``` r
-get_energy_price(GCAM_version = "v7.1")
+get_energy_price(GCAM_version = "v8.2")
 ```
 
 ## Value
