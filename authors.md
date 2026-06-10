@@ -19,13 +19,13 @@ Source:
 [`DESCRIPTION`](https://github.com/bc3LC/gcamreport/blob/gcam-core/DESCRIPTION)
 
 Rodés-Bachs C, Sampedro J, Horowitz R, Van de Ven D (2026). *gcamreport:
-gcamreport*. R package version 1.0.2,
+gcamreport*. R package version 1.0.3,
 <https://github.com/bc3LC/gcamreport>.
 
     @Manual{,
       title = {gcamreport: gcamreport},
       author = {Clàudia Rodés-Bachs and Jon Sampedro and Russell Horowitz and Dirk-Jan {Van de Ven}},
       year = {2026},
-      note = {R package version 1.0.2},
+      note = {R package version 1.0.3},
       url = {https://github.com/bc3LC/gcamreport},
     }

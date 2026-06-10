@@ -473,7 +473,7 @@ final status.
 
 To specify the *nonCO2* query file you can proceed analogously. However,
 check carefully its default structure and the function where is used:
-[data_query](file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/reference/data_query.md).
+[data_query](https://bc3lc.github.io/gcamreport/reference/data_query.html).
 
 newline
 

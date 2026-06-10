@@ -8,6 +8,8 @@
   v7.0\*](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial_v7-0.md):
 - [Dataset Generation
   Tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.md):
+- [GCAM-Europe
+  Particularities](https://bc3lc.github.io/gcamreport/articles/GCAMEurope.md):
 - [Tutorials for gcamreport
   v6.0\*](https://bc3lc.github.io/gcamreport/articles/gcamreport_v6-0.md):
 - [Tutorials for gcamreport

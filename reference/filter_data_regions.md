@@ -6,7 +6,7 @@ the "regions" column.
 ## Usage
 
 ``` r
-filter_data_regions(data)
+filter_data_regions(data, GCAM_version = "v7.1")
 ```
 
 ## Arguments
@@ -14,6 +14,10 @@ filter_data_regions(data)
 - data:
 
   The dataset to be filtered.
+
+- GCAM_version:
+
+  Main GCAM compatible version: 'v7.1' (default), 'v7.2', 'v7.0'.
 
 ## Value
 

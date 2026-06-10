@@ -17,18 +17,17 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
 ## Contents
 
-- [gcamreport](#gcamreport)
-  - [Contents](#contents)
-  - [Introduction](#introduction)
-  - [Installation Guide](#installation-guide)
-    - [With R](#with-r)
-      - [Light mode installation](#light-mode-installation)
-      - [Full mode installation](#full-mode-installation)
-    - [With Docker](#with-docker)
-  - [Getting Started](#getting-started)
-  - [How to contribute?](#contribute)
-  - [Top common Warnings and Error
-    Messages](#top-common-warnings-and-error-messages)
+- [Contents](#contents)
+- [Introduction](#introduction)
+- [Installation Guide](#installation-guide)
+  - [With R](#with-r)
+    - [Light mode installation](#light-mode-installation)
+    - [Full mode installation](#full-mode-installation)
+  - [With Docker](#with-docker)
+- [Getting Started](#getting-started)
+- [How to contribute?](#contribute)
+- [Top common Warnings and Error
+  Messages](#top-common-warnings-and-error-messages)
 
   
 
@@ -51,10 +50,18 @@ is currently compatible with GCAM-core versions
 [7.1](https://zenodo.org/records/11481167),
 [7.2](https://zenodo.org/records/13946379),
 [8.2](https://zenodo.org/records/15581174), and the [ScenarioMIP
-project](https://wcrp-cmip.org/mips/scenariomip/) Moreover, we support
-the 2015 and 2021 GCAM base years. Check the [version
-guide](file:///C:/Users/claudia.rodes/Documents/IAM_COMPACT/gcamreport/docs/articles/Version_Guide.md)
+project](https://wcrp-cmip.org/mips/scenariomip/); and GCAM-Europe
+versions [7.2](https://zenodo.org/records/15655568) and
+[8.7](https://github.com/bc3LC-GCAMEurope/gcam-core/releases/tag/gcam-europe-v8.7.0).
+Moreover, we support the 2015 and 2021 GCAM base years. Check the
+[version
+guide](https://bc3lc.github.io/gcamreport/articles/Version_Guide.html)
 to see how to run your version! 🚀
+
+**Note**❗: To standardize GCAM-Europe outputs, you might require manual
+queries extraction. See [this
+post](https://bc3lc.github.io/gcamreport/articles/GCAMEurope.html) for
+more info!
 
   
 

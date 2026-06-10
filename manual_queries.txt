@@ -1,7 +1,0 @@
-CO2 emissions by tech (nested subsector) (excluding resource production) -      CO2 emissions by tech (excluding resource production) - 
-CO2 sequestration by tech (nested subsector) -                                  CO2 sequestration by tech
-water withdrawals by subsector -                                                water withdrawals by subsector
-water consumption by subsector -                                                water consumption by subsector
-
-building service output by service -                                            building service output by service
-elec gen by gen tech and cooling tech (incl cogen) VINTAGE -                    elec gen by gen tech and cooling tech and vintage

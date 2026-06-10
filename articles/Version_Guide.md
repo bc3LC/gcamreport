@@ -6,10 +6,12 @@ The `gcamreport` package is compatible with the main versions of GCAM:
 [7.1](https://zenodo.org/records/11481167),
 [7.2](https://zenodo.org/records/13946379),
 [8.2](https://zenodo.org/records/15581174), and the [ScenarioMIP
-project](https://wcrp-cmip.org/mips/scenariomip/). To use these
-versions, ensure that you have cloned the `gcam-core` branch (the
-default branch) and specify the closest GCAM version using the
-`GCAM_version` parameter in the
+project](https://wcrp-cmip.org/mips/scenariomip/); and GCAM-Europe
+versions [7.2](https://zenodo.org/records/15655568) and
+[8.7](https://github.com/bc3LC-GCAMEurope/gcam-core/releases/tag/gcam-europe-v8.7.0).
+To use these versions, ensure that you have cloned the `gcam-core`
+branch (the default branch) and specify the closest GCAM version using
+the `GCAM_version` parameter in the
 [`generate_report`](https://bc3lc.github.io/gcamreport/reference/generate_report.html)
 or
 [`launch_gcamreport_ui`](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.html)
@@ -73,6 +75,7 @@ Find below a description of all the `gcamreport` releases:
 
 | `gcamreport` tag-version | compatible `GCAM` version and/or study |
 |----|----|
+| v1.0.3 | GCAM 7.0, GCAM 7.1, GCAM 7.2, GCAM8.2, GCAMScenarioMIP, GCAMEurope7.2, GCAMEurope8.7; 2015 and 2021 GCAM base year |
 | v1.0.2 | GCAM 7.0, GCAM 7.1, GCAM 7.2, GCAM8.2, GCAMScenarioMIP; 2015 and 2021 GCAM base year |
 | v1.0.1 | GCAM 7.0, GCAM 7.1, and GCAM 7.2; 2015 and 2021 GCAM base year |
 | v1.0.0 | GCAM 6.0, GCAM 7.0, and GCAM 7.1 |
