@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>gcamreport • gcamreport</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="gcamreport">
 <meta name="description" content="R package to produce standard IPCC reports from GCAM output.">
@@ -39,7 +39,6 @@
     <li><a class="dropdown-item" href="articles/Dataset_Generation_Tutorial.html">Dataset Generation Tutorial</a></li>
     <li><a class="dropdown-item" href="articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a></li>
     <li><a class="dropdown-item" href="articles/Modify_Mapping_Template_Tutorial.html">Modify Mappings and Template Tutorial</a></li>
-    <li><a class="dropdown-item" href="articles/GCAMEurope.html">GCAM-Europe Particularities</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="articles/gcamreport_v7-0.html">Depracted documentation and tutorials for gcamreport v7.0*</a></li>
     <li><a class="dropdown-item" href="articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
@@ -104,7 +103,6 @@
 <!-- ------------------------>
 <p><a href="#contents">Back to Contents</a></p>
 <p><code>gcamreport</code> is a tool designed to generate consistent datasets from any scenario run by the Global Change Analysis Model (<a href="http://www.globalchange.umd.edu/gcam/" class="external-link">GCAM</a>), ensuring they meet the reporting standards of the Integrated Assessment Modeling Consortium (<a href="https://www.iamconsortium.org/" class="external-link">IAMC</a>) defined in the <a href="https://github.com/IAMconsortium/common-definitions" class="external-link">Common Definitions</a> repository. In addition, <code>gcamreport</code> features an interactive user interface that allows users to create and download plots in real time and export reduced, formatted datasets in spreadsheet format. The tool is currently compatible with GCAM-core versions <a href="https://zenodo.org/records/6619287" class="external-link">6.0</a>, <a href="https://zenodo.org/records/8010145" class="external-link">7.0</a>, <a href="https://zenodo.org/records/11481167" class="external-link">7.1</a>, <a href="https://zenodo.org/records/13946379" class="external-link">7.2</a>, <a href="https://zenodo.org/records/15581174" class="external-link">8.2</a>, and the <a href="https://wcrp-cmip.org/mips/scenariomip/" class="external-link">ScenarioMIP project</a>; and GCAM-Europe versions <a href="https://zenodo.org/records/15655568" class="external-link">7.2</a> and <a href="https://github.com/bc3LC-GCAMEurope/gcam-core/releases/tag/gcam-europe-v8.7.0" class="external-link">8.7</a>. Moreover, we support the 2015 and 2021 GCAM base years. Check the <a href="https://bc3lc.github.io/gcamreport/articles/Version_Guide.html">version guide</a> to see how to run your version! <span class="emoji" data-emoji="rocket">🚀</span></p>
-<p><strong>Note</strong><span class="emoji" data-emoji="exclamation">❗</span>: To standardize GCAM-Europe outputs, you might require manual queries extraction. See <a href="https://bc3lc.github.io/gcamreport/articles/GCAMEurope.html">this post</a> for more info!</p>
 <p><br></p>
 <!-- ------------------------>
 <!-- ------------------------>
@@ -137,7 +135,7 @@
 </ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install-deprecated.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'bc3LC/gcamreport'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'bc3LC/gcamreport'</span><span class="op">)</span></span></code></pre></div>
 <p>Now <code>gcamreport</code> package is fully loaded. Enjoy! <span class="emoji" data-emoji="smile">😄</span></p>
 <p><br></p>
 </div>

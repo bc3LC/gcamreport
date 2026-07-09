@@ -2,52 +2,6 @@
 
 ## All functions
 
-- [`F_GASES_v7.0`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.0.md)
-  : F_GASES_v7.0
-- [`F_GASES_v7.1`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.1.md)
-  : F_GASES_v7.1
-- [`F_GASES_v7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.2.md)
-  : F_GASES_v7.2
-- [`F_GASES_v8.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v8.2.md)
-  : F_GASES_v8.2
-- [`F_GASES_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope7.2.md)
-  : F_GASES_vEurope7.2
-- [`F_GASES_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope8.7.md)
-  : F_GASES_vEurope8.7
-- [`F_GASES_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vScenarioMIPCMIP7.md)
-  : F_GASES_vScenarioMIPCMIP7
-- [`GCAM_regions_number`](https://bc3lc.github.io/gcamreport/reference/GCAM_regions_number.md)
-  : GCAM_regions_number
-- [`GHG_gases_v7.0`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.0.md)
-  : GHG_gases_v7.0
-- [`GHG_gases_v7.1`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.1.md)
-  : GHG_gases_v7.1
-- [`GHG_gases_v7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.2.md)
-  : GHG_gases_v7.2
-- [`GHG_gases_v8.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v8.2.md)
-  : GHG_gases_v8.2
-- [`GHG_gases_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope7.2.md)
-  : GHG_gases_vEurope7.2
-- [`GHG_gases_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope8.7.md)
-  : GHG_gases_vEurope8.7
-- [`GHG_gases_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vScenarioMIPCMIP7.md)
-  : GHG_gases_vScenarioMIPCMIP7
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7
-- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7.md)
-  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7
-- [`WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7.md)
-  : WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7
 - [`ag_demand_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.md)
   : ag_demand_map_v7.0
 - [`ag_demand_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.md)
@@ -104,12 +58,12 @@
   : ag_production_map_vEurope8.7
 - [`ag_production_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_vScenarioMIPCMIP7.md)
   : ag_production_map_vScenarioMIPCMIP7
+- [`available_continents()`](https://bc3lc.github.io/gcamreport/reference/available_continents.md)
+  : available_continents
 - [`available_GCAM_versions`](https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.md)
   : available_GCAM_versions
 - [`available_GWP_versions`](https://bc3lc.github.io/gcamreport/reference/available_GWP_versions.md)
   : available_GWP_versions
-- [`available_continents()`](https://bc3lc.github.io/gcamreport/reference/available_continents.md)
-  : available_continents
 - [`available_regions()`](https://bc3lc.github.io/gcamreport/reference/available_regions.md)
   : available_regions
 - [`available_variables()`](https://bc3lc.github.io/gcamreport/reference/available_variables.md)
@@ -326,6 +280,20 @@
   : data_query
 - [`deciles_GCAM_versions`](https://bc3lc.github.io/gcamreport/reference/deciles_GCAM_versions.md)
   : deciles_GCAM_versions
+- [`energy_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.md)
+  : energy_price_map_v7.0
+- [`energy_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.md)
+  : energy_price_map_v7.1
+- [`energy_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.2.md)
+  : energy_price_map_v7.2
+- [`energy_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v8.2.md)
+  : energy_price_map_v8.2
+- [`energy_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope7.2.md)
+  : energy_price_map_vEurope7.2
+- [`energy_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope8.7.md)
+  : energy_price_map_vEurope8.7
+- [`energy_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vScenarioMIPCMIP7.md)
+  : energy_price_map_vScenarioMIPCMIP7
 - [`en_blocks`](https://bc3lc.github.io/gcamreport/reference/en_blocks.md)
   : en_blocks
 - [`en_demand_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.0.md)
@@ -354,20 +322,6 @@
   : en_multiplier_vEurope8.7
 - [`en_multiplier_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.md)
   : en_multiplier_vScenarioMIPCMIP7
-- [`energy_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.md)
-  : energy_price_map_v7.0
-- [`energy_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.md)
-  : energy_price_map_v7.1
-- [`energy_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.2.md)
-  : energy_price_map_v7.2
-- [`energy_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v8.2.md)
-  : energy_price_map_v8.2
-- [`energy_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope7.2.md)
-  : energy_price_map_vEurope7.2
-- [`energy_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope8.7.md)
-  : energy_price_map_vEurope8.7
-- [`energy_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vScenarioMIPCMIP7.md)
-  : energy_price_map_vScenarioMIPCMIP7
 - [`fertilizer_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.0.md)
   : fertilizer_map_v7.0
 - [`fertilizer_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.1.md)
@@ -440,14 +394,44 @@
   : food_items_map_vEurope8.7
 - [`food_items_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_items_map_vScenarioMIPCMIP7.md)
   : food_items_map_vScenarioMIPCMIP7
+- [`F_GASES_v7.0`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.0.md)
+  : F_GASES_v7.0
+- [`F_GASES_v7.1`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.1.md)
+  : F_GASES_v7.1
+- [`F_GASES_v7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.2.md)
+  : F_GASES_v7.2
+- [`F_GASES_v8.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v8.2.md)
+  : F_GASES_v8.2
+- [`F_GASES_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope7.2.md)
+  : F_GASES_vEurope7.2
+- [`F_GASES_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope8.7.md)
+  : F_GASES_vEurope8.7
+- [`F_GASES_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vScenarioMIPCMIP7.md)
+  : F_GASES_vScenarioMIPCMIP7
 - [`gcameurope.EUROSTAT_COUNTRIES_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/gcameurope.EUROSTAT_COUNTRIES_vEurope7.2.md)
   : gcameurope.EUROSTAT_COUNTRIES_vEurope7.2
 - [`gcameurope.EUROSTAT_COUNTRIES_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/gcameurope.EUROSTAT_COUNTRIES_vEurope8.7.md)
   : gcameurope.EUROSTAT_COUNTRIES_vEurope8.7
 - [`gcamreport`](https://bc3lc.github.io/gcamreport/reference/gcamreport.md)
   : gcamreport
+- [`GCAM_regions_number`](https://bc3lc.github.io/gcamreport/reference/GCAM_regions_number.md)
+  : GCAM_regions_number
 - [`generate_report()`](https://bc3lc.github.io/gcamreport/reference/generate_report.md)
   : generate_report
+- [`GHG_gases_v7.0`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.0.md)
+  : GHG_gases_v7.0
+- [`GHG_gases_v7.1`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.1.md)
+  : GHG_gases_v7.1
+- [`GHG_gases_v7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.2.md)
+  : GHG_gases_v7.2
+- [`GHG_gases_v8.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v8.2.md)
+  : GHG_gases_v8.2
+- [`GHG_gases_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope7.2.md)
+  : GHG_gases_vEurope7.2
+- [`GHG_gases_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope8.7.md)
+  : GHG_gases_vEurope8.7
+- [`GHG_gases_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vScenarioMIPCMIP7.md)
+  : GHG_gases_vScenarioMIPCMIP7
 - [`ghg_GWP_AR4`](https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.md)
   : ghg_GWP_AR4
 - [`ghg_GWP_AR5`](https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.md)
@@ -524,6 +508,20 @@
   : kyoto_sector_map_vEurope8.7
 - [`kyoto_sector_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_vScenarioMIPCMIP7.md)
   : kyoto_sector_map_vScenarioMIPCMIP7
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7
 - [`land_use_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.0.md)
   : land_use_map_v7.0
 - [`land_use_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.1.md)
@@ -578,6 +576,20 @@
   : nonco2_content_vEurope8.7
 - [`nonco2_content_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_vScenarioMIPCMIP7.md)
   : nonco2_content_vScenarioMIPCMIP7
+- [`nonco2_emissions_list_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.0.md)
+  : nonco2_emissions_list_v7.0
+- [`nonco2_emissions_list_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.1.md)
+  : nonco2_emissions_list_v7.1
+- [`nonco2_emissions_list_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.2.md)
+  : nonco2_emissions_list_v7.2
+- [`nonco2_emissions_list_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v8.2.md)
+  : nonco2_emissions_list_v8.2
+- [`nonco2_emissions_list_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope7.2.md)
+  : nonco2_emissions_list_vEurope7.2
+- [`nonco2_emissions_list_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope8.7.md)
+  : nonco2_emissions_list_vEurope8.7
+- [`nonco2_emissions_list_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vScenarioMIPCMIP7.md)
+  : nonco2_emissions_list_vScenarioMIPCMIP7
 - [`nonco2_emis_resource_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.0.md)
   : nonco2_emis_resource_map_v7.0
 - [`nonco2_emis_resource_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.1.md)
@@ -606,20 +618,6 @@
   : nonco2_emis_sector_map_vEurope8.7
 - [`nonco2_emis_sector_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_vScenarioMIPCMIP7.md)
   : nonco2_emis_sector_map_vScenarioMIPCMIP7
-- [`nonco2_emissions_list_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.0.md)
-  : nonco2_emissions_list_v7.0
-- [`nonco2_emissions_list_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.1.md)
-  : nonco2_emissions_list_v7.1
-- [`nonco2_emissions_list_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.2.md)
-  : nonco2_emissions_list_v7.2
-- [`nonco2_emissions_list_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v8.2.md)
-  : nonco2_emissions_list_v8.2
-- [`nonco2_emissions_list_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope7.2.md)
-  : nonco2_emissions_list_vEurope7.2
-- [`nonco2_emissions_list_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope8.7.md)
-  : nonco2_emissions_list_vEurope8.7
-- [`nonco2_emissions_list_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vScenarioMIPCMIP7.md)
-  : nonco2_emissions_list_vScenarioMIPCMIP7
 - [`nonelec_investment_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.0.md)
   : nonelec_investment_map_v7.0
 - [`nonelec_investment_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.1.md)
@@ -672,6 +670,8 @@
   : queries_general_v8.2
 - [`queries_general_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/queries_general_vEurope7.2.md)
   : queries_general_vEurope7.2
+- [`queries_general_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/queries_general_vEurope8.7.md)
+  : queries_general_vEurope8.7
 - [`queries_general_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/queries_general_vScenarioMIPCMIP7.md)
   : queries_general_vScenarioMIPCMIP7
 - [`queries_nonCO2_v7.0`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.0.md)
@@ -684,6 +684,8 @@
   : queries_nonCO2_v8.2
 - [`queries_nonCO2_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vEurope7.2.md)
   : queries_nonCO2_vEurope7.2
+- [`queries_nonCO2_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vEurope8.7.md)
+  : queries_nonCO2_vEurope8.7
 - [`queries_nonCO2_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vScenarioMIPCMIP7.md)
   : queries_nonCO2_vScenarioMIPCMIP7
 - [`reg_cont_v7.0`](https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.0.md)
@@ -854,6 +856,8 @@
   : water_map_vEurope8.7
 - [`water_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/water_map_vScenarioMIPCMIP7.md)
   : water_map_vScenarioMIPCMIP7
+- [`WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7.md)
+  : WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7
 - [`yield_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/yield_map_v7.0.md)
   : yield_map_v7.0
 - [`yield_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/yield_map_v7.1.md)
