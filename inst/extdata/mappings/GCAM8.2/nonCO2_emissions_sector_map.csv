@@ -6,6 +6,9 @@ alumina,,BC,Emissions|BC,Emissions|BC|Industrial Processes,Emissions|BC|Industri
 ammonia,,BC,Emissions|BC,Emissions|BC|Industrial Processes,Emissions|BC|Industrial Processes|Chemicals,,Emissions|BC|Industrial Processes|Chemicals|Ammonia,,,,,,,,,Emissions|BC|Energy and Industrial Processes,1
 chemical energy use,biomass,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Industry,Emissions|BC|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|BC|Energy and Industrial Processes,1
 chemical energy use,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Industry,,,,,,,,,Emissions|BC|Energy and Industrial Processes,1
+comm cooking,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,,,Emissions|BC|Energy|Demand|Commercial,,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|BC|Energy and Industrial Processes,1
+comm hot water,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,,,Emissions|BC|Energy|Demand|Commercial,,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|BC|Energy and Industrial Processes,1
+comm other,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,,,Emissions|BC|Energy|Demand|Commercial,,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|BC|Energy and Industrial Processes,1
 comm cooling,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,,,Emissions|BC|Energy|Demand|Commercial,,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|BC|Energy and Industrial Processes,1
 comm heating,biomass,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,Emissions|BC|Energy|Demand|Residential and Commercial|Biomass,,Emissions|BC|Energy|Demand|Commercial,Emissions|BC|Energy|Demand|Commercial|Biomass,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|BC|Energy and Industrial Processes,1
 comm heating,,BC,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Demand,,Emissions|BC|Energy|Demand|Residential and Commercial,,,Emissions|BC|Energy|Demand|Commercial,,,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|BC|Energy and Industrial Processes,1
@@ -95,6 +98,9 @@ ammonia,,CH4,Emissions|CH4,Emissions|CH4|Industrial Processes,Emissions|CH4|Indu
 backup_electricity,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,,Emissions|CH4|Energy|Supply|Electricity,,,,,,,,,Emissions|CH4|Energy and Industrial Processes,1
 chemical energy use,biomass,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Industry,Emissions|CH4|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|CH4|Energy and Industrial Processes,1
 chemical energy use,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Industry,,,,,,,,,Emissions|CH4|Energy and Industrial Processes,1
+comm cooking,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,,,Emissions|CH4|Energy|Demand|Commercial,,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CH4|Energy and Industrial Processes,1
+comm hot water,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,,,Emissions|CH4|Energy|Demand|Commercial,,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CH4|Energy and Industrial Processes,1
+comm other,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,,,Emissions|CH4|Energy|Demand|Commercial,,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CH4|Energy and Industrial Processes,1
 comm cooling,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,,,Emissions|CH4|Energy|Demand|Commercial,,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CH4|Energy and Industrial Processes,1
 comm heating,biomass,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,Emissions|CH4|Energy|Demand|Residential and Commercial|Biomass,,Emissions|CH4|Energy|Demand|Commercial,Emissions|CH4|Energy|Demand|Commercial|Biomass,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|CH4|Energy and Industrial Processes,1
 comm heating,,CH4,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Demand,,Emissions|CH4|Energy|Demand|Residential and Commercial,,,Emissions|CH4|Energy|Demand|Commercial,,,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CH4|Energy and Industrial Processes,1
@@ -186,6 +192,9 @@ ammonia,,CO,Emissions|CO,Emissions|CO|Industrial Processes,Emissions|CO|Industri
 backup_electricity,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Electricity,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 chemical energy use,biomass,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Industry,Emissions|CO|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 chemical energy use,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Industry,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
+comm cooking,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,,,Emissions|CO|Energy|Demand|Commercial,,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CO|Energy and Industrial Processes,1
+comm hot water,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,,,Emissions|CO|Energy|Demand|Commercial,,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CO|Energy and Industrial Processes,1
+comm other,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,,,Emissions|CO|Energy|Demand|Commercial,,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CO|Energy and Industrial Processes,1
 comm cooling,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,,,Emissions|CO|Energy|Demand|Commercial,,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CO|Energy and Industrial Processes,1
 comm heating,biomass,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,Emissions|CO|Energy|Demand|Residential and Commercial|Biomass,,Emissions|CO|Energy|Demand|Commercial,Emissions|CO|Energy|Demand|Commercial|Biomass,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|CO|Energy and Industrial Processes,1
 comm heating,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Residential and Commercial,,,Emissions|CO|Energy|Demand|Commercial,,,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|CO|Energy and Industrial Processes,1
@@ -200,6 +209,9 @@ H2 central production,biomass,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|E
 H2 central production,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 H2 forecourt production,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 H2 wholesale dispensing,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
+H2 LDV,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
+H2 MHDV,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
+LH2,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,,Emissions|CO|Energy|Supply|Hydrogen,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 industrial energy use,,CO,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Demand,,Emissions|CO|Energy|Demand|Industry,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
 industrial processes,solvents,CO,Emissions|CO,Emissions|CO|Product Use,Emissions|CO|Product Use|Solvents,,,,,,,,,,,,1
 industrial processes,,CO,Emissions|CO,Emissions|CO|Industrial Processes,,,,,,,,,,,,Emissions|CO|Energy and Industrial Processes,1
@@ -270,6 +282,9 @@ Wheat,,CO_AWB,Emissions|CO,Emissions|CO|AFOLU,Emissions|CO|AFOLU|Agricultural Wa
 H2 liquid truck,,H2,NoReported,,,,,,,,,,,,,,1
 H2 pipeline,,H2,NoReported,,,,,,,,,,,,,,1
 H2 wholesale dispensing,,H2,NoReported,,,,,,,,,,,,,,1
+H2 LDV,,H2,NoReported,,,,,,,,,,,,,,1
+H2 MHDV,,H2,NoReported,,,,,,,,,,,,,,1
+LH2,,H2,NoReported,,,,,,,,,,,,,,1
 UnmanagedLand,ForestFire,H2,NoReported,,,,,,,,,,,,,,1
 UnmanagedLand,GrasslandFires,H2,NoReported,,,,,,,,,,,,,,1
 UnmanagedLand,,H2,NoReported,,,,,,,,,,,,,,1
@@ -290,25 +305,31 @@ SugarCrop,,H2_AWB,NoReported,,,,,,,,,,,,,,1
 Vegetables,,H2_AWB,NoReported,,,,,,,,,,,,,,1
 Wheat,,H2_AWB,NoReported,,,,,,,,,,,,,,1
 comm cooling,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
+comm refrigeration,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 industrial processes,solvents,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 industrial processes,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 resid cooling,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 resid cooling modern,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
+resid refrigerators modern,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 urban processes,,HFC125,,Emissions|HFC|HFC125,,,,,,,,,,,,,1
 comm cooling,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
+comm refrigeration,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 industrial processes,solvents,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 industrial processes,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 resid cooling,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 resid cooling modern,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
+resid refrigerators modern,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 urban processes,landfills,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 urban processes,waste_incineration,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 urban processes,wastewater,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 urban processes,,HFC134a,,Emissions|HFC|HFC134a,,,,,,,,,,,,,1
 comm cooling,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
+comm refrigeration,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 industrial processes,solvents,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 industrial processes,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 resid cooling,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 resid cooling modern,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
+resid refrigerators modern,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 urban processes,,HFC143a,,Emissions|HFC|HFC143a,,,,,,,,,,,,,1
 industrial processes,solvents,HFC152a,,Emissions|HFC|HFC152a,,,,,,,,,,,,,1
 industrial processes,,HFC152a,,Emissions|HFC|HFC152a,,,,,,,,,,,,,1
@@ -323,10 +344,12 @@ urban processes,waste_incineration,HFC227ea,,Emissions|HFC|HFC227ea,,,,,,,,,,,,,
 urban processes,wastewater,HFC227ea,,Emissions|HFC|HFC227ea,,,,,,,,,,,,,1
 urban processes,,HFC227ea,,Emissions|HFC|HFC227ea,,,,,,,,,,,,,1
 comm cooling,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
+comm refrigeration,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 industrial processes,solvents,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 industrial processes,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 resid cooling,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 resid cooling modern,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
+resid refrigerators modern,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 urban processes,,HFC23,,Emissions|HFC|HFC23,,,,,,,,,,,,,1
 comm cooling,,HFC236fa,,Emissions|HFC|HFC236fa,,,,,,,,,,,,,1
 industrial processes,solvents,HFC236fa,,Emissions|HFC|HFC236fa,,,,,,,,,,,,,1
@@ -340,10 +363,12 @@ industrial processes,solvents,HFC245fa,,Emissions|HFC|HFC245fa,,,,,,,,,,,,,1
 industrial processes,,HFC245fa,,Emissions|HFC|HFC245fa,,,,,,,,,,,,,1
 urban processes,,HFC245fa,,Emissions|HFC|HFC245fa,,,,,,,,,,,,,1
 comm cooling,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
+comm refrigeration,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 industrial processes,solvents,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 industrial processes,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 resid cooling,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 resid cooling modern,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
+resid refrigerators modern,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 urban processes,,HFC32,,Emissions|HFC|HFC32,,,,,,,,,,,,,1
 industrial processes,solvents,HFC365mfc,,Emissions|HFC|HFC365mfc,,,,,,,,,,,,,1
 industrial processes,,HFC365mfc,,Emissions|HFC|HFC365mfc,,,,,,,,,,,,,1
@@ -356,6 +381,9 @@ ammonia,,N2O,Emissions|N2O,Emissions|N2O|Industrial Processes,Emissions|N2O|Indu
 backup_electricity,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Supply,,Emissions|N2O|Energy|Supply|Electricity,,,,,,,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
 chemical energy use,biomass,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Industry,Emissions|N2O|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
 chemical energy use,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Industry,,,,,,,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
+comm cooking,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,,,Emissions|N2O|Energy|Demand|Commercial,,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
+comm hot water,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,,,Emissions|N2O|Energy|Demand|Commercial,,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
+comm other,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,,,Emissions|N2O|Energy|Demand|Commercial,,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
 comm cooling,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,,,Emissions|N2O|Energy|Demand|Commercial,,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
 comm heating,biomass,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,Emissions|N2O|Energy|Demand|Residential and Commercial|Biomass,,Emissions|N2O|Energy|Demand|Commercial,Emissions|N2O|Energy|Demand|Commercial|Biomass,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
 comm heating,,N2O,Emissions|N2O,Emissions|N2O|Energy,Emissions|N2O|Energy|Demand,,Emissions|N2O|Energy|Demand|Residential and Commercial,,,Emissions|N2O|Energy|Demand|Commercial,,,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|N2O|Energy and Industrial Processes,1.00E+03
@@ -464,6 +492,9 @@ ammonia,,NH3,Emissions|NH3,Emissions|NH3|Industrial Processes,Emissions|NH3|Indu
 backup_electricity,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Supply,,Emissions|NH3|Energy|Supply|Electricity,,,,,,,,,Emissions|NH3|Energy and Industrial Processes,1
 chemical energy use,biomass,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Industry,Emissions|NH3|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|NH3|Energy and Industrial Processes,1
 chemical energy use,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Industry,,,,,,,,,Emissions|NH3|Energy and Industrial Processes,1
+comm cooking,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,,,Emissions|NH3|Energy|Demand|Commercial,,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NH3|Energy and Industrial Processes,1
+comm hot water,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,,,Emissions|NH3|Energy|Demand|Commercial,,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NH3|Energy and Industrial Processes,1
+comm other,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,,,Emissions|NH3|Energy|Demand|Commercial,,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NH3|Energy and Industrial Processes,1
 comm cooling,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,,,Emissions|NH3|Energy|Demand|Commercial,,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NH3|Energy and Industrial Processes,1
 comm heating,biomass,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,Emissions|NH3|Energy|Demand|Residential and Commercial|Biomass,,Emissions|NH3|Energy|Demand|Commercial,Emissions|NH3|Energy|Demand|Commercial|Biomass,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|NH3|Energy and Industrial Processes,1
 comm heating,,NH3,Emissions|NH3,Emissions|NH3|Energy,Emissions|NH3|Energy|Demand,,Emissions|NH3|Energy|Demand|Residential and Commercial,,,Emissions|NH3|Energy|Demand|Commercial,,,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NH3|Energy and Industrial Processes,1
@@ -570,6 +601,9 @@ ammonia,,NMVOC,Emissions|VOC,Emissions|VOC|Industrial Processes,Emissions|VOC|In
 backup_electricity,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Supply,,Emissions|VOC|Energy|Supply|Electricity,,,,,,,,,Emissions|VOC|Energy and Industrial Processes,1
 chemical energy use,biomass,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Industry,Emissions|VOC|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|VOC|Energy and Industrial Processes,1
 chemical energy use,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Industry,,,,,,,,,Emissions|VOC|Energy and Industrial Processes,1
+comm cooking,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,,,Emissions|VOC|Energy|Demand|Commercial,,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|VOC|Energy and Industrial Processes,1
+comm hot water,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,,,Emissions|VOC|Energy|Demand|Commercial,,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|VOC|Energy and Industrial Processes,1
+comm other,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,,,Emissions|VOC|Energy|Demand|Commercial,,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|VOC|Energy and Industrial Processes,1
 comm cooling,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,,,Emissions|VOC|Energy|Demand|Commercial,,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|VOC|Energy and Industrial Processes,1
 comm heating,biomass,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,Emissions|VOC|Energy|Demand|Residential and Commercial|Biomass,,Emissions|VOC|Energy|Demand|Commercial,Emissions|VOC|Energy|Demand|Commercial|Biomass,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|VOC|Energy and Industrial Processes,1
 comm heating,,NMVOC,Emissions|VOC,Emissions|VOC|Energy,Emissions|VOC|Energy|Demand,,Emissions|VOC|Energy|Demand|Residential and Commercial,,,Emissions|VOC|Energy|Demand|Commercial,,,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|VOC|Energy and Industrial Processes,1
@@ -677,6 +711,9 @@ ammonia,,NOx,Emissions|NOx,Emissions|NOx|Industrial Processes,Emissions|NOx|Indu
 backup_electricity,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Supply,,Emissions|NOx|Energy|Supply|Electricity,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 chemical energy use,biomass,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,Emissions|NOx|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 chemical energy use,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
+comm cooking,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,,,Emissions|NOx|Energy|Demand|Commercial,,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NOx|Energy and Industrial Processes,1
+comm hot water,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,,,Emissions|NOx|Energy|Demand|Commercial,,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NOx|Energy and Industrial Processes,1
+comm other,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,,,Emissions|NOx|Energy|Demand|Commercial,,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NOx|Energy and Industrial Processes,1
 comm cooling,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,,,Emissions|NOx|Energy|Demand|Commercial,,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NOx|Energy and Industrial Processes,1
 comm heating,biomass,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,Emissions|NOx|Energy|Demand|Residential and Commercial|Biomass,,Emissions|NOx|Energy|Demand|Commercial,Emissions|NOx|Energy|Demand|Commercial|Biomass,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|NOx|Energy and Industrial Processes,1
 comm heating,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Residential and Commercial,,,Emissions|NOx|Energy|Demand|Commercial,,,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|NOx|Energy and Industrial Processes,1
@@ -691,6 +728,9 @@ H2 central production,biomass,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|N
 H2 central production,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Supply,,Emissions|NOx|Energy|Supply|Hydrogen,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 H2 forecourt production,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Supply,,Emissions|NOx|Energy|Supply|Hydrogen,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 H2 wholesale dispensing,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Supply,,Emissions|NOx|Energy|Supply|Hydrogen,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
+H2 LDV,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
+H2 MHDV,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
+LH2,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 industrial energy use,,NOx,Emissions|NOx,Emissions|NOx|Energy,Emissions|NOx|Energy|Demand,,Emissions|NOx|Energy|Demand|Industry,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
 industrial processes,solvents,NOx,Emissions|NOx,Emissions|NOx|Product Use,Emissions|NOx|Product Use|Solvents,,,,,,,,,,,,1
 industrial processes,,NOx,Emissions|NOx,Emissions|NOx|Industrial Processes,,,,,,,,,,,,Emissions|NOx|Energy and Industrial Processes,1
@@ -788,6 +828,9 @@ ammonia,,OC,Emissions|OC,Emissions|OC|Industrial Processes,Emissions|OC|Industri
 backup_electricity,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Supply,,Emissions|OC|Energy|Supply|Electricity,,,,,,,,,Emissions|OC|Energy and Industrial Processes,1
 chemical energy use,biomass,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Industry,Emissions|OC|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|OC|Energy and Industrial Processes,1
 chemical energy use,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Industry,,,,,,,,,Emissions|OC|Energy and Industrial Processes,1
+comm cooking,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,,,Emissions|OC|Energy|Demand|Commercial,,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|OC|Energy and Industrial Processes,1
+comm hot water,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,,,Emissions|OC|Energy|Demand|Commercial,,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|OC|Energy and Industrial Processes,1
+comm other,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,,,Emissions|OC|Energy|Demand|Commercial,,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|OC|Energy and Industrial Processes,1
 comm cooling,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,,,Emissions|OC|Energy|Demand|Commercial,,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|OC|Energy and Industrial Processes,1
 comm heating,biomass,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,Emissions|OC|Energy|Demand|Residential and Commercial|Biomass,,Emissions|OC|Energy|Demand|Commercial,Emissions|OC|Energy|Demand|Commercial|Biomass,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|OC|Energy and Industrial Processes,1
 comm heating,,OC,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Demand,,Emissions|OC|Energy|Demand|Residential and Commercial,,,Emissions|OC|Energy|Demand|Commercial,,,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|OC|Energy and Industrial Processes,1
@@ -874,6 +917,9 @@ ammonia,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Industrial Processes,Emissions|
 backup_electricity,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Supply,,Emissions|Sulfur|Energy|Supply|Electricity,,,,,,,,,Emissions|Sulfur|Energy and Industrial Processes,1
 chemical energy use,biomass,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Industry,Emissions|Sulfur|Energy|Demand|Industry|Biomass,,,,,,,,Emissions|Sulfur|Energy and Industrial Processes,1
 chemical energy use,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Industry,,,,,,,,,Emissions|Sulfur|Energy and Industrial Processes,1
+comm cooking,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,,,Emissions|Sulfur|Energy|Demand|Commercial,,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|Sulfur|Energy and Industrial Processes,1
+comm hot water,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,,,Emissions|Sulfur|Energy|Demand|Commercial,,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|Sulfur|Energy and Industrial Processes,1
+comm other,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,,,Emissions|Sulfur|Energy|Demand|Commercial,,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|Sulfur|Energy and Industrial Processes,1
 comm cooling,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,,,Emissions|Sulfur|Energy|Demand|Commercial,,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|Sulfur|Energy and Industrial Processes,1
 comm heating,biomass,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,Emissions|Sulfur|Energy|Demand|Residential and Commercial|Biomass,,Emissions|Sulfur|Energy|Demand|Commercial,Emissions|Sulfur|Energy|Demand|Commercial|Biomass,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI|Biomass,,Emissions|Sulfur|Energy and Industrial Processes,1
 comm heating,,SO2_1,Emissions|Sulfur,Emissions|Sulfur|Energy,Emissions|Sulfur|Energy|Demand,,Emissions|Sulfur|Energy|Demand|Residential and Commercial,,,Emissions|Sulfur|Energy|Demand|Commercial,,,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI,,,Emissions|Sulfur|Energy and Industrial Processes,1

@@ -19,6 +19,8 @@ electricity,geothermal,geothermal,Secondary Energy|Electricity,Secondary Energy|
 electricity,hydro,hydro,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydro,,Secondary Energy|Electricity|Non-Biomass Renewables,,,Secondary Energy,1
 electricity,nuclear,Gen_II_LWR,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,Secondary Energy,1
 electricity,nuclear,Gen_III,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,Secondary Energy,1
+electricity,nuclear,SMR,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,Secondary Energy,1
+electricity,nuclear,large reactor,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,Secondary Energy,1
 electricity,refined liquids,refined liquids (CC CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,Secondary Energy,1
 electricity,refined liquids,refined liquids (CC),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,Secondary Energy,1
 electricity,refined liquids,refined liquids (steam/CT),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,Secondary Energy,1
@@ -44,6 +46,7 @@ H2 central production,gas,gas ATR CCS,Secondary Energy|Hydrogen,Secondary Energy
 H2 central production,nuclear,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,Secondary Energy,1
 H2 central production,solar,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,Secondary Energy,1
 H2 central production,wind,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,Secondary Energy,1
+H2 central production,hybrid,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,Secondary Energy,1
 H2 central production,coal,coal chemical CCS,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Coal,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Coal|w/ CCS,,,Secondary Energy,1
 H2 industrial,onsite production,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Other,,,,,Secondary Energy,1
 H2 wholesale dispensing,forecourt production,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Other,,,,,Secondary Energy,1
