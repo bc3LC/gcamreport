@@ -1195,10 +1195,9 @@ get_gdp_ppp <- function(GCAM_version = 'v8.2') {
     dplyr::arrange(year) %>%
     tibble::as_tibble() %>%
     dplyr::group_by(scenario, region) %>%
-    dplyr::mutate(rate = (value / dplyr::lag(value))^(1 / (year - dplyr::lag(year))) - 1) %>%
+    dplyr::mutate(value = 100*((value / dplyr::lag(value))^(1 / (year - dplyr::lag(year))) - 1)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(
-      value = value * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']],
       var = "GDP|PPP [Growth Rate per capita]"
     ) %>%
     dplyr::select(dplyr::all_of(gcamreport::long_columns))
