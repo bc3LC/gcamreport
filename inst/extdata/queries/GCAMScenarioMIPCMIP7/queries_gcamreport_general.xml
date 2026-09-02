@@ -110,7 +110,7 @@
          <comments/>
      </supplyDemandQuery>
    </aQuery>
-      <aQuery>
+   <aQuery>
       <all-regions />
       <supplyDemandQuery title="food demand prices v2">
          <!--  For some scenarios (e.g., SUSMIP), we require to manually run this query and select the food-processing from Staples and NonStaples to have the demand by gcam-consumer!-->
