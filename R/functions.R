@@ -1543,9 +1543,28 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
     } else if ("food demand prices" %in% rgcam::listQueries(prj[sc])){
       food_expenditure_sc <-
         # food prices
-        check_inf(rgcam::getQuery(prj, "food demand prices", scenarios = sc),
-                  dataset_name = "food demand prices") %>%
-        # Units: from 2005$ to 2020$ (1990 to 2020 / 0.5575288)
+        check_inf(rgcam::getQuery(prj, "prices by sector", scenarios = sc),
+                  dataset_name = "prices by sector") %>%
+        # reshape and clean dataset
+        dplyr::filter(sector %in% c("FoodDemand_Staples", "FoodDemand_NonStaples") |
+                        grepl('FoodDemand_NonStaples_',sector)) %>%
+        # add food_weights to estimate Staples & NonStaples price
+        left_join_strict(food_weights %>%
+                           tidyr::complete(tidyr::nesting(scenario, region, sector, input),
+                                           year = unique(year),
+                                           fill = list(weight = 0)),
+                         by = c('scenario','region','sector','year')) %>%
+        # homogenise dataset
+        dplyr::mutate(`gcam-consumer` = 'FoodDemand',
+                      nodeinput = 'FoodDemand',
+                      Units = "2005$/Mcal/day") %>%
+        # from cost to price-paid (ct value extracted from queries inspection)
+        dplyr::mutate(value = value * weight * 1.083086) %>%
+        # total by input
+        dplyr::group_by(Units,scenario,region,`gcam-consumer`,nodeinput,input,year) %>%
+        dplyr::summarise(value = sum(value)) %>%
+        dplyr::ungroup() %>%
+        # Units: from 2005$ to 2020$ (1990 to 2020 / 0.5575288) (units as from the food demand prices query)
         dplyr::mutate(value = round(value,8) *
                         get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_05USD_10USD']] /
                         get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']]
@@ -1601,16 +1620,23 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
         # reshape and clean dataset
         dplyr::filter(sector %in% c("FoodDemand_Staples", "FoodDemand_NonStaples") |
                         grepl('FoodDemand_NonStaples_',sector)) %>%
+        # add food_weights to estimate Staples & NonStaples price
+        left_join_strict(food_weights %>%
+                           tidyr::complete(tidyr::nesting(scenario, region, sector, input),
+                                           year = unique(year),
+                                           fill = list(weight = 0)),
+                         by = c('scenario','region','sector','year')) %>%
+        # homogenise dataset
         dplyr::mutate(`gcam-consumer` = 'FoodDemand',
                       nodeinput = 'FoodDemand',
-                      input = stringr::str_extract(sector, "FoodDemand_Staples|FoodDemand_NonStaples"),
-                      # from cost to price-paid (ct value extracted from queries inspection)
-                      value = value * 1.083086,
                       Units = "2005$/Mcal/day") %>%
+        # from cost to price-paid (ct value extracted from queries inspection)
+        dplyr::mutate(value = value * weight * 1.083086) %>%
+        # total by input
         dplyr::group_by(Units,scenario,region,`gcam-consumer`,nodeinput,input,year) %>%
         dplyr::summarise(value = sum(value)) %>%
         dplyr::ungroup() %>%
-        # Units: from 2005$ to 2020$ (1990 to 2020 / 0.5575288)
+        # Units: from 2005$ to 2020$ (1990 to 2020 / 0.5575288) (units as from the food demand prices query)
         dplyr::mutate(value = round(value,8) *
                         get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_05USD_10USD']] /
                         get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_90USD_10USD']]
@@ -1823,6 +1849,76 @@ get_capital_formation <- function(GCAM_version = 'v8.2') {
   }
 
   capital_formation_clean <<- capital_formation_clean
+}
+
+#' get_food_weights
+#'
+#' Get food items weighted by demand. By region and global.
+#'
+#' @param GCAM_version Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.
+#' @keywords internal ag
+#' @return `food_weights` and `food_wld_weights` global variables.
+#' @importFrom magrittr %>%
+#' @export
+get_food_weights <- function(GCAM_version = 'v8.2') {
+  sector <- input <- var <- value <- unit_conv <- scenario <- region <-
+    year <- food_weights <- food_wld_weights <- NULL
+
+  check_queries("food_weights", GCAM_version)
+
+  food_weights <- NULL
+  for (sc in scenarios.global) {
+
+    if ("food demand prices" %in% rgcam::listQueries(prj[sc])){
+      food_demand_tmp <-
+        check_inf(rgcam::getQuery(prj, "food demand", scenarios = sc),
+                dataset_name = "food demand") %>%
+        dplyr::select(Units, scenario, region, input, year, value) %>%
+        dplyr::mutate(sector = input)
+    } else {
+      food_demand_tmp <-
+        check_inf(rgcam::getQuery(prj, "food demand v2", scenarios = sc),
+                  dataset_name = "food demand") %>%
+        dplyr::filter(input == 'food processing') %>%
+        dplyr::mutate(input = stringr::str_extract(sector, "FoodDemand_Staples|FoodDemand_NonStaples"))
+    }
+
+    # weights by sector within each region
+    food_weights_sc <-
+      food_demand_tmp %>%
+      dplyr::group_by(Units, scenario, region, year, input) %>%
+      dplyr::mutate(total_demand_var = sum(value)) %>%
+      dplyr::ungroup() %>%
+      # compute weight by sector and input
+      dplyr::mutate(weight = value / total_demand_var) %>%
+      # clean dataset
+      dplyr::select(scenario, region, sector, input, year, weight)
+
+    # weights by sector World
+    food_weights_sc_w <-
+      food_demand_tmp %>%
+      # compute World demand
+      dplyr::group_by(Units, scenario, year, sector, input) %>%
+      dplyr::summarise(value = sum(value),
+                       region = 'World') %>%
+      dplyr::ungroup() %>%
+      # compute weights
+      dplyr::group_by(Units, scenario, year, input) %>%
+      dplyr::mutate(total_demand_var = sum(value)) %>%
+      dplyr::ungroup() %>%
+      # compute weight by sector and input
+      dplyr::mutate(weight = value / total_demand_var) %>%
+      # clean dataset
+      dplyr::select(scenario, region, sector, input, year, weight)
+
+    food_weights <- rbind(
+      food_weights,
+      food_weights_sc,
+      food_weights_sc_w
+    )
+  }
+
+  food_weights <<- food_weights
 }
 
 

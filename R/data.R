@@ -2443,6 +2443,18 @@
 #' }
 "food_intake_map_vScenarioMIPCMIP7"
 
+#' food_cal_mt_kg_conversion_vScenarioMIPCMIP7
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAMScenarioMIPCMIP7.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_vScenarioMIPCMIP7
+#' }
+"food_cal_mt_kg_conversion_vScenarioMIPCMIP7"
+
 #' food_items_map_vScenarioMIPCMIP7
 #'
 #' @source github
