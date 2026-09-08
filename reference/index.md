@@ -400,6 +400,18 @@
   : final_energy_map_vScenarioMIPCMIP7
 - [`find_closest_values()`](https://bc3lc.github.io/gcamreport/reference/find_closest_values.md)
   : find_closest_values
+- [`food_cal_mt_kg_conversion_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v7.1.md)
+  : food_cal_mt_kg_conversion_v7.1
+- [`food_cal_mt_kg_conversion_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v7.2.md)
+  : food_cal_mt_kg_conversion_v7.2
+- [`food_cal_mt_kg_conversion_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v8.2.md)
+  : food_cal_mt_kg_conversion_v8.2
+- [`food_cal_mt_kg_conversion_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vEurope7.2.md)
+  : food_cal_mt_kg_conversion_vEurope7.2
+- [`food_cal_mt_kg_conversion_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vEurope8.7.md)
+  : food_cal_mt_kg_conversion_vEurope8.7
+- [`food_cal_mt_kg_conversion_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vScenarioMIPCMIP7.md)
+  : food_cal_mt_kg_conversion_vScenarioMIPCMIP7
 - [`food_expenditures_average_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.1.md)
   : food_expenditures_average_v7.1
 - [`food_expenditures_average_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.2.md)
