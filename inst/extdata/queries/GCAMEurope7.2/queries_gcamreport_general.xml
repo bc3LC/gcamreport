@@ -70,12 +70,67 @@
    </aQuery>
    <aQuery>
       <all-regions />
+      <supplyDemandQuery title="food demand">
+         <!--  For some scenarios (e.g., SUSMIP), which have different food waste structure, this query does not work and "food demand v2" is required -->
+            <axis1 name="input">input[@name]</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="demand" group="false" sumAll="false">gcam-consumer[@name='FoodDemand']//*[@type='input']/demand-physical/node()</xPath>
+            <comments/>
+      </supplyDemandQuery>   
+   </aQuery>
+   <aQuery>
+      <all-regions />
+      <supplyDemandQuery title="food demand v2">
+         <!--  For some scenarios (e.g., SUSMIP), we require to manually run this query and select the food-processing from Staples and NonStaples to have the demand by gcam-consumer!-->
+            <axis1 name="input">input[@name]</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="demand" group="false" sumAll="false">
+               *[@type='sector' and (@name='FoodDemand_Staples' 
+      or @name='FoodDemand_NonStaples'
+      or @name='FoodDemand_NonStaples_Oils'
+      or @name='FoodDemand_NonStaples_FruitsVeg'
+      or @name='FoodDemand_NonStaples_PlantProtein'
+      or @name='FoodDemand_NonStaples_Sugar'
+      or @name='FoodDemand_NonStaples_OtherCrop'
+      or @name='FoodDemand_NonStaples_Ruminant'
+      or @name='FoodDemand_NonStaples_NonRuminant'
+      or @name='FoodDemand_NonStaples_Dairy'
+      or @name='FoodDemand_NonStaples_Fish')]//
+                  *[@type='input']/demand-physical/node()
+            </xPath> 
+            <comments/>
+      </supplyDemandQuery>   
+   </aQuery>
+   <aQuery>
+      <all-regions />
       <supplyDemandQuery title="food demand prices">
          <axis1 name="input">input[@name]</axis1>
          <axis2 name="Year">price-paid[@vintage]</axis2>
          <xPath buildList="true" dataName="price" group="false" sumAll="false">gcam-consumer[@name='FoodDemand']//*[@type='input']/price-paid/node()</xPath>
          <comments/>
      </supplyDemandQuery>
+   </aQuery>
+      <aQuery>
+      <all-regions />
+      <supplyDemandQuery title="food demand prices v2">
+         <!--  For some scenarios (e.g., SUSMIP), we require to manually run this query and select the food-processing from Staples and NonStaples to have the demand by gcam-consumer!-->
+            <axis1 name="sector">sector[@name]</axis1>
+            <axis2 name="Year">cost</axis2>
+            <xPath buildList="true" dataName="price" group="false" sumAll="false">
+               *[@type='sector' and (@name='FoodDemand_Staples' 
+      or @name='FoodDemand_NonStaples'
+      or @name='FoodDemand_NonStaples_Oils'
+      or @name='FoodDemand_NonStaples_FruitsVeg'
+      or @name='FoodDemand_NonStaples_PlantProtein'
+      or @name='FoodDemand_NonStaples_Sugar'
+      or @name='FoodDemand_NonStaples_OtherCrop'
+      or @name='FoodDemand_NonStaples_Ruminant'
+      or @name='FoodDemand_NonStaples_NonRuminant'
+      or @name='FoodDemand_NonStaples_Dairy'
+      or @name='FoodDemand_NonStaples_Fish')]/cost/node()
+            </xPath> 
+            <comments/>
+      </supplyDemandQuery>   
    </aQuery>
    <aQuery>
       <all-regions />

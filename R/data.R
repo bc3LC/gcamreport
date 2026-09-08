@@ -370,6 +370,18 @@
 #' }
 "food_intake_map_vEurope8.7"
 
+#' food_cal_mt_kg_conversion_vEurope8.7
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAM Europe 8.7 version.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_vEurope8.7
+#' }
+"food_cal_mt_kg_conversion_vEurope8.7"
+
 #' food_items_map_vEurope8.7
 #'
 #' @source github
@@ -1062,6 +1074,18 @@
 #' }
 "food_intake_map_vEurope7.2"
 
+#' food_cal_mt_kg_conversion_vEurope7.2
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAM Europe 7.2 version.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_vEurope7.2
+#' }
+"food_cal_mt_kg_conversion_vEurope7.2"
+
 #' food_items_map_vEurope7.2
 #'
 #' @source github
@@ -1751,6 +1775,18 @@
 #' gcamreport::food_intake_map_v8.2
 #' }
 "food_intake_map_v8.2"
+
+#' food_cal_mt_kg_conversion_v8.2
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAM8.2.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_v8.2
+#' }
+"food_cal_mt_kg_conversion_v8.2"
 
 #' food_items_map_v8.2
 #'
@@ -2442,6 +2478,18 @@
 #' gcamreport::food_intake_map_vScenarioMIPCMIP7
 #' }
 "food_intake_map_vScenarioMIPCMIP7"
+
+#' food_cal_mt_kg_conversion_vScenarioMIPCMIP7
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAMScenarioMIPCMIP7.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_vScenarioMIPCMIP7
+#' }
+"food_cal_mt_kg_conversion_vScenarioMIPCMIP7"
 
 #' food_items_map_vScenarioMIPCMIP7
 #'
@@ -3160,6 +3208,18 @@
 #' }
 "food_intake_map_v7.2"
 
+#' food_cal_mt_kg_conversion_v7.2
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAM7.2.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_v7.2
+#' }
+"food_cal_mt_kg_conversion_v7.2"
+
 #' food_items_map_v7.2
 #'
 #' @source github
@@ -3852,6 +3912,18 @@
 #' gcamreport::food_intake_map_v7.1
 #' }
 "food_intake_map_v7.1"
+
+#' food_cal_mt_kg_conversion_v7.1
+#'
+#' @source github
+#' @format .csv
+#' @description food maps compatible with GCAM7.1.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::food_cal_mt_kg_conversion_v7.1
+#' }
+"food_cal_mt_kg_conversion_v7.1"
 
 #' food_items_map_v7.1
 #'

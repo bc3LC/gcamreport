@@ -149,6 +149,11 @@ cereal_scaler_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "inst/extda
 )
 use_data(cereal_scaler_vEurope8.7, overwrite = T)
 
+# food pcal, mt, kg conversion
+food_cal_mt_kg_conversion_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope8.7", "food_cal_mt_kg_conversion.csv"),
+                                                               comment = "#"
+)
+use_data(food_cal_mt_kg_conversion_vEurope8.7, overwrite = T)
 
 
 # primary, secondary, final energy maps
