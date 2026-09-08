@@ -6,6 +6,8 @@ on:
       - gcam-core
       - gcam-iamcompact
       - dev
+  pull_request:
+      branches: [ '**' ]
 
 jobs:
   pkgdown:
@@ -23,12 +25,12 @@ jobs:
           use-public-rspm: true
 
       - uses: r-lib/actions/setup-pandoc@v2
-      
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libxml2-dev libssl-dev
-          
+
       - name: Install dependencies
         run: |
           install.packages("pak")
