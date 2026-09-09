@@ -472,7 +472,7 @@ test_that("Test14v_7.0 ghg GWP", {
       launch_ui = FALSE,
       GCAM_version = 4
     ),
-    "Invalid GCAM_version '4'. Available versions are: v7.0, v7.1, v7.2, v8.2, vScenarioMIPCMIP7. Please choose one of these versions."
+    "Invalid GCAM_version '4'. Available versions are: v7.0, v7.1, v7.2, v8.2, vScenarioMIPCMIP7, vEurope7.2, vEurope8.7. Please choose one of these versions."
   )
 
 
