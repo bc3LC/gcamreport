@@ -1,0 +1,25 @@
+# GCAM food sector mapping
+item,regional_item,category
+Beef,regional beef,FoodDemand_NonStaples_Ruminant
+Corn,regional corn,FoodDemand_Staples
+Dairy,regional dairy,FoodDemand_NonStaples_Dairy
+FiberCrop,regional fibercrop,FoodDemand_NonStaples_Oils
+Fruits,regional fruits,FoodDemand_NonStaples_FruitsVeg
+Legumes,regional legumes,FoodDemand_NonStaples_PlantProtein
+MiscCrop,regional misccrop,FoodDemand_NonStaples_OtherCrop
+NutsSeeds,regional nuts_seeds,FoodDemand_NonStaples_PlantProtein
+OilCrop,regional oilcrop,FoodDemand_NonStaples_Oils
+OilPalm,regional oilpalm,FoodDemand_NonStaples_Oils
+OtherGrain,regional othergrain,FoodDemand_Staples
+Pork,regional pork,FoodDemand_NonStaples_NonRuminant
+Poultry,regional poultry,FoodDemand_NonStaples_NonRuminant
+Rice,regional rice,FoodDemand_Staples
+RootTuber,regional root_tuber,FoodDemand_Staples
+SheepGoat,regional sheepgoat,FoodDemand_NonStaples_Ruminant
+Soybean,regional soybean,FoodDemand_NonStaples_Oils
+SugarCrop,regional sugarcrop,FoodDemand_NonStaples_Sugar
+Vegetables,regional vegetables,FoodDemand_NonStaples_FruitsVeg
+Wheat,regional wheat,FoodDemand_Staples
+biomass,total biomass,NonFoodDemand_Crops
+Forest,regional industrial_roundwood,NonFoodDemand_Crops
+OtherMeat_Fish,,FoodDemand_NonStaples_Fish
