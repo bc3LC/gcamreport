@@ -4234,6 +4234,8 @@ get_total_trade <- function(GCAM_version = 'v8.2') {
   trade_clean <- NULL
 
   check_queries("trade_clean", GCAM_version)
+  if (!exists("ag_trade")) ag_trade <- NULL
+  if (!exists("pe_trade")) pe_trade <- NULL
 
   trade_clean <- rbind(
     ag_trade,
