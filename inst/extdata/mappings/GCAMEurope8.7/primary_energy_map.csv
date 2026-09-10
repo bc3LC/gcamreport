@@ -25,6 +25,7 @@ f hydro,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Hydr
 H2 industrial,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Hydro,,,,,,,,1
 g wind,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Wind,,,,,,,,1
 h solar,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Solar,,,,,,,,1
+solar-thermal,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Solar,,,,,,,,1
 global solar resource,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Solar,,,,,,,,1
 global solar resource CCS,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Solar,,,,,,,,1
 geothermal,Primary Energy,Primary Energy|Non-Biomass Renewables,Primary Energy|Geothermal,,,,,,,,1
