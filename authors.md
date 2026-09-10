@@ -16,7 +16,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/bc3LC/gcamreport/blob/gcam-core/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/bc3LC/gcamreport/blob/PR-gcameur-queries/DESCRIPTION)
 
 Rodés-Bachs C, Sampedro J, Horowitz R, Van de Ven D (2026). *gcamreport:
 gcamreport*. R package version 1.0.3,
