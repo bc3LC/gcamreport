@@ -1,0 +1,20 @@
+---
+title: "Version Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Version_Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Each `gcamreport` release is linked either to a `GCAM` version or a study where GCAM was used. We follow a specific naming and tagging procedure for each release: they are all linked to a tag, whose name firstly contains two numbers indicating the compatible GCAM version (e.g. **v6.0** indicates that it is compatible with GCAM 6.0); the next number indicates the version release (e.g. v6.0.**0** indicates that it is the **first** release compatible with GCAM 6.0). This numeration starts from 0. Finally, if the release is linked to a project, the tag's name contains a hyphen and a key work (e.g. v6.0.0**-gas**).
+
+Find below a description of all the releases:
+
+| `gcamreport` tag-version | `GCAM` version and/or study        |
+|--------------------------|------------------------------------|
+| v6.0.1                     | GCAM 6.0                         |
+| v6.0.0                     | GCAM 6.0                         |
+| v6.0.0-gas                 | GCAM 6.0 with gas extra features |
+
+You can see the new feature of each release and download the corresponding versions [here](https://bc3lc.github.io/gcamreport/news/index.html).

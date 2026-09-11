@@ -1,0 +1,886 @@
+# Package index
+
+## All functions
+
+- [`ag_demand_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.0.md)
+  : ag_demand_map_v7.0
+- [`ag_demand_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.1.md)
+  : ag_demand_map_v7.1
+- [`ag_demand_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v7.2.md)
+  : ag_demand_map_v7.2
+- [`ag_demand_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_v8.2.md)
+  : ag_demand_map_v8.2
+- [`ag_demand_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_vEurope7.2.md)
+  : ag_demand_map_vEurope7.2
+- [`ag_demand_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_vEurope8.7.md)
+  : ag_demand_map_vEurope8.7
+- [`ag_demand_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ag_demand_map_vScenarioMIPCMIP7.md)
+  : ag_demand_map_vScenarioMIPCMIP7
+- [`ag_demand_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.0.md)
+  : ag_demand_price_map_v7.0
+- [`ag_demand_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.1.md)
+  : ag_demand_price_map_v7.1
+- [`ag_demand_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v7.2.md)
+  : ag_demand_price_map_v7.2
+- [`ag_demand_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_v8.2.md)
+  : ag_demand_price_map_v8.2
+- [`ag_demand_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_vEurope7.2.md)
+  : ag_demand_price_map_vEurope7.2
+- [`ag_demand_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_vEurope8.7.md)
+  : ag_demand_price_map_vEurope8.7
+- [`ag_demand_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ag_demand_price_map_vScenarioMIPCMIP7.md)
+  : ag_demand_price_map_vScenarioMIPCMIP7
+- [`ag_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.0.md)
+  : ag_price_map_v7.0
+- [`ag_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.1.md)
+  : ag_price_map_v7.1
+- [`ag_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_v7.2.md)
+  : ag_price_map_v7.2
+- [`ag_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_v8.2.md)
+  : ag_price_map_v8.2
+- [`ag_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_vEurope7.2.md)
+  : ag_price_map_vEurope7.2
+- [`ag_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_vEurope8.7.md)
+  : ag_price_map_vEurope8.7
+- [`ag_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ag_price_map_vScenarioMIPCMIP7.md)
+  : ag_price_map_vScenarioMIPCMIP7
+- [`ag_production_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.0.md)
+  : ag_production_map_v7.0
+- [`ag_production_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.1.md)
+  : ag_production_map_v7.1
+- [`ag_production_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_v7.2.md)
+  : ag_production_map_v7.2
+- [`ag_production_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_v8.2.md)
+  : ag_production_map_v8.2
+- [`ag_production_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_vEurope7.2.md)
+  : ag_production_map_vEurope7.2
+- [`ag_production_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_vEurope8.7.md)
+  : ag_production_map_vEurope8.7
+- [`ag_production_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ag_production_map_vScenarioMIPCMIP7.md)
+  : ag_production_map_vScenarioMIPCMIP7
+- [`available_continents()`](https://bc3lc.github.io/gcamreport/reference/available_continents.md)
+  : available_continents
+- [`available_GCAM_versions`](https://bc3lc.github.io/gcamreport/reference/available_GCAM_versions.md)
+  : available_GCAM_versions
+- [`available_GWP_versions`](https://bc3lc.github.io/gcamreport/reference/available_GWP_versions.md)
+  : available_GWP_versions
+- [`available_regions()`](https://bc3lc.github.io/gcamreport/reference/available_regions.md)
+  : available_regions
+- [`available_variables()`](https://bc3lc.github.io/gcamreport/reference/available_variables.md)
+  : available_variables
+- [`buildings_en_service_v7.0`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.0.md)
+  : buildings_en_service_v7.0
+- [`buildings_en_service_v7.1`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.1.md)
+  : buildings_en_service_v7.1
+- [`buildings_en_service_v7.2`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v7.2.md)
+  : buildings_en_service_v7.2
+- [`buildings_en_service_v8.2`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_v8.2.md)
+  : buildings_en_service_v8.2
+- [`buildings_en_service_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_vEurope7.2.md)
+  : buildings_en_service_vEurope7.2
+- [`buildings_en_service_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_vEurope8.7.md)
+  : buildings_en_service_vEurope8.7
+- [`buildings_en_service_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/buildings_en_service_vScenarioMIPCMIP7.md)
+  : buildings_en_service_vScenarioMIPCMIP7
+- [`capacity_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.0.md)
+  : capacity_map_v7.0
+- [`capacity_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.1.md)
+  : capacity_map_v7.1
+- [`capacity_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/capacity_map_v7.2.md)
+  : capacity_map_v7.2
+- [`capacity_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/capacity_map_v8.2.md)
+  : capacity_map_v8.2
+- [`capacity_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/capacity_map_vEurope7.2.md)
+  : capacity_map_vEurope7.2
+- [`capacity_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/capacity_map_vEurope8.7.md)
+  : capacity_map_vEurope8.7
+- [`capacity_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/capacity_map_vScenarioMIPCMIP7.md)
+  : capacity_map_vScenarioMIPCMIP7
+- [`capital_gcam_v7.0`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.0.md)
+  : capital_gcam_v7.0
+- [`capital_gcam_v7.1`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.1.md)
+  : capital_gcam_v7.1
+- [`capital_gcam_v7.2`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_v7.2.md)
+  : capital_gcam_v7.2
+- [`capital_gcam_v8.2`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_v8.2.md)
+  : capital_gcam_v8.2
+- [`capital_gcam_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_vEurope7.2.md)
+  : capital_gcam_vEurope7.2
+- [`capital_gcam_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_vEurope8.7.md)
+  : capital_gcam_vEurope8.7
+- [`capital_gcam_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/capital_gcam_vScenarioMIPCMIP7.md)
+  : capital_gcam_vScenarioMIPCMIP7
+- [`carbon_content_v7.0`](https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.0.md)
+  : carbon_content_v7.0
+- [`carbon_content_v7.1`](https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.1.md)
+  : carbon_content_v7.1
+- [`carbon_content_v7.2`](https://bc3lc.github.io/gcamreport/reference/carbon_content_v7.2.md)
+  : carbon_content_v7.2
+- [`carbon_content_v8.2`](https://bc3lc.github.io/gcamreport/reference/carbon_content_v8.2.md)
+  : carbon_content_v8.2
+- [`carbon_content_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/carbon_content_vEurope7.2.md)
+  : carbon_content_vEurope7.2
+- [`carbon_content_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/carbon_content_vEurope8.7.md)
+  : carbon_content_vEurope8.7
+- [`carbon_content_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/carbon_content_vScenarioMIPCMIP7.md)
+  : carbon_content_vScenarioMIPCMIP7
+- [`carbon_seq_tech_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.0.md)
+  : carbon_seq_tech_map_v7.0
+- [`carbon_seq_tech_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.1.md)
+  : carbon_seq_tech_map_v7.1
+- [`carbon_seq_tech_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v7.2.md)
+  : carbon_seq_tech_map_v7.2
+- [`carbon_seq_tech_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_v8.2.md)
+  : carbon_seq_tech_map_v8.2
+- [`carbon_seq_tech_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_vEurope7.2.md)
+  : carbon_seq_tech_map_vEurope7.2
+- [`carbon_seq_tech_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_vEurope8.7.md)
+  : carbon_seq_tech_map_vEurope8.7
+- [`carbon_seq_tech_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/carbon_seq_tech_map_vScenarioMIPCMIP7.md)
+  : carbon_seq_tech_map_vScenarioMIPCMIP7
+- [`cereal_scaler_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/cereal_scaler_vScenarioMIPCMIP7.md)
+  : cereal_scaler_vScenarioMIPCMIP7
+- [`cf_gcam_v7.0`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.0.md)
+  : cf_gcam_v7.0
+- [`cf_gcam_v7.1`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.1.md)
+  : cf_gcam_v7.1
+- [`cf_gcam_v7.2`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_v7.2.md)
+  : cf_gcam_v7.2
+- [`cf_gcam_v8.2`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_v8.2.md)
+  : cf_gcam_v8.2
+- [`cf_gcam_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_vEurope7.2.md)
+  : cf_gcam_vEurope7.2
+- [`cf_gcam_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_vEurope8.7.md)
+  : cf_gcam_vEurope8.7
+- [`cf_gcam_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/cf_gcam_vScenarioMIPCMIP7.md)
+  : cf_gcam_vScenarioMIPCMIP7
+- [`cf_rgn_v7.0`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.0.md)
+  : cf_rgn_v7.0
+- [`cf_rgn_v7.1`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.1.md)
+  : cf_rgn_v7.1
+- [`cf_rgn_v7.2`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_v7.2.md)
+  : cf_rgn_v7.2
+- [`cf_rgn_v8.2`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_v8.2.md)
+  : cf_rgn_v8.2
+- [`cf_rgn_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_vEurope7.2.md)
+  : cf_rgn_vEurope7.2
+- [`cf_rgn_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_vEurope8.7.md)
+  : cf_rgn_vEurope8.7
+- [`cf_rgn_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/cf_rgn_vScenarioMIPCMIP7.md)
+  : cf_rgn_vScenarioMIPCMIP7
+- [`check_inf()`](https://bc3lc.github.io/gcamreport/reference/check_inf.md)
+  : check_inf
+- [`check_queries()`](https://bc3lc.github.io/gcamreport/reference/check_queries.md)
+  : check_queries
+- [`co2_ets_sector_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.0.md)
+  : co2_ets_sector_map_v7.0
+- [`co2_ets_sector_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.1.md)
+  : co2_ets_sector_map_v7.1
+- [`co2_ets_sector_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v7.2.md)
+  : co2_ets_sector_map_v7.2
+- [`co2_ets_sector_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_v8.2.md)
+  : co2_ets_sector_map_v8.2
+- [`co2_ets_sector_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_vEurope7.2.md)
+  : co2_ets_sector_map_vEurope7.2
+- [`co2_ets_sector_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_vEurope8.7.md)
+  : co2_ets_sector_map_vEurope8.7
+- [`co2_ets_sector_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/co2_ets_sector_map_vScenarioMIPCMIP7.md)
+  : co2_ets_sector_map_vScenarioMIPCMIP7
+- [`co2_market_frag_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.0.md)
+  : co2_market_frag_map_v7.0
+- [`co2_market_frag_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.1.md)
+  : co2_market_frag_map_v7.1
+- [`co2_market_frag_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v7.2.md)
+  : co2_market_frag_map_v7.2
+- [`co2_market_frag_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_v8.2.md)
+  : co2_market_frag_map_v8.2
+- [`co2_market_frag_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_vEurope7.2.md)
+  : co2_market_frag_map_vEurope7.2
+- [`co2_market_frag_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_vEurope8.7.md)
+  : co2_market_frag_map_vEurope8.7
+- [`co2_market_frag_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/co2_market_frag_map_vScenarioMIPCMIP7.md)
+  : co2_market_frag_map_vScenarioMIPCMIP7
+- [`co2_market_v7.0`](https://bc3lc.github.io/gcamreport/reference/co2_market_v7.0.md)
+  : co2_market_v7.0
+- [`co2_market_v7.1`](https://bc3lc.github.io/gcamreport/reference/co2_market_v7.1.md)
+  : co2_market_v7.1
+- [`co2_market_v7.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_v7.2.md)
+  : co2_market_v7.2
+- [`co2_market_v8.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_v8.2.md)
+  : co2_market_v8.2
+- [`co2_market_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/co2_market_vEurope7.2.md)
+  : co2_market_vEurope7.2
+- [`co2_market_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/co2_market_vEurope8.7.md)
+  : co2_market_vEurope8.7
+- [`co2_market_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/co2_market_vScenarioMIPCMIP7.md)
+  : co2_market_vScenarioMIPCMIP7
+- [`co2_resource_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_v7.0.md)
+  : co2_resource_map_v7.0
+- [`co2_resource_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_v7.1.md)
+  : co2_resource_map_v7.1
+- [`co2_resource_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_v7.2.md)
+  : co2_resource_map_v7.2
+- [`co2_resource_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_v8.2.md)
+  : co2_resource_map_v8.2
+- [`co2_resource_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_vEurope7.2.md)
+  : co2_resource_map_vEurope7.2
+- [`co2_resource_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_vEurope8.7.md)
+  : co2_resource_map_vEurope8.7
+- [`co2_resource_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/co2_resource_map_vScenarioMIPCMIP7.md)
+  : co2_resource_map_vScenarioMIPCMIP7
+- [`co2_tech_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.0.md)
+  : co2_tech_map_v7.0
+- [`co2_tech_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.1.md)
+  : co2_tech_map_v7.1
+- [`co2_tech_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v7.2.md)
+  : co2_tech_map_v7.2
+- [`co2_tech_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_v8.2.md)
+  : co2_tech_map_v8.2
+- [`co2_tech_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_vEurope7.2.md)
+  : co2_tech_map_vEurope7.2
+- [`co2_tech_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_vEurope8.7.md)
+  : co2_tech_map_vEurope8.7
+- [`co2_tech_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/co2_tech_map_vScenarioMIPCMIP7.md)
+  : co2_tech_map_vScenarioMIPCMIP7
+- [`compute_reg_sec_weight()`](https://bc3lc.github.io/gcamreport/reference/compute_reg_sec_weight.md)
+  : compute_reg_sec_weight
+- [`compute_sec_prevsec_weight()`](https://bc3lc.github.io/gcamreport/reference/compute_sec_prevsec_weight.md)
+  : compute_sec_prevsec_weight
+- [`convert_v7.0`](https://bc3lc.github.io/gcamreport/reference/convert_v7.0.md)
+  : convert_v7.0
+- [`convert_v7.1`](https://bc3lc.github.io/gcamreport/reference/convert_v7.1.md)
+  : convert_v7.1
+- [`convert_v7.2`](https://bc3lc.github.io/gcamreport/reference/convert_v7.2.md)
+  : convert_v7.2
+- [`convert_v8.2`](https://bc3lc.github.io/gcamreport/reference/convert_v8.2.md)
+  : convert_v8.2
+- [`convert_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/convert_vEurope7.2.md)
+  : convert_vEurope7.2
+- [`convert_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/convert_vEurope8.7.md)
+  : convert_vEurope8.7
+- [`convert_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/convert_vScenarioMIPCMIP7.md)
+  : convert_vScenarioMIPCMIP7
+- [`conveyance.eff_v7.0`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.0.md)
+  : conveyance.eff_v7.0
+- [`conveyance.eff_v7.1`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.1.md)
+  : conveyance.eff_v7.1
+- [`conveyance.eff_v7.2`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v7.2.md)
+  : conveyance.eff_v7.2
+- [`conveyance.eff_v8.2`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_v8.2.md)
+  : conveyance.eff_v8.2
+- [`conveyance.eff_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_vEurope7.2.md)
+  : conveyance.eff_vEurope7.2
+- [`conveyance.eff_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_vEurope8.7.md)
+  : conveyance.eff_vEurope8.7
+- [`conveyance.eff_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/conveyance.eff_vScenarioMIPCMIP7.md)
+  : conveyance.eff_vScenarioMIPCMIP7
+- [`create_project()`](https://bc3lc.github.io/gcamreport/reference/create_project.md)
+  : create_project
+- [`data_query()`](https://bc3lc.github.io/gcamreport/reference/data_query.md)
+  : data_query
+- [`deciles_GCAM_versions`](https://bc3lc.github.io/gcamreport/reference/deciles_GCAM_versions.md)
+  : deciles_GCAM_versions
+- [`energy_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.0.md)
+  : energy_price_map_v7.0
+- [`energy_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.1.md)
+  : energy_price_map_v7.1
+- [`energy_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v7.2.md)
+  : energy_price_map_v7.2
+- [`energy_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_v8.2.md)
+  : energy_price_map_v8.2
+- [`energy_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope7.2.md)
+  : energy_price_map_vEurope7.2
+- [`energy_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vEurope8.7.md)
+  : energy_price_map_vEurope8.7
+- [`energy_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/energy_price_map_vScenarioMIPCMIP7.md)
+  : energy_price_map_vScenarioMIPCMIP7
+- [`en_blocks`](https://bc3lc.github.io/gcamreport/reference/en_blocks.md)
+  : en_blocks
+- [`en_demand_price_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.0.md)
+  : en_demand_price_map_v7.0
+- [`en_demand_price_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.1.md)
+  : en_demand_price_map_v7.1
+- [`en_demand_price_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v7.2.md)
+  : en_demand_price_map_v7.2
+- [`en_demand_price_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_v8.2.md)
+  : en_demand_price_map_v8.2
+- [`en_demand_price_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_vEurope7.2.md)
+  : en_demand_price_map_vEurope7.2
+- [`en_demand_price_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_vEurope8.7.md)
+  : en_demand_price_map_vEurope8.7
+- [`en_demand_price_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_demand_price_map_vScenarioMIPCMIP7.md)
+  : en_demand_price_map_vScenarioMIPCMIP7
+- [`en_multiplier_v7.1`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.1.md)
+  : en_multiplier_v7.1
+- [`en_multiplier_v7.2`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v7.2.md)
+  : en_multiplier_v7.2
+- [`en_multiplier_v8.2`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_v8.2.md)
+  : en_multiplier_v8.2
+- [`en_multiplier_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vEurope7.2.md)
+  : en_multiplier_vEurope7.2
+- [`en_multiplier_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vEurope8.7.md)
+  : en_multiplier_vEurope8.7
+- [`en_multiplier_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.md)
+  : en_multiplier_vScenarioMIPCMIP7
+- [`fertilizer_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.0.md)
+  : fertilizer_map_v7.0
+- [`fertilizer_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.1.md)
+  : fertilizer_map_v7.1
+- [`fertilizer_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.2.md)
+  : fertilizer_map_v7.2
+- [`fertilizer_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v8.2.md)
+  : fertilizer_map_v8.2
+- [`fertilizer_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_vEurope7.2.md)
+  : fertilizer_map_vEurope7.2
+- [`fertilizer_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_vEurope8.7.md)
+  : fertilizer_map_vEurope8.7
+- [`fertilizer_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_vScenarioMIPCMIP7.md)
+  : fertilizer_map_vScenarioMIPCMIP7
+- [`filter_desired_regions()`](https://bc3lc.github.io/gcamreport/reference/filter_desired_regions.md)
+  : filter_desired_regions
+- [`final_energy_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.0.md)
+  : final_energy_map_v7.0
+- [`final_energy_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.1.md)
+  : final_energy_map_v7.1
+- [`final_energy_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_v7.2.md)
+  : final_energy_map_v7.2
+- [`final_energy_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_v8.2.md)
+  : final_energy_map_v8.2
+- [`final_energy_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_vEurope7.2.md)
+  : final_energy_map_vEurope7.2
+- [`final_energy_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_vEurope8.7.md)
+  : final_energy_map_vEurope8.7
+- [`final_energy_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/final_energy_map_vScenarioMIPCMIP7.md)
+  : final_energy_map_vScenarioMIPCMIP7
+- [`find_closest_values()`](https://bc3lc.github.io/gcamreport/reference/find_closest_values.md)
+  : find_closest_values
+- [`food_cal_mt_kg_conversion_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v7.1.md)
+  : food_cal_mt_kg_conversion_v7.1
+- [`food_cal_mt_kg_conversion_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v7.2.md)
+  : food_cal_mt_kg_conversion_v7.2
+- [`food_cal_mt_kg_conversion_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_v8.2.md)
+  : food_cal_mt_kg_conversion_v8.2
+- [`food_cal_mt_kg_conversion_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vEurope7.2.md)
+  : food_cal_mt_kg_conversion_vEurope7.2
+- [`food_cal_mt_kg_conversion_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vEurope8.7.md)
+  : food_cal_mt_kg_conversion_vEurope8.7
+- [`food_cal_mt_kg_conversion_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_cal_mt_kg_conversion_vScenarioMIPCMIP7.md)
+  : food_cal_mt_kg_conversion_vScenarioMIPCMIP7
+- [`food_expenditures_average_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.1.md)
+  : food_expenditures_average_v7.1
+- [`food_expenditures_average_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v7.2.md)
+  : food_expenditures_average_v7.2
+- [`food_expenditures_average_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_v8.2.md)
+  : food_expenditures_average_v8.2
+- [`food_expenditures_average_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_vEurope7.2.md)
+  : food_expenditures_average_vEurope7.2
+- [`food_expenditures_average_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_vEurope8.7.md)
+  : food_expenditures_average_vEurope8.7
+- [`food_expenditures_average_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_expenditures_average_vScenarioMIPCMIP7.md)
+  : food_expenditures_average_vScenarioMIPCMIP7
+- [`food_intake_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.0.md)
+  : food_intake_map_v7.0
+- [`food_intake_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.1.md)
+  : food_intake_map_v7.1
+- [`food_intake_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v7.2.md)
+  : food_intake_map_v7.2
+- [`food_intake_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_v8.2.md)
+  : food_intake_map_v8.2
+- [`food_intake_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_vEurope7.2.md)
+  : food_intake_map_vEurope7.2
+- [`food_intake_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_vEurope8.7.md)
+  : food_intake_map_vEurope8.7
+- [`food_intake_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_intake_map_vScenarioMIPCMIP7.md)
+  : food_intake_map_vScenarioMIPCMIP7
+- [`food_items_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/food_items_map_v7.0.md)
+  : food_items_map_v7.0
+- [`food_items_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/food_items_map_v7.1.md)
+  : food_items_map_v7.1
+- [`food_items_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/food_items_map_v7.2.md)
+  : food_items_map_v7.2
+- [`food_items_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/food_items_map_v8.2.md)
+  : food_items_map_v8.2
+- [`food_items_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/food_items_map_vEurope7.2.md)
+  : food_items_map_vEurope7.2
+- [`food_items_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/food_items_map_vEurope8.7.md)
+  : food_items_map_vEurope8.7
+- [`food_items_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/food_items_map_vScenarioMIPCMIP7.md)
+  : food_items_map_vScenarioMIPCMIP7
+- [`F_GASES_v7.0`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.0.md)
+  : F_GASES_v7.0
+- [`F_GASES_v7.1`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.1.md)
+  : F_GASES_v7.1
+- [`F_GASES_v7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v7.2.md)
+  : F_GASES_v7.2
+- [`F_GASES_v8.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_v8.2.md)
+  : F_GASES_v8.2
+- [`F_GASES_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope7.2.md)
+  : F_GASES_vEurope7.2
+- [`F_GASES_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vEurope8.7.md)
+  : F_GASES_vEurope8.7
+- [`F_GASES_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/F_GASES_vScenarioMIPCMIP7.md)
+  : F_GASES_vScenarioMIPCMIP7
+- [`gcameurope.EUROSTAT_COUNTRIES_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/gcameurope.EUROSTAT_COUNTRIES_vEurope7.2.md)
+  : gcameurope.EUROSTAT_COUNTRIES_vEurope7.2
+- [`gcameurope.EUROSTAT_COUNTRIES_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/gcameurope.EUROSTAT_COUNTRIES_vEurope8.7.md)
+  : gcameurope.EUROSTAT_COUNTRIES_vEurope8.7
+- [`gcamreport`](https://bc3lc.github.io/gcamreport/reference/gcamreport.md)
+  : gcamreport
+- [`GCAM_regions_number`](https://bc3lc.github.io/gcamreport/reference/GCAM_regions_number.md)
+  : GCAM_regions_number
+- [`generate_report()`](https://bc3lc.github.io/gcamreport/reference/generate_report.md)
+  : generate_report
+- [`GHG_gases_v7.0`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.0.md)
+  : GHG_gases_v7.0
+- [`GHG_gases_v7.1`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.1.md)
+  : GHG_gases_v7.1
+- [`GHG_gases_v7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v7.2.md)
+  : GHG_gases_v7.2
+- [`GHG_gases_v8.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_v8.2.md)
+  : GHG_gases_v8.2
+- [`GHG_gases_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope7.2.md)
+  : GHG_gases_vEurope7.2
+- [`GHG_gases_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vEurope8.7.md)
+  : GHG_gases_vEurope8.7
+- [`GHG_gases_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/GHG_gases_vScenarioMIPCMIP7.md)
+  : GHG_gases_vScenarioMIPCMIP7
+- [`ghg_GWP_AR4`](https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR4.md)
+  : ghg_GWP_AR4
+- [`ghg_GWP_AR5`](https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR5.md)
+  : ghg_GWP_AR5
+- [`ghg_GWP_AR6`](https://bc3lc.github.io/gcamreport/reference/ghg_GWP_AR6.md)
+  : ghg_GWP_AR6
+- [`global_vet_values`](https://bc3lc.github.io/gcamreport/reference/global_vet_values.md)
+  : global_vet_values
+- [`handle_warning()`](https://bc3lc.github.io/gcamreport/reference/handle_warning.md)
+  : handle_warning
+- [`hdd_cdd_v7.1`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.1.md)
+  : hdd_cdd_v7.1
+- [`hdd_cdd_v7.2`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v7.2.md)
+  : hdd_cdd_v7.2
+- [`hdd_cdd_v8.2`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v8.2.md)
+  : hdd_cdd_v8.2
+- [`hdd_cdd_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vScenarioMIPCMIP7.md)
+  : hdd_cdd_vScenarioMIPCMIP7
+- [`iea_capacity_v7.0`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.md)
+  : iea_capacity_v7.0
+- [`iea_capacity_v7.1`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.1.md)
+  : iea_capacity_v7.1
+- [`iea_capacity_v7.2`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.2.md)
+  : iea_capacity_v7.2
+- [`iea_capacity_v8.2`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v8.2.md)
+  : iea_capacity_v8.2
+- [`iea_capacity_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_vEurope7.2.md)
+  : iea_capacity_vEurope7.2
+- [`iea_capacity_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_vEurope8.7.md)
+  : iea_capacity_vEurope8.7
+- [`iea_capacity_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_vScenarioMIPCMIP7.md)
+  : iea_capacity_vScenarioMIPCMIP7
+- [`interpolateGCAMdata()`](https://bc3lc.github.io/gcamreport/reference/interpolateGCAMdata.md)
+  : interpolateGCAMdata
+- [`investment_v7.0`](https://bc3lc.github.io/gcamreport/reference/investment_v7.0.md)
+  : investment_v7.0
+- [`investment_v7.1`](https://bc3lc.github.io/gcamreport/reference/investment_v7.1.md)
+  : investment_v7.1
+- [`investment_v7.2`](https://bc3lc.github.io/gcamreport/reference/investment_v7.2.md)
+  : investment_v7.2
+- [`investment_v8.2`](https://bc3lc.github.io/gcamreport/reference/investment_v8.2.md)
+  : investment_v8.2
+- [`investment_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/investment_vEurope7.2.md)
+  : investment_vEurope7.2
+- [`investment_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/investment_vEurope8.7.md)
+  : investment_vEurope8.7
+- [`investment_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/investment_vScenarioMIPCMIP7.md)
+  : investment_vScenarioMIPCMIP7
+- [`iron_steel_trade_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.0.md)
+  : iron_steel_trade_map_v7.0
+- [`iron_steel_trade_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.1.md)
+  : iron_steel_trade_map_v7.1
+- [`iron_steel_trade_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v7.2.md)
+  : iron_steel_trade_map_v7.2
+- [`iron_steel_trade_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_v8.2.md)
+  : iron_steel_trade_map_v8.2
+- [`iron_steel_trade_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vEurope7.2.md)
+  : iron_steel_trade_map_vEurope7.2
+- [`iron_steel_trade_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vEurope8.7.md)
+  : iron_steel_trade_map_vEurope8.7
+- [`iron_steel_trade_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vScenarioMIPCMIP7.md)
+  : iron_steel_trade_map_vScenarioMIPCMIP7
+- [`kyoto_sector_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.0.md)
+  : kyoto_sector_map_v7.0
+- [`kyoto_sector_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.1.md)
+  : kyoto_sector_map_v7.1
+- [`kyoto_sector_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.2.md)
+  : kyoto_sector_map_v7.2
+- [`kyoto_sector_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v8.2.md)
+  : kyoto_sector_map_v8.2
+- [`kyoto_sector_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_vEurope7.2.md)
+  : kyoto_sector_map_vEurope7.2
+- [`kyoto_sector_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_vEurope8.7.md)
+  : kyoto_sector_map_vEurope8.7
+- [`kyoto_sector_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_vScenarioMIPCMIP7.md)
+  : kyoto_sector_map_vScenarioMIPCMIP7
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.0
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.1
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v7.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_v8.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope7.2
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vEurope8.7
+- [`L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7.md)
+  : L100.AgMIP_FoodWaste_Share_Pathway_SSP_vScenarioMIPCMIP7
+- [`land_use_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.0.md)
+  : land_use_map_v7.0
+- [`land_use_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.1.md)
+  : land_use_map_v7.1
+- [`land_use_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v7.2.md)
+  : land_use_map_v7.2
+- [`land_use_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/land_use_map_v8.2.md)
+  : land_use_map_v8.2
+- [`land_use_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/land_use_map_vEurope7.2.md)
+  : land_use_map_vEurope7.2
+- [`land_use_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/land_use_map_vEurope8.7.md)
+  : land_use_map_vEurope8.7
+- [`land_use_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/land_use_map_vScenarioMIPCMIP7.md)
+  : land_use_map_vScenarioMIPCMIP7
+- [`last_historical_year_v7.0`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.0.md)
+  : last_historical_year_v7.0
+- [`last_historical_year_v7.1`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.1.md)
+  : last_historical_year_v7.1
+- [`last_historical_year_v7.2`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_v7.2.md)
+  : last_historical_year_v7.2
+- [`last_historical_year_v8.2`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_v8.2.md)
+  : last_historical_year_v8.2
+- [`last_historical_year_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_vEurope7.2.md)
+  : last_historical_year_vEurope7.2
+- [`last_historical_year_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_vEurope8.7.md)
+  : last_historical_year_vEurope8.7
+- [`last_historical_year_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/last_historical_year_vScenarioMIPCMIP7.md)
+  : last_historical_year_vScenarioMIPCMIP7
+- [`launch_gcamreport_ui()`](https://bc3lc.github.io/gcamreport/reference/launch_gcamreport_ui.md)
+  : launch_gcamreport_ui
+- [`left_join_error_no_match()`](https://bc3lc.github.io/gcamreport/reference/left_join_error_no_match.md)
+  : left_join_error_no_match
+- [`left_join_strict()`](https://bc3lc.github.io/gcamreport/reference/left_join_strict.md)
+  : left_join_strict
+- [`listYears()`](https://bc3lc.github.io/gcamreport/reference/listYears.md)
+  : listYears
+- [`load_project()`](https://bc3lc.github.io/gcamreport/reference/load_project.md)
+  : load_project
+- [`long_columns`](https://bc3lc.github.io/gcamreport/reference/long_columns.md)
+  : long_columns
+- [`nonco2_content_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.0.md)
+  : nonco2_content_v7.0
+- [`nonco2_content_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.1.md)
+  : nonco2_content_v7.1
+- [`nonco2_content_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_v7.2.md)
+  : nonco2_content_v7.2
+- [`nonco2_content_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_v8.2.md)
+  : nonco2_content_v8.2
+- [`nonco2_content_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_vEurope7.2.md)
+  : nonco2_content_vEurope7.2
+- [`nonco2_content_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_vEurope8.7.md)
+  : nonco2_content_vEurope8.7
+- [`nonco2_content_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_content_vScenarioMIPCMIP7.md)
+  : nonco2_content_vScenarioMIPCMIP7
+- [`nonco2_emissions_list_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.0.md)
+  : nonco2_emissions_list_v7.0
+- [`nonco2_emissions_list_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.1.md)
+  : nonco2_emissions_list_v7.1
+- [`nonco2_emissions_list_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v7.2.md)
+  : nonco2_emissions_list_v7.2
+- [`nonco2_emissions_list_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_v8.2.md)
+  : nonco2_emissions_list_v8.2
+- [`nonco2_emissions_list_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope7.2.md)
+  : nonco2_emissions_list_vEurope7.2
+- [`nonco2_emissions_list_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vEurope8.7.md)
+  : nonco2_emissions_list_vEurope8.7
+- [`nonco2_emissions_list_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emissions_list_vScenarioMIPCMIP7.md)
+  : nonco2_emissions_list_vScenarioMIPCMIP7
+- [`nonco2_emis_resource_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.0.md)
+  : nonco2_emis_resource_map_v7.0
+- [`nonco2_emis_resource_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.1.md)
+  : nonco2_emis_resource_map_v7.1
+- [`nonco2_emis_resource_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v7.2.md)
+  : nonco2_emis_resource_map_v7.2
+- [`nonco2_emis_resource_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_v8.2.md)
+  : nonco2_emis_resource_map_v8.2
+- [`nonco2_emis_resource_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_vEurope7.2.md)
+  : nonco2_emis_resource_map_vEurope7.2
+- [`nonco2_emis_resource_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_vEurope8.7.md)
+  : nonco2_emis_resource_map_vEurope8.7
+- [`nonco2_emis_resource_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_resource_map_vScenarioMIPCMIP7.md)
+  : nonco2_emis_resource_map_vScenarioMIPCMIP7
+- [`nonco2_emis_sector_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.0.md)
+  : nonco2_emis_sector_map_v7.0
+- [`nonco2_emis_sector_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.1.md)
+  : nonco2_emis_sector_map_v7.1
+- [`nonco2_emis_sector_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v7.2.md)
+  : nonco2_emis_sector_map_v7.2
+- [`nonco2_emis_sector_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_v8.2.md)
+  : nonco2_emis_sector_map_v8.2
+- [`nonco2_emis_sector_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_vEurope7.2.md)
+  : nonco2_emis_sector_map_vEurope7.2
+- [`nonco2_emis_sector_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_vEurope8.7.md)
+  : nonco2_emis_sector_map_vEurope8.7
+- [`nonco2_emis_sector_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonco2_emis_sector_map_vScenarioMIPCMIP7.md)
+  : nonco2_emis_sector_map_vScenarioMIPCMIP7
+- [`nonelec_investment_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.0.md)
+  : nonelec_investment_map_v7.0
+- [`nonelec_investment_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.1.md)
+  : nonelec_investment_map_v7.1
+- [`nonelec_investment_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v7.2.md)
+  : nonelec_investment_map_v7.2
+- [`nonelec_investment_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_v8.2.md)
+  : nonelec_investment_map_v8.2
+- [`nonelec_investment_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_vEurope7.2.md)
+  : nonelec_investment_map_vEurope7.2
+- [`nonelec_investment_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_vEurope8.7.md)
+  : nonelec_investment_map_vEurope8.7
+- [`nonelec_investment_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/nonelec_investment_map_vScenarioMIPCMIP7.md)
+  : nonelec_investment_map_vScenarioMIPCMIP7
+- [`primary_energy_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.0.md)
+  : primary_energy_map_v7.0
+- [`primary_energy_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.1.md)
+  : primary_energy_map_v7.1
+- [`primary_energy_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v7.2.md)
+  : primary_energy_map_v7.2
+- [`primary_energy_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_v8.2.md)
+  : primary_energy_map_v8.2
+- [`primary_energy_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_vEurope7.2.md)
+  : primary_energy_map_vEurope7.2
+- [`primary_energy_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_vEurope8.7.md)
+  : primary_energy_map_vEurope8.7
+- [`primary_energy_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/primary_energy_map_vScenarioMIPCMIP7.md)
+  : primary_energy_map_vScenarioMIPCMIP7
+- [`production_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/production_map_v7.0.md)
+  : production_map_v7.0
+- [`production_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/production_map_v7.1.md)
+  : production_map_v7.1
+- [`production_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/production_map_v7.2.md)
+  : production_map_v7.2
+- [`production_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/production_map_v8.2.md)
+  : production_map_v8.2
+- [`production_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/production_map_vEurope7.2.md)
+  : production_map_vEurope7.2
+- [`production_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/production_map_vEurope8.7.md)
+  : production_map_vEurope8.7
+- [`production_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/production_map_vScenarioMIPCMIP7.md)
+  : production_map_vScenarioMIPCMIP7
+- [`queries_general_v7.0`](https://bc3lc.github.io/gcamreport/reference/queries_general_v7.0.md)
+  : queries_general_v7.0
+- [`queries_general_v7.1`](https://bc3lc.github.io/gcamreport/reference/queries_general_v7.1.md)
+  : queries_general_v7.1
+- [`queries_general_v7.2`](https://bc3lc.github.io/gcamreport/reference/queries_general_v7.2.md)
+  : queries_general_v7.2
+- [`queries_general_v8.2`](https://bc3lc.github.io/gcamreport/reference/queries_general_v8.2.md)
+  : queries_general_v8.2
+- [`queries_general_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/queries_general_vEurope7.2.md)
+  : queries_general_vEurope7.2
+- [`queries_general_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/queries_general_vEurope8.7.md)
+  : queries_general_vEurope8.7
+- [`queries_general_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/queries_general_vScenarioMIPCMIP7.md)
+  : queries_general_vScenarioMIPCMIP7
+- [`queries_nonCO2_v7.0`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.0.md)
+  : queries_nonCO2_v7.0
+- [`queries_nonCO2_v7.1`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.1.md)
+  : queries_nonCO2_v7.1
+- [`queries_nonCO2_v7.2`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v7.2.md)
+  : queries_nonCO2_v7.2
+- [`queries_nonCO2_v8.2`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_v8.2.md)
+  : queries_nonCO2_v8.2
+- [`queries_nonCO2_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vEurope7.2.md)
+  : queries_nonCO2_vEurope7.2
+- [`queries_nonCO2_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vEurope8.7.md)
+  : queries_nonCO2_vEurope8.7
+- [`queries_nonCO2_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/queries_nonCO2_vScenarioMIPCMIP7.md)
+  : queries_nonCO2_vScenarioMIPCMIP7
+- [`reg_cont_v7.0`](https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.0.md)
+  : reg_cont_v7.0
+- [`reg_cont_v7.1`](https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.1.md)
+  : reg_cont_v7.1
+- [`reg_cont_v7.2`](https://bc3lc.github.io/gcamreport/reference/reg_cont_v7.2.md)
+  : reg_cont_v7.2
+- [`reg_cont_v8.2`](https://bc3lc.github.io/gcamreport/reference/reg_cont_v8.2.md)
+  : reg_cont_v8.2
+- [`reg_cont_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/reg_cont_vEurope7.2.md)
+  : reg_cont_vEurope7.2
+- [`reg_cont_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/reg_cont_vEurope8.7.md)
+  : reg_cont_vEurope8.7
+- [`reg_cont_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/reg_cont_vScenarioMIPCMIP7.md)
+  : reg_cont_vScenarioMIPCMIP7
+- [`res_extraction_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_v7.0.md)
+  : res_extraction_map_v7.0
+- [`res_extraction_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_v7.1.md)
+  : res_extraction_map_v7.1
+- [`res_extraction_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_v7.2.md)
+  : res_extraction_map_v7.2
+- [`res_extraction_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_v8.2.md)
+  : res_extraction_map_v8.2
+- [`res_extraction_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vEurope7.2.md)
+  : res_extraction_map_vEurope7.2
+- [`res_extraction_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vEurope8.7.md)
+  : res_extraction_map_vEurope8.7
+- [`res_extraction_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vScenarioMIPCMIP7.md)
+  : res_extraction_map_vScenarioMIPCMIP7
+- [`template_v7.0`](https://bc3lc.github.io/gcamreport/reference/template_v7.0.md)
+  : template_v7.0
+- [`template_v7.1`](https://bc3lc.github.io/gcamreport/reference/template_v7.1.md)
+  : template_v7.1
+- [`template_v7.2`](https://bc3lc.github.io/gcamreport/reference/template_v7.2.md)
+  : template_v7.2
+- [`template_v8.2`](https://bc3lc.github.io/gcamreport/reference/template_v8.2.md)
+  : template_v8.2
+- [`template_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/template_vEurope7.2.md)
+  : template_vEurope7.2
+- [`template_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/template_vEurope8.7.md)
+  : template_vEurope8.7
+- [`template_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/template_vScenarioMIPCMIP7.md)
+  : template_vScenarioMIPCMIP7
+- [`trade_ag_v7.0`](https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.0.md)
+  : trade_ag_v7.0
+- [`trade_ag_v7.1`](https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.1.md)
+  : trade_ag_v7.1
+- [`trade_ag_v7.2`](https://bc3lc.github.io/gcamreport/reference/trade_ag_v7.2.md)
+  : trade_ag_v7.2
+- [`trade_ag_v8.2`](https://bc3lc.github.io/gcamreport/reference/trade_ag_v8.2.md)
+  : trade_ag_v8.2
+- [`trade_ag_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/trade_ag_vEurope7.2.md)
+  : trade_ag_vEurope7.2
+- [`trade_ag_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/trade_ag_vEurope8.7.md)
+  : trade_ag_vEurope8.7
+- [`trade_ag_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/trade_ag_vScenarioMIPCMIP7.md)
+  : trade_ag_vScenarioMIPCMIP7
+- [`transport_en_service_v7.0`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.0.md)
+  : transport_en_service_v7.0
+- [`transport_en_service_v7.1`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.1.md)
+  : transport_en_service_v7.1
+- [`transport_en_service_v7.2`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_v7.2.md)
+  : transport_en_service_v7.2
+- [`transport_en_service_v8.2`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_v8.2.md)
+  : transport_en_service_v8.2
+- [`transport_en_service_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_vEurope7.2.md)
+  : transport_en_service_vEurope7.2
+- [`transport_en_service_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_vEurope8.7.md)
+  : transport_en_service_vEurope8.7
+- [`transport_en_service_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/transport_en_service_vScenarioMIPCMIP7.md)
+  : transport_en_service_vScenarioMIPCMIP7
+- [`transport_final_en_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.0.md)
+  : transport_final_en_map_v7.0
+- [`transport_final_en_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.1.md)
+  : transport_final_en_map_v7.1
+- [`transport_final_en_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v7.2.md)
+  : transport_final_en_map_v7.2
+- [`transport_final_en_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_v8.2.md)
+  : transport_final_en_map_v8.2
+- [`transport_final_en_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_vEurope7.2.md)
+  : transport_final_en_map_vEurope7.2
+- [`transport_final_en_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_vEurope8.7.md)
+  : transport_final_en_map_vEurope8.7
+- [`transport_final_en_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/transport_final_en_map_vScenarioMIPCMIP7.md)
+  : transport_final_en_map_vScenarioMIPCMIP7
+- [`transport_sales_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_v7.0.md)
+  : transport_sales_map_v7.0
+- [`transport_sales_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_v7.1.md)
+  : transport_sales_map_v7.1
+- [`transport_sales_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_v7.2.md)
+  : transport_sales_map_v7.2
+- [`transport_sales_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_v8.2.md)
+  : transport_sales_map_v8.2
+- [`transport_sales_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_vEurope7.2.md)
+  : transport_sales_map_vEurope7.2
+- [`transport_sales_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_vEurope8.7.md)
+  : transport_sales_map_vEurope8.7
+- [`transport_sales_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/transport_sales_map_vScenarioMIPCMIP7.md)
+  : transport_sales_map_vScenarioMIPCMIP7
+- [`transport_stock_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_v7.0.md)
+  : transport_stock_map_v7.0
+- [`transport_stock_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_v7.1.md)
+  : transport_stock_map_v7.1
+- [`transport_stock_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_v7.2.md)
+  : transport_stock_map_v7.2
+- [`transport_stock_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_v8.2.md)
+  : transport_stock_map_v8.2
+- [`transport_stock_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_vEurope7.2.md)
+  : transport_stock_map_vEurope7.2
+- [`transport_stock_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_vEurope8.7.md)
+  : transport_stock_map_vEurope8.7
+- [`transport_stock_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/transport_stock_map_vScenarioMIPCMIP7.md)
+  : transport_stock_map_vScenarioMIPCMIP7
+- [`ucd_core_v7.0`](https://bc3lc.github.io/gcamreport/reference/ucd_core_v7.0.md)
+  : ucd_core_v7.0
+- [`ucd_core_v7.1`](https://bc3lc.github.io/gcamreport/reference/ucd_core_v7.1.md)
+  : ucd_core_v7.1
+- [`ucd_core_v7.2`](https://bc3lc.github.io/gcamreport/reference/ucd_core_v7.2.md)
+  : ucd_core_v7.2
+- [`ucd_core_v8.2`](https://bc3lc.github.io/gcamreport/reference/ucd_core_v8.2.md)
+  : ucd_core_v8.2
+- [`ucd_core_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ucd_core_vEurope7.2.md)
+  : ucd_core_vEurope7.2
+- [`ucd_core_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ucd_core_vEurope8.7.md)
+  : ucd_core_vEurope8.7
+- [`ucd_core_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ucd_core_vScenarioMIPCMIP7.md)
+  : ucd_core_vScenarioMIPCMIP7
+- [`ucd_size_class_v7.0`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_v7.0.md)
+  : ucd_size_class_v7.0
+- [`ucd_size_class_v7.1`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_v7.1.md)
+  : ucd_size_class_v7.1
+- [`ucd_size_class_v7.2`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_v7.2.md)
+  : ucd_size_class_v7.2
+- [`ucd_size_class_v8.2`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_v8.2.md)
+  : ucd_size_class_v8.2
+- [`ucd_size_class_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_vEurope7.2.md)
+  : ucd_size_class_vEurope7.2
+- [`ucd_size_class_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_vEurope8.7.md)
+  : ucd_size_class_vEurope8.7
+- [`ucd_size_class_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/ucd_size_class_vScenarioMIPCMIP7.md)
+  : ucd_size_class_vScenarioMIPCMIP7
+- [`var_fun_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.0.md)
+  : var_fun_map_v7.0
+- [`var_fun_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.1.md)
+  : var_fun_map_v7.1
+- [`var_fun_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_v7.2.md)
+  : var_fun_map_v7.2
+- [`var_fun_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_v8.2.md)
+  : var_fun_map_v8.2
+- [`var_fun_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_vEurope7.2.md)
+  : var_fun_map_vEurope7.2
+- [`var_fun_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_vEurope8.7.md)
+  : var_fun_map_vEurope8.7
+- [`var_fun_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/var_fun_map_vScenarioMIPCMIP7.md)
+  : var_fun_map_vScenarioMIPCMIP7
+- [`water_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/water_map_v7.0.md)
+  : water_map_v7.0
+- [`water_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/water_map_v7.1.md)
+  : water_map_v7.1
+- [`water_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/water_map_v7.2.md)
+  : water_map_v7.2
+- [`water_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/water_map_v8.2.md)
+  : water_map_v8.2
+- [`water_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/water_map_vEurope7.2.md)
+  : water_map_vEurope7.2
+- [`water_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/water_map_vEurope8.7.md)
+  : water_map_vEurope8.7
+- [`water_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/water_map_vScenarioMIPCMIP7.md)
+  : water_map_vScenarioMIPCMIP7
+- [`WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7.md)
+  : WoodFuel_IndRoundwood_ratio_vScenarioMIPCMIP7
+- [`yield_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/yield_map_v7.0.md)
+  : yield_map_v7.0
+- [`yield_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/yield_map_v7.1.md)
+  : yield_map_v7.1
+- [`yield_map_v7.2`](https://bc3lc.github.io/gcamreport/reference/yield_map_v7.2.md)
+  : yield_map_v7.2
+- [`yield_map_v8.2`](https://bc3lc.github.io/gcamreport/reference/yield_map_v8.2.md)
+  : yield_map_v8.2
+- [`yield_map_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/yield_map_vEurope7.2.md)
+  : yield_map_vEurope7.2
+- [`yield_map_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/yield_map_vEurope8.7.md)
+  : yield_map_vEurope8.7
+- [`yield_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/yield_map_vScenarioMIPCMIP7.md)
+  : yield_map_vScenarioMIPCMIP7

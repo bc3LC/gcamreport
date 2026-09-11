@@ -1,0 +1,72 @@
+# data_query
+
+Retrieves non-CO2 emissions data based on large queries.
+
+## Usage
+
+``` r
+data_query(
+  type,
+  db_path,
+  db_name,
+  prj_name,
+  scenarios,
+  desired_regions = "All",
+  GCAM_version = "v8.2",
+  queries_nonCO2_file = NULL
+)
+```
+
+## Arguments
+
+- type:
+
+  Type of non-CO2 emissions query. Must be one of 'nonCO2 emissions by
+  region' or 'nonCO2 emissions by subsector'.
+
+- db_path:
+
+  Path to the GCAM database. Required for accessing the database.
+
+- db_name:
+
+  Name of the GCAM database. Required for identifying the database.
+
+- prj_name:
+
+  Name of the GCAM project. Can be an existing project or a new one.
+  Accepts extensions such as .dat and .proj.
+
+- scenarios:
+
+  Names of the scenarios to consider. Defaults to all scenarios
+  available in the project or database.
+
+- desired_regions:
+
+  Regions to include in the report. Defaults to 'All'. Specify a vector
+  for specific regions. To view available options, run
+  \`available_regions()\`. Note: The dataset will include only the
+  specified regions, which will make up "World".
+
+- GCAM_version:
+
+  Name of the GCAM compatible version. Run \`available_GCAM_versions()\`
+  to see the list of supported options.
+
+- queries_nonCO2_file:
+
+  Full path to an XML query file (including file name and extension) for
+  long non-CO2 queries: "nonCO2 emissions by sector (excluding resource
+  production)" and "nonCO2 emissions by region". Defaults to the nonCO2
+  query file compatible with the specified \`GCAM_version\`.
+
+## Value
+
+A dataframe containing the data retrieved from the specified non-CO2
+emissions query.
+
+## Details
+
+This function allows you to specify and fetch non-CO2 emissions data
+from a GCAM project or database.

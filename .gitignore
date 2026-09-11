@@ -46,8 +46,12 @@ docs/*
 
 # Attempt files
 prova*
+<<<<<<< HEAD
 
 tests/testthat/*.dat
+=======
+ 
+>>>>>>> c59343278b9b52cb94efef0e94becb217bb4316b
 inst/doc
 *.tiff
 tests/testthat/testInputs/v_7.0/database_basexdb_ref_gcamv7.0_test_specify_queries.dat
@@ -233,6 +237,7 @@ gcamv7.0_test_specify_queries.dat
 
 /harmonization_doc
 myenv.yml
+<<<<<<< HEAD
 vetting.py
 /tests/testthat/db_scenmip_h5_241217a
 R/vehicleStockAndSalesUsingUCD.R
@@ -255,3 +260,6 @@ R/hands_on.R
 inst/extdata/template/GCAMScenarioMIPCMIP7/common-definitions-template_old.csv
 /extra_scripts
 /.vs
+=======
+vetting.py
+>>>>>>> c59343278b9b52cb94efef0e94becb217bb4316b
