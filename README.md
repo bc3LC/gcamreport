@@ -217,9 +217,11 @@ You are welcome to contribute to this project! Follow the steps below to facilit
 
 1. Fork this repository.
 2. Commit your modifications.
-3. Open a [Pull Request (PR)](https://github.com/bc3LC/gcamreport/pulls) into this repository. Make sure you detail the goal of the modification and the changes performed.
+3. Open a [Pull Request (PR)](https://github.com/bc3LC/gcamreport/pulls) against the [gcam-core](https://github.com/bc3LC/gcamreport/tree/gcam-core) (main) target branch. Clearly describe the purpose of your modifications and outline the specific changes made. Ensure there are no merge conflicts and that all automated tests pass successfully.
 4. Set [@klau506](https://github.com/klau506) as reviewers (or include this mention in the PR requested text).
 5. Once everything is tested, we will merge the PR for you.
+
+**Note**: in case of integrating a new GCAM version into `gcamreport`, ensure you place a small/dummy project file under `tests/testthat/testInputs/[GCAM_VERSION]/` folder. This allows to test and validate the new compatibility.
 
 
 <br>
