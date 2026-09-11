@@ -32,7 +32,7 @@ ag_demand_clean;get_ag_demand;biomass_shares;demand balances by crop commodity,d
 ag_production_clean;get_ag_production;;ag production by crop type,meat and dairy production by type
 land_clean;get_land;;land allocation by crop and water source
 land_yield;get_land;;land allocation by crop and water source
-primary_energy_clean;get_primary_energy;;primary energy consumption with CCS by region (direct equivalent)
+primary_energy_clean;get_primary_energy;;primary energy consumption by region (direct equivalent),primary energy consumption with CCS by region (direct equivalent)
 pe_trade_prod;get_pe_trade_prod;;resource production,purpose-grown biomass production,residue biomass production,MSW production
 pe_trade_supply;get_pe_trade_supply;;supply of all markets
 pe_trade;get_pe_trade;pe_trade_prod,pe_trade_supply;

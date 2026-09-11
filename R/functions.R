@@ -3797,26 +3797,86 @@ get_primary_energy <- function(GCAM_version = 'v8.2') {
 
   check_queries("primary_energy_clean", GCAM_version)
 
-  primary_energy_clean <-
-    check_inf(rgcam::getQuery(prj, "primary energy consumption with CCS by region (direct equivalent)"),
-              dataset_name = "primary energy consumption with CCS by region (direct equivalent)") %>%
-    dplyr::filter(
-      !grepl("water", fuel),
-      Units == "EJ"
-    ) %>%
-    left_join_strict(get(paste('primary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                     by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
-    dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    filter_variables() %>%
-    dplyr::mutate(value = value * unit_conv) %>%
-    dplyr::group_by(scenario, region, year, var) %>%
-    dplyr::summarise(value = sum(value, na.rm = T)) %>%
-    dplyr::ungroup() %>%
-    tidyr::complete(tidyr::nesting(scenario, region, year),
-                    var = unique(var),
-                    fill = list(value = 0)
-    ) %>%
-    dplyr::select(dplyr::all_of(gcamreport::long_columns))
+  if (grepl('Europe',GCAM_version)) {
+    # CCS distinction is not available for nonEUR regions; thus,
+    # "w CCS" and "w/o CCS" tags are removed from all variables
+
+    primary_energy_nonEUR <-
+      check_inf(rgcam::getQuery(prj, "primary energy consumption with CCS by region (direct equivalent)"),
+                dataset_name = "primary energy consumption with CCS by region (direct equivalent)") %>%
+      dplyr::filter(
+        !grepl("water", fuel),
+        Units == "EJ"
+      ) %>%
+      # filter nonEUR regions
+      dplyr::filter(!region %in% c('Belarus',unique(gcameurope.EUROSTAT_COUNTRIES_vEurope8.7))) %>%
+      # mapping
+      left_join_strict(get(paste('primary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+                         dplyr::filter(!grepl('CCS',var)),
+                       by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
+      dplyr::filter(var != 'NoReported', !is.na(var)) %>%
+      filter_variables() %>%
+      dplyr::mutate(value = value * unit_conv) %>%
+      dplyr::group_by(scenario, region, year, var) %>%
+      dplyr::summarise(value = sum(value, na.rm = T)) %>%
+      dplyr::ungroup() %>%
+      tidyr::complete(tidyr::nesting(scenario, region, year),
+                      var = unique(var),
+                      fill = list(value = 0)
+      ) %>%
+      dplyr::select(dplyr::all_of(gcamreport::long_columns))
+
+    primary_energy_EUR <-
+      check_inf(rgcam::getQuery(prj, "primary energy consumption by region (direct equivalent)"),
+                dataset_name = "primary energy consumption by region (direct equivalent)") %>%
+      dplyr::filter(
+        !grepl("water", fuel),
+        Units == "EJ"
+      ) %>%
+      # filter EUR regions
+      dplyr::filter(region %in% c('Belarus',unique(gcameurope.EUROSTAT_COUNTRIES_vEurope8.7))) %>%
+      # mapping
+      left_join_strict(get(paste('primary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+                         dplyr::filter(!grepl('CCS',var)),
+                       by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
+      dplyr::filter(var != 'NoReported', !is.na(var)) %>%
+      filter_variables() %>%
+      dplyr::mutate(value = value * unit_conv) %>%
+      dplyr::group_by(scenario, region, year, var) %>%
+      dplyr::summarise(value = sum(value, na.rm = T)) %>%
+      dplyr::ungroup() %>%
+      tidyr::complete(tidyr::nesting(scenario, region, year),
+                      var = unique(var),
+                      fill = list(value = 0)
+      ) %>%
+      dplyr::select(dplyr::all_of(gcamreport::long_columns))
+
+    primary_energy_clean <- rbind(
+      primary_energy_EUR,
+      primary_energy_nonEUR)
+
+  } else {
+    primary_energy_clean <-
+      check_inf(rgcam::getQuery(prj, "primary energy consumption with CCS by region (direct equivalent)"),
+                dataset_name = "primary energy consumption with CCS by region (direct equivalent)") %>%
+      dplyr::filter(
+        !grepl("water", fuel),
+        Units == "EJ"
+      ) %>%
+      left_join_strict(get(paste('primary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
+                       by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
+      dplyr::filter(var != 'NoReported', !is.na(var)) %>%
+      filter_variables() %>%
+      dplyr::mutate(value = value * unit_conv) %>%
+      dplyr::group_by(scenario, region, year, var) %>%
+      dplyr::summarise(value = sum(value, na.rm = T)) %>%
+      dplyr::ungroup() %>%
+      tidyr::complete(tidyr::nesting(scenario, region, year),
+                      var = unique(var),
+                      fill = list(value = 0)
+      ) %>%
+      dplyr::select(dplyr::all_of(gcamreport::long_columns))
+  }
 
   primary_energy_clean <<- primary_energy_clean
 }
