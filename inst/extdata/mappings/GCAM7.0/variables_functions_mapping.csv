@@ -74,7 +74,7 @@ expenditure_clean;get_expenditure;;food demand prices,food consumption by type (
 water_withdrawals_clean;get_water_withdrawals;;water withdrawals by subsector
 water_consumption_clean;get_water_consumption;;water consumption by subsector
 ag_trade;get_ag_trade;;ag export to the world center (USA) (Intl. Armington competition),ag import vs. domestic supply (Regional Armington competition)
-trade_clean;get_total_trade;ag_trade,pe_trade;
+trade_clean;get_total_trade;pe_trade;
 energy_price;get_energy_price_tmp;;CO2 prices,prices by sector,costs by subsector
 energy_price_clean;get_energy_price;energy_price,fe_sector_clean,primary_energy_clean,secondary_energy_clean;
 en_weights;get_en_weights;fe_sector_raw,fe_transportation_raw,primary_energy_clean,secondary_energy_raw;

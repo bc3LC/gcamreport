@@ -1939,6 +1939,7 @@ South_Eastern_Europesubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
 South_Eastern_Europesubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
 South_Eastern_Europewind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
 EUCO2_FUG,NoReported,,,,,,,,,,,,,,,,,,1
+chnCO2,NoReported,,,,,,,,,,,,,,,,,,1
 chnCH4,NoReported,,,,,,,,,,,,,,,,,,1
 chnCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 chnCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1957,6 +1958,7 @@ rus_caCO2,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaCO2,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaCO2,NoReported,,,,,,,,,,,,,,,,,,1
 us_can_ausCO2,NoReported,,,,,,,,,,,,,,,,,,1
+>>>>>>> gcam-core
 European Free Trade AssociationCH4,NoReported,,,,,,,,,,,,,,,,,,1
 European Free Trade AssociationCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 European Free Trade AssociationCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1964,6 +1966,7 @@ European Free Trade AssociationGHG,NoReported,,,,,,,,,,,,,,,,,,1
 European Free Trade AssociationN2O,NoReported,,,,,,,,,,,,,,,,,,1
 European Free Trade AssociationN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 European Free Trade AssociationN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+indCO2,NoReported,,,,,,,,,,,,,,,,,,1
 indCH4,NoReported,,,,,,,,,,,,,,,,,,1
 indCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 indCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1971,6 +1974,7 @@ indGHG,NoReported,,,,,,,,,,,,,,,,,,1
 indN2O,NoReported,,,,,,,,,,,,,,,,,,1
 indN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 indN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+jap_korCO2,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korCH4,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1978,6 +1982,7 @@ jap_korGHG,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korN2O,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 jap_korN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+lamCO2,NoReported,,,,,,,,,,,,,,,,,,1
 lamCH4,NoReported,,,,,,,,,,,,,,,,,,1
 lamCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 lamCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1985,6 +1990,7 @@ lamGHG,NoReported,,,,,,,,,,,,,,,,,,1
 lamN2O,NoReported,,,,,,,,,,,,,,,,,,1
 lamN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 lamN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+menaCO2,NoReported,,,,,,,,,,,,,,,,,,1
 menaCH4,NoReported,,,,,,,,,,,,,,,,,,1
 menaCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 menaCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1992,6 +1998,7 @@ menaGHG,NoReported,,,,,,,,,,,,,,,,,,1
 menaN2O,NoReported,,,,,,,,,,,,,,,,,,1
 menaN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 menaN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+other_EURCO2,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURCH4,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1999,6 +2006,7 @@ other_EURGHG,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURN2O,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 other_EURN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+rus_caCO2,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caCH4,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -2006,6 +2014,7 @@ rus_caGHG,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caN2O,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 rus_caN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+se asiaCO2,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaCH4,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -2013,6 +2022,7 @@ se asiaGHG,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaN2O,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 se asiaN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+ss_africaCO2,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaCH4,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
@@ -2020,6 +2030,7 @@ ss_africaGHG,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaN2O,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 ss_africaN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+us_can_ausCO2,NoReported,,,,,,,,,,,,,,,,,,1
 us_can_ausCH4,NoReported,,,,,,,,,,,,,,,,,,1
 us_can_ausCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
 us_can_ausCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
