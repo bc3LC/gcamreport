@@ -23,6 +23,11 @@ Before performing modifications on the package, please ensure that:
 3.  **You can ensure reproducibility:** Read the [Version
     Guide](https://bc3lc.github.io/gcamreport/articles/Version_Guide.html)
     to learn how to properly trace and document your custom version.
+4.  **You follow the contribution guidelines \[if applicable\]:** Read
+    the [How to contribute
+    guideline](https://github.com/bc3LC/gcamreport/tree/gcam-core#contribute)
+    to know the best way to proceed if you would like to incorporate
+    your developments to the core `gcamreport` package.
 
 newline
 
