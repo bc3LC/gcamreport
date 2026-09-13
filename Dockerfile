@@ -1,5 +1,5 @@
 # Start with the base image
-FROM rocker/r-ver:4.1.0
+FROM rocker/r-ver:4.3.0
 
 ENV R_LIBS_USER="/usr/local/lib/R/site-library"
 RUN chmod a+w /usr/local/lib/R/site-library
