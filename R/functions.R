@@ -1513,7 +1513,8 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
         left_join_error_no_match(
           check_inf(rgcam::getQuery(prj, "food demand by income group", scenarios = sc),
                     dataset_name = "food demand by income group") %>%
-            dplyr::rename(demand = value),
+            dplyr::rename(demand = value) %>%
+            dplyr::filter(year %in% gcam_years),
           by = c('scenario','region','gcam-consumer','nodeinput','input','year')
         ) %>%
         # EXPENDITURE
@@ -1529,12 +1530,13 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
           rgcam::getQuery(prj, "population by region", scenarios = sc) %>%
             # Units: from thous. to abs
             dplyr::mutate(pop = 1e2 * value) %>%
-            dplyr::select(scenario, region, year, pop),
+            dplyr::select(scenario, region, year, pop) %>%
+            dplyr::filter(year %in% gcam_years),
           by = c('scenario','region','year')) %>%
         dplyr::mutate(food_expenditure = food_expenditure / pop) %>%
         dplyr::mutate(Units = '2020$cap') %>%
         # restrict to desired years
-        dplyr::filter(year <= final_year.global)
+        dplyr::filter(year %in% gcam_years)
 
       income_sc <- income_allsc %>%
         dplyr::filter(scenario == sc)
@@ -1547,12 +1549,14 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
                   dataset_name = "prices by sector") %>%
         # reshape and clean dataset
         dplyr::filter(sector %in% c("FoodDemand_Staples", "FoodDemand_NonStaples") |
-                        grepl('FoodDemand_NonStaples_',sector)) %>%
+                        grepl('FoodDemand_NonStaples_',sector),
+                      year %in% gcam_years) %>%
         # add food_weights to estimate Staples & NonStaples price
         left_join_strict(food_weights %>%
                            tidyr::complete(tidyr::nesting(scenario, region, sector, input),
                                            year = unique(year),
-                                           fill = list(weight = 0)),
+                                           fill = list(weight = 0)) %>%
+                           dplyr::filter(year %in% gcam_years),
                          by = c('scenario','region','sector','year')) %>%
         # homogenise dataset
         dplyr::mutate(`gcam-consumer` = 'FoodDemand',
@@ -1581,7 +1585,8 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
           check_inf(rgcam::getQuery(prj, "food demand", scenarios = sc),
                     dataset_name = "food demand") %>%
             dplyr::rename(demand = value) %>%
-            dplyr::mutate(demand = round(demand,4)),
+            dplyr::mutate(demand = round(demand,4)) %>%
+            dplyr::filter(year %in% gcam_years),
           by = c('scenario','region','gcam-consumer','nodeinput','input','year')
         ) %>%
         # EXPENDITURE
@@ -1597,12 +1602,13 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
           rgcam::getQuery(prj, "population by region", scenarios = sc) %>%
             # Units: from thous. to abs
             dplyr::mutate(pop = 1e2 * value) %>%
-            dplyr::select(scenario, region, year, pop),
+            dplyr::select(scenario, region, year, pop) %>%
+            dplyr::filter(year %in% gcam_years),
           by = c('scenario','region','year')) %>%
         dplyr::mutate(food_expenditure = food_expenditure / pop) %>%
         dplyr::mutate(Units = '2020$cap') %>%
         # restrict to desired years
-        dplyr::filter(year <= final_year.global)
+        dplyr::filter(year %in% gcam_years)
 
       income_sc <- income_allsc %>%
         dplyr::filter(scenario == sc) %>%
@@ -1619,12 +1625,14 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
                   dataset_name = "prices by sector") %>%
         # reshape and clean dataset
         dplyr::filter(sector %in% c("FoodDemand_Staples", "FoodDemand_NonStaples") |
-                        grepl('FoodDemand_NonStaples_',sector)) %>%
+                        grepl('FoodDemand_NonStaples_',sector),
+                      year %in% gcam_years) %>%
         # add food_weights to estimate Staples & NonStaples price
         left_join_strict(food_weights %>%
                            tidyr::complete(tidyr::nesting(scenario, region, sector, input),
                                            year = unique(year),
-                                           fill = list(weight = 0)),
+                                           fill = list(weight = 0)) %>%
+                           dplyr::filter(year %in% gcam_years),
                          by = c('scenario','region','sector','year')) %>%
         # homogenise dataset
         dplyr::mutate(`gcam-consumer` = 'FoodDemand',
@@ -1653,7 +1661,8 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
           check_inf(rgcam::getQuery(prj, "food demand v2", scenarios = sc),
                     dataset_name = "food demand") %>%
             # reshape and clean dataset
-            dplyr::filter(input == 'food processing') %>%
+            dplyr::filter(input == 'food processing',
+                          year %in% gcam_years) %>%
             dplyr::mutate(`gcam-consumer` = 'FoodDemand',
                           nodeinput = 'FoodDemand',
                           Units = 'Pcal/yr',
@@ -1676,12 +1685,13 @@ get_food_expenditure <- function(GCAM_version = 'v8.2') {
           rgcam::getQuery(prj, "population by region", scenarios = sc) %>%
             # Units: from thous. to abs
             dplyr::mutate(pop = 1e2 * value) %>%
-            dplyr::select(scenario, region, year, pop),
+            dplyr::select(scenario, region, year, pop) %>%
+            dplyr::filter(year %in% gcam_years),
           by = c('scenario','region','year')) %>%
         dplyr::mutate(food_expenditure = food_expenditure / pop) %>%
         dplyr::mutate(Units = '2020$cap') %>%
         # restrict to desired years
-        dplyr::filter(year <= final_year.global)
+        dplyr::filter(year %in% gcam_years)
 
       income_sc <- income_allsc %>%
         dplyr::filter(scenario == sc) %>%
@@ -4009,7 +4019,8 @@ get_elec_gen_tech <- function(GCAM_version = 'v8.2') {
     elec_gen_tmp <- rbind(
       elec_gen_tmp %>%
         dplyr::filter(!grepl('generation', subsector)) %>%
-        dplyr::select(Units,scenario,region=`technology...3`,subsector,technology=`technology...5`,year,value),
+        dplyr::select(Units,scenario,region=`technology...3`,subsector,
+                      technology=`technology...5`,year,value),
       elec_gen_grids
     )
   }
@@ -4295,6 +4306,8 @@ get_total_trade <- function(GCAM_version = 'v8.2') {
   trade_clean <- NULL
 
   check_queries("trade_clean", GCAM_version)
+  if (!exists("ag_trade")) ag_trade <- NULL
+  if (!exists("pe_trade")) pe_trade <- NULL
 
   trade_clean <- rbind(
     ag_trade,

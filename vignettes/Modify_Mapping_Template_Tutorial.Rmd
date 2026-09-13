@@ -21,6 +21,7 @@ Before performing modifications on the package, please ensure that:
 1. **You understand the package internals:** Review the [Package Internals documentation](https://bc3lc.github.io/gcamreport/articles/Package_Internals.html) to understand how the code works under the hood.
 2. **You know the best practices to contribute:** Refer to the [Contribution Section](https://github.com/bc3LC/gcamreport?tab=readme-ov-file#contribute) for guidelines on submitting changes to the project.
 3. **You can ensure reproducibility:** Read the [Version Guide](https://bc3lc.github.io/gcamreport/articles/Version_Guide.html) to learn how to properly trace and document your custom version.
+4. **You follow the contribution guidelines [if applicable]:** Read the [How to contribute guideline](https://github.com/bc3LC/gcamreport/tree/gcam-core#contribute) to know the best way to proceed if you would like to incorporate your developments to the core `gcamreport` package.
 
 
 <span style="color:white">newline</span>

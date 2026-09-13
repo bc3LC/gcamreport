@@ -83,6 +83,8 @@ Price|Final Energy|Transportation|Bus|Electricity,Final Energy|Transportation|Bu
 Price|Final Energy|Transportation|Bus|Gases,Final Energy|Transportation|Bus|Gases
 Price|Final Energy|Transportation|Bus|Hydrogen,Final Energy|Transportation|Bus|Hydrogen
 Price|Final Energy|Transportation|Bus|Liquids,Final Energy|Transportation|Bus|Liquids
+Price|Final Energy|Transportation|Bus|Solids,Final Energy|Transportation|Bus|Solids
+Price|Final Energy|Transportation|Bus|Solids|Biomass,Final Energy|Transportation|Bus|Solids|Biomass
 Price|Final Energy|Transportation|Domestic Aviation|Electricity,Final Energy|Transportation|Domestic Aviation|Electricity
 Price|Final Energy|Transportation|Domestic Aviation|Hydrogen,Final Energy|Transportation|Domestic Aviation|Hydrogen
 Price|Final Energy|Transportation|Domestic Aviation|Liquids,Final Energy|Transportation|Domestic Aviation|Liquids
@@ -94,11 +96,15 @@ Price|Final Energy|Transportation|Freight|Electricity,Final Energy|Transportatio
 Price|Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Freight|Hydrogen
 Price|Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Freight|Liquids
 Price|Final Energy|Transportation|Gases,Final Energy|Transportation|Gases
+Price|Final Energy|Transportation|Solids,Final Energy|Transportation|Solids
+Price|Final Energy|Transportation|Solids|Biomass,Final Energy|Transportation|Solids|Biomass
 Price|Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Hydrogen
 Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Final Energy|Transportation|Light-Duty Vehicle|Electricity
 Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,Final Energy|Transportation|Light-Duty Vehicle|Gases
 Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Final Energy|Transportation|Light-Duty Vehicle|Hydrogen
 Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Final Energy|Transportation|Light-Duty Vehicle|Liquids
+Price|Final Energy|Transportation|Light-Duty Vehicle|Solids,Final Energy|Transportation|Light-Duty Vehicle|Solids
+Price|Final Energy|Transportation|Light-Duty Vehicle|Solids|Biomass,Final Energy|Transportation|Light-Duty Vehicle|Solids|Biomass
 Price|Final Energy|Transportation|Liquids,Final Energy|Transportation|Liquids
 Price|Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Passenger|Electricity
 Price|Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen

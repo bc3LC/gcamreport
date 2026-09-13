@@ -1,18 +1,20 @@
 # Start with the base image
-FROM rocker/r-ver:4.1.0
+FROM rocker/r-ver:4.3.0
 
 ENV R_LIBS_USER="/usr/local/lib/R/site-library"
 RUN chmod a+w /usr/local/lib/R/site-library
 
 # Install required system libraries
-RUN apt-get update \
-  && apt-get install -y \
+RUN apt-get update -qq \
+    && apt-get install -y --no-install-recommends --fix-missing \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
     libharfbuzz-dev \
     libfribidi-dev \
-    git
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # install pkgs
 RUN apt-get update

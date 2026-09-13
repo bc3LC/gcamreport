@@ -375,6 +375,7 @@ load_variable <- function(var, GCAM_version = 'v8.2', GWP_version = 'AR5') {
 
   # base case: if variable already loaded, return
   if (exists(as.character(var$name))) {
+    loaded_internal_variables.global <<- c(loaded_internal_variables.global, as.character(var$name))
     return()
   }
 
