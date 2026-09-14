@@ -1,0 +1,3075 @@
+# yield and land scalers for cereals
+# Source: extra_scripts/Postprocess_Cereal_Yield.R
+region,GCAM_commodity,year,PhysicalLand_scaler,Yield_scaler
+Africa_Eastern,Corn,1975,1,1
+Africa_Eastern,Corn,1990,1,1
+Africa_Eastern,Corn,2005,1,1
+Africa_Eastern,Corn,2010,1,1
+Africa_Eastern,Corn,2015,1,1
+Africa_Eastern,Corn,2019,1,1
+Africa_Eastern,Corn,2020,1,1
+Africa_Eastern,Corn,2021,1,1
+Africa_Eastern,Corn,2025,1,1
+Africa_Eastern,Corn,2030,1,1
+Africa_Eastern,Corn,2035,1,1
+Africa_Eastern,Corn,2040,1,1
+Africa_Eastern,Corn,2045,1,1
+Africa_Eastern,Corn,2050,1,1
+Africa_Eastern,Corn,2055,1,1
+Africa_Eastern,Corn,2060,1,1
+Africa_Eastern,Corn,2065,1,1
+Africa_Eastern,Corn,2070,1,1
+Africa_Eastern,Corn,2075,1,1
+Africa_Eastern,Corn,2080,1,1
+Africa_Eastern,Corn,2085,1,1
+Africa_Eastern,Corn,2090,1,1
+Africa_Eastern,Corn,2095,1,1
+Africa_Eastern,Corn,2100,1,1
+Africa_Eastern,OtherGrain,1975,1,1
+Africa_Eastern,OtherGrain,1990,1,1
+Africa_Eastern,OtherGrain,2005,1,1
+Africa_Eastern,OtherGrain,2010,1,1
+Africa_Eastern,OtherGrain,2015,1,1
+Africa_Eastern,OtherGrain,2019,1,1
+Africa_Eastern,OtherGrain,2020,1,1
+Africa_Eastern,OtherGrain,2021,1,1
+Africa_Eastern,OtherGrain,2025,1,1
+Africa_Eastern,OtherGrain,2030,1,1
+Africa_Eastern,OtherGrain,2035,1,1
+Africa_Eastern,OtherGrain,2040,1,1
+Africa_Eastern,OtherGrain,2045,1,1
+Africa_Eastern,OtherGrain,2050,1,1
+Africa_Eastern,OtherGrain,2055,1,1
+Africa_Eastern,OtherGrain,2060,1,1
+Africa_Eastern,OtherGrain,2065,1,1
+Africa_Eastern,OtherGrain,2070,1,1
+Africa_Eastern,OtherGrain,2075,1,1
+Africa_Eastern,OtherGrain,2080,1,1
+Africa_Eastern,OtherGrain,2085,1,1
+Africa_Eastern,OtherGrain,2090,1,1
+Africa_Eastern,OtherGrain,2095,1,1
+Africa_Eastern,OtherGrain,2100,1,1
+Africa_Eastern,Rice,1975,1,1
+Africa_Eastern,Rice,1990,1,1
+Africa_Eastern,Rice,2005,1,1
+Africa_Eastern,Rice,2010,1,1
+Africa_Eastern,Rice,2015,1,1
+Africa_Eastern,Rice,2019,1,1
+Africa_Eastern,Rice,2020,1,1
+Africa_Eastern,Rice,2021,1,1
+Africa_Eastern,Rice,2025,1,1
+Africa_Eastern,Rice,2030,1,1
+Africa_Eastern,Rice,2035,1,1
+Africa_Eastern,Rice,2040,1,1
+Africa_Eastern,Rice,2045,1,1
+Africa_Eastern,Rice,2050,1,1
+Africa_Eastern,Rice,2055,1,1
+Africa_Eastern,Rice,2060,1,1
+Africa_Eastern,Rice,2065,1,1
+Africa_Eastern,Rice,2070,1,1
+Africa_Eastern,Rice,2075,1,1
+Africa_Eastern,Rice,2080,1,1
+Africa_Eastern,Rice,2085,1,1
+Africa_Eastern,Rice,2090,1,1
+Africa_Eastern,Rice,2095,1,1
+Africa_Eastern,Rice,2100,1,1
+Africa_Eastern,Wheat,1975,1,1
+Africa_Eastern,Wheat,1990,1,1
+Africa_Eastern,Wheat,2005,1,1
+Africa_Eastern,Wheat,2010,1,1
+Africa_Eastern,Wheat,2015,1,1
+Africa_Eastern,Wheat,2019,1,1
+Africa_Eastern,Wheat,2020,1,1
+Africa_Eastern,Wheat,2021,1,1
+Africa_Eastern,Wheat,2025,1,1
+Africa_Eastern,Wheat,2030,1,1
+Africa_Eastern,Wheat,2035,1,1
+Africa_Eastern,Wheat,2040,1,1
+Africa_Eastern,Wheat,2045,1,1
+Africa_Eastern,Wheat,2050,1,1
+Africa_Eastern,Wheat,2055,1,1
+Africa_Eastern,Wheat,2060,1,1
+Africa_Eastern,Wheat,2065,1,1
+Africa_Eastern,Wheat,2070,1,1
+Africa_Eastern,Wheat,2075,1,1
+Africa_Eastern,Wheat,2080,1,1
+Africa_Eastern,Wheat,2085,1,1
+Africa_Eastern,Wheat,2090,1,1
+Africa_Eastern,Wheat,2095,1,1
+Africa_Eastern,Wheat,2100,1,1
+Africa_Northern,Corn,1975,2.26701976718503,0.441107754980763
+Africa_Northern,Corn,1990,2.1892176758908,0.456784179578258
+Africa_Northern,Corn,2005,2.28328843658546,0.437964815998214
+Africa_Northern,Corn,2010,2.30493888311124,0.433850982916383
+Africa_Northern,Corn,2015,2.22274112496788,0.4498949467246
+Africa_Northern,Corn,2019,2.23776661883925,0.446874125112614
+Africa_Northern,Corn,2020,2.18852206525,0.456929366113459
+Africa_Northern,Corn,2021,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2025,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2030,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2035,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2040,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2045,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2050,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2055,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2060,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2065,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2070,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2075,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2080,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2085,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2090,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2095,2.18354777355198,0.457970286756447
+Africa_Northern,Corn,2100,2.18354777355198,0.457970286756447
+Africa_Northern,OtherGrain,1975,1.07849579999226,0.927217333630023
+Africa_Northern,OtherGrain,1990,1.00850258082222,0.991569103556193
+Africa_Northern,OtherGrain,2005,1.08165838245341,0.924506310145543
+Africa_Northern,OtherGrain,2010,1.09951951460043,0.909488177991459
+Africa_Northern,OtherGrain,2015,1.03852970427176,0.962899757115009
+Africa_Northern,OtherGrain,2019,1.0471327388381,0.954988763993382
+Africa_Northern,OtherGrain,2020,1.02024481682892,0.980156903034466
+Africa_Northern,OtherGrain,2021,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2025,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2030,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2035,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2040,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2045,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2050,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2055,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2060,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2065,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2070,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2075,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2080,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2085,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2090,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2095,1.01801034064401,0.982308293025183
+Africa_Northern,OtherGrain,2100,1.01801034064401,0.982308293025183
+Africa_Northern,Rice,1975,3.07507938700038,0.325194856505952
+Africa_Northern,Rice,1990,3.07011449327934,0.325720751518896
+Africa_Northern,Rice,2005,3.05581010507122,0.327245465397364
+Africa_Northern,Rice,2010,3.02963705361125,0.330072540804195
+Africa_Northern,Rice,2015,3.07120536875329,0.325605057276237
+Africa_Northern,Rice,2019,3.07300774092797,0.325414084280186
+Africa_Northern,Rice,2020,3.06884084821082,0.325855933709633
+Africa_Northern,Rice,2021,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2025,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2030,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2035,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2040,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2045,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2050,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2055,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2060,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2065,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2070,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2075,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2080,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2085,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2090,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2095,3.06826821381557,0.325916748574089
+Africa_Northern,Rice,2100,3.06826821381557,0.325916748574089
+Africa_Northern,Wheat,1975,1.15645929043996,0.864708345781515
+Africa_Northern,Wheat,1990,1.11424048664474,0.897472324858031
+Africa_Northern,Wheat,2005,1.17118870580306,0.853833370357102
+Africa_Northern,Wheat,2010,1.18723876073353,0.842290559467713
+Africa_Northern,Wheat,2015,1.13488001231563,0.881150420439231
+Africa_Northern,Wheat,2019,1.14090930427304,0.876493859989312
+Africa_Northern,Wheat,2020,1.11662110375452,0.895558929199536
+Africa_Northern,Wheat,2021,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2025,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2030,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2035,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2040,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2045,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2050,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2055,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2060,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2065,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2070,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2075,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2080,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2085,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2090,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2095,1.11448417931814,0.897276083911584
+Africa_Northern,Wheat,2100,1.11448417931814,0.897276083911584
+Africa_Southern,Corn,1975,1,1
+Africa_Southern,Corn,1990,1,1
+Africa_Southern,Corn,2005,1.04934535851934,0.952975101935016
+Africa_Southern,Corn,2010,1.03675438669007,0.964548607498628
+Africa_Southern,Corn,2015,1,1
+Africa_Southern,Corn,2019,1,1
+Africa_Southern,Corn,2020,1,1
+Africa_Southern,Corn,2021,1,1
+Africa_Southern,Corn,2025,1,1
+Africa_Southern,Corn,2030,1,1
+Africa_Southern,Corn,2035,1,1
+Africa_Southern,Corn,2040,1,1
+Africa_Southern,Corn,2045,1,1
+Africa_Southern,Corn,2050,1,1
+Africa_Southern,Corn,2055,1,1
+Africa_Southern,Corn,2060,1,1
+Africa_Southern,Corn,2065,1,1
+Africa_Southern,Corn,2070,1,1
+Africa_Southern,Corn,2075,1,1
+Africa_Southern,Corn,2080,1,1
+Africa_Southern,Corn,2085,1,1
+Africa_Southern,Corn,2090,1,1
+Africa_Southern,Corn,2095,1,1
+Africa_Southern,Corn,2100,1,1
+Africa_Southern,OtherGrain,1975,1,1
+Africa_Southern,OtherGrain,1990,1,1
+Africa_Southern,OtherGrain,2005,1.16060532012995,0.861619348675766
+Africa_Southern,OtherGrain,2010,1.1267147167817,0.887536112829301
+Africa_Southern,OtherGrain,2015,1,1
+Africa_Southern,OtherGrain,2019,1,1
+Africa_Southern,OtherGrain,2020,1,1
+Africa_Southern,OtherGrain,2021,1,1
+Africa_Southern,OtherGrain,2025,1,1
+Africa_Southern,OtherGrain,2030,1,1
+Africa_Southern,OtherGrain,2035,1,1
+Africa_Southern,OtherGrain,2040,1,1
+Africa_Southern,OtherGrain,2045,1,1
+Africa_Southern,OtherGrain,2050,1,1
+Africa_Southern,OtherGrain,2055,1,1
+Africa_Southern,OtherGrain,2060,1,1
+Africa_Southern,OtherGrain,2065,1,1
+Africa_Southern,OtherGrain,2070,1,1
+Africa_Southern,OtherGrain,2075,1,1
+Africa_Southern,OtherGrain,2080,1,1
+Africa_Southern,OtherGrain,2085,1,1
+Africa_Southern,OtherGrain,2090,1,1
+Africa_Southern,OtherGrain,2095,1,1
+Africa_Southern,OtherGrain,2100,1,1
+Africa_Southern,Rice,1975,1,1
+Africa_Southern,Rice,1990,1,1
+Africa_Southern,Rice,2005,1.23373102715597,0.810549445534513
+Africa_Southern,Rice,2010,1.18569567219088,0.843386733589267
+Africa_Southern,Rice,2015,1,1
+Africa_Southern,Rice,2019,1,1
+Africa_Southern,Rice,2020,1,1
+Africa_Southern,Rice,2021,1,1
+Africa_Southern,Rice,2025,1,1
+Africa_Southern,Rice,2030,1,1
+Africa_Southern,Rice,2035,1,1
+Africa_Southern,Rice,2040,1,1
+Africa_Southern,Rice,2045,1,1
+Africa_Southern,Rice,2050,1,1
+Africa_Southern,Rice,2055,1,1
+Africa_Southern,Rice,2060,1,1
+Africa_Southern,Rice,2065,1,1
+Africa_Southern,Rice,2070,1,1
+Africa_Southern,Rice,2075,1,1
+Africa_Southern,Rice,2080,1,1
+Africa_Southern,Rice,2085,1,1
+Africa_Southern,Rice,2090,1,1
+Africa_Southern,Rice,2095,1,1
+Africa_Southern,Rice,2100,1,1
+Africa_Southern,Wheat,1975,1,1
+Africa_Southern,Wheat,1990,1,1
+Africa_Southern,Wheat,2005,1.03906362151631,0.962404976261889
+Africa_Southern,Wheat,2010,1.02325014860836,0.977278138058441
+Africa_Southern,Wheat,2015,1,1
+Africa_Southern,Wheat,2019,1,1
+Africa_Southern,Wheat,2020,1,1
+Africa_Southern,Wheat,2021,1,1
+Africa_Southern,Wheat,2025,1,1
+Africa_Southern,Wheat,2030,1,1
+Africa_Southern,Wheat,2035,1,1
+Africa_Southern,Wheat,2040,1,1
+Africa_Southern,Wheat,2045,1,1
+Africa_Southern,Wheat,2050,1,1
+Africa_Southern,Wheat,2055,1,1
+Africa_Southern,Wheat,2060,1,1
+Africa_Southern,Wheat,2065,1,1
+Africa_Southern,Wheat,2070,1,1
+Africa_Southern,Wheat,2075,1,1
+Africa_Southern,Wheat,2080,1,1
+Africa_Southern,Wheat,2085,1,1
+Africa_Southern,Wheat,2090,1,1
+Africa_Southern,Wheat,2095,1,1
+Africa_Southern,Wheat,2100,1,1
+Africa_Western,Corn,1975,1,1
+Africa_Western,Corn,1990,1.00779226533959,0.992267984576203
+Africa_Western,Corn,2005,1.11080009728293,0.900251991736448
+Africa_Western,Corn,2010,1.14108616342358,0.87635801051142
+Africa_Western,Corn,2015,1.25944000904334,0.794003678475797
+Africa_Western,Corn,2019,1.35039666168088,0.740523157658929
+Africa_Western,Corn,2020,1.36976853145539,0.730050353060376
+Africa_Western,Corn,2021,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2025,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2030,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2035,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2040,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2045,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2050,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2055,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2060,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2065,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2070,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2075,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2080,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2085,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2090,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2095,1.38886486103727,0.720012456253772
+Africa_Western,Corn,2100,1.38886486103727,0.720012456253772
+Africa_Western,OtherGrain,1975,1,1
+Africa_Western,OtherGrain,1990,1,1
+Africa_Western,OtherGrain,2005,1,1
+Africa_Western,OtherGrain,2010,1,1
+Africa_Western,OtherGrain,2015,1.00751250744437,0.992543509496054
+Africa_Western,OtherGrain,2019,1.06586357884056,0.938206370732541
+Africa_Western,OtherGrain,2020,1.07546703470859,0.929828593278043
+Africa_Western,OtherGrain,2021,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2025,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2030,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2035,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2040,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2045,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2050,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2055,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2060,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2065,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2070,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2075,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2080,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2085,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2090,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2095,1.08946470319154,0.917881962646926
+Africa_Western,OtherGrain,2100,1.08946470319154,0.917881962646926
+Africa_Western,Rice,1975,1,1
+Africa_Western,Rice,1990,1.06488513627979,0.939068417738962
+Africa_Western,Rice,2005,1.22944460866388,0.813375399715461
+Africa_Western,Rice,2010,1.27900533757972,0.781857565889687
+Africa_Western,Rice,2015,1.43326687731013,0.697706767546839
+Africa_Western,Rice,2019,1.5146170338887,0.660232902196108
+Africa_Western,Rice,2020,1.5295911868086,0.653769457240691
+Africa_Western,Rice,2021,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2025,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2030,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2035,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2040,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2045,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2050,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2055,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2060,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2065,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2070,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2075,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2080,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2085,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2090,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2095,1.54617826246501,0.646755955814398
+Africa_Western,Rice,2100,1.54617826246501,0.646755955814398
+Africa_Western,Wheat,1975,1,1
+Africa_Western,Wheat,1990,1,1
+Africa_Western,Wheat,2005,1,1
+Africa_Western,Wheat,2010,1,1
+Africa_Western,Wheat,2015,1,1
+Africa_Western,Wheat,2019,1,1
+Africa_Western,Wheat,2020,1,1
+Africa_Western,Wheat,2021,1,1
+Africa_Western,Wheat,2025,1,1
+Africa_Western,Wheat,2030,1,1
+Africa_Western,Wheat,2035,1,1
+Africa_Western,Wheat,2040,1,1
+Africa_Western,Wheat,2045,1,1
+Africa_Western,Wheat,2050,1,1
+Africa_Western,Wheat,2055,1,1
+Africa_Western,Wheat,2060,1,1
+Africa_Western,Wheat,2065,1,1
+Africa_Western,Wheat,2070,1,1
+Africa_Western,Wheat,2075,1,1
+Africa_Western,Wheat,2080,1,1
+Africa_Western,Wheat,2085,1,1
+Africa_Western,Wheat,2090,1,1
+Africa_Western,Wheat,2095,1,1
+Africa_Western,Wheat,2100,1,1
+Argentina,Corn,1975,1,1
+Argentina,Corn,1990,1,1
+Argentina,Corn,2005,1.09662699319688,0.911887092150456
+Argentina,Corn,2010,1.03246726415318,0.968553710824127
+Argentina,Corn,2015,1,1
+Argentina,Corn,2019,1,1
+Argentina,Corn,2020,1,1
+Argentina,Corn,2021,1,1
+Argentina,Corn,2025,1,1
+Argentina,Corn,2030,1,1
+Argentina,Corn,2035,1,1
+Argentina,Corn,2040,1,1
+Argentina,Corn,2045,1,1
+Argentina,Corn,2050,1,1
+Argentina,Corn,2055,1,1
+Argentina,Corn,2060,1,1
+Argentina,Corn,2065,1,1
+Argentina,Corn,2070,1,1
+Argentina,Corn,2075,1,1
+Argentina,Corn,2080,1,1
+Argentina,Corn,2085,1,1
+Argentina,Corn,2090,1,1
+Argentina,Corn,2095,1,1
+Argentina,Corn,2100,1,1
+Argentina,OtherGrain,1975,1,1
+Argentina,OtherGrain,1990,1,1
+Argentina,OtherGrain,2005,1.12158426732599,0.891595958620334
+Argentina,OtherGrain,2010,1.04166964795883,0.959997252449001
+Argentina,OtherGrain,2015,1,1
+Argentina,OtherGrain,2019,1,1
+Argentina,OtherGrain,2020,1,1
+Argentina,OtherGrain,2021,1,1
+Argentina,OtherGrain,2025,1,1
+Argentina,OtherGrain,2030,1,1
+Argentina,OtherGrain,2035,1,1
+Argentina,OtherGrain,2040,1,1
+Argentina,OtherGrain,2045,1,1
+Argentina,OtherGrain,2050,1,1
+Argentina,OtherGrain,2055,1,1
+Argentina,OtherGrain,2060,1,1
+Argentina,OtherGrain,2065,1,1
+Argentina,OtherGrain,2070,1,1
+Argentina,OtherGrain,2075,1,1
+Argentina,OtherGrain,2080,1,1
+Argentina,OtherGrain,2085,1,1
+Argentina,OtherGrain,2090,1,1
+Argentina,OtherGrain,2095,1,1
+Argentina,OtherGrain,2100,1,1
+Argentina,Rice,1975,1,1
+Argentina,Rice,1990,1,1
+Argentina,Rice,2005,1.30257856534483,0.767708011328491
+Argentina,Rice,2010,1.18645797218868,0.842844857079329
+Argentina,Rice,2015,1.06879945949623,0.935629215672831
+Argentina,Rice,2019,1.01712406734144,0.983164229525901
+Argentina,Rice,2020,1.03635205766026,0.964923061240089
+Argentina,Rice,2021,1.05476159656334,0.948081541135205
+Argentina,Rice,2025,1.05476159656334,0.948081541135205
+Argentina,Rice,2030,1.05476159656334,0.948081541135205
+Argentina,Rice,2035,1.05476159656334,0.948081541135205
+Argentina,Rice,2040,1.05476159656334,0.948081541135205
+Argentina,Rice,2045,1.05476159656334,0.948081541135205
+Argentina,Rice,2050,1.05476159656334,0.948081541135205
+Argentina,Rice,2055,1.05476159656334,0.948081541135205
+Argentina,Rice,2060,1.05476159656334,0.948081541135205
+Argentina,Rice,2065,1.05476159656334,0.948081541135205
+Argentina,Rice,2070,1.05476159656334,0.948081541135205
+Argentina,Rice,2075,1.05476159656334,0.948081541135205
+Argentina,Rice,2080,1.05476159656334,0.948081541135205
+Argentina,Rice,2085,1.05476159656334,0.948081541135205
+Argentina,Rice,2090,1.05476159656334,0.948081541135205
+Argentina,Rice,2095,1.05476159656334,0.948081541135205
+Argentina,Rice,2100,1.05476159656334,0.948081541135205
+Argentina,Wheat,1975,1,1
+Argentina,Wheat,1990,1,1
+Argentina,Wheat,2005,1.07521215195919,0.930049012353382
+Argentina,Wheat,2010,1.01419220600548,0.98600639413176
+Argentina,Wheat,2015,1,1
+Argentina,Wheat,2019,1,1
+Argentina,Wheat,2020,1,1
+Argentina,Wheat,2021,1,1
+Argentina,Wheat,2025,1,1
+Argentina,Wheat,2030,1,1
+Argentina,Wheat,2035,1,1
+Argentina,Wheat,2040,1,1
+Argentina,Wheat,2045,1,1
+Argentina,Wheat,2050,1,1
+Argentina,Wheat,2055,1,1
+Argentina,Wheat,2060,1,1
+Argentina,Wheat,2065,1,1
+Argentina,Wheat,2070,1,1
+Argentina,Wheat,2075,1,1
+Argentina,Wheat,2080,1,1
+Argentina,Wheat,2085,1,1
+Argentina,Wheat,2090,1,1
+Argentina,Wheat,2095,1,1
+Argentina,Wheat,2100,1,1
+Australia_NZ,Corn,1975,1,1
+Australia_NZ,Corn,1990,1,1
+Australia_NZ,Corn,2005,1.07601559574172,0.929354559504022
+Australia_NZ,Corn,2010,1.03292369509033,0.968125723858577
+Australia_NZ,Corn,2015,1,1
+Australia_NZ,Corn,2019,1,1
+Australia_NZ,Corn,2020,1,1
+Australia_NZ,Corn,2021,1,1
+Australia_NZ,Corn,2025,1,1
+Australia_NZ,Corn,2030,1,1
+Australia_NZ,Corn,2035,1,1
+Australia_NZ,Corn,2040,1,1
+Australia_NZ,Corn,2045,1,1
+Australia_NZ,Corn,2050,1,1
+Australia_NZ,Corn,2055,1,1
+Australia_NZ,Corn,2060,1,1
+Australia_NZ,Corn,2065,1,1
+Australia_NZ,Corn,2070,1,1
+Australia_NZ,Corn,2075,1,1
+Australia_NZ,Corn,2080,1,1
+Australia_NZ,Corn,2085,1,1
+Australia_NZ,Corn,2090,1,1
+Australia_NZ,Corn,2095,1,1
+Australia_NZ,Corn,2100,1,1
+Australia_NZ,OtherGrain,1975,1,1
+Australia_NZ,OtherGrain,1990,1,1
+Australia_NZ,OtherGrain,2005,1,1
+Australia_NZ,OtherGrain,2010,1,1
+Australia_NZ,OtherGrain,2015,1,1
+Australia_NZ,OtherGrain,2019,1,1
+Australia_NZ,OtherGrain,2020,1,1
+Australia_NZ,OtherGrain,2021,1,1
+Australia_NZ,OtherGrain,2025,1,1
+Australia_NZ,OtherGrain,2030,1,1
+Australia_NZ,OtherGrain,2035,1,1
+Australia_NZ,OtherGrain,2040,1,1
+Australia_NZ,OtherGrain,2045,1,1
+Australia_NZ,OtherGrain,2050,1,1
+Australia_NZ,OtherGrain,2055,1,1
+Australia_NZ,OtherGrain,2060,1,1
+Australia_NZ,OtherGrain,2065,1,1
+Australia_NZ,OtherGrain,2070,1,1
+Australia_NZ,OtherGrain,2075,1,1
+Australia_NZ,OtherGrain,2080,1,1
+Australia_NZ,OtherGrain,2085,1,1
+Australia_NZ,OtherGrain,2090,1,1
+Australia_NZ,OtherGrain,2095,1,1
+Australia_NZ,OtherGrain,2100,1,1
+Australia_NZ,Rice,1975,1,1
+Australia_NZ,Rice,1990,1,1
+Australia_NZ,Rice,2005,1,1
+Australia_NZ,Rice,2010,1,1
+Australia_NZ,Rice,2015,1,1
+Australia_NZ,Rice,2019,1,1
+Australia_NZ,Rice,2020,1,1
+Australia_NZ,Rice,2021,1,1
+Australia_NZ,Rice,2025,1,1
+Australia_NZ,Rice,2030,1,1
+Australia_NZ,Rice,2035,1,1
+Australia_NZ,Rice,2040,1,1
+Australia_NZ,Rice,2045,1,1
+Australia_NZ,Rice,2050,1,1
+Australia_NZ,Rice,2055,1,1
+Australia_NZ,Rice,2060,1,1
+Australia_NZ,Rice,2065,1,1
+Australia_NZ,Rice,2070,1,1
+Australia_NZ,Rice,2075,1,1
+Australia_NZ,Rice,2080,1,1
+Australia_NZ,Rice,2085,1,1
+Australia_NZ,Rice,2090,1,1
+Australia_NZ,Rice,2095,1,1
+Australia_NZ,Rice,2100,1,1
+Australia_NZ,Wheat,1975,1,1
+Australia_NZ,Wheat,1990,1,1
+Australia_NZ,Wheat,2005,1,1
+Australia_NZ,Wheat,2010,1,1
+Australia_NZ,Wheat,2015,1,1
+Australia_NZ,Wheat,2019,1,1
+Australia_NZ,Wheat,2020,1,1
+Australia_NZ,Wheat,2021,1,1
+Australia_NZ,Wheat,2025,1,1
+Australia_NZ,Wheat,2030,1,1
+Australia_NZ,Wheat,2035,1,1
+Australia_NZ,Wheat,2040,1,1
+Australia_NZ,Wheat,2045,1,1
+Australia_NZ,Wheat,2050,1,1
+Australia_NZ,Wheat,2055,1,1
+Australia_NZ,Wheat,2060,1,1
+Australia_NZ,Wheat,2065,1,1
+Australia_NZ,Wheat,2070,1,1
+Australia_NZ,Wheat,2075,1,1
+Australia_NZ,Wheat,2080,1,1
+Australia_NZ,Wheat,2085,1,1
+Australia_NZ,Wheat,2090,1,1
+Australia_NZ,Wheat,2095,1,1
+Australia_NZ,Wheat,2100,1,1
+Brazil,Corn,1975,1.02391175339613,0.976646665772889
+Brazil,Corn,1990,1.03505968969539,0.966127857123187
+Brazil,Corn,2005,1.06443102393519,0.939469047325404
+Brazil,Corn,2010,1.02899729953308,0.9718198487535
+Brazil,Corn,2015,1.04271557833275,0.959034295429778
+Brazil,Corn,2019,1.06338392060234,0.94039413294266
+Brazil,Corn,2020,1.08530763629611,0.921397736970467
+Brazil,Corn,2021,1.1157663922187,0.896244955013834
+Brazil,Corn,2025,1.1157663922187,0.896244955013834
+Brazil,Corn,2030,1.1157663922187,0.896244955013834
+Brazil,Corn,2035,1.1157663922187,0.896244955013834
+Brazil,Corn,2040,1.1157663922187,0.896244955013834
+Brazil,Corn,2045,1.1157663922187,0.896244955013834
+Brazil,Corn,2050,1.1157663922187,0.896244955013834
+Brazil,Corn,2055,1.1157663922187,0.896244955013834
+Brazil,Corn,2060,1.1157663922187,0.896244955013834
+Brazil,Corn,2065,1.1157663922187,0.896244955013834
+Brazil,Corn,2070,1.1157663922187,0.896244955013834
+Brazil,Corn,2075,1.1157663922187,0.896244955013834
+Brazil,Corn,2080,1.1157663922187,0.896244955013834
+Brazil,Corn,2085,1.1157663922187,0.896244955013834
+Brazil,Corn,2090,1.1157663922187,0.896244955013834
+Brazil,Corn,2095,1.1157663922187,0.896244955013834
+Brazil,Corn,2100,1.1157663922187,0.896244955013834
+Brazil,OtherGrain,1975,1.03986144048366,0.961666584670052
+Brazil,OtherGrain,1990,1.06817351445013,0.936177490334777
+Brazil,OtherGrain,2005,1.10520815255598,0.904806934048878
+Brazil,OtherGrain,2010,1.0603537500552,0.943081495159457
+Brazil,OtherGrain,2015,1.07940165459514,0.926439195032619
+Brazil,OtherGrain,2019,1.10768396950167,0.902784573518638
+Brazil,OtherGrain,2020,1.13697866364633,0.879523980505461
+Brazil,OtherGrain,2021,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2025,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2030,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2035,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2040,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2045,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2050,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2055,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2060,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2065,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2070,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2075,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2080,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2085,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2090,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2095,1.17567471027631,0.850575411088819
+Brazil,OtherGrain,2100,1.17567471027631,0.850575411088819
+Brazil,Rice,1975,1,1
+Brazil,Rice,1990,1,1
+Brazil,Rice,2005,1,1
+Brazil,Rice,2010,1,1
+Brazil,Rice,2015,1,1
+Brazil,Rice,2019,1,1
+Brazil,Rice,2020,1,1
+Brazil,Rice,2021,1,1
+Brazil,Rice,2025,1,1
+Brazil,Rice,2030,1,1
+Brazil,Rice,2035,1,1
+Brazil,Rice,2040,1,1
+Brazil,Rice,2045,1,1
+Brazil,Rice,2050,1,1
+Brazil,Rice,2055,1,1
+Brazil,Rice,2060,1,1
+Brazil,Rice,2065,1,1
+Brazil,Rice,2070,1,1
+Brazil,Rice,2075,1,1
+Brazil,Rice,2080,1,1
+Brazil,Rice,2085,1,1
+Brazil,Rice,2090,1,1
+Brazil,Rice,2095,1,1
+Brazil,Rice,2100,1,1
+Brazil,Wheat,1975,1.050074048335,0.952313793094503
+Brazil,Wheat,1990,1.09221010974163,0.915574751671685
+Brazil,Wheat,2005,1.14074451710729,0.87662047461408
+Brazil,Wheat,2010,1.09390592557771,0.914155391810212
+Brazil,Wheat,2015,1.11654745911464,0.895617997996205
+Brazil,Wheat,2019,1.15128828385395,0.868592179755783
+Brazil,Wheat,2020,1.18774864552787,0.841928975263591
+Brazil,Wheat,2021,1.23196985300424,0.811708174158184
+Brazil,Wheat,2025,1.23196985300424,0.811708174158184
+Brazil,Wheat,2030,1.23196985300424,0.811708174158184
+Brazil,Wheat,2035,1.23196985300424,0.811708174158184
+Brazil,Wheat,2040,1.23196985300424,0.811708174158184
+Brazil,Wheat,2045,1.23196985300424,0.811708174158184
+Brazil,Wheat,2050,1.23196985300424,0.811708174158184
+Brazil,Wheat,2055,1.23196985300424,0.811708174158184
+Brazil,Wheat,2060,1.23196985300424,0.811708174158184
+Brazil,Wheat,2065,1.23196985300424,0.811708174158184
+Brazil,Wheat,2070,1.23196985300424,0.811708174158184
+Brazil,Wheat,2075,1.23196985300424,0.811708174158184
+Brazil,Wheat,2080,1.23196985300424,0.811708174158184
+Brazil,Wheat,2085,1.23196985300424,0.811708174158184
+Brazil,Wheat,2090,1.23196985300424,0.811708174158184
+Brazil,Wheat,2095,1.23196985300424,0.811708174158184
+Brazil,Wheat,2100,1.23196985300424,0.811708174158184
+Canada,Corn,1975,1,1
+Canada,Corn,1990,1,1
+Canada,Corn,2005,1,1
+Canada,Corn,2010,1,1
+Canada,Corn,2015,1,1
+Canada,Corn,2019,1,1
+Canada,Corn,2020,1,1
+Canada,Corn,2021,1,1
+Canada,Corn,2025,1,1
+Canada,Corn,2030,1,1
+Canada,Corn,2035,1,1
+Canada,Corn,2040,1,1
+Canada,Corn,2045,1,1
+Canada,Corn,2050,1,1
+Canada,Corn,2055,1,1
+Canada,Corn,2060,1,1
+Canada,Corn,2065,1,1
+Canada,Corn,2070,1,1
+Canada,Corn,2075,1,1
+Canada,Corn,2080,1,1
+Canada,Corn,2085,1,1
+Canada,Corn,2090,1,1
+Canada,Corn,2095,1,1
+Canada,Corn,2100,1,1
+Canada,OtherGrain,1975,1,1
+Canada,OtherGrain,1990,1,1
+Canada,OtherGrain,2005,1,1
+Canada,OtherGrain,2010,1,1
+Canada,OtherGrain,2015,1,1
+Canada,OtherGrain,2019,1,1
+Canada,OtherGrain,2020,1,1
+Canada,OtherGrain,2021,1,1
+Canada,OtherGrain,2025,1,1
+Canada,OtherGrain,2030,1,1
+Canada,OtherGrain,2035,1,1
+Canada,OtherGrain,2040,1,1
+Canada,OtherGrain,2045,1,1
+Canada,OtherGrain,2050,1,1
+Canada,OtherGrain,2055,1,1
+Canada,OtherGrain,2060,1,1
+Canada,OtherGrain,2065,1,1
+Canada,OtherGrain,2070,1,1
+Canada,OtherGrain,2075,1,1
+Canada,OtherGrain,2080,1,1
+Canada,OtherGrain,2085,1,1
+Canada,OtherGrain,2090,1,1
+Canada,OtherGrain,2095,1,1
+Canada,OtherGrain,2100,1,1
+Canada,Rice,1975,1,1
+Canada,Rice,1990,1,1
+Canada,Rice,2005,1,1
+Canada,Rice,2010,1,1
+Canada,Rice,2015,1,1
+Canada,Rice,2019,1,1
+Canada,Rice,2020,1,1
+Canada,Rice,2021,1,1
+Canada,Rice,2025,1,1
+Canada,Rice,2030,1,1
+Canada,Rice,2035,1,1
+Canada,Rice,2040,1,1
+Canada,Rice,2045,1,1
+Canada,Rice,2050,1,1
+Canada,Rice,2055,1,1
+Canada,Rice,2060,1,1
+Canada,Rice,2065,1,1
+Canada,Rice,2070,1,1
+Canada,Rice,2075,1,1
+Canada,Rice,2080,1,1
+Canada,Rice,2085,1,1
+Canada,Rice,2090,1,1
+Canada,Rice,2095,1,1
+Canada,Rice,2100,1,1
+Canada,Wheat,1975,1,1
+Canada,Wheat,1990,1,1
+Canada,Wheat,2005,1,1
+Canada,Wheat,2010,1,1
+Canada,Wheat,2015,1,1
+Canada,Wheat,2019,1,1
+Canada,Wheat,2020,1,1
+Canada,Wheat,2021,1,1
+Canada,Wheat,2025,1,1
+Canada,Wheat,2030,1,1
+Canada,Wheat,2035,1,1
+Canada,Wheat,2040,1,1
+Canada,Wheat,2045,1,1
+Canada,Wheat,2050,1,1
+Canada,Wheat,2055,1,1
+Canada,Wheat,2060,1,1
+Canada,Wheat,2065,1,1
+Canada,Wheat,2070,1,1
+Canada,Wheat,2075,1,1
+Canada,Wheat,2080,1,1
+Canada,Wheat,2085,1,1
+Canada,Wheat,2090,1,1
+Canada,Wheat,2095,1,1
+Canada,Wheat,2100,1,1
+Central America and Caribbean,Corn,1975,1,1
+Central America and Caribbean,Corn,1990,1,1
+Central America and Caribbean,Corn,2005,1,1
+Central America and Caribbean,Corn,2010,1,1
+Central America and Caribbean,Corn,2015,1.05328164964114,0.949413673294991
+Central America and Caribbean,Corn,2019,1.06158797994359,0.941985044002795
+Central America and Caribbean,Corn,2020,1.01863041633188,0.98171032787439
+Central America and Caribbean,Corn,2021,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2025,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2030,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2035,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2040,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2045,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2050,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2055,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2060,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2065,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2070,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2075,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2080,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2085,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2090,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2095,1.00891180165479,0.991166917028646
+Central America and Caribbean,Corn,2100,1.00891180165479,0.991166917028646
+Central America and Caribbean,OtherGrain,1975,1,1
+Central America and Caribbean,OtherGrain,1990,1,1
+Central America and Caribbean,OtherGrain,2005,1,1
+Central America and Caribbean,OtherGrain,2010,1,1
+Central America and Caribbean,OtherGrain,2015,1.05321402631736,0.949474631947861
+Central America and Caribbean,OtherGrain,2019,1.06229382194913,0.94135914126392
+Central America and Caribbean,OtherGrain,2020,1.01477291985584,0.985442142210552
+Central America and Caribbean,OtherGrain,2021,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2025,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2030,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2035,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2040,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2045,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2050,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2055,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2060,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2065,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2070,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2075,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2080,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2085,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2090,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2095,1.00143012727897,0.998571915064249
+Central America and Caribbean,OtherGrain,2100,1.00143012727897,0.998571915064249
+Central America and Caribbean,Rice,1975,1,1
+Central America and Caribbean,Rice,1990,1,1
+Central America and Caribbean,Rice,2005,1,1
+Central America and Caribbean,Rice,2010,1,1
+Central America and Caribbean,Rice,2015,1.03011809870351,0.970762479815256
+Central America and Caribbean,Rice,2019,1.03866449826395,0.962774795587435
+Central America and Caribbean,Rice,2020,1,1
+Central America and Caribbean,Rice,2021,1,1
+Central America and Caribbean,Rice,2025,1,1
+Central America and Caribbean,Rice,2030,1,1
+Central America and Caribbean,Rice,2035,1,1
+Central America and Caribbean,Rice,2040,1,1
+Central America and Caribbean,Rice,2045,1,1
+Central America and Caribbean,Rice,2050,1,1
+Central America and Caribbean,Rice,2055,1,1
+Central America and Caribbean,Rice,2060,1,1
+Central America and Caribbean,Rice,2065,1,1
+Central America and Caribbean,Rice,2070,1,1
+Central America and Caribbean,Rice,2075,1,1
+Central America and Caribbean,Rice,2080,1,1
+Central America and Caribbean,Rice,2085,1,1
+Central America and Caribbean,Rice,2090,1,1
+Central America and Caribbean,Rice,2095,1,1
+Central America and Caribbean,Rice,2100,1,1
+Central America and Caribbean,Wheat,1975,1,1
+Central America and Caribbean,Wheat,1990,1,1
+Central America and Caribbean,Wheat,2005,1,1
+Central America and Caribbean,Wheat,2010,1,1
+Central America and Caribbean,Wheat,2015,1,1
+Central America and Caribbean,Wheat,2019,1,1
+Central America and Caribbean,Wheat,2020,1,1
+Central America and Caribbean,Wheat,2021,1,1
+Central America and Caribbean,Wheat,2025,1,1
+Central America and Caribbean,Wheat,2030,1,1
+Central America and Caribbean,Wheat,2035,1,1
+Central America and Caribbean,Wheat,2040,1,1
+Central America and Caribbean,Wheat,2045,1,1
+Central America and Caribbean,Wheat,2050,1,1
+Central America and Caribbean,Wheat,2055,1,1
+Central America and Caribbean,Wheat,2060,1,1
+Central America and Caribbean,Wheat,2065,1,1
+Central America and Caribbean,Wheat,2070,1,1
+Central America and Caribbean,Wheat,2075,1,1
+Central America and Caribbean,Wheat,2080,1,1
+Central America and Caribbean,Wheat,2085,1,1
+Central America and Caribbean,Wheat,2090,1,1
+Central America and Caribbean,Wheat,2095,1,1
+Central America and Caribbean,Wheat,2100,1,1
+Central Asia,Corn,1975,1,1
+Central Asia,Corn,1990,1,1
+Central Asia,Corn,2005,1,1
+Central Asia,Corn,2010,1,1
+Central Asia,Corn,2015,1.00937021659553,0.990716769286962
+Central Asia,Corn,2019,1.00945609079663,0.990632489235692
+Central Asia,Corn,2020,1.0094700000881,0.990618839502632
+Central Asia,Corn,2021,1.00960892372156,0.990482528931954
+Central Asia,Corn,2025,1.00960892372156,0.990482528931954
+Central Asia,Corn,2030,1.00960892372156,0.990482528931954
+Central Asia,Corn,2035,1.00960892372156,0.990482528931954
+Central Asia,Corn,2040,1.00960892372156,0.990482528931954
+Central Asia,Corn,2045,1.00960892372156,0.990482528931954
+Central Asia,Corn,2050,1.00960892372156,0.990482528931954
+Central Asia,Corn,2055,1.00960892372156,0.990482528931954
+Central Asia,Corn,2060,1.00960892372156,0.990482528931954
+Central Asia,Corn,2065,1.00960892372156,0.990482528931954
+Central Asia,Corn,2070,1.00960892372156,0.990482528931954
+Central Asia,Corn,2075,1.00960892372156,0.990482528931954
+Central Asia,Corn,2080,1.00960892372156,0.990482528931954
+Central Asia,Corn,2085,1.00960892372156,0.990482528931954
+Central Asia,Corn,2090,1.00960892372156,0.990482528931954
+Central Asia,Corn,2095,1.00960892372156,0.990482528931954
+Central Asia,Corn,2100,1.00960892372156,0.990482528931954
+Central Asia,OtherGrain,1975,1.07143377363856,0.933328801652414
+Central Asia,OtherGrain,1990,1,1
+Central Asia,OtherGrain,2005,1,1
+Central Asia,OtherGrain,2010,1,1
+Central Asia,OtherGrain,2015,1,1
+Central Asia,OtherGrain,2019,1,1
+Central Asia,OtherGrain,2020,1,1
+Central Asia,OtherGrain,2021,1,1
+Central Asia,OtherGrain,2025,1,1
+Central Asia,OtherGrain,2030,1,1
+Central Asia,OtherGrain,2035,1,1
+Central Asia,OtherGrain,2040,1,1
+Central Asia,OtherGrain,2045,1,1
+Central Asia,OtherGrain,2050,1,1
+Central Asia,OtherGrain,2055,1,1
+Central Asia,OtherGrain,2060,1,1
+Central Asia,OtherGrain,2065,1,1
+Central Asia,OtherGrain,2070,1,1
+Central Asia,OtherGrain,2075,1,1
+Central Asia,OtherGrain,2080,1,1
+Central Asia,OtherGrain,2085,1,1
+Central Asia,OtherGrain,2090,1,1
+Central Asia,OtherGrain,2095,1,1
+Central Asia,OtherGrain,2100,1,1
+Central Asia,Rice,1975,1.0860177501385,0.920795263127579
+Central Asia,Rice,1990,1.0333176475815,0.967756625797036
+Central Asia,Rice,2005,1,1
+Central Asia,Rice,2010,1,1
+Central Asia,Rice,2015,1,1
+Central Asia,Rice,2019,1,1
+Central Asia,Rice,2020,1,1
+Central Asia,Rice,2021,1,1
+Central Asia,Rice,2025,1,1
+Central Asia,Rice,2030,1,1
+Central Asia,Rice,2035,1,1
+Central Asia,Rice,2040,1,1
+Central Asia,Rice,2045,1,1
+Central Asia,Rice,2050,1,1
+Central Asia,Rice,2055,1,1
+Central Asia,Rice,2060,1,1
+Central Asia,Rice,2065,1,1
+Central Asia,Rice,2070,1,1
+Central Asia,Rice,2075,1,1
+Central Asia,Rice,2080,1,1
+Central Asia,Rice,2085,1,1
+Central Asia,Rice,2090,1,1
+Central Asia,Rice,2095,1,1
+Central Asia,Rice,2100,1,1
+Central Asia,Wheat,1975,1.10574617904748,0.904366679215142
+Central Asia,Wheat,1990,1,1
+Central Asia,Wheat,2005,1,1
+Central Asia,Wheat,2010,1,1
+Central Asia,Wheat,2015,1,1
+Central Asia,Wheat,2019,1,1
+Central Asia,Wheat,2020,1,1
+Central Asia,Wheat,2021,1,1
+Central Asia,Wheat,2025,1,1
+Central Asia,Wheat,2030,1,1
+Central Asia,Wheat,2035,1,1
+Central Asia,Wheat,2040,1,1
+Central Asia,Wheat,2045,1,1
+Central Asia,Wheat,2050,1,1
+Central Asia,Wheat,2055,1,1
+Central Asia,Wheat,2060,1,1
+Central Asia,Wheat,2065,1,1
+Central Asia,Wheat,2070,1,1
+Central Asia,Wheat,2075,1,1
+Central Asia,Wheat,2080,1,1
+Central Asia,Wheat,2085,1,1
+Central Asia,Wheat,2090,1,1
+Central Asia,Wheat,2095,1,1
+Central Asia,Wheat,2100,1,1
+China,Corn,1975,1.32157070167921,0.756675370246467
+China,Corn,1990,1.16290446521295,0.859915865760205
+China,Corn,2005,1.25431309557605,0.797249110710069
+China,Corn,2010,1.36961403844885,0.730132703029638
+China,Corn,2015,1.44932688682101,0.689975470056605
+China,Corn,2019,1.46179827974045,0.684088915590705
+China,Corn,2020,1.46950261189301,0.680502363117139
+China,Corn,2021,1.48030293208167,0.675537404086444
+China,Corn,2025,1.48030293208167,0.675537404086444
+China,Corn,2030,1.48030293208167,0.675537404086444
+China,Corn,2035,1.48030293208167,0.675537404086444
+China,Corn,2040,1.48030293208167,0.675537404086444
+China,Corn,2045,1.48030293208167,0.675537404086444
+China,Corn,2050,1.48030293208167,0.675537404086444
+China,Corn,2055,1.48030293208167,0.675537404086444
+China,Corn,2060,1.48030293208167,0.675537404086444
+China,Corn,2065,1.48030293208167,0.675537404086444
+China,Corn,2070,1.48030293208167,0.675537404086444
+China,Corn,2075,1.48030293208167,0.675537404086444
+China,Corn,2080,1.48030293208167,0.675537404086444
+China,Corn,2085,1.48030293208167,0.675537404086444
+China,Corn,2090,1.48030293208167,0.675537404086444
+China,Corn,2095,1.48030293208167,0.675537404086444
+China,Corn,2100,1.48030293208167,0.675537404086444
+China,OtherGrain,1975,1.29120009762585,0.774473299559626
+China,OtherGrain,1990,1.12888818280617,0.885827325709284
+China,OtherGrain,2005,1.21589450916985,0.822439769616814
+China,OtherGrain,2010,1.32796133857164,0.75303397091033
+China,OtherGrain,2015,1.42527545180419,0.701618763400539
+China,OtherGrain,2019,1.44089038266946,0.69401531999079
+China,OtherGrain,2020,1.45011287711847,0.689601489497221
+China,OtherGrain,2021,1.4632180509929,0.683425139077135
+China,OtherGrain,2025,1.4632180509929,0.683425139077135
+China,OtherGrain,2030,1.4632180509929,0.683425139077135
+China,OtherGrain,2035,1.4632180509929,0.683425139077135
+China,OtherGrain,2040,1.4632180509929,0.683425139077135
+China,OtherGrain,2045,1.4632180509929,0.683425139077135
+China,OtherGrain,2050,1.4632180509929,0.683425139077135
+China,OtherGrain,2055,1.4632180509929,0.683425139077135
+China,OtherGrain,2060,1.4632180509929,0.683425139077135
+China,OtherGrain,2065,1.4632180509929,0.683425139077135
+China,OtherGrain,2070,1.4632180509929,0.683425139077135
+China,OtherGrain,2075,1.4632180509929,0.683425139077135
+China,OtherGrain,2080,1.4632180509929,0.683425139077135
+China,OtherGrain,2085,1.4632180509929,0.683425139077135
+China,OtherGrain,2090,1.4632180509929,0.683425139077135
+China,OtherGrain,2095,1.4632180509929,0.683425139077135
+China,OtherGrain,2100,1.4632180509929,0.683425139077135
+China,Rice,1975,1.63178193592593,0.612826982566496
+China,Rice,1990,1.42049449195232,0.703980202433314
+China,Rice,2005,1.62879260985993,0.613951705052246
+China,Rice,2010,1.83446073963358,0.545119324930193
+China,Rice,2015,1.90445365629483,0.525084974735237
+China,Rice,2019,1.90620470407063,0.524602629436668
+China,Rice,2020,1.91406328542883,0.522448765206819
+China,Rice,2021,1.92771938172883,0.518747702325415
+China,Rice,2025,1.92771938172883,0.518747702325415
+China,Rice,2030,1.92771938172883,0.518747702325415
+China,Rice,2035,1.92771938172883,0.518747702325415
+China,Rice,2040,1.92771938172883,0.518747702325415
+China,Rice,2045,1.92771938172883,0.518747702325415
+China,Rice,2050,1.92771938172883,0.518747702325415
+China,Rice,2055,1.92771938172883,0.518747702325415
+China,Rice,2060,1.92771938172883,0.518747702325415
+China,Rice,2065,1.92771938172883,0.518747702325415
+China,Rice,2070,1.92771938172883,0.518747702325415
+China,Rice,2075,1.92771938172883,0.518747702325415
+China,Rice,2080,1.92771938172883,0.518747702325415
+China,Rice,2085,1.92771938172883,0.518747702325415
+China,Rice,2090,1.92771938172883,0.518747702325415
+China,Rice,2095,1.92771938172883,0.518747702325415
+China,Rice,2100,1.92771938172883,0.518747702325415
+China,Wheat,1975,1.48980323507331,0.671229580160491
+China,Wheat,1990,1.26737342224293,0.789033431228386
+China,Wheat,2005,1.39952427954577,0.714528511305686
+China,Wheat,2010,1.58193986772429,0.632135279224334
+China,Wheat,2015,1.66992626810218,0.598828834003831
+China,Wheat,2019,1.68037356881232,0.595105766098664
+China,Wheat,2020,1.68960424742917,0.591854572762561
+China,Wheat,2021,1.70366010970296,0.586971541039576
+China,Wheat,2025,1.70366010970296,0.586971541039576
+China,Wheat,2030,1.70366010970296,0.586971541039576
+China,Wheat,2035,1.70366010970296,0.586971541039576
+China,Wheat,2040,1.70366010970296,0.586971541039576
+China,Wheat,2045,1.70366010970296,0.586971541039576
+China,Wheat,2050,1.70366010970296,0.586971541039576
+China,Wheat,2055,1.70366010970296,0.586971541039576
+China,Wheat,2060,1.70366010970296,0.586971541039576
+China,Wheat,2065,1.70366010970296,0.586971541039576
+China,Wheat,2070,1.70366010970296,0.586971541039576
+China,Wheat,2075,1.70366010970296,0.586971541039576
+China,Wheat,2080,1.70366010970296,0.586971541039576
+China,Wheat,2085,1.70366010970296,0.586971541039576
+China,Wheat,2090,1.70366010970296,0.586971541039576
+China,Wheat,2095,1.70366010970296,0.586971541039576
+China,Wheat,2100,1.70366010970296,0.586971541039576
+Colombia,Corn,1975,1.04254431934695,0.959191836205484
+Colombia,Corn,1990,1.1790012494451,0.848175521841607
+Colombia,Corn,2005,1.4020277004125,0.71325266947706
+Colombia,Corn,2010,1.53695057233919,0.650639010777056
+Colombia,Corn,2015,1.64503096170432,0.607891294011853
+Colombia,Corn,2019,1.84909601006359,0.540804801133939
+Colombia,Corn,2020,1.92406437650023,0.519733129625812
+Colombia,Corn,2021,1.92414136834034,0.519712333227649
+Colombia,Corn,2025,1.92414136834034,0.519712333227649
+Colombia,Corn,2030,1.92414136834034,0.519712333227649
+Colombia,Corn,2035,1.92414136834034,0.519712333227649
+Colombia,Corn,2040,1.92414136834034,0.519712333227649
+Colombia,Corn,2045,1.92414136834034,0.519712333227649
+Colombia,Corn,2050,1.92414136834034,0.519712333227649
+Colombia,Corn,2055,1.92414136834034,0.519712333227649
+Colombia,Corn,2060,1.92414136834034,0.519712333227649
+Colombia,Corn,2065,1.92414136834034,0.519712333227649
+Colombia,Corn,2070,1.92414136834034,0.519712333227649
+Colombia,Corn,2075,1.92414136834034,0.519712333227649
+Colombia,Corn,2080,1.92414136834034,0.519712333227649
+Colombia,Corn,2085,1.92414136834034,0.519712333227649
+Colombia,Corn,2090,1.92414136834034,0.519712333227649
+Colombia,Corn,2095,1.92414136834034,0.519712333227649
+Colombia,Corn,2100,1.92414136834034,0.519712333227649
+Colombia,OtherGrain,1975,1,1
+Colombia,OtherGrain,1990,1,1
+Colombia,OtherGrain,2005,1.05695469402351,0.946114346863152
+Colombia,OtherGrain,2010,1.20461090755174,0.830143570617678
+Colombia,OtherGrain,2015,1.36007722291582,0.735252368873685
+Colombia,OtherGrain,2019,1.66377609239064,0.601042414645545
+Colombia,OtherGrain,2020,1.76791633583839,0.56563762646934
+Colombia,OtherGrain,2021,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2025,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2030,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2035,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2040,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2045,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2050,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2055,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2060,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2065,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2070,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2075,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2080,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2085,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2090,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2095,1.77646894810634,0.562914426996299
+Colombia,OtherGrain,2100,1.77646894810634,0.562914426996299
+Colombia,Rice,1975,1,1
+Colombia,Rice,1990,1,1
+Colombia,Rice,2005,1.12649938714543,0.887705764788759
+Colombia,Rice,2010,1.28603793939373,0.777582036554397
+Colombia,Rice,2015,1.42250191184314,0.702986752899541
+Colombia,Rice,2019,1.69647990030862,0.589455849030738
+Colombia,Rice,2020,1.80933211402767,0.552690129273142
+Colombia,Rice,2021,1.81871944964927,0.549837414557173
+Colombia,Rice,2025,1.81871944964927,0.549837414557173
+Colombia,Rice,2030,1.81871944964927,0.549837414557173
+Colombia,Rice,2035,1.81871944964927,0.549837414557173
+Colombia,Rice,2040,1.81871944964927,0.549837414557173
+Colombia,Rice,2045,1.81871944964927,0.549837414557173
+Colombia,Rice,2050,1.81871944964927,0.549837414557173
+Colombia,Rice,2055,1.81871944964927,0.549837414557173
+Colombia,Rice,2060,1.81871944964927,0.549837414557173
+Colombia,Rice,2065,1.81871944964927,0.549837414557173
+Colombia,Rice,2070,1.81871944964927,0.549837414557173
+Colombia,Rice,2075,1.81871944964927,0.549837414557173
+Colombia,Rice,2080,1.81871944964927,0.549837414557173
+Colombia,Rice,2085,1.81871944964927,0.549837414557173
+Colombia,Rice,2090,1.81871944964927,0.549837414557173
+Colombia,Rice,2095,1.81871944964927,0.549837414557173
+Colombia,Rice,2100,1.81871944964927,0.549837414557173
+Colombia,Wheat,1975,1,1
+Colombia,Wheat,1990,1,1
+Colombia,Wheat,2005,1.12938954851587,0.88543408367299
+Colombia,Wheat,2010,1.29971136494671,0.76940159713153
+Colombia,Wheat,2015,1.45753437298484,0.686090166060464
+Colombia,Wheat,2019,1.75093333771227,0.571123970548517
+Colombia,Wheat,2020,1.87969012417023,0.53200258230938
+Colombia,Wheat,2021,1.89205279795825,0.528526477209895
+Colombia,Wheat,2025,1.89205279795825,0.528526477209895
+Colombia,Wheat,2030,1.89205279795825,0.528526477209895
+Colombia,Wheat,2035,1.89205279795825,0.528526477209895
+Colombia,Wheat,2040,1.89205279795825,0.528526477209895
+Colombia,Wheat,2045,1.89205279795825,0.528526477209895
+Colombia,Wheat,2050,1.89205279795825,0.528526477209895
+Colombia,Wheat,2055,1.89205279795825,0.528526477209895
+Colombia,Wheat,2060,1.89205279795825,0.528526477209895
+Colombia,Wheat,2065,1.89205279795825,0.528526477209895
+Colombia,Wheat,2070,1.89205279795825,0.528526477209895
+Colombia,Wheat,2075,1.89205279795825,0.528526477209895
+Colombia,Wheat,2080,1.89205279795825,0.528526477209895
+Colombia,Wheat,2085,1.89205279795825,0.528526477209895
+Colombia,Wheat,2090,1.89205279795825,0.528526477209895
+Colombia,Wheat,2095,1.89205279795825,0.528526477209895
+Colombia,Wheat,2100,1.89205279795825,0.528526477209895
+EU-12,Corn,1975,1,1
+EU-12,Corn,1990,1,1
+EU-12,Corn,2005,1,1
+EU-12,Corn,2010,1,1
+EU-12,Corn,2015,1.00182054536538,0.998182762997027
+EU-12,Corn,2019,1.02101810751373,0.979414559488164
+EU-12,Corn,2020,1.02912855423547,0.971695903183726
+EU-12,Corn,2021,1.02704018710059,0.973671734134452
+EU-12,Corn,2025,1.02704018710059,0.973671734134452
+EU-12,Corn,2030,1.02704018710059,0.973671734134452
+EU-12,Corn,2035,1.02704018710059,0.973671734134452
+EU-12,Corn,2040,1.02704018710059,0.973671734134452
+EU-12,Corn,2045,1.02704018710059,0.973671734134452
+EU-12,Corn,2050,1.02704018710059,0.973671734134452
+EU-12,Corn,2055,1.02704018710059,0.973671734134452
+EU-12,Corn,2060,1.02704018710059,0.973671734134452
+EU-12,Corn,2065,1.02704018710059,0.973671734134452
+EU-12,Corn,2070,1.02704018710059,0.973671734134452
+EU-12,Corn,2075,1.02704018710059,0.973671734134452
+EU-12,Corn,2080,1.02704018710059,0.973671734134452
+EU-12,Corn,2085,1.02704018710059,0.973671734134452
+EU-12,Corn,2090,1.02704018710059,0.973671734134452
+EU-12,Corn,2095,1.02704018710059,0.973671734134452
+EU-12,Corn,2100,1.02704018710059,0.973671734134452
+EU-12,OtherGrain,1975,1,1
+EU-12,OtherGrain,1990,1,1
+EU-12,OtherGrain,2005,1,1
+EU-12,OtherGrain,2010,1,1
+EU-12,OtherGrain,2015,1,1
+EU-12,OtherGrain,2019,1.02041098714689,0.979997287951631
+EU-12,OtherGrain,2020,1.01022738418721,0.98987615625225
+EU-12,OtherGrain,2021,1,1
+EU-12,OtherGrain,2025,1,1
+EU-12,OtherGrain,2030,1,1
+EU-12,OtherGrain,2035,1,1
+EU-12,OtherGrain,2040,1,1
+EU-12,OtherGrain,2045,1,1
+EU-12,OtherGrain,2050,1,1
+EU-12,OtherGrain,2055,1,1
+EU-12,OtherGrain,2060,1,1
+EU-12,OtherGrain,2065,1,1
+EU-12,OtherGrain,2070,1,1
+EU-12,OtherGrain,2075,1,1
+EU-12,OtherGrain,2080,1,1
+EU-12,OtherGrain,2085,1,1
+EU-12,OtherGrain,2090,1,1
+EU-12,OtherGrain,2095,1,1
+EU-12,OtherGrain,2100,1,1
+EU-12,Rice,1975,1,1
+EU-12,Rice,1990,1,1
+EU-12,Rice,2005,1,1
+EU-12,Rice,2010,1,1
+EU-12,Rice,2015,1,1
+EU-12,Rice,2019,1,1
+EU-12,Rice,2020,1,1
+EU-12,Rice,2021,1,1
+EU-12,Rice,2025,1,1
+EU-12,Rice,2030,1,1
+EU-12,Rice,2035,1,1
+EU-12,Rice,2040,1,1
+EU-12,Rice,2045,1,1
+EU-12,Rice,2050,1,1
+EU-12,Rice,2055,1,1
+EU-12,Rice,2060,1,1
+EU-12,Rice,2065,1,1
+EU-12,Rice,2070,1,1
+EU-12,Rice,2075,1,1
+EU-12,Rice,2080,1,1
+EU-12,Rice,2085,1,1
+EU-12,Rice,2090,1,1
+EU-12,Rice,2095,1,1
+EU-12,Rice,2100,1,1
+EU-12,Wheat,1975,1,1
+EU-12,Wheat,1990,1,1
+EU-12,Wheat,2005,1,1
+EU-12,Wheat,2010,1,1
+EU-12,Wheat,2015,1,1
+EU-12,Wheat,2019,1.01894264031626,0.981409512599867
+EU-12,Wheat,2020,1.01771643153913,0.982591976517132
+EU-12,Wheat,2021,1.01008601022868,0.990014701593184
+EU-12,Wheat,2025,1.01008601022868,0.990014701593184
+EU-12,Wheat,2030,1.01008601022868,0.990014701593184
+EU-12,Wheat,2035,1.01008601022868,0.990014701593184
+EU-12,Wheat,2040,1.01008601022868,0.990014701593184
+EU-12,Wheat,2045,1.01008601022868,0.990014701593184
+EU-12,Wheat,2050,1.01008601022868,0.990014701593184
+EU-12,Wheat,2055,1.01008601022868,0.990014701593184
+EU-12,Wheat,2060,1.01008601022868,0.990014701593184
+EU-12,Wheat,2065,1.01008601022868,0.990014701593184
+EU-12,Wheat,2070,1.01008601022868,0.990014701593184
+EU-12,Wheat,2075,1.01008601022868,0.990014701593184
+EU-12,Wheat,2080,1.01008601022868,0.990014701593184
+EU-12,Wheat,2085,1.01008601022868,0.990014701593184
+EU-12,Wheat,2090,1.01008601022868,0.990014701593184
+EU-12,Wheat,2095,1.01008601022868,0.990014701593184
+EU-12,Wheat,2100,1.01008601022868,0.990014701593184
+EU-15,Corn,1975,1,1
+EU-15,Corn,1990,1.03216161296166,0.968840525981801
+EU-15,Corn,2005,1.06694937492085,0.937251591786329
+EU-15,Corn,2010,1.07235620624316,0.93252595935762
+EU-15,Corn,2015,1.1012747661052,0.908038602878945
+EU-15,Corn,2019,1.09957980547762,0.909438309996642
+EU-15,Corn,2020,1.09824469657666,0.910543891645548
+EU-15,Corn,2021,1.09858559144903,0.910261346756795
+EU-15,Corn,2025,1.09858559144903,0.910261346756795
+EU-15,Corn,2030,1.09858559144903,0.910261346756795
+EU-15,Corn,2035,1.09858559144903,0.910261346756795
+EU-15,Corn,2040,1.09858559144903,0.910261346756795
+EU-15,Corn,2045,1.09858559144903,0.910261346756795
+EU-15,Corn,2050,1.09858559144903,0.910261346756795
+EU-15,Corn,2055,1.09858559144903,0.910261346756795
+EU-15,Corn,2060,1.09858559144903,0.910261346756795
+EU-15,Corn,2065,1.09858559144903,0.910261346756795
+EU-15,Corn,2070,1.09858559144903,0.910261346756795
+EU-15,Corn,2075,1.09858559144903,0.910261346756795
+EU-15,Corn,2080,1.09858559144903,0.910261346756795
+EU-15,Corn,2085,1.09858559144903,0.910261346756795
+EU-15,Corn,2090,1.09858559144903,0.910261346756795
+EU-15,Corn,2095,1.09858559144903,0.910261346756795
+EU-15,Corn,2100,1.09858559144903,0.910261346756795
+EU-15,OtherGrain,1975,1,1
+EU-15,OtherGrain,1990,1,1
+EU-15,OtherGrain,2005,1,1
+EU-15,OtherGrain,2010,1,1
+EU-15,OtherGrain,2015,1.00661786665388,0.993425641573521
+EU-15,OtherGrain,2019,1.01252962352832,0.987625425234813
+EU-15,OtherGrain,2020,1.01010898562436,0.989992183251283
+EU-15,OtherGrain,2021,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2025,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2030,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2035,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2040,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2045,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2050,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2055,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2060,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2065,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2070,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2075,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2080,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2085,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2090,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2095,1.00990884492026,0.990188376931142
+EU-15,OtherGrain,2100,1.00990884492026,0.990188376931142
+EU-15,Rice,1975,1,1
+EU-15,Rice,1990,1.06878420007649,0.93564257399055
+EU-15,Rice,2005,1.16749260591726,0.856536473919962
+EU-15,Rice,2010,1.17575821173373,0.850515003867532
+EU-15,Rice,2015,1.23917404195933,0.806989144494056
+EU-15,Rice,2019,1.26661852000149,0.78950369366052
+EU-15,Rice,2020,1.26853593919232,0.788310341949556
+EU-15,Rice,2021,1.26933986667615,0.787811071134612
+EU-15,Rice,2025,1.26933986667615,0.787811071134612
+EU-15,Rice,2030,1.26933986667615,0.787811071134612
+EU-15,Rice,2035,1.26933986667615,0.787811071134612
+EU-15,Rice,2040,1.26933986667615,0.787811071134612
+EU-15,Rice,2045,1.26933986667615,0.787811071134612
+EU-15,Rice,2050,1.26933986667615,0.787811071134612
+EU-15,Rice,2055,1.26933986667615,0.787811071134612
+EU-15,Rice,2060,1.26933986667615,0.787811071134612
+EU-15,Rice,2065,1.26933986667615,0.787811071134612
+EU-15,Rice,2070,1.26933986667615,0.787811071134612
+EU-15,Rice,2075,1.26933986667615,0.787811071134612
+EU-15,Rice,2080,1.26933986667615,0.787811071134612
+EU-15,Rice,2085,1.26933986667615,0.787811071134612
+EU-15,Rice,2090,1.26933986667615,0.787811071134612
+EU-15,Rice,2095,1.26933986667615,0.787811071134612
+EU-15,Rice,2100,1.26933986667615,0.787811071134612
+EU-15,Wheat,1975,1,1
+EU-15,Wheat,1990,1.03906667389999,0.962402149081194
+EU-15,Wheat,2005,1.06954541313018,0.934976661788819
+EU-15,Wheat,2010,1.06580416992187,0.938258667230871
+EU-15,Wheat,2015,1.08784068129256,0.919252255589313
+EU-15,Wheat,2019,1.08668961040128,0.920225969245012
+EU-15,Wheat,2020,1.08421667915601,0.922324862940161
+EU-15,Wheat,2021,1.08440221536545,0.92216705741697
+EU-15,Wheat,2025,1.08440221536545,0.92216705741697
+EU-15,Wheat,2030,1.08440221536545,0.92216705741697
+EU-15,Wheat,2035,1.08440221536545,0.92216705741697
+EU-15,Wheat,2040,1.08440221536545,0.92216705741697
+EU-15,Wheat,2045,1.08440221536545,0.92216705741697
+EU-15,Wheat,2050,1.08440221536545,0.92216705741697
+EU-15,Wheat,2055,1.08440221536545,0.92216705741697
+EU-15,Wheat,2060,1.08440221536545,0.92216705741697
+EU-15,Wheat,2065,1.08440221536545,0.92216705741697
+EU-15,Wheat,2070,1.08440221536545,0.92216705741697
+EU-15,Wheat,2075,1.08440221536545,0.92216705741697
+EU-15,Wheat,2080,1.08440221536545,0.92216705741697
+EU-15,Wheat,2085,1.08440221536545,0.92216705741697
+EU-15,Wheat,2090,1.08440221536545,0.92216705741697
+EU-15,Wheat,2095,1.08440221536545,0.92216705741697
+EU-15,Wheat,2100,1.08440221536545,0.92216705741697
+Europe_Eastern,Corn,1975,1,1
+Europe_Eastern,Corn,1990,1,1
+Europe_Eastern,Corn,2005,1,1
+Europe_Eastern,Corn,2010,1,1
+Europe_Eastern,Corn,2015,1,1
+Europe_Eastern,Corn,2019,1,1
+Europe_Eastern,Corn,2020,1,1
+Europe_Eastern,Corn,2021,1,1
+Europe_Eastern,Corn,2025,1,1
+Europe_Eastern,Corn,2030,1,1
+Europe_Eastern,Corn,2035,1,1
+Europe_Eastern,Corn,2040,1,1
+Europe_Eastern,Corn,2045,1,1
+Europe_Eastern,Corn,2050,1,1
+Europe_Eastern,Corn,2055,1,1
+Europe_Eastern,Corn,2060,1,1
+Europe_Eastern,Corn,2065,1,1
+Europe_Eastern,Corn,2070,1,1
+Europe_Eastern,Corn,2075,1,1
+Europe_Eastern,Corn,2080,1,1
+Europe_Eastern,Corn,2085,1,1
+Europe_Eastern,Corn,2090,1,1
+Europe_Eastern,Corn,2095,1,1
+Europe_Eastern,Corn,2100,1,1
+Europe_Eastern,OtherGrain,1975,1,1
+Europe_Eastern,OtherGrain,1990,1,1
+Europe_Eastern,OtherGrain,2005,1,1
+Europe_Eastern,OtherGrain,2010,1,1
+Europe_Eastern,OtherGrain,2015,1,1
+Europe_Eastern,OtherGrain,2019,1,1
+Europe_Eastern,OtherGrain,2020,1,1
+Europe_Eastern,OtherGrain,2021,1,1
+Europe_Eastern,OtherGrain,2025,1,1
+Europe_Eastern,OtherGrain,2030,1,1
+Europe_Eastern,OtherGrain,2035,1,1
+Europe_Eastern,OtherGrain,2040,1,1
+Europe_Eastern,OtherGrain,2045,1,1
+Europe_Eastern,OtherGrain,2050,1,1
+Europe_Eastern,OtherGrain,2055,1,1
+Europe_Eastern,OtherGrain,2060,1,1
+Europe_Eastern,OtherGrain,2065,1,1
+Europe_Eastern,OtherGrain,2070,1,1
+Europe_Eastern,OtherGrain,2075,1,1
+Europe_Eastern,OtherGrain,2080,1,1
+Europe_Eastern,OtherGrain,2085,1,1
+Europe_Eastern,OtherGrain,2090,1,1
+Europe_Eastern,OtherGrain,2095,1,1
+Europe_Eastern,OtherGrain,2100,1,1
+Europe_Eastern,Rice,1975,1,1
+Europe_Eastern,Rice,1990,1,1
+Europe_Eastern,Rice,2005,1,1
+Europe_Eastern,Rice,2010,1,1
+Europe_Eastern,Rice,2015,1,1
+Europe_Eastern,Rice,2019,1,1
+Europe_Eastern,Rice,2020,1,1
+Europe_Eastern,Rice,2021,1,1
+Europe_Eastern,Rice,2025,1,1
+Europe_Eastern,Rice,2030,1,1
+Europe_Eastern,Rice,2035,1,1
+Europe_Eastern,Rice,2040,1,1
+Europe_Eastern,Rice,2045,1,1
+Europe_Eastern,Rice,2050,1,1
+Europe_Eastern,Rice,2055,1,1
+Europe_Eastern,Rice,2060,1,1
+Europe_Eastern,Rice,2065,1,1
+Europe_Eastern,Rice,2070,1,1
+Europe_Eastern,Rice,2075,1,1
+Europe_Eastern,Rice,2080,1,1
+Europe_Eastern,Rice,2085,1,1
+Europe_Eastern,Rice,2090,1,1
+Europe_Eastern,Rice,2095,1,1
+Europe_Eastern,Rice,2100,1,1
+Europe_Eastern,Wheat,1975,1,1
+Europe_Eastern,Wheat,1990,1,1
+Europe_Eastern,Wheat,2005,1,1
+Europe_Eastern,Wheat,2010,1,1
+Europe_Eastern,Wheat,2015,1,1
+Europe_Eastern,Wheat,2019,1,1
+Europe_Eastern,Wheat,2020,1,1
+Europe_Eastern,Wheat,2021,1,1
+Europe_Eastern,Wheat,2025,1,1
+Europe_Eastern,Wheat,2030,1,1
+Europe_Eastern,Wheat,2035,1,1
+Europe_Eastern,Wheat,2040,1,1
+Europe_Eastern,Wheat,2045,1,1
+Europe_Eastern,Wheat,2050,1,1
+Europe_Eastern,Wheat,2055,1,1
+Europe_Eastern,Wheat,2060,1,1
+Europe_Eastern,Wheat,2065,1,1
+Europe_Eastern,Wheat,2070,1,1
+Europe_Eastern,Wheat,2075,1,1
+Europe_Eastern,Wheat,2080,1,1
+Europe_Eastern,Wheat,2085,1,1
+Europe_Eastern,Wheat,2090,1,1
+Europe_Eastern,Wheat,2095,1,1
+Europe_Eastern,Wheat,2100,1,1
+Europe_Non_EU,Corn,1975,1,1
+Europe_Non_EU,Corn,1990,1,1
+Europe_Non_EU,Corn,2005,1,1
+Europe_Non_EU,Corn,2010,1,1
+Europe_Non_EU,Corn,2015,1,1
+Europe_Non_EU,Corn,2019,1,1
+Europe_Non_EU,Corn,2020,1,1
+Europe_Non_EU,Corn,2021,1,1
+Europe_Non_EU,Corn,2025,1,1
+Europe_Non_EU,Corn,2030,1,1
+Europe_Non_EU,Corn,2035,1,1
+Europe_Non_EU,Corn,2040,1,1
+Europe_Non_EU,Corn,2045,1,1
+Europe_Non_EU,Corn,2050,1,1
+Europe_Non_EU,Corn,2055,1,1
+Europe_Non_EU,Corn,2060,1,1
+Europe_Non_EU,Corn,2065,1,1
+Europe_Non_EU,Corn,2070,1,1
+Europe_Non_EU,Corn,2075,1,1
+Europe_Non_EU,Corn,2080,1,1
+Europe_Non_EU,Corn,2085,1,1
+Europe_Non_EU,Corn,2090,1,1
+Europe_Non_EU,Corn,2095,1,1
+Europe_Non_EU,Corn,2100,1,1
+Europe_Non_EU,OtherGrain,1975,1,1
+Europe_Non_EU,OtherGrain,1990,1,1
+Europe_Non_EU,OtherGrain,2005,1,1
+Europe_Non_EU,OtherGrain,2010,1,1
+Europe_Non_EU,OtherGrain,2015,1,1
+Europe_Non_EU,OtherGrain,2019,1,1
+Europe_Non_EU,OtherGrain,2020,1,1
+Europe_Non_EU,OtherGrain,2021,1,1
+Europe_Non_EU,OtherGrain,2025,1,1
+Europe_Non_EU,OtherGrain,2030,1,1
+Europe_Non_EU,OtherGrain,2035,1,1
+Europe_Non_EU,OtherGrain,2040,1,1
+Europe_Non_EU,OtherGrain,2045,1,1
+Europe_Non_EU,OtherGrain,2050,1,1
+Europe_Non_EU,OtherGrain,2055,1,1
+Europe_Non_EU,OtherGrain,2060,1,1
+Europe_Non_EU,OtherGrain,2065,1,1
+Europe_Non_EU,OtherGrain,2070,1,1
+Europe_Non_EU,OtherGrain,2075,1,1
+Europe_Non_EU,OtherGrain,2080,1,1
+Europe_Non_EU,OtherGrain,2085,1,1
+Europe_Non_EU,OtherGrain,2090,1,1
+Europe_Non_EU,OtherGrain,2095,1,1
+Europe_Non_EU,OtherGrain,2100,1,1
+Europe_Non_EU,Rice,1975,1,1
+Europe_Non_EU,Rice,1990,1,1
+Europe_Non_EU,Rice,2005,1,1
+Europe_Non_EU,Rice,2010,1,1
+Europe_Non_EU,Rice,2015,1,1
+Europe_Non_EU,Rice,2019,1,1
+Europe_Non_EU,Rice,2020,1,1
+Europe_Non_EU,Rice,2021,1,1
+Europe_Non_EU,Rice,2025,1,1
+Europe_Non_EU,Rice,2030,1,1
+Europe_Non_EU,Rice,2035,1,1
+Europe_Non_EU,Rice,2040,1,1
+Europe_Non_EU,Rice,2045,1,1
+Europe_Non_EU,Rice,2050,1,1
+Europe_Non_EU,Rice,2055,1,1
+Europe_Non_EU,Rice,2060,1,1
+Europe_Non_EU,Rice,2065,1,1
+Europe_Non_EU,Rice,2070,1,1
+Europe_Non_EU,Rice,2075,1,1
+Europe_Non_EU,Rice,2080,1,1
+Europe_Non_EU,Rice,2085,1,1
+Europe_Non_EU,Rice,2090,1,1
+Europe_Non_EU,Rice,2095,1,1
+Europe_Non_EU,Rice,2100,1,1
+Europe_Non_EU,Wheat,1975,1,1
+Europe_Non_EU,Wheat,1990,1,1
+Europe_Non_EU,Wheat,2005,1,1
+Europe_Non_EU,Wheat,2010,1,1
+Europe_Non_EU,Wheat,2015,1,1
+Europe_Non_EU,Wheat,2019,1,1
+Europe_Non_EU,Wheat,2020,1,1
+Europe_Non_EU,Wheat,2021,1,1
+Europe_Non_EU,Wheat,2025,1,1
+Europe_Non_EU,Wheat,2030,1,1
+Europe_Non_EU,Wheat,2035,1,1
+Europe_Non_EU,Wheat,2040,1,1
+Europe_Non_EU,Wheat,2045,1,1
+Europe_Non_EU,Wheat,2050,1,1
+Europe_Non_EU,Wheat,2055,1,1
+Europe_Non_EU,Wheat,2060,1,1
+Europe_Non_EU,Wheat,2065,1,1
+Europe_Non_EU,Wheat,2070,1,1
+Europe_Non_EU,Wheat,2075,1,1
+Europe_Non_EU,Wheat,2080,1,1
+Europe_Non_EU,Wheat,2085,1,1
+Europe_Non_EU,Wheat,2090,1,1
+Europe_Non_EU,Wheat,2095,1,1
+Europe_Non_EU,Wheat,2100,1,1
+European Free Trade Association,Corn,1975,1.07042225618341,0.934210769837219
+European Free Trade Association,Corn,1990,1.18842928246271,0.841446785901946
+European Free Trade Association,Corn,2005,1.07606304759298,0.929313577152263
+European Free Trade Association,Corn,2010,1.0492399950218,0.953070798620503
+European Free Trade Association,Corn,2015,1.05079855550318,0.95165718944212
+European Free Trade Association,Corn,2019,1.04688529603478,0.955214486045068
+European Free Trade Association,Corn,2020,1.0473820985102,0.954761401233042
+European Free Trade Association,Corn,2021,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2025,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2030,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2035,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2040,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2045,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2050,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2055,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2060,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2065,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2070,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2075,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2080,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2085,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2090,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2095,1.04820605009386,0.954010902637372
+European Free Trade Association,Corn,2100,1.04820605009386,0.954010902637372
+European Free Trade Association,OtherGrain,1975,1,1
+European Free Trade Association,OtherGrain,1990,1.00107419418223,0.998926958472733
+European Free Trade Association,OtherGrain,2005,1,1
+European Free Trade Association,OtherGrain,2010,1,1
+European Free Trade Association,OtherGrain,2015,1,1
+European Free Trade Association,OtherGrain,2019,1,1
+European Free Trade Association,OtherGrain,2020,1,1
+European Free Trade Association,OtherGrain,2021,1,1
+European Free Trade Association,OtherGrain,2025,1,1
+European Free Trade Association,OtherGrain,2030,1,1
+European Free Trade Association,OtherGrain,2035,1,1
+European Free Trade Association,OtherGrain,2040,1,1
+European Free Trade Association,OtherGrain,2045,1,1
+European Free Trade Association,OtherGrain,2050,1,1
+European Free Trade Association,OtherGrain,2055,1,1
+European Free Trade Association,OtherGrain,2060,1,1
+European Free Trade Association,OtherGrain,2065,1,1
+European Free Trade Association,OtherGrain,2070,1,1
+European Free Trade Association,OtherGrain,2075,1,1
+European Free Trade Association,OtherGrain,2080,1,1
+European Free Trade Association,OtherGrain,2085,1,1
+European Free Trade Association,OtherGrain,2090,1,1
+European Free Trade Association,OtherGrain,2095,1,1
+European Free Trade Association,OtherGrain,2100,1,1
+European Free Trade Association,Rice,1975,1,1
+European Free Trade Association,Rice,1990,1,1
+European Free Trade Association,Rice,2005,1,1
+European Free Trade Association,Rice,2010,1,1
+European Free Trade Association,Rice,2015,1,1
+European Free Trade Association,Rice,2019,1,1
+European Free Trade Association,Rice,2020,1,1
+European Free Trade Association,Rice,2021,1,1
+European Free Trade Association,Rice,2025,1,1
+European Free Trade Association,Rice,2030,1,1
+European Free Trade Association,Rice,2035,1,1
+European Free Trade Association,Rice,2040,1,1
+European Free Trade Association,Rice,2045,1,1
+European Free Trade Association,Rice,2050,1,1
+European Free Trade Association,Rice,2055,1,1
+European Free Trade Association,Rice,2060,1,1
+European Free Trade Association,Rice,2065,1,1
+European Free Trade Association,Rice,2070,1,1
+European Free Trade Association,Rice,2075,1,1
+European Free Trade Association,Rice,2080,1,1
+European Free Trade Association,Rice,2085,1,1
+European Free Trade Association,Rice,2090,1,1
+European Free Trade Association,Rice,2095,1,1
+European Free Trade Association,Rice,2100,1,1
+European Free Trade Association,Wheat,1975,1.03384304576906,0.967264812673874
+European Free Trade Association,Wheat,1990,1.11969055031172,0.893103902432329
+European Free Trade Association,Wheat,2005,1.03785555164364,0.963525221227858
+European Free Trade Association,Wheat,2010,1.01771755065507,0.982590896026443
+European Free Trade Association,Wheat,2015,1.01886184901147,0.981487334097581
+European Free Trade Association,Wheat,2019,1.01589925568683,0.984349574430901
+European Free Trade Association,Wheat,2020,1.01627480451741,0.983985823081447
+European Free Trade Association,Wheat,2021,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2025,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2030,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2035,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2040,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2045,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2050,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2055,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2060,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2065,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2070,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2075,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2080,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2085,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2090,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2095,1.01689786832077,0.983382924827375
+European Free Trade Association,Wheat,2100,1.01689786832077,0.983382924827375
+India,Corn,1975,1.15159149103622,0.868363484607014
+India,Corn,1990,1.2377714139432,0.807903615106343
+India,Corn,2005,1.29784461632313,0.770508262254891
+India,Corn,2010,1.39446526346879,0.717120767506578
+India,Corn,2015,1.46037998343157,0.684753291160714
+India,Corn,2019,1.49162503401637,0.670409772694271
+India,Corn,2020,1.51615746165519,0.659562100435334
+India,Corn,2021,1.55274738285569,0.644019762030371
+India,Corn,2025,1.55274738285569,0.644019762030371
+India,Corn,2030,1.55274738285569,0.644019762030371
+India,Corn,2035,1.55274738285569,0.644019762030371
+India,Corn,2040,1.55274738285569,0.644019762030371
+India,Corn,2045,1.55274738285569,0.644019762030371
+India,Corn,2050,1.55274738285569,0.644019762030371
+India,Corn,2055,1.55274738285569,0.644019762030371
+India,Corn,2060,1.55274738285569,0.644019762030371
+India,Corn,2065,1.55274738285569,0.644019762030371
+India,Corn,2070,1.55274738285569,0.644019762030371
+India,Corn,2075,1.55274738285569,0.644019762030371
+India,Corn,2080,1.55274738285569,0.644019762030371
+India,Corn,2085,1.55274738285569,0.644019762030371
+India,Corn,2090,1.55274738285569,0.644019762030371
+India,Corn,2095,1.55274738285569,0.644019762030371
+India,Corn,2100,1.55274738285569,0.644019762030371
+India,OtherGrain,1975,1.13570935904097,0.88050696425046
+India,OtherGrain,1990,1.18500882057413,0.843875575133279
+India,OtherGrain,2005,1.17065521028932,0.85422248259832
+India,OtherGrain,2010,1.23529628223739,0.809522391007915
+India,OtherGrain,2015,1.26876390445841,0.788168702219554
+India,OtherGrain,2019,1.29430390808325,0.772616070889343
+India,OtherGrain,2020,1.31357710995905,0.761280013497779
+India,OtherGrain,2021,1.34733627572788,0.742205207426603
+India,OtherGrain,2025,1.34733627572788,0.742205207426603
+India,OtherGrain,2030,1.34733627572788,0.742205207426603
+India,OtherGrain,2035,1.34733627572788,0.742205207426603
+India,OtherGrain,2040,1.34733627572788,0.742205207426603
+India,OtherGrain,2045,1.34733627572788,0.742205207426603
+India,OtherGrain,2050,1.34733627572788,0.742205207426603
+India,OtherGrain,2055,1.34733627572788,0.742205207426603
+India,OtherGrain,2060,1.34733627572788,0.742205207426603
+India,OtherGrain,2065,1.34733627572788,0.742205207426603
+India,OtherGrain,2070,1.34733627572788,0.742205207426603
+India,OtherGrain,2075,1.34733627572788,0.742205207426603
+India,OtherGrain,2080,1.34733627572788,0.742205207426603
+India,OtherGrain,2085,1.34733627572788,0.742205207426603
+India,OtherGrain,2090,1.34733627572788,0.742205207426603
+India,OtherGrain,2095,1.34733627572788,0.742205207426603
+India,OtherGrain,2100,1.34733627572788,0.742205207426603
+India,Rice,1975,1.14990138482759,0.869639791024286
+India,Rice,1990,1.23482518415284,0.809831231848463
+India,Rice,2005,1.26453656886829,0.79080354385873
+India,Rice,2010,1.33702375151712,0.747929869507033
+India,Rice,2015,1.39476494595362,0.716966685247659
+India,Rice,2019,1.42602438239321,0.701250281795156
+India,Rice,2020,1.44816669980927,0.690528238311035
+India,Rice,2021,1.4855351091714,0.673158105672627
+India,Rice,2025,1.4855351091714,0.673158105672627
+India,Rice,2030,1.4855351091714,0.673158105672627
+India,Rice,2035,1.4855351091714,0.673158105672627
+India,Rice,2040,1.4855351091714,0.673158105672627
+India,Rice,2045,1.4855351091714,0.673158105672627
+India,Rice,2050,1.4855351091714,0.673158105672627
+India,Rice,2055,1.4855351091714,0.673158105672627
+India,Rice,2060,1.4855351091714,0.673158105672627
+India,Rice,2065,1.4855351091714,0.673158105672627
+India,Rice,2070,1.4855351091714,0.673158105672627
+India,Rice,2075,1.4855351091714,0.673158105672627
+India,Rice,2080,1.4855351091714,0.673158105672627
+India,Rice,2085,1.4855351091714,0.673158105672627
+India,Rice,2090,1.4855351091714,0.673158105672627
+India,Rice,2095,1.4855351091714,0.673158105672627
+India,Rice,2100,1.4855351091714,0.673158105672627
+India,Wheat,1975,1.20638743623316,0.82892109944581
+India,Wheat,1990,1.30904820352135,0.763913809522057
+India,Wheat,2005,1.36724409617515,0.731398294421231
+India,Wheat,2010,1.46648228311672,0.681903908088609
+India,Wheat,2015,1.5408315775636,0.649000198698695
+India,Wheat,2019,1.5678761100802,0.637805495964123
+India,Wheat,2020,1.59322167088939,0.62765904975531
+India,Wheat,2021,1.62947124532141,0.613696008979128
+India,Wheat,2025,1.62947124532141,0.613696008979128
+India,Wheat,2030,1.62947124532141,0.613696008979128
+India,Wheat,2035,1.62947124532141,0.613696008979128
+India,Wheat,2040,1.62947124532141,0.613696008979128
+India,Wheat,2045,1.62947124532141,0.613696008979128
+India,Wheat,2050,1.62947124532141,0.613696008979128
+India,Wheat,2055,1.62947124532141,0.613696008979128
+India,Wheat,2060,1.62947124532141,0.613696008979128
+India,Wheat,2065,1.62947124532141,0.613696008979128
+India,Wheat,2070,1.62947124532141,0.613696008979128
+India,Wheat,2075,1.62947124532141,0.613696008979128
+India,Wheat,2080,1.62947124532141,0.613696008979128
+India,Wheat,2085,1.62947124532141,0.613696008979128
+India,Wheat,2090,1.62947124532141,0.613696008979128
+India,Wheat,2095,1.62947124532141,0.613696008979128
+India,Wheat,2100,1.62947124532141,0.613696008979128
+Indonesia,Corn,1975,2.04178810175718,0.489766787816715
+Indonesia,Corn,1990,2.23583439936092,0.447260316008124
+Indonesia,Corn,2005,2.26227012268375,0.442033862346063
+Indonesia,Corn,2010,2.26227010379149,0.442033866037495
+Indonesia,Corn,2015,2.23145613158462,0.448137870982868
+Indonesia,Corn,2019,2.21362634613624,0.451747424196248
+Indonesia,Corn,2020,2.18613004789029,0.45742932858228
+Indonesia,Corn,2021,2.18900169664611,0.456829248479869
+Indonesia,Corn,2025,2.18900169664611,0.456829248479869
+Indonesia,Corn,2030,2.18900169664611,0.456829248479869
+Indonesia,Corn,2035,2.18900169664611,0.456829248479869
+Indonesia,Corn,2040,2.18900169664611,0.456829248479869
+Indonesia,Corn,2045,2.18900169664611,0.456829248479869
+Indonesia,Corn,2050,2.18900169664611,0.456829248479869
+Indonesia,Corn,2055,2.18900169664611,0.456829248479869
+Indonesia,Corn,2060,2.18900169664611,0.456829248479869
+Indonesia,Corn,2065,2.18900169664611,0.456829248479869
+Indonesia,Corn,2070,2.18900169664611,0.456829248479869
+Indonesia,Corn,2075,2.18900169664611,0.456829248479869
+Indonesia,Corn,2080,2.18900169664611,0.456829248479869
+Indonesia,Corn,2085,2.18900169664611,0.456829248479869
+Indonesia,Corn,2090,2.18900169664611,0.456829248479869
+Indonesia,Corn,2095,2.18900169664611,0.456829248479869
+Indonesia,Corn,2100,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,1975,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,1990,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2005,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2010,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2015,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2019,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2020,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2021,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2025,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2030,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2035,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2040,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2045,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2050,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2055,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2060,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2065,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2070,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2075,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2080,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2085,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2090,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2095,2.18900169664611,0.456829248479869
+Indonesia,OtherGrain,2100,2.18900169664611,0.456829248479869
+Indonesia,Rice,1975,1.76996639564877,0.564982477892444
+Indonesia,Rice,1990,2.03910954697244,0.49041014078167
+Indonesia,Rice,2005,2.2704595202463,0.440439475393738
+Indonesia,Rice,2010,2.27045952912227,0.440439473671916
+Indonesia,Rice,2015,2.24914256586494,0.44461387871846
+Indonesia,Rice,2019,2.23672424555157,0.447082380400184
+Indonesia,Rice,2020,2.21745165998292,0.450968117161889
+Indonesia,Rice,2021,2.21947138964159,0.450557734002367
+Indonesia,Rice,2025,2.21947138964159,0.450557734002367
+Indonesia,Rice,2030,2.21947138964159,0.450557734002367
+Indonesia,Rice,2035,2.21947138964159,0.450557734002367
+Indonesia,Rice,2040,2.21947138964159,0.450557734002367
+Indonesia,Rice,2045,2.21947138964159,0.450557734002367
+Indonesia,Rice,2050,2.21947138964159,0.450557734002367
+Indonesia,Rice,2055,2.21947138964159,0.450557734002367
+Indonesia,Rice,2060,2.21947138964159,0.450557734002367
+Indonesia,Rice,2065,2.21947138964159,0.450557734002367
+Indonesia,Rice,2070,2.21947138964159,0.450557734002367
+Indonesia,Rice,2075,2.21947138964159,0.450557734002367
+Indonesia,Rice,2080,2.21947138964159,0.450557734002367
+Indonesia,Rice,2085,2.21947138964159,0.450557734002367
+Indonesia,Rice,2090,2.21947138964159,0.450557734002367
+Indonesia,Rice,2095,2.21947138964159,0.450557734002367
+Indonesia,Rice,2100,2.21947138964159,0.450557734002367
+Indonesia,Wheat,1975,2.21947138964159,0.450557734002367
+Indonesia,Wheat,1990,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2005,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2010,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2015,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2019,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2020,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2021,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2025,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2030,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2035,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2040,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2045,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2050,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2055,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2060,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2065,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2070,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2075,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2080,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2085,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2090,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2095,2.21947138964159,0.450557734002367
+Indonesia,Wheat,2100,2.21947138964159,0.450557734002367
+Japan,Corn,1975,1,1
+Japan,Corn,1990,1,1
+Japan,Corn,2005,1,1
+Japan,Corn,2010,1,1
+Japan,Corn,2015,1,1
+Japan,Corn,2019,1,1
+Japan,Corn,2020,1,1
+Japan,Corn,2021,1,1
+Japan,Corn,2025,1,1
+Japan,Corn,2030,1,1
+Japan,Corn,2035,1,1
+Japan,Corn,2040,1,1
+Japan,Corn,2045,1,1
+Japan,Corn,2050,1,1
+Japan,Corn,2055,1,1
+Japan,Corn,2060,1,1
+Japan,Corn,2065,1,1
+Japan,Corn,2070,1,1
+Japan,Corn,2075,1,1
+Japan,Corn,2080,1,1
+Japan,Corn,2085,1,1
+Japan,Corn,2090,1,1
+Japan,Corn,2095,1,1
+Japan,Corn,2100,1,1
+Japan,OtherGrain,1975,1,1
+Japan,OtherGrain,1990,1,1
+Japan,OtherGrain,2005,1,1
+Japan,OtherGrain,2010,1,1
+Japan,OtherGrain,2015,1,1
+Japan,OtherGrain,2019,1,1
+Japan,OtherGrain,2020,1,1
+Japan,OtherGrain,2021,1,1
+Japan,OtherGrain,2025,1,1
+Japan,OtherGrain,2030,1,1
+Japan,OtherGrain,2035,1,1
+Japan,OtherGrain,2040,1,1
+Japan,OtherGrain,2045,1,1
+Japan,OtherGrain,2050,1,1
+Japan,OtherGrain,2055,1,1
+Japan,OtherGrain,2060,1,1
+Japan,OtherGrain,2065,1,1
+Japan,OtherGrain,2070,1,1
+Japan,OtherGrain,2075,1,1
+Japan,OtherGrain,2080,1,1
+Japan,OtherGrain,2085,1,1
+Japan,OtherGrain,2090,1,1
+Japan,OtherGrain,2095,1,1
+Japan,OtherGrain,2100,1,1
+Japan,Rice,1975,1,1
+Japan,Rice,1990,1,1
+Japan,Rice,2005,1,1
+Japan,Rice,2010,1,1
+Japan,Rice,2015,1,1
+Japan,Rice,2019,1,1
+Japan,Rice,2020,1,1
+Japan,Rice,2021,1,1
+Japan,Rice,2025,1,1
+Japan,Rice,2030,1,1
+Japan,Rice,2035,1,1
+Japan,Rice,2040,1,1
+Japan,Rice,2045,1,1
+Japan,Rice,2050,1,1
+Japan,Rice,2055,1,1
+Japan,Rice,2060,1,1
+Japan,Rice,2065,1,1
+Japan,Rice,2070,1,1
+Japan,Rice,2075,1,1
+Japan,Rice,2080,1,1
+Japan,Rice,2085,1,1
+Japan,Rice,2090,1,1
+Japan,Rice,2095,1,1
+Japan,Rice,2100,1,1
+Japan,Wheat,1975,1,1
+Japan,Wheat,1990,1,1
+Japan,Wheat,2005,1,1
+Japan,Wheat,2010,1,1
+Japan,Wheat,2015,1,1
+Japan,Wheat,2019,1,1
+Japan,Wheat,2020,1,1
+Japan,Wheat,2021,1,1
+Japan,Wheat,2025,1,1
+Japan,Wheat,2030,1,1
+Japan,Wheat,2035,1,1
+Japan,Wheat,2040,1,1
+Japan,Wheat,2045,1,1
+Japan,Wheat,2050,1,1
+Japan,Wheat,2055,1,1
+Japan,Wheat,2060,1,1
+Japan,Wheat,2065,1,1
+Japan,Wheat,2070,1,1
+Japan,Wheat,2075,1,1
+Japan,Wheat,2080,1,1
+Japan,Wheat,2085,1,1
+Japan,Wheat,2090,1,1
+Japan,Wheat,2095,1,1
+Japan,Wheat,2100,1,1
+Mexico,Corn,1975,1,1
+Mexico,Corn,1990,1,1
+Mexico,Corn,2005,1,1
+Mexico,Corn,2010,1,1
+Mexico,Corn,2015,1.07820714141299,0.92746556908304
+Mexico,Corn,2019,1.06715582670035,0.937070271257386
+Mexico,Corn,2020,1.06865682984828,0.935754090620437
+Mexico,Corn,2021,1.0744536521998,0.930705571108289
+Mexico,Corn,2025,1.0744536521998,0.930705571108289
+Mexico,Corn,2030,1.0744536521998,0.930705571108289
+Mexico,Corn,2035,1.0744536521998,0.930705571108289
+Mexico,Corn,2040,1.0744536521998,0.930705571108289
+Mexico,Corn,2045,1.0744536521998,0.930705571108289
+Mexico,Corn,2050,1.0744536521998,0.930705571108289
+Mexico,Corn,2055,1.0744536521998,0.930705571108289
+Mexico,Corn,2060,1.0744536521998,0.930705571108289
+Mexico,Corn,2065,1.0744536521998,0.930705571108289
+Mexico,Corn,2070,1.0744536521998,0.930705571108289
+Mexico,Corn,2075,1.0744536521998,0.930705571108289
+Mexico,Corn,2080,1.0744536521998,0.930705571108289
+Mexico,Corn,2085,1.0744536521998,0.930705571108289
+Mexico,Corn,2090,1.0744536521998,0.930705571108289
+Mexico,Corn,2095,1.0744536521998,0.930705571108289
+Mexico,Corn,2100,1.0744536521998,0.930705571108289
+Mexico,OtherGrain,1975,1,1
+Mexico,OtherGrain,1990,1,1
+Mexico,OtherGrain,2005,1,1
+Mexico,OtherGrain,2010,1,1
+Mexico,OtherGrain,2015,1.04265905015566,0.959086289857364
+Mexico,OtherGrain,2019,1.02310570880746,0.977416108024275
+Mexico,OtherGrain,2020,1.02370102137287,0.97684771151143
+Mexico,OtherGrain,2021,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2025,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2030,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2035,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2040,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2045,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2050,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2055,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2060,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2065,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2070,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2075,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2080,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2085,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2090,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2095,1.02619695375594,0.974471807132092
+Mexico,OtherGrain,2100,1.02619695375594,0.974471807132092
+Mexico,Rice,1975,1,1
+Mexico,Rice,1990,1,1
+Mexico,Rice,2005,1,1
+Mexico,Rice,2010,1,1
+Mexico,Rice,2015,1,1
+Mexico,Rice,2019,1,1
+Mexico,Rice,2020,1,1
+Mexico,Rice,2021,1,1
+Mexico,Rice,2025,1,1
+Mexico,Rice,2030,1,1
+Mexico,Rice,2035,1,1
+Mexico,Rice,2040,1,1
+Mexico,Rice,2045,1,1
+Mexico,Rice,2050,1,1
+Mexico,Rice,2055,1,1
+Mexico,Rice,2060,1,1
+Mexico,Rice,2065,1,1
+Mexico,Rice,2070,1,1
+Mexico,Rice,2075,1,1
+Mexico,Rice,2080,1,1
+Mexico,Rice,2085,1,1
+Mexico,Rice,2090,1,1
+Mexico,Rice,2095,1,1
+Mexico,Rice,2100,1,1
+Mexico,Wheat,1975,1,1
+Mexico,Wheat,1990,1,1
+Mexico,Wheat,2005,1,1
+Mexico,Wheat,2010,1,1
+Mexico,Wheat,2015,1,1
+Mexico,Wheat,2019,1,1
+Mexico,Wheat,2020,1,1
+Mexico,Wheat,2021,1,1
+Mexico,Wheat,2025,1,1
+Mexico,Wheat,2030,1,1
+Mexico,Wheat,2035,1,1
+Mexico,Wheat,2040,1,1
+Mexico,Wheat,2045,1,1
+Mexico,Wheat,2050,1,1
+Mexico,Wheat,2055,1,1
+Mexico,Wheat,2060,1,1
+Mexico,Wheat,2065,1,1
+Mexico,Wheat,2070,1,1
+Mexico,Wheat,2075,1,1
+Mexico,Wheat,2080,1,1
+Mexico,Wheat,2085,1,1
+Mexico,Wheat,2090,1,1
+Mexico,Wheat,2095,1,1
+Mexico,Wheat,2100,1,1
+Middle East,Corn,1975,1.0107158812613,0.989397731390225
+Middle East,Corn,1990,1.08185666304505,0.924336868421502
+Middle East,Corn,2005,1.09579071458922,0.912583020357924
+Middle East,Corn,2010,1.03282474379208,0.968218476571772
+Middle East,Corn,2015,1,1
+Middle East,Corn,2019,1.0279327388326,0.972826297113248
+Middle East,Corn,2020,1.06097484936895,0.94252941113051
+Middle East,Corn,2021,1,1
+Middle East,Corn,2025,1,1
+Middle East,Corn,2030,1,1
+Middle East,Corn,2035,1,1
+Middle East,Corn,2040,1,1
+Middle East,Corn,2045,1,1
+Middle East,Corn,2050,1,1
+Middle East,Corn,2055,1,1
+Middle East,Corn,2060,1,1
+Middle East,Corn,2065,1,1
+Middle East,Corn,2070,1,1
+Middle East,Corn,2075,1,1
+Middle East,Corn,2080,1,1
+Middle East,Corn,2085,1,1
+Middle East,Corn,2090,1,1
+Middle East,Corn,2095,1,1
+Middle East,Corn,2100,1,1
+Middle East,OtherGrain,1975,1.07177859201938,0.933028526083786
+Middle East,OtherGrain,1990,1.12858932621253,0.886061897604448
+Middle East,OtherGrain,2005,1.12936928178497,0.885449972943743
+Middle East,OtherGrain,2010,1.07373085346679,0.931332090133453
+Middle East,OtherGrain,2015,1.00910904982346,0.990973175966405
+Middle East,OtherGrain,2019,1.07206198715877,0.932781883863126
+Middle East,OtherGrain,2020,1.10582883045009,0.904299085413591
+Middle East,OtherGrain,2021,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2025,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2030,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2035,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2040,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2045,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2050,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2055,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2060,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2065,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2070,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2075,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2080,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2085,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2090,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2095,1.02223384722653,0.978249744628535
+Middle East,OtherGrain,2100,1.02223384722653,0.978249744628535
+Middle East,Rice,1975,1.07328923303397,0.931715300239436
+Middle East,Rice,1990,1.22566813054093,0.815881538470504
+Middle East,Rice,2005,1.23118732439791,0.812224086606018
+Middle East,Rice,2010,1.06403378802321,0.939819779461915
+Middle East,Rice,2015,1,1
+Middle East,Rice,2019,1,1
+Middle East,Rice,2020,1.03292981111837,0.968119991538716
+Middle East,Rice,2021,1,1
+Middle East,Rice,2025,1,1
+Middle East,Rice,2030,1,1
+Middle East,Rice,2035,1,1
+Middle East,Rice,2040,1,1
+Middle East,Rice,2045,1,1
+Middle East,Rice,2050,1,1
+Middle East,Rice,2055,1,1
+Middle East,Rice,2060,1,1
+Middle East,Rice,2065,1,1
+Middle East,Rice,2070,1,1
+Middle East,Rice,2075,1,1
+Middle East,Rice,2080,1,1
+Middle East,Rice,2085,1,1
+Middle East,Rice,2090,1,1
+Middle East,Rice,2095,1,1
+Middle East,Rice,2100,1,1
+Middle East,Wheat,1975,1.02171700356452,0.978744600032343
+Middle East,Wheat,1990,1.13822807348923,0.87855854489207
+Middle East,Wheat,2005,1.15554821376077,0.865390113620155
+Middle East,Wheat,2010,1.06409801718101,0.939763051762073
+Middle East,Wheat,2015,1,1
+Middle East,Wheat,2019,1.0378710290117,0.963510852549993
+Middle East,Wheat,2020,1.07321006833501,0.931784027661434
+Middle East,Wheat,2021,1,1
+Middle East,Wheat,2025,1,1
+Middle East,Wheat,2030,1,1
+Middle East,Wheat,2035,1,1
+Middle East,Wheat,2040,1,1
+Middle East,Wheat,2045,1,1
+Middle East,Wheat,2050,1,1
+Middle East,Wheat,2055,1,1
+Middle East,Wheat,2060,1,1
+Middle East,Wheat,2065,1,1
+Middle East,Wheat,2070,1,1
+Middle East,Wheat,2075,1,1
+Middle East,Wheat,2080,1,1
+Middle East,Wheat,2085,1,1
+Middle East,Wheat,2090,1,1
+Middle East,Wheat,2095,1,1
+Middle East,Wheat,2100,1,1
+Pakistan,Corn,1975,1.41897439758352,0.704734350177828
+Pakistan,Corn,1990,1.69081976625491,0.591429092537138
+Pakistan,Corn,2005,1.81634677490635,0.550555661405328
+Pakistan,Corn,2010,2.00410506084656,0.498975836914252
+Pakistan,Corn,2015,1.88053813575896,0.53176268057782
+Pakistan,Corn,2019,1.81252620930656,0.551716159945948
+Pakistan,Corn,2020,1.82898392681264,0.546751661039852
+Pakistan,Corn,2021,1.82693460268389,0.547364967815999
+Pakistan,Corn,2025,1.82693460268389,0.547364967815999
+Pakistan,Corn,2030,1.82693460268389,0.547364967815999
+Pakistan,Corn,2035,1.82693460268389,0.547364967815999
+Pakistan,Corn,2040,1.82693460268389,0.547364967815999
+Pakistan,Corn,2045,1.82693460268389,0.547364967815999
+Pakistan,Corn,2050,1.82693460268389,0.547364967815999
+Pakistan,Corn,2055,1.82693460268389,0.547364967815999
+Pakistan,Corn,2060,1.82693460268389,0.547364967815999
+Pakistan,Corn,2065,1.82693460268389,0.547364967815999
+Pakistan,Corn,2070,1.82693460268389,0.547364967815999
+Pakistan,Corn,2075,1.82693460268389,0.547364967815999
+Pakistan,Corn,2080,1.82693460268389,0.547364967815999
+Pakistan,Corn,2085,1.82693460268389,0.547364967815999
+Pakistan,Corn,2090,1.82693460268389,0.547364967815999
+Pakistan,Corn,2095,1.82693460268389,0.547364967815999
+Pakistan,Corn,2100,1.82693460268389,0.547364967815999
+Pakistan,OtherGrain,1975,1.39163134787224,0.718581110959429
+Pakistan,OtherGrain,1990,1.64414101336677,0.608220336254653
+Pakistan,OtherGrain,2005,1.76396980240234,0.566903128748636
+Pakistan,OtherGrain,2010,1.94105432140468,0.515183933274124
+Pakistan,OtherGrain,2015,1.8216346666266,0.548957493135467
+Pakistan,OtherGrain,2019,1.75675494568692,0.569231356060868
+Pakistan,OtherGrain,2020,1.77086492618071,0.564695807803218
+Pakistan,OtherGrain,2021,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2025,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2030,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2035,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2040,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2045,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2050,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2055,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2060,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2065,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2070,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2075,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2080,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2085,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2090,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2095,1.76596517315475,0.566262582751608
+Pakistan,OtherGrain,2100,1.76596517315475,0.566262582751608
+Pakistan,Rice,1975,1.38731233652302,0.720818213515114
+Pakistan,Rice,1990,1.6368888121775,0.610915043563485
+Pakistan,Rice,2005,1.75373621670202,0.570211181405917
+Pakistan,Rice,2010,1.92752925850184,0.518798869376045
+Pakistan,Rice,2015,1.80842534057572,0.552967256962704
+Pakistan,Rice,2019,1.74415147555264,0.57334469741692
+Pakistan,Rice,2020,1.75836169773269,0.568711205032188
+Pakistan,Rice,2021,1.75403109699678,0.570115319912049
+Pakistan,Rice,2025,1.75403109699678,0.570115319912049
+Pakistan,Rice,2030,1.75403109699678,0.570115319912049
+Pakistan,Rice,2035,1.75403109699678,0.570115319912049
+Pakistan,Rice,2040,1.75403109699678,0.570115319912049
+Pakistan,Rice,2045,1.75403109699678,0.570115319912049
+Pakistan,Rice,2050,1.75403109699678,0.570115319912049
+Pakistan,Rice,2055,1.75403109699678,0.570115319912049
+Pakistan,Rice,2060,1.75403109699678,0.570115319912049
+Pakistan,Rice,2065,1.75403109699678,0.570115319912049
+Pakistan,Rice,2070,1.75403109699678,0.570115319912049
+Pakistan,Rice,2075,1.75403109699678,0.570115319912049
+Pakistan,Rice,2080,1.75403109699678,0.570115319912049
+Pakistan,Rice,2085,1.75403109699678,0.570115319912049
+Pakistan,Rice,2090,1.75403109699678,0.570115319912049
+Pakistan,Rice,2095,1.75403109699678,0.570115319912049
+Pakistan,Rice,2100,1.75403109699678,0.570115319912049
+Pakistan,Wheat,1975,1.40052363087959,0.714018655559533
+Pakistan,Wheat,1990,1.65929119600314,0.602666971541085
+Pakistan,Wheat,2005,1.77974352614914,0.561878711908406
+Pakistan,Wheat,2010,1.95917967113621,0.510417709377344
+Pakistan,Wheat,2015,1.83828063368277,0.54398658272139
+Pakistan,Wheat,2019,1.77243589620553,0.56419529876416
+Pakistan,Wheat,2020,1.78755619861703,0.559422971302197
+Pakistan,Wheat,2021,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2025,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2030,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2035,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2040,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2045,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2050,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2055,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2060,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2065,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2070,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2075,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2080,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2085,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2090,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2095,1.78412227842579,0.560499698979346
+Pakistan,Wheat,2100,1.78412227842579,0.560499698979346
+Russia,Corn,1975,1,1
+Russia,Corn,1990,1,1
+Russia,Corn,2005,1,1
+Russia,Corn,2010,1,1
+Russia,Corn,2015,1,1
+Russia,Corn,2019,1,1
+Russia,Corn,2020,1,1
+Russia,Corn,2021,1,1
+Russia,Corn,2025,1,1
+Russia,Corn,2030,1,1
+Russia,Corn,2035,1,1
+Russia,Corn,2040,1,1
+Russia,Corn,2045,1,1
+Russia,Corn,2050,1,1
+Russia,Corn,2055,1,1
+Russia,Corn,2060,1,1
+Russia,Corn,2065,1,1
+Russia,Corn,2070,1,1
+Russia,Corn,2075,1,1
+Russia,Corn,2080,1,1
+Russia,Corn,2085,1,1
+Russia,Corn,2090,1,1
+Russia,Corn,2095,1,1
+Russia,Corn,2100,1,1
+Russia,OtherGrain,1975,1,1
+Russia,OtherGrain,1990,1,1
+Russia,OtherGrain,2005,1,1
+Russia,OtherGrain,2010,1,1
+Russia,OtherGrain,2015,1,1
+Russia,OtherGrain,2019,1,1
+Russia,OtherGrain,2020,1,1
+Russia,OtherGrain,2021,1,1
+Russia,OtherGrain,2025,1,1
+Russia,OtherGrain,2030,1,1
+Russia,OtherGrain,2035,1,1
+Russia,OtherGrain,2040,1,1
+Russia,OtherGrain,2045,1,1
+Russia,OtherGrain,2050,1,1
+Russia,OtherGrain,2055,1,1
+Russia,OtherGrain,2060,1,1
+Russia,OtherGrain,2065,1,1
+Russia,OtherGrain,2070,1,1
+Russia,OtherGrain,2075,1,1
+Russia,OtherGrain,2080,1,1
+Russia,OtherGrain,2085,1,1
+Russia,OtherGrain,2090,1,1
+Russia,OtherGrain,2095,1,1
+Russia,OtherGrain,2100,1,1
+Russia,Rice,1975,1,1
+Russia,Rice,1990,1,1
+Russia,Rice,2005,1,1
+Russia,Rice,2010,1,1
+Russia,Rice,2015,1,1
+Russia,Rice,2019,1,1
+Russia,Rice,2020,1,1
+Russia,Rice,2021,1,1
+Russia,Rice,2025,1,1
+Russia,Rice,2030,1,1
+Russia,Rice,2035,1,1
+Russia,Rice,2040,1,1
+Russia,Rice,2045,1,1
+Russia,Rice,2050,1,1
+Russia,Rice,2055,1,1
+Russia,Rice,2060,1,1
+Russia,Rice,2065,1,1
+Russia,Rice,2070,1,1
+Russia,Rice,2075,1,1
+Russia,Rice,2080,1,1
+Russia,Rice,2085,1,1
+Russia,Rice,2090,1,1
+Russia,Rice,2095,1,1
+Russia,Rice,2100,1,1
+Russia,Wheat,1975,1,1
+Russia,Wheat,1990,1,1
+Russia,Wheat,2005,1,1
+Russia,Wheat,2010,1,1
+Russia,Wheat,2015,1,1
+Russia,Wheat,2019,1,1
+Russia,Wheat,2020,1,1
+Russia,Wheat,2021,1,1
+Russia,Wheat,2025,1,1
+Russia,Wheat,2030,1,1
+Russia,Wheat,2035,1,1
+Russia,Wheat,2040,1,1
+Russia,Wheat,2045,1,1
+Russia,Wheat,2050,1,1
+Russia,Wheat,2055,1,1
+Russia,Wheat,2060,1,1
+Russia,Wheat,2065,1,1
+Russia,Wheat,2070,1,1
+Russia,Wheat,2075,1,1
+Russia,Wheat,2080,1,1
+Russia,Wheat,2085,1,1
+Russia,Wheat,2090,1,1
+Russia,Wheat,2095,1,1
+Russia,Wheat,2100,1,1
+South Africa,Corn,1975,1,1
+South Africa,Corn,1990,1,1
+South Africa,Corn,2005,1,1
+South Africa,Corn,2010,1,1
+South Africa,Corn,2015,1,1
+South Africa,Corn,2019,1,1
+South Africa,Corn,2020,1,1
+South Africa,Corn,2021,1,1
+South Africa,Corn,2025,1,1
+South Africa,Corn,2030,1,1
+South Africa,Corn,2035,1,1
+South Africa,Corn,2040,1,1
+South Africa,Corn,2045,1,1
+South Africa,Corn,2050,1,1
+South Africa,Corn,2055,1,1
+South Africa,Corn,2060,1,1
+South Africa,Corn,2065,1,1
+South Africa,Corn,2070,1,1
+South Africa,Corn,2075,1,1
+South Africa,Corn,2080,1,1
+South Africa,Corn,2085,1,1
+South Africa,Corn,2090,1,1
+South Africa,Corn,2095,1,1
+South Africa,Corn,2100,1,1
+South Africa,OtherGrain,1975,1,1
+South Africa,OtherGrain,1990,1,1
+South Africa,OtherGrain,2005,1,1
+South Africa,OtherGrain,2010,1,1
+South Africa,OtherGrain,2015,1,1
+South Africa,OtherGrain,2019,1,1
+South Africa,OtherGrain,2020,1,1
+South Africa,OtherGrain,2021,1,1
+South Africa,OtherGrain,2025,1,1
+South Africa,OtherGrain,2030,1,1
+South Africa,OtherGrain,2035,1,1
+South Africa,OtherGrain,2040,1,1
+South Africa,OtherGrain,2045,1,1
+South Africa,OtherGrain,2050,1,1
+South Africa,OtherGrain,2055,1,1
+South Africa,OtherGrain,2060,1,1
+South Africa,OtherGrain,2065,1,1
+South Africa,OtherGrain,2070,1,1
+South Africa,OtherGrain,2075,1,1
+South Africa,OtherGrain,2080,1,1
+South Africa,OtherGrain,2085,1,1
+South Africa,OtherGrain,2090,1,1
+South Africa,OtherGrain,2095,1,1
+South Africa,OtherGrain,2100,1,1
+South Africa,Rice,1975,1,1
+South Africa,Rice,1990,1,1
+South Africa,Rice,2005,1,1
+South Africa,Rice,2010,1,1
+South Africa,Rice,2015,1,1
+South Africa,Rice,2019,1,1
+South Africa,Rice,2020,1,1
+South Africa,Rice,2021,1,1
+South Africa,Rice,2025,1,1
+South Africa,Rice,2030,1,1
+South Africa,Rice,2035,1,1
+South Africa,Rice,2040,1,1
+South Africa,Rice,2045,1,1
+South Africa,Rice,2050,1,1
+South Africa,Rice,2055,1,1
+South Africa,Rice,2060,1,1
+South Africa,Rice,2065,1,1
+South Africa,Rice,2070,1,1
+South Africa,Rice,2075,1,1
+South Africa,Rice,2080,1,1
+South Africa,Rice,2085,1,1
+South Africa,Rice,2090,1,1
+South Africa,Rice,2095,1,1
+South Africa,Rice,2100,1,1
+South Africa,Wheat,1975,1,1
+South Africa,Wheat,1990,1,1
+South Africa,Wheat,2005,1,1
+South Africa,Wheat,2010,1,1
+South Africa,Wheat,2015,1,1
+South Africa,Wheat,2019,1,1
+South Africa,Wheat,2020,1,1
+South Africa,Wheat,2021,1,1
+South Africa,Wheat,2025,1,1
+South Africa,Wheat,2030,1,1
+South Africa,Wheat,2035,1,1
+South Africa,Wheat,2040,1,1
+South Africa,Wheat,2045,1,1
+South Africa,Wheat,2050,1,1
+South Africa,Wheat,2055,1,1
+South Africa,Wheat,2060,1,1
+South Africa,Wheat,2065,1,1
+South Africa,Wheat,2070,1,1
+South Africa,Wheat,2075,1,1
+South Africa,Wheat,2080,1,1
+South Africa,Wheat,2085,1,1
+South Africa,Wheat,2090,1,1
+South Africa,Wheat,2095,1,1
+South Africa,Wheat,2100,1,1
+South America_Northern,Corn,1975,1,1
+South America_Northern,Corn,1990,1,1
+South America_Northern,Corn,2005,1,1
+South America_Northern,Corn,2010,1,1
+South America_Northern,Corn,2015,1,1
+South America_Northern,Corn,2019,1,1
+South America_Northern,Corn,2020,1,1
+South America_Northern,Corn,2021,1,1
+South America_Northern,Corn,2025,1,1
+South America_Northern,Corn,2030,1,1
+South America_Northern,Corn,2035,1,1
+South America_Northern,Corn,2040,1,1
+South America_Northern,Corn,2045,1,1
+South America_Northern,Corn,2050,1,1
+South America_Northern,Corn,2055,1,1
+South America_Northern,Corn,2060,1,1
+South America_Northern,Corn,2065,1,1
+South America_Northern,Corn,2070,1,1
+South America_Northern,Corn,2075,1,1
+South America_Northern,Corn,2080,1,1
+South America_Northern,Corn,2085,1,1
+South America_Northern,Corn,2090,1,1
+South America_Northern,Corn,2095,1,1
+South America_Northern,Corn,2100,1,1
+South America_Northern,OtherGrain,1975,1,1
+South America_Northern,OtherGrain,1990,1,1
+South America_Northern,OtherGrain,2005,1,1
+South America_Northern,OtherGrain,2010,1,1
+South America_Northern,OtherGrain,2015,1,1
+South America_Northern,OtherGrain,2019,1,1
+South America_Northern,OtherGrain,2020,1,1
+South America_Northern,OtherGrain,2021,1,1
+South America_Northern,OtherGrain,2025,1,1
+South America_Northern,OtherGrain,2030,1,1
+South America_Northern,OtherGrain,2035,1,1
+South America_Northern,OtherGrain,2040,1,1
+South America_Northern,OtherGrain,2045,1,1
+South America_Northern,OtherGrain,2050,1,1
+South America_Northern,OtherGrain,2055,1,1
+South America_Northern,OtherGrain,2060,1,1
+South America_Northern,OtherGrain,2065,1,1
+South America_Northern,OtherGrain,2070,1,1
+South America_Northern,OtherGrain,2075,1,1
+South America_Northern,OtherGrain,2080,1,1
+South America_Northern,OtherGrain,2085,1,1
+South America_Northern,OtherGrain,2090,1,1
+South America_Northern,OtherGrain,2095,1,1
+South America_Northern,OtherGrain,2100,1,1
+South America_Northern,Rice,1975,1,1
+South America_Northern,Rice,1990,1,1
+South America_Northern,Rice,2005,1,1
+South America_Northern,Rice,2010,1,1
+South America_Northern,Rice,2015,1,1
+South America_Northern,Rice,2019,1,1
+South America_Northern,Rice,2020,1,1
+South America_Northern,Rice,2021,1,1
+South America_Northern,Rice,2025,1,1
+South America_Northern,Rice,2030,1,1
+South America_Northern,Rice,2035,1,1
+South America_Northern,Rice,2040,1,1
+South America_Northern,Rice,2045,1,1
+South America_Northern,Rice,2050,1,1
+South America_Northern,Rice,2055,1,1
+South America_Northern,Rice,2060,1,1
+South America_Northern,Rice,2065,1,1
+South America_Northern,Rice,2070,1,1
+South America_Northern,Rice,2075,1,1
+South America_Northern,Rice,2080,1,1
+South America_Northern,Rice,2085,1,1
+South America_Northern,Rice,2090,1,1
+South America_Northern,Rice,2095,1,1
+South America_Northern,Rice,2100,1,1
+South America_Northern,Wheat,1975,1,1
+South America_Northern,Wheat,1990,1,1
+South America_Northern,Wheat,2005,1,1
+South America_Northern,Wheat,2010,1,1
+South America_Northern,Wheat,2015,1,1
+South America_Northern,Wheat,2019,1,1
+South America_Northern,Wheat,2020,1,1
+South America_Northern,Wheat,2021,1,1
+South America_Northern,Wheat,2025,1,1
+South America_Northern,Wheat,2030,1,1
+South America_Northern,Wheat,2035,1,1
+South America_Northern,Wheat,2040,1,1
+South America_Northern,Wheat,2045,1,1
+South America_Northern,Wheat,2050,1,1
+South America_Northern,Wheat,2055,1,1
+South America_Northern,Wheat,2060,1,1
+South America_Northern,Wheat,2065,1,1
+South America_Northern,Wheat,2070,1,1
+South America_Northern,Wheat,2075,1,1
+South America_Northern,Wheat,2080,1,1
+South America_Northern,Wheat,2085,1,1
+South America_Northern,Wheat,2090,1,1
+South America_Northern,Wheat,2095,1,1
+South America_Northern,Wheat,2100,1,1
+South America_Southern,Corn,1975,1.0169607203211,0.983322148061192
+South America_Southern,Corn,1990,1.25600464611599,0.796175398787221
+South America_Southern,Corn,2005,1.37633582307676,0.726566861977428
+South America_Southern,Corn,2010,1.43343610634892,0.69762439746762
+South America_Southern,Corn,2015,1.38206381846151,0.723555588853476
+South America_Southern,Corn,2019,1.33665725449504,0.748134943821317
+South America_Southern,Corn,2020,1.34584088250569,0.743029887855832
+South America_Southern,Corn,2021,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2025,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2030,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2035,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2040,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2045,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2050,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2055,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2060,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2065,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2070,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2075,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2080,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2085,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2090,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2095,1.3649295511665,0.732638544711246
+South America_Southern,Corn,2100,1.3649295511665,0.732638544711246
+South America_Southern,OtherGrain,1975,1,1
+South America_Southern,OtherGrain,1990,1.09174123227829,0.915967969729567
+South America_Southern,OtherGrain,2005,1.20456586467953,0.830174612548935
+South America_Southern,OtherGrain,2010,1.29771566937837,0.770584823468317
+South America_Southern,OtherGrain,2015,1.26147876460894,0.792720438944531
+South America_Southern,OtherGrain,2019,1.21697845880997,0.821707231348907
+South America_Southern,OtherGrain,2020,1.22817937649787,0.814213313735553
+South America_Southern,OtherGrain,2021,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2025,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2030,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2035,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2040,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2045,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2050,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2055,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2060,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2065,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2070,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2075,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2080,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2085,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2090,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2095,1.24851694095525,0.800950285251953
+South America_Southern,OtherGrain,2100,1.24851694095525,0.800950285251953
+South America_Southern,Rice,1975,1,1
+South America_Southern,Rice,1990,1.15836418458086,0.863286359601873
+South America_Southern,Rice,2005,1.30039904116838,0.768994722651844
+South America_Southern,Rice,2010,1.34749988484514,0.742115091249096
+South America_Southern,Rice,2015,1.3107160482313,0.76294175336406
+South America_Southern,Rice,2019,1.2793349570392,0.781656121016446
+South America_Southern,Rice,2020,1.28629259892436,0.777428091272725
+South America_Southern,Rice,2021,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2025,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2030,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2035,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2040,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2045,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2050,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2055,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2060,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2065,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2070,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2075,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2080,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2085,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2090,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2095,1.3003119679237,0.769046217114168
+South America_Southern,Rice,2100,1.3003119679237,0.769046217114168
+South America_Southern,Wheat,1975,1,1
+South America_Southern,Wheat,1990,1.15865008927229,0.863073337894503
+South America_Southern,Wheat,2005,1.31088643500452,0.762842587501906
+South America_Southern,Wheat,2010,1.46479966285907,0.682687213381897
+South America_Southern,Wheat,2015,1.40131876858886,0.713613506373719
+South America_Southern,Wheat,2019,1.33772777476785,0.747536246807421
+South America_Southern,Wheat,2020,1.34769245346629,0.74200905216022
+South America_Southern,Wheat,2021,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2025,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2030,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2035,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2040,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2045,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2050,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2055,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2060,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2065,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2070,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2075,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2080,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2085,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2090,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2095,1.36673735418347,0.731669473245232
+South America_Southern,Wheat,2100,1.36673735418347,0.731669473245232
+South Asia,Corn,1975,1.71306120249258,0.583750305327652
+South Asia,Corn,1990,1.72617255785727,0.579316358291153
+South Asia,Corn,2005,1.85478700852638,0.539145462742106
+South Asia,Corn,2010,1.97809737504768,0.505536285834208
+South Asia,Corn,2015,1.9820337189648,0.504532284406489
+South Asia,Corn,2019,1.98897736711863,0.502770929690702
+South Asia,Corn,2020,1.98929894885724,0.502689653847379
+South Asia,Corn,2021,1.98929894309988,0.502689655302245
+South Asia,Corn,2025,1.98929894309988,0.502689655302245
+South Asia,Corn,2030,1.98929894309988,0.502689655302245
+South Asia,Corn,2035,1.98929894309988,0.502689655302245
+South Asia,Corn,2040,1.98929894309988,0.502689655302245
+South Asia,Corn,2045,1.98929894309988,0.502689655302245
+South Asia,Corn,2050,1.98929894309988,0.502689655302245
+South Asia,Corn,2055,1.98929894309988,0.502689655302245
+South Asia,Corn,2060,1.98929894309988,0.502689655302245
+South Asia,Corn,2065,1.98929894309988,0.502689655302245
+South Asia,Corn,2070,1.98929894309988,0.502689655302245
+South Asia,Corn,2075,1.98929894309988,0.502689655302245
+South Asia,Corn,2080,1.98929894309988,0.502689655302245
+South Asia,Corn,2085,1.98929894309988,0.502689655302245
+South Asia,Corn,2090,1.98929894309988,0.502689655302245
+South Asia,Corn,2095,1.98929894309988,0.502689655302245
+South Asia,Corn,2100,1.98929894309988,0.502689655302245
+South Asia,OtherGrain,1975,1.30648380468492,0.765413238506361
+South Asia,OtherGrain,1990,1.39283806237005,0.717958553127419
+South Asia,OtherGrain,2005,1.41433589669958,0.707045619314017
+South Asia,OtherGrain,2010,1.49294353671381,0.669817695986782
+South Asia,OtherGrain,2015,1.43656782529119,0.696103575755151
+South Asia,OtherGrain,2019,1.63787771516352,0.610546190806538
+South Asia,OtherGrain,2020,1.66582921705986,0.600301633420122
+South Asia,OtherGrain,2021,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2025,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2030,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2035,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2040,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2045,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2050,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2055,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2060,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2065,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2070,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2075,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2080,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2085,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2090,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2095,1.66716387387679,0.599821058786873
+South Asia,OtherGrain,2100,1.66716387387679,0.599821058786873
+South Asia,Rice,1975,1.88503227863987,0.530494894613445
+South Asia,Rice,1990,1.90382790237891,0.525257560702025
+South Asia,Rice,2005,2.05012102683474,0.48777608097798
+South Asia,Rice,2010,2.2045759047693,0.4536019820577
+South Asia,Rice,2015,2.21835752156231,0.450783965289659
+South Asia,Rice,2019,2.24295580875764,0.445840259578674
+South Asia,Rice,2020,2.2441042049101,0.445612105628607
+South Asia,Rice,2021,2.24410420721693,0.44561210517054
+South Asia,Rice,2025,2.24410420721693,0.44561210517054
+South Asia,Rice,2030,2.24410420721693,0.44561210517054
+South Asia,Rice,2035,2.24410420721693,0.44561210517054
+South Asia,Rice,2040,2.24410420721693,0.44561210517054
+South Asia,Rice,2045,2.24410420721693,0.44561210517054
+South Asia,Rice,2050,2.24410420721693,0.44561210517054
+South Asia,Rice,2055,2.24410420721693,0.44561210517054
+South Asia,Rice,2060,2.24410420721693,0.44561210517054
+South Asia,Rice,2065,2.24410420721693,0.44561210517054
+South Asia,Rice,2070,2.24410420721693,0.44561210517054
+South Asia,Rice,2075,2.24410420721693,0.44561210517054
+South Asia,Rice,2080,2.24410420721693,0.44561210517054
+South Asia,Rice,2085,2.24410420721693,0.44561210517054
+South Asia,Rice,2090,2.24410420721693,0.44561210517054
+South Asia,Rice,2095,2.24410420721693,0.44561210517054
+South Asia,Rice,2100,2.24410420721693,0.44561210517054
+South Asia,Wheat,1975,1.18447385768229,0.844256708169768
+South Asia,Wheat,1990,1.18726551948033,0.84227157581204
+South Asia,Wheat,2005,1.21722409386107,0.821541411350127
+South Asia,Wheat,2010,1.24227832788935,0.804972587503008
+South Asia,Wheat,2015,1.24227833033916,0.804972585915578
+South Asia,Wheat,2019,1.24227833860677,0.804972580558328
+South Asia,Wheat,2020,1.24227833474516,0.804972583060572
+South Asia,Wheat,2021,1.24227832730692,0.804972587880411
+South Asia,Wheat,2025,1.24227832730692,0.804972587880411
+South Asia,Wheat,2030,1.24227832730692,0.804972587880411
+South Asia,Wheat,2035,1.24227832730692,0.804972587880411
+South Asia,Wheat,2040,1.24227832730692,0.804972587880411
+South Asia,Wheat,2045,1.24227832730692,0.804972587880411
+South Asia,Wheat,2050,1.24227832730692,0.804972587880411
+South Asia,Wheat,2055,1.24227832730692,0.804972587880411
+South Asia,Wheat,2060,1.24227832730692,0.804972587880411
+South Asia,Wheat,2065,1.24227832730692,0.804972587880411
+South Asia,Wheat,2070,1.24227832730692,0.804972587880411
+South Asia,Wheat,2075,1.24227832730692,0.804972587880411
+South Asia,Wheat,2080,1.24227832730692,0.804972587880411
+South Asia,Wheat,2085,1.24227832730692,0.804972587880411
+South Asia,Wheat,2090,1.24227832730692,0.804972587880411
+South Asia,Wheat,2095,1.24227832730692,0.804972587880411
+South Asia,Wheat,2100,1.24227832730692,0.804972587880411
+South Korea,Corn,1975,1.41931827272727,0.704563605792563
+South Korea,Corn,1990,1.18587636363636,0.843258227133903
+South Korea,Corn,2005,1.01434,0.985862728473687
+South Korea,Corn,2010,1,1
+South Korea,Corn,2015,1,1
+South Korea,Corn,2019,1,1
+South Korea,Corn,2020,1,1
+South Korea,Corn,2021,1,1
+South Korea,Corn,2025,1,1
+South Korea,Corn,2030,1,1
+South Korea,Corn,2035,1,1
+South Korea,Corn,2040,1,1
+South Korea,Corn,2045,1,1
+South Korea,Corn,2050,1,1
+South Korea,Corn,2055,1,1
+South Korea,Corn,2060,1,1
+South Korea,Corn,2065,1,1
+South Korea,Corn,2070,1,1
+South Korea,Corn,2075,1,1
+South Korea,Corn,2080,1,1
+South Korea,Corn,2085,1,1
+South Korea,Corn,2090,1,1
+South Korea,Corn,2095,1,1
+South Korea,Corn,2100,1,1
+South Korea,OtherGrain,1975,1.41931827272727,0.704563605792563
+South Korea,OtherGrain,1990,1.18587636363636,0.843258227133903
+South Korea,OtherGrain,2005,1.01434,0.985862728473688
+South Korea,OtherGrain,2010,1,1
+South Korea,OtherGrain,2015,1,1
+South Korea,OtherGrain,2019,1,1
+South Korea,OtherGrain,2020,1,1
+South Korea,OtherGrain,2021,1,1
+South Korea,OtherGrain,2025,1,1
+South Korea,OtherGrain,2030,1,1
+South Korea,OtherGrain,2035,1,1
+South Korea,OtherGrain,2040,1,1
+South Korea,OtherGrain,2045,1,1
+South Korea,OtherGrain,2050,1,1
+South Korea,OtherGrain,2055,1,1
+South Korea,OtherGrain,2060,1,1
+South Korea,OtherGrain,2065,1,1
+South Korea,OtherGrain,2070,1,1
+South Korea,OtherGrain,2075,1,1
+South Korea,OtherGrain,2080,1,1
+South Korea,OtherGrain,2085,1,1
+South Korea,OtherGrain,2090,1,1
+South Korea,OtherGrain,2095,1,1
+South Korea,OtherGrain,2100,1,1
+South Korea,Rice,1975,1.41931827272727,0.704563605792563
+South Korea,Rice,1990,1.18587636363636,0.843258227133903
+South Korea,Rice,2005,1.01434,0.985862728473687
+South Korea,Rice,2010,1,1
+South Korea,Rice,2015,1,1
+South Korea,Rice,2019,1,1
+South Korea,Rice,2020,1,1
+South Korea,Rice,2021,1,1
+South Korea,Rice,2025,1,1
+South Korea,Rice,2030,1,1
+South Korea,Rice,2035,1,1
+South Korea,Rice,2040,1,1
+South Korea,Rice,2045,1,1
+South Korea,Rice,2050,1,1
+South Korea,Rice,2055,1,1
+South Korea,Rice,2060,1,1
+South Korea,Rice,2065,1,1
+South Korea,Rice,2070,1,1
+South Korea,Rice,2075,1,1
+South Korea,Rice,2080,1,1
+South Korea,Rice,2085,1,1
+South Korea,Rice,2090,1,1
+South Korea,Rice,2095,1,1
+South Korea,Rice,2100,1,1
+South Korea,Wheat,1975,1.41931827272727,0.704563605792563
+South Korea,Wheat,1990,1.18587636363636,0.843258227133903
+South Korea,Wheat,2005,1.01434,0.985862728473687
+South Korea,Wheat,2010,1,1
+South Korea,Wheat,2015,1,1
+South Korea,Wheat,2019,1,1
+South Korea,Wheat,2020,1,1
+South Korea,Wheat,2021,1,1
+South Korea,Wheat,2025,1,1
+South Korea,Wheat,2030,1,1
+South Korea,Wheat,2035,1,1
+South Korea,Wheat,2040,1,1
+South Korea,Wheat,2045,1,1
+South Korea,Wheat,2050,1,1
+South Korea,Wheat,2055,1,1
+South Korea,Wheat,2060,1,1
+South Korea,Wheat,2065,1,1
+South Korea,Wheat,2070,1,1
+South Korea,Wheat,2075,1,1
+South Korea,Wheat,2080,1,1
+South Korea,Wheat,2085,1,1
+South Korea,Wheat,2090,1,1
+South Korea,Wheat,2095,1,1
+South Korea,Wheat,2100,1,1
+Southeast Asia,Corn,1975,1.16948791931551,0.855075100378367
+Southeast Asia,Corn,1990,1.25553153514098,0.796475414604151
+Southeast Asia,Corn,2005,1.38379540971701,0.722650178615999
+Southeast Asia,Corn,2010,1.4064827842509,0.710993416483662
+Southeast Asia,Corn,2015,1.34105760945691,0.745680120636255
+Southeast Asia,Corn,2019,1.33231846849535,0.750571296312768
+Southeast Asia,Corn,2020,1.33828476370222,0.747225125117324
+Southeast Asia,Corn,2021,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2025,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2030,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2035,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2040,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2045,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2050,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2055,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2060,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2065,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2070,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2075,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2080,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2085,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2090,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2095,1.35054118405561,0.740443913748002
+Southeast Asia,Corn,2100,1.35054118405561,0.740443913748002
+Southeast Asia,OtherGrain,1975,1,1
+Southeast Asia,OtherGrain,1990,1,1
+Southeast Asia,OtherGrain,2005,1.0785902605332,0.92713612999403
+Southeast Asia,OtherGrain,2010,1.13412479024137,0.881737185012224
+Southeast Asia,OtherGrain,2015,1.13779593061861,0.878892227586281
+Southeast Asia,OtherGrain,2019,1.13572624344759,0.880493874091015
+Southeast Asia,OtherGrain,2020,1.1435322354411,0.874483437377054
+Southeast Asia,OtherGrain,2021,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2025,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2030,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2035,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2040,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2045,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2050,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2055,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2060,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2065,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2070,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2075,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2080,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2085,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2090,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2095,1.15358282253131,0.866864502893423
+Southeast Asia,OtherGrain,2100,1.15358282253131,0.866864502893423
+Southeast Asia,Rice,1975,1.03834439855718,0.963071598777379
+Southeast Asia,Rice,1990,1.07339103408457,0.931626935800556
+Southeast Asia,Rice,2005,1.20425664216541,0.83038778030061
+Southeast Asia,Rice,2010,1.20994012512031,0.826487178363941
+Southeast Asia,Rice,2015,1.1405920768726,0.876737635020149
+Southeast Asia,Rice,2019,1.13537516124075,0.880766141569622
+Southeast Asia,Rice,2020,1.14272117420786,0.875104113383741
+Southeast Asia,Rice,2021,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2025,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2030,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2035,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2040,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2045,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2050,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2055,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2060,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2065,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2070,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2075,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2080,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2085,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2090,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2095,1.15650303079211,0.864675641459478
+Southeast Asia,Rice,2100,1.15650303079211,0.864675641459478
+Southeast Asia,Wheat,1975,1,1
+Southeast Asia,Wheat,1990,1,1
+Southeast Asia,Wheat,2005,1.05508067959368,0.947794817345256
+Southeast Asia,Wheat,2010,1.1484185691464,0.870762652978767
+Southeast Asia,Wheat,2015,1.19960575234299,0.833607206406663
+Southeast Asia,Wheat,2019,1.1726246075337,0.85278783472166
+Southeast Asia,Wheat,2020,1.1774251970625,0.849310854307223
+Southeast Asia,Wheat,2021,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2025,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2030,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2035,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2040,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2045,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2050,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2055,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2060,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2065,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2070,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2075,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2080,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2085,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2090,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2095,1.18466851024701,0.844117988576817
+Southeast Asia,Wheat,2100,1.18466851024701,0.844117988576817
+Taiwan,Corn,1975,2.27279652736272,0.439986592711126
+Taiwan,Corn,1990,2.27272511399885,0.44000041793022
+Taiwan,Corn,2005,2.03836328506898,0.490589684049456
+Taiwan,Corn,2010,1.82497146230667,0.547953773883156
+Taiwan,Corn,2015,1.79296932803078,0.557734024986528
+Taiwan,Corn,2019,1.77432270345806,0.563595335871572
+Taiwan,Corn,2020,1.70460763700651,0.586645265626123
+Taiwan,Corn,2021,1.66260043047333,0.601467425168
+Taiwan,Corn,2025,1.66260043047333,0.601467425168
+Taiwan,Corn,2030,1.66260043047333,0.601467425168
+Taiwan,Corn,2035,1.66260043047333,0.601467425168
+Taiwan,Corn,2040,1.66260043047333,0.601467425168
+Taiwan,Corn,2045,1.66260043047333,0.601467425168
+Taiwan,Corn,2050,1.66260043047333,0.601467425168
+Taiwan,Corn,2055,1.66260043047333,0.601467425168
+Taiwan,Corn,2060,1.66260043047333,0.601467425168
+Taiwan,Corn,2065,1.66260043047333,0.601467425168
+Taiwan,Corn,2070,1.66260043047333,0.601467425168
+Taiwan,Corn,2075,1.66260043047333,0.601467425168
+Taiwan,Corn,2080,1.66260043047333,0.601467425168
+Taiwan,Corn,2085,1.66260043047333,0.601467425168
+Taiwan,Corn,2090,1.66260043047333,0.601467425168
+Taiwan,Corn,2095,1.66260043047333,0.601467425168
+Taiwan,Corn,2100,1.66260043047333,0.601467425168
+Taiwan,OtherGrain,1975,2.34678168324701,0.42611547854609
+Taiwan,OtherGrain,1990,2.272615084,0.440021720809805
+Taiwan,OtherGrain,2005,2.06623885506432,0.483971152487534
+Taiwan,OtherGrain,2010,1.89386249815462,0.528021438184875
+Taiwan,OtherGrain,2015,1.8372034563295,0.54430552944739
+Taiwan,OtherGrain,2019,1.82676409579264,0.547416057882448
+Taiwan,OtherGrain,2020,1.75315996447248,0.570398606096905
+Taiwan,OtherGrain,2021,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2025,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2030,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2035,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2040,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2045,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2050,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2055,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2060,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2065,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2070,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2075,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2080,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2085,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2090,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2095,1.70985548819841,0.584844746764915
+Taiwan,OtherGrain,2100,1.70985548819841,0.584844746764915
+Taiwan,Rice,1975,2.27410348478982,0.439733726582114
+Taiwan,Rice,1990,2.27268397690185,0.440008382231485
+Taiwan,Rice,2005,2.03983945652399,0.490234658811856
+Taiwan,Rice,2010,1.82653791031039,0.547483845999159
+Taiwan,Rice,2015,1.79454546905288,0.55724416976059
+Taiwan,Rice,2019,1.77590316931655,0.563093763938069
+Taiwan,Rice,2020,1.7062020291284,0.586097064080295
+Taiwan,Rice,2021,1.66420010991898,0.600889276499738
+Taiwan,Rice,2025,1.66420010991898,0.600889276499738
+Taiwan,Rice,2030,1.66420010991898,0.600889276499738
+Taiwan,Rice,2035,1.66420010991898,0.600889276499738
+Taiwan,Rice,2040,1.66420010991898,0.600889276499738
+Taiwan,Rice,2045,1.66420010991898,0.600889276499738
+Taiwan,Rice,2050,1.66420010991898,0.600889276499738
+Taiwan,Rice,2055,1.66420010991898,0.600889276499738
+Taiwan,Rice,2060,1.66420010991898,0.600889276499738
+Taiwan,Rice,2065,1.66420010991898,0.600889276499738
+Taiwan,Rice,2070,1.66420010991898,0.600889276499738
+Taiwan,Rice,2075,1.66420010991898,0.600889276499738
+Taiwan,Rice,2080,1.66420010991898,0.600889276499738
+Taiwan,Rice,2085,1.66420010991898,0.600889276499738
+Taiwan,Rice,2090,1.66420010991898,0.600889276499738
+Taiwan,Rice,2095,1.66420010991898,0.600889276499738
+Taiwan,Rice,2100,1.66420010991898,0.600889276499738
+Taiwan,Wheat,1975,2.28528834266599,0.4375815433572
+Taiwan,Wheat,1990,2.27233464118381,0.440076026601008
+Taiwan,Wheat,2005,2.05278112196009,0.487143996650335
+Taiwan,Wheat,2010,1.83996976267761,0.543487192172524
+Taiwan,Wheat,2015,1.80805617346757,0.553080161266315
+Taiwan,Wheat,2019,1.78946404757576,0.558826538792287
+Taiwan,Wheat,2020,1.7198735227631,0.581438103886515
+Taiwan,Wheat,2021,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2025,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2030,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2035,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2040,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2045,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2050,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2055,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2060,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2065,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2070,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2075,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2080,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2085,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2090,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2095,1.67792426392674,0.595974455759858
+Taiwan,Wheat,2100,1.67792426392674,0.595974455759858
+USA,Corn,1975,1,1
+USA,Corn,1990,1,1
+USA,Corn,2005,1,1
+USA,Corn,2010,1,1
+USA,Corn,2015,1,1
+USA,Corn,2019,1,1
+USA,Corn,2020,1,1
+USA,Corn,2021,1,1
+USA,Corn,2025,1,1
+USA,Corn,2030,1,1
+USA,Corn,2035,1,1
+USA,Corn,2040,1,1
+USA,Corn,2045,1,1
+USA,Corn,2050,1,1
+USA,Corn,2055,1,1
+USA,Corn,2060,1,1
+USA,Corn,2065,1,1
+USA,Corn,2070,1,1
+USA,Corn,2075,1,1
+USA,Corn,2080,1,1
+USA,Corn,2085,1,1
+USA,Corn,2090,1,1
+USA,Corn,2095,1,1
+USA,Corn,2100,1,1
+USA,OtherGrain,1975,1,1
+USA,OtherGrain,1990,1,1
+USA,OtherGrain,2005,1,1
+USA,OtherGrain,2010,1,1
+USA,OtherGrain,2015,1,1
+USA,OtherGrain,2019,1,1
+USA,OtherGrain,2020,1,1
+USA,OtherGrain,2021,1,1
+USA,OtherGrain,2025,1,1
+USA,OtherGrain,2030,1,1
+USA,OtherGrain,2035,1,1
+USA,OtherGrain,2040,1,1
+USA,OtherGrain,2045,1,1
+USA,OtherGrain,2050,1,1
+USA,OtherGrain,2055,1,1
+USA,OtherGrain,2060,1,1
+USA,OtherGrain,2065,1,1
+USA,OtherGrain,2070,1,1
+USA,OtherGrain,2075,1,1
+USA,OtherGrain,2080,1,1
+USA,OtherGrain,2085,1,1
+USA,OtherGrain,2090,1,1
+USA,OtherGrain,2095,1,1
+USA,OtherGrain,2100,1,1
+USA,Rice,1975,1,1
+USA,Rice,1990,1,1
+USA,Rice,2005,1,1
+USA,Rice,2010,1,1
+USA,Rice,2015,1,1
+USA,Rice,2019,1,1
+USA,Rice,2020,1,1
+USA,Rice,2021,1,1
+USA,Rice,2025,1,1
+USA,Rice,2030,1,1
+USA,Rice,2035,1,1
+USA,Rice,2040,1,1
+USA,Rice,2045,1,1
+USA,Rice,2050,1,1
+USA,Rice,2055,1,1
+USA,Rice,2060,1,1
+USA,Rice,2065,1,1
+USA,Rice,2070,1,1
+USA,Rice,2075,1,1
+USA,Rice,2080,1,1
+USA,Rice,2085,1,1
+USA,Rice,2090,1,1
+USA,Rice,2095,1,1
+USA,Rice,2100,1,1
+USA,Wheat,1975,1,1
+USA,Wheat,1990,1,1
+USA,Wheat,2005,1,1
+USA,Wheat,2010,1,1
+USA,Wheat,2015,1,1
+USA,Wheat,2019,1,1
+USA,Wheat,2020,1,1
+USA,Wheat,2021,1,1
+USA,Wheat,2025,1,1
+USA,Wheat,2030,1,1
+USA,Wheat,2035,1,1
+USA,Wheat,2040,1,1
+USA,Wheat,2045,1,1
+USA,Wheat,2050,1,1
+USA,Wheat,2055,1,1
+USA,Wheat,2060,1,1
+USA,Wheat,2065,1,1
+USA,Wheat,2070,1,1
+USA,Wheat,2075,1,1
+USA,Wheat,2080,1,1
+USA,Wheat,2085,1,1
+USA,Wheat,2090,1,1
+USA,Wheat,2095,1,1
+USA,Wheat,2100,1,1

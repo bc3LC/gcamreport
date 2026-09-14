@@ -1,0 +1,24 @@
+# GCAM food sector mapping
+item,regional_item
+Beef,regional beef
+Corn,regional corn
+Dairy,regional dairy
+FiberCrop,regional fibercrop
+Fruits,regional fruits
+Legumes,regional legumes
+MiscCrop,regional misccrop
+NutsSeeds,regional nuts_seeds
+OilCrop,regional oilcrop
+OilPalm,regional oilpalm
+OtherGrain,regional othergrain
+Pork,regional pork
+Poultry,regional poultry
+Rice,regional rice
+RootTuber,regional root_tuber
+SheepGoat,regional sheepgoat
+Soybean,regional soybean
+SugarCrop,regional sugarcrop
+Vegetables,regional vegetables
+Wheat,regional wheat
+biomass,total biomass
+Forest,regional industrial_roundwood

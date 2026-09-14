@@ -1,0 +1,2445 @@
+# Data can be generated in 3 ways. 1. Using GCAM 3.0 assumptions 2. Using global average emissions
+# coefficients based on CDIAC inventory and IEA energy balances or 3. Using region-specific average emissions coefficients based on CDIAC inventory and IEA energy balances
+region,PrimaryFuelCO2Coef.name,PrimaryFuelCO2Coef
+USA,biomass,0
+Africa_Eastern,biomass,0
+Africa_Northern,biomass,0
+Africa_Southern,biomass,0
+Africa_Western,biomass,0
+Australia_NZ,biomass,0
+Brazil,biomass,0
+Canada,biomass,0
+Central America and Caribbean,biomass,0
+Central Asia,biomass,0
+China,biomass,0
+India,biomass,0
+Indonesia,biomass,0
+Japan,biomass,0
+Mexico,biomass,0
+Middle East,biomass,0
+Pakistan,biomass,0
+Russia,biomass,0
+South Africa,biomass,0
+South America_Northern,biomass,0
+South America_Southern,biomass,0
+South Asia,biomass,0
+South Korea,biomass,0
+Southeast Asia,biomass,0
+Taiwan,biomass,0
+Argentina,biomass,0
+Colombia,biomass,0
+Austria,biomass,0
+Belgium,biomass,0
+Bulgaria,biomass,0
+Croatia,biomass,0
+Cyprus,biomass,0
+Czech Republic,biomass,0
+Denmark,biomass,0
+Estonia,biomass,0
+Finland,biomass,0
+France,biomass,0
+Germany,biomass,0
+Greece,biomass,0
+Hungary,biomass,0
+Ireland,biomass,0
+Italy,biomass,0
+Latvia,biomass,0
+Lithuania,biomass,0
+Luxembourg,biomass,0
+Malta,biomass,0
+Netherlands,biomass,0
+Poland,biomass,0
+Portugal,biomass,0
+Romania,biomass,0
+Slovakia,biomass,0
+Slovenia,biomass,0
+Spain,biomass,0
+Sweden,biomass,0
+Albania,biomass,0
+Belarus,biomass,0
+Bosnia and Herzegovina,biomass,0
+Iceland,biomass,0
+Macedonia,biomass,0
+Moldova,biomass,0
+Norway,biomass,0
+Serbia and Montenegro,biomass,0
+Switzerland,biomass,0
+Turkey,biomass,0
+UK,biomass,0
+Ukraine,biomass,0
+USA,regional biomass,23
+Africa_Eastern,regional biomass,23
+Africa_Northern,regional biomass,23
+Africa_Southern,regional biomass,23
+Africa_Western,regional biomass,23
+Australia_NZ,regional biomass,23
+Brazil,regional biomass,23
+Canada,regional biomass,23
+Central America and Caribbean,regional biomass,23
+Central Asia,regional biomass,23
+China,regional biomass,23
+India,regional biomass,23
+Indonesia,regional biomass,23
+Japan,regional biomass,23
+Mexico,regional biomass,23
+Middle East,regional biomass,23
+Pakistan,regional biomass,23
+Russia,regional biomass,23
+South Africa,regional biomass,23
+South America_Northern,regional biomass,23
+South America_Southern,regional biomass,23
+South Asia,regional biomass,23
+South Korea,regional biomass,23
+Southeast Asia,regional biomass,23
+Taiwan,regional biomass,23
+Argentina,regional biomass,23
+Colombia,regional biomass,23
+Austria,regional biomass,23
+Belgium,regional biomass,23
+Bulgaria,regional biomass,23
+Croatia,regional biomass,23
+Cyprus,regional biomass,23
+Czech Republic,regional biomass,23
+Denmark,regional biomass,23
+Estonia,regional biomass,23
+Finland,regional biomass,23
+France,regional biomass,23
+Germany,regional biomass,23
+Greece,regional biomass,23
+Hungary,regional biomass,23
+Ireland,regional biomass,23
+Italy,regional biomass,23
+Latvia,regional biomass,23
+Lithuania,regional biomass,23
+Luxembourg,regional biomass,23
+Malta,regional biomass,23
+Netherlands,regional biomass,23
+Poland,regional biomass,23
+Portugal,regional biomass,23
+Romania,regional biomass,23
+Slovakia,regional biomass,23
+Slovenia,regional biomass,23
+Spain,regional biomass,23
+Sweden,regional biomass,23
+Albania,regional biomass,23
+Belarus,regional biomass,23
+Bosnia and Herzegovina,regional biomass,23
+Iceland,regional biomass,23
+Macedonia,regional biomass,23
+Moldova,regional biomass,23
+Norway,regional biomass,23
+Serbia and Montenegro,regional biomass,23
+Switzerland,regional biomass,23
+Turkey,regional biomass,23
+UK,regional biomass,23
+Ukraine,regional biomass,23
+USA,delivered biomass,23
+Africa_Eastern,delivered biomass,23
+Africa_Northern,delivered biomass,23
+Africa_Southern,delivered biomass,23
+Africa_Western,delivered biomass,23
+Australia_NZ,delivered biomass,23
+Brazil,delivered biomass,23
+Canada,delivered biomass,23
+Central America and Caribbean,delivered biomass,23
+Central Asia,delivered biomass,23
+China,delivered biomass,23
+India,delivered biomass,23
+Indonesia,delivered biomass,23
+Japan,delivered biomass,23
+Mexico,delivered biomass,23
+Middle East,delivered biomass,23
+Pakistan,delivered biomass,23
+Russia,delivered biomass,23
+South Africa,delivered biomass,23
+South America_Northern,delivered biomass,23
+South America_Southern,delivered biomass,23
+South Asia,delivered biomass,23
+South Korea,delivered biomass,23
+Southeast Asia,delivered biomass,23
+Taiwan,delivered biomass,23
+Argentina,delivered biomass,23
+Colombia,delivered biomass,23
+Austria,delivered biomass,23
+Belgium,delivered biomass,23
+Bulgaria,delivered biomass,23
+Croatia,delivered biomass,23
+Cyprus,delivered biomass,23
+Czech Republic,delivered biomass,23
+Denmark,delivered biomass,23
+Estonia,delivered biomass,23
+Finland,delivered biomass,23
+France,delivered biomass,23
+Germany,delivered biomass,23
+Greece,delivered biomass,23
+Hungary,delivered biomass,23
+Ireland,delivered biomass,23
+Italy,delivered biomass,23
+Latvia,delivered biomass,23
+Lithuania,delivered biomass,23
+Luxembourg,delivered biomass,23
+Malta,delivered biomass,23
+Netherlands,delivered biomass,23
+Poland,delivered biomass,23
+Portugal,delivered biomass,23
+Romania,delivered biomass,23
+Slovakia,delivered biomass,23
+Slovenia,delivered biomass,23
+Spain,delivered biomass,23
+Sweden,delivered biomass,23
+Albania,delivered biomass,23
+Belarus,delivered biomass,23
+Bosnia and Herzegovina,delivered biomass,23
+Iceland,delivered biomass,23
+Macedonia,delivered biomass,23
+Moldova,delivered biomass,23
+Norway,delivered biomass,23
+Serbia and Montenegro,delivered biomass,23
+Switzerland,delivered biomass,23
+Turkey,delivered biomass,23
+UK,delivered biomass,23
+Ukraine,delivered biomass,23
+USA,delivered biomass industry,23
+Africa_Eastern,delivered biomass industry,23
+Africa_Northern,delivered biomass industry,23
+Africa_Southern,delivered biomass industry,23
+Africa_Western,delivered biomass industry,23
+Australia_NZ,delivered biomass industry,23
+Brazil,delivered biomass industry,23
+Canada,delivered biomass industry,23
+Central America and Caribbean,delivered biomass industry,23
+Central Asia,delivered biomass industry,23
+China,delivered biomass industry,23
+India,delivered biomass industry,23
+Indonesia,delivered biomass industry,23
+Japan,delivered biomass industry,23
+Mexico,delivered biomass industry,23
+Middle East,delivered biomass industry,23
+Pakistan,delivered biomass industry,23
+Russia,delivered biomass industry,23
+South Africa,delivered biomass industry,23
+South America_Northern,delivered biomass industry,23
+South America_Southern,delivered biomass industry,23
+South Asia,delivered biomass industry,23
+South Korea,delivered biomass industry,23
+Southeast Asia,delivered biomass industry,23
+Taiwan,delivered biomass industry,23
+Argentina,delivered biomass industry,23
+Colombia,delivered biomass industry,23
+Austria,delivered biomass industry,23
+Belgium,delivered biomass industry,23
+Bulgaria,delivered biomass industry,23
+Croatia,delivered biomass industry,23
+Cyprus,delivered biomass industry,23
+Czech Republic,delivered biomass industry,23
+Denmark,delivered biomass industry,23
+Estonia,delivered biomass industry,23
+Finland,delivered biomass industry,23
+France,delivered biomass industry,23
+Germany,delivered biomass industry,23
+Greece,delivered biomass industry,23
+Hungary,delivered biomass industry,23
+Ireland,delivered biomass industry,23
+Italy,delivered biomass industry,23
+Latvia,delivered biomass industry,23
+Lithuania,delivered biomass industry,23
+Luxembourg,delivered biomass industry,23
+Malta,delivered biomass industry,23
+Netherlands,delivered biomass industry,23
+Poland,delivered biomass industry,23
+Portugal,delivered biomass industry,23
+Romania,delivered biomass industry,23
+Slovakia,delivered biomass industry,23
+Slovenia,delivered biomass industry,23
+Spain,delivered biomass industry,23
+Sweden,delivered biomass industry,23
+Albania,delivered biomass industry,23
+Belarus,delivered biomass industry,23
+Bosnia and Herzegovina,delivered biomass industry,23
+Iceland,delivered biomass industry,23
+Macedonia,delivered biomass industry,23
+Moldova,delivered biomass industry,23
+Norway,delivered biomass industry,23
+Serbia and Montenegro,delivered biomass industry,23
+Switzerland,delivered biomass industry,23
+Turkey,delivered biomass industry,23
+UK,delivered biomass industry,23
+Ukraine,delivered biomass industry,23
+USA,regional biomassOil,19.6
+Africa_Eastern,regional biomassOil,19.6
+Africa_Northern,regional biomassOil,19.6
+Africa_Southern,regional biomassOil,19.6
+Africa_Western,regional biomassOil,19.6
+Australia_NZ,regional biomassOil,19.6
+Brazil,regional biomassOil,19.6
+Canada,regional biomassOil,19.6
+Central America and Caribbean,regional biomassOil,19.6
+Central Asia,regional biomassOil,19.6
+China,regional biomassOil,19.6
+India,regional biomassOil,19.6
+Indonesia,regional biomassOil,19.6
+Japan,regional biomassOil,19.6
+Mexico,regional biomassOil,19.6
+Middle East,regional biomassOil,19.6
+Pakistan,regional biomassOil,19.6
+Russia,regional biomassOil,19.6
+South Africa,regional biomassOil,19.6
+South America_Northern,regional biomassOil,19.6
+South America_Southern,regional biomassOil,19.6
+South Asia,regional biomassOil,19.6
+South Korea,regional biomassOil,19.6
+Southeast Asia,regional biomassOil,19.6
+Taiwan,regional biomassOil,19.6
+Argentina,regional biomassOil,19.6
+Colombia,regional biomassOil,19.6
+Austria,regional biomassOil,19.6
+Belgium,regional biomassOil,19.6
+Bulgaria,regional biomassOil,19.6
+Croatia,regional biomassOil,19.6
+Cyprus,regional biomassOil,19.6
+Czech Republic,regional biomassOil,19.6
+Denmark,regional biomassOil,19.6
+Estonia,regional biomassOil,19.6
+Finland,regional biomassOil,19.6
+France,regional biomassOil,19.6
+Germany,regional biomassOil,19.6
+Greece,regional biomassOil,19.6
+Hungary,regional biomassOil,19.6
+Ireland,regional biomassOil,19.6
+Italy,regional biomassOil,19.6
+Latvia,regional biomassOil,19.6
+Lithuania,regional biomassOil,19.6
+Luxembourg,regional biomassOil,19.6
+Malta,regional biomassOil,19.6
+Netherlands,regional biomassOil,19.6
+Poland,regional biomassOil,19.6
+Portugal,regional biomassOil,19.6
+Romania,regional biomassOil,19.6
+Slovakia,regional biomassOil,19.6
+Slovenia,regional biomassOil,19.6
+Spain,regional biomassOil,19.6
+Sweden,regional biomassOil,19.6
+Albania,regional biomassOil,19.6
+Belarus,regional biomassOil,19.6
+Bosnia and Herzegovina,regional biomassOil,19.6
+Iceland,regional biomassOil,19.6
+Macedonia,regional biomassOil,19.6
+Moldova,regional biomassOil,19.6
+Norway,regional biomassOil,19.6
+Serbia and Montenegro,regional biomassOil,19.6
+Switzerland,regional biomassOil,19.6
+Turkey,regional biomassOil,19.6
+UK,regional biomassOil,19.6
+Ukraine,regional biomassOil,19.6
+USA,regional sugar for ethanol,19.6
+Africa_Eastern,regional sugar for ethanol,19.6
+Africa_Northern,regional sugar for ethanol,19.6
+Africa_Southern,regional sugar for ethanol,19.6
+Africa_Western,regional sugar for ethanol,19.6
+Australia_NZ,regional sugar for ethanol,19.6
+Brazil,regional sugar for ethanol,19.6
+Canada,regional sugar for ethanol,19.6
+Central America and Caribbean,regional sugar for ethanol,19.6
+Central Asia,regional sugar for ethanol,19.6
+China,regional sugar for ethanol,19.6
+India,regional sugar for ethanol,19.6
+Indonesia,regional sugar for ethanol,19.6
+Japan,regional sugar for ethanol,19.6
+Mexico,regional sugar for ethanol,19.6
+Middle East,regional sugar for ethanol,19.6
+Pakistan,regional sugar for ethanol,19.6
+Russia,regional sugar for ethanol,19.6
+South Africa,regional sugar for ethanol,19.6
+South America_Northern,regional sugar for ethanol,19.6
+South America_Southern,regional sugar for ethanol,19.6
+South Asia,regional sugar for ethanol,19.6
+South Korea,regional sugar for ethanol,19.6
+Southeast Asia,regional sugar for ethanol,19.6
+Taiwan,regional sugar for ethanol,19.6
+Argentina,regional sugar for ethanol,19.6
+Colombia,regional sugar for ethanol,19.6
+Austria,regional sugar for ethanol,19.6
+Belgium,regional sugar for ethanol,19.6
+Bulgaria,regional sugar for ethanol,19.6
+Croatia,regional sugar for ethanol,19.6
+Cyprus,regional sugar for ethanol,19.6
+Czech Republic,regional sugar for ethanol,19.6
+Denmark,regional sugar for ethanol,19.6
+Estonia,regional sugar for ethanol,19.6
+Finland,regional sugar for ethanol,19.6
+France,regional sugar for ethanol,19.6
+Germany,regional sugar for ethanol,19.6
+Greece,regional sugar for ethanol,19.6
+Hungary,regional sugar for ethanol,19.6
+Ireland,regional sugar for ethanol,19.6
+Italy,regional sugar for ethanol,19.6
+Latvia,regional sugar for ethanol,19.6
+Lithuania,regional sugar for ethanol,19.6
+Luxembourg,regional sugar for ethanol,19.6
+Malta,regional sugar for ethanol,19.6
+Netherlands,regional sugar for ethanol,19.6
+Poland,regional sugar for ethanol,19.6
+Portugal,regional sugar for ethanol,19.6
+Romania,regional sugar for ethanol,19.6
+Slovakia,regional sugar for ethanol,19.6
+Slovenia,regional sugar for ethanol,19.6
+Spain,regional sugar for ethanol,19.6
+Sweden,regional sugar for ethanol,19.6
+Albania,regional sugar for ethanol,19.6
+Belarus,regional sugar for ethanol,19.6
+Bosnia and Herzegovina,regional sugar for ethanol,19.6
+Iceland,regional sugar for ethanol,19.6
+Macedonia,regional sugar for ethanol,19.6
+Moldova,regional sugar for ethanol,19.6
+Norway,regional sugar for ethanol,19.6
+Serbia and Montenegro,regional sugar for ethanol,19.6
+Switzerland,regional sugar for ethanol,19.6
+Turkey,regional sugar for ethanol,19.6
+UK,regional sugar for ethanol,19.6
+Ukraine,regional sugar for ethanol,19.6
+USA,regional corn for ethanol,19.6
+Africa_Eastern,regional corn for ethanol,19.6
+Africa_Northern,regional corn for ethanol,19.6
+Africa_Southern,regional corn for ethanol,19.6
+Africa_Western,regional corn for ethanol,19.6
+Australia_NZ,regional corn for ethanol,19.6
+Brazil,regional corn for ethanol,19.6
+Canada,regional corn for ethanol,19.6
+Central America and Caribbean,regional corn for ethanol,19.6
+Central Asia,regional corn for ethanol,19.6
+China,regional corn for ethanol,19.6
+India,regional corn for ethanol,19.6
+Indonesia,regional corn for ethanol,19.6
+Japan,regional corn for ethanol,19.6
+Mexico,regional corn for ethanol,19.6
+Middle East,regional corn for ethanol,19.6
+Pakistan,regional corn for ethanol,19.6
+Russia,regional corn for ethanol,19.6
+South Africa,regional corn for ethanol,19.6
+South America_Northern,regional corn for ethanol,19.6
+South America_Southern,regional corn for ethanol,19.6
+South Asia,regional corn for ethanol,19.6
+South Korea,regional corn for ethanol,19.6
+Southeast Asia,regional corn for ethanol,19.6
+Taiwan,regional corn for ethanol,19.6
+Argentina,regional corn for ethanol,19.6
+Colombia,regional corn for ethanol,19.6
+Austria,regional corn for ethanol,19.6
+Belgium,regional corn for ethanol,19.6
+Bulgaria,regional corn for ethanol,19.6
+Croatia,regional corn for ethanol,19.6
+Cyprus,regional corn for ethanol,19.6
+Czech Republic,regional corn for ethanol,19.6
+Denmark,regional corn for ethanol,19.6
+Estonia,regional corn for ethanol,19.6
+Finland,regional corn for ethanol,19.6
+France,regional corn for ethanol,19.6
+Germany,regional corn for ethanol,19.6
+Greece,regional corn for ethanol,19.6
+Hungary,regional corn for ethanol,19.6
+Ireland,regional corn for ethanol,19.6
+Italy,regional corn for ethanol,19.6
+Latvia,regional corn for ethanol,19.6
+Lithuania,regional corn for ethanol,19.6
+Luxembourg,regional corn for ethanol,19.6
+Malta,regional corn for ethanol,19.6
+Netherlands,regional corn for ethanol,19.6
+Poland,regional corn for ethanol,19.6
+Portugal,regional corn for ethanol,19.6
+Romania,regional corn for ethanol,19.6
+Slovakia,regional corn for ethanol,19.6
+Slovenia,regional corn for ethanol,19.6
+Spain,regional corn for ethanol,19.6
+Sweden,regional corn for ethanol,19.6
+Albania,regional corn for ethanol,19.6
+Belarus,regional corn for ethanol,19.6
+Bosnia and Herzegovina,regional corn for ethanol,19.6
+Iceland,regional corn for ethanol,19.6
+Macedonia,regional corn for ethanol,19.6
+Moldova,regional corn for ethanol,19.6
+Norway,regional corn for ethanol,19.6
+Serbia and Montenegro,regional corn for ethanol,19.6
+Switzerland,regional corn for ethanol,19.6
+Turkey,regional corn for ethanol,19.6
+UK,regional corn for ethanol,19.6
+Ukraine,regional corn for ethanol,19.6
+USA,coal,27.3
+Africa_Eastern,coal,27.3
+Africa_Northern,coal,27.3
+Africa_Southern,coal,27.3
+Africa_Western,coal,27.3
+Australia_NZ,coal,27.3
+Brazil,coal,27.3
+Canada,coal,27.3
+Central America and Caribbean,coal,27.3
+Central Asia,coal,27.3
+China,coal,27.3
+India,coal,27.3
+Indonesia,coal,27.3
+Japan,coal,27.3
+Mexico,coal,27.3
+Middle East,coal,27.3
+Pakistan,coal,27.3
+Russia,coal,27.3
+South Africa,coal,27.3
+South America_Northern,coal,27.3
+South America_Southern,coal,27.3
+South Asia,coal,27.3
+South Korea,coal,27.3
+Southeast Asia,coal,27.3
+Taiwan,coal,27.3
+Argentina,coal,27.3
+Colombia,coal,27.3
+Austria,coal,27.3
+Belgium,coal,27.3
+Bulgaria,coal,27.3
+Croatia,coal,27.3
+Cyprus,coal,27.3
+Czech Republic,coal,27.3
+Denmark,coal,27.3
+Estonia,coal,27.3
+Finland,coal,27.3
+France,coal,27.3
+Germany,coal,27.3
+Greece,coal,27.3
+Hungary,coal,27.3
+Ireland,coal,27.3
+Italy,coal,27.3
+Latvia,coal,27.3
+Lithuania,coal,27.3
+Luxembourg,coal,27.3
+Malta,coal,27.3
+Netherlands,coal,27.3
+Poland,coal,27.3
+Portugal,coal,27.3
+Romania,coal,27.3
+Slovakia,coal,27.3
+Slovenia,coal,27.3
+Spain,coal,27.3
+Sweden,coal,27.3
+Albania,coal,27.3
+Belarus,coal,27.3
+Bosnia and Herzegovina,coal,27.3
+Iceland,coal,27.3
+Macedonia,coal,27.3
+Moldova,coal,27.3
+Norway,coal,27.3
+Serbia and Montenegro,coal,27.3
+Switzerland,coal,27.3
+Turkey,coal,27.3
+UK,coal,27.3
+Ukraine,coal,27.3
+USA,regional coal,27.3
+Africa_Eastern,regional coal,27.3
+Africa_Northern,regional coal,27.3
+Africa_Southern,regional coal,27.3
+Africa_Western,regional coal,27.3
+Australia_NZ,regional coal,27.3
+Brazil,regional coal,27.3
+Canada,regional coal,27.3
+Central America and Caribbean,regional coal,27.3
+Central Asia,regional coal,27.3
+China,regional coal,27.3
+India,regional coal,27.3
+Indonesia,regional coal,27.3
+Japan,regional coal,27.3
+Mexico,regional coal,27.3
+Middle East,regional coal,27.3
+Pakistan,regional coal,27.3
+Russia,regional coal,27.3
+South Africa,regional coal,27.3
+South America_Northern,regional coal,27.3
+South America_Southern,regional coal,27.3
+South Asia,regional coal,27.3
+South Korea,regional coal,27.3
+Southeast Asia,regional coal,27.3
+Taiwan,regional coal,27.3
+Argentina,regional coal,27.3
+Colombia,regional coal,27.3
+Austria,regional coal,27.3
+Belgium,regional coal,27.3
+Bulgaria,regional coal,27.3
+Croatia,regional coal,27.3
+Cyprus,regional coal,27.3
+Czech Republic,regional coal,27.3
+Denmark,regional coal,27.3
+Estonia,regional coal,27.3
+Finland,regional coal,27.3
+France,regional coal,27.3
+Germany,regional coal,27.3
+Greece,regional coal,27.3
+Hungary,regional coal,27.3
+Ireland,regional coal,27.3
+Italy,regional coal,27.3
+Latvia,regional coal,27.3
+Lithuania,regional coal,27.3
+Luxembourg,regional coal,27.3
+Malta,regional coal,27.3
+Netherlands,regional coal,27.3
+Poland,regional coal,27.3
+Portugal,regional coal,27.3
+Romania,regional coal,27.3
+Slovakia,regional coal,27.3
+Slovenia,regional coal,27.3
+Spain,regional coal,27.3
+Sweden,regional coal,27.3
+Albania,regional coal,27.3
+Belarus,regional coal,27.3
+Bosnia and Herzegovina,regional coal,27.3
+Iceland,regional coal,27.3
+Macedonia,regional coal,27.3
+Moldova,regional coal,27.3
+Norway,regional coal,27.3
+Serbia and Montenegro,regional coal,27.3
+Switzerland,regional coal,27.3
+Turkey,regional coal,27.3
+UK,regional coal,27.3
+Ukraine,regional coal,27.3
+USA,delivered coal,27.3
+Africa_Eastern,delivered coal,27.3
+Africa_Northern,delivered coal,27.3
+Africa_Southern,delivered coal,27.3
+Africa_Western,delivered coal,27.3
+Australia_NZ,delivered coal,27.3
+Brazil,delivered coal,27.3
+Canada,delivered coal,27.3
+Central America and Caribbean,delivered coal,27.3
+Central Asia,delivered coal,27.3
+China,delivered coal,27.3
+India,delivered coal,27.3
+Indonesia,delivered coal,27.3
+Japan,delivered coal,27.3
+Mexico,delivered coal,27.3
+Middle East,delivered coal,27.3
+Pakistan,delivered coal,27.3
+Russia,delivered coal,27.3
+South Africa,delivered coal,27.3
+South America_Northern,delivered coal,27.3
+South America_Southern,delivered coal,27.3
+South Asia,delivered coal,27.3
+South Korea,delivered coal,27.3
+Southeast Asia,delivered coal,27.3
+Taiwan,delivered coal,27.3
+Argentina,delivered coal,27.3
+Colombia,delivered coal,27.3
+Austria,delivered coal,27.3
+Belgium,delivered coal,27.3
+Bulgaria,delivered coal,27.3
+Croatia,delivered coal,27.3
+Cyprus,delivered coal,27.3
+Czech Republic,delivered coal,27.3
+Denmark,delivered coal,27.3
+Estonia,delivered coal,27.3
+Finland,delivered coal,27.3
+France,delivered coal,27.3
+Germany,delivered coal,27.3
+Greece,delivered coal,27.3
+Hungary,delivered coal,27.3
+Ireland,delivered coal,27.3
+Italy,delivered coal,27.3
+Latvia,delivered coal,27.3
+Lithuania,delivered coal,27.3
+Luxembourg,delivered coal,27.3
+Malta,delivered coal,27.3
+Netherlands,delivered coal,27.3
+Poland,delivered coal,27.3
+Portugal,delivered coal,27.3
+Romania,delivered coal,27.3
+Slovakia,delivered coal,27.3
+Slovenia,delivered coal,27.3
+Spain,delivered coal,27.3
+Sweden,delivered coal,27.3
+Albania,delivered coal,27.3
+Belarus,delivered coal,27.3
+Bosnia and Herzegovina,delivered coal,27.3
+Iceland,delivered coal,27.3
+Macedonia,delivered coal,27.3
+Moldova,delivered coal,27.3
+Norway,delivered coal,27.3
+Serbia and Montenegro,delivered coal,27.3
+Switzerland,delivered coal,27.3
+Turkey,delivered coal,27.3
+UK,delivered coal,27.3
+Ukraine,delivered coal,27.3
+USA,delivered coal industry,27.3
+Africa_Eastern,delivered coal industry,27.3
+Africa_Northern,delivered coal industry,27.3
+Africa_Southern,delivered coal industry,27.3
+Africa_Western,delivered coal industry,27.3
+Australia_NZ,delivered coal industry,27.3
+Brazil,delivered coal industry,27.3
+Canada,delivered coal industry,27.3
+Central America and Caribbean,delivered coal industry,27.3
+Central Asia,delivered coal industry,27.3
+China,delivered coal industry,27.3
+India,delivered coal industry,27.3
+Indonesia,delivered coal industry,27.3
+Japan,delivered coal industry,27.3
+Mexico,delivered coal industry,27.3
+Middle East,delivered coal industry,27.3
+Pakistan,delivered coal industry,27.3
+Russia,delivered coal industry,27.3
+South Africa,delivered coal industry,27.3
+South America_Northern,delivered coal industry,27.3
+South America_Southern,delivered coal industry,27.3
+South Asia,delivered coal industry,27.3
+South Korea,delivered coal industry,27.3
+Southeast Asia,delivered coal industry,27.3
+Taiwan,delivered coal industry,27.3
+Argentina,delivered coal industry,27.3
+Colombia,delivered coal industry,27.3
+Austria,delivered coal industry,27.3
+Belgium,delivered coal industry,27.3
+Bulgaria,delivered coal industry,27.3
+Croatia,delivered coal industry,27.3
+Cyprus,delivered coal industry,27.3
+Czech Republic,delivered coal industry,27.3
+Denmark,delivered coal industry,27.3
+Estonia,delivered coal industry,27.3
+Finland,delivered coal industry,27.3
+France,delivered coal industry,27.3
+Germany,delivered coal industry,27.3
+Greece,delivered coal industry,27.3
+Hungary,delivered coal industry,27.3
+Ireland,delivered coal industry,27.3
+Italy,delivered coal industry,27.3
+Latvia,delivered coal industry,27.3
+Lithuania,delivered coal industry,27.3
+Luxembourg,delivered coal industry,27.3
+Malta,delivered coal industry,27.3
+Netherlands,delivered coal industry,27.3
+Poland,delivered coal industry,27.3
+Portugal,delivered coal industry,27.3
+Romania,delivered coal industry,27.3
+Slovakia,delivered coal industry,27.3
+Slovenia,delivered coal industry,27.3
+Spain,delivered coal industry,27.3
+Sweden,delivered coal industry,27.3
+Albania,delivered coal industry,27.3
+Belarus,delivered coal industry,27.3
+Bosnia and Herzegovina,delivered coal industry,27.3
+Iceland,delivered coal industry,27.3
+Macedonia,delivered coal industry,27.3
+Moldova,delivered coal industry,27.3
+Norway,delivered coal industry,27.3
+Serbia and Montenegro,delivered coal industry,27.3
+Switzerland,delivered coal industry,27.3
+Turkey,delivered coal industry,27.3
+UK,delivered coal industry,27.3
+Ukraine,delivered coal industry,27.3
+USA,natural gas,14.2
+Africa_Eastern,natural gas,14.2
+Africa_Northern,natural gas,14.2
+Africa_Southern,natural gas,14.2
+Africa_Western,natural gas,14.2
+Australia_NZ,natural gas,14.2
+Brazil,natural gas,14.2
+Canada,natural gas,14.2
+Central America and Caribbean,natural gas,14.2
+Central Asia,natural gas,14.2
+China,natural gas,14.2
+India,natural gas,14.2
+Indonesia,natural gas,14.2
+Japan,natural gas,14.2
+Mexico,natural gas,14.2
+Middle East,natural gas,14.2
+Pakistan,natural gas,14.2
+Russia,natural gas,14.2
+South Africa,natural gas,14.2
+South America_Northern,natural gas,14.2
+South America_Southern,natural gas,14.2
+South Asia,natural gas,14.2
+South Korea,natural gas,14.2
+Southeast Asia,natural gas,14.2
+Taiwan,natural gas,14.2
+Argentina,natural gas,14.2
+Colombia,natural gas,14.2
+Austria,natural gas,14.2
+Belgium,natural gas,14.2
+Bulgaria,natural gas,14.2
+Croatia,natural gas,14.2
+Cyprus,natural gas,14.2
+Czech Republic,natural gas,14.2
+Denmark,natural gas,14.2
+Estonia,natural gas,14.2
+Finland,natural gas,14.2
+France,natural gas,14.2
+Germany,natural gas,14.2
+Greece,natural gas,14.2
+Hungary,natural gas,14.2
+Ireland,natural gas,14.2
+Italy,natural gas,14.2
+Latvia,natural gas,14.2
+Lithuania,natural gas,14.2
+Luxembourg,natural gas,14.2
+Malta,natural gas,14.2
+Netherlands,natural gas,14.2
+Poland,natural gas,14.2
+Portugal,natural gas,14.2
+Romania,natural gas,14.2
+Slovakia,natural gas,14.2
+Slovenia,natural gas,14.2
+Spain,natural gas,14.2
+Sweden,natural gas,14.2
+Albania,natural gas,14.2
+Belarus,natural gas,14.2
+Bosnia and Herzegovina,natural gas,14.2
+Iceland,natural gas,14.2
+Macedonia,natural gas,14.2
+Moldova,natural gas,14.2
+Norway,natural gas,14.2
+Serbia and Montenegro,natural gas,14.2
+Switzerland,natural gas,14.2
+Turkey,natural gas,14.2
+UK,natural gas,14.2
+Ukraine,natural gas,14.2
+USA,regional natural gas,14.2
+Africa_Eastern,regional natural gas,14.2
+Africa_Northern,regional natural gas,14.2
+Africa_Southern,regional natural gas,14.2
+Africa_Western,regional natural gas,14.2
+Australia_NZ,regional natural gas,14.2
+Brazil,regional natural gas,14.2
+Canada,regional natural gas,14.2
+Central America and Caribbean,regional natural gas,14.2
+Central Asia,regional natural gas,14.2
+China,regional natural gas,14.2
+India,regional natural gas,14.2
+Indonesia,regional natural gas,14.2
+Japan,regional natural gas,14.2
+Mexico,regional natural gas,14.2
+Middle East,regional natural gas,14.2
+Pakistan,regional natural gas,14.2
+Russia,regional natural gas,14.2
+South Africa,regional natural gas,14.2
+South America_Northern,regional natural gas,14.2
+South America_Southern,regional natural gas,14.2
+South Asia,regional natural gas,14.2
+South Korea,regional natural gas,14.2
+Southeast Asia,regional natural gas,14.2
+Taiwan,regional natural gas,14.2
+Argentina,regional natural gas,14.2
+Colombia,regional natural gas,14.2
+Austria,regional natural gas,14.2
+Belgium,regional natural gas,14.2
+Bulgaria,regional natural gas,14.2
+Croatia,regional natural gas,14.2
+Cyprus,regional natural gas,14.2
+Czech Republic,regional natural gas,14.2
+Denmark,regional natural gas,14.2
+Estonia,regional natural gas,14.2
+Finland,regional natural gas,14.2
+France,regional natural gas,14.2
+Germany,regional natural gas,14.2
+Greece,regional natural gas,14.2
+Hungary,regional natural gas,14.2
+Ireland,regional natural gas,14.2
+Italy,regional natural gas,14.2
+Latvia,regional natural gas,14.2
+Lithuania,regional natural gas,14.2
+Luxembourg,regional natural gas,14.2
+Malta,regional natural gas,14.2
+Netherlands,regional natural gas,14.2
+Poland,regional natural gas,14.2
+Portugal,regional natural gas,14.2
+Romania,regional natural gas,14.2
+Slovakia,regional natural gas,14.2
+Slovenia,regional natural gas,14.2
+Spain,regional natural gas,14.2
+Sweden,regional natural gas,14.2
+Albania,regional natural gas,14.2
+Belarus,regional natural gas,14.2
+Bosnia and Herzegovina,regional natural gas,14.2
+Iceland,regional natural gas,14.2
+Macedonia,regional natural gas,14.2
+Moldova,regional natural gas,14.2
+Norway,regional natural gas,14.2
+Serbia and Montenegro,regional natural gas,14.2
+Switzerland,regional natural gas,14.2
+Turkey,regional natural gas,14.2
+UK,regional natural gas,14.2
+Ukraine,regional natural gas,14.2
+USA,gas processing,14.2
+Africa_Eastern,gas processing,14.2
+Africa_Northern,gas processing,14.2
+Africa_Southern,gas processing,14.2
+Africa_Western,gas processing,14.2
+Australia_NZ,gas processing,14.2
+Brazil,gas processing,14.2
+Canada,gas processing,14.2
+Central America and Caribbean,gas processing,14.2
+Central Asia,gas processing,14.2
+China,gas processing,14.2
+India,gas processing,14.2
+Indonesia,gas processing,14.2
+Japan,gas processing,14.2
+Mexico,gas processing,14.2
+Middle East,gas processing,14.2
+Pakistan,gas processing,14.2
+Russia,gas processing,14.2
+South Africa,gas processing,14.2
+South America_Northern,gas processing,14.2
+South America_Southern,gas processing,14.2
+South Asia,gas processing,14.2
+South Korea,gas processing,14.2
+Southeast Asia,gas processing,14.2
+Taiwan,gas processing,14.2
+Argentina,gas processing,14.2
+Colombia,gas processing,14.2
+Austria,gas processing,14.2
+Belgium,gas processing,14.2
+Bulgaria,gas processing,14.2
+Croatia,gas processing,14.2
+Cyprus,gas processing,14.2
+Czech Republic,gas processing,14.2
+Denmark,gas processing,14.2
+Estonia,gas processing,14.2
+Finland,gas processing,14.2
+France,gas processing,14.2
+Germany,gas processing,14.2
+Greece,gas processing,14.2
+Hungary,gas processing,14.2
+Ireland,gas processing,14.2
+Italy,gas processing,14.2
+Latvia,gas processing,14.2
+Lithuania,gas processing,14.2
+Luxembourg,gas processing,14.2
+Malta,gas processing,14.2
+Netherlands,gas processing,14.2
+Poland,gas processing,14.2
+Portugal,gas processing,14.2
+Romania,gas processing,14.2
+Slovakia,gas processing,14.2
+Slovenia,gas processing,14.2
+Spain,gas processing,14.2
+Sweden,gas processing,14.2
+Albania,gas processing,14.2
+Belarus,gas processing,14.2
+Bosnia and Herzegovina,gas processing,14.2
+Iceland,gas processing,14.2
+Macedonia,gas processing,14.2
+Moldova,gas processing,14.2
+Norway,gas processing,14.2
+Serbia and Montenegro,gas processing,14.2
+Switzerland,gas processing,14.2
+Turkey,gas processing,14.2
+UK,gas processing,14.2
+Ukraine,gas processing,14.2
+USA,gas pipeline,14.2
+Africa_Eastern,gas pipeline,14.2
+Africa_Northern,gas pipeline,14.2
+Africa_Southern,gas pipeline,14.2
+Africa_Western,gas pipeline,14.2
+Australia_NZ,gas pipeline,14.2
+Brazil,gas pipeline,14.2
+Canada,gas pipeline,14.2
+Central America and Caribbean,gas pipeline,14.2
+Central Asia,gas pipeline,14.2
+China,gas pipeline,14.2
+India,gas pipeline,14.2
+Indonesia,gas pipeline,14.2
+Japan,gas pipeline,14.2
+Mexico,gas pipeline,14.2
+Middle East,gas pipeline,14.2
+Pakistan,gas pipeline,14.2
+Russia,gas pipeline,14.2
+South Africa,gas pipeline,14.2
+South America_Northern,gas pipeline,14.2
+South America_Southern,gas pipeline,14.2
+South Asia,gas pipeline,14.2
+South Korea,gas pipeline,14.2
+Southeast Asia,gas pipeline,14.2
+Taiwan,gas pipeline,14.2
+Argentina,gas pipeline,14.2
+Colombia,gas pipeline,14.2
+Austria,gas pipeline,14.2
+Belgium,gas pipeline,14.2
+Bulgaria,gas pipeline,14.2
+Croatia,gas pipeline,14.2
+Cyprus,gas pipeline,14.2
+Czech Republic,gas pipeline,14.2
+Denmark,gas pipeline,14.2
+Estonia,gas pipeline,14.2
+Finland,gas pipeline,14.2
+France,gas pipeline,14.2
+Germany,gas pipeline,14.2
+Greece,gas pipeline,14.2
+Hungary,gas pipeline,14.2
+Ireland,gas pipeline,14.2
+Italy,gas pipeline,14.2
+Latvia,gas pipeline,14.2
+Lithuania,gas pipeline,14.2
+Luxembourg,gas pipeline,14.2
+Malta,gas pipeline,14.2
+Netherlands,gas pipeline,14.2
+Poland,gas pipeline,14.2
+Portugal,gas pipeline,14.2
+Romania,gas pipeline,14.2
+Slovakia,gas pipeline,14.2
+Slovenia,gas pipeline,14.2
+Spain,gas pipeline,14.2
+Sweden,gas pipeline,14.2
+Albania,gas pipeline,14.2
+Belarus,gas pipeline,14.2
+Bosnia and Herzegovina,gas pipeline,14.2
+Iceland,gas pipeline,14.2
+Macedonia,gas pipeline,14.2
+Moldova,gas pipeline,14.2
+Norway,gas pipeline,14.2
+Serbia and Montenegro,gas pipeline,14.2
+Switzerland,gas pipeline,14.2
+Turkey,gas pipeline,14.2
+UK,gas pipeline,14.2
+Ukraine,gas pipeline,14.2
+USA,wholesale gas,14.2
+Africa_Eastern,wholesale gas,14.2
+Africa_Northern,wholesale gas,14.2
+Africa_Southern,wholesale gas,14.2
+Africa_Western,wholesale gas,14.2
+Australia_NZ,wholesale gas,14.2
+Brazil,wholesale gas,14.2
+Canada,wholesale gas,14.2
+Central America and Caribbean,wholesale gas,14.2
+Central Asia,wholesale gas,14.2
+China,wholesale gas,14.2
+India,wholesale gas,14.2
+Indonesia,wholesale gas,14.2
+Japan,wholesale gas,14.2
+Mexico,wholesale gas,14.2
+Middle East,wholesale gas,14.2
+Pakistan,wholesale gas,14.2
+Russia,wholesale gas,14.2
+South Africa,wholesale gas,14.2
+South America_Northern,wholesale gas,14.2
+South America_Southern,wholesale gas,14.2
+South Asia,wholesale gas,14.2
+South Korea,wholesale gas,14.2
+Southeast Asia,wholesale gas,14.2
+Taiwan,wholesale gas,14.2
+Argentina,wholesale gas,14.2
+Colombia,wholesale gas,14.2
+Austria,wholesale gas,14.2
+Belgium,wholesale gas,14.2
+Bulgaria,wholesale gas,14.2
+Croatia,wholesale gas,14.2
+Cyprus,wholesale gas,14.2
+Czech Republic,wholesale gas,14.2
+Denmark,wholesale gas,14.2
+Estonia,wholesale gas,14.2
+Finland,wholesale gas,14.2
+France,wholesale gas,14.2
+Germany,wholesale gas,14.2
+Greece,wholesale gas,14.2
+Hungary,wholesale gas,14.2
+Ireland,wholesale gas,14.2
+Italy,wholesale gas,14.2
+Latvia,wholesale gas,14.2
+Lithuania,wholesale gas,14.2
+Luxembourg,wholesale gas,14.2
+Malta,wholesale gas,14.2
+Netherlands,wholesale gas,14.2
+Poland,wholesale gas,14.2
+Portugal,wholesale gas,14.2
+Romania,wholesale gas,14.2
+Slovakia,wholesale gas,14.2
+Slovenia,wholesale gas,14.2
+Spain,wholesale gas,14.2
+Sweden,wholesale gas,14.2
+Albania,wholesale gas,14.2
+Belarus,wholesale gas,14.2
+Bosnia and Herzegovina,wholesale gas,14.2
+Iceland,wholesale gas,14.2
+Macedonia,wholesale gas,14.2
+Moldova,wholesale gas,14.2
+Norway,wholesale gas,14.2
+Serbia and Montenegro,wholesale gas,14.2
+Switzerland,wholesale gas,14.2
+Turkey,wholesale gas,14.2
+UK,wholesale gas,14.2
+Ukraine,wholesale gas,14.2
+USA,delivered gas,14.2
+Africa_Eastern,delivered gas,14.2
+Africa_Northern,delivered gas,14.2
+Africa_Southern,delivered gas,14.2
+Africa_Western,delivered gas,14.2
+Australia_NZ,delivered gas,14.2
+Brazil,delivered gas,14.2
+Canada,delivered gas,14.2
+Central America and Caribbean,delivered gas,14.2
+Central Asia,delivered gas,14.2
+China,delivered gas,14.2
+India,delivered gas,14.2
+Indonesia,delivered gas,14.2
+Japan,delivered gas,14.2
+Mexico,delivered gas,14.2
+Middle East,delivered gas,14.2
+Pakistan,delivered gas,14.2
+Russia,delivered gas,14.2
+South Africa,delivered gas,14.2
+South America_Northern,delivered gas,14.2
+South America_Southern,delivered gas,14.2
+South Asia,delivered gas,14.2
+South Korea,delivered gas,14.2
+Southeast Asia,delivered gas,14.2
+Taiwan,delivered gas,14.2
+Argentina,delivered gas,14.2
+Colombia,delivered gas,14.2
+Austria,delivered gas,14.2
+Belgium,delivered gas,14.2
+Bulgaria,delivered gas,14.2
+Croatia,delivered gas,14.2
+Cyprus,delivered gas,14.2
+Czech Republic,delivered gas,14.2
+Denmark,delivered gas,14.2
+Estonia,delivered gas,14.2
+Finland,delivered gas,14.2
+France,delivered gas,14.2
+Germany,delivered gas,14.2
+Greece,delivered gas,14.2
+Hungary,delivered gas,14.2
+Ireland,delivered gas,14.2
+Italy,delivered gas,14.2
+Latvia,delivered gas,14.2
+Lithuania,delivered gas,14.2
+Luxembourg,delivered gas,14.2
+Malta,delivered gas,14.2
+Netherlands,delivered gas,14.2
+Poland,delivered gas,14.2
+Portugal,delivered gas,14.2
+Romania,delivered gas,14.2
+Slovakia,delivered gas,14.2
+Slovenia,delivered gas,14.2
+Spain,delivered gas,14.2
+Sweden,delivered gas,14.2
+Albania,delivered gas,14.2
+Belarus,delivered gas,14.2
+Bosnia and Herzegovina,delivered gas,14.2
+Iceland,delivered gas,14.2
+Macedonia,delivered gas,14.2
+Moldova,delivered gas,14.2
+Norway,delivered gas,14.2
+Serbia and Montenegro,delivered gas,14.2
+Switzerland,delivered gas,14.2
+Turkey,delivered gas,14.2
+UK,delivered gas,14.2
+Ukraine,delivered gas,14.2
+USA,delivered gas transport,14.2
+Africa_Eastern,delivered gas transport,14.2
+Africa_Northern,delivered gas transport,14.2
+Africa_Southern,delivered gas transport,14.2
+Africa_Western,delivered gas transport,14.2
+Australia_NZ,delivered gas transport,14.2
+Brazil,delivered gas transport,14.2
+Canada,delivered gas transport,14.2
+Central America and Caribbean,delivered gas transport,14.2
+Central Asia,delivered gas transport,14.2
+China,delivered gas transport,14.2
+India,delivered gas transport,14.2
+Indonesia,delivered gas transport,14.2
+Japan,delivered gas transport,14.2
+Mexico,delivered gas transport,14.2
+Middle East,delivered gas transport,14.2
+Pakistan,delivered gas transport,14.2
+Russia,delivered gas transport,14.2
+South Africa,delivered gas transport,14.2
+South America_Northern,delivered gas transport,14.2
+South America_Southern,delivered gas transport,14.2
+South Asia,delivered gas transport,14.2
+South Korea,delivered gas transport,14.2
+Southeast Asia,delivered gas transport,14.2
+Taiwan,delivered gas transport,14.2
+Argentina,delivered gas transport,14.2
+Colombia,delivered gas transport,14.2
+Austria,delivered gas transport,14.2
+Belgium,delivered gas transport,14.2
+Bulgaria,delivered gas transport,14.2
+Croatia,delivered gas transport,14.2
+Cyprus,delivered gas transport,14.2
+Czech Republic,delivered gas transport,14.2
+Denmark,delivered gas transport,14.2
+Estonia,delivered gas transport,14.2
+Finland,delivered gas transport,14.2
+France,delivered gas transport,14.2
+Germany,delivered gas transport,14.2
+Greece,delivered gas transport,14.2
+Hungary,delivered gas transport,14.2
+Ireland,delivered gas transport,14.2
+Italy,delivered gas transport,14.2
+Latvia,delivered gas transport,14.2
+Lithuania,delivered gas transport,14.2
+Luxembourg,delivered gas transport,14.2
+Malta,delivered gas transport,14.2
+Netherlands,delivered gas transport,14.2
+Poland,delivered gas transport,14.2
+Portugal,delivered gas transport,14.2
+Romania,delivered gas transport,14.2
+Slovakia,delivered gas transport,14.2
+Slovenia,delivered gas transport,14.2
+Spain,delivered gas transport,14.2
+Sweden,delivered gas transport,14.2
+Albania,delivered gas transport,14.2
+Belarus,delivered gas transport,14.2
+Bosnia and Herzegovina,delivered gas transport,14.2
+Iceland,delivered gas transport,14.2
+Macedonia,delivered gas transport,14.2
+Moldova,delivered gas transport,14.2
+Norway,delivered gas transport,14.2
+Serbia and Montenegro,delivered gas transport,14.2
+Switzerland,delivered gas transport,14.2
+Turkey,delivered gas transport,14.2
+UK,delivered gas transport,14.2
+Ukraine,delivered gas transport,14.2
+USA,crude oil,19.6
+Africa_Eastern,crude oil,19.6
+Africa_Northern,crude oil,19.6
+Africa_Southern,crude oil,19.6
+Africa_Western,crude oil,19.6
+Australia_NZ,crude oil,19.6
+Brazil,crude oil,19.6
+Canada,crude oil,19.6
+Central America and Caribbean,crude oil,19.6
+Central Asia,crude oil,19.6
+China,crude oil,19.6
+India,crude oil,19.6
+Indonesia,crude oil,19.6
+Japan,crude oil,19.6
+Mexico,crude oil,19.6
+Middle East,crude oil,19.6
+Pakistan,crude oil,19.6
+Russia,crude oil,19.6
+South Africa,crude oil,19.6
+South America_Northern,crude oil,19.6
+South America_Southern,crude oil,19.6
+South Asia,crude oil,19.6
+South Korea,crude oil,19.6
+Southeast Asia,crude oil,19.6
+Taiwan,crude oil,19.6
+Argentina,crude oil,19.6
+Colombia,crude oil,19.6
+Austria,crude oil,19.6
+Belgium,crude oil,19.6
+Bulgaria,crude oil,19.6
+Croatia,crude oil,19.6
+Cyprus,crude oil,19.6
+Czech Republic,crude oil,19.6
+Denmark,crude oil,19.6
+Estonia,crude oil,19.6
+Finland,crude oil,19.6
+France,crude oil,19.6
+Germany,crude oil,19.6
+Greece,crude oil,19.6
+Hungary,crude oil,19.6
+Ireland,crude oil,19.6
+Italy,crude oil,19.6
+Latvia,crude oil,19.6
+Lithuania,crude oil,19.6
+Luxembourg,crude oil,19.6
+Malta,crude oil,19.6
+Netherlands,crude oil,19.6
+Poland,crude oil,19.6
+Portugal,crude oil,19.6
+Romania,crude oil,19.6
+Slovakia,crude oil,19.6
+Slovenia,crude oil,19.6
+Spain,crude oil,19.6
+Sweden,crude oil,19.6
+Albania,crude oil,19.6
+Belarus,crude oil,19.6
+Bosnia and Herzegovina,crude oil,19.6
+Iceland,crude oil,19.6
+Macedonia,crude oil,19.6
+Moldova,crude oil,19.6
+Norway,crude oil,19.6
+Serbia and Montenegro,crude oil,19.6
+Switzerland,crude oil,19.6
+Turkey,crude oil,19.6
+UK,crude oil,19.6
+Ukraine,crude oil,19.6
+USA,regional oil,19.6
+Africa_Eastern,regional oil,19.6
+Africa_Northern,regional oil,19.6
+Africa_Southern,regional oil,19.6
+Africa_Western,regional oil,19.6
+Australia_NZ,regional oil,19.6
+Brazil,regional oil,19.6
+Canada,regional oil,19.6
+Central America and Caribbean,regional oil,19.6
+Central Asia,regional oil,19.6
+China,regional oil,19.6
+India,regional oil,19.6
+Indonesia,regional oil,19.6
+Japan,regional oil,19.6
+Mexico,regional oil,19.6
+Middle East,regional oil,19.6
+Pakistan,regional oil,19.6
+Russia,regional oil,19.6
+South Africa,regional oil,19.6
+South America_Northern,regional oil,19.6
+South America_Southern,regional oil,19.6
+South Asia,regional oil,19.6
+South Korea,regional oil,19.6
+Southeast Asia,regional oil,19.6
+Taiwan,regional oil,19.6
+Argentina,regional oil,19.6
+Colombia,regional oil,19.6
+Austria,regional oil,19.6
+Belgium,regional oil,19.6
+Bulgaria,regional oil,19.6
+Croatia,regional oil,19.6
+Cyprus,regional oil,19.6
+Czech Republic,regional oil,19.6
+Denmark,regional oil,19.6
+Estonia,regional oil,19.6
+Finland,regional oil,19.6
+France,regional oil,19.6
+Germany,regional oil,19.6
+Greece,regional oil,19.6
+Hungary,regional oil,19.6
+Ireland,regional oil,19.6
+Italy,regional oil,19.6
+Latvia,regional oil,19.6
+Lithuania,regional oil,19.6
+Luxembourg,regional oil,19.6
+Malta,regional oil,19.6
+Netherlands,regional oil,19.6
+Poland,regional oil,19.6
+Portugal,regional oil,19.6
+Romania,regional oil,19.6
+Slovakia,regional oil,19.6
+Slovenia,regional oil,19.6
+Spain,regional oil,19.6
+Sweden,regional oil,19.6
+Albania,regional oil,19.6
+Belarus,regional oil,19.6
+Bosnia and Herzegovina,regional oil,19.6
+Iceland,regional oil,19.6
+Macedonia,regional oil,19.6
+Moldova,regional oil,19.6
+Norway,regional oil,19.6
+Serbia and Montenegro,regional oil,19.6
+Switzerland,regional oil,19.6
+Turkey,regional oil,19.6
+UK,regional oil,19.6
+Ukraine,regional oil,19.6
+USA,refining,19.6
+Africa_Eastern,refining,19.6
+Africa_Northern,refining,19.6
+Africa_Southern,refining,19.6
+Africa_Western,refining,19.6
+Australia_NZ,refining,19.6
+Brazil,refining,19.6
+Canada,refining,19.6
+Central America and Caribbean,refining,19.6
+Central Asia,refining,19.6
+China,refining,19.6
+India,refining,19.6
+Indonesia,refining,19.6
+Japan,refining,19.6
+Mexico,refining,19.6
+Middle East,refining,19.6
+Pakistan,refining,19.6
+Russia,refining,19.6
+South Africa,refining,19.6
+South America_Northern,refining,19.6
+South America_Southern,refining,19.6
+South Asia,refining,19.6
+South Korea,refining,19.6
+Southeast Asia,refining,19.6
+Taiwan,refining,19.6
+Argentina,refining,19.6
+Colombia,refining,19.6
+Austria,refining,19.6
+Belgium,refining,19.6
+Bulgaria,refining,19.6
+Croatia,refining,19.6
+Cyprus,refining,19.6
+Czech Republic,refining,19.6
+Denmark,refining,19.6
+Estonia,refining,19.6
+Finland,refining,19.6
+France,refining,19.6
+Germany,refining,19.6
+Greece,refining,19.6
+Hungary,refining,19.6
+Ireland,refining,19.6
+Italy,refining,19.6
+Latvia,refining,19.6
+Lithuania,refining,19.6
+Luxembourg,refining,19.6
+Malta,refining,19.6
+Netherlands,refining,19.6
+Poland,refining,19.6
+Portugal,refining,19.6
+Romania,refining,19.6
+Slovakia,refining,19.6
+Slovenia,refining,19.6
+Spain,refining,19.6
+Sweden,refining,19.6
+Albania,refining,19.6
+Belarus,refining,19.6
+Bosnia and Herzegovina,refining,19.6
+Iceland,refining,19.6
+Macedonia,refining,19.6
+Moldova,refining,19.6
+Norway,refining,19.6
+Serbia and Montenegro,refining,19.6
+Switzerland,refining,19.6
+Turkey,refining,19.6
+UK,refining,19.6
+Ukraine,refining,19.6
+USA,refined liquids industrial,19.6
+Africa_Eastern,refined liquids industrial,19.6
+Africa_Northern,refined liquids industrial,19.6
+Africa_Southern,refined liquids industrial,19.6
+Africa_Western,refined liquids industrial,19.6
+Australia_NZ,refined liquids industrial,19.6
+Brazil,refined liquids industrial,19.6
+Canada,refined liquids industrial,19.6
+Central America and Caribbean,refined liquids industrial,19.6
+Central Asia,refined liquids industrial,19.6
+China,refined liquids industrial,19.6
+India,refined liquids industrial,19.6
+Indonesia,refined liquids industrial,19.6
+Japan,refined liquids industrial,19.6
+Mexico,refined liquids industrial,19.6
+Middle East,refined liquids industrial,19.6
+Pakistan,refined liquids industrial,19.6
+Russia,refined liquids industrial,19.6
+South Africa,refined liquids industrial,19.6
+South America_Northern,refined liquids industrial,19.6
+South America_Southern,refined liquids industrial,19.6
+South Asia,refined liquids industrial,19.6
+South Korea,refined liquids industrial,19.6
+Southeast Asia,refined liquids industrial,19.6
+Taiwan,refined liquids industrial,19.6
+Argentina,refined liquids industrial,19.6
+Colombia,refined liquids industrial,19.6
+Austria,refined liquids industrial,19.6
+Belgium,refined liquids industrial,19.6
+Bulgaria,refined liquids industrial,19.6
+Croatia,refined liquids industrial,19.6
+Cyprus,refined liquids industrial,19.6
+Czech Republic,refined liquids industrial,19.6
+Denmark,refined liquids industrial,19.6
+Estonia,refined liquids industrial,19.6
+Finland,refined liquids industrial,19.6
+France,refined liquids industrial,19.6
+Germany,refined liquids industrial,19.6
+Greece,refined liquids industrial,19.6
+Hungary,refined liquids industrial,19.6
+Ireland,refined liquids industrial,19.6
+Italy,refined liquids industrial,19.6
+Latvia,refined liquids industrial,19.6
+Lithuania,refined liquids industrial,19.6
+Luxembourg,refined liquids industrial,19.6
+Malta,refined liquids industrial,19.6
+Netherlands,refined liquids industrial,19.6
+Poland,refined liquids industrial,19.6
+Portugal,refined liquids industrial,19.6
+Romania,refined liquids industrial,19.6
+Slovakia,refined liquids industrial,19.6
+Slovenia,refined liquids industrial,19.6
+Spain,refined liquids industrial,19.6
+Sweden,refined liquids industrial,19.6
+Albania,refined liquids industrial,19.6
+Belarus,refined liquids industrial,19.6
+Bosnia and Herzegovina,refined liquids industrial,19.6
+Iceland,refined liquids industrial,19.6
+Macedonia,refined liquids industrial,19.6
+Moldova,refined liquids industrial,19.6
+Norway,refined liquids industrial,19.6
+Serbia and Montenegro,refined liquids industrial,19.6
+Switzerland,refined liquids industrial,19.6
+Turkey,refined liquids industrial,19.6
+UK,refined liquids industrial,19.6
+Ukraine,refined liquids industrial,19.6
+USA,refined liquids enduse,19.6
+Africa_Eastern,refined liquids enduse,19.6
+Africa_Northern,refined liquids enduse,19.6
+Africa_Southern,refined liquids enduse,19.6
+Africa_Western,refined liquids enduse,19.6
+Australia_NZ,refined liquids enduse,19.6
+Brazil,refined liquids enduse,19.6
+Canada,refined liquids enduse,19.6
+Central America and Caribbean,refined liquids enduse,19.6
+Central Asia,refined liquids enduse,19.6
+China,refined liquids enduse,19.6
+India,refined liquids enduse,19.6
+Indonesia,refined liquids enduse,19.6
+Japan,refined liquids enduse,19.6
+Mexico,refined liquids enduse,19.6
+Middle East,refined liquids enduse,19.6
+Pakistan,refined liquids enduse,19.6
+Russia,refined liquids enduse,19.6
+South Africa,refined liquids enduse,19.6
+South America_Northern,refined liquids enduse,19.6
+South America_Southern,refined liquids enduse,19.6
+South Asia,refined liquids enduse,19.6
+South Korea,refined liquids enduse,19.6
+Southeast Asia,refined liquids enduse,19.6
+Taiwan,refined liquids enduse,19.6
+Argentina,refined liquids enduse,19.6
+Colombia,refined liquids enduse,19.6
+Austria,refined liquids enduse,19.6
+Belgium,refined liquids enduse,19.6
+Bulgaria,refined liquids enduse,19.6
+Croatia,refined liquids enduse,19.6
+Cyprus,refined liquids enduse,19.6
+Czech Republic,refined liquids enduse,19.6
+Denmark,refined liquids enduse,19.6
+Estonia,refined liquids enduse,19.6
+Finland,refined liquids enduse,19.6
+France,refined liquids enduse,19.6
+Germany,refined liquids enduse,19.6
+Greece,refined liquids enduse,19.6
+Hungary,refined liquids enduse,19.6
+Ireland,refined liquids enduse,19.6
+Italy,refined liquids enduse,19.6
+Latvia,refined liquids enduse,19.6
+Lithuania,refined liquids enduse,19.6
+Luxembourg,refined liquids enduse,19.6
+Malta,refined liquids enduse,19.6
+Netherlands,refined liquids enduse,19.6
+Poland,refined liquids enduse,19.6
+Portugal,refined liquids enduse,19.6
+Romania,refined liquids enduse,19.6
+Slovakia,refined liquids enduse,19.6
+Slovenia,refined liquids enduse,19.6
+Spain,refined liquids enduse,19.6
+Sweden,refined liquids enduse,19.6
+Albania,refined liquids enduse,19.6
+Belarus,refined liquids enduse,19.6
+Bosnia and Herzegovina,refined liquids enduse,19.6
+Iceland,refined liquids enduse,19.6
+Macedonia,refined liquids enduse,19.6
+Moldova,refined liquids enduse,19.6
+Norway,refined liquids enduse,19.6
+Serbia and Montenegro,refined liquids enduse,19.6
+Switzerland,refined liquids enduse,19.6
+Turkey,refined liquids enduse,19.6
+UK,refined liquids enduse,19.6
+Ukraine,refined liquids enduse,19.6
+USA,refined liquids transport,19.6
+Africa_Eastern,refined liquids transport,19.6
+Africa_Northern,refined liquids transport,19.6
+Africa_Southern,refined liquids transport,19.6
+Africa_Western,refined liquids transport,19.6
+Australia_NZ,refined liquids transport,19.6
+Brazil,refined liquids transport,19.6
+Canada,refined liquids transport,19.6
+Central America and Caribbean,refined liquids transport,19.6
+Central Asia,refined liquids transport,19.6
+China,refined liquids transport,19.6
+India,refined liquids transport,19.6
+Indonesia,refined liquids transport,19.6
+Japan,refined liquids transport,19.6
+Mexico,refined liquids transport,19.6
+Middle East,refined liquids transport,19.6
+Pakistan,refined liquids transport,19.6
+Russia,refined liquids transport,19.6
+South Africa,refined liquids transport,19.6
+South America_Northern,refined liquids transport,19.6
+South America_Southern,refined liquids transport,19.6
+South Asia,refined liquids transport,19.6
+South Korea,refined liquids transport,19.6
+Southeast Asia,refined liquids transport,19.6
+Taiwan,refined liquids transport,19.6
+Argentina,refined liquids transport,19.6
+Colombia,refined liquids transport,19.6
+Austria,refined liquids transport,19.6
+Belgium,refined liquids transport,19.6
+Bulgaria,refined liquids transport,19.6
+Croatia,refined liquids transport,19.6
+Cyprus,refined liquids transport,19.6
+Czech Republic,refined liquids transport,19.6
+Denmark,refined liquids transport,19.6
+Estonia,refined liquids transport,19.6
+Finland,refined liquids transport,19.6
+France,refined liquids transport,19.6
+Germany,refined liquids transport,19.6
+Greece,refined liquids transport,19.6
+Hungary,refined liquids transport,19.6
+Ireland,refined liquids transport,19.6
+Italy,refined liquids transport,19.6
+Latvia,refined liquids transport,19.6
+Lithuania,refined liquids transport,19.6
+Luxembourg,refined liquids transport,19.6
+Malta,refined liquids transport,19.6
+Netherlands,refined liquids transport,19.6
+Poland,refined liquids transport,19.6
+Portugal,refined liquids transport,19.6
+Romania,refined liquids transport,19.6
+Slovakia,refined liquids transport,19.6
+Slovenia,refined liquids transport,19.6
+Spain,refined liquids transport,19.6
+Sweden,refined liquids transport,19.6
+Albania,refined liquids transport,19.6
+Belarus,refined liquids transport,19.6
+Bosnia and Herzegovina,refined liquids transport,19.6
+Iceland,refined liquids transport,19.6
+Macedonia,refined liquids transport,19.6
+Moldova,refined liquids transport,19.6
+Norway,refined liquids transport,19.6
+Serbia and Montenegro,refined liquids transport,19.6
+Switzerland,refined liquids transport,19.6
+Turkey,refined liquids transport,19.6
+UK,refined liquids transport,19.6
+Ukraine,refined liquids transport,19.6
+USA,refined liquids bunkers,19.6
+Africa_Eastern,refined liquids bunkers,19.6
+Africa_Northern,refined liquids bunkers,19.6
+Africa_Southern,refined liquids bunkers,19.6
+Africa_Western,refined liquids bunkers,19.6
+Australia_NZ,refined liquids bunkers,19.6
+Brazil,refined liquids bunkers,19.6
+Canada,refined liquids bunkers,19.6
+Central America and Caribbean,refined liquids bunkers,19.6
+Central Asia,refined liquids bunkers,19.6
+China,refined liquids bunkers,19.6
+India,refined liquids bunkers,19.6
+Indonesia,refined liquids bunkers,19.6
+Japan,refined liquids bunkers,19.6
+Mexico,refined liquids bunkers,19.6
+Middle East,refined liquids bunkers,19.6
+Pakistan,refined liquids bunkers,19.6
+Russia,refined liquids bunkers,19.6
+South Africa,refined liquids bunkers,19.6
+South America_Northern,refined liquids bunkers,19.6
+South America_Southern,refined liquids bunkers,19.6
+South Asia,refined liquids bunkers,19.6
+South Korea,refined liquids bunkers,19.6
+Southeast Asia,refined liquids bunkers,19.6
+Taiwan,refined liquids bunkers,19.6
+Argentina,refined liquids bunkers,19.6
+Colombia,refined liquids bunkers,19.6
+Austria,refined liquids bunkers,19.6
+Belgium,refined liquids bunkers,19.6
+Bulgaria,refined liquids bunkers,19.6
+Croatia,refined liquids bunkers,19.6
+Cyprus,refined liquids bunkers,19.6
+Czech Republic,refined liquids bunkers,19.6
+Denmark,refined liquids bunkers,19.6
+Estonia,refined liquids bunkers,19.6
+Finland,refined liquids bunkers,19.6
+France,refined liquids bunkers,19.6
+Germany,refined liquids bunkers,19.6
+Greece,refined liquids bunkers,19.6
+Hungary,refined liquids bunkers,19.6
+Ireland,refined liquids bunkers,19.6
+Italy,refined liquids bunkers,19.6
+Latvia,refined liquids bunkers,19.6
+Lithuania,refined liquids bunkers,19.6
+Luxembourg,refined liquids bunkers,19.6
+Malta,refined liquids bunkers,19.6
+Netherlands,refined liquids bunkers,19.6
+Poland,refined liquids bunkers,19.6
+Portugal,refined liquids bunkers,19.6
+Romania,refined liquids bunkers,19.6
+Slovakia,refined liquids bunkers,19.6
+Slovenia,refined liquids bunkers,19.6
+Spain,refined liquids bunkers,19.6
+Sweden,refined liquids bunkers,19.6
+Albania,refined liquids bunkers,19.6
+Belarus,refined liquids bunkers,19.6
+Bosnia and Herzegovina,refined liquids bunkers,19.6
+Iceland,refined liquids bunkers,19.6
+Macedonia,refined liquids bunkers,19.6
+Moldova,refined liquids bunkers,19.6
+Norway,refined liquids bunkers,19.6
+Serbia and Montenegro,refined liquids bunkers,19.6
+Switzerland,refined liquids bunkers,19.6
+Turkey,refined liquids bunkers,19.6
+UK,refined liquids bunkers,19.6
+Ukraine,refined liquids bunkers,19.6
+USA,refined liquids bunkers av,19.6
+Africa_Eastern,refined liquids bunkers av,19.6
+Africa_Northern,refined liquids bunkers av,19.6
+Africa_Southern,refined liquids bunkers av,19.6
+Africa_Western,refined liquids bunkers av,19.6
+Australia_NZ,refined liquids bunkers av,19.6
+Brazil,refined liquids bunkers av,19.6
+Canada,refined liquids bunkers av,19.6
+Central America and Caribbean,refined liquids bunkers av,19.6
+Central Asia,refined liquids bunkers av,19.6
+China,refined liquids bunkers av,19.6
+India,refined liquids bunkers av,19.6
+Indonesia,refined liquids bunkers av,19.6
+Japan,refined liquids bunkers av,19.6
+Mexico,refined liquids bunkers av,19.6
+Middle East,refined liquids bunkers av,19.6
+Pakistan,refined liquids bunkers av,19.6
+Russia,refined liquids bunkers av,19.6
+South Africa,refined liquids bunkers av,19.6
+South America_Northern,refined liquids bunkers av,19.6
+South America_Southern,refined liquids bunkers av,19.6
+South Asia,refined liquids bunkers av,19.6
+South Korea,refined liquids bunkers av,19.6
+Southeast Asia,refined liquids bunkers av,19.6
+Taiwan,refined liquids bunkers av,19.6
+Argentina,refined liquids bunkers av,19.6
+Colombia,refined liquids bunkers av,19.6
+Austria,refined liquids bunkers av,19.6
+Belgium,refined liquids bunkers av,19.6
+Bulgaria,refined liquids bunkers av,19.6
+Croatia,refined liquids bunkers av,19.6
+Cyprus,refined liquids bunkers av,19.6
+Czech Republic,refined liquids bunkers av,19.6
+Denmark,refined liquids bunkers av,19.6
+Estonia,refined liquids bunkers av,19.6
+Finland,refined liquids bunkers av,19.6
+France,refined liquids bunkers av,19.6
+Germany,refined liquids bunkers av,19.6
+Greece,refined liquids bunkers av,19.6
+Hungary,refined liquids bunkers av,19.6
+Ireland,refined liquids bunkers av,19.6
+Italy,refined liquids bunkers av,19.6
+Latvia,refined liquids bunkers av,19.6
+Lithuania,refined liquids bunkers av,19.6
+Luxembourg,refined liquids bunkers av,19.6
+Malta,refined liquids bunkers av,19.6
+Netherlands,refined liquids bunkers av,19.6
+Poland,refined liquids bunkers av,19.6
+Portugal,refined liquids bunkers av,19.6
+Romania,refined liquids bunkers av,19.6
+Slovakia,refined liquids bunkers av,19.6
+Slovenia,refined liquids bunkers av,19.6
+Spain,refined liquids bunkers av,19.6
+Sweden,refined liquids bunkers av,19.6
+Albania,refined liquids bunkers av,19.6
+Belarus,refined liquids bunkers av,19.6
+Bosnia and Herzegovina,refined liquids bunkers av,19.6
+Iceland,refined liquids bunkers av,19.6
+Macedonia,refined liquids bunkers av,19.6
+Moldova,refined liquids bunkers av,19.6
+Norway,refined liquids bunkers av,19.6
+Serbia and Montenegro,refined liquids bunkers av,19.6
+Switzerland,refined liquids bunkers av,19.6
+Turkey,refined liquids bunkers av,19.6
+UK,refined liquids bunkers av,19.6
+Ukraine,refined liquids bunkers av,19.6
+USA,limestone,0.08
+Africa_Eastern,limestone,0.08
+Africa_Northern,limestone,0.08
+Africa_Southern,limestone,0.08
+Africa_Western,limestone,0.08
+Australia_NZ,limestone,0.08
+Brazil,limestone,0.08
+Canada,limestone,0.08
+Central America and Caribbean,limestone,0.08
+Central Asia,limestone,0.08
+China,limestone,0.08
+India,limestone,0.08
+Indonesia,limestone,0.08
+Japan,limestone,0.08
+Mexico,limestone,0.08
+Middle East,limestone,0.08
+Pakistan,limestone,0.08
+Russia,limestone,0.08
+South Africa,limestone,0.08
+South America_Northern,limestone,0.08
+South America_Southern,limestone,0.08
+South Asia,limestone,0.08
+South Korea,limestone,0.08
+Southeast Asia,limestone,0.08
+Taiwan,limestone,0.08
+Argentina,limestone,0.08
+Colombia,limestone,0.08
+Austria,limestone,0.08
+Belgium,limestone,0.08
+Bulgaria,limestone,0.08
+Croatia,limestone,0.08
+Cyprus,limestone,0.08
+Czech Republic,limestone,0.08
+Denmark,limestone,0.08
+Estonia,limestone,0.08
+Finland,limestone,0.08
+France,limestone,0.08
+Germany,limestone,0.08
+Greece,limestone,0.08
+Hungary,limestone,0.08
+Ireland,limestone,0.08
+Italy,limestone,0.08
+Latvia,limestone,0.08
+Lithuania,limestone,0.08
+Luxembourg,limestone,0.08
+Malta,limestone,0.08
+Netherlands,limestone,0.08
+Poland,limestone,0.08
+Portugal,limestone,0.08
+Romania,limestone,0.08
+Slovakia,limestone,0.08
+Slovenia,limestone,0.08
+Spain,limestone,0.08
+Sweden,limestone,0.08
+Albania,limestone,0.08
+Belarus,limestone,0.08
+Bosnia and Herzegovina,limestone,0.08
+Iceland,limestone,0.08
+Macedonia,limestone,0.08
+Moldova,limestone,0.08
+Norway,limestone,0.08
+Serbia and Montenegro,limestone,0.08
+Switzerland,limestone,0.08
+Turkey,limestone,0.08
+UK,limestone,0.08
+Ukraine,limestone,0.08
+USA,unconventional oil upscaling,1.5
+Africa_Eastern,unconventional oil upscaling,1.5
+Africa_Northern,unconventional oil upscaling,1.5
+Africa_Southern,unconventional oil upscaling,1.5
+Africa_Western,unconventional oil upscaling,1.5
+Australia_NZ,unconventional oil upscaling,1.5
+Brazil,unconventional oil upscaling,1.5
+Canada,unconventional oil upscaling,1.5
+Central America and Caribbean,unconventional oil upscaling,1.5
+Central Asia,unconventional oil upscaling,1.5
+China,unconventional oil upscaling,1.5
+India,unconventional oil upscaling,1.5
+Indonesia,unconventional oil upscaling,1.5
+Japan,unconventional oil upscaling,1.5
+Mexico,unconventional oil upscaling,1.5
+Middle East,unconventional oil upscaling,1.5
+Pakistan,unconventional oil upscaling,1.5
+Russia,unconventional oil upscaling,1.5
+South Africa,unconventional oil upscaling,1.5
+South America_Northern,unconventional oil upscaling,1.5
+South America_Southern,unconventional oil upscaling,1.5
+South Asia,unconventional oil upscaling,1.5
+South Korea,unconventional oil upscaling,1.5
+Southeast Asia,unconventional oil upscaling,1.5
+Taiwan,unconventional oil upscaling,1.5
+Argentina,unconventional oil upscaling,1.5
+Colombia,unconventional oil upscaling,1.5
+Austria,unconventional oil upscaling,1.5
+Belgium,unconventional oil upscaling,1.5
+Bulgaria,unconventional oil upscaling,1.5
+Croatia,unconventional oil upscaling,1.5
+Cyprus,unconventional oil upscaling,1.5
+Czech Republic,unconventional oil upscaling,1.5
+Denmark,unconventional oil upscaling,1.5
+Estonia,unconventional oil upscaling,1.5
+Finland,unconventional oil upscaling,1.5
+France,unconventional oil upscaling,1.5
+Germany,unconventional oil upscaling,1.5
+Greece,unconventional oil upscaling,1.5
+Hungary,unconventional oil upscaling,1.5
+Ireland,unconventional oil upscaling,1.5
+Italy,unconventional oil upscaling,1.5
+Latvia,unconventional oil upscaling,1.5
+Lithuania,unconventional oil upscaling,1.5
+Luxembourg,unconventional oil upscaling,1.5
+Malta,unconventional oil upscaling,1.5
+Netherlands,unconventional oil upscaling,1.5
+Poland,unconventional oil upscaling,1.5
+Portugal,unconventional oil upscaling,1.5
+Romania,unconventional oil upscaling,1.5
+Slovakia,unconventional oil upscaling,1.5
+Slovenia,unconventional oil upscaling,1.5
+Spain,unconventional oil upscaling,1.5
+Sweden,unconventional oil upscaling,1.5
+Albania,unconventional oil upscaling,1.5
+Belarus,unconventional oil upscaling,1.5
+Bosnia and Herzegovina,unconventional oil upscaling,1.5
+Iceland,unconventional oil upscaling,1.5
+Macedonia,unconventional oil upscaling,1.5
+Moldova,unconventional oil upscaling,1.5
+Norway,unconventional oil upscaling,1.5
+Serbia and Montenegro,unconventional oil upscaling,1.5
+Switzerland,unconventional oil upscaling,1.5
+Turkey,unconventional oil upscaling,1.5
+UK,unconventional oil upscaling,1.5
+Ukraine,unconventional oil upscaling,1.5
+USA,regional industrial_roundwood,0
+Africa_Eastern,regional industrial_roundwood,0
+Africa_Northern,regional industrial_roundwood,0
+Africa_Southern,regional industrial_roundwood,0
+Africa_Western,regional industrial_roundwood,0
+Australia_NZ,regional industrial_roundwood,0
+Brazil,regional industrial_roundwood,0
+Canada,regional industrial_roundwood,0
+Central America and Caribbean,regional industrial_roundwood,0
+Central Asia,regional industrial_roundwood,0
+China,regional industrial_roundwood,0
+India,regional industrial_roundwood,0
+Indonesia,regional industrial_roundwood,0
+Japan,regional industrial_roundwood,0
+Mexico,regional industrial_roundwood,0
+Middle East,regional industrial_roundwood,0
+Pakistan,regional industrial_roundwood,0
+Russia,regional industrial_roundwood,0
+South Africa,regional industrial_roundwood,0
+South America_Northern,regional industrial_roundwood,0
+South America_Southern,regional industrial_roundwood,0
+South Asia,regional industrial_roundwood,0
+South Korea,regional industrial_roundwood,0
+Southeast Asia,regional industrial_roundwood,0
+Taiwan,regional industrial_roundwood,0
+Argentina,regional industrial_roundwood,0
+Colombia,regional industrial_roundwood,0
+Austria,regional industrial_roundwood,0
+Belgium,regional industrial_roundwood,0
+Bulgaria,regional industrial_roundwood,0
+Croatia,regional industrial_roundwood,0
+Cyprus,regional industrial_roundwood,0
+Czech Republic,regional industrial_roundwood,0
+Denmark,regional industrial_roundwood,0
+Estonia,regional industrial_roundwood,0
+Finland,regional industrial_roundwood,0
+France,regional industrial_roundwood,0
+Germany,regional industrial_roundwood,0
+Greece,regional industrial_roundwood,0
+Hungary,regional industrial_roundwood,0
+Ireland,regional industrial_roundwood,0
+Italy,regional industrial_roundwood,0
+Latvia,regional industrial_roundwood,0
+Lithuania,regional industrial_roundwood,0
+Luxembourg,regional industrial_roundwood,0
+Malta,regional industrial_roundwood,0
+Netherlands,regional industrial_roundwood,0
+Poland,regional industrial_roundwood,0
+Portugal,regional industrial_roundwood,0
+Romania,regional industrial_roundwood,0
+Slovakia,regional industrial_roundwood,0
+Slovenia,regional industrial_roundwood,0
+Spain,regional industrial_roundwood,0
+Sweden,regional industrial_roundwood,0
+Albania,regional industrial_roundwood,0
+Belarus,regional industrial_roundwood,0
+Bosnia and Herzegovina,regional industrial_roundwood,0
+Iceland,regional industrial_roundwood,0
+Macedonia,regional industrial_roundwood,0
+Moldova,regional industrial_roundwood,0
+Norway,regional industrial_roundwood,0
+Serbia and Montenegro,regional industrial_roundwood,0
+Switzerland,regional industrial_roundwood,0
+Turkey,regional industrial_roundwood,0
+UK,regional industrial_roundwood,0
+Ukraine,regional industrial_roundwood,0
+USA,regional sawnwood,0
+Africa_Eastern,regional sawnwood,0
+Africa_Northern,regional sawnwood,0
+Africa_Southern,regional sawnwood,0
+Africa_Western,regional sawnwood,0
+Australia_NZ,regional sawnwood,0
+Brazil,regional sawnwood,0
+Canada,regional sawnwood,0
+Central America and Caribbean,regional sawnwood,0
+Central Asia,regional sawnwood,0
+China,regional sawnwood,0
+India,regional sawnwood,0
+Indonesia,regional sawnwood,0
+Japan,regional sawnwood,0
+Mexico,regional sawnwood,0
+Middle East,regional sawnwood,0
+Pakistan,regional sawnwood,0
+Russia,regional sawnwood,0
+South Africa,regional sawnwood,0
+South America_Northern,regional sawnwood,0
+South America_Southern,regional sawnwood,0
+South Asia,regional sawnwood,0
+South Korea,regional sawnwood,0
+Southeast Asia,regional sawnwood,0
+Taiwan,regional sawnwood,0
+Argentina,regional sawnwood,0
+Colombia,regional sawnwood,0
+Austria,regional sawnwood,0
+Belgium,regional sawnwood,0
+Bulgaria,regional sawnwood,0
+Croatia,regional sawnwood,0
+Cyprus,regional sawnwood,0
+Czech Republic,regional sawnwood,0
+Denmark,regional sawnwood,0
+Estonia,regional sawnwood,0
+Finland,regional sawnwood,0
+France,regional sawnwood,0
+Germany,regional sawnwood,0
+Greece,regional sawnwood,0
+Hungary,regional sawnwood,0
+Ireland,regional sawnwood,0
+Italy,regional sawnwood,0
+Latvia,regional sawnwood,0
+Lithuania,regional sawnwood,0
+Luxembourg,regional sawnwood,0
+Malta,regional sawnwood,0
+Netherlands,regional sawnwood,0
+Poland,regional sawnwood,0
+Portugal,regional sawnwood,0
+Romania,regional sawnwood,0
+Slovakia,regional sawnwood,0
+Slovenia,regional sawnwood,0
+Spain,regional sawnwood,0
+Sweden,regional sawnwood,0
+Albania,regional sawnwood,0
+Belarus,regional sawnwood,0
+Bosnia and Herzegovina,regional sawnwood,0
+Iceland,regional sawnwood,0
+Macedonia,regional sawnwood,0
+Moldova,regional sawnwood,0
+Norway,regional sawnwood,0
+Serbia and Montenegro,regional sawnwood,0
+Switzerland,regional sawnwood,0
+Turkey,regional sawnwood,0
+UK,regional sawnwood,0
+Ukraine,regional sawnwood,0
+USA,regional woodpulp,0
+Africa_Eastern,regional woodpulp,0
+Africa_Northern,regional woodpulp,0
+Africa_Southern,regional woodpulp,0
+Africa_Western,regional woodpulp,0
+Australia_NZ,regional woodpulp,0
+Brazil,regional woodpulp,0
+Canada,regional woodpulp,0
+Central America and Caribbean,regional woodpulp,0
+Central Asia,regional woodpulp,0
+China,regional woodpulp,0
+India,regional woodpulp,0
+Indonesia,regional woodpulp,0
+Japan,regional woodpulp,0
+Mexico,regional woodpulp,0
+Middle East,regional woodpulp,0
+Pakistan,regional woodpulp,0
+Russia,regional woodpulp,0
+South Africa,regional woodpulp,0
+South America_Northern,regional woodpulp,0
+South America_Southern,regional woodpulp,0
+South Asia,regional woodpulp,0
+South Korea,regional woodpulp,0
+Southeast Asia,regional woodpulp,0
+Taiwan,regional woodpulp,0
+Argentina,regional woodpulp,0
+Colombia,regional woodpulp,0
+Austria,regional woodpulp,0
+Belgium,regional woodpulp,0
+Bulgaria,regional woodpulp,0
+Croatia,regional woodpulp,0
+Cyprus,regional woodpulp,0
+Czech Republic,regional woodpulp,0
+Denmark,regional woodpulp,0
+Estonia,regional woodpulp,0
+Finland,regional woodpulp,0
+France,regional woodpulp,0
+Germany,regional woodpulp,0
+Greece,regional woodpulp,0
+Hungary,regional woodpulp,0
+Ireland,regional woodpulp,0
+Italy,regional woodpulp,0
+Latvia,regional woodpulp,0
+Lithuania,regional woodpulp,0
+Luxembourg,regional woodpulp,0
+Malta,regional woodpulp,0
+Netherlands,regional woodpulp,0
+Poland,regional woodpulp,0
+Portugal,regional woodpulp,0
+Romania,regional woodpulp,0
+Slovakia,regional woodpulp,0
+Slovenia,regional woodpulp,0
+Spain,regional woodpulp,0
+Sweden,regional woodpulp,0
+Albania,regional woodpulp,0
+Belarus,regional woodpulp,0
+Bosnia and Herzegovina,regional woodpulp,0
+Iceland,regional woodpulp,0
+Macedonia,regional woodpulp,0
+Moldova,regional woodpulp,0
+Norway,regional woodpulp,0
+Serbia and Montenegro,regional woodpulp,0
+Switzerland,regional woodpulp,0
+Turkey,regional woodpulp,0
+UK,regional woodpulp,0
+Ukraine,regional woodpulp,0
+USA,NonFoodDemand_sawnwood,0
+Africa_Eastern,NonFoodDemand_sawnwood,0
+Africa_Northern,NonFoodDemand_sawnwood,0
+Africa_Southern,NonFoodDemand_sawnwood,0
+Africa_Western,NonFoodDemand_sawnwood,0
+Australia_NZ,NonFoodDemand_sawnwood,0
+Brazil,NonFoodDemand_sawnwood,0
+Canada,NonFoodDemand_sawnwood,0
+Central America and Caribbean,NonFoodDemand_sawnwood,0
+Central Asia,NonFoodDemand_sawnwood,0
+China,NonFoodDemand_sawnwood,0
+India,NonFoodDemand_sawnwood,0
+Indonesia,NonFoodDemand_sawnwood,0
+Japan,NonFoodDemand_sawnwood,0
+Mexico,NonFoodDemand_sawnwood,0
+Middle East,NonFoodDemand_sawnwood,0
+Pakistan,NonFoodDemand_sawnwood,0
+Russia,NonFoodDemand_sawnwood,0
+South Africa,NonFoodDemand_sawnwood,0
+South America_Northern,NonFoodDemand_sawnwood,0
+South America_Southern,NonFoodDemand_sawnwood,0
+South Asia,NonFoodDemand_sawnwood,0
+South Korea,NonFoodDemand_sawnwood,0
+Southeast Asia,NonFoodDemand_sawnwood,0
+Taiwan,NonFoodDemand_sawnwood,0
+Argentina,NonFoodDemand_sawnwood,0
+Colombia,NonFoodDemand_sawnwood,0
+Austria,NonFoodDemand_sawnwood,0
+Belgium,NonFoodDemand_sawnwood,0
+Bulgaria,NonFoodDemand_sawnwood,0
+Croatia,NonFoodDemand_sawnwood,0
+Cyprus,NonFoodDemand_sawnwood,0
+Czech Republic,NonFoodDemand_sawnwood,0
+Denmark,NonFoodDemand_sawnwood,0
+Estonia,NonFoodDemand_sawnwood,0
+Finland,NonFoodDemand_sawnwood,0
+France,NonFoodDemand_sawnwood,0
+Germany,NonFoodDemand_sawnwood,0
+Greece,NonFoodDemand_sawnwood,0
+Hungary,NonFoodDemand_sawnwood,0
+Ireland,NonFoodDemand_sawnwood,0
+Italy,NonFoodDemand_sawnwood,0
+Latvia,NonFoodDemand_sawnwood,0
+Lithuania,NonFoodDemand_sawnwood,0
+Luxembourg,NonFoodDemand_sawnwood,0
+Malta,NonFoodDemand_sawnwood,0
+Netherlands,NonFoodDemand_sawnwood,0
+Poland,NonFoodDemand_sawnwood,0
+Portugal,NonFoodDemand_sawnwood,0
+Romania,NonFoodDemand_sawnwood,0
+Slovakia,NonFoodDemand_sawnwood,0
+Slovenia,NonFoodDemand_sawnwood,0
+Spain,NonFoodDemand_sawnwood,0
+Sweden,NonFoodDemand_sawnwood,0
+Albania,NonFoodDemand_sawnwood,0
+Belarus,NonFoodDemand_sawnwood,0
+Bosnia and Herzegovina,NonFoodDemand_sawnwood,0
+Iceland,NonFoodDemand_sawnwood,0
+Macedonia,NonFoodDemand_sawnwood,0
+Moldova,NonFoodDemand_sawnwood,0
+Norway,NonFoodDemand_sawnwood,0
+Serbia and Montenegro,NonFoodDemand_sawnwood,0
+Switzerland,NonFoodDemand_sawnwood,0
+Turkey,NonFoodDemand_sawnwood,0
+UK,NonFoodDemand_sawnwood,0
+Ukraine,NonFoodDemand_sawnwood,0
+USA,NonFoodDemand_woodpulp,0
+Africa_Eastern,NonFoodDemand_woodpulp,0
+Africa_Northern,NonFoodDemand_woodpulp,0
+Africa_Southern,NonFoodDemand_woodpulp,0
+Africa_Western,NonFoodDemand_woodpulp,0
+Australia_NZ,NonFoodDemand_woodpulp,0
+Brazil,NonFoodDemand_woodpulp,0
+Canada,NonFoodDemand_woodpulp,0
+Central America and Caribbean,NonFoodDemand_woodpulp,0
+Central Asia,NonFoodDemand_woodpulp,0
+China,NonFoodDemand_woodpulp,0
+India,NonFoodDemand_woodpulp,0
+Indonesia,NonFoodDemand_woodpulp,0
+Japan,NonFoodDemand_woodpulp,0
+Mexico,NonFoodDemand_woodpulp,0
+Middle East,NonFoodDemand_woodpulp,0
+Pakistan,NonFoodDemand_woodpulp,0
+Russia,NonFoodDemand_woodpulp,0
+South Africa,NonFoodDemand_woodpulp,0
+South America_Northern,NonFoodDemand_woodpulp,0
+South America_Southern,NonFoodDemand_woodpulp,0
+South Asia,NonFoodDemand_woodpulp,0
+South Korea,NonFoodDemand_woodpulp,0
+Southeast Asia,NonFoodDemand_woodpulp,0
+Taiwan,NonFoodDemand_woodpulp,0
+Argentina,NonFoodDemand_woodpulp,0
+Colombia,NonFoodDemand_woodpulp,0
+Austria,NonFoodDemand_woodpulp,0
+Belgium,NonFoodDemand_woodpulp,0
+Bulgaria,NonFoodDemand_woodpulp,0
+Croatia,NonFoodDemand_woodpulp,0
+Cyprus,NonFoodDemand_woodpulp,0
+Czech Republic,NonFoodDemand_woodpulp,0
+Denmark,NonFoodDemand_woodpulp,0
+Estonia,NonFoodDemand_woodpulp,0
+Finland,NonFoodDemand_woodpulp,0
+France,NonFoodDemand_woodpulp,0
+Germany,NonFoodDemand_woodpulp,0
+Greece,NonFoodDemand_woodpulp,0
+Hungary,NonFoodDemand_woodpulp,0
+Ireland,NonFoodDemand_woodpulp,0
+Italy,NonFoodDemand_woodpulp,0
+Latvia,NonFoodDemand_woodpulp,0
+Lithuania,NonFoodDemand_woodpulp,0
+Luxembourg,NonFoodDemand_woodpulp,0
+Malta,NonFoodDemand_woodpulp,0
+Netherlands,NonFoodDemand_woodpulp,0
+Poland,NonFoodDemand_woodpulp,0
+Portugal,NonFoodDemand_woodpulp,0
+Romania,NonFoodDemand_woodpulp,0
+Slovakia,NonFoodDemand_woodpulp,0
+Slovenia,NonFoodDemand_woodpulp,0
+Spain,NonFoodDemand_woodpulp,0
+Sweden,NonFoodDemand_woodpulp,0
+Albania,NonFoodDemand_woodpulp,0
+Belarus,NonFoodDemand_woodpulp,0
+Bosnia and Herzegovina,NonFoodDemand_woodpulp,0
+Iceland,NonFoodDemand_woodpulp,0
+Macedonia,NonFoodDemand_woodpulp,0
+Moldova,NonFoodDemand_woodpulp,0
+Norway,NonFoodDemand_woodpulp,0
+Serbia and Montenegro,NonFoodDemand_woodpulp,0
+Switzerland,NonFoodDemand_woodpulp,0
+Turkey,NonFoodDemand_woodpulp,0
+UK,NonFoodDemand_woodpulp,0
+Ukraine,NonFoodDemand_woodpulp,0
+USA,regional woodpulp for energy,23
+Africa_Eastern,regional woodpulp for energy,23
+Africa_Northern,regional woodpulp for energy,23
+Africa_Southern,regional woodpulp for energy,23
+Africa_Western,regional woodpulp for energy,23
+Australia_NZ,regional woodpulp for energy,23
+Brazil,regional woodpulp for energy,23
+Canada,regional woodpulp for energy,23
+Central America and Caribbean,regional woodpulp for energy,23
+Central Asia,regional woodpulp for energy,23
+China,regional woodpulp for energy,23
+India,regional woodpulp for energy,23
+Indonesia,regional woodpulp for energy,23
+Japan,regional woodpulp for energy,23
+Mexico,regional woodpulp for energy,23
+Middle East,regional woodpulp for energy,23
+Pakistan,regional woodpulp for energy,23
+Russia,regional woodpulp for energy,23
+South Africa,regional woodpulp for energy,23
+South America_Northern,regional woodpulp for energy,23
+South America_Southern,regional woodpulp for energy,23
+South Asia,regional woodpulp for energy,23
+South Korea,regional woodpulp for energy,23
+Southeast Asia,regional woodpulp for energy,23
+Taiwan,regional woodpulp for energy,23
+Argentina,regional woodpulp for energy,23
+Colombia,regional woodpulp for energy,23
+Austria,regional woodpulp for energy,23
+Belgium,regional woodpulp for energy,23
+Bulgaria,regional woodpulp for energy,23
+Croatia,regional woodpulp for energy,23
+Cyprus,regional woodpulp for energy,23
+Czech Republic,regional woodpulp for energy,23
+Denmark,regional woodpulp for energy,23
+Estonia,regional woodpulp for energy,23
+Finland,regional woodpulp for energy,23
+France,regional woodpulp for energy,23
+Germany,regional woodpulp for energy,23
+Greece,regional woodpulp for energy,23
+Hungary,regional woodpulp for energy,23
+Ireland,regional woodpulp for energy,23
+Italy,regional woodpulp for energy,23
+Latvia,regional woodpulp for energy,23
+Lithuania,regional woodpulp for energy,23
+Luxembourg,regional woodpulp for energy,23
+Malta,regional woodpulp for energy,23
+Netherlands,regional woodpulp for energy,23
+Poland,regional woodpulp for energy,23
+Portugal,regional woodpulp for energy,23
+Romania,regional woodpulp for energy,23
+Slovakia,regional woodpulp for energy,23
+Slovenia,regional woodpulp for energy,23
+Spain,regional woodpulp for energy,23
+Sweden,regional woodpulp for energy,23
+Albania,regional woodpulp for energy,23
+Belarus,regional woodpulp for energy,23
+Bosnia and Herzegovina,regional woodpulp for energy,23
+Iceland,regional woodpulp for energy,23
+Macedonia,regional woodpulp for energy,23
+Moldova,regional woodpulp for energy,23
+Norway,regional woodpulp for energy,23
+Serbia and Montenegro,regional woodpulp for energy,23
+Switzerland,regional woodpulp for energy,23
+Turkey,regional woodpulp for energy,23
+UK,regional woodpulp for energy,23
+Ukraine,regional woodpulp for energy,23
+USA,refined liquids feedstocks,19.6
+Africa_Eastern,refined liquids feedstocks,19.6
+Africa_Northern,refined liquids feedstocks,19.6
+Africa_Southern,refined liquids feedstocks,19.6
+Africa_Western,refined liquids feedstocks,19.6
+Australia_NZ,refined liquids feedstocks,19.6
+Brazil,refined liquids feedstocks,19.6
+Canada,refined liquids feedstocks,19.6
+Central America and Caribbean,refined liquids feedstocks,19.6
+Central Asia,refined liquids feedstocks,19.6
+China,refined liquids feedstocks,19.6
+India,refined liquids feedstocks,19.6
+Indonesia,refined liquids feedstocks,19.6
+Japan,refined liquids feedstocks,19.6
+Mexico,refined liquids feedstocks,19.6
+Middle East,refined liquids feedstocks,19.6
+Pakistan,refined liquids feedstocks,19.6
+Russia,refined liquids feedstocks,19.6
+South Africa,refined liquids feedstocks,19.6
+South America_Northern,refined liquids feedstocks,19.6
+South America_Southern,refined liquids feedstocks,19.6
+South Asia,refined liquids feedstocks,19.6
+South Korea,refined liquids feedstocks,19.6
+Southeast Asia,refined liquids feedstocks,19.6
+Taiwan,refined liquids feedstocks,19.6
+Argentina,refined liquids feedstocks,19.6
+Colombia,refined liquids feedstocks,19.6
+Austria,refined liquids feedstocks,19.6
+Belgium,refined liquids feedstocks,19.6
+Bulgaria,refined liquids feedstocks,19.6
+Croatia,refined liquids feedstocks,19.6
+Cyprus,refined liquids feedstocks,19.6
+Czech Republic,refined liquids feedstocks,19.6
+Denmark,refined liquids feedstocks,19.6
+Estonia,refined liquids feedstocks,19.6
+Finland,refined liquids feedstocks,19.6
+France,refined liquids feedstocks,19.6
+Germany,refined liquids feedstocks,19.6
+Greece,refined liquids feedstocks,19.6
+Hungary,refined liquids feedstocks,19.6
+Ireland,refined liquids feedstocks,19.6
+Italy,refined liquids feedstocks,19.6
+Latvia,refined liquids feedstocks,19.6
+Lithuania,refined liquids feedstocks,19.6
+Luxembourg,refined liquids feedstocks,19.6
+Malta,refined liquids feedstocks,19.6
+Netherlands,refined liquids feedstocks,19.6
+Poland,refined liquids feedstocks,19.6
+Portugal,refined liquids feedstocks,19.6
+Romania,refined liquids feedstocks,19.6
+Slovakia,refined liquids feedstocks,19.6
+Slovenia,refined liquids feedstocks,19.6
+Spain,refined liquids feedstocks,19.6
+Sweden,refined liquids feedstocks,19.6
+Albania,refined liquids feedstocks,19.6
+Belarus,refined liquids feedstocks,19.6
+Bosnia and Herzegovina,refined liquids feedstocks,19.6
+Iceland,refined liquids feedstocks,19.6
+Macedonia,refined liquids feedstocks,19.6
+Moldova,refined liquids feedstocks,19.6
+Norway,refined liquids feedstocks,19.6
+Serbia and Montenegro,refined liquids feedstocks,19.6
+Switzerland,refined liquids feedstocks,19.6
+Turkey,refined liquids feedstocks,19.6
+UK,refined liquids feedstocks,19.6
+Ukraine,refined liquids feedstocks,19.6
+USA,wholesale gas feedstocks,14.2
+Africa_Eastern,wholesale gas feedstocks,14.2
+Africa_Northern,wholesale gas feedstocks,14.2
+Africa_Southern,wholesale gas feedstocks,14.2
+Africa_Western,wholesale gas feedstocks,14.2
+Australia_NZ,wholesale gas feedstocks,14.2
+Brazil,wholesale gas feedstocks,14.2
+Canada,wholesale gas feedstocks,14.2
+Central America and Caribbean,wholesale gas feedstocks,14.2
+Central Asia,wholesale gas feedstocks,14.2
+China,wholesale gas feedstocks,14.2
+India,wholesale gas feedstocks,14.2
+Indonesia,wholesale gas feedstocks,14.2
+Japan,wholesale gas feedstocks,14.2
+Mexico,wholesale gas feedstocks,14.2
+Middle East,wholesale gas feedstocks,14.2
+Pakistan,wholesale gas feedstocks,14.2
+Russia,wholesale gas feedstocks,14.2
+South Africa,wholesale gas feedstocks,14.2
+South America_Northern,wholesale gas feedstocks,14.2
+South America_Southern,wholesale gas feedstocks,14.2
+South Asia,wholesale gas feedstocks,14.2
+South Korea,wholesale gas feedstocks,14.2
+Southeast Asia,wholesale gas feedstocks,14.2
+Taiwan,wholesale gas feedstocks,14.2
+Argentina,wholesale gas feedstocks,14.2
+Colombia,wholesale gas feedstocks,14.2
+Austria,wholesale gas feedstocks,14.2
+Belgium,wholesale gas feedstocks,14.2
+Bulgaria,wholesale gas feedstocks,14.2
+Croatia,wholesale gas feedstocks,14.2
+Cyprus,wholesale gas feedstocks,14.2
+Czech Republic,wholesale gas feedstocks,14.2
+Denmark,wholesale gas feedstocks,14.2
+Estonia,wholesale gas feedstocks,14.2
+Finland,wholesale gas feedstocks,14.2
+France,wholesale gas feedstocks,14.2
+Germany,wholesale gas feedstocks,14.2
+Greece,wholesale gas feedstocks,14.2
+Hungary,wholesale gas feedstocks,14.2
+Ireland,wholesale gas feedstocks,14.2
+Italy,wholesale gas feedstocks,14.2
+Latvia,wholesale gas feedstocks,14.2
+Lithuania,wholesale gas feedstocks,14.2
+Luxembourg,wholesale gas feedstocks,14.2
+Malta,wholesale gas feedstocks,14.2
+Netherlands,wholesale gas feedstocks,14.2
+Poland,wholesale gas feedstocks,14.2
+Portugal,wholesale gas feedstocks,14.2
+Romania,wholesale gas feedstocks,14.2
+Slovakia,wholesale gas feedstocks,14.2
+Slovenia,wholesale gas feedstocks,14.2
+Spain,wholesale gas feedstocks,14.2
+Sweden,wholesale gas feedstocks,14.2
+Albania,wholesale gas feedstocks,14.2
+Belarus,wholesale gas feedstocks,14.2
+Bosnia and Herzegovina,wholesale gas feedstocks,14.2
+Iceland,wholesale gas feedstocks,14.2
+Macedonia,wholesale gas feedstocks,14.2
+Moldova,wholesale gas feedstocks,14.2
+Norway,wholesale gas feedstocks,14.2
+Serbia and Montenegro,wholesale gas feedstocks,14.2
+Switzerland,wholesale gas feedstocks,14.2
+Turkey,wholesale gas feedstocks,14.2
+UK,wholesale gas feedstocks,14.2
+Ukraine,wholesale gas feedstocks,14.2
+USA,delivered coal feedstocks,27.3
+Africa_Eastern,delivered coal feedstocks,27.3
+Africa_Northern,delivered coal feedstocks,27.3
+Africa_Southern,delivered coal feedstocks,27.3
+Africa_Western,delivered coal feedstocks,27.3
+Australia_NZ,delivered coal feedstocks,27.3
+Brazil,delivered coal feedstocks,27.3
+Canada,delivered coal feedstocks,27.3
+Central America and Caribbean,delivered coal feedstocks,27.3
+Central Asia,delivered coal feedstocks,27.3
+China,delivered coal feedstocks,27.3
+India,delivered coal feedstocks,27.3
+Indonesia,delivered coal feedstocks,27.3
+Japan,delivered coal feedstocks,27.3
+Mexico,delivered coal feedstocks,27.3
+Middle East,delivered coal feedstocks,27.3
+Pakistan,delivered coal feedstocks,27.3
+Russia,delivered coal feedstocks,27.3
+South Africa,delivered coal feedstocks,27.3
+South America_Northern,delivered coal feedstocks,27.3
+South America_Southern,delivered coal feedstocks,27.3
+South Asia,delivered coal feedstocks,27.3
+South Korea,delivered coal feedstocks,27.3
+Southeast Asia,delivered coal feedstocks,27.3
+Taiwan,delivered coal feedstocks,27.3
+Argentina,delivered coal feedstocks,27.3
+Colombia,delivered coal feedstocks,27.3
+Austria,delivered coal feedstocks,27.3
+Belgium,delivered coal feedstocks,27.3
+Bulgaria,delivered coal feedstocks,27.3
+Croatia,delivered coal feedstocks,27.3
+Cyprus,delivered coal feedstocks,27.3
+Czech Republic,delivered coal feedstocks,27.3
+Denmark,delivered coal feedstocks,27.3
+Estonia,delivered coal feedstocks,27.3
+Finland,delivered coal feedstocks,27.3
+France,delivered coal feedstocks,27.3
+Germany,delivered coal feedstocks,27.3
+Greece,delivered coal feedstocks,27.3
+Hungary,delivered coal feedstocks,27.3
+Ireland,delivered coal feedstocks,27.3
+Italy,delivered coal feedstocks,27.3
+Latvia,delivered coal feedstocks,27.3
+Lithuania,delivered coal feedstocks,27.3
+Luxembourg,delivered coal feedstocks,27.3
+Malta,delivered coal feedstocks,27.3
+Netherlands,delivered coal feedstocks,27.3
+Poland,delivered coal feedstocks,27.3
+Portugal,delivered coal feedstocks,27.3
+Romania,delivered coal feedstocks,27.3
+Slovakia,delivered coal feedstocks,27.3
+Slovenia,delivered coal feedstocks,27.3
+Spain,delivered coal feedstocks,27.3
+Sweden,delivered coal feedstocks,27.3
+Albania,delivered coal feedstocks,27.3
+Belarus,delivered coal feedstocks,27.3
+Bosnia and Herzegovina,delivered coal feedstocks,27.3
+Iceland,delivered coal feedstocks,27.3
+Macedonia,delivered coal feedstocks,27.3
+Moldova,delivered coal feedstocks,27.3
+Norway,delivered coal feedstocks,27.3
+Serbia and Montenegro,delivered coal feedstocks,27.3
+Switzerland,delivered coal feedstocks,27.3
+Turkey,delivered coal feedstocks,27.3
+UK,delivered coal feedstocks,27.3
+Ukraine,delivered coal feedstocks,27.3

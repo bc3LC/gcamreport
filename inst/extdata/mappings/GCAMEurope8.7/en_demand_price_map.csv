@@ -1,0 +1,122 @@
+# map to pair energy consumption and en_prices to compute the parent categories and World en_prices weighted by energy consumption
+en_price_var,en_consumption_var
+Price|Final Energy|Agriculture|Electricity,Final Energy|Agriculture|Electricity
+Price|Final Energy|Agriculture|Gases,Final Energy|Agriculture|Gases
+Price|Final Energy|Agriculture|Heat,Final Energy|Agriculture|Heat
+Price|Final Energy|Agriculture|Hydrogen,Final Energy|Agriculture|Hydrogen
+Price|Final Energy|Agriculture|Liquids,Final Energy|Agriculture|Liquids
+Price|Final Energy|Agriculture|Solids,Final Energy|Agriculture|Solids
+Price|Final Energy|Agriculture|Solids|Biomass,Final Energy|Agriculture|Solids|Biomass
+Price|Final Energy|Agriculture|Solids|Coal,Final Energy|Agriculture|Solids|Coal
+Price|Final Energy|Bunkers|Electricity,Final Energy|Transportation (w/ bunkers)|Electricity
+Price|Final Energy|Bunkers|Hydrogen,Final Energy|Transportation (w/ bunkers)|Hydrogen
+Price|Final Energy|Bunkers|Liquids,Final Energy|Transportation (w/ bunkers)|Liquids
+Price|Final Energy|Commercial|Electricity,Final Energy|Commercial|Electricity
+Price|Final Energy|Commercial|Gases,Final Energy|Commercial|Gases
+Price|Final Energy|Commercial|Heat,Final Energy|Commercial|Heat
+Price|Final Energy|Commercial|Hydrogen,Final Energy|Commercial|Hydrogen
+Price|Final Energy|Commercial|Liquids,Final Energy|Commercial|Liquids
+Price|Final Energy|Commercial|Solids,Final Energy|Commercial|Solids
+Price|Final Energy|Commercial|Solids|Biomass,Final Energy|Commercial|Solids|Biomass
+Price|Final Energy|Commercial|Solids|Coal,Final Energy|Commercial|Solids|Coal
+Price|Final Energy|Electricity,Final Energy|Electricity
+Price|Final Energy|Gases,Final Energy|Gases
+Price|Final Energy|Heat,Final Energy|Heat
+Price|Final Energy|Hydrogen,Final Energy|Hydrogen
+Price|Final Energy|Industry|Chemicals|Ammonia|Gases,Final Energy|Industry|Chemicals|Ammonia|Gases
+Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Final Energy|Industry|Chemicals|Ammonia|Hydrogen
+Price|Final Energy|Industry|Chemicals|Electricity,Final Energy|Industry|Chemicals|Electricity
+Price|Final Energy|Industry|Chemicals|Gases,Final Energy|Industry|Chemicals|Gases
+Price|Final Energy|Industry|Chemicals|Heat,Final Energy|Industry|Chemicals|Heat
+Price|Final Energy|Industry|Chemicals|Liquids,Final Energy|Industry|Chemicals|Liquids
+Price|Final Energy|Industry|Chemicals|Solids,Final Energy|Industry|Chemicals|Solids
+Price|Final Energy|Industry|Chemicals|Solids|Biomass,Final Energy|Industry|Chemicals|Solids|Biomass
+Price|Final Energy|Industry|Chemicals|Solids|Coal,Final Energy|Industry|Chemicals|Solids|Coal
+Price|Final Energy|Industry|Electricity,Final Energy|Industry|Electricity
+Price|Final Energy|Industry|Gases,Final Energy|Industry|Gases
+Price|Final Energy|Industry|Heat,Final Energy|Industry|Heat
+Price|Final Energy|Industry|Hydrogen,Final Energy|Industry|Hydrogen
+Price|Final Energy|Industry|Iron and Steel|Electricity,Final Energy|Industry|Iron and Steel|Electricity
+Price|Final Energy|Industry|Iron and Steel|Gases,Final Energy|Industry|Iron and Steel|Gases
+Price|Final Energy|Industry|Iron and Steel|Hydrogen,Final Energy|Industry|Iron and Steel|Hydrogen
+Price|Final Energy|Industry|Iron and Steel|Liquids,Final Energy|Industry|Iron and Steel|Liquids
+Price|Final Energy|Industry|Iron and Steel|Solids,Final Energy|Industry|Iron and Steel|Solids
+Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Final Energy|Industry|Iron and Steel|Solids|Biomass
+Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Final Energy|Industry|Iron and Steel|Solids|Coal
+Price|Final Energy|Industry|Liquids,Final Energy|Industry|Liquids
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity
+Price|Final Energy|Industry|Other Sector|Electricity,Final Energy|Industry|Other Sector|Electricity
+Price|Final Energy|Industry|Other Sector|Gases,Final Energy|Industry|Other Sector|Gases
+Price|Final Energy|Industry|Other Sector|Hydrogen,Final Energy|Industry|Other Sector|Hydrogen
+Price|Final Energy|Industry|Other Sector|Liquids,Final Energy|Industry|Other Sector|Liquids
+Price|Final Energy|Industry|Other Sector|Solids,Final Energy|Industry|Other Sector|Solids
+Price|Final Energy|Industry|Other Sector|Solids|Biomass,Final Energy|Industry|Other Sector|Solids|Biomass
+Price|Final Energy|Industry|Other Sector|Solids|Coal,Final Energy|Industry|Other Sector|Solids|Coal
+Price|Final Energy|Industry|Pulp and Paper|Electricity,Final Energy|Industry|Pulp and Paper|Electricity
+Price|Final Energy|Industry|Solids,Final Energy|Industry|Solids
+Price|Final Energy|Industry|Solids|Biomass,Final Energy|Industry|Solids|Biomass
+Price|Final Energy|Industry|Solids|Coal,Final Energy|Industry|Solids|Coal
+Price|Final Energy|Liquids,Final Energy|Liquids
+Price|Final Energy|Residential and Commercial|Electricity,Final Energy|Residential and Commercial|Electricity
+Price|Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Gases
+Price|Final Energy|Residential and Commercial|Heat,Final Energy|Residential and Commercial|Heat
+Price|Final Energy|Residential and Commercial|Hydrogen,Final Energy|Residential and Commercial|Hydrogen
+Price|Final Energy|Residential and Commercial|Liquids,Final Energy|Residential and Commercial|Liquids
+Price|Final Energy|Residential and Commercial|Solids,Final Energy|Residential and Commercial|Solids
+Price|Final Energy|Residential and Commercial|Solids|Biomass,Final Energy|Residential and Commercial|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Solids|Coal,Final Energy|Residential and Commercial|Solids|Coal
+Price|Final Energy|Residential|Electricity,Final Energy|Residential|Electricity
+Price|Final Energy|Residential|Gases,Final Energy|Residential|Gases
+Price|Final Energy|Residential|Heat,Final Energy|Residential|Heat
+Price|Final Energy|Residential|Hydrogen,Final Energy|Residential|Hydrogen
+Price|Final Energy|Residential|Liquids,Final Energy|Residential|Liquids
+Price|Final Energy|Residential|Solids,Final Energy|Residential|Solids
+Price|Final Energy|Residential|Solids|Biomass,Final Energy|Residential|Solids|Biomass
+Price|Final Energy|Residential|Solids|Coal,Final Energy|Residential|Solids|Coal
+Price|Final Energy|Solids,Final Energy|Solids
+Price|Final Energy|Solids|Biomass,Final Energy|Solids|Biomass
+Price|Final Energy|Solids|Coal,Final Energy|Solids|Coal
+Price|Final Energy|Transportation (w/ bunkers)|Electricity,Final Energy|Transportation (w/ bunkers)|Electricity
+Price|Final Energy|Transportation (w/ bunkers)|Hydrogen,Final Energy|Transportation (w/ bunkers)|Hydrogen
+Price|Final Energy|Transportation (w/ bunkers)|Liquids,Final Energy|Transportation (w/ bunkers)|Liquids
+Price|Final Energy|Transportation|Bus|Electricity,Final Energy|Transportation|Bus|Electricity
+Price|Final Energy|Transportation|Bus|Gases,Final Energy|Transportation|Bus|Gases
+Price|Final Energy|Transportation|Bus|Hydrogen,Final Energy|Transportation|Bus|Hydrogen
+Price|Final Energy|Transportation|Bus|Liquids,Final Energy|Transportation|Bus|Liquids
+Price|Final Energy|Transportation|Domestic Aviation|Electricity,Final Energy|Transportation|Domestic Aviation|Electricity
+Price|Final Energy|Transportation|Domestic Aviation|Hydrogen,Final Energy|Transportation|Domestic Aviation|Hydrogen
+Price|Final Energy|Transportation|Domestic Aviation|Liquids,Final Energy|Transportation|Domestic Aviation|Liquids
+Price|Final Energy|Transportation|Domestic Shipping|Electricity,Final Energy|Transportation|Domestic Shipping|Electricity
+Price|Final Energy|Transportation|Domestic Shipping|Hydrogen,Final Energy|Transportation|Domestic Shipping|Hydrogen
+Price|Final Energy|Transportation|Domestic Shipping|Liquids,Final Energy|Transportation|Domestic Shipping|Liquids
+Price|Final Energy|Transportation|Electricity,Final Energy|Transportation|Electricity
+Price|Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Freight|Electricity
+Price|Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Freight|Hydrogen
+Price|Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Freight|Liquids
+Price|Final Energy|Transportation|Gases,Final Energy|Transportation|Gases
+Price|Final Energy|Transportation|Hydrogen,Final Energy|Transportation|Hydrogen
+Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Final Energy|Transportation|Light-Duty Vehicle|Electricity
+Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,Final Energy|Transportation|Light-Duty Vehicle|Gases
+Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Final Energy|Transportation|Light-Duty Vehicle|Hydrogen
+Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Final Energy|Transportation|Light-Duty Vehicle|Liquids
+Price|Final Energy|Transportation|Liquids,Final Energy|Transportation|Liquids
+Price|Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Passenger|Electricity
+Price|Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen
+Price|Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Passenger|Liquids
+Price|Final Energy|Transportation|Rail|Electricity,Final Energy|Transportation|Rail|Electricity
+Price|Final Energy|Transportation|Rail|Hydrogen,Final Energy|Transportation|Rail|Hydrogen
+Price|Final Energy|Transportation|Rail|Liquids,Final Energy|Transportation|Rail|Liquids
+Price|Final Energy|Transportation|Truck|Electricity,Final Energy|Transportation|Truck|Electricity
+Price|Final Energy|Transportation|Truck|Hydrogen,Final Energy|Transportation|Truck|Hydrogen
+Price|Final Energy|Transportation|Truck|Liquids,Final Energy|Transportation|Truck|Liquids
+Price|Primary Energy|Biomass,Primary Energy|Biomass
+Price|Primary Energy|Coal,Primary Energy|Coal
+Price|Primary Energy|Fossil,Primary Energy|Fossil
+Price|Primary Energy|Gas,Primary Energy|Gas
+Price|Primary Energy|Oil,Primary Energy|Oil
+Price|Secondary Energy|Electricity,Secondary Energy|Electricity
+Price|Secondary Energy|Gases,Secondary Energy|Gases
+Price|Secondary Energy|Heat,Secondary Energy|Heat
+Price|Secondary Energy|Hydrogen,Secondary Energy|Hydrogen
+Price|Secondary Energy|Liquids,Secondary Energy|Liquids
+Price|Secondary Energy|Solids,Secondary Energy|Solids

@@ -1,0 +1,26 @@
+# Agricultural production balance
+sector,var1,var2,var3,var4,var5,unit_conv
+biomass,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Energy Crops,,,1
+Corn,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Cereals,,,1
+FiberCrop,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+FodderGrass,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+FodderHerb,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+Fruits,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+Legumes,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+MiscCrop,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+NutsSeeds,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+OilCrop,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Oil Crops,,,1
+OilPalm,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Oil Crops,,,1
+OtherGrain,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Cereals,,,1
+Pasture,NoReported,,,,,1
+Rice,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Cereals,,,1
+RootTuber,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+Soybean,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Oil Crops,,,1
+SugarCrop,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Sugar Crops,,,1
+Vegetables,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Other Crops,,,1
+Wheat,Agricultural Production,Agricultural Production|Crops,Agricultural Production|Crops|Cereals,,,1
+Beef,Agricultural Production,Agricultural Production|Livestock,Agricultural Production|Livestock|Ruminant,Agricultural Production|Livestock|Ruminant|Meat,,1
+Dairy,Agricultural Production,Agricultural Production|Livestock,Agricultural Production|Livestock|Dairy,Agricultural Production|Livestock|Ruminant|Dairy,,1
+Pork,Agricultural Production,Agricultural Production|Livestock,Agricultural Production|Livestock|Non-Ruminant,Agricultural Production|Livestock|Non-Ruminant|Meat,Agricultural Production|Livestock|Non-Ruminant|Meat|Pig,1
+Poultry,Agricultural Production,Agricultural Production|Livestock,Agricultural Production|Livestock|Non-Ruminant,Agricultural Production|Livestock|Non-Ruminant|Meat,Agricultural Production|Livestock|Non-Ruminant|Meat|Poultry,1
+SheepGoat,Agricultural Production,Agricultural Production|Livestock,Agricultural Production|Livestock|Ruminant,Agricultural Production|Livestock|Ruminant|Meat,,1

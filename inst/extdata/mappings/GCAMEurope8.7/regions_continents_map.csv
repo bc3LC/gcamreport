@@ -1,0 +1,69 @@
+#mapping file for GCAM regions and R5 regions
+continent,region
+MAF,Africa_Eastern
+MAF,Africa_Northern
+MAF,Africa_Southern
+MAF,Africa_Western
+LAM,Argentina
+OECD90,Australia_NZ
+LAM,Brazil
+OECD90,Canada
+LAM,Central America and Caribbean
+REF,Central Asia
+ASIA,China
+LAM,Colombia
+OECD90,Austria
+OECD90,Belgium
+OECD90,Denmark
+OECD90,Finland
+OECD90,France
+OECD90,Germany
+OECD90,Greece
+OECD90,Ireland
+OECD90,Italy
+OECD90,Luxembourg
+OECD90,Malta
+OECD90,Netherlands
+OECD90,Portugal
+OECD90,Spain
+OECD90,Sweden
+OECD90,UK
+OECD90,Belarus
+OECD90,Moldova
+OECD90,Croatia
+OECD90,Turkey
+OECD90,Iceland
+OECD90,Norway
+OECD90,Switzerland
+REF,Albania
+REF,Bulgaria
+REF,Cyprus
+OECD90,Czech Republic
+OECD90,Estonia
+OECD90,Hungary
+OECD90,Latvia
+OECD90,Lithuania
+OECD90,Poland
+REF,Bosnia and Herzegovina
+REF,Macedonia
+REF,Serbia and Montenegro
+OECD90,Romania
+OECD90,Slovakia
+OECD90,Slovenia
+REF,Ukraine
+ASIA,India
+ASIA,Indonesia
+OECD90,Japan
+LAM,Mexico
+MAF,Middle East
+ASIA,Pakistan
+REF,Russia
+MAF,South Africa
+LAM,South America_Northern
+LAM,South America_Southern
+ASIA,South Asia
+ASIA,South Korea
+ASIA,Southeast Asia
+ASIA,Taiwan
+OECD90,USA
+World,NA

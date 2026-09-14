@@ -1,0 +1,70 @@
+# en_multiplier
+# Description: Multiplier calculated from documented home energy expenditure numbers for key countries in 2021 by IEA, divided by GCAM residential energy expenditure results from 2020"
+# Source: https://www.iea.org/commentaries/did-affordability-measures-help-tame-energy-price-spikes-for-consumers-in-major-economies
+region,energy_mult,year
+Africa_Eastern,1.5,2020
+Africa_Northern,1.5,2020
+Africa_Southern,1.5,2020
+Africa_Western,1.5,2020
+Argentina,1.5,2020
+Australia_NZ,2.419095766,2020
+Brazil,3.202831603,2020
+Canada,0.671114828,2020
+Central America and Caribbean,1.5,2020
+Central Asia,1,2020
+China,1.898551188,2020
+Colombia,1.5,2020
+Bulgaria,1.5,2020
+Cyprus,1.5,2020
+Czech Republic,1.5,2020
+Estonia,1.5,2020
+Hungary,1.5,2020
+Latvia,1.5,2020
+Lithuania,1.5,2020
+Malta,1.5,2020
+Poland,1.5,2020
+Romania,1.5,2020
+Slovakia,1.5,2020
+Slovenia,1.5,2020
+Austria,2.018028003,2020
+Belgium,2.018028003,2020
+Denmark,2.018028003,2020
+Finland,2.018028003,2020
+France,2.018028003,2020
+Germany,2.018028003,2020
+Greece,2.018028003,2020
+Ireland,2.018028003,2020
+Italy,2.018028003,2020
+Luxembourg,2.018028003,2020
+Netherlands,2.018028003,2020
+Portugal,2.018028003,2020
+Spain,2.018028003,2020
+Sweden,2.018028003,2020
+UK,2.018028003,2020
+Ukraine,1,2020
+Belarus,1.5,2020
+Moldova,1.5,2020
+Croatia,1.5,2020
+Albania,1.5,2020
+Bosnia and Herzegovina,1.5,2020
+Macedonia,1.5,2020
+Serbia and Montenegro,1.5,2020
+Turkey,1.5,2020
+Iceland,2,2020
+Norway,2,2020
+Switzerland,2,2020
+India,1.390518133,2020
+Indonesia,1.277066609,2020
+Japan,1.875748985,2020
+Mexico,3.133332693,2020
+Middle East,0.313325182,2020
+Pakistan,1.4,2020
+Russia,1,2020
+South Africa,1.343826464,2020
+South America_Northern,1,2020
+South America_Southern,2,2020
+South Asia,1.5,2020
+South Korea,1.50051418,2020
+Southeast Asia,1.5,2020
+Taiwan,1.5,2020
+USA,1.102418371,2020

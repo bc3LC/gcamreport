@@ -1,0 +1,24 @@
+# food intake
+subsector,technology,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+Corn,Corn,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Cereals [per capita],,,,,,1
+FruitsVeg,Fruits,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+FruitsVeg,Vegetables,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+MiscCrop,MiscCrop,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+Oil,FiberCrop,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Oil Crops [per capita],,,,,,1
+Oil,OilCrop,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Oil Crops [per capita],,,,,,1
+Oil,OilPalm,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Oil Crops [per capita],,,,,,1
+Oil,Soybean,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Oil Crops [per capita],,,,,,1
+OtherGrain,OtherGrain,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Cereals [per capita],,,,,,1
+Protein,Beef,Food Intake [per capita],Food Intake|Livestock [per capita],,Food Intake|Livestock|Ruminant [per capita],Food Intake|Livestock|Ruminant|Meat [per capita],,,,1
+Protein,Dairy,Food Intake [per capita],Food Intake|Livestock [per capita],,Food Intake|Livestock|Ruminant [per capita],Food Intake|Livestock|Ruminant|Dairy [per capita],,,,1
+Protein,OtherMeat_Fish,Food Intake [per capita],,,,,,,,1
+Protein,Pork,Food Intake [per capita],Food Intake|Livestock [per capita],,Food Intake|Livestock|Non-Ruminant [per capita],Food Intake|Livestock|Non-Ruminant|Meat [per capita],Food Intake|Livestock|Non-Ruminant|Meat|Pig [per capita],,,1
+Protein,Poultry,Food Intake [per capita],Food Intake|Livestock [per capita],,Food Intake|Livestock|Non-Ruminant [per capita],Food Intake|Livestock|Non-Ruminant|Meat [per capita],Food Intake|Livestock|Non-Ruminant|Meat|Poultry [per capita],,,1
+Protein,SheepGoat,Food Intake [per capita],Food Intake|Livestock [per capita],,Food Intake|Livestock|Ruminant [per capita],Food Intake|Livestock|Ruminant|Meat [per capita],,,,1
+Protein,Legumes,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+Protein,NutsSeeds,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+Rice,Rice,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Cereals [per capita],,,,,,1
+RootTuber,RootTuber,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Other Crops [per capita],,,,,,1
+SugarCrop,SugarCrop,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Sugar Crops [per capita],,,,,,1
+Wheat,Wheat,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Cereals [per capita],,,,,,1
+FiberCrop,FiberCrop,Food Intake [per capita],Food Intake|Crops [per capita],Food Intake|Crops|Oil Crops [per capita],,,,,,1

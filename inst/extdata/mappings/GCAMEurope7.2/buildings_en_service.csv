@@ -1,0 +1,6 @@
+﻿#Buildings Energy Service
+building,var1,var2,unit_conv
+resid,Energy Service|Residential|Floor Space,Energy Service|Residential and Commercial|Floor Space,1
+comm,Energy Service|Commercial|Floor Space,Energy Service|Residential and Commercial|Floor Space,1
+resid EUR,Energy Service|Residential|Floor Space,Energy Service|Residential and Commercial|Floor Space,1
+comm EUR,Energy Service|Commercial|Floor Space,Energy Service|Residential and Commercial|Floor Space,1

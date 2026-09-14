@@ -1,0 +1,34 @@
+# UCD data region mapping to GCAM regions
+GCAM_region,UCD_region
+Africa_Eastern,Africa
+Africa_Northern,Africa
+Africa_Southern,Africa
+Africa_Western,Africa
+Argentina,Latin America
+Australia_NZ,Australia_NZ
+Brazil,Brazil
+Canada,Canada
+Central America and Caribbean,Latin America
+Central Asia,Former Soviet Union
+China,China
+Colombia,Latin America
+EU-12,Western Europe
+EU-15,Western Europe
+Europe_Eastern,Former Soviet Union
+Europe_Non_EU,Eastern Europe
+European Free Trade Association,Western Europe
+India,India
+Indonesia,Southeast Asia
+Japan,Japan
+Mexico,Latin America
+Middle East,Middle East
+Pakistan,Southeast Asia
+Russia,Former Soviet Union
+South Africa,Africa
+South America_Northern,Latin America
+South America_Southern,Latin America
+South Asia,Southeast Asia
+South Korea,Korea
+Southeast Asia,Southeast Asia
+Taiwan,Southeast Asia
+USA,USA

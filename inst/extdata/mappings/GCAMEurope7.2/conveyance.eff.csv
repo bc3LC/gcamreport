@@ -1,0 +1,69 @@
+# Conveyance loss factor obtained from L165.ag_IrrEff_R (gcamdata).
+# Source: L165.ag_IrrEff_R & extra_scripts/Derive_Irrigation_Water_Withdrawal
+conveyance.eff,region
+0.829937455747218,USA
+0.7,Africa_Eastern
+0.718726736373752,Africa_Northern
+0.836637290831608,Africa_Southern
+0.714449655526744,Africa_Western
+0.7,Australia_NZ
+0.83,Brazil
+0.83,Canada
+0.7643433408873,Central America and Caribbean
+0.725468566598492,Central Asia
+0.7,China
+0.880188709966145,Bulgaria
+0.880188709966145,Cyprus
+0.880188709966145,Czech Republic
+0.880188709966145,Estonia
+0.880188709966145,Hungary
+0.880188709966145,Latvia
+0.880188709966145,Lithuania
+0.880188709966145,Malta
+0.880188709966145,Poland
+0.880188709966145,Romania
+0.880188709966145,Slovakia
+0.880188709966145,Slovenia
+0.851204253349998,Austria
+0.851204253349998,Belgium
+0.851204253349998,Denmark
+0.851204253349998,Finland
+0.851204253349998,France
+0.851204253349998,Germany
+0.851204253349998,Greece
+0.851204253349998,Ireland
+0.851204253349998,Italy
+0.851204253349998,Luxembourg
+0.851204253349998,Netherlands
+0.851204253349998,Portugal
+0.851204253349998,Spain
+0.851204253349998,Sweden
+0.851204253349998,UK
+0.95,Ukraine
+0.70850917449416,Belarus
+0.70850917449416,Moldova
+0.70850917449416,Croatia
+0.70850917449416,Albania
+0.70850917449416,Bosnia and Herzegovina
+0.70850917449416,Macedonia
+0.70850917449416,Serbia and Montenegro
+0.70850917449416,Turkey
+0.788846802098672,Iceland
+0.788846802098672,Norway
+0.788846802098672,Switzerland
+0.85,India
+0.7,Indonesia
+0.7,Japan
+0.7,Mexico
+0.727215863247552,Middle East
+0.7,Pakistan
+0.95,Russia
+0.83,South Africa
+0.7,South America_Northern
+0.7,South America_Southern
+0.712618571071184,South Asia
+0.7,South Korea
+0.700002614840189,Southeast Asia
+0.7,Taiwan
+0.7,Argentina
+0.7,Colombia

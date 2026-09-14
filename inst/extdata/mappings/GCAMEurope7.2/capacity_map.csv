@@ -1,0 +1,219 @@
+# Multiple load segments Electricity generation by technology (inc solar roofs)
+output,subsector,technology,var1,var2,var3,var4,var6,var7,var8,unit_conv
+electricity,biomass,biomass (conv CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/ CCS,,,,,1
+electricity,biomass,biomass (conv),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,,,,,1
+electricity,biomass,biomass (IGCC CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/ CCS,,,,,1
+electricity,biomass,biomass (IGCC),Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,,,,,1
+electricity,biomass,biomass cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Biomass,Secondary Energy|Electricity|Biomass|w/o CCS,,,,,1
+electricity,coal,coal (conv pul CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,,1
+electricity,coal,coal (conv pul),Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,coal,coal (IGCC CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,,1
+electricity,coal,coal (IGCC),Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,coal,coal cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Coal,Secondary Energy|Electricity|Coal|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,gas,gas (CC CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,,1
+electricity,gas,gas (CC),Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,gas,gas (steam/CT),Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,gas,gas cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,gas,desalinated water,Secondary Energy|Electricity,Secondary Energy|Electricity|Gas,Secondary Energy|Electricity|Gas|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,geothermal,geothermal,Secondary Energy|Electricity,Secondary Energy|Electricity|Geothermal,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
+electricity,hydro,hydro,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydro,,Secondary Energy|Electricity|Non-Biomass Renewables,,,,1
+electricity,nuclear,Gen_II_LWR,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,,1
+electricity,nuclear,Gen_III,Secondary Energy|Electricity,Secondary Energy|Electricity|Nuclear,,,,,,1
+electricity,refined liquids,refined liquids (CC CCS),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/ CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/ CCS,,,1
+electricity,refined liquids,refined liquids (CC),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,refined liquids,refined liquids (steam/CT),Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,refined liquids,refined liquids cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Oil,Secondary Energy|Electricity|Oil|w/o CCS,Secondary Energy|Electricity|Fossil,Secondary Energy|Electricity|Fossil|w/o CCS,,,1
+electricity,solar,CSP,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,solar,CSP_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|CSP,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,solar,PV,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,solar,PV_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,wind,wind,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,Secondary Energy|Electricity|Wind|Onshore,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,wind,wind_offshore,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,Secondary Energy|Electricity|Wind|Offshore,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,wind,wind_storage,Secondary Energy|Electricity,Secondary Energy|Electricity|Wind,Secondary Energy|Electricity|Wind|Onshore,,Secondary Energy|Electricity|Non-Biomass Renewables,,,1
+electricity,hydrogen,hydrogen cogen,Secondary Energy|Electricity,Secondary Energy|Electricity|Hydrogen,,,,,,1
+electricity,rooftop_pv,rooftop_pv,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Solar|PV|Residential,Secondary Energy|Electricity|Non-Biomass Renewables,Secondary Energy|Electricity|Solar|PV|Commercial,Secondary Energy,1
+elect_td_bld,rooftop_pv,rooftop_pv,Secondary Energy|Electricity,Secondary Energy|Electricity|Solar,Secondary Energy|Electricity|Solar|PV,Secondary Energy|Electricity|Solar|PV|Residential,Secondary Energy|Electricity|Non-Biomass Renewables,Secondary Energy|Electricity|Solar|PV|Commercial,,1
+gas processing,biomass gasification,biomass gasification,Secondary Energy|Gases,Secondary Energy|Gases|Biomass,,,,,,1
+gas processing,coal gasification,coal gasification,Secondary Energy|Gases,Secondary Energy|Gases|Coal,Secondary Energy|Gases|Fossil,,,,,1
+gas processing,natural gas,natural gas,Secondary Energy|Gases,Secondary Energy|Gases|Gas,Secondary Energy|Gases|Fossil,,,,,1
+H2 central production,biomass,biomass to H2,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Biomass,,,,,,1
+H2 central production,biomass,biomass to H2 CCS,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Biomass,,,,,,1
+H2 central production,electricity,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,gas,natural gas steam reforming,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Fossil,,,,,1
+H2 central production,gas,gas ATR CCS,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Gas|w/ CCS,,,,1
+H2 central production,nuclear,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,solar,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,wind,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Electricity,,,,,,1
+H2 central production,coal,coal chemical CCS,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Coal,Secondary Energy|Hydrogen|Fossil,Secondary Energy|Hydrogen|Coal|w/ CCS,,,,1
+H2 industrial,onsite production,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Other,,,,,,1
+H2 wholesale dispensing,forecourt production,electrolysis,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Other,,,,,,1
+H2 wholesale dispensing,forecourt production,natural gas steam reforming,Secondary Energy|Hydrogen,Secondary Energy|Hydrogen|Gas,Secondary Energy|Hydrogen|Fossil,,,,,1
+district heat,biomass,biomass,Secondary Energy|Heat,Secondary Energy|Heat|Biomass,,,,,,1
+district heat,coal,coal,Secondary Energy|Heat,Secondary Energy|Heat|Coal,Secondary Energy|Heat|Fossil,,,,,1
+district heat,electricity,electricity,Secondary Energy|Heat,Secondary Energy|Heat|Electricity,,,,,,1
+district heat,gas,gas,Secondary Energy|Heat,Secondary Energy|Heat|Gas,Secondary Energy|Heat|Fossil,,,,,1
+district heat,refined liquids,refined liquids,Secondary Energy|Heat,Secondary Energy|Heat|Oil,,,,,,1
+refining,biomass liquids,BTL with hydrogen,Secondary Energy|Liquids,Secondary Energy|Liquids|Hydrogen,Secondary Energy|Liquids|Biomass,,,,,1
+refining,biomass liquids,FT biofuels,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,FT biofuels CCS level 1,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,FT biofuels CCS level 2,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,biodiesel,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,cellulosic ethanol,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,cellulosic ethanol CCS level 1,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,cellulosic ethanol CCS level 2,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,biomass liquids,corn ethanol,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+refining,coal to liquids,coal to liquids,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Fossil,,,,,1
+refining,coal to liquids,coal to liquids CCS level 1,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Fossil,,,,,1
+refining,coal to liquids,coal to liquids CCS level 2,Secondary Energy|Liquids,Secondary Energy|Liquids|Coal,Secondary Energy|Liquids|Fossil,,,,,1
+refining,gas to liquids,gas to liquids,Secondary Energy|Liquids,Secondary Energy|Liquids|Gas,Secondary Energy|Liquids|Fossil,,,,,1
+refining,oil refining,oil refining,Secondary Energy|Liquids,Secondary Energy|Liquids|Oil,,,,,,1
+refining,biomass liquids,sugar cane ethanol,Secondary Energy|Liquids,Secondary Energy|Liquids|Biomass,,,,,,1
+electricity,rooftop_pv,rooftop_pv,Secondary Energy|Electricity,,,,,,,1
+electricity,base load generation,base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,intermediate generation,intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,peak generation,peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,subpeak generation,subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Italy base load generation,Italy base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Italy intermediate generation,Italy intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Italy peak generation,Italy peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Italy subpeak generation,Italy subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Malta base load generation,Malta base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Malta intermediate generation,Malta intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Malta peak generation,Malta peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Malta subpeak generation,Malta subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ireland base load generation,Ireland base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ireland intermediate generation,Ireland intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ireland peak generation,Ireland peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ireland subpeak generation,Ireland subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,UK base load generation,UK base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,UK intermediate generation,UK intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,UK peak generation,UK peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,UK subpeak generation,UK subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Czech Republic base load generation,Czech Republic base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Czech Republic intermediate generation,Czech Republic intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Czech Republic peak generation,Czech Republic peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Czech Republic subpeak generation,Czech Republic subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Hungary base load generation,Hungary base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Hungary intermediate generation,Hungary intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Hungary peak generation,Hungary peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Hungary subpeak generation,Hungary subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Poland base load generation,Poland base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Poland intermediate generation,Poland intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Poland peak generation,Poland peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Poland subpeak generation,Poland subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Romania base load generation,Romania base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Romania intermediate generation,Romania intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Romania peak generation,Romania peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Romania subpeak generation,Romania subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovakia base load generation,Slovakia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovakia intermediate generation,Slovakia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovakia peak generation,Slovakia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovakia subpeak generation,Slovakia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovenia base load generation,Slovenia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovenia intermediate generation,Slovenia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovenia peak generation,Slovenia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Slovenia subpeak generation,Slovenia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Austria base load generation,Austria base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Austria intermediate generation,Austria intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Austria peak generation,Austria peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Austria subpeak generation,Austria subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Belgium base load generation,Belgium base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Belgium intermediate generation,Belgium intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Belgium peak generation,Belgium peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Belgium subpeak generation,Belgium subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,France base load generation,France base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,France intermediate generation,France intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,France peak generation,France peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,France subpeak generation,France subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Germany base load generation,Germany base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Germany intermediate generation,Germany intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Germany peak generation,Germany peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Germany subpeak generation,Germany subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Luxembourg base load generation,Luxembourg base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Luxembourg intermediate generation,Luxembourg intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Luxembourg peak generation,Luxembourg peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Luxembourg subpeak generation,Luxembourg subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Netherlands base load generation,Netherlands base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Netherlands intermediate generation,Netherlands intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Netherlands peak generation,Netherlands peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Netherlands subpeak generation,Netherlands subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Switzerland base load generation,Switzerland base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Switzerland intermediate generation,Switzerland intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Switzerland peak generation,Switzerland peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Switzerland subpeak generation,Switzerland subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Portugal base load generation,Portugal base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Portugal intermediate generation,Portugal intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Portugal peak generation,Portugal peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Portugal subpeak generation,Portugal subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Spain base load generation,Spain base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Spain intermediate generation,Spain intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Spain peak generation,Spain peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Spain subpeak generation,Spain subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Denmark base load generation,Denmark base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Denmark intermediate generation,Denmark intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Denmark peak generation,Denmark peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Denmark subpeak generation,Denmark subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Estonia base load generation,Estonia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Estonia intermediate generation,Estonia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Estonia peak generation,Estonia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Estonia subpeak generation,Estonia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Finland base load generation,Finland base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Finland intermediate generation,Finland intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Finland peak generation,Finland peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Finland subpeak generation,Finland subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Latvia base load generation,Latvia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Latvia intermediate generation,Latvia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Latvia peak generation,Latvia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Latvia subpeak generation,Latvia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Lithuania base load generation,Lithuania base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Lithuania intermediate generation,Lithuania intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Lithuania peak generation,Lithuania peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Lithuania subpeak generation,Lithuania subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Norway base load generation,Norway base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Norway intermediate generation,Norway intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Norway peak generation,Norway peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Norway subpeak generation,Norway subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Sweden base load generation,Sweden base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Sweden intermediate generation,Sweden intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Sweden peak generation,Sweden peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Sweden subpeak generation,Sweden subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Albania base load generation,Albania base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Albania intermediate generation,Albania intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Albania peak generation,Albania peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Albania subpeak generation,Albania subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bosnia and Herzegovina base load generation,Bosnia and Herzegovina base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bosnia and Herzegovina intermediate generation,Bosnia and Herzegovina intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bosnia and Herzegovina peak generation,Bosnia and Herzegovina peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bosnia and Herzegovina subpeak generation,Bosnia and Herzegovina subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bulgaria base load generation,Bulgaria base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bulgaria intermediate generation,Bulgaria intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bulgaria peak generation,Bulgaria peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Bulgaria subpeak generation,Bulgaria subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Croatia base load generation,Croatia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Croatia intermediate generation,Croatia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Croatia peak generation,Croatia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Croatia subpeak generation,Croatia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Cyprus base load generation,Cyprus base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Cyprus intermediate generation,Cyprus intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Cyprus peak generation,Cyprus peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Cyprus subpeak generation,Cyprus subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Greece base load generation,Greece base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Greece intermediate generation,Greece intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Greece peak generation,Greece peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Greece subpeak generation,Greece subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Macedonia base load generation,Macedonia base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Macedonia intermediate generation,Macedonia intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Macedonia peak generation,Macedonia peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Macedonia subpeak generation,Macedonia subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Serbia and Montenegro base load generation,Serbia and Montenegro base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Serbia and Montenegro intermediate generation,Serbia and Montenegro intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Serbia and Montenegro peak generation,Serbia and Montenegro peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Serbia and Montenegro subpeak generation,Serbia and Montenegro subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Moldova base load generation,Moldova base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Moldova intermediate generation,Moldova intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Moldova peak generation,Moldova peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Moldova subpeak generation,Moldova subpeak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ukraine base load generation,Ukraine base load generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ukraine intermediate generation,Ukraine intermediate generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ukraine peak generation,Ukraine peak generation,Secondary Energy|Electricity,,,,,,,1
+electricity,Ukraine subpeak generation,Ukraine subpeak generation,Secondary Energy|Electricity,,,,,,,1

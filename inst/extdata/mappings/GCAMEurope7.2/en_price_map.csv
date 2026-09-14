@@ -1,0 +1,1938 @@
+# Prices of all markets
+market,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12,var13,var14,var15,var16,var17,var18,unit_conv
+AdnNicIslAdnNicIsl_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AdnNicIslAdnNicIsl_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AdrBlkSeaAdrBlkSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AdrBlkSeaAdrBlkSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AdrBlkSea_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstEAfrCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstEAfrCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNEAfrCstNE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNEAfrCstNE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNWAfrCstNW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNWAfrCstNW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstNW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSAfrCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSAfrCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSEAfrCstSE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSEAfrCstSE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSSWAfrCstSSW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSSWAfrCstSSW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSSW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSWAfrCstSW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSWAfrCstSW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstSW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstWAfrCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstWAfrCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntSAfrIntS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntSAfrIntS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntfrIntN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntfrIntN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AmazonRAmazonR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AmazonRAmazonR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AmazonR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AmuDaryaRAmuDaryaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AmuDaryaRAmuDaryaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AmuDaryaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AmurRAmurR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AmurRAmurR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AmurR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AngolaCstAngolaCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AngolaCstAngolaCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AngolaCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianPArabianP_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianPArabianP_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianP_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianSeaArabianSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianSeaArabianSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArabianSea_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArcticIslArcticIsl_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArcticIslArcticIsl_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArgColoRArgColoR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArgColoRArgColoR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArgColoR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstSArgCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstSArgCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstrgCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstrgCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArkWhtRedRArkWhtRedR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArkWhtRedRArkWhtRedR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArkWhtRedR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstEAusCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstEAusCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstSAusCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstSAusCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstWAusCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstWAusCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstusCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstusCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusIntAusInt_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusIntAusInt_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusInt_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BalticSeaBalticSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BalticSeaBalticSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BarentsSeaBarentsSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BarentsSeaBarentsSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Beef,NoReported,,,,,,,,,,,,,,,,,,1
+BengalBayBengalBay_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BengalBayBengalBay_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BengalWBengalW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BengalWBengalW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BengalW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BlackSeaNBlackSeaN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BlackSeaNBlackSeaN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BlackSeaSBlackSeaS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BlackSeaSBlackSeaS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BlackSeaS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BoHaiBoHai_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BoHaiBoHai_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BoHai_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BorneoCstNBorneoCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BorneoCstNBorneoCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BorneoCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BrahmaniRBrahmaniR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BrahmaniRBrahmaniR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BrahmaniR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstEBrzCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstEBrzCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstNBrzCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstNBrzCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstSBrzCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstSBrzCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+BrzCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+C2F6,NoReported,,,,,,,,,,,,,,,,,,1
+CF4,NoReported,,,,,,,,,,,,,,,,,,1
+CH4,NoReported,,,,,,,,,,,,,,,,,,1
+CH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+CH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+CO2,NoReported,,,,,,,,,,,,,,,,,,1
+EUCO2_ETS,NoReported,,,,,,,,,,,,,,,,,,1
+EUCO2_ETS2,NoReported,,,,,,,,,,,,,,,,,,1
+CO2 removal,NoReported,,,,,,,,,,,,,,,,,,1
+CO2 removal-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+CO2_LUC,NoReported,,,,,,,,,,,,,,,,,,1
+CaliforniaCalifornia_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CaliforniaCalifornia_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+California_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CanAtlCanAtl_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CanAtlCanAtl_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CanAtl_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CaribbeanCaribbean_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CaribbeanCaribbean_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Caribbean_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianECaspianE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianECaspianE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianNECaspianNE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianNECaspianNE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianNE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianSWCaspianSW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianSWCaspianSW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CaspianSW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CauveryRCauveryR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CauveryRCauveryR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CauveryR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ChaoPhrRChaoPhrR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ChaoPhrRChaoPhrR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstNChileCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstNChileCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstSChileCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstSChileCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ChileCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ChinaCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ChurchillRChurchillR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ChurchillRChurchillR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CntAmerCntAmer_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CntAmerCntAmer_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CntAmer_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ColEcuaCstColEcuaCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ColEcuaCstColEcuaCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ColEcuaCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+CongoRCongoR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CongoRCongoR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CongoR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Corn,NoReported,,,,,,,,,,,,,,,,,,1
+CstChinaCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstChinaCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DDGS and feedcakes,NoReported,,,,,,,,,,,,,,,,,,1
+Dairy,NoReported,,,,,,,,,,,,,,,,,,1
+DanubeRDanubeR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DanubeRDanubeR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DanubeR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+DaugavaRDaugavaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DaugavaRDaugavaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DeadSeaDeadSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DeadSeaDeadSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DeadSea_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+DnieperRDnieperR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DnieperRDnieperR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DniesterRDniesterR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DniesterRDniesterR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DnkGrmCstDnkGrmCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DnkGrmCstDnkGrmCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DnkGrmCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+DonRDonR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DonRDonR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DouroRDouroR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DouroRDouroR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+DouroR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+DvinaRNDvinaRN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+DvinaRNDvinaRN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Exports_fertilizer,NoReported,,,,,,,,,,,,,,,,,,1
+Exports_fertilizer-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+EJrdnSyrEJrdnSyr_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+EJrdnSyrEJrdnSyr_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+EJrdnSyr_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+EUC2F6,NoReported,,,,,,,,,,,,,,,,,,1
+EUCF4,NoReported,,,,,,,,,,,,,,,,,,1
+EUCH4,NoReported,,,,,,,,,,,,,,,,,,1
+EUCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+EUCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+EUCO2,NoReported,,,,,,,,,,,,,,,,,,1
+EUGHG,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC125,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC134a,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC143a,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC152a,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC227ea,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC23,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC236fa,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC245fa,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC32,NoReported,,,,,,,,,,,,,,,,,,1
+EUHFC365mfc,NoReported,,,,,,,,,,,,,,,,,,1
+EUN2O,NoReported,,,,,,,,,,,,,,,,,,1
+EUN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+EUN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+EUSF6,NoReported,,,,,,,,,,,,,,,,,,1
+EbroREbroR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+EbroREbroR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+EbroR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ElbeRElbeR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ElbeRElbeR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ElbeR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+EmsWeserREmsWeserR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+EmsWeserREmsWeserR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+EngWalesEngWales_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+EngWalesEngWales_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+EngWales_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+FarahrudRFarahrudR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FarahrudRFarahrudR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+FeedCrops,NoReported,,,,,,,,,,,,,,,,,,1
+FiberCrop,NoReported,,,,,,,,,,,,,,,,,,1
+FinlandFinland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FinlandFinland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Finland_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+FlyRFlyR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FlyRFlyR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+FodderGrass,NoReported,,,,,,,,,,,,,,,,,,1
+FodderHerb_Residue,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples-budget-fraction-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Dairy,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Fish,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_FruitsVeg,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_NonRuminant,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Oils,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_OtherCrop,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_PlantProtein,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Ruminant,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Sugar,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Dairy-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Fish-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_FruitsVeg-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_NonRuminant-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Oils-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_OtherCrop-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_PlantProtein-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Ruminant-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaples_Sugar-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_Staples-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_Staples,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_Staples-budget-fraction-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Forest,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstSFranceCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstSFranceCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstWFranceCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstWFranceCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+FranceCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+FraserRFraserR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+FraserRFraserR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+FraserR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Fruits,NoReported,,,,,,,,,,,,,,,,,,1
+GDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+GHG,NoReported,,,,,,,,,,,,,,,,,,1
+GangesRGangesR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GangesRGangesR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GangesR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GirondeGironde_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GirondeGironde_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Gironde_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GobiGobi_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GobiGobi_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Gobi_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GodavariRGodavariR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GodavariRGodavariR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GodavariR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GreatBasinGreatBasin_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GreatBasinGreatBasin_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GreatBasin_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GreatLakesGreatLakes_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GreatLakesGreatLakes_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GreatLakes_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GrijUsuRGrijUsuR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GrijUsuRGrijUsuR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GrijUsuR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GuadalqRGuadalqR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GuadalqRGuadalqR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GuadalqR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GuadianaRGuadianaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GuadianaRGuadianaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GuadianaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+GuineaGulfGuineaGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+GuineaGulfGuineaGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+GuineaGulf_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+H2 central production,Price|Secondary Energy|Hydrogen,,,,,,,,,,,,,,,,,,1
+H2 industrial,Price|Final Energy|Industry|Hydrogen,Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Price|Final Energy|Industry|Iron and Steel|Hydrogen,Price|Final Energy|Industry|Other Sector|Hydrogen,,,,,,,,,,,,,,,1
+H2 liquid truck,NoReported,,,,,,,,,,,,,,,,,,1
+H2 pipeline,NoReported,,,,,,,,,,,,,,,,,,1
+H2 retail delivery,Price|Final Energy|Residential and Commercial|Hydrogen,Price|Final Energy|Residential|Hydrogen,Price|Final Energy|Commercial|Hydrogen,,,,,,,,,,,,,,,,1
+H2 retail dispensing,Price|Final Energy|Transportation|Hydrogen,Price|Final Energy|Transportation|Bus|Hydrogen,Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Price|Final Energy|Transportation|Truck|Hydrogen,,,,,,,,,,,,,,,1
+H2 wholesale delivery,Price|Final Energy|Agriculture|Hydrogen,Price|Final Energy|Hydrogen,,,,,,,,,,,,,,,,,1
+H2 wholesale dispensing,Price|Final Energy|Bunkers|Hydrogen,Price|Final Energy|Transportation (w/ bunkers)|Hydrogen,Price|Final Energy|Transportation|Passenger|Hydrogen,Price|Final Energy|Transportation|Freight|Hydrogen,Price|Final Energy|Transportation|Domestic Shipping|Hydrogen,Price|Final Energy|Transportation|Domestic Aviation|Hydrogen,Price|Final Energy|Transportation|Rail|Hydrogen,,,,,,,,,,,,1
+HFC125,NoReported,,,,,,,,,,,,,,,,,,1
+HFC134a,NoReported,,,,,,,,,,,,,,,,,,1
+HFC143a,NoReported,,,,,,,,,,,,,,,,,,1
+HFC152a,NoReported,,,,,,,,,,,,,,,,,,1
+HFC227ea,NoReported,,,,,,,,,,,,,,,,,,1
+HFC23,NoReported,,,,,,,,,,,,,,,,,,1
+HFC236fa,NoReported,,,,,,,,,,,,,,,,,,1
+HFC245fa,NoReported,,,,,,,,,,,,,,,,,,1
+HFC32,NoReported,,,,,,,,,,,,,,,,,,1
+HFC365mfc,NoReported,,,,,,,,,,,,,,,,,,1
+HainanHainan_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HainanHainan_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Hainan_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+HamuMashRHamuMashR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HamuMashRHamuMashR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+HawaiiHawaii_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HawaiiHawaii_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Hawaii_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+HelmandHelmand_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HelmandHelmand_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Helmand_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+HongHong_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HongHong_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Hong_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+HuangHeRHuangHeR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HuangHeRHuangHeR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+HuangHeR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+HudsonBayHudsonBay_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+HudsonBayHudsonBay_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+HudsonBay_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IberiaCstIberiaCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IberiaCstIberiaCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IberiaCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IcelandIceland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IcelandIceland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IdnEIdnE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IdnEIdnE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IdnE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstEIndCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstEIndCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstNEIndCstNE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstNEIndCstNE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstNE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstSIndCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstSIndCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstWIndCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstWIndCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IndCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IndusRIndusR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IndusRIndusR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IndusR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IranIran_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IranIran_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Iran_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IrelandIreland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IrelandIreland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Ireland_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IrianJayaIrianJaya_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IrianJayaIrianJaya_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IrianJaya_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+IrrawaddyRIrrawaddyR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+IrrawaddyRIrrawaddyR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+IrrawaddyR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstEItalyCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstEItalyCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstWItalyCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstWItalyCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ItalyCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Japan_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Japan_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Japan_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+JavaTimorJavaTimor_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+JavaTimorJavaTimor_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+JavaTimor_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+KalimantanKalimantan_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+KalimantanKalimantan_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Kalimantan_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+KaraSeaKaraSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+KaraSeaKaraSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+KoreaKorea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+KoreaKorea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Korea_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+KrishnaRKrishnaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+KrishnaRKrishnaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+KrishnaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+LBalkashLBalkash_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LBalkashLBalkash_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LBalkash_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+LChadLChad_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LChadLChad_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LChad_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+LaPunaLaPuna_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LaPunaLaPuna_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LaPuna_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Legumes,NoReported,,,,,,,,,,,,,,,,,,1
+LenaRLenaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LenaRLenaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LimpopoRLimpopoR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LimpopoRLimpopoR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LimpopoR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+LoireRLoireR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+LoireRLoireR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+LoireR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MackenzieMackenzie_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MackenzieMackenzie_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Mackenzie_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MadagascarMadagascar_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MadagascarMadagascar_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MagdalenaRMagdalenaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MagdalenaRMagdalenaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MahanadiRMahanadiR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MahanadiRMahanadiR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MahanadiR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MahiRMahiR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MahiRMahiR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MahiR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MalaysiaPMalaysiaP_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MalaysiaPMalaysiaP_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MalaysiaP_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MarChiqMarChiq_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MarChiqMarChiq_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MarChiq_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MeditEMeditE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MeditEMeditE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MeditE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MeditIslMeditIsl_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MeditIslMeditIsl_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MeditIsl_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MeditSMeditS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MeditSMeditS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MeditS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MekongMekong_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MekongMekong_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Mekong_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MexBajaMexBaja_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MexBajaMexBaja_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MexBaja_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstNWMexCstNW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstNWMexCstNW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstNW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstWMexCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstWMexCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MexCstW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MexGulfMexGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MexGulfMexGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MexGulf_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MexIntMexInt_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MexIntMexInt_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MexInt_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MiscCrop,NoReported,,,,,,,,,,,,,,,,,,1
+MissouriRMissouriR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MissouriRMissouriR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MissouriR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRNMissppRN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRNMissppRN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRSMissppRS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRSMissppRS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MissppRS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+MurrayDrlgMurrayDrlg_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+MurrayDrlgMurrayDrlg_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+MurrayDrlg_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+N fertilizer,NoReported,,,,,,,,,,,,,,,,,,1
+N2O,NoReported,,,,,,,,,,,,,,,,,,1
+N2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+N2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+NWTerrNWTerr_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NWTerrNWTerr_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NWTerr_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NarmadaRNarmadaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NarmadaRNarmadaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NarmadaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NarvaRNarvaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NarvaRNarvaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NegroRNegroR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NegroRNegroR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NegroR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NelsonRNelsonR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NelsonRNelsonR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NelsonR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NemanRNemanR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NemanRNemanR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NemanR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NevaRNevaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NevaRNevaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NevaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NewCalednNewCaledn_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NewCalednNewCaledn_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NewZealandNewZealand_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NewZealandNewZealand_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NigerRNigerR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NigerRNigerR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NigerR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NileRNileR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+NileRNileR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+NileR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Forest,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Forest-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Crops,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Crops-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Meat,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_Meat-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_sawnwood,NoReported,,,,,,,,,,,,,,,,,,1
+NonFoodDemand_sawnwood-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+NutsSeeds,NoReported,,,,,,,,,,,,,,,,,,1
+ObRObR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ObRObR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ObR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+OderROderR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+OderROderR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+OderR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+OhioROhioR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+OhioROhioR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+OhioR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+OilCrop,NoReported,,,,,,,,,,,,,,,,,,1
+OilPalm,NoReported,,,,,,,,,,,,,,,,,,1
+OrangeROrangeR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+OrangeROrangeR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+OrangeR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+OrinocoROrinocoR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+OrinocoROrinocoR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+OrinocoR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+OtherGrain,NoReported,,,,,,,,,,,,,,,,,,1
+PacArcticPacArctic_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PacArcticPacArctic_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PacArctic_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PampasPampas_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PampasPampas_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Pampas_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PapaloapanPapaloapan_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PapaloapanPapaloapan_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Papaloapan_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PapuaCstPapuaCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PapuaCstPapuaCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ParnaibaRParnaibaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ParnaibaRParnaibaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ParnaibaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Pasture,NoReported,,,,,,,,,,,,,,,,,,1
+Pasture_FodderGrass,NoReported,,,,,,,,,,,,,,,,,,1
+PatagoniaPatagonia_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PatagoniaPatagonia_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PennarRPennarR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PennarRPennarR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PennarR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PersianGulfPersianGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PersianGulfPersianGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PersianGulf_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PeruCstPeruCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PeruCstPeruCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PeruCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PhlppnsPhlppns_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PhlppnsPhlppns_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PoRPoR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PoRPoR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PoR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+PolandCstPolandCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+PolandCstPolandCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+PolandCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Pork,NoReported,,,,,,,,,,,,,,,,,,1
+Poultry,NoReported,,,,,,,,,,,,,,,,,,1
+ROWC2F6,NoReported,,,,,,,,,,,,,,,,,,1
+ROWCF4,NoReported,,,,,,,,,,,,,,,,,,1
+ROWCH4,NoReported,,,,,,,,,,,,,,,,,,1
+ROWCH4_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+ROWCH4_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+ROWCO2,NoReported,,,,,,,,,,,,,,,,,,1
+ROWGHG,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC125,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC134a,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC143a,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC152a,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC227ea,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC23,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC236fa,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC245fa,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC32,NoReported,,,,,,,,,,,,,,,,,,1
+ROWHFC365mfc,NoReported,,,,,,,,,,,,,,,,,,1
+ROWN2O,NoReported,,,,,,,,,,,,,,,,,,1
+ROWN2O_AGR,NoReported,,,,,,,,,,,,,,,,,,1
+ROWN2O_AWB,NoReported,,,,,,,,,,,,,,,,,,1
+ROWSF6,NoReported,,,,,,,,,,,,,,,,,,1
+RedSeaERedSeaE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RedSeaERedSeaE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RedSeaE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RhineRRhineR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RhineRRhineR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RhineR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RhoneRRhoneR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RhoneRRhoneR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RhoneR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Rice,NoReported,,,,,,,,,,,,,,,,,,1
+RiftValleyRiftValley_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RiftValleyRiftValley_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RiftValley_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RioBalsasRioBalsas_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RioBalsasRioBalsas_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RioBalsas_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RioGrandeRioGrande_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RioGrandeRioGrande_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RioGrande_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RioLaPlataRioLaPlata_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RioLaPlataRioLaPlata_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RioLaPlata_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RioLermaRioLerma_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RioLermaRioLerma_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RioLerma_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RioVerdeRioVerde_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RioVerdeRioVerde_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RioVerde_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+RootTuber,NoReported,,,,,,,,,,,,,,,,,,1
+RusCstSERusCstSE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+RusCstSERusCstSE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+RusCstSE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstNESAmerCstNE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstNESAmerCstNE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstNE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstNSAmerCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstNSAmerCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SAmerCstN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SChinaSea_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SF6,NoReported,,,,,,,,,,,,,,,,,,1
+SSeaSChinaSea_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SSeaSChinaSea_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SabarmatiRSabarmatiR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SabarmatiRSabarmatiR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SabarmatiR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SalinasSalinas_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SalinasSalinas_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SalweenSalween_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SalweenSalween_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Salween_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SaoFrancRSaoFrancR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SaoFrancRSaoFrancR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SaoFrancR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Scavenging_Other,NoReported,,,,,,,,,,,,,,,,,,1
+ScheldtRScheldtR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ScheldtRScheldtR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ScheldtR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ScndnvNScndnvN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ScndnvNScndnvN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ScndnvN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ScotlandScotland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ScotlandScotland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Scotland_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SeineRSeineR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SeineRSeineR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SeineR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SenegalRSenegalR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SenegalRSenegalR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SepikRSepikR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SepikRSepikR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ShebJubRShebJubR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ShebJubRShebJubR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ShebJubR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SheepGoat,NoReported,,,,,,,,,,,,,,,,,,1
+SiberiaNSiberiaN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SiberiaNSiberiaN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SiberiaWSiberiaW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SiberiaWSiberiaW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SinaiPSinaiP_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SinaiPSinaiP_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SinaiP_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SittaungRSittaungR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SittaungRSittaungR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SolomonIslSolomonIsl_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SolomonIslSolomonIsl_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Soybean,NoReported,,,,,,,,,,,,,,,,,,1
+SpainCstSESpainCstSE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SpainCstSESpainCstSE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SpainCstSE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SriLankaSriLanka_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SriLankaSriLanka_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SriLanka_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+StLwrncRStLwrncR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+StLwrncRStLwrncR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+StLwrncR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SugarCrop,NoReported,,,,,,,,,,,,,,,,,,1
+SulawesiSulawesi_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SulawesiSulawesi_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Sulawesi_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SumatraSumatra_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SumatraSumatra_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Sumatra_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SwedenSweden_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SwedenSweden_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Sweden_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+SyrDaryaRSyrDaryaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+SyrDaryaRSyrDaryaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+SyrDaryaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TagusRTagusR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TagusRTagusR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TagusR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Taiwan_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Taiwan_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TaptiRTaptiR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TaptiRTaptiR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TaptiR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TarimTarim_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TarimTarim_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TasmaniaTasmania_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TasmaniaTasmania_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Tasmania_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TehuantpcTehuantpc_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TehuantpcTehuantpc_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Tehuantpc_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TennRTennR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TennRTennR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TennR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TexasCstTexasCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TexasCstTexasCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TexasCst_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ThaiGulfThaiGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ThaiGulfThaiGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TiberRTiberR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TiberRTiberR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TiberR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TibetTibet_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TibetTibet_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TigrEuphRTigrEuphR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TigrEuphRTigrEuphR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TigrEuphR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+TocantinsRTocantinsR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+TocantinsRTocantinsR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+TocantinsR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UnmanagedLand,NoReported,,,,,,,,,,,,,,,,,,1
+UralRUralR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UralRUralR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UralR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRNUsaColoRN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRNUsaColoRN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRSUsaColoRS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRSUsaColoRS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaColoRS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstEUsaCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstEUsaCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstNEUsaCstNE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstNEUsaCstNE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstNE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstSEUsaCstSE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstSEUsaCstSE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaCstSE_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+UsaPacNWUsaPacNW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+UsaPacNWUsaPacNW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+UsaPacNW_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+Vegetables,NoReported,,,,,,,,,,,,,,,,,,1
+VietnamCstVietnamCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+VietnamCstVietnamCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+VolgaRVolgaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+VolgaRVolgaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+VolgaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+VoltaRVoltaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+VoltaRVoltaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Wheat,NoReported,,,,,,,,,,,,,,,,,,1
+WislaRWislaR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+WislaRWislaR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+WislaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+XunJiangXunJiang_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+XunJiangXunJiang_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+XunJiang_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+YangtzeYangtze_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+YangtzeYangtze_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Yangtze_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+YeniseiRYeniseiR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+YeniseiRYeniseiR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+YucatanPYucatanP_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+YucatanPYucatanP_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+YucatanP_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ZambeziRZambeziR_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ZambeziRZambeziR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ZambeziR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+ZiyaHeZiyaHe_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ZiyaHeZiyaHe_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ZiyaHe_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+agricultural energy use,NoReported,,,,,,,,,,,,,,,,,,1
+agricultural energy use-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+airCO2,NoReported,,,,,,,,,,,,,,,,,,1
+alumina,NoReported,,,,,,,,,,,,,,,,,,1
+aluminum,NoReported,,,,,,,,,,,,,,,,,,1
+aluminum-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+ammonia,NoReported,,,,,,,,,,,,,,,,,,1
+backup_electricity,NoReported,,,,,,,,,,,,,,,,,,1
+biomass,Price|Secondary Energy|Solids,,,,,,,,,,,,,,,,,,1
+biophysical water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+capital,NoReported,,,,,,,,,,,,,,,,,,1
+carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+cement,NoReported,,,,,,,,,,,,,,,,,,1
+cement-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+chemical,NoReported,,,,,,,,,,,,,,,,,,1
+chemical energy use,NoReported,,,,,,,,,,,,,,,,,,1
+chemical feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+chemical-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+coal,Price|Secondary Energy|Solids,,,,,,,,,,,,,,,,,,1
+comm cooling,NoReported,,,,,,,,,,,,,,,,,,1
+comm heating,NoReported,,,,,,,,,,,,,,,,,,1
+comm others,NoReported,,,,,,,,,,,,,,,,,,1
+comm cooling EUR,NoReported,,,,,,,,,,,,,,,,,,1
+comm heating EUR,NoReported,,,,,,,,,,,,,,,,,,1
+comm others EUR,NoReported,,,,,,,,,,,,,,,,,,1
+comm-internal-gains-trial-market-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+construction,NoReported,,,,,,,,,,,,,,,,,,1
+construction energy use,NoReported,,,,,,,,,,,,,,,,,,1
+construction feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+construction-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+consumer durable,NoReported,,,,,,,,,,,,,,,,,,1
+crude oil,NoReported,,,,,,,,,,,,,,,,,,1
+csp_backup,NoReported,,,,,,,,,,,,,,,,,,1
+delivered biomass,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Biomass,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Biomass,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Biomass,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Biomass,,,Price|Final Energy|Solids,Price|Final Energy|Solids|Biomass,,,,,,,1
+delivered biomass industry,,,,,,,,,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Biomass,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Biomass,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Biomass,1
+delivered coal,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Coal,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Coal,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Coal,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Coal,,,Price|Final Energy|Solids,Price|Final Energy|Solids|Coal,,,,,,,1
+delivered coal feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+delivered coal industry,,,,,,,,,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Coal,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Coal,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Coal,1
+delivered gas,Price|Final Energy|Residential and Commercial|Gases,Price|Final Energy|Residential|Gases,Price|Final Energy|Commercial|Gases,,,,,,,,,,,,,,,,1
+delivered gas h2,NoReported,,,,,,,,,,,,,,,,,,1
+delivered gas transport,,,,Price|Final Energy|Transportation|Gases,Price|Final Energy|Transportation|Bus|Gases,Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,,,,,,,,,,,,,1
+desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
+distributed_solar,NoReported,,,,,,,,,,,,,,,,,,1
+district heat,Price|Final Energy|Agriculture|Heat,,Price|Final Energy|Residential and Commercial|Heat,Price|Final Energy|Residential|Heat,Price|Final Energy|Commercial|Heat,Price|Final Energy|Heat,Price|Final Energy|Industry|Heat,Price|Secondary Energy|Heat,Price|Final Energy|Industry|Chemicals|Heat,,,,,,,,,,1
+elec_CSP,NoReported,,,,,,,,,,,,,,,,,,1
+elec_CSP-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_CSP_storage,NoReported,,,,,,,,,,,,,,,,,,1
+elec_CSP_storage-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_Gen_III,NoReported,,,,,,,,,,,,,,,,,,1
+elec_Gen_III-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_Gen_II_LWR,NoReported,,,,,,,,,,,,,,,,,,1
+elec_Gen_II_LWR-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (IGCC CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (IGCC CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (IGCC),NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (IGCC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (conv CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (conv CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (conv),NoReported,,,,,,,,,,,,,,,,,,1
+elec_biomass (conv)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (IGCC CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (IGCC CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (IGCC),NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (IGCC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (conv pul CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (conv pul CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (conv pul),NoReported,,,,,,,,,,,,,,,,,,1
+elec_coal (conv pul)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (CC CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (CC CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (CC),NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (CC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (steam/CT),NoReported,,,,,,,,,,,,,,,,,,1
+elec_gas (steam/CT)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_geothermal,NoReported,,,,,,,,,,,,,,,,,,1
+elec_geothermal-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (CC CCS),NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (CC CCS)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (CC),NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (CC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (steam/CT),NoReported,,,,,,,,,,,,,,,,,,1
+elec_refined liquids (steam/CT)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elect_td_bld,Price|Final Energy|Residential and Commercial|Electricity,,Price|Final Energy|Residential|Electricity,Price|Final Energy|Commercial|Electricity,,,,,,,,,,,,,,,1
+elect_td_ind,Price|Final Energy|Agriculture|Electricity,,Price|Final Energy|Electricity,Price|Final Energy|Industry|Electricity,Price|Final Energy|Industry|Chemicals|Electricity,Price|Final Energy|Industry|Iron and Steel|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Price|Final Energy|Industry|Other Sector|Electricity,Price|Final Energy|Industry|Pulp and Paper|Electricity,,,,,,,,,,1
+elect_td_trn,Price|Final Energy|Bunkers|Electricity,,Price|Final Energy|Transportation (w/ bunkers)|Electricity,Price|Final Energy|Transportation|Electricity,Price|Final Energy|Transportation|Truck|Electricity,Price|Final Energy|Transportation|Rail|Electricity,Price|Final Energy|Transportation|Passenger|Electricity,Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Price|Final Energy|Transportation|Freight|Electricity,Price|Final Energy|Transportation|Domestic Shipping|Electricity,Price|Final Energy|Transportation|Domestic Aviation|Electricity,Price|Final Energy|Transportation|Bus|Electricity,,,,,,,1
+elect_td_en,NoReported,,,,,,,,,,,,,,,,,,1
+elect_td_h2,NoReported,,,,,,,,,,,,,,,,,,1
+electricity,Price|Secondary Energy|Electricity,,,,,,,,,,,,,,,,,,1
+electricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+electricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+energy net export,NoReported,,,,,,,,,,,,,,,,,,1
+energy service,NoReported,,,,,,,,,,,,,,,,,,1
+food processing,NoReported,,,,,,,,,,,,,,,,,,1
+gas pipeline,NoReported,,,,,,,,,,,,,,,,,,1
+gas processing,Price|Secondary Energy|Gases,,,,,,,,,,,,,,,,,,1
+gas trade statistical differences,NoReported,,,,,,,,,,,,,,,,,,1
+gas trade statistical differencesDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+geothermal,NoReported,,,,,,,,,,,,,,,,,,1
+globalFodderHerb,NoReported,,,,,,,,,,,,,,,,,,1
+globalOtherMeat_Fish,NoReported,,,,,,,,,,,,,,,,,,1
+globalResidue,NoReported,,,,,,,,,,,,,,,,,,1
+globalScavenging_Other_Rsrc,NoReported,,,,,,,,,,,,,,,,,,1
+globalbio-ceiling,NoReported,,,,,,,,,,,,,,,,,,1
+globalbio_externality_cost,NoReported,,,,,,,,,,,,,,,,,,1
+globalglobal solar resource,NoReported,,,,,,,,,,,,,,,,,,1
+globallimestone,NoReported,,,,,,,,,,,,,,,,,,1
+globalmisc emissions sources,NoReported,,,,,,,,,,,,,,,,,,1
+globalnegative_emiss_budget,NoReported,,,,,,,,,,,,,,,,,,1
+globaloffshore carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+globaloil-credits,NoReported,,,,,,,,,,,,,,,,,,1
+globalscrap,NoReported,,,,,,,,,,,,,,,,,,1
+globalunconventional oil upscaling,NoReported,,,,,,,,,,,,,,,,,,1
+globaluranium,NoReported,,,,,,,,,,,,,,,,,,1
+industrial processes,NoReported,,,,,,,,,,,,,,,,,,1
+industrial wastewater treatment,NoReported,,,,,,,,,,,,,,,,,,1
+industrial water abstraction,NoReported,,,,,,,,,,,,,,,,,,1
+industrial water treatment,NoReported,,,,,,,,,,,,,,,,,,1
+inorganic-surface-storage,NoReported,,,,,,,,,,,,,,,,,,1
+iron and steel,NoReported,,,,,,,,,,,,,,,,,,1
+irrigation water abstraction,NoReported,,,,,,,,,,,,,,,,,,1
+mining energy use,NoReported,,,,,,,,,,,,,,,,,,1
+mining energy use-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+municipal wastewater treatment,NoReported,,,,,,,,,,,,,,,,,,1
+municipal water,NoReported,,,,,,,,,,,,,,,,,,1
+municipal water abstraction,NoReported,,,,,,,,,,,,,,,,,,1
+municipal water distribution,NoReported,,,,,,,,,,,,,,,,,,1
+municipal water treatment,NoReported,,,,,,,,,,,,,,,,,,1
+municipal water-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+natural gas,NoReported,,,,,,,,,,,,,,,,,,1
+nuclearFuelGenII,NoReported,,,,,,,,,,,,,,,,,,1
+nuclearFuelGenIII,NoReported,,,,,,,,,,,,,,,,,,1
+offshore wind resource,NoReported,,,,,,,,,,,,,,,,,,1
+onshore carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+onshore wind resource,NoReported,,,,,,,,,,,,,,,,,,1
+other industrial energy use,NoReported,,,,,,,,,,,,,,,,,,1
+other industrial feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+other industry,NoReported,,,,,,,,,,,,,,,,,,1
+other industry-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+paper,NoReported,,,,,,,,,,,,,,,,,,1
+paper-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+process heat cement,NoReported,,,,,,,,,,,,,,,,,,1
+process heat dac,NoReported,,,,,,,,,,,,,,,,,,1
+process heat food processing,NoReported,,,,,,,,,,,,,,,,,,1
+process heat paper,NoReported,,,,,,,,,,,,,,,,,,1
+refined liquids enduse,Price|Final Energy|Bunkers|Liquids,,,Price|Final Energy|Residential and Commercial|Liquids,Price|Final Energy|Residential|Liquids,Price|Final Energy|Commercial|Liquids,Price|Final Energy|Liquids,,,,,,,,,,,,1
+refined liquids industrial,Price|Final Energy|Agriculture|Liquids,,Price|Final Energy|Industry|Liquids,Price|Final Energy|Industry|Chemicals|Liquids,Price|Final Energy|Industry|Iron and Steel|Liquids,Price|Final Energy|Industry|Other Sector|Liquids,,,,,,,,,,,,,1
+refined liquids feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+refined liquids transport,Price|Final Energy|Transportation (w/ bunkers)|Liquids,,,,,,,,,,,,,,,,,,1
+refined liquids bunkers,NoReported,,,,,,,,,,,,,,,,,,1
+refined liquids bunkers av,NoReported,,,,,,,,,,,,,,,,,,1
+refined liquids bunkers feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+refined liquids bunkers transport,Price|Final Energy|Transportation|Liquids,Price|Final Energy|Transportation|Truck|Liquids,Price|Final Energy|Transportation|Rail|Liquids,Price|Final Energy|Transportation|Passenger|Liquids,Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Price|Final Energy|Transportation|Freight|Liquids,Price|Final Energy|Transportation|Domestic Shipping|Liquids,Price|Final Energy|Transportation|Domestic Aviation|Liquids,Price|Final Energy|Transportation|Bus|Liquids,,,,,,,,,,1
+refining,Price|Secondary Energy|Liquids,,,,,,,,,,,,,,,,,,1
+refiningDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+regional ammonia,NoReported,,,,,,,,,,,,,,,,,,1
+regional beef,NoReported,,,,,,,,,,,,,,,,,,1
+regional biomass,Price|Primary Energy|Biomass,,,,,,,,,,,,,,,,,,1
+regional biomassOil,NoReported,,,,,,,,,,,,,,,,,,1
+regional coal,Price|Primary Energy|Coal,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+regional corn,NoReported,,,,,,,,,,,,,,,,,,1
+regional corn for ethanol,NoReported,,,,,,,,,,,,,,,,,,1
+regional dairy,NoReported,,,,,,,,,,,,,,,,,,1
+regional fibercrop,NoReported,,,,,,,,,,,,,,,,,,1
+regional forest,NoReported,,,,,,,,,,,,,,,,,,1
+regional fruits,NoReported,,,,,,,,,,,,,,,,,,1
+regional industrial_roundwood,NoReported,,,,,,,,,,,,,,,,,,1
+regional iron and steel,NoReported,,,,,,,,,,,,,,,,,,1
+regional iron and steel-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+regional legumes,NoReported,,,,,,,,,,,,,,,,,,1
+regional misccrop,NoReported,,,,,,,,,,,,,,,,,,1
+regional natural gas,Price|Primary Energy|Gas,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+regional nuts_seeds,NoReported,,,,,,,,,,,,,,,,,,1
+regional oil,Price|Primary Energy|Oil,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+regional oilcrop,NoReported,,,,,,,,,,,,,,,,,,1
+regional oilpalm,NoReported,,,,,,,,,,,,,,,,,,1
+regional othergrain,NoReported,,,,,,,,,,,,,,,,,,1
+regional pork,NoReported,,,,,,,,,,,,,,,,,,1
+regional poultry,NoReported,,,,,,,,,,,,,,,,,,1
+regional rice,NoReported,,,,,,,,,,,,,,,,,,1
+regional root_tuber,NoReported,,,,,,,,,,,,,,,,,,1
+regional sawnwood,NoReported,,,,,,,,,,,,,,,,,,1
+regional sheepgoat,NoReported,,,,,,,,,,,,,,,,,,1
+regional soybean,NoReported,,,,,,,,,,,,,,,,,,1
+regional sugar for ethanol,NoReported,,,,,,,,,,,,,,,,,,1
+regional sugarcrop,NoReported,,,,,,,,,,,,,,,,,,1
+regional vegetables,NoReported,,,,,,,,,,,,,,,,,,1
+regional wheat,NoReported,,,,,,,,,,,,,,,,,,1
+regional woodpulp,NoReported,,,,,,,,,,,,,,,,,,1
+regional woodpulp for energy,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking coal EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooking modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water coal EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid hot water modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid other appliance modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal EUR_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid cooling modern_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating TradBio_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating coal_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid heating modern_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid others TradBio_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid others coal_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d1,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d10,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d2,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d3,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d4,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d5,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d6,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d7,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d8,NoReported,,,,,,,,,,,,,,,,,,1
+resid others modern_d9,NoReported,,,,,,,,,,,,,,,,,,1
+resid-internal-gains-trial-market-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+sawnwood_processing,NoReported,,,,,,,,,,,,,,,,,,1
+seawater,NoReported,,,,,,,,,,,,,,,,,,1
+solar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+surface carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+total beef,NoReported,,,,,,,,,,,,,,,,,,1
+total biomass,NoReported,,,,,,,,,,,,,,,,,,1
+total corn,NoReported,,,,,,,,,,,,,,,,,,1
+total dairy,NoReported,,,,,,,,,,,,,,,,,,1
+total fibercrop,NoReported,,,,,,,,,,,,,,,,,,1
+total fruits,NoReported,,,,,,,,,,,,,,,,,,1
+total legumes,NoReported,,,,,,,,,,,,,,,,,,1
+total misccrop,NoReported,,,,,,,,,,,,,,,,,,1
+total nuts_seeds,NoReported,,,,,,,,,,,,,,,,,,1
+total oilcrop,NoReported,,,,,,,,,,,,,,,,,,1
+total oilpalm,NoReported,,,,,,,,,,,,,,,,,,1
+total othergrain,NoReported,,,,,,,,,,,,,,,,,,1
+total pork,NoReported,,,,,,,,,,,,,,,,,,1
+total poultry,NoReported,,,,,,,,,,,,,,,,,,1
+total rice,NoReported,,,,,,,,,,,,,,,,,,1
+total root_tuber,NoReported,,,,,,,,,,,,,,,,,,1
+total sheepgoat,NoReported,,,,,,,,,,,,,,,,,,1
+total soybean,NoReported,,,,,,,,,,,,,,,,,,1
+total sugarcrop,NoReported,,,,,,,,,,,,,,,,,,1
+total vegetables,NoReported,,,,,,,,,,,,,,,,,,1
+total wheat,NoReported,,,,,,,,,,,,,,,,,,1
+traded Afr_MidE pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded Afr_MidE pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded EUR pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded EUR pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded LA pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded LA pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded LNG,NoReported,,,,,,,,,,,,,,,,,,1
+traded LNGDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded N.Amer pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded N.Amer pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded PAC pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded PAC pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded RUS pipeline gas,NoReported,,,,,,,,,,,,,,,,,,1
+traded RUS pipeline gasDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded ammonia,NoReported,,,,,,,,,,,,,,,,,,1
+traded ammoniaDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded beef,NoReported,,,,,,,,,,,,,,,,,,1
+traded beefDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded biomass,NoReported,,,,,,,,,,,,,,,,,,1
+traded biomassDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded coal,NoReported,,,,,,,,,,,,,,,,,,1
+traded coalDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded corn,NoReported,,,,,,,,,,,,,,,,,,1
+traded cornDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded dairy,NoReported,,,,,,,,,,,,,,,,,,1
+traded dairyDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded electricity,NoReported,,,,,,,,,,,,,,,,,,1
+traded electricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded fibercrop,NoReported,,,,,,,,,,,,,,,,,,1
+traded fibercropDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded forest,NoReported,,,,,,,,,,,,,,,,,,1
+traded forestDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded fruits,NoReported,,,,,,,,,,,,,,,,,,1
+traded fruitsDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded industrial_roundwood,NoReported,,,,,,,,,,,,,,,,,,1
+traded industrial_roundwoodDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded iron and steel,NoReported,,,,,,,,,,,,,,,,,,1
+traded iron and steelDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded legumes,NoReported,,,,,,,,,,,,,,,,,,1
+traded legumesDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded misccrop,NoReported,,,,,,,,,,,,,,,,,,1
+traded misccropDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded nuts_seeds,NoReported,,,,,,,,,,,,,,,,,,1
+traded nuts_seedsDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded oil,NoReported,,,,,,,,,,,,,,,,,,1
+traded oilDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded oilcrop,NoReported,,,,,,,,,,,,,,,,,,1
+traded oilcropDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded oilpalm,NoReported,,,,,,,,,,,,,,,,,,1
+traded oilpalmDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded othergrain,NoReported,,,,,,,,,,,,,,,,,,1
+traded othergrainDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded pork,NoReported,,,,,,,,,,,,,,,,,,1
+traded porkDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded poultry,NoReported,,,,,,,,,,,,,,,,,,1
+traded poultryDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded rice,NoReported,,,,,,,,,,,,,,,,,,1
+traded riceDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded root_tuber,NoReported,,,,,,,,,,,,,,,,,,1
+traded root_tuberDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded sawnwood,NoReported,,,,,,,,,,,,,,,,,,1
+traded sawnwoodDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded sheepgoat,NoReported,,,,,,,,,,,,,,,,,,1
+traded sheepgoatDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded soybean,NoReported,,,,,,,,,,,,,,,,,,1
+traded soybeanDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded sugarcrop,NoReported,,,,,,,,,,,,,,,,,,1
+traded sugarcropDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded vegetables,NoReported,,,,,,,,,,,,,,,,,,1
+traded vegetablesDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded wheat,NoReported,,,,,,,,,,,,,,,,,,1
+traded wheatDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traded woodpulp,NoReported,,,,,,,,,,,,,,,,,,1
+traded woodpulpDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+traditional biomass,NoReported,,,,,,,,,,,,,,,,,,1
+trn_aviation_intl,NoReported,,,,,,,,,,,,,,,,,,1
+trn_aviation_intl-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+trn_freight,NoReported,,,,,,,,,,,,,,,,,,1
+trn_freight-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+trn_freight_road,NoReported,,,,,,,,,,,,,,,,,,1
+trn_freight_roadDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+trn_pass,NoReported,,,,,,,,,,,,,,,,,,1
+trn_pass-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+trn_pass_road,NoReported,,,,,,,,,,,,,,,,,,1
+trn_pass_road_LDV,NoReported,,,,,,,,,,,,,,,,,,1
+trn_pass_road_LDV_4W,NoReported,,,,,,,,,,,,,,,,,,1
+trn_shipping_intl,NoReported,,,,,,,,,,,,,,,,,,1
+trn_shipping_intl-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+urban processes,NoReported,,,,,,,,,,,,,,,,,,1
+urban processes-tfe,NoReported,,,,,,,,,,,,,,,,,,1
+waste biomass for paper,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_an_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_an_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_elec_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_elec_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_ind_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_ind_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AdnNicIsl_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AdnNicIsl_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AdrBlkSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AdrBlkSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstNE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstNE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstNW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstNW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSSW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSSW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstSW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrIntN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrIntN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrIntS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AfrIntS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmazonR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmazonR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmuDaryaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmuDaryaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmurR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AmurR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AngolaCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AngolaCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArabianP_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArabianP_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArabianSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArabianSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArcticIsl_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArcticIsl_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgColoR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgColoR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArgCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArkWhtRedR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ArkWhtRedR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusInt_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_AusInt_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BalticSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BalticSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BarentsSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BarentsSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BengalBay_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BengalBay_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BengalW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BengalW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BlackSeaN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BlackSeaN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BlackSeaS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BlackSeaS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BoHai_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BoHai_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BorneoCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BorneoCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrahmaniR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrahmaniR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_BrzCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_California_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_California_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CanAtl_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CanAtl_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Caribbean_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Caribbean_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianNE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianNE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianSW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CaspianSW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CauveryR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CauveryR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChaoPhrR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChaoPhrR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChileCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChileCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChileCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChileCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChinaCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChinaCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChurchillR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ChurchillR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CntAmer_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CntAmer_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ColEcuaCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ColEcuaCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CongoR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_CongoR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DanubeR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DanubeR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DaugavaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DaugavaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DeadSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DeadSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DnieperR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DnieperR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DniesterR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DniesterR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DnkGrmCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DnkGrmCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DonR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DonR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DouroR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DouroR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DvinaRN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_DvinaRN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EJrdnSyr_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EJrdnSyr_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EbroR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EbroR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ElbeR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ElbeR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EmsWeserR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EmsWeserR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EngWales_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_EngWales_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FarahrudR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FarahrudR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Finland_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Finland_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FlyR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FlyR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FranceCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FranceCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FranceCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FranceCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FraserR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_FraserR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GangesR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GangesR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Gironde_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Gironde_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Gobi_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Gobi_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GodavariR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GodavariR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GreatBasin_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GreatBasin_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GreatLakes_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GreatLakes_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GrijUsuR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GrijUsuR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuadalqR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuadalqR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuadianaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuadianaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuineaGulf_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_GuineaGulf_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hainan_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hainan_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HamuMashR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HamuMashR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hawaii_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hawaii_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Helmand_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Helmand_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hong_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Hong_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HuangHeR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HuangHeR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HudsonBay_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_HudsonBay_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IberiaCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IberiaCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Iceland_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Iceland_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IdnE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IdnE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstNE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstNE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndusR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IndusR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Iran_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Iran_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Ireland_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Ireland_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IrianJaya_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IrianJaya_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IrrawaddyR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_IrrawaddyR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ItalyCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ItalyCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ItalyCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ItalyCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Japan_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Japan_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_JavaTimor_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_JavaTimor_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Kalimantan_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Kalimantan_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_KaraSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_KaraSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Korea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Korea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_KrishnaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_KrishnaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LBalkash_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LBalkash_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LChad_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LChad_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LaPuna_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LaPuna_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LenaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LenaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LimpopoR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LimpopoR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LoireR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_LoireR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Mackenzie_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Mackenzie_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Madagascar_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Madagascar_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MagdalenaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MagdalenaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MahanadiR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MahanadiR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MahiR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MahiR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MalaysiaP_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MalaysiaP_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MarChiq_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MarChiq_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditIsl_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditIsl_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MeditS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Mekong_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Mekong_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexBaja_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexBaja_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexCstNW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexCstNW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexCstW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexCstW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexGulf_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexGulf_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexInt_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MexInt_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissouriR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissouriR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissppRN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissppRN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissppRS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MissppRS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MurrayDrlg_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_MurrayDrlg_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NWTerr_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NWTerr_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NarmadaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NarmadaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NarvaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NarvaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NegroR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NegroR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NelsonR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NelsonR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NemanR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NemanR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NevaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NevaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NewCaledn_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NewCaledn_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NewZealand_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NewZealand_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NigerR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NigerR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NileR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_NileR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ObR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ObR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OderR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OderR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OhioR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OhioR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OrangeR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OrangeR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OrinocoR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_OrinocoR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PacArctic_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PacArctic_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Pampas_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Pampas_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Papaloapan_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Papaloapan_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PapuaCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PapuaCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ParnaibaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ParnaibaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Patagonia_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Patagonia_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PennarR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PennarR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PersianGulf_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PersianGulf_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PeruCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PeruCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Phlppns_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Phlppns_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PoR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PoR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PolandCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_PolandCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RedSeaE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RedSeaE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RhineR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RhineR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RhoneR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RhoneR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RiftValley_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RiftValley_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioBalsas_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioBalsas_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioGrande_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioGrande_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioLaPlata_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioLaPlata_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioLerma_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioLerma_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioVerde_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RioVerde_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RusCstSE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_RusCstSE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SAmerCstNE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SAmerCstNE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SAmerCstN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SAmerCstN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SChinaSea_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SChinaSea_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SabarmatiR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SabarmatiR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Salinas_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Salinas_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Salween_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Salween_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SaoFrancR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SaoFrancR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ScheldtR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ScheldtR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ScndnvN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ScndnvN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Scotland_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Scotland_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SeineR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SeineR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SenegalR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SenegalR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SepikR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SepikR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ShebJubR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ShebJubR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SiberiaN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SiberiaN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SiberiaW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SiberiaW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SinaiP_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SinaiP_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SittaungR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SittaungR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SolomonIsl_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SolomonIsl_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SpainCstSE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SpainCstSE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SriLanka_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SriLanka_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_StLwrncR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_StLwrncR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sulawesi_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sulawesi_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sumatra_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sumatra_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sweden_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Sweden_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SyrDaryaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_SyrDaryaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TagusR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TagusR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Taiwan_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Taiwan_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TaptiR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TaptiR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tarim_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tarim_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tasmania_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tasmania_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tehuantpc_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tehuantpc_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TennR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TennR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TexasCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TexasCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ThaiGulf_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ThaiGulf_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TiberR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TiberR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tibet_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Tibet_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TigrEuphR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TigrEuphR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TocantinsR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_TocantinsR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UralR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UralR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaColoRN_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaColoRN_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaColoRS_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaColoRS_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstNE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstNE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstSE_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaCstSE_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaPacNW_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_UsaPacNW_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VietnamCst_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VietnamCst_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VolgaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VolgaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VoltaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_VoltaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_WislaR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_WislaR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_XunJiang_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_XunJiang_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Yangtze_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_Yangtze_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_YeniseiR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_YeniseiR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_YucatanP_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_YucatanP_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ZambeziR_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ZambeziR_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ZiyaHe_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_irr_ZiyaHe_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_muni_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_muni_W,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_pri_C,NoReported,,,,,,,,,,,,,,,,,,1
+water_td_pri_W,NoReported,,,,,,,,,,,,,,,,,,1
+wholesale gas,Price|Final Energy|Agriculture|Gases,,Price|Final Energy|Gases,Price|Final Energy|Industry|Gases,Price|Final Energy|Industry|Chemicals|Ammonia|Gases,Price|Final Energy|Industry|Chemicals|Gases,Price|Final Energy|Industry|Iron and Steel|Gases,Price|Final Energy|Industry|Other Sector|Gases,,,,,,,,,,,1
+wholesale gas feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
+wind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+woodpulp_energy,NoReported,,,,,,,,,,,,,,,,,,1
+woodpulp_processing,NoReported,,,,,,,,,,,,,,,,,,1
+base load generation,NoReported,,,,,,,,,,,,,,,,,,1
+intermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+peak generation,NoReported,,,,,,,,,,,,,,,,,,1
+subpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovabase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+_MoldovaelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovapeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovapeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovaregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovasubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovasubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Finland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Finland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstSFranceCstS_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstSFranceCstS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstWFranceCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstWFranceCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Iceland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Iceland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Ireland_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Ireland_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstEItalyCstE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstEItalyCstE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstWItalyCstW_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstWItalyCstW_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstPolandCst_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstPolandCst_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+CstSESpainCstSE_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+CstSESpainCstSE_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+Sweden_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+Sweden_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+base load generation-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+elect_td_bld-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+intermediate generation-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+peak generation-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+subpeak generation-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
+_MoldovaGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovasolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+_Moldovawind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_NonStaplesFoodDemand-budget-fraction-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+FoodDemand_StaplesFoodDemand-budget-fraction-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulabase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_PeninsulaelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_PeninsulaGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulaoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulapeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulapeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsularegional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulasolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulasubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulasubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Appenine_Peninsulawind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islesbase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+British_Isleselect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+British_Isleselectricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Isleselectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+British_IsleselectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+British_IslesGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islesintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islesintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islesoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islespeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islespeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islesregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islessolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islessubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+British_Islessubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+British_Isleswind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europebase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_EuropeelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_EuropeGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europepeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europepeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europeregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europesolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europesubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europesubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Eastern_Europewind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europebase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_EuropeelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_EuropeGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europepeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europepeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europeregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europesolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europesubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europesubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Central_Western_Europewind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_MarketGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded ammonia,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded ammoniaDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded beef,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded beefDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded biomass,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded biomassDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded coal,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded coalDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded dairy,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded dairyDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded industrial_roundwood,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded industrial_roundwoodDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded iron and steel,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded iron and steelDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded LNG,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded LNGDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded oil,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded oilDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded pork,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded porkDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded poultry,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded poultryDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded sawnwood,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded sawnwoodDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded sheepgoat,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded sheepgoatDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded woodpulp,NoReported,,,,,,,,,,,,,,,,,,1
+European_Single_Markettraded woodpulpDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulabase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_PeninsulaelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_PeninsulaGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulaoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulapeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulapeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsularegional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulasolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulasubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulasubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Iberian_Peninsulawind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europebase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_EuropeelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_EuropeGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europepeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europepeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europeregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europesolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europesubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europesubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+Northern_Europewind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europebase load generation,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeelect_td_bld,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeelectricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeelectricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_EuropeelectricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_EuropeGDP_Trial,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeintermediate electricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeintermediate generation,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeoff peak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europepeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europepeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europeregional electricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europesolar-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europesubpeak electricity,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europesubpeak generation,NoReported,,,,,,,,,,,,,,,,,,1
+South_Eastern_Europewind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1

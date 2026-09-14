@@ -1,0 +1,28 @@
+﻿# Production mapping
+sector,var1,var2,var3,GCAM output unit
+agricultural energy use,NoReported,,,EJ
+airCO2,NoReported,,,EJ
+alumina,Production|Non-Ferrous Metals|Aluminum Oxide,,,Mt
+aluminum,Production|Non-Ferrous Metals|Aluminum,,,Mt
+ammonia,Production|Chemicals,Production|Chemicals|Ammonia,,Mt NH3
+cement,Production|Non-Metallic Minerals|Cement,,,Mt
+chemical,Production|Chemicals,Production|Chemicals|High-Value Chemicals,,EJ
+chemical energy use,NoReported,,,EJ
+chemical feedstocks,NoReported,,,EJ
+CO2 removal,NoReported,,,EJ
+construction energy use,NoReported,,,EJ
+construction feedstocks,NoReported,,,EJ
+food processing,NoReported,,,Pcal
+iron and steel,Production|Iron and Steel|Steel,,,Mt
+mining energy use,NoReported,,,EJ
+N fertilizer,Production|Chemicals,Production|Chemicals|Nitrogen Fertilizer,,Mt N
+other industrial energy use,NoReported,,,EJ
+other industrial feedstocks,NoReported,,,EJ
+paper,Production|Pulp and Paper|Paper,,,Mt
+process heat cement,NoReported,,,EJ
+process heat dac,NoReported,,,EJ
+process heat food processing,NoReported,,,EJ
+process heat paper,NoReported,,,EJ
+waste biomass for paper,NoReported,,,EJ
+regional ammonia,NoReported,,,Mt NH3
+traded ammonia,NoReported,,,Mt NH3

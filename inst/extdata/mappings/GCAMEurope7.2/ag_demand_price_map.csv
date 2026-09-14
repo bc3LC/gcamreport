@@ -1,0 +1,80 @@
+# map to pair ag_demand and ag_prices to compute the parent categories and World ag_prices weighted by ag_demand
+ag_demand_variable,ag_price_variable
+Agricultural Demand,NoReported
+Agricultural Demand|Crops,NoReported
+Agricultural Demand|Crops|Bioenergy,Price|Agriculture|Energy Crops
+Agricultural Demand|Crops|Bioenergy|1st Generation,NoReported
+Agricultural Demand|Crops|Bioenergy|2nd Generation,NoReported
+Agricultural Demand|Crops|Feed,NoReported
+Agricultural Demand|Crops|Feed|Cereals,NoReported
+Agricultural Demand|Crops|Feed|Corn,NoReported
+Agricultural Demand|Crops|Feed|Fibercrop,NoReported
+Agricultural Demand|Crops|Feed|Fruits,NoReported
+Agricultural Demand|Crops|Feed|Legumes,NoReported
+Agricultural Demand|Crops|Feed|MiscCrop,NoReported
+Agricultural Demand|Crops|Feed|NutsSeeds,NoReported
+Agricultural Demand|Crops|Feed|Oil Crops,NoReported
+Agricultural Demand|Crops|Feed|OilCrop,NoReported
+Agricultural Demand|Crops|Feed|OilPalm,NoReported
+Agricultural Demand|Crops|Feed|Other Crops,NoReported
+Agricultural Demand|Crops|Feed|OtherGrain,NoReported
+Agricultural Demand|Crops|Feed|Rice,NoReported
+Agricultural Demand|Crops|Feed|RootTuber,NoReported
+Agricultural Demand|Crops|Feed|Soybean,NoReported
+Agricultural Demand|Crops|Feed|Sugar Crops,NoReported
+Agricultural Demand|Crops|Feed|SugarCrop,NoReported
+Agricultural Demand|Crops|Feed|Vegetables,NoReported
+Agricultural Demand|Crops|Feed|Wheat,NoReported
+Agricultural Demand|Crops|Food,Price|Agriculture|Food Products [Index]
+Agricultural Demand|Crops|Food,Price|Agriculture|Food Products|Crops [Index]
+Agricultural Demand|Crops|Food|Cereals,NoReported
+Agricultural Demand|Crops|Food|Corn,Price|Agriculture|Food Products|Crops|Maize [Index]
+Agricultural Demand|Crops|Food|FiberCrop,NoReported
+Agricultural Demand|Crops|Food|Fruits,NoReported
+Agricultural Demand|Crops|Food|Legumes,NoReported
+Agricultural Demand|Crops|Food|MiscCrop,NoReported
+Agricultural Demand|Crops|Food|NutsSeeds,NoReported
+Agricultural Demand|Crops|Food|Oil Crops,NoReported
+Agricultural Demand|Crops|Food|OilCrop,NoReported
+Agricultural Demand|Crops|Food|OilPalm,NoReported
+Agricultural Demand|Crops|Food|Other Crops,NoReported
+Agricultural Demand|Crops|Food|OtherGrain,NoReported
+Agricultural Demand|Crops|Food|Rice,Price|Agriculture|Food Products|Crops|Rice [Index]
+Agricultural Demand|Crops|Food|RootTuber,NoReported
+Agricultural Demand|Crops|Food|SoyBean,Price|Agriculture|Food Products|Crops|Soybean [Index]
+Agricultural Demand|Crops|Food|Sugar Crops,NoReported
+Agricultural Demand|Crops|Food|SugarCrop,NoReported
+Agricultural Demand|Crops|Food|Vegetables,NoReported
+Agricultural Demand|Crops|Food|Wheat,Price|Agriculture|Food Products|Crops|Wheat [Index]
+Agricultural Demand|Crops|Other,NoReported
+Agricultural Demand|Crops|Other|Corn,NoReported
+Agricultural Demand|Crops|Other|FiberCrop,NoReported
+Agricultural Demand|Crops|Other|Fruits,NoReported
+Agricultural Demand|Crops|Other|Legumes,NoReported
+Agricultural Demand|Crops|Other|MiscCrop,NoReported
+Agricultural Demand|Crops|Other|NutsSeeds,NoReported
+Agricultural Demand|Crops|Other|OilCrop,NoReported
+Agricultural Demand|Crops|Other|OilPalm,NoReported
+Agricultural Demand|Crops|Other|OtherGrain,NoReported
+Agricultural Demand|Crops|Other|Rice,NoReported
+Agricultural Demand|Crops|Other|RootTuber,NoReported
+Agricultural Demand|Crops|Other|SoyBean,NoReported
+Agricultural Demand|Crops|Other|SugarCrop,NoReported
+Agricultural Demand|Crops|Other|Vegetables,NoReported
+Agricultural Demand|Crops|Other|Wheat,NoReported
+Agricultural Demand|Livestock,
+Agricultural Demand|Livestock|Food,Price|Agriculture|Food Products [Index]
+Agricultural Demand|Livestock|Food,Price|Agriculture|Food Products|Livestock [Index]
+Agricultural Demand|Livestock|Food|Beef,NoReported
+Agricultural Demand|Livestock|Food|Dairy,NoReported
+Agricultural Demand|Livestock|Food|Non-Ruminant,NoReported
+Agricultural Demand|Livestock|Food|Pork,NoReported
+Agricultural Demand|Livestock|Food|Poultry,NoReported
+Agricultural Demand|Livestock|Food|Ruminant,NoReported
+Agricultural Demand|Livestock|Food|SheepGoat,NoReported
+Agricultural Demand|Livestock|Other,NoReported
+Agricultural Demand|Livestock|Other|Beef,NoReported
+Agricultural Demand|Livestock|Other|Dairy,NoReported
+Agricultural Demand|Livestock|Other|Pork,NoReported
+Agricultural Demand|Livestock|Other|Poultry,NoReported
+Agricultural Demand|Livestock|Other|SheepGoat,NoReported

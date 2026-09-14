@@ -1,0 +1,70 @@
+# food_expenditures_average
+# Description: Expenditure by GCAM region calculated from documented food expenditure data from USDA for 2018-2022 (average taken),,
+# Source: https://ourworldindata.org/grapher/food-expenditure-share-gdp,,
+region,av_food_exp,year
+USA,2932.348985,2020
+Africa_Eastern,399.6408137,2020
+Africa_Northern,902.066751,2020
+Africa_Southern,364.7594569,2020
+Africa_Western,782.0657043,2020
+Australia_NZ,3183.403775,2020
+Brazil,769.011905,2020
+Canada,2560.441601,2020
+Central America and Caribbean,1436.052464,2020
+Central Asia,1054.239342,2020
+China,895.3182744,2020
+Bulgaria,1849.947732,2020
+Cyprus,1849.947732,2020
+Czech Republic,1849.947732,2020
+Estonia,1849.947732,2020
+Hungary,1849.947732,2020
+Latvia,1849.947732,2020
+Lithuania,1849.947732,2020
+Malta,1849.947732,2020
+Poland,1849.947732,2020
+Romania,1849.947732,2020
+Slovakia,1849.947732,2020
+Slovenia,1849.947732,2020
+Austria,2704.093883,2020
+Belgium,2704.093883,2020
+Denmark,2704.093883,2020
+Finland,2704.093883,2020
+France,2704.093883,2020
+Germany,2704.093883,2020
+Greece,2704.093883,2020
+Ireland,2704.093883,2020
+Italy,2704.093883,2020
+Luxembourg,2704.093883,2020
+Netherlands,2704.093883,2020
+Portugal,2704.093883,2020
+Spain,2704.093883,2020
+Sweden,2704.093883,2020
+UK,2704.093883,2020
+Ukraine,1051.184803,2020
+Belarus,1266.377292,2020
+Moldova,1266.377292,2020
+Croatia,1266.377292,2020
+Albania,1266.377292,2020
+Bosnia and Herzegovina,1266.377292,2020
+Macedonia,1266.377292,2020
+Serbia and Montenegro,1266.377292,2020
+Turkey,1266.377292,2020
+Iceland,3925.554561,2020
+Norway,3925.554561,2020
+Switzerland,3925.554561,2020
+India,397.6824123,2020
+Indonesia,761.434183,2020
+Japan,3317.816302,2020
+Mexico,1649.495264,2020
+Middle East,1361.768805,2020
+Pakistan,405.029257,2020
+Russia,1641.924967,2020
+South Africa,795.0113175,2020
+South America_Northern,49.58318411,2020
+South America_Southern,1194.019847,2020
+South Asia,742.0806014,2020
+South Korea,1804.183603,2020
+Southeast Asia,871.6532416,2020
+Taiwan,1813.458903,2020
+Argentina,1579.828605,2020
+Colombia,784.6763647,2020

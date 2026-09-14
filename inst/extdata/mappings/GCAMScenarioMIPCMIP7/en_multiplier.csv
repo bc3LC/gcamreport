@@ -1,0 +1,36 @@
+# en_multiplier
+# Description: Multiplier calculated from documented home energy expenditure numbers for key countries in 2021 by IEA, divided by GCAM residential energy expenditure results from 2020"
+# Source: https://www.iea.org/commentaries/did-affordability-measures-help-tame-energy-price-spikes-for-consumers-in-major-economies
+region,energy_mult,year
+Africa_Eastern,1.5,2020
+Africa_Northern,1.5,2020
+Africa_Southern,1.5,2020
+Africa_Western,1.5,2020
+Argentina,1.5,2020
+Australia_NZ,2.419095766,2020
+Brazil,3.202831603,2020
+Canada,0.671114828,2020
+Central America and Caribbean,1.5,2020
+Central Asia,1,2020
+China,1.898551188,2020
+Colombia,1.5,2020
+EU-12,1.5,2020
+EU-15,2.018028003,2020
+Europe_Eastern,1,2020
+Europe_Non_EU,1.5,2020
+European Free Trade Association,2,2020
+India,1.390518133,2020
+Indonesia,1.277066609,2020
+Japan,1.875748985,2020
+Mexico,3.133332693,2020
+Middle East,0.313325182,2020
+Pakistan,1.4,2020
+Russia,1,2020
+South Africa,1.343826464,2020
+South America_Northern,1,2020
+South America_Southern,2,2020
+South Asia,1.5,2020
+South Korea,1.50051418,2020
+Southeast Asia,1.5,2020
+Taiwan,1.5,2020
+USA,1.102418371,2020

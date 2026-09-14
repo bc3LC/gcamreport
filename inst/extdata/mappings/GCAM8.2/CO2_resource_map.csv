@@ -1,0 +1,6 @@
+# CO2 emissions by resource production
+ghg,resource,subresource,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
+CO2,coal,coal,Emissions|CO2,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Fugitive,,,,Emissions|CO2|Energy and Industrial Processes,3.666667
+CO2,crude oil,crude oil,Emissions|CO2,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Fugitive,,,,Emissions|CO2|Energy and Industrial Processes,3.666667
+CO2,crude oil,unconventional oil,Emissions|CO2,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Fugitive,,,,Emissions|CO2|Energy and Industrial Processes,3.666667
+CO2,natural gas,natural gas,Emissions|CO2,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Fugitive,,,,Emissions|CO2|Energy and Industrial Processes,3.666667

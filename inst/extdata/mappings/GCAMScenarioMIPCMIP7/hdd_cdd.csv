@@ -1,0 +1,1539 @@
+# HDD and CDD. Same for all scenarios and GCAM versions. Simply check that the loaded version in the config file matches this data.
+# Source: GCAM DB; module_energy_L143.HDDCDD; constdd_no_GCM
+scenario,region,var,year,value
+scen,USA,Energy Service|Residential|Cooling Degree Days,1975,1315.92193678509
+scen,USA,Energy Service|Residential|Cooling Degree Days,1990,1403.65550173246
+scen,USA,Energy Service|Residential|Cooling Degree Days,2005,1404.69140626415
+scen,USA,Energy Service|Residential|Cooling Degree Days,2010,1402.47489358749
+scen,USA,Energy Service|Residential|Cooling Degree Days,2015,1399.48693463495
+scen,USA,Energy Service|Residential|Cooling Degree Days,2019,1397.12839587765
+scen,USA,Energy Service|Residential|Cooling Degree Days,2020,1396.84483705333
+scen,USA,Energy Service|Residential|Cooling Degree Days,2021,1396.64916967959
+scen,USA,Energy Service|Residential|Cooling Degree Days,2025,1395.23999975881
+scen,USA,Energy Service|Residential|Cooling Degree Days,2030,1393.55156399827
+scen,USA,Energy Service|Residential|Cooling Degree Days,2035,1391.98386754602
+scen,USA,Energy Service|Residential|Cooling Degree Days,2040,1390.55146856424
+scen,USA,Energy Service|Residential|Cooling Degree Days,2045,1389.25705608323
+scen,USA,Energy Service|Residential|Cooling Degree Days,2050,1388.11860353019
+scen,USA,Energy Service|Residential|Cooling Degree Days,2055,1387.11636887913
+scen,USA,Energy Service|Residential|Cooling Degree Days,2060,1386.23326542304
+scen,USA,Energy Service|Residential|Cooling Degree Days,2065,1385.47494810654
+scen,USA,Energy Service|Residential|Cooling Degree Days,2070,1384.82323505208
+scen,USA,Energy Service|Residential|Cooling Degree Days,2075,1384.2657320744
+scen,USA,Energy Service|Residential|Cooling Degree Days,2080,1383.79371316428
+scen,USA,Energy Service|Residential|Cooling Degree Days,2085,1383.39168748292
+scen,USA,Energy Service|Residential|Cooling Degree Days,2090,1383.0392386602
+scen,USA,Energy Service|Residential|Cooling Degree Days,2095,1382.7127343999
+scen,USA,Energy Service|Residential|Cooling Degree Days,2100,1382.40097370896
+scen,USA,Energy Service|Residential|Heating Degree Days,1975,4451.21108659201
+scen,USA,Energy Service|Residential|Heating Degree Days,1990,4367.59212301923
+scen,USA,Energy Service|Residential|Heating Degree Days,2005,4369.07587880086
+scen,USA,Energy Service|Residential|Heating Degree Days,2010,4372.84251225475
+scen,USA,Energy Service|Residential|Heating Degree Days,2015,4377.92010385533
+scen,USA,Energy Service|Residential|Heating Degree Days,2019,4381.92808949832
+scen,USA,Energy Service|Residential|Heating Degree Days,2020,4382.40995552376
+scen,USA,Energy Service|Residential|Heating Degree Days,2021,4382.7424631081
+scen,USA,Energy Service|Residential|Heating Degree Days,2025,4385.13713768938
+scen,USA,Energy Service|Residential|Heating Degree Days,2030,4388.00638300766
+scen,USA,Energy Service|Residential|Heating Degree Days,2035,4390.67044983877
+scen,USA,Energy Service|Residential|Heating Degree Days,2040,4393.10459875247
+scen,USA,Energy Service|Residential|Heating Degree Days,2045,4395.30426014195
+scen,USA,Energy Service|Residential|Heating Degree Days,2050,4397.23889084229
+scen,USA,Energy Service|Residential|Heating Degree Days,2055,4398.94203948887
+scen,USA,Energy Service|Residential|Heating Degree Days,2060,4400.44274239754
+scen,USA,Energy Service|Residential|Heating Degree Days,2065,4401.73138983144
+scen,USA,Energy Service|Residential|Heating Degree Days,2070,4402.83887918585
+scen,USA,Energy Service|Residential|Heating Degree Days,2075,4403.78627253419
+scen,USA,Energy Service|Residential|Heating Degree Days,2080,4404.58839843063
+scen,USA,Energy Service|Residential|Heating Degree Days,2085,4405.27158125051
+scen,USA,Energy Service|Residential|Heating Degree Days,2090,4405.87051557668
+scen,USA,Energy Service|Residential|Heating Degree Days,2095,4406.42536097984
+scen,USA,Energy Service|Residential|Heating Degree Days,2100,4406.95515188087
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,1975,2563.17367761918
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,1990,2692.499054164
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2005,2637.32081642422
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2010,2628.79121719532
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2015,2622.26732222198
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2019,2642.02626347833
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2020,2644.7877344537
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2021,2647.2583925247
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2025,2655.65338220776
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2030,2664.34073148496
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2035,2671.54692876689
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2040,2678.26872402398
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2045,2686.06361653508
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2050,2693.97077966928
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2055,2701.30407485023
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2060,2707.55535363074
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2065,2714.40367391998
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2070,2721.47313281379
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2075,2728.74601606635
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2080,2736.43992690958
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2085,2743.16259224147
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2090,2749.3781155028
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2095,2755.04865606529
+scen,Africa_Eastern,Energy Service|Residential|Cooling Degree Days,2100,2760.49404173215
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,1975,353.256405836965
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,1990,322.247944901232
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2005,332.620037168574
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2010,332.604567486709
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2015,333.020051741279
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2019,330.788220627512
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2020,330.354974398887
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2021,329.986787761047
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2025,328.681162374177
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2030,327.194767541724
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2035,325.759630008987
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2040,324.304001372343
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2045,322.750506705558
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2050,321.263558502623
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2055,320.008209910165
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2060,318.951433366032
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2065,317.790320193098
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2070,316.520640955586
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2075,315.158117313766
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2080,313.774055976091
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2085,312.578135763577
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2090,311.518796701572
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2095,310.526109568261
+scen,Africa_Eastern,Energy Service|Residential|Heating Degree Days,2100,309.527172218612
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,1975,2216.79158210945
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,1990,2309.30459856199
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2005,2349.89819029802
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2010,2360.17252732156
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2015,2371.48325336047
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2019,2378.3153111457
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2020,2379.72806783795
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2021,2380.99857224334
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2025,2387.03673269794
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2030,2397.08625367318
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2035,2408.72911457093
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2040,2421.10610100709
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2045,2432.8158518943
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2050,2443.29247783391
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2055,2453.24115097598
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2060,2463.15701159407
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2065,2472.48579556846
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2070,2480.92058786165
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2075,2488.4330030739
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2080,2495.05943459578
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2085,2500.68772234547
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2090,2505.92250039828
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2095,2510.53280780183
+scen,Africa_Northern,Energy Service|Residential|Cooling Degree Days,2100,2514.84262124522
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,1975,1518.02953964357
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,1990,1485.52108034832
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2005,1457.4606309803
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2010,1450.34856729911
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2015,1443.28374971303
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2019,1439.61100603854
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2020,1438.86915487745
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2021,1438.19761720855
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2025,1434.71996871428
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2030,1428.01828872315
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2035,1419.8429118684
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2040,1411.18215227641
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2045,1403.20341512471
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2050,1396.23920998184
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2055,1389.43487001298
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2060,1382.37242312704
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2065,1375.51548247201
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2070,1369.30238372277
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2075,1363.86061120773
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2080,1359.21303097235
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2085,1355.39271455399
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2090,1351.87021928217
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2095,1348.7931835752
+scen,Africa_Northern,Energy Service|Residential|Heating Degree Days,2100,1345.87871817026
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,1975,2674.76812958485
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,1990,2739.15608321896
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2005,2776.05156562301
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2010,2783.36246904553
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2015,2789.31438771714
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2019,2793.59071520657
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2020,2794.56455619604
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2021,2795.50537189403
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2025,2798.79140132187
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2030,2802.81202621558
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2035,2806.28927968415
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2040,2809.22062845107
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2045,2811.82216572762
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2050,2814.13056294676
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2055,2816.34726535746
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2060,2818.36236145062
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2065,2820.0738074187
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2070,2821.63214390198
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2075,2822.55874040829
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2080,2823.14784384523
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2085,2823.3937628329
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2090,2823.70294038022
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2095,2824.01120923195
+scen,Africa_Southern,Energy Service|Residential|Cooling Degree Days,2100,2824.3021059744
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,1975,281.207002839854
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,1990,252.920013610475
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2005,219.311877687075
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2010,207.938764755479
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2015,198.893385631139
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2019,192.721997036037
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2020,191.412248476418
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2021,190.11435735449
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2025,184.910514403729
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2030,178.866776403956
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2035,173.393430601694
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2040,168.408567954514
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2045,163.860357619066
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2050,159.692358254372
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2055,155.866062903406
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2060,152.275003140414
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2065,148.996964377727
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2070,146.062550388362
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2075,143.496276373924
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2080,141.315039002504
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2085,139.507220732054
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2090,137.968549246978
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2095,136.615581478663
+scen,Africa_Southern,Energy Service|Residential|Heating Degree Days,2100,135.414758312058
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,1975,5316.61632215491
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,1990,5418.30008417181
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2005,5418.63648832826
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2010,5417.03435834645
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2015,5413.40296176398
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2019,5409.59672009435
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2020,5408.7478862419
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2021,5407.9045773933
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2025,5403.65762149976
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2030,5399.26175979951
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2035,5396.49607070576
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2040,5394.84324565174
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2045,5393.77467115799
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2050,5393.32653390408
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2055,5393.23605890792
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2060,5393.49564292202
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2065,5394.29674460599
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2070,5395.4377351021
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2075,5397.04793921716
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2080,5398.97669365828
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2085,5401.24006433598
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2090,5404.26389466665
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2095,5407.70175114872
+scen,Africa_Western,Energy Service|Residential|Cooling Degree Days,2100,5411.4560524133
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,1975,13.9594510713565
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,1990,12.843175265393
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2005,13.2928481289009
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2010,13.5100802304805
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2015,13.8556810825422
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2019,14.158558748187
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2020,14.2294998594624
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2021,14.3049854717657
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2025,14.6261078195414
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2030,15.0189548560868
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2035,15.3626293642908
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2040,15.6666230790756
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2045,15.9396252117386
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2050,16.1828582924666
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2055,16.4040244363595
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2060,16.6050808489586
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2065,16.777137589624
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2070,16.9262057438664
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2075,17.0534288349557
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2080,17.1561589328339
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2085,17.2392858282601
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2090,17.2825128648814
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2095,17.2988050907464
+scen,Africa_Western,Energy Service|Residential|Heating Degree Days,2100,17.2903610681122
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,1975,836.550415861851
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,1990,887.784280688113
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2005,885.841606291399
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2010,890.118985699993
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2015,892.813198511422
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2019,891.167173767722
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2020,890.249919272129
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2021,889.826662284974
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2025,890.646832906485
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2030,891.716476433707
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2035,892.732739723518
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2040,893.726717534746
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2045,894.77934062444
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2050,895.971948101719
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2055,897.211325244745
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2060,898.408438440647
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2065,899.4378335126
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2070,900.308434474552
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2075,901.076861871052
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2080,901.769309505028
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2085,902.372033126602
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2090,902.906998742514
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2095,903.413552592423
+scen,Australia_NZ,Energy Service|Residential|Cooling Degree Days,2100,903.904609091056
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,1975,2302.87823085801
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,1990,2210.91015233771
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2005,2212.44851331607
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2010,2207.27920605178
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2015,2204.02319050412
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2019,2206.01244767586
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2020,2207.12096994483
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2021,2207.63248533997
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2025,2206.641291072
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2030,2205.34860330052
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2035,2204.12042672215
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2040,2202.91918263569
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2045,2201.647064438
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2050,2200.20577202345
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2055,2198.70795743731
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2060,2197.26121976253
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2065,2196.01717313609
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2070,2194.9650326905
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2075,2194.03637125008
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2080,2193.19953302683
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2085,2192.47112824957
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2090,2191.82461051515
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2095,2191.21242902599
+scen,Australia_NZ,Energy Service|Residential|Heating Degree Days,2100,2190.61897642731
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,1975,2624.451785
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,1990,2705.16403
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2005,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2010,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2015,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2019,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2020,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2021,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2025,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2030,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2035,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2040,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2045,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2050,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2055,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2060,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2065,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2070,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2075,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2080,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2085,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2090,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2095,2706.862621
+scen,Brazil,Energy Service|Residential|Cooling Degree Days,2100,2706.862621
+scen,Brazil,Energy Service|Residential|Heating Degree Days,1975,314.8423089
+scen,Brazil,Energy Service|Residential|Heating Degree Days,1990,297.0144821
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2005,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2010,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2015,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2019,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2020,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2021,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2025,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2030,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2035,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2040,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2045,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2050,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2055,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2060,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2065,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2070,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2075,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2080,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2085,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2090,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2095,296.6341358
+scen,Brazil,Energy Service|Residential|Heating Degree Days,2100,296.6341358
+scen,Canada,Energy Service|Residential|Cooling Degree Days,1975,273.7804237
+scen,Canada,Energy Service|Residential|Cooling Degree Days,1990,302.7661646
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2005,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2010,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2015,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2019,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2020,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2021,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2025,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2030,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2035,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2040,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2045,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2050,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2055,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2060,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2065,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2070,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2075,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2080,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2085,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2090,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2095,304.5012551
+scen,Canada,Energy Service|Residential|Cooling Degree Days,2100,304.5012551
+scen,Canada,Energy Service|Residential|Heating Degree Days,1975,8365.100308
+scen,Canada,Energy Service|Residential|Heating Degree Days,1990,8230.352898
+scen,Canada,Energy Service|Residential|Heating Degree Days,2005,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2010,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2015,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2019,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2020,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2021,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2025,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2030,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2035,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2040,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2045,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2050,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2055,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2060,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2065,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2070,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2075,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2080,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2085,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2090,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2095,8225.419866
+scen,Canada,Energy Service|Residential|Heating Degree Days,2100,8225.419866
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,1975,3755.68618576476
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,1990,3812.46179230421
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2005,3733.82258970529
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2010,3709.71564083054
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2015,3688.88340064261
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2019,3675.0136828998
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2020,3671.68168073614
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2021,3668.52607678595
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2025,3655.43609851212
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2030,3638.95475434248
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2035,3623.94464991422
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2040,3610.05239501543
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2045,3597.57967599723
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2050,3586.31788747096
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2055,3576.00984871573
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2060,3566.18466012463
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2065,3557.15313958916
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2070,3549.33297008603
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2075,3542.94603348498
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2080,3538.13955531247
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2085,3534.45107149862
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2090,3531.66579651684
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2095,3529.63808018383
+scen,Central America and Caribbean,Energy Service|Residential|Cooling Degree Days,2100,3528.26691268637
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,1975,61.4788510056411
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,1990,59.6340933194807
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2005,66.5605867778779
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2010,68.7709830464294
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2015,70.8131072966109
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2019,72.1942480845694
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2020,72.4970235017841
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2021,72.7803544423579
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2025,74.0831193928108
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2030,75.8214974636019
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2035,77.4177532836185
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2040,78.9296760944113
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2045,80.3055742837335
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2050,81.5174400421065
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2055,82.5841491124586
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2060,83.5879307033087
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2065,84.5220953869515
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2070,85.3609429327079
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2075,86.0693484872936
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2080,86.6181147936153
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2085,87.0432929510828
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2090,87.3697235829067
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2095,87.6052895285143
+scen,Central America and Caribbean,Energy Service|Residential|Heating Degree Days,2100,87.7714970461039
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,1975,1038.34057290486
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,1990,1148.87492377859
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2005,1221.02568296364
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2010,1229.78148867892
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2015,1235.13538812389
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2019,1237.95562782605
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2020,1238.79955789917
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2021,1239.81121885114
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2025,1245.7847265461
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2030,1250.42778089894
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2035,1253.9181132988
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2040,1256.818374987
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2045,1259.02280623665
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2050,1260.79288364811
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2055,1261.31586428111
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2060,1261.35790455181
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2065,1260.3966273608
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2070,1259.10412768075
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2075,1257.0895091413
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2080,1254.49815491821
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2085,1251.29911541379
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2090,1248.36799608554
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2095,1246.3625747366
+scen,Central Asia,Energy Service|Residential|Cooling Degree Days,2100,1243.50343530349
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,1975,6610.13180060881
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,1990,6384.47567733806
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2005,6213.15085407115
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2010,6197.71276087751
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2015,6196.34831834921
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2019,6199.70946333005
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2020,6200.25753242873
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2021,6199.96569180919
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2025,6191.34505094479
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2030,6189.28174381314
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2035,6189.14188650695
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2040,6189.66581043352
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2045,6193.09820188721
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2050,6198.36173685263
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2055,6208.36612053417
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2060,6218.86965912878
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2065,6232.59424392028
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2070,6246.65857641402
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2075,6263.89315148942
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2080,6283.44307164191
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2085,6305.2481801883
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2090,6324.34024298763
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2095,6336.82218006326
+scen,Central Asia,Energy Service|Residential|Heating Degree Days,2100,6353.27758635172
+scen,China,Energy Service|Residential|Cooling Degree Days,1975,1570.98826195018
+scen,China,Energy Service|Residential|Cooling Degree Days,1990,1616.78399231977
+scen,China,Energy Service|Residential|Cooling Degree Days,2005,1620.50881134834
+scen,China,Energy Service|Residential|Cooling Degree Days,2010,1620.38586641993
+scen,China,Energy Service|Residential|Cooling Degree Days,2015,1620.20055075617
+scen,China,Energy Service|Residential|Cooling Degree Days,2019,1620.14456953012
+scen,China,Energy Service|Residential|Cooling Degree Days,2020,1620.15737612491
+scen,China,Energy Service|Residential|Cooling Degree Days,2021,1620.17134872159
+scen,China,Energy Service|Residential|Cooling Degree Days,2025,1620.17305785857
+scen,China,Energy Service|Residential|Cooling Degree Days,2030,1620.1749151126
+scen,China,Energy Service|Residential|Cooling Degree Days,2035,1620.16101152354
+scen,China,Energy Service|Residential|Cooling Degree Days,2040,1620.10405756467
+scen,China,Energy Service|Residential|Cooling Degree Days,2045,1620.01870559098
+scen,China,Energy Service|Residential|Cooling Degree Days,2050,1619.87259910271
+scen,China,Energy Service|Residential|Cooling Degree Days,2055,1619.76637438778
+scen,China,Energy Service|Residential|Cooling Degree Days,2060,1619.66826228244
+scen,China,Energy Service|Residential|Cooling Degree Days,2065,1619.63536984041
+scen,China,Energy Service|Residential|Cooling Degree Days,2070,1619.61352110906
+scen,China,Energy Service|Residential|Cooling Degree Days,2075,1619.65123528222
+scen,China,Energy Service|Residential|Cooling Degree Days,2080,1619.72012787807
+scen,China,Energy Service|Residential|Cooling Degree Days,2085,1619.8271130352
+scen,China,Energy Service|Residential|Cooling Degree Days,2090,1619.92742449547
+scen,China,Energy Service|Residential|Cooling Degree Days,2095,1619.98936439715
+scen,China,Energy Service|Residential|Cooling Degree Days,2100,1620.08055340428
+scen,China,Energy Service|Residential|Heating Degree Days,1975,4370.70482154418
+scen,China,Energy Service|Residential|Heating Degree Days,1990,4272.67811244581
+scen,China,Energy Service|Residential|Heating Degree Days,2005,4270.16835753663
+scen,China,Energy Service|Residential|Heating Degree Days,2010,4269.84438796649
+scen,China,Energy Service|Residential|Heating Degree Days,2015,4269.35606659608
+scen,China,Energy Service|Residential|Heating Degree Days,2019,4269.20855165606
+scen,China,Energy Service|Residential|Heating Degree Days,2020,4269.24229804206
+scen,China,Energy Service|Residential|Heating Degree Days,2021,4269.27911693484
+scen,China,Energy Service|Residential|Heating Degree Days,2025,4269.28362064541
+scen,China,Energy Service|Residential|Heating Degree Days,2030,4269.28851465608
+scen,China,Energy Service|Residential|Heating Degree Days,2035,4269.25187760377
+scen,China,Energy Service|Residential|Heating Degree Days,2040,4269.10179943617
+scen,China,Energy Service|Residential|Heating Degree Days,2045,4268.87689026273
+scen,China,Energy Service|Residential|Heating Degree Days,2050,4268.49188815805
+scen,China,Energy Service|Residential|Heating Degree Days,2055,4268.21197766739
+scen,China,Energy Service|Residential|Heating Degree Days,2060,4267.953444542
+scen,China,Energy Service|Residential|Heating Degree Days,2065,4267.86677036649
+scen,China,Energy Service|Residential|Heating Degree Days,2070,4267.80919723845
+scen,China,Energy Service|Residential|Heating Degree Days,2075,4267.9085770553
+scen,China,Energy Service|Residential|Heating Degree Days,2080,4268.0901144717
+scen,China,Energy Service|Residential|Heating Degree Days,2085,4268.37202878745
+scen,China,Energy Service|Residential|Heating Degree Days,2090,4268.63635738629
+scen,China,Energy Service|Residential|Heating Degree Days,2095,4268.79957390593
+scen,China,Energy Service|Residential|Heating Degree Days,2100,4269.03986412224
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,1975,306.040991663131
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,1990,338.331597492171
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2005,342.853312063547
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2010,342.918763449674
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2015,343.019631495695
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2019,342.792290007135
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2020,342.812411633514
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2021,342.800419004541
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2025,341.113790256312
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2030,341.551493467778
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2035,341.879510627791
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2040,341.821594568057
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2045,341.761233460725
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2050,341.424326498321
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2055,341.40801812858
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2060,341.1880183499
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2065,341.042512749967
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2070,340.658752439534
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2075,340.455241994341
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2080,340.144389827029
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2085,339.81289311254
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2090,339.211650220996
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2095,338.349098813711
+scen,EU-12,Energy Service|Residential|Cooling Degree Days,2100,337.590930284562
+scen,EU-12,Energy Service|Residential|Heating Degree Days,1975,6470.30321825376
+scen,EU-12,Energy Service|Residential|Heating Degree Days,1990,6354.85631731922
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2005,6339.69794880059
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2010,6335.52162526524
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2015,6332.58917327636
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2019,6331.46670734625
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2020,6331.10612268543
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2021,6330.82295880966
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2025,6335.15920894762
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2030,6331.9985673572
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2035,6329.38455353382
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2040,6327.96157626448
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2045,6326.74760863609
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2050,6326.34375728302
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2055,6325.44983764392
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2060,6325.15851656071
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2065,6325.01112169343
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2070,6325.52744540684
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2075,6325.85037778681
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2080,6326.50753091834
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2085,6327.33849420716
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2090,6328.78691560381
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2095,6330.7634669293
+scen,EU-12,Energy Service|Residential|Heating Degree Days,2100,6333.02640283271
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,1975,328.559424008863
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,1990,367.257057075429
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2005,371.43362121339
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2010,372.741504187513
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2015,368.731118651896
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2019,366.088962874135
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2020,365.592164570025
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2021,365.023927640717
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2025,363.373742622415
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2030,361.78668493871
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2035,360.40601802985
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2040,359.186234309646
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2045,357.998899141818
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2050,356.799770357334
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2055,355.368788340594
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2060,353.639313691642
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2065,351.573704529808
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2070,349.323164178237
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2075,347.170597244164
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2080,345.439508142412
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2085,344.209445114564
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2090,343.222151740972
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2095,342.129474281697
+scen,EU-15,Energy Service|Residential|Cooling Degree Days,2100,340.728109938846
+scen,EU-15,Energy Service|Residential|Heating Degree Days,1975,5058.15685937287
+scen,EU-15,Energy Service|Residential|Heating Degree Days,1990,4953.34728936747
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2005,4937.05764247442
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2010,4930.30374398304
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2015,4941.17893061985
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2019,4947.60058128768
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2020,4948.37015426636
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2021,4949.27429614173
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2025,4952.70967790447
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2030,4954.48689356833
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2035,4955.73040910275
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2040,4956.74973307314
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2045,4957.89372304668
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2050,4959.05249450706
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2055,4960.80174224644
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2060,4963.32021774504
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2065,4966.78598117566
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2070,4970.8641531923
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2075,4974.61174304754
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2080,4976.95384529975
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2085,4977.74550460913
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2090,4977.88907563673
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2095,4978.42197042306
+scen,EU-15,Energy Service|Residential|Heating Degree Days,2100,4979.85330707107
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,1975,453.4400571
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,1990,501.4898545
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2005,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2010,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2015,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2019,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2020,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2021,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2025,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2030,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2035,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2040,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2045,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2050,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2055,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2060,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2065,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2070,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2075,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2080,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2085,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2090,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2095,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Cooling Degree Days,2100,505.9201277
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,1975,6869.440654
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,1990,6712.18051
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2005,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2010,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2015,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2019,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2020,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2021,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2025,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2030,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2035,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2040,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2045,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2050,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2055,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2060,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2065,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2070,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2075,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2080,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2085,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2090,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2095,6707.300569
+scen,Europe_Eastern,Energy Service|Residential|Heating Degree Days,2100,6707.300569
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,1975,550.217077214299
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,1990,626.171005747951
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2005,651.338985967378
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2010,657.209580438167
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2015,663.897346612771
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2019,667.454020739439
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2020,668.223121829974
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2021,669.045329681529
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2025,671.890117255006
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2030,674.766620371625
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2035,677.256003002568
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2040,678.737539804943
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2045,680.123632498149
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2050,680.828256808833
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2055,681.915963630602
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2060,682.414154758858
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2065,682.921359889795
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2070,682.791437938301
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2075,682.729826927698
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2080,682.456412481555
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2085,682.257600853649
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2090,681.821778695608
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2095,681.192393394974
+scen,Europe_Non_EU,Energy Service|Residential|Cooling Degree Days,2100,680.839643360546
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,1975,4830.50224597033
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,1990,4608.05018889468
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2005,4429.97616619926
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2010,4380.8521487511
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2015,4324.94813773564
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2019,4295.8390355632
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2020,4289.73541237186
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2021,4283.22641526503
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2025,4260.93405682213
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2030,4237.3773347799
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2035,4216.9617404472
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2040,4204.82562706565
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2045,4193.58518215908
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2050,4187.95297383146
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2055,4179.2306240389
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2060,4175.23990437572
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2065,4171.1274983802
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2070,4172.14794049894
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2075,4172.62093636239
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2080,4174.81983203399
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2085,4176.41795260693
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2090,4179.92578796881
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2095,4184.99952161591
+scen,Europe_Non_EU,Energy Service|Residential|Heating Degree Days,2100,4187.82862936982
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,1975,70.5616842397638
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,1990,94.2604709261605
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2005,95.3150695928152
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2010,95.1799979499481
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2015,95.1633556696764
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2019,95.1520438925783
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2020,95.1623516782087
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2021,95.1925189462302
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2025,95.2215367509612
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2030,95.1523138809966
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2035,95.0557401711924
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2040,94.9652111049296
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2045,94.9105859001338
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2050,94.8786954762742
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2055,94.8788151133548
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2060,94.8684637995382
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2065,94.8292504549414
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2070,94.775849745561
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2075,94.7135371982257
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2080,94.6534782722355
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2085,94.6116078239454
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2090,94.5852736566974
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2095,94.5490408943481
+scen,European Free Trade Association,Energy Service|Residential|Cooling Degree Days,2100,94.4839768924142
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,1975,7682.16449288209
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,1990,7573.70061483499
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2005,7567.97860783318
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2010,7570.02326527129
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2015,7569.92865534633
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2019,7570.97348453107
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2020,7571.00213913704
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2021,7570.68450822442
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2025,7570.38728932196
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2030,7571.43696600888
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2035,7572.81810968489
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2040,7574.07168073403
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2045,7574.7970540277
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2050,7575.17905331356
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2055,7575.14180081301
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2060,7575.26068593282
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2065,7575.7854789512
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2070,7576.48949262602
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2075,7577.2909902213
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2080,7578.05242187697
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2085,7578.57982135039
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2090,7578.91534401506
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2095,7579.40417365567
+scen,European Free Trade Association,Energy Service|Residential|Heating Degree Days,2100,7580.31523134703
+scen,India,Energy Service|Residential|Cooling Degree Days,1975,5005.10288
+scen,India,Energy Service|Residential|Cooling Degree Days,1990,5057.70149
+scen,India,Energy Service|Residential|Cooling Degree Days,2005,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2010,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2015,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2019,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2020,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2021,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2025,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2030,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2035,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2040,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2045,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2050,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2055,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2060,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2065,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2070,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2075,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2080,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2085,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2090,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2095,5064.827289
+scen,India,Energy Service|Residential|Cooling Degree Days,2100,5064.827289
+scen,India,Energy Service|Residential|Heating Degree Days,1975,347.6268008
+scen,India,Energy Service|Residential|Heating Degree Days,1990,337.8823547
+scen,India,Energy Service|Residential|Heating Degree Days,2005,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2010,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2015,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2019,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2020,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2021,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2025,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2030,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2035,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2040,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2045,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2050,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2055,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2060,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2065,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2070,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2075,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2080,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2085,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2090,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2095,336.8019871
+scen,India,Energy Service|Residential|Heating Degree Days,2100,336.8019871
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,1975,5096.56676
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,1990,5185.222871
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2005,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2010,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2015,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2019,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2020,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2021,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2025,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2030,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2035,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2040,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2045,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2050,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2055,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2060,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2065,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2070,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2075,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2080,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2085,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2090,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2095,5188.497261
+scen,Indonesia,Energy Service|Residential|Cooling Degree Days,2100,5188.497261
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,1975,0
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,1990,0.060605617
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2005,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2010,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2015,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2019,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2020,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2021,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2025,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2030,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2035,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2040,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2045,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2050,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2055,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2060,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2065,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2070,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2075,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2080,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2085,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2090,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2095,0.063429417
+scen,Indonesia,Energy Service|Residential|Heating Degree Days,2100,0.063429417
+scen,Japan,Energy Service|Residential|Cooling Degree Days,1975,914.0573456
+scen,Japan,Energy Service|Residential|Cooling Degree Days,1990,969.0927865
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2005,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2010,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2015,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2019,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2020,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2021,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2025,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2030,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2035,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2040,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2045,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2050,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2055,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2060,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2065,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2070,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2075,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2080,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2085,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2090,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2095,971.4076386
+scen,Japan,Energy Service|Residential|Cooling Degree Days,2100,971.4076386
+scen,Japan,Energy Service|Residential|Heating Degree Days,1975,4418.906089
+scen,Japan,Energy Service|Residential|Heating Degree Days,1990,4304.881671
+scen,Japan,Energy Service|Residential|Heating Degree Days,2005,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2010,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2015,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2019,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2020,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2021,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2025,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2030,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2035,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2040,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2045,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2050,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2055,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2060,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2065,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2070,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2075,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2080,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2085,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2090,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2095,4300.184709
+scen,Japan,Energy Service|Residential|Heating Degree Days,2100,4300.184709
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,1975,1480.012059
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,1990,1525.267875
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2005,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2010,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2015,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2019,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2020,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2021,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2025,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2030,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2035,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2040,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2045,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2050,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2055,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2060,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2065,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2070,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2075,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2080,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2085,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2090,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2095,1530.346016
+scen,Mexico,Energy Service|Residential|Cooling Degree Days,2100,1530.346016
+scen,Mexico,Energy Service|Residential|Heating Degree Days,1975,1429.559917
+scen,Mexico,Energy Service|Residential|Heating Degree Days,1990,1362.931694
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2005,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2010,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2015,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2019,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2020,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2021,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2025,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2030,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2035,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2040,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2045,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2050,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2055,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2060,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2065,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2070,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2075,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2080,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2085,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2090,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2095,1359.411193
+scen,Mexico,Energy Service|Residential|Heating Degree Days,2100,1359.411193
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,1975,2672.30200622661
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,1990,2841.66065586939
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2005,2942.03377921417
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2010,3016.70410834164
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2015,3065.60763320065
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2019,3085.89120144422
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2020,3083.4737163835
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2021,3080.36177901164
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2025,3092.7145079051
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2030,3104.49975091492
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2035,3114.87012803819
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2040,3124.75296670203
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2045,3133.76935100026
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2050,3142.01807535459
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2055,3149.36002538444
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2060,3155.54223769759
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2065,3159.67049634741
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2070,3162.27913201255
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2075,3164.31300385816
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2080,3166.23705722158
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2085,3167.94929826913
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2090,3169.11483092212
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2095,3169.68606063844
+scen,Middle East,Energy Service|Residential|Cooling Degree Days,2100,3169.65739600231
+scen,Middle East,Energy Service|Residential|Heating Degree Days,1975,2537.7761383947
+scen,Middle East,Energy Service|Residential|Heating Degree Days,1990,2413.87374741687
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2005,2256.03913545312
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2010,2164.63141173277
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2015,2113.59407944764
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2019,2088.23494741182
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2020,2087.04865990187
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2021,2086.76939707715
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2025,2061.55663577914
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2030,2034.2792994133
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2035,2009.31329999531
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2040,1986.70716112891
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2045,1966.53574576145
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2050,1948.59224951255
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2055,1932.78268761698
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2060,1918.26177119404
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2065,1905.50853384477
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2070,1894.33729885546
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2075,1883.96103011657
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2080,1873.84666216584
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2085,1864.2209067887
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2090,1855.97463447608
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2095,1849.57288409981
+scen,Middle East,Energy Service|Residential|Heating Degree Days,2100,1844.72023326547
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,1975,4479.156619
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,1990,4495.887992
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2005,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2010,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2015,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2019,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2020,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2021,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2025,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2030,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2035,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2040,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2045,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2050,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2055,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2060,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2065,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2070,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2075,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2080,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2085,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2090,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2095,4502.544144
+scen,Pakistan,Energy Service|Residential|Cooling Degree Days,2100,4502.544144
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,1975,1172.914282
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,1990,1121.70544
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2005,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2010,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2015,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2019,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2020,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2021,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2025,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2030,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2035,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2040,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2045,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2050,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2055,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2060,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2065,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2070,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2075,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2080,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2085,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2090,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2095,1119.061443
+scen,Pakistan,Energy Service|Residential|Heating Degree Days,2100,1119.061443
+scen,Russia,Energy Service|Residential|Cooling Degree Days,1975,321.523465
+scen,Russia,Energy Service|Residential|Cooling Degree Days,1990,367.4319981
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2005,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2010,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2015,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2019,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2020,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2021,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2025,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2030,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2035,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2040,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2045,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2050,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2055,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2060,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2065,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2070,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2075,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2080,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2085,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2090,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2095,369.7346129
+scen,Russia,Energy Service|Residential|Cooling Degree Days,2100,369.7346129
+scen,Russia,Energy Service|Residential|Heating Degree Days,1975,9546.335767
+scen,Russia,Energy Service|Residential|Heating Degree Days,1990,9299.459315
+scen,Russia,Energy Service|Residential|Heating Degree Days,2005,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2010,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2015,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2019,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2020,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2021,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2025,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2030,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2035,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2040,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2045,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2050,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2055,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2060,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2065,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2070,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2075,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2080,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2085,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2090,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2095,9297.115833
+scen,Russia,Energy Service|Residential|Heating Degree Days,2100,9297.115833
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,1975,1219.272518
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,1990,1292.801154
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2005,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2010,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2015,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2019,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2020,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2021,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2025,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2030,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2035,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2040,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2045,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2050,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2055,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2060,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2065,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2070,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2075,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2080,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2085,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2090,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2095,1295.769267
+scen,South Africa,Energy Service|Residential|Cooling Degree Days,2100,1295.769267
+scen,South Africa,Energy Service|Residential|Heating Degree Days,1975,1528.806382
+scen,South Africa,Energy Service|Residential|Heating Degree Days,1990,1437.35696
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2005,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2010,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2015,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2019,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2020,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2021,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2025,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2030,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2035,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2040,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2045,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2050,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2055,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2060,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2065,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2070,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2075,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2080,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2085,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2090,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2095,1434.461832
+scen,South Africa,Energy Service|Residential|Heating Degree Days,2100,1434.461832
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,1975,4118.18601891208
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,1990,4210.82008233565
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2005,4205.88969049354
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2010,4202.61842974238
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2015,4201.05836599449
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2019,4208.37979795558
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2020,4210.03509630616
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2021,4211.58376003733
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2025,4211.69985223669
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2030,4211.36984301614
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2035,4210.85776109944
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2040,4210.36258182981
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2045,4209.915717253
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2050,4209.5139765694
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2055,4209.07796210421
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2060,4208.58206798052
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2065,4208.17081455644
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2070,4207.84781624267
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2075,4207.60843745552
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2080,4207.43548620491
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2085,4207.32290200251
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2090,4207.28524802861
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2095,4207.39221489642
+scen,South America_Northern,Energy Service|Residential|Cooling Degree Days,2100,4207.67104805102
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,1975,10.4793159960312
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,1990,8.59683879335659
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2005,8.6731452256161
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2010,8.69089044589077
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2015,8.69838007456821
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2019,8.65098170475681
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2020,8.64002037428513
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2021,8.62987105493049
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2025,8.62704859391812
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2030,8.62666442590761
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2035,8.62749501177712
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2040,8.62826391565183
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2045,8.62876053813132
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2050,8.62897732576335
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2055,8.6295004031355
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2060,8.63050582725004
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2065,8.63121422385994
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2070,8.63160602747708
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2075,8.63157466700682
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2080,8.63115960685157
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2085,8.63041991945632
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2090,8.6292489786307
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2095,8.6272815760368
+scen,South America_Northern,Energy Service|Residential|Heating Degree Days,2100,8.62433233680747
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,1975,964.818513374744
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,1990,1028.64379023553
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2005,1056.77498759485
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2010,1066.71008591107
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2015,1075.71936077699
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2019,1075.00305264964
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2020,1074.92082299575
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2021,1075.35994530089
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2025,1082.96599123985
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2030,1091.40023304564
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2035,1098.57605164199
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2040,1105.2188709223
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2045,1111.29354265455
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2050,1116.90106682754
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2055,1121.87434224673
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2060,1126.49814232347
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2065,1131.0494202557
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2070,1135.38697977082
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2075,1139.39287347301
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2080,1143.03153549685
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2085,1146.42183031915
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2090,1149.59769645788
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2095,1152.6906216808
+scen,South America_Southern,Energy Service|Residential|Cooling Degree Days,2100,1155.67634481165
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,1975,2979.7221440268
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,1990,2838.71194495553
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2005,2801.76884956811
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2010,2796.77823435918
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2015,2789.36948225978
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2019,2790.82327021595
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2020,2791.12311732128
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2021,2790.46589458761
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2025,2779.03298674282
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2030,2766.60209542142
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2035,2756.25528844843
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2040,2747.07258736088
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2045,2738.74954180289
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2050,2731.20640032636
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2055,2724.22242444183
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2060,2717.55435043281
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2065,2711.02144405805
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2070,2704.80755642236
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2075,2698.95124299414
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2080,2693.31019906285
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2085,2687.63602041109
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2090,2681.85290423923
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2095,2676.10270028446
+scen,South America_Southern,Energy Service|Residential|Heating Degree Days,2100,2670.65634422711
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,1975,4084.24949353369
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,1990,4250.75095896897
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2005,4087.71882298842
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2010,4059.32233674911
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2015,4019.44988507254
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2019,3990.10895711928
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2020,3979.82422050635
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2021,3969.72534101104
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2025,3937.07793979147
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2030,3893.88898957341
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2035,3850.13564204976
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2040,3806.27148766672
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2045,3762.46745705277
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2050,3719.27595133214
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2055,3677.49041497834
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2060,3637.21315166498
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2065,3598.49065104293
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2070,3562.10289052086
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2075,3528.22745958418
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2080,3497.8873792932
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2085,3471.02912855039
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2090,3446.05790494939
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2095,3422.51088310106
+scen,South Asia,Energy Service|Residential|Cooling Degree Days,2100,3401.24450254391
+scen,South Asia,Energy Service|Residential|Heating Degree Days,1975,896.16922615697
+scen,South Asia,Energy Service|Residential|Heating Degree Days,1990,683.940214175426
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2005,929.348112672597
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2010,977.897352657779
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2015,1046.17921771327
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2019,1090.15359512471
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2020,1104.61868116498
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2021,1117.8436599193
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2025,1167.67027177139
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2030,1234.26195267087
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2035,1302.530882909
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2040,1371.39716410912
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2045,1440.17067263141
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2050,1507.90742906127
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2055,1573.44629772097
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2060,1636.82962925057
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2065,1697.85489213443
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2070,1755.24990511384
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2075,1808.67585236368
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2080,1856.511208871
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2085,1898.94580318131
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2090,1938.42403711014
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2095,1975.51348088378
+scen,South Asia,Energy Service|Residential|Heating Degree Days,2100,2008.64286074015
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,1975,811.3774696
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,1990,864.0974152
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2005,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2010,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2015,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2019,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2020,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2021,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2025,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2030,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2035,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2040,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2045,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2050,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2055,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2060,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2065,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2070,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2075,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2080,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2085,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2090,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2095,866.2254865
+scen,South Korea,Energy Service|Residential|Cooling Degree Days,2100,866.2254865
+scen,South Korea,Energy Service|Residential|Heating Degree Days,1975,5235.529009
+scen,South Korea,Energy Service|Residential|Heating Degree Days,1990,5113.926122
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2005,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2010,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2015,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2019,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2020,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2021,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2025,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2030,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2035,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2040,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2045,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2050,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2055,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2060,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2065,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2070,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2075,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2080,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2085,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2090,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2095,5110.300374
+scen,South Korea,Energy Service|Residential|Heating Degree Days,2100,5110.300374
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,1975,4550.70750081033
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,1990,4658.18182576254
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2005,4664.60978618841
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2010,4665.23895566697
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2015,4668.32791340138
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2019,4670.02658650342
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2020,4669.88099756425
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2021,4669.76967959862
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2025,4668.11701032371
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2030,4667.60376793601
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2035,4667.99804641037
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2040,4668.33138360666
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2045,4667.90779907599
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2050,4666.45344043174
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2055,4663.72809236887
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2060,4661.18187579401
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2065,4658.74717495495
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2070,4656.43177976626
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2075,4653.54530789044
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2080,4650.49616644197
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2085,4647.52734081057
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2090,4645.54006958855
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2095,4644.93190700064
+scen,Southeast Asia,Energy Service|Residential|Cooling Degree Days,2100,4644.65418948193
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,1975,657.021340842026
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,1990,580.286207600583
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2005,538.851162159918
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2010,513.066638163535
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2015,490.826461084346
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2019,476.102512008243
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2020,473.635679111196
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2021,471.393496885272
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2025,464.506041363814
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2030,453.584259564561
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2035,441.591000531431
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2040,429.717101740032
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2045,419.33612150789
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2050,410.986210266928
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2055,406.33679048064
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2060,402.6554428249
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2065,400.55249652792
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2070,399.124538532968
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2075,400.003158328546
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2080,402.35635639493
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2085,406.132700335251
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2090,408.945785403827
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2095,409.353820307886
+scen,Southeast Asia,Energy Service|Residential|Heating Degree Days,2100,410.068742539783
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,1975,2075.099786
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,1990,2130.482242
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2005,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2010,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2015,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2019,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2020,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2021,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2025,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2030,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2035,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2040,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2045,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2050,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2055,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2060,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2065,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2070,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2075,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2080,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2085,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2090,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2095,2132.588445
+scen,Taiwan,Energy Service|Residential|Cooling Degree Days,2100,2132.588445
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,1975,1327.587381
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,1990,1279.507797
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2005,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2010,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2015,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2019,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2020,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2021,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2025,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2030,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2035,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2040,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2045,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2050,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2055,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2060,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2065,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2070,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2075,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2080,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2085,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2090,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2095,1278.06235
+scen,Taiwan,Energy Service|Residential|Heating Degree Days,2100,1278.06235
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,1975,1244.59164
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,1990,1259.233647
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2005,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2010,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2015,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2019,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2020,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2021,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2025,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2030,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2035,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2040,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2045,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2050,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2055,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2060,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2065,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2070,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2075,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2080,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2085,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2090,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2095,1262.21535
+scen,Argentina,Energy Service|Residential|Cooling Degree Days,2100,1262.21535
+scen,Argentina,Energy Service|Residential|Heating Degree Days,1975,2125.664436
+scen,Argentina,Energy Service|Residential|Heating Degree Days,1990,2061.708493
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2005,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2010,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2015,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2019,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2020,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2021,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2025,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2030,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2035,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2040,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2045,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2050,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2055,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2060,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2065,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2070,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2075,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2080,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2085,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2090,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2095,2060.083221
+scen,Argentina,Energy Service|Residential|Heating Degree Days,2100,2060.083221
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,1975,2025.751035
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,1990,2089.965882
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2005,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2010,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2015,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2019,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2020,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2021,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2025,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2030,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2035,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2040,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2045,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2050,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2055,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2060,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2065,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2070,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2075,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2080,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2085,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2090,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2095,2095.861076
+scen,Colombia,Energy Service|Residential|Cooling Degree Days,2100,2095.861076
+scen,Colombia,Energy Service|Residential|Heating Degree Days,1975,1008.826401
+scen,Colombia,Energy Service|Residential|Heating Degree Days,1990,957.5967455
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2005,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2010,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2015,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2019,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2020,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2021,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2025,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2030,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2035,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2040,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2045,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2050,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2055,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2060,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2065,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2070,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2075,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2080,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2085,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2090,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2095,954.5875936
+scen,Colombia,Energy Service|Residential|Heating Degree Days,2100,954.5875936
