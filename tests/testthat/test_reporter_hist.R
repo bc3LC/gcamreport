@@ -9,7 +9,7 @@ test_that("Test_historical_values", {
 
     prjtest_name <- switch(GCAMv,
                            "v7.0"              = "test7.dat",
-                           "v7.1"              = "database_basexdb_hist_7p1.dat",
+                           "v7.1"              = "test7.1.dat", #"database_basexdb_hist_7p1.dat",
                            "v7.2"              = "test7p2.dat",
                            "v8.2"              = "gcamreport_onboard8p2_Ctax_260210",
                            "v9.1"              = "database_basexdb_gcam_v9.1_report.dat", # [maltizzz: adding the GCAM v9.1 Reference scenario outputs]-
