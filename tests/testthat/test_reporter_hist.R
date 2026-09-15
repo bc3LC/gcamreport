@@ -20,6 +20,12 @@ test_that("Test_historical_values", {
                              GCAMv
                            )))
 
+    prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs", sub("^v", "v_", GCAMv), prjtest_name)
+    prj <- rgcam::loadProject(prj_name)
+    "primary energy consumption by region (direct equivalent)" %in% rgcam::listQueries(prj)
+
+
+
     generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs", sub("^v", "v_", GCAMv), prjtest_name),
                     final_year = 2030, launch_ui = FALSE, GCAM_version = GCAMv, save_output = FALSE,
                     ignore = c('bio-ceiling','coal-elec-constraint','Worldbiolim',
