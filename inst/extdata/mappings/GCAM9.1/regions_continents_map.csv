@@ -1,0 +1,35 @@
+#mapping file for GCAM regions and R5 regions
+continent,region
+ASIA,China
+ASIA,India
+ASIA,Indonesia
+ASIA,Pakistan
+ASIA,South Asia
+ASIA,South Korea
+ASIA,Southeast Asia
+ASIA,Taiwan
+LAM,Argentina
+LAM,Brazil
+LAM,Central America and Caribbean
+LAM,Colombia
+LAM,Mexico
+LAM,South America_Northern
+LAM,South America_Southern
+MAF,Africa_Eastern
+MAF,Africa_Northern
+MAF,Africa_Southern
+MAF,Africa_Western
+MAF,Middle East
+MAF,South Africa
+OECD90,Australia_NZ
+OECD90,Canada
+OECD90,European Free Trade Association
+OECD90,EU-12
+OECD90,EU-15
+OECD90,Europe_Non_EU
+OECD90,Japan
+OECD90,USA
+REF,Central Asia
+REF,Ukraine
+REF,Russia
+World,NA

@@ -1,0 +1,7 @@
+# yield mapping: ag production and land cover variables' relation; Forest not accounted
+yield_var,land_var,prod_var
+Yield|Cropland|Cereals,Land Cover|Cropland|Cereals,Agricultural Production|Crops|Cereals
+Yield|Cropland|Energy Crops,Land Cover|Cropland|Energy Crops,Agricultural Production|Crops|Energy Crops
+Yield|Cropland|Oil Crops,Land Cover|Cropland|Oil Crops,Agricultural Production|Crops|Oil Crops
+Yield|Cropland|Other Crops,Land Cover|Cropland|Other Crops,Agricultural Production|Crops|Other Crops
+Yield|Cropland|Sugar Crops,Land Cover|Cropland|Sugar Crops,Agricultural Production|Crops|Sugar Crops

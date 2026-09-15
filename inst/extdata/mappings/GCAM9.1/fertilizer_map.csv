@@ -1,0 +1,4 @@
+#fertilizer mapping
+input,var
+N fertilizer,Fertilizer Use|Nitrogen
+N fertilizer,Fertilizer Use|Nitrogen|Synthetic

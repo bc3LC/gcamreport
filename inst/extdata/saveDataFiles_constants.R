@@ -41,11 +41,11 @@ long_columns <- c("scenario", "region", "var", "year", "value")
 use_data(long_columns, overwrite = T)
 
 # GCAM versions with deciles
-deciles_GCAM_versions <- c('v7.1', 'v7.2', 'v8.2', 'vScenarioMIPCMIP7', 'vEurope7.2', 'vEurope8.7')
+deciles_GCAM_versions <- c('v7.1', 'v7.2', 'v8.2', 'v9.1', 'vScenarioMIPCMIP7', 'vEurope7.2', 'vEurope8.7')
 use_data(deciles_GCAM_versions, overwrite = T)
 
 # Available GCAM versions
-available_GCAM_versions <- c('v7.0', 'v7.1', 'v7.2', 'v8.2', 'vScenarioMIPCMIP7', 'vEurope7.2', 'vEurope8.7')
+available_GCAM_versions <- c('v7.0', 'v7.1', 'v7.2', 'v8.2', 'v9.1', 'vScenarioMIPCMIP7', 'vEurope7.2', 'vEurope8.7')
 use_data(available_GCAM_versions, overwrite = T)
 
 # Available GWP versions
