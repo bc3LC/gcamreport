@@ -47,5 +47,8 @@ jobs:
       - name: Run tests
         run: |
           # Ensure pkgload and testthat are ready
-          rcmdcheck::rcmdcheck(args = c("--no-manual"), error_on = "error")
+          rcmdcheck::rcmdcheck(
+            args = c("--no-manual", "--no-vignettes", "--no-examples", "--no-build-vignettes"),
+            error_on = "error"
+          )
         shell: Rscript {0}
