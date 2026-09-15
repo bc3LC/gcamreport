@@ -26,7 +26,7 @@ reg_cont_v9.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings
 )
 use_data(reg_cont_v9.1, overwrite = T)
 
-# emissions maps <<FOCUS>>
+# emissions maps
 co2_ets_sector_map_v9.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM9.1", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = ""
 ) %>% gather_map()
@@ -145,7 +145,7 @@ use_data(food_cal_mt_kg_conversion_v9.1, overwrite = T)
 
 
 
-# primary, secondary, final energy maps <<FOCUS>>
+# primary, secondary, final energy maps
 primary_energy_map_v9.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM9.1", "primary_energy_map.csv"),
                                     comment = "#"
 ) %>% gather_map()
@@ -211,7 +211,7 @@ en_demand_price_map_v9.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extda
 use_data(en_demand_price_map_v9.1, overwrite = T)
 
 
-# Energy Service maps <<FOCUS>>
+# Energy Service maps
 en_multiplier_v9.1 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM9.1", "en_multiplier.csv"),
                                                           comment = "#"
 )
@@ -353,7 +353,7 @@ convert_v9.1 <- list(
 )
 use_data(convert_v9.1, overwrite = T)
 
-# GHG emission conversion <<FOCUS>>
+# GHG emission conversion
 F_GASES_v9.1 <- c(
   "C2F6", "CF4", "HFC125", "HFC134a", "HFC245fa", "SF6", "HFC143a",
   "HFC152a", "HFC227ea", "HFC23", "HFC236fa", "HFC32", "HFC365mfc",

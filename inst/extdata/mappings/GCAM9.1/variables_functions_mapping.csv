@@ -80,6 +80,7 @@ capital_stock_clean;get_capital_stock;;National Account
 capital_formation_clean;get_capital_formation;capital_stock_clean;
 water_withdrawals_clean;get_water_withdrawals;;water withdrawals by subsector
 water_consumption_clean;get_water_consumption;;water consumption by subsector
+expenditure_clean;get_expenditure;GDP_MER_clean,population_clean;ag regional prices (current consumer prices),demand balances by crop commodity
 ag_trade;get_ag_trade;;ag export to the world center (USA) (Intl. Armington competition),ag import vs. domestic supply (Regional Armington competition)
 trade_clean;get_total_trade;ag_trade,pe_trade;
 energy_price;get_energy_price_tmp;;CO2 prices,prices by sector,costs by subsector

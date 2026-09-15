@@ -17,13 +17,17 @@ Africa_Eastern,gas pipeline,14.2
 Africa_Eastern,wholesale gas,14.2
 Africa_Eastern,delivered gas,14.2
 Africa_Eastern,crude oil,19.6
-Africa_Eastern,unconventional oil,21.1
-Africa_Eastern,unconventional oil production,19.6
-Africa_Eastern,traded unconventional oil,19.6
 Africa_Eastern,regional oil,19.6
+Africa_Eastern,refining,19.6
 Africa_Eastern,refined liquids industrial,19.6
 Africa_Eastern,refined liquids enduse,19.6
 Africa_Eastern,limestone,0.08
+Africa_Eastern,unconventional oil upscaling,1.5
+Africa_Eastern,regional industrial_roundwood,0
+Africa_Eastern,regional sawnwood,0
+Africa_Eastern,regional woodpulp,0
+Africa_Eastern,NonFoodDemand_sawnwood,0
+Africa_Eastern,regional woodpulp for energy,23
 Africa_Northern,biomass,0
 Africa_Northern,regional biomass,23
 Africa_Northern,delivered biomass,23
@@ -40,13 +44,17 @@ Africa_Northern,gas pipeline,14.2
 Africa_Northern,wholesale gas,14.2
 Africa_Northern,delivered gas,14.2
 Africa_Northern,crude oil,19.6
-Africa_Northern,unconventional oil,21.1
-Africa_Northern,unconventional oil production,19.6
-Africa_Northern,traded unconventional oil,19.6
 Africa_Northern,regional oil,19.6
+Africa_Northern,refining,19.6
 Africa_Northern,refined liquids industrial,19.6
 Africa_Northern,refined liquids enduse,19.6
-Africa_Northern,limestone,1.08
+Africa_Northern,limestone,0.08
+Africa_Northern,unconventional oil upscaling,1.5
+Africa_Northern,regional industrial_roundwood,0
+Africa_Northern,regional sawnwood,0
+Africa_Northern,regional woodpulp,0
+Africa_Northern,NonFoodDemand_sawnwood,0
+Africa_Northern,regional woodpulp for energy,23
 Africa_Southern,biomass,0
 Africa_Southern,regional biomass,23
 Africa_Southern,delivered biomass,23
@@ -63,13 +71,17 @@ Africa_Southern,gas pipeline,14.2
 Africa_Southern,wholesale gas,14.2
 Africa_Southern,delivered gas,14.2
 Africa_Southern,crude oil,19.6
-Africa_Southern,unconventional oil,21.1
-Africa_Southern,unconventional oil production,19.6
-Africa_Southern,traded unconventional oil,19.6
 Africa_Southern,regional oil,19.6
+Africa_Southern,refining,19.6
 Africa_Southern,refined liquids industrial,19.6
 Africa_Southern,refined liquids enduse,19.6
-Africa_Southern,limestone,2.08
+Africa_Southern,limestone,0.08
+Africa_Southern,unconventional oil upscaling,1.5
+Africa_Southern,regional industrial_roundwood,0
+Africa_Southern,regional sawnwood,0
+Africa_Southern,regional woodpulp,0
+Africa_Southern,NonFoodDemand_sawnwood,0
+Africa_Southern,regional woodpulp for energy,23
 Africa_Western,biomass,0
 Africa_Western,regional biomass,23
 Africa_Western,delivered biomass,23
@@ -86,13 +98,17 @@ Africa_Western,gas pipeline,14.2
 Africa_Western,wholesale gas,14.2
 Africa_Western,delivered gas,14.2
 Africa_Western,crude oil,19.6
-Africa_Western,unconventional oil,21.1
-Africa_Western,unconventional oil production,19.6
-Africa_Western,traded unconventional oil,19.6
 Africa_Western,regional oil,19.6
+Africa_Western,refining,19.6
 Africa_Western,refined liquids industrial,19.6
 Africa_Western,refined liquids enduse,19.6
-Africa_Western,limestone,3.08
+Africa_Western,limestone,0.08
+Africa_Western,unconventional oil upscaling,1.5
+Africa_Western,regional industrial_roundwood,0
+Africa_Western,regional sawnwood,0
+Africa_Western,regional woodpulp,0
+Africa_Western,NonFoodDemand_sawnwood,0
+Africa_Western,regional woodpulp for energy,23
 Argentina,biomass,0
 Argentina,regional biomass,23
 Argentina,delivered biomass,23
@@ -109,13 +125,17 @@ Argentina,gas pipeline,14.2
 Argentina,wholesale gas,14.2
 Argentina,delivered gas,14.2
 Argentina,crude oil,19.6
-Argentina,unconventional oil,21.1
-Argentina,unconventional oil production,19.6
-Argentina,traded unconventional oil,19.6
 Argentina,regional oil,19.6
+Argentina,refining,19.6
 Argentina,refined liquids industrial,19.6
 Argentina,refined liquids enduse,19.6
-Argentina,limestone,4.08
+Argentina,limestone,0.08
+Argentina,unconventional oil upscaling,1.5
+Argentina,regional industrial_roundwood,0
+Argentina,regional sawnwood,0
+Argentina,regional woodpulp,0
+Argentina,NonFoodDemand_sawnwood,0
+Argentina,regional woodpulp for energy,23
 Australia_NZ,biomass,0
 Australia_NZ,regional biomass,23
 Australia_NZ,delivered biomass,23
@@ -132,13 +152,17 @@ Australia_NZ,gas pipeline,14.2
 Australia_NZ,wholesale gas,14.2
 Australia_NZ,delivered gas,14.2
 Australia_NZ,crude oil,19.6
-Australia_NZ,unconventional oil,21.1
-Australia_NZ,unconventional oil production,19.6
-Australia_NZ,traded unconventional oil,19.6
 Australia_NZ,regional oil,19.6
+Australia_NZ,refining,19.6
 Australia_NZ,refined liquids industrial,19.6
 Australia_NZ,refined liquids enduse,19.6
-Australia_NZ,limestone,5.08
+Australia_NZ,limestone,0.08
+Australia_NZ,unconventional oil upscaling,1.5
+Australia_NZ,regional industrial_roundwood,0
+Australia_NZ,regional sawnwood,0
+Australia_NZ,regional woodpulp,0
+Australia_NZ,NonFoodDemand_sawnwood,0
+Australia_NZ,regional woodpulp for energy,23
 Brazil,biomass,0
 Brazil,regional biomass,23
 Brazil,delivered biomass,23
@@ -155,13 +179,17 @@ Brazil,gas pipeline,14.2
 Brazil,wholesale gas,14.2
 Brazil,delivered gas,14.2
 Brazil,crude oil,19.6
-Brazil,unconventional oil,21.1
-Brazil,unconventional oil production,19.6
-Brazil,traded unconventional oil,19.6
 Brazil,regional oil,19.6
+Brazil,refining,19.6
 Brazil,refined liquids industrial,19.6
 Brazil,refined liquids enduse,19.6
-Brazil,limestone,6.08
+Brazil,limestone,0.08
+Brazil,unconventional oil upscaling,1.5
+Brazil,regional industrial_roundwood,0
+Brazil,regional sawnwood,0
+Brazil,regional woodpulp,0
+Brazil,NonFoodDemand_sawnwood,0
+Brazil,regional woodpulp for energy,23
 Canada,biomass,0
 Canada,regional biomass,23
 Canada,delivered biomass,23
@@ -178,13 +206,17 @@ Canada,gas pipeline,14.2
 Canada,wholesale gas,14.2
 Canada,delivered gas,14.2
 Canada,crude oil,19.6
-Canada,unconventional oil,21.1
-Canada,unconventional oil production,19.6
-Canada,traded unconventional oil,19.6
 Canada,regional oil,19.6
+Canada,refining,19.6
 Canada,refined liquids industrial,19.6
 Canada,refined liquids enduse,19.6
-Canada,limestone,7.08
+Canada,limestone,0.08
+Canada,unconventional oil upscaling,1.5
+Canada,regional industrial_roundwood,0
+Canada,regional sawnwood,0
+Canada,regional woodpulp,0
+Canada,NonFoodDemand_sawnwood,0
+Canada,regional woodpulp for energy,23
 Central America and Caribbean,biomass,0
 Central America and Caribbean,regional biomass,23
 Central America and Caribbean,delivered biomass,23
@@ -201,13 +233,17 @@ Central America and Caribbean,gas pipeline,14.2
 Central America and Caribbean,wholesale gas,14.2
 Central America and Caribbean,delivered gas,14.2
 Central America and Caribbean,crude oil,19.6
-Central America and Caribbean,unconventional oil,21.1
-Central America and Caribbean,unconventional oil production,19.6
-Central America and Caribbean,traded unconventional oil,19.6
 Central America and Caribbean,regional oil,19.6
+Central America and Caribbean,refining,19.6
 Central America and Caribbean,refined liquids industrial,19.6
 Central America and Caribbean,refined liquids enduse,19.6
-Central America and Caribbean,limestone,8.08
+Central America and Caribbean,limestone,0.08
+Central America and Caribbean,unconventional oil upscaling,1.5
+Central America and Caribbean,regional industrial_roundwood,0
+Central America and Caribbean,regional sawnwood,0
+Central America and Caribbean,regional woodpulp,0
+Central America and Caribbean,NonFoodDemand_sawnwood,0
+Central America and Caribbean,regional woodpulp for energy,23
 Central Asia,biomass,0
 Central Asia,regional biomass,23
 Central Asia,delivered biomass,23
@@ -224,13 +260,17 @@ Central Asia,gas pipeline,14.2
 Central Asia,wholesale gas,14.2
 Central Asia,delivered gas,14.2
 Central Asia,crude oil,19.6
-Central Asia,unconventional oil,21.1
-Central Asia,unconventional oil production,19.6
-Central Asia,traded unconventional oil,19.6
 Central Asia,regional oil,19.6
+Central Asia,refining,19.6
 Central Asia,refined liquids industrial,19.6
 Central Asia,refined liquids enduse,19.6
-Central Asia,limestone,9.08
+Central Asia,limestone,0.08
+Central Asia,unconventional oil upscaling,1.5
+Central Asia,regional industrial_roundwood,0
+Central Asia,regional sawnwood,0
+Central Asia,regional woodpulp,0
+Central Asia,NonFoodDemand_sawnwood,0
+Central Asia,regional woodpulp for energy,23
 China,biomass,0
 China,regional biomass,23
 China,delivered biomass,23
@@ -247,13 +287,17 @@ China,gas pipeline,14.2
 China,wholesale gas,14.2
 China,delivered gas,14.2
 China,crude oil,19.6
-China,unconventional oil,21.1
-China,unconventional oil production,19.6
-China,traded unconventional oil,19.6
 China,regional oil,19.6
+China,refining,19.6
 China,refined liquids industrial,19.6
 China,refined liquids enduse,19.6
-China,limestone,10.08
+China,limestone,0.08
+China,unconventional oil upscaling,1.5
+China,regional industrial_roundwood,0
+China,regional sawnwood,0
+China,regional woodpulp,0
+China,NonFoodDemand_sawnwood,0
+China,regional woodpulp for energy,23
 Colombia,biomass,0
 Colombia,regional biomass,23
 Colombia,delivered biomass,23
@@ -270,13 +314,17 @@ Colombia,gas pipeline,14.2
 Colombia,wholesale gas,14.2
 Colombia,delivered gas,14.2
 Colombia,crude oil,19.6
-Colombia,unconventional oil,21.1
-Colombia,unconventional oil production,19.6
-Colombia,traded unconventional oil,19.6
 Colombia,regional oil,19.6
+Colombia,refining,19.6
 Colombia,refined liquids industrial,19.6
 Colombia,refined liquids enduse,19.6
-Colombia,limestone,11.08
+Colombia,limestone,0.08
+Colombia,unconventional oil upscaling,1.5
+Colombia,regional industrial_roundwood,0
+Colombia,regional sawnwood,0
+Colombia,regional woodpulp,0
+Colombia,NonFoodDemand_sawnwood,0
+Colombia,regional woodpulp for energy,23
 EU-12,biomass,0
 EU-12,regional biomass,23
 EU-12,delivered biomass,23
@@ -293,13 +341,17 @@ EU-12,gas pipeline,14.2
 EU-12,wholesale gas,14.2
 EU-12,delivered gas,14.2
 EU-12,crude oil,19.6
-EU-12,unconventional oil,21.1
-EU-12,unconventional oil production,19.6
-EU-12,traded unconventional oil,19.6
 EU-12,regional oil,19.6
+EU-12,refining,19.6
 EU-12,refined liquids industrial,19.6
 EU-12,refined liquids enduse,19.6
-EU-12,limestone,16.08
+EU-12,limestone,0.08
+EU-12,unconventional oil upscaling,1.5
+EU-12,regional industrial_roundwood,0
+EU-12,regional sawnwood,0
+EU-12,regional woodpulp,0
+EU-12,NonFoodDemand_sawnwood,0
+EU-12,regional woodpulp for energy,23
 EU-15,biomass,0
 EU-15,regional biomass,23
 EU-15,delivered biomass,23
@@ -316,13 +368,17 @@ EU-15,gas pipeline,14.2
 EU-15,wholesale gas,14.2
 EU-15,delivered gas,14.2
 EU-15,crude oil,19.6
-EU-15,unconventional oil,21.1
-EU-15,unconventional oil production,19.6
-EU-15,traded unconventional oil,19.6
 EU-15,regional oil,19.6
+EU-15,refining,19.6
 EU-15,refined liquids industrial,19.6
 EU-15,refined liquids enduse,19.6
-EU-15,limestone,17.08
+EU-15,limestone,0.08
+EU-15,unconventional oil upscaling,1.5
+EU-15,regional industrial_roundwood,0
+EU-15,regional sawnwood,0
+EU-15,regional woodpulp,0
+EU-15,NonFoodDemand_sawnwood,0
+EU-15,regional woodpulp for energy,23
 Europe_Non_EU,biomass,0
 Europe_Non_EU,regional biomass,23
 Europe_Non_EU,delivered biomass,23
@@ -339,13 +395,17 @@ Europe_Non_EU,gas pipeline,14.2
 Europe_Non_EU,wholesale gas,14.2
 Europe_Non_EU,delivered gas,14.2
 Europe_Non_EU,crude oil,19.6
-Europe_Non_EU,unconventional oil,21.1
-Europe_Non_EU,unconventional oil production,19.6
-Europe_Non_EU,traded unconventional oil,19.6
 Europe_Non_EU,regional oil,19.6
+Europe_Non_EU,refining,19.6
 Europe_Non_EU,refined liquids industrial,19.6
 Europe_Non_EU,refined liquids enduse,19.6
-Europe_Non_EU,limestone,19.08
+Europe_Non_EU,limestone,0.08
+Europe_Non_EU,unconventional oil upscaling,1.5
+Europe_Non_EU,regional industrial_roundwood,0
+Europe_Non_EU,regional sawnwood,0
+Europe_Non_EU,regional woodpulp,0
+Europe_Non_EU,NonFoodDemand_sawnwood,0
+Europe_Non_EU,regional woodpulp for energy,23
 European Free Trade Association,biomass,0
 European Free Trade Association,regional biomass,23
 European Free Trade Association,delivered biomass,23
@@ -362,13 +422,17 @@ European Free Trade Association,gas pipeline,14.2
 European Free Trade Association,wholesale gas,14.2
 European Free Trade Association,delivered gas,14.2
 European Free Trade Association,crude oil,19.6
-European Free Trade Association,unconventional oil,21.1
-European Free Trade Association,unconventional oil production,19.6
-European Free Trade Association,traded unconventional oil,19.6
 European Free Trade Association,regional oil,19.6
+European Free Trade Association,refining,19.6
 European Free Trade Association,refined liquids industrial,19.6
 European Free Trade Association,refined liquids enduse,19.6
-European Free Trade Association,limestone,12.08
+European Free Trade Association,limestone,0.08
+European Free Trade Association,unconventional oil upscaling,1.5
+European Free Trade Association,regional industrial_roundwood,0
+European Free Trade Association,regional sawnwood,0
+European Free Trade Association,regional woodpulp,0
+European Free Trade Association,NonFoodDemand_sawnwood,0
+European Free Trade Association,regional woodpulp for energy,23
 India,biomass,0
 India,regional biomass,23
 India,delivered biomass,23
@@ -385,13 +449,17 @@ India,gas pipeline,14.2
 India,wholesale gas,14.2
 India,delivered gas,14.2
 India,crude oil,19.6
-India,unconventional oil,21.1
-India,unconventional oil production,19.6
-India,traded unconventional oil,19.6
 India,regional oil,19.6
+India,refining,19.6
 India,refined liquids industrial,19.6
 India,refined liquids enduse,19.6
-India,limestone,20.08
+India,limestone,0.08
+India,unconventional oil upscaling,1.5
+India,regional industrial_roundwood,0
+India,regional sawnwood,0
+India,regional woodpulp,0
+India,NonFoodDemand_sawnwood,0
+India,regional woodpulp for energy,23
 Indonesia,biomass,0
 Indonesia,regional biomass,23
 Indonesia,delivered biomass,23
@@ -408,13 +476,17 @@ Indonesia,gas pipeline,14.2
 Indonesia,wholesale gas,14.2
 Indonesia,delivered gas,14.2
 Indonesia,crude oil,19.6
-Indonesia,unconventional oil,21.1
-Indonesia,unconventional oil production,19.6
-Indonesia,traded unconventional oil,19.6
 Indonesia,regional oil,19.6
+Indonesia,refining,19.6
 Indonesia,refined liquids industrial,19.6
 Indonesia,refined liquids enduse,19.6
-Indonesia,limestone,21.08
+Indonesia,limestone,0.08
+Indonesia,unconventional oil upscaling,1.5
+Indonesia,regional industrial_roundwood,0
+Indonesia,regional sawnwood,0
+Indonesia,regional woodpulp,0
+Indonesia,NonFoodDemand_sawnwood,0
+Indonesia,regional woodpulp for energy,23
 Japan,biomass,0
 Japan,regional biomass,23
 Japan,delivered biomass,23
@@ -431,13 +503,17 @@ Japan,gas pipeline,14.2
 Japan,wholesale gas,14.2
 Japan,delivered gas,14.2
 Japan,crude oil,19.6
-Japan,unconventional oil,21.1
-Japan,unconventional oil production,19.6
-Japan,traded unconventional oil,19.6
 Japan,regional oil,19.6
+Japan,refining,19.6
 Japan,refined liquids industrial,19.6
 Japan,refined liquids enduse,19.6
-Japan,limestone,22.08
+Japan,limestone,0.08
+Japan,unconventional oil upscaling,1.5
+Japan,regional industrial_roundwood,0
+Japan,regional sawnwood,0
+Japan,regional woodpulp,0
+Japan,NonFoodDemand_sawnwood,0
+Japan,regional woodpulp for energy,23
 Mexico,biomass,0
 Mexico,regional biomass,23
 Mexico,delivered biomass,23
@@ -454,13 +530,17 @@ Mexico,gas pipeline,14.2
 Mexico,wholesale gas,14.2
 Mexico,delivered gas,14.2
 Mexico,crude oil,19.6
-Mexico,unconventional oil,21.1
-Mexico,unconventional oil production,19.6
-Mexico,traded unconventional oil,19.6
 Mexico,regional oil,19.6
+Mexico,refining,19.6
 Mexico,refined liquids industrial,19.6
 Mexico,refined liquids enduse,19.6
-Mexico,limestone,24.08
+Mexico,limestone,0.08
+Mexico,unconventional oil upscaling,1.5
+Mexico,regional industrial_roundwood,0
+Mexico,regional sawnwood,0
+Mexico,regional woodpulp,0
+Mexico,NonFoodDemand_sawnwood,0
+Mexico,regional woodpulp for energy,23
 Middle East,biomass,0
 Middle East,regional biomass,23
 Middle East,delivered biomass,23
@@ -477,13 +557,17 @@ Middle East,gas pipeline,14.2
 Middle East,wholesale gas,14.2
 Middle East,delivered gas,14.2
 Middle East,crude oil,19.6
-Middle East,unconventional oil,21.1
-Middle East,unconventional oil production,19.6
-Middle East,traded unconventional oil,19.6
 Middle East,regional oil,19.6
+Middle East,refining,19.6
 Middle East,refined liquids industrial,19.6
 Middle East,refined liquids enduse,19.6
-Middle East,limestone,25.08
+Middle East,limestone,0.08
+Middle East,unconventional oil upscaling,1.5
+Middle East,regional industrial_roundwood,0
+Middle East,regional sawnwood,0
+Middle East,regional woodpulp,0
+Middle East,NonFoodDemand_sawnwood,0
+Middle East,regional woodpulp for energy,23
 Pakistan,biomass,0
 Pakistan,regional biomass,23
 Pakistan,delivered biomass,23
@@ -500,13 +584,17 @@ Pakistan,gas pipeline,14.2
 Pakistan,wholesale gas,14.2
 Pakistan,delivered gas,14.2
 Pakistan,crude oil,19.6
-Pakistan,unconventional oil,21.1
-Pakistan,unconventional oil production,19.6
-Pakistan,traded unconventional oil,19.6
 Pakistan,regional oil,19.6
+Pakistan,refining,19.6
 Pakistan,refined liquids industrial,19.6
 Pakistan,refined liquids enduse,19.6
-Pakistan,limestone,26.08
+Pakistan,limestone,0.08
+Pakistan,unconventional oil upscaling,1.5
+Pakistan,regional industrial_roundwood,0
+Pakistan,regional sawnwood,0
+Pakistan,regional woodpulp,0
+Pakistan,NonFoodDemand_sawnwood,0
+Pakistan,regional woodpulp for energy,23
 Russia,biomass,0
 Russia,regional biomass,23
 Russia,delivered biomass,23
@@ -523,13 +611,17 @@ Russia,gas pipeline,14.2
 Russia,wholesale gas,14.2
 Russia,delivered gas,14.2
 Russia,crude oil,19.6
-Russia,unconventional oil,21.1
-Russia,unconventional oil production,19.6
-Russia,traded unconventional oil,19.6
 Russia,regional oil,19.6
+Russia,refining,19.6
 Russia,refined liquids industrial,19.6
 Russia,refined liquids enduse,19.6
-Russia,limestone,28.08
+Russia,limestone,0.08
+Russia,unconventional oil upscaling,1.5
+Russia,regional industrial_roundwood,0
+Russia,regional sawnwood,0
+Russia,regional woodpulp,0
+Russia,NonFoodDemand_sawnwood,0
+Russia,regional woodpulp for energy,23
 South Africa,biomass,0
 South Africa,regional biomass,23
 South Africa,delivered biomass,23
@@ -546,13 +638,17 @@ South Africa,gas pipeline,14.2
 South Africa,wholesale gas,14.2
 South Africa,delivered gas,14.2
 South Africa,crude oil,19.6
-South Africa,unconventional oil,21.1
-South Africa,unconventional oil production,19.6
-South Africa,traded unconventional oil,19.6
 South Africa,regional oil,19.6
+South Africa,refining,19.6
 South Africa,refined liquids industrial,19.6
 South Africa,refined liquids enduse,19.6
-South Africa,limestone,29.08
+South Africa,limestone,0.08
+South Africa,unconventional oil upscaling,1.5
+South Africa,regional industrial_roundwood,0
+South Africa,regional sawnwood,0
+South Africa,regional woodpulp,0
+South Africa,NonFoodDemand_sawnwood,0
+South Africa,regional woodpulp for energy,23
 South America_Northern,biomass,0
 South America_Northern,regional biomass,23
 South America_Northern,delivered biomass,23
@@ -569,13 +665,17 @@ South America_Northern,gas pipeline,14.2
 South America_Northern,wholesale gas,14.2
 South America_Northern,delivered gas,14.2
 South America_Northern,crude oil,19.6
-South America_Northern,unconventional oil,21.1
-South America_Northern,unconventional oil production,19.6
-South America_Northern,traded unconventional oil,19.6
 South America_Northern,regional oil,19.6
+South America_Northern,refining,19.6
 South America_Northern,refined liquids industrial,19.6
 South America_Northern,refined liquids enduse,19.6
-South America_Northern,limestone,30.08
+South America_Northern,limestone,0.08
+South America_Northern,unconventional oil upscaling,1.5
+South America_Northern,regional industrial_roundwood,0
+South America_Northern,regional sawnwood,0
+South America_Northern,regional woodpulp,0
+South America_Northern,NonFoodDemand_sawnwood,0
+South America_Northern,regional woodpulp for energy,23
 South America_Southern,biomass,0
 South America_Southern,regional biomass,23
 South America_Southern,delivered biomass,23
@@ -592,13 +692,17 @@ South America_Southern,gas pipeline,14.2
 South America_Southern,wholesale gas,14.2
 South America_Southern,delivered gas,14.2
 South America_Southern,crude oil,19.6
-South America_Southern,unconventional oil,21.1
-South America_Southern,unconventional oil production,19.6
-South America_Southern,traded unconventional oil,19.6
 South America_Southern,regional oil,19.6
+South America_Southern,refining,19.6
 South America_Southern,refined liquids industrial,19.6
 South America_Southern,refined liquids enduse,19.6
-South America_Southern,limestone,31.08
+South America_Southern,limestone,0.08
+South America_Southern,unconventional oil upscaling,1.5
+South America_Southern,regional industrial_roundwood,0
+South America_Southern,regional sawnwood,0
+South America_Southern,regional woodpulp,0
+South America_Southern,NonFoodDemand_sawnwood,0
+South America_Southern,regional woodpulp for energy,23
 South Asia,biomass,0
 South Asia,regional biomass,23
 South Asia,delivered biomass,23
@@ -615,13 +719,17 @@ South Asia,gas pipeline,14.2
 South Asia,wholesale gas,14.2
 South Asia,delivered gas,14.2
 South Asia,crude oil,19.6
-South Asia,unconventional oil,21.1
-South Asia,unconventional oil production,19.6
-South Asia,traded unconventional oil,19.6
 South Asia,regional oil,19.6
+South Asia,refining,19.6
 South Asia,refined liquids industrial,19.6
 South Asia,refined liquids enduse,19.6
-South Asia,limestone,32.08
+South Asia,limestone,0.08
+South Asia,unconventional oil upscaling,1.5
+South Asia,regional industrial_roundwood,0
+South Asia,regional sawnwood,0
+South Asia,regional woodpulp,0
+South Asia,NonFoodDemand_sawnwood,0
+South Asia,regional woodpulp for energy,23
 South Korea,biomass,0
 South Korea,regional biomass,23
 South Korea,delivered biomass,23
@@ -638,13 +746,17 @@ South Korea,gas pipeline,14.2
 South Korea,wholesale gas,14.2
 South Korea,delivered gas,14.2
 South Korea,crude oil,19.6
-South Korea,unconventional oil,21.1
-South Korea,unconventional oil production,19.6
-South Korea,traded unconventional oil,19.6
 South Korea,regional oil,19.6
+South Korea,refining,19.6
 South Korea,refined liquids industrial,19.6
 South Korea,refined liquids enduse,19.6
-South Korea,limestone,33.08
+South Korea,limestone,0.08
+South Korea,unconventional oil upscaling,1.5
+South Korea,regional industrial_roundwood,0
+South Korea,regional sawnwood,0
+South Korea,regional woodpulp,0
+South Korea,NonFoodDemand_sawnwood,0
+South Korea,regional woodpulp for energy,23
 Southeast Asia,biomass,0
 Southeast Asia,regional biomass,23
 Southeast Asia,delivered biomass,23
@@ -661,13 +773,17 @@ Southeast Asia,gas pipeline,14.2
 Southeast Asia,wholesale gas,14.2
 Southeast Asia,delivered gas,14.2
 Southeast Asia,crude oil,19.6
-Southeast Asia,unconventional oil,21.1
-Southeast Asia,unconventional oil production,19.6
-Southeast Asia,traded unconventional oil,19.6
 Southeast Asia,regional oil,19.6
+Southeast Asia,refining,19.6
 Southeast Asia,refined liquids industrial,19.6
 Southeast Asia,refined liquids enduse,19.6
-Southeast Asia,limestone,34.08
+Southeast Asia,limestone,0.08
+Southeast Asia,unconventional oil upscaling,1.5
+Southeast Asia,regional industrial_roundwood,0
+Southeast Asia,regional sawnwood,0
+Southeast Asia,regional woodpulp,0
+Southeast Asia,NonFoodDemand_sawnwood,0
+Southeast Asia,regional woodpulp for energy,23
 Taiwan,biomass,0
 Taiwan,regional biomass,23
 Taiwan,delivered biomass,23
@@ -684,13 +800,17 @@ Taiwan,gas pipeline,14.2
 Taiwan,wholesale gas,14.2
 Taiwan,delivered gas,14.2
 Taiwan,crude oil,19.6
-Taiwan,unconventional oil,21.1
-Taiwan,unconventional oil production,19.6
-Taiwan,traded unconventional oil,19.6
 Taiwan,regional oil,19.6
+Taiwan,refining,19.6
 Taiwan,refined liquids industrial,19.6
 Taiwan,refined liquids enduse,19.6
-Taiwan,limestone,35.08
+Taiwan,limestone,0.08
+Taiwan,unconventional oil upscaling,1.5
+Taiwan,regional industrial_roundwood,0
+Taiwan,regional sawnwood,0
+Taiwan,regional woodpulp,0
+Taiwan,NonFoodDemand_sawnwood,0
+Taiwan,regional woodpulp for energy,23
 USA,biomass,0
 USA,regional biomass,23
 USA,delivered biomass,23
@@ -707,13 +827,17 @@ USA,gas pipeline,14.2
 USA,wholesale gas,14.2
 USA,delivered gas,14.2
 USA,crude oil,19.6
-USA,unconventional oil,21.1
-USA,unconventional oil production,19.6
-USA,traded unconventional oil,19.6
 USA,regional oil,19.6
+USA,refining,19.6
 USA,refined liquids industrial,19.6
 USA,refined liquids enduse,19.6
-USA,limestone,36.08
+USA,limestone,0.08
+USA,unconventional oil upscaling,1.5
+USA,regional industrial_roundwood,0
+USA,regional sawnwood,0
+USA,regional woodpulp,0
+USA,NonFoodDemand_sawnwood,0
+USA,regional woodpulp for energy,23
 Ukraine,biomass,0
 Ukraine,regional biomass,23
 Ukraine,delivered biomass,23
@@ -740,5 +864,4 @@ Ukraine,regional industrial_roundwood,0
 Ukraine,regional sawnwood,0
 Ukraine,regional woodpulp,0
 Ukraine,NonFoodDemand_sawnwood,0
-Ukraine,NonFoodDemand_woodpulp,0
 Ukraine,regional woodpulp for energy,23

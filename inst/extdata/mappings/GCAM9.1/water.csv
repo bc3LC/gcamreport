@@ -426,6 +426,8 @@ biomass,biomassTree_TexasCst,Water XX,Water XX|Irrigation,,,1
 biomass,biomassTree_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 biomass,biomassTree_UsaCstE,Water XX,Water XX|Irrigation,,,1
 biomass,biomassTree_UsaCstSE,Water XX,Water XX|Irrigation,,,1
+biomass,biomassTree_AusInt,Water XX,Water XX|Irrigation,,,1
+CO2 removal,dac,Water XX,Water XX|Electricity,Water XX|Electricity|Other,,1
 Corn,CornC4_AfrCstE,Water XX,Water XX|Irrigation,,,1
 Corn,CornC4_AfrCstNE,Water XX,Water XX|Irrigation,,,1
 Corn,CornC4_LChad,Water XX,Water XX|Irrigation,,,1
@@ -618,15 +620,16 @@ Corn,CornC4_TexasCst,Water XX,Water XX|Irrigation,,,1
 Corn,CornC4_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 Corn,CornC4_UsaCstE,Water XX,Water XX|Irrigation,,,1
 Corn,CornC4_UsaCstSE,Water XX,Water XX|Irrigation,,,1
-CO2 removal,dac,Water XX,Water XX|Electricity,Water XX|Electricity|Other,,1
 Dairy,Mixed,Water XX,Water XX|Livestock,,,1
 Dairy,Pastoral,Water XX,Water XX|Livestock,,,1
-elec_biomass (IGCC CCS),biomass (IGCC CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Biomass,,1
 elec_biomass (conv CCS),biomass (conv CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Biomass,,1
+elec_biomass (IGCC CCS),biomass (IGCC CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Biomass,,1
 elec_coal (conv pul CCS),coal (conv pul CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Coal,Water XX|Electricity|Fossil,1
 elec_coal (IGCC CCS),coal (IGCC CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Coal,Water XX|Electricity|Fossil,1
 elec_gas (CC CCS),gas (CC CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Gas,Water XX|Electricity|Fossil,1
+elec_large reactor,large reactor,Water XX,Water XX|Electricity,Water XX|Electricity|Nuclear,,1
 elec_refined liquids (CC CCS),refined liquids (CC CCS),Water XX,Water XX|Electricity,Water XX|Electricity|Oil,Water XX|Electricity|Fossil,1
+elec_SMR,SMR,Water XX,Water XX|Electricity,Water XX|Electricity|Nuclear,,1
 electricity,biomass,Water XX,Water XX|Electricity,Water XX|Electricity|Biomass,,1
 electricity,coal,Water XX,Water XX|Electricity,Water XX|Electricity|Coal,Water XX|Electricity|Fossil,1
 electricity,gas,Water XX,Water XX|Electricity,Water XX|Electricity|Gas,Water XX|Electricity|Fossil,1
@@ -1463,6 +1466,7 @@ Fruits,Fruits_TexasCst,Water XX,Water XX|Irrigation,,,1
 Fruits,Fruits_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 Fruits,Fruits_UsaCstE,Water XX,Water XX|Irrigation,,,1
 Fruits,Fruits_UsaCstSE,Water XX,Water XX|Irrigation,,,1
+Fruits,FruitsTree_Mackenzie,Water XX,Water XX|Irrigation,,,1
 H2 central production,biomass,Water XX,Water XX|Industrial Water,,,1
 H2 central production,coal,Water XX,Water XX|Industrial Water,,,2
 H2 central production,electricity,Water XX,Water XX|Industrial Water,,,1
@@ -1470,8 +1474,11 @@ H2 central production,gas,Water XX,Water XX|Industrial Water,,,1
 H2 central production,nuclear,Water XX,Water XX|Industrial Water,,,1
 H2 central production,solar,Water XX,Water XX|Industrial Water,,,1
 H2 central production,wind,Water XX,Water XX|Industrial Water,,,1
+H2 central production,hybrid,Water XX,Water XX|Industrial Water,,,1
 H2 industrial,onsite production,Water XX,Water XX|Industrial Water,,,1
 H2 industrial,forecourt production,Water XX,Water XX|Industrial Water,,,1
+H2 LDV,onsite production,Water XX,Water XX|Industrial Water,,,1
+H2 MHDV,onsite production,Water XX,Water XX|Industrial Water,,,1
 H2 wholesale dispensing,forecourt production,Water XX,Water XX|Industrial Water,,,1
 Legumes,Legumes_AfrCstNE,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_LChad,Water XX,Water XX|Irrigation,,,1
@@ -1609,6 +1616,7 @@ Legumes,Legumes_AfrCstS,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_AfrCstSSW,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_OrangeR,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_OrinocoR,Water XX,Water XX|Irrigation,,,1
+Legumes,Legumes_MagdalenaR,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_SAmerCstN,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_SAmerCstNE,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_ColEcuaCst,Water XX,Water XX|Irrigation,,,1
@@ -1630,6 +1638,7 @@ Legumes,Legumes_TexasCst,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_UsaCstE,Water XX,Water XX|Irrigation,,,1
 Legumes,Legumes_UsaPacNW,Water XX,Water XX|Irrigation,,,1
+LH2,onsite production,Water XX,Water XX|Industrial Water,,,1
 MiscCrop,MiscCropTree_AfrCstE,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCropTree_AfrCstNE,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCropTree_CongoR,Water XX,Water XX|Irrigation,,,1
@@ -1874,6 +1883,7 @@ MiscCrop,MiscCrop_YeniseiR,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCrop_AfrCstSSW,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCrop_OrangeR,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCropTree_OrinocoR,Water XX,Water XX|Irrigation,,,1
+MiscCrop,MiscCropTree_MagdalenaR,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCropTree_SAmerCstN,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCropTree_SAmerCstNE,Water XX,Water XX|Irrigation,,,1
 MiscCrop,MiscCrop_OrinocoR,Water XX,Water XX|Irrigation,,,1
@@ -2446,6 +2456,13 @@ OilCrop,OilCrop_OhioR,Water XX,Water XX|Irrigation,,,1
 OilCrop,OilCrop_TexasCst,Water XX,Water XX|Irrigation,,,1
 OilCrop,OilCrop_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 OilCrop,OilCrop_UsaCstE,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_GangesR,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_Hainan,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_Hong,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_IrrawaddyR,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_LBalkash,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_Mekong,Water XX,Water XX|Irrigation,,,1
+OilCrop,OilCropTree_Salween,Water XX,Water XX|Irrigation,,,1
 OilPalm,OilPalmTree_AfrCstW,Water XX,Water XX|Irrigation,,,1
 OilPalm,OilPalmTree_GuineaGulf,Water XX,Water XX|Irrigation,,,1
 OilPalm,OilPalmTree_NigerR,Water XX,Water XX|Irrigation,,,1
@@ -2739,6 +2756,7 @@ OtherGrain,OtherGrain_TexasCst,Water XX,Water XX|Irrigation,,,1
 OtherGrain,OtherGrain_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 OtherGrain,OtherGrain_UsaCstE,Water XX,Water XX|Irrigation,,,1
 OtherGrain,OtherGrain_UsaCstSE,Water XX,Water XX|Irrigation,,,1
+OtherGrain,OtherGrainC4_CaspianSW,Water XX,Water XX|Irrigation,,,1
 paper,paper,Water XX,Water XX|Industrial Water,,,1
 Pork,Mixed,Water XX,Water XX|Livestock,,,1
 Poultry,Mixed,Water XX,Water XX|Livestock,,,1
@@ -3290,6 +3308,7 @@ SugarCrop,SugarCrop_WislaR,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_DouroR,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_EbroR,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_FranceCstS,Water XX,Water XX|Irrigation,,,1
+SugarCrop,SugarCropC4_Gironde,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_GuadalqR,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_GuadianaR,Water XX,Water XX|Irrigation,,,1
 SugarCrop,SugarCropC4_IberiaCst,Water XX,Water XX|Irrigation,,,1
@@ -3782,22 +3801,3 @@ Wheat,Wheat_TexasCst,Water XX,Water XX|Irrigation,,,1
 Wheat,Wheat_UsaColoRN,Water XX,Water XX|Irrigation,,,1
 Wheat,Wheat_UsaCstE,Water XX,Water XX|Irrigation,,,1
 Wheat,Wheat_UsaCstSE,Water XX,Water XX|Irrigation,,,1
-H2 LDV,onsite production,Water XX,Water XX|Industrial Water,,,1
-H2 MHDV,onsite production,Water XX,Water XX|Industrial Water,,,1
-LH2,onsite production,Water XX,Water XX|Industrial Water,,,1
-H2 central production,hybrid,Water XX,Water XX|Industrial Water,,,1
-elec_SMR,SMR,Water XX,NoReported,,,1
-elec_large reactor,large reactor,Water XX,NoReported,,,1
-biomass,biomassTree_AusInt,Water XX,Water XX|Irrigation,,,1
-Fruits,FruitsTree_Mackenzie,Water XX,Water XX|Irrigation,,,1
-OtherGrain,OtherGrainC4_CaspianSW,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_GangesR,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_Hainan,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_Hong,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_IrrawaddyR,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_LBalkash,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_Mekong,Water XX,Water XX|Irrigation,,,1
-OilCrop,OilCropTree_Salween,Water XX,Water XX|Irrigation,,,1
-SugarCrop,SugarCropC4_Gironde,Water XX,Water XX|Irrigation,,,1
-Legumes,Legumes_MagdalenaR,Water XX,Water XX|Irrigation,,,1
-MiscCrop,MiscCropTree_MagdalenaR,Water XX,Water XX|Irrigation,,,1
