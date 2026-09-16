@@ -314,15 +314,9 @@ GuadianaR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
 GuineaGulfGuineaGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
 GuineaGulfGuineaGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
 GuineaGulf_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
-H2 central production,Price|Secondary Energy|Hydrogen,,,,,,,,,,,,,,,,,,1
 H2 central productionDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
-H2 industrial,Price|Final Energy|Industry|Hydrogen,Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Price|Final Energy|Industry|Iron and Steel|Hydrogen,Price|Final Energy|Industry|Other Sector|Hydrogen,,,,,,,,,,,,,,,1
 H2 liquid truck,NoReported,,,,,,,,,,,,,,,,,,1
 H2 pipeline,NoReported,,,,,,,,,,,,,,,,,,1
-H2 retail delivery,Price|Final Energy|Residential and Commercial|Hydrogen,Price|Final Energy|Residential|Hydrogen,Price|Final Energy|Commercial|Hydrogen,,,,,,,,,,,,,,,,1
-H2 retail dispensing,Price|Final Energy|Transportation|Hydrogen,Price|Final Energy|Transportation|Bus|Hydrogen,Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Price|Final Energy|Transportation|Truck|Hydrogen,,,,,,,,,,,,,,,1
-H2 wholesale delivery,Price|Final Energy|Agriculture|Hydrogen,Price|Final Energy|Hydrogen,,,,,,,,,,,,,,,,,1
-H2 wholesale dispensing,Price|Final Energy|Bunkers|Hydrogen,Price|Final Energy|Transportation (w/ bunkers)|Hydrogen,Price|Final Energy|Transportation|Passenger|Hydrogen,Price|Final Energy|Transportation|Freight|Hydrogen,Price|Final Energy|Transportation|Domestic Shipping|Hydrogen,Price|Final Energy|Transportation|Domestic Aviation|Hydrogen,Price|Final Energy|Transportation|Rail|Hydrogen,,,,,,,,,,,,1
 HFC125,NoReported,,,,,,,,,,,,,,,,,,1
 HFC134a,NoReported,,,,,,,,,,,,,,,,,,1
 HFC143a,NoReported,,,,,,,,,,,,,,,,,,1
@@ -815,7 +809,6 @@ aluminum,NoReported,,,,,,,,,,,,,,,,,,1
 aluminum-tfe,NoReported,,,,,,,,,,,,,,,,,,1
 ammonia,NoReported,,,,,,,,,,,,,,,,,,1
 backup_electricity,NoReported,,,,,,,,,,,,,,,,,,1
-biomass,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Biomass,,,,,,,,,,,,,,,,,1
 biophysical water consumption,NoReported,,,,,,,,,,,,,,,,,,1
 capital,NoReported,,,,,,,,,,,,,,,,,,1
 carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
@@ -825,7 +818,6 @@ chemical,NoReported,,,,,,,,,,,,,,,,,,1
 chemical energy use,NoReported,,,,,,,,,,,,,,,,,,1
 chemical feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
 chemical-tfe,NoReported,,,,,,,,,,,,,,,,,,1
-coal,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Coal,,,,,,,,,,,,,,,,,1
 comm cooling,NoReported,,,,,,,,,,,,,,,,,,1
 comm heating,NoReported,,,,,,,,,,,,,,,,,,1
 comm others,NoReported,,,,,,,,,,,,,,,,,,1
@@ -837,12 +829,8 @@ construction-tfe,NoReported,,,,,,,,,,,,,,,,,,1
 consumer durable,NoReported,,,,,,,,,,,,,,,,,,1
 crude oil,NoReported,,,,,,,,,,,,,,,,,,1
 csp_backup,NoReported,,,,,,,,,,,,,,,,,,1
-delivered biomass,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Biomass,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Biomass,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Biomass,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Biomass,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Biomass,Price|Final Energy|Solids,Price|Final Energy|Solids|Biomass,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Biomass,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Biomass,1
-delivered coal,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Coal,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Coal,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Coal,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Coal,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Coal,Price|Final Energy|Solids,Price|Final Energy|Solids|Coal,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Coal,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Coal,1
-delivered gas,Price|Final Energy|Residential and Commercial|Gases,Price|Final Energy|Residential|Gases,Price|Final Energy|Commercial|Gases,Price|Final Energy|Transportation|Gases,Price|Final Energy|Transportation|Bus|Gases,Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,,,,,,,,,,,,,1
 desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
 distributed_solar,NoReported,,,,,,,,,,,,,,,,,,1
-district heat,Price|Final Energy|Agriculture|Heat,,Price|Final Energy|Residential and Commercial|Heat,Price|Final Energy|Residential|Heat,Price|Final Energy|Commercial|Heat,Price|Final Energy|Heat,Price|Final Energy|Industry|Heat,Price|Secondary Energy|Heat,Price|Final Energy|Industry|Chemicals|Heat,,,,,,,,,,1
 elec_CSP,NoReported,,,,,,,,,,,,,,,,,,1
 elec_CSP-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
 elec_CSP_storage,NoReported,,,,,,,,,,,,,,,,,,1
@@ -881,17 +869,12 @@ elec_refined liquids (CC),NoReported,,,,,,,,,,,,,,,,,,1
 elec_refined liquids (CC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
 elec_refined liquids (steam/CT),NoReported,,,,,,,,,,,,,,,,,,1
 elec_refined liquids (steam/CT)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
-elect_td_bld,Price|Final Energy|Residential and Commercial|Electricity,,Price|Final Energy|Residential|Electricity,Price|Final Energy|Commercial|Electricity,,,,,,,,,,,,,,,1
-elect_td_ind,Price|Final Energy|Agriculture|Electricity,,Price|Final Energy|Electricity,Price|Final Energy|Industry|Electricity,Price|Final Energy|Industry|Chemicals|Electricity,Price|Final Energy|Industry|Iron and Steel|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Price|Final Energy|Industry|Other Sector|Electricity,Price|Final Energy|Industry|Pulp and Paper|Electricity,,,,,,,,,,1
-elect_td_trn,Price|Final Energy|Bunkers|Electricity,,Price|Final Energy|Transportation (w/ bunkers)|Electricity,Price|Final Energy|Transportation|Electricity,Price|Final Energy|Transportation|Truck|Electricity,Price|Final Energy|Transportation|Rail|Electricity,Price|Final Energy|Transportation|Passenger|Electricity,Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Price|Final Energy|Transportation|Freight|Electricity,Price|Final Energy|Transportation|Domestic Shipping|Electricity,Price|Final Energy|Transportation|Domestic Aviation|Electricity,Price|Final Energy|Transportation|Bus|Electricity,,,,,,,1
-electricity,Price|Secondary Energy|Electricity,,,,,,,,,,,,,,,,,,1
 electricityDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
 electricity_net_ownuse,NoReported,,,,,,,,,,,,,,,,,,1
 energy net export,NoReported,,,,,,,,,,,,,,,,,,1
 energy service,NoReported,,,,,,,,,,,,,,,,,,1
 food processing,NoReported,,,,,,,,,,,,,,,,,,1
 gas pipeline,NoReported,,,,,,,,,,,,,,,,,,1
-gas processing,Price|Secondary Energy|Gases,,,,,,,,,,,,,,,,,,1
 gas trade statistical differences,NoReported,,,,,,,,,,,,,,,,,,1
 gas trade statistical differencesDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
 geothermal,NoReported,,,,,,,,,,,,,,,,,,1
@@ -966,15 +949,10 @@ process heat cement,NoReported,,,,,,,,,,,,,,,,,,1
 process heat dac,NoReported,,,,,,,,,,,,,,,,,,1
 process heat food processing,NoReported,,,,,,,,,,,,,,,,,,1
 process heat paper,NoReported,,,,,,,,,,,,,,,,,,1
-refined liquids enduse,Price|Final Energy|Bunkers|Liquids,,Price|Final Energy|Transportation (w/ bunkers)|Liquids,Price|Final Energy|Residential and Commercial|Liquids,Price|Final Energy|Residential|Liquids,Price|Final Energy|Commercial|Liquids,Price|Final Energy|Liquids,Price|Final Energy|Transportation|Liquids,Price|Final Energy|Transportation|Truck|Liquids,Price|Final Energy|Transportation|Rail|Liquids,Price|Final Energy|Transportation|Passenger|Liquids,Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Price|Final Energy|Transportation|Freight|Liquids,Price|Final Energy|Transportation|Domestic Shipping|Liquids,Price|Final Energy|Transportation|Domestic Aviation|Liquids,Price|Final Energy|Transportation|Bus|Liquids,,,1
-refined liquids industrial,Price|Final Energy|Agriculture|Liquids,,Price|Final Energy|Industry|Liquids,Price|Final Energy|Industry|Chemicals|Liquids,Price|Final Energy|Industry|Iron and Steel|Liquids,Price|Final Energy|Industry|Other Sector|Liquids,,,,,,,,,,,,,1
-refining,Price|Secondary Energy|Liquids,,,,,,,,,,,,,,,,,,1
 refiningDemand_int,NoReported,,,,,,,,,,,,,,,,,,1
 regional ammonia,NoReported,,,,,,,,,,,,,,,,,,1
 regional beef,NoReported,,,,,,,,,,,,,,,,,,1
-regional biomass,Price|Primary Energy|Biomass,,,,,,,,,,,,,,,,,,1
 regional biomassOil,NoReported,,,,,,,,,,,,,,,,,,1
-regional coal,Price|Primary Energy|Coal,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
 regional corn,NoReported,,,,,,,,,,,,,,,,,,1
 regional corn for ethanol,NoReported,,,,,,,,,,,,,,,,,,1
 regional dairy,NoReported,,,,,,,,,,,,,,,,,,1
@@ -986,9 +964,7 @@ regional iron and steel,NoReported,,,,,,,,,,,,,,,,,,1
 regional iron and steel-tfe,NoReported,,,,,,,,,,,,,,,,,,1
 regional legumes,NoReported,,,,,,,,,,,,,,,,,,1
 regional misccrop,NoReported,,,,,,,,,,,,,,,,,,1
-regional natural gas,Price|Primary Energy|Gas,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
 regional nuts_seeds,NoReported,,,,,,,,,,,,,,,,,,1
-regional oil,Price|Primary Energy|Oil,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
 regional oilcrop,NoReported,,,,,,,,,,,,,,,,,,1
 regional oilpalm,NoReported,,,,,,,,,,,,,,,,,,1
 regional othergrain,NoReported,,,,,,,,,,,,,,,,,,1
@@ -1664,7 +1640,35 @@ water_td_muni_C,NoReported,,,,,,,,,,,,,,,,,,1
 water_td_muni_W,NoReported,,,,,,,,,,,,,,,,,,1
 water_td_pri_C,NoReported,,,,,,,,,,,,,,,,,,1
 water_td_pri_W,NoReported,,,,,,,,,,,,,,,,,,1
-wholesale gas,Price|Final Energy|Agriculture|Gases,,Price|Final Energy|Gases,Price|Final Energy|Industry|Gases,Price|Final Energy|Industry|Chemicals|Ammonia|Gases,Price|Final Energy|Industry|Chemicals|Gases,Price|Final Energy|Industry|Iron and Steel|Gases,Price|Final Energy|Industry|Other Sector|Gases,,,,,,,,,,,1
 wind-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
 woodpulp_energy,NoReported,,,,,,,,,,,,,,,,,,1
 woodpulp_processing,NoReported,,,,,,,,,,,,,,,,,,1
+wind_offshore-trial-supply,NoReported,,,,,,,,,,,,,,,,,,1
+offshore carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+Ukraineoffshore carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+Ukraineonshore carbon-storage,NoReported,,,,,,,,,,,,,,,,,,1
+elect_td_ind,Price|Final Energy|Agriculture|Electricity,,Price|Final Energy|Electricity,Price|Final Energy|Industry|Electricity,Price|Final Energy|Industry|Chemicals|Electricity,Price|Final Energy|Industry|Iron and Steel|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Price|Final Energy|Industry|Other Sector|Electricity,Price|Final Energy|Industry|Pulp and Paper|Electricity,,,,,,,,,,1
+wholesale gas,Price|Final Energy|Agriculture|Gases,,Price|Final Energy|Gases,Price|Final Energy|Industry|Gases,Price|Final Energy|Industry|Chemicals|Ammonia|Gases,Price|Final Energy|Industry|Chemicals|Gases,Price|Final Energy|Industry|Iron and Steel|Gases,Price|Final Energy|Industry|Other Sector|Gases,,,,,,,,,,,1
+district heat,Price|Final Energy|Agriculture|Heat,,Price|Final Energy|Residential and Commercial|Heat,Price|Final Energy|Residential|Heat,Price|Final Energy|Commercial|Heat,Price|Final Energy|Heat,Price|Final Energy|Industry|Heat,Price|Secondary Energy|Heat,Price|Final Energy|Industry|Chemicals|Heat,,,,,,,,,,1
+H2 wholesale delivery,Price|Final Energy|Agriculture|Hydrogen,Price|Final Energy|Hydrogen,,,,,,,,,,,,,,,,,1
+refined liquids industrial,Price|Final Energy|Agriculture|Liquids,,Price|Final Energy|Industry|Liquids,Price|Final Energy|Industry|Chemicals|Liquids,Price|Final Energy|Industry|Iron and Steel|Liquids,Price|Final Energy|Industry|Other Sector|Liquids,,,,,,,,,,,,,1
+delivered biomass,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Biomass,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Biomass,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Biomass,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Biomass,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Biomass,Price|Final Energy|Solids,Price|Final Energy|Solids|Biomass,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Biomass,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Biomass,1
+delivered coal,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Coal,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Coal,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Coal,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Coal,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Coal,Price|Final Energy|Solids,Price|Final Energy|Solids|Coal,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Coal,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Coal,1
+elect_td_trn,Price|Final Energy|Bunkers|Electricity,,Price|Final Energy|Transportation (w/ bunkers)|Electricity,Price|Final Energy|Transportation|Electricity,Price|Final Energy|Transportation|Truck|Electricity,Price|Final Energy|Transportation|Rail|Electricity,Price|Final Energy|Transportation|Passenger|Electricity,Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Price|Final Energy|Transportation|Freight|Electricity,Price|Final Energy|Transportation|Domestic Shipping|Electricity,Price|Final Energy|Transportation|Domestic Aviation|Electricity,Price|Final Energy|Transportation|Bus|Electricity,,,,,,,1
+H2 wholesale dispensing,Price|Final Energy|Bunkers|Hydrogen,Price|Final Energy|Transportation (w/ bunkers)|Hydrogen,Price|Final Energy|Transportation|Passenger|Hydrogen,Price|Final Energy|Transportation|Freight|Hydrogen,Price|Final Energy|Transportation|Domestic Shipping|Hydrogen,Price|Final Energy|Transportation|Domestic Aviation|Hydrogen,Price|Final Energy|Transportation|Rail|Hydrogen,,,,,,,,,,,,1
+refined liquids enduse,Price|Final Energy|Bunkers|Liquids,,Price|Final Energy|Transportation (w/ bunkers)|Liquids,Price|Final Energy|Residential and Commercial|Liquids,Price|Final Energy|Residential|Liquids,Price|Final Energy|Commercial|Liquids,Price|Final Energy|Liquids,Price|Final Energy|Transportation|Liquids,Price|Final Energy|Transportation|Truck|Liquids,Price|Final Energy|Transportation|Rail|Liquids,Price|Final Energy|Transportation|Passenger|Liquids,Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Price|Final Energy|Transportation|Freight|Liquids,Price|Final Energy|Transportation|Domestic Shipping|Liquids,Price|Final Energy|Transportation|Domestic Aviation|Liquids,Price|Final Energy|Transportation|Bus|Liquids,,,1
+H2 industrial,Price|Final Energy|Industry|Hydrogen,Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Price|Final Energy|Industry|Iron and Steel|Hydrogen,Price|Final Energy|Industry|Other Sector|Hydrogen,,,,,,,,,,,,,,,1
+elect_td_bld,Price|Final Energy|Residential and Commercial|Electricity,,Price|Final Energy|Residential|Electricity,Price|Final Energy|Commercial|Electricity,,,,,,,,,,,,,,,1
+delivered gas,Price|Final Energy|Residential and Commercial|Gases,Price|Final Energy|Residential|Gases,Price|Final Energy|Commercial|Gases,Price|Final Energy|Transportation|Gases,Price|Final Energy|Transportation|Bus|Gases,Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,,,,,,,,,,,,,1
+H2 retail delivery,Price|Final Energy|Residential and Commercial|Hydrogen,Price|Final Energy|Residential|Hydrogen,Price|Final Energy|Commercial|Hydrogen,,,,,,,,,,,,,,,,1
+H2 retail dispensing,Price|Final Energy|Transportation|Hydrogen,Price|Final Energy|Transportation|Bus|Hydrogen,Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Price|Final Energy|Transportation|Truck|Hydrogen,,,,,,,,,,,,,,,1
+regional biomass,Price|Primary Energy|Biomass,,,,,,,,,,,,,,,,,,1
+regional coal,Price|Primary Energy|Coal,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+regional natural gas,Price|Primary Energy|Gas,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+regional oil,Price|Primary Energy|Oil,,Price|Primary Energy|Fossil,,,,,,,,,,,,,,,,1
+electricity,Price|Secondary Energy|Electricity,,,,,,,,,,,,,,,,,,1
+gas processing,Price|Secondary Energy|Gases,,,,,,,,,,,,,,,,,,1
+H2 central production,Price|Secondary Energy|Hydrogen,,,,,,,,,,,,,,,,,,1
+refining,Price|Secondary Energy|Liquids,,,,,,,,,,,,,,,,,,1
+biomass,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Biomass,,,,,,,,,,,,,,,,,1
+coal,Price|Secondary Energy|Solids,Price|Secondary Energy|Solids|Coal,,,,,,,,,,,,,,,,,1
