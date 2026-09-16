@@ -336,7 +336,7 @@ create_project <- function(db_path, db_name, prj_name, scenarios = NULL,
       value = rep(NA, l)
     )
     prj_tmp <- rgcam::addQueryTable(
-      project = prj_name, qdata = dt,
+      project = prj_name, qdata = dt, saveProj = F,
       queryname = "CO2 prices", clobber = TRUE
     )
     if (!is.null(prj)) {

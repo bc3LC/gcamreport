@@ -192,6 +192,120 @@
 
    <aQuery>
       <all-regions />
+      <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
+                <axis1 name="fuel">input[@name]</axis1>
+                <axis2 name="Year">demand-physical[@vintage]</axis2>
+                <xPath buildList="true" dataName="input" group="false" sumAll="false"><![CDATA[
+                     
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='electricity' or @name='elect_td_bld' or @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or starts-with(@name,'elec_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from building energy use :)
+					 	 	 	local:get-primary-renewable($currTree/*[@type='sector' (: collapse :) and (@name='comm heating EUR' or starts-with(@name,'resid heating modern EUR_') or starts-with(@name,'resid hot water modern EUR_'))]//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::*[@type='input']/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy((:scenarios:), (:regions:), (:collection:))
+                 
+            
+                ]]></xPath>
+                <comments/>
+                <labelRewriteList append-values="false">
+                    <level name="input">
+                        <rewrite from="water_td_pri_C" to=""/>
+                        <rewrite from="H2 industrial" to=""/>
+                        <rewrite from="traded RUS pipeline gas" to="b natural gas"/>
+                        <rewrite from="traditional biomass" to="j traditional biomass"/>
+                        <rewrite from="regional corn for ethanol" to="d biomass"/>
+                        <rewrite from="regional biomassOil" to="d biomass"/>
+                        <rewrite from="traded N.Amer pipeline gas" to="b natural gas"/>
+                        <rewrite from="traded LNG" to="b natural gas"/>
+                        <rewrite from="traded coal" to="c coal"/>
+                        <rewrite from="solar-elect" to="h solar"/>
+                        <rewrite from="woodpulp_energy" to="d biomass"/>
+                        <rewrite from="seawater" to=""/>
+                        <rewrite from="elect_td_ind" to=""/>
+                        <rewrite from="traded EUR pipeline gas" to="b natural gas"/>
+                        <rewrite from="water_td_pri_W" to=""/>
+                        <rewrite from="total biomass" to="d biomass"/>
+                        <rewrite from="nuclear-H2" to="e nuclear"/>
+                        <rewrite from="traded oil" to="a oil"/>
+                        <rewrite from="k new" to="k new"/>
+                        <rewrite from="exotic-elect" to="j breakthrough"/>
+                        <rewrite from="wind-H2" to="g wind"/>
+                        <rewrite from="biomass" to="d biomass"/>
+                        <rewrite from="elect_td_en" to=""/>
+                        <rewrite from="crude oil" to="a oil"/>
+                        <rewrite from="nuclear-elect" to="e nuclear"/>
+                        <rewrite from="solar-H2" to="h solar"/>
+                        <rewrite from="regional natural gas" to=""/>
+                        <rewrite from="traded unconventional oil" to="a oil"/>
+                        <rewrite from="traded PAC pipeline gas" to="b natural gas"/>
+                        <rewrite from="geothermal-elect" to="i geothermal"/>
+                        <rewrite from="traded Afr_MidE pipeline gas" to="b natural gas"/>
+                        <rewrite from="natural gas" to="b natural gas"/>
+                        <rewrite from="wholesale gas" to=""/>
+                        <rewrite from="traded natural gas" to="b natural gas"/>
+                        <rewrite from="hydro-elect" to="f hydro"/>
+                        <rewrite from="gas pipeline" to=""/>
+                        <rewrite from="regional biomass" to="d biomass"/>
+                        <rewrite from="coal" to="c coal"/>
+                        <rewrite from="wind-elect" to="g wind"/>
+                        <rewrite from="traded LA pipeline gas" to="b natural gas"/>
+                    </level>
+                </labelRewriteList>
+            </supplyDemandQuery>
+   </aQuery>
+
+   <aQuery>
+      <all-regions />
       <supplyDemandQuery title="primary energy consumption with CCS by region (direct equivalent)">
          <axis1 name="fuel">input[@name]</axis1>
          <axis2 name="Year">demand-physical[@vintage]</axis2>
