@@ -670,7 +670,7 @@ local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
                         @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
                         @name='elect_td_bld' or @name='industrial energy use')]/
                         *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
-                        *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
+                        *[@type='output' and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
                         @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
                         physical-output/node()</xPath>
          <comments/>
