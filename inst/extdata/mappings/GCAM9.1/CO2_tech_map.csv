@@ -250,10 +250,10 @@ refining,biomass liquids,corn ethanol,Emissions|CO2,Emissions|CO2|Energy and Ind
 refining,coal to liquids,coal to liquids,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Liquids,,,,,3.666667
 refining,gas to liquids,gas to liquids,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Liquids,,,,,3.666667
 refining,oil refining,oil refining,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Liquids,,,,,3.666667
-regional biomass,regional biomass,regional biomass,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
-regional biomassOil,regional biomassOil,OilCrop,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
-regional biomassOil,regional biomassOil,Soybean,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
-regional biomassOil,regional biomassOil,OilPalm,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
+regional biomass,regional biomass,regional biomass,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Biomass,,,,,3.666667
+regional biomassOil,regional biomassOil,OilCrop,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Biomass,,,,,3.666667
+regional biomassOil,regional biomassOil,Soybean,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Biomass,,,,,3.666667
+regional biomassOil,regional biomassOil,OilPalm,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Biomass,,,,,3.666667
 regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
 regional sugar for ethanol,regional sugar for ethanol,regional sugar for ethanol,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
 regional woodpulp for energy,regional woodpulp for energy,regional woodpulp for energy,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Demand,Emissions|CO2|Energy|Demand|Industry,Emissions|CO2|Energy|Demand|Industry|Other Sector,,,,3.666667
