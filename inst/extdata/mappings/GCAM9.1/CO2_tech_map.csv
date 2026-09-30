@@ -81,7 +81,7 @@ construction feedstocks,,,Emissions|CO2,Emissions|CO2|Energy and Industrial Proc
 construction feedstocks,refined liquids,refined liquids,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Demand,Emissions|CO2|Energy|Demand|Industry,Emissions|CO2|Energy|Demand|Industry|Other Sector,,,,3.666667
 csp_backup,gas,CSP gas hybrid mode,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,,3.666667
 csp_backup,,,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,,3.666667
-delivered biomass,,,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Solids,Emissions|CO2|Energy|Supply|Solids|Biomass,,,,3.666667
+delivered biomass,,,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,,,,,,3.666667
 delivered gas,,,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,,3.666667
 delivered gas h2,delivered gas h2,delivered gas h2,Emissions|CO2,Emissions|CO2|Energy and Industrial Processes,Emissions|CO2|Energy,Emissions|CO2|Energy|Supply,Emissions|CO2|Energy|Supply|Gases,,,,,3.666667
 desalinated water,direct ocean capture,direct ocean capture (co-located with desal),Emissions|CO2,Emissions|CO2|Other Capture and Removal,,,,,,,,3.666667
