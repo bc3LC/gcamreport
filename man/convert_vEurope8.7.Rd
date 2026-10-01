@@ -5,7 +5,7 @@
 \alias{convert_vEurope8.7}
 \title{convert_vEurope8.7}
 \format{
-An object of class \code{list} of length 16.
+An object of class \code{list} of length 18.
 }
 \usage{
 convert_vEurope8.7
