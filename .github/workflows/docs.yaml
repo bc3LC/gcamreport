@@ -6,8 +6,6 @@ on:
       - gcam-core
       - gcam-iamcompact
       - dev
-  pull_request:
-      branches: [ '**' ]
 
 jobs:
   pkgdown:

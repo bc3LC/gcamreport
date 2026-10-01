@@ -1,0 +1,4 @@
+# Iron and Steel
+sector,var,unit_conv
+regional iron and steel,Import|Industry|Steel|Value,1
+traded iron and steel,Export|Industry|Steel|Value,1

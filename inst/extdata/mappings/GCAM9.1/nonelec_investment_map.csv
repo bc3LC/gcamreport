@@ -1,0 +1,25 @@
+# Mapping from GCAM sector/subsector/technology to IAMC Investment variable names
+# Used by get_nonelec_investment() to convert "capital investment demands by tech" query output
+# var1=parent sector aggregate,var2=sector aggregate, var3=fuel aggregate, var4=fuel+CCS detail, var5=CCS cross-cutting aggregate
+sector,subsector,technology,var1,var2,var3,var4,var5
+H2 central production,biomass,biomass to H2,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Biomass,Investment|Energy Supply|Hydrogen|Biomass|w/o CCS,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,biomass,biomass to H2 CCS,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Biomass,Investment|Energy Supply|Hydrogen|Biomass|w/ CCS,Investment|Energy Supply|Hydrogen|w/ CCS
+H2 central production,coal,coal chemical,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Coal,Investment|Energy Supply|Hydrogen|Coal|w/o CCS,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,coal,coal chemical CCS,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Coal,Investment|Energy Supply|Hydrogen|Coal|w/ CCS,Investment|Energy Supply|Hydrogen|w/ CCS
+H2 central production,gas,natural gas steam reforming,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Gas,Investment|Energy Supply|Hydrogen|Gas|w/o CCS,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,gas,gas ATR CCS,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Gas,Investment|Energy Supply|Hydrogen|Gas|w/ CCS,Investment|Energy Supply|Hydrogen|w/ CCS
+H2 central production,electricity,electrolysis,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Electricity,,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,nuclear,electrolysis,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Electricity,,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,solar,electrolysis,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Electricity,,Investment|Energy Supply|Hydrogen|w/o CCS
+H2 central production,wind,electrolysis,Investment|Energy Supply,Investment|Energy Supply|Hydrogen,Investment|Energy Supply|Hydrogen|Electricity,,Investment|Energy Supply|Hydrogen|w/o CCS
+refining,oil refining,oil refining,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Oil,,Investment|Energy Supply|Liquids|w/o CCS
+refining,biomass liquids,FT biofuels,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Biomass,Investment|Energy Supply|Liquids|Biomass|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,biomass liquids,biodiesel,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Biomass,Investment|Energy Supply|Liquids|Biomass|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,biomass liquids,corn ethanol,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Biomass,Investment|Energy Supply|Liquids|Biomass|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,biomass liquids,cellulosic ethanol,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Biomass,Investment|Energy Supply|Liquids|Biomass|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,biomass liquids,BTL with hydrogen,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Biomass,Investment|Energy Supply|Liquids|Biomass|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,coal to liquids,coal to liquids,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Coal,Investment|Energy Supply|Liquids|Coal|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+refining,gas to liquids,gas to liquids,Investment|Energy Supply,Investment|Energy Supply|Liquids,Investment|Energy Supply|Liquids|Gas,Investment|Energy Supply|Liquids|Gas|w/o CCS,Investment|Energy Supply|Liquids|w/o CCS
+gas processing,natural gas,natural gas,Investment|Energy Supply,Investment|Energy Supply|Gases,Investment|Energy Supply|Gases|Gas,Investment|Energy Supply|Gases|Gas|w/o CCS,Investment|Energy Supply|Gases|w/o CCS
+gas processing,biomass gasification,biomass gasification,Investment|Energy Supply,Investment|Energy Supply|Gases,Investment|Energy Supply|Gases|Biomass,Investment|Energy Supply|Gases|Biomass|w/o CCS,Investment|Energy Supply|Gases|w/o CCS
+gas processing,coal gasification,coal gasification,Investment|Energy Supply,Investment|Energy Supply|Gases,Investment|Energy Supply|Gases|Coal,Investment|Energy Supply|Gases|Coal|w/o CCS,Investment|Energy Supply|Gases|w/o CCS

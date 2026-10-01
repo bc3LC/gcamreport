@@ -1,0 +1,25 @@
+# Agricultural traded items
+sector,var1,var2,var3,var4,var5,unit_conv
+traded beef,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Ruminant,Trade|Agriculture|Livestock|Ruminant|Meat,,1
+traded corn,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Cereals,,,1
+traded dairy,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Ruminant,Trade|Agriculture|Livestock|Ruminant|Dairy,,1
+traded fibercrop,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded fruits,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded industrial_roundwood,Trade|Forestry,Trade|Forestry|Roundwood,Trade|Forestry|Roundwood|Industrial Roundwood,,,1
+traded sawnwood,NoReported,,,,,1
+traded iron and steel,NoReported,,,,,1
+traded legumes,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded misccrop,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded nuts_seeds,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded oilcrop,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Oil Crops,,,1
+traded oilpalm,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Oil Crops,,,1
+traded othergrain,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Cereals,,,1
+traded pork,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Non-Ruminant,Trade|Agriculture|Livestock|Non-Ruminant|Meat,Trade|Agriculture|Livestock|Non-Ruminant|Meat|Pig,1
+traded poultry,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Non-Ruminant,Trade|Agriculture|Livestock|Non-Ruminant|Meat,Trade|Agriculture|Livestock|Non-Ruminant|Meat|Poultry,1
+traded rice,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Cereals,,,1
+traded root_tuber,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded sheepgoat,Trade|Agriculture,Trade|Agriculture|Livestock,Trade|Agriculture|Livestock|Ruminant,Trade|Agriculture|Livestock|Ruminant|Meat,,1
+traded soybean,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Oil Crops,,,1
+traded sugarcrop,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Sugar Crops,,,1
+traded vegetables,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Other Crops,,,1
+traded wheat,Trade|Agriculture,Trade|Agriculture|Crops,Trade|Agriculture|Crops|Cereals,,,1

@@ -932,6 +932,10 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = '
     data <- assign("data", get(load(data_path)))
   }
 
+  # make the requested GCAM version visible to the Shiny server/UI code, which
+  # looks up the bare global `GCAM_version` (e.g. reset_first_load(), server.R)
+  GCAM_version <<- GCAM_version
+
   # define the dataset for launching the ui
   sdata <<- suppressWarnings(
     data %>%

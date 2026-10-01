@@ -270,3 +270,8 @@ queries_*
 *.txt
 /LULUCF_interpreter_GCAM_ScenMIP
 *.zip
+
+# [Commit #90 changed files ]
+!inst/extdata/queries/GCAM9.1/queries_gcamreport_*.xml
+!tests/testthat/testInputs/v_9.1/*.dat
+!data/queries_*.rda

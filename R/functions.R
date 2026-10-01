@@ -134,6 +134,30 @@ check_inf <- function(dataset, value_var_name = 'value', dataset_name = NULL) {
 }
 
 
+#' harmonize_trn_service_units
+#'
+#' An internal function that expresses transport service output in million pass-km
+#' and million ton-km. GCAM v9.1 reports transport service in billion km while
+#' earlier versions report it in million km, so billion rows are rescaled and relabeled.
+#'
+#' @param dataset Transport service query result containing `value` and `Units` columns.
+#' @return Dataset with transport service values in million pass-km / million ton-km.
+#' @keywords internal
+harmonize_trn_service_units <- function(dataset) {
+  Units <- value <- NULL
+
+  if (!"Units" %in% names(dataset)) return(dataset)
+
+  dataset %>%
+    dplyr::mutate(
+      is_billion = grepl("^billion ", Units),
+      value = dplyr::if_else(is_billion, value * 1000, value),
+      Units = dplyr::if_else(is_billion, sub("^billion ", "million ", Units), Units)
+    ) %>%
+    dplyr::select(-is_billion)
+}
+
+
 #' check_queries
 #'
 #' An internal function designed to assess if all the necessary queries to compute
@@ -4336,6 +4360,7 @@ get_energy_service_transportation <- function(GCAM_version = 'v8.2') {
   energy_service_transportation <-
     check_inf(rgcam::getQuery(prj, "transport service output by tech and vintage"),
               dataset_name = "transport service output by tech and vintage") %>%
+    harmonize_trn_service_units() %>%
     tidyr::separate(technology, into = c("technology", NA), sep = ",year") %>%
     dplyr::group_by(dplyr::across(-value)) %>%
     dplyr::summarise(value = sum(value), .groups = 'drop') %>%
@@ -5026,7 +5051,6 @@ get_gov_revenue <- function(GCAM_version = 'v8.2') {
   check_queries("gov_revenue_clean", GCAM_version)
 
   gov_revenue_clean <-
-    gov_revenue_sector <-
     co2_emiss %>%
     dplyr::mutate(
       sector = ifelse(var == "Emissions|CO2|Energy|Demand|Industry", "Carbon|Demand|Industry", NA),
@@ -6428,6 +6452,7 @@ get_transport_sales <- function(GCAM_version = 'v8.2') {
   # get transport service
   trn_serv <- check_inf(rgcam::getQuery(prj, "transport service output by tech and vintage"),
                         dataset_name = "transport service output by tech and vintage") %>%
+    harmonize_trn_service_units() %>%
     tidyr::separate(technology, into = c("technology", "vintage"), sep = ",") %>%
     dplyr::mutate(vintage = as.integer(sub("year=", "", vintage))) %>%
     dplyr::filter(vintage <= year) %>%    ##Only vintages from the model year or before will be in existence
@@ -6546,6 +6571,7 @@ get_transport_stock <- function(GCAM_version = 'v8.2') {
   # get transport service
   trn_serv <- check_inf(rgcam::getQuery(prj, "transport service output by tech and vintage"),
                         dataset_name = "transport service output by tech and vintage") %>%
+    harmonize_trn_service_units() %>%
     tidyr::separate(technology, into = c("technology", "vintage"), sep = ",") %>%
     dplyr::mutate(vintage = as.integer(sub("year=", "", vintage))) %>%
     dplyr::filter(vintage <= year) %>%    ##Only vintages from the model year or before will be in existence
@@ -6724,36 +6750,33 @@ do_bind_results <- function(GCAM_version = 'v8.2', all_tier1 = F) {
     dplyr::filter(!is.na(Region)) %>%
     dplyr::filter(Variable %in% unique(get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Variable']]))
 
-  # Add "Other" category when variables present as reportable (Internal_variable column not empty in the template)
-  missing_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
-    dplyr::filter(!Variable %in% unique(report$Variable),
-                  grepl('Other', Variable),
-                  !is.na(Internal_variable))
-  year_cols <- names(report)[sapply(names(report), function(x) grepl("^\\d{4}$", x))]
-  zero_df <- as.data.frame(matrix(0, nrow = 1, ncol = length(year_cols)))
-  year_cols -> colnames(zero_df)
-
-  report <- report %>%
-    rbind(missing_var %>%
-            dplyr::distinct(Variable, Unit) %>%
-            dplyr::mutate(Model = unique(report$Model)[1],
-                          Scenario = unique(report$Scenario)[1],
-                          Region = unique(report$Region)[1]) %>%
-            tidyr::complete(tidyr::nesting(Variable, Unit),
-                            Model = unique(report$Model),
-                            Scenario = unique(report$Scenario),
-                            Region = unique(report$Region)) %>%
-            cbind(zero_df))
-
-  # Filter user selected variables
-  if (!(length(desired_variables.global) == 1 && desired_variables.global == "All")) {
-    report <- report %>%
-      dplyr::filter(Variable %in% desired_variables.global)
-  }
 
   # Add all Tier 1 variables; if not present, set them as 0. Set also to 0 the
   # missing region-variable combinations
   if (all_tier1) {
+    # Add "Other" category when variables present as reportable (Internal_variable column not empty in the template)
+    missing_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+      dplyr::filter(!Variable %in% unique(report$Variable),
+                    grepl('Other', Variable),
+                    !is.na(Internal_variable))
+    year_cols <- names(report)[sapply(names(report), function(x) grepl("^\\d{4}$", x))]
+    zero_df <- as.data.frame(matrix(0, nrow = 1, ncol = length(year_cols)))
+    year_cols -> colnames(zero_df)
+
+    report <- report %>%
+      rbind(missing_var %>%
+              dplyr::distinct(Variable, Unit) %>%
+              dplyr::mutate(Model = unique(report$Model)[1],
+                            Scenario = unique(report$Scenario)[1],
+                            Region = unique(report$Region)[1]) %>%
+              tidyr::complete(tidyr::nesting(Variable, Unit),
+                              Model = unique(report$Model),
+                              Scenario = unique(report$Scenario),
+                              Region = unique(report$Region)) %>%
+              cbind(zero_df))
+
+
+    # Add other Tier1 variables
     tier1_variables <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
       # only Tier 1 variables
       dplyr::filter(Tier == 1)
@@ -6797,7 +6820,13 @@ do_bind_results <- function(GCAM_version = 'v8.2', all_tier1 = F) {
       report <- report_complete
 
     }
+
+  # Filter user selected variables
+  } else if (!(length(desired_variables.global) == 1 && desired_variables.global == "All")) {
+    report <- report %>%
+      dplyr::filter(Variable %in% desired_variables.global)
   }
+
 
 
   report <<- report

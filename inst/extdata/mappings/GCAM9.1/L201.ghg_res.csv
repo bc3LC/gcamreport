@@ -1,0 +1,2307 @@
+# Take GHG emissions for the energy system, filter to include only resources
+# in model base years, and rename to regional SO2
+region,resource,subresource,technology,year,Non.CO2,emiss.coef,emiss.units
+USA,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+USA,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+USA,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+USA,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+USA,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+USA,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+USA,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+USA,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Africa_Eastern,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Africa_Northern,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Africa_Southern,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Africa_Western,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Africa_Western,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Australia_NZ,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Brazil,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Brazil,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,1975,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,1990,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2005,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2010,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2015,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2021,CH4,0.02033,Tg
+Canada,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.04819090909,MTC
+Canada,crude oil,unconventional oil,unconventional oil,1975,N2O,9.112e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,1990,N2O,9.112e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2005,N2O,9.112e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2010,N2O,9.112e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2015,N2O,9.112e-07,Tg
+Canada,crude oil,unconventional oil,unconventional oil,2021,N2O,9.112e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Central America and Caribbean,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Central Asia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Central Asia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+China,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+China,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+China,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+EU-12,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+EU-12,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+EU-15,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+EU-15,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Ukraine,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Ukraine,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Europe_Non_EU,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+European Free Trade Association,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+India,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+India,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+India,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Indonesia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Indonesia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Japan,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Japan,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Japan,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Mexico,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Mexico,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Middle East,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Middle East,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Pakistan,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Pakistan,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Russia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Russia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Russia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+South Africa,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+South Africa,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,1975,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,1990,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2005,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2010,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2015,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2021,CH4,0.02033,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.04819090909,MTC
+South America_Northern,crude oil,unconventional oil,unconventional oil,1975,N2O,9.112e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,1990,N2O,9.112e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2005,N2O,9.112e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2010,N2O,9.112e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2015,N2O,9.112e-07,Tg
+South America_Northern,crude oil,unconventional oil,unconventional oil,2021,N2O,9.112e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+South America_Southern,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+South America_Southern,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+South Asia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+South Asia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+South Korea,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+South Korea,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Southeast Asia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Taiwan,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Taiwan,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Argentina,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Argentina,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,1975,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,1990,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2005,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2010,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2015,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2021,CH4,0.0882,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,1975,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,1990,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,2005,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,2010,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,2015,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,2021,CO2_FUG,0.08719090909,MTC
+Colombia,crude oil,unconventional oil,unconventional oil,1975,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,1990,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2005,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2010,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2015,N2O,9.39e-07,Tg
+Colombia,crude oil,unconventional oil,unconventional oil,2021,N2O,9.39e-07,Tg
+USA,coal,coal,coal,1975,CH4,0.2094890974,Tg
+USA,coal,coal,coal,1975,CO2_FUG,0.4874918322,MTC
+USA,coal,coal,coal,1975,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,1975,CH4,0.2556082505,Tg
+USA,crude oil,crude oil,crude oil,1975,CO2_FUG,0.2948694416,MTC
+USA,crude oil,crude oil,crude oil,1975,N2O,3.685143726e-06,Tg
+USA,natural gas,natural gas,natural gas,1975,CH4,0.2556082505,Tg
+USA,natural gas,natural gas,natural gas,1975,CO2_FUG,0.2948694416,MTC
+USA,natural gas,natural gas,natural gas,1975,N2O,3.685143726e-06,Tg
+USA,coal,coal,coal,1990,CH4,0.1851313787,Tg
+USA,coal,coal,coal,1990,CO2_FUG,0.3186526346,MTC
+USA,coal,coal,coal,1990,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,1990,CH4,0.2756601238,Tg
+USA,crude oil,crude oil,crude oil,1990,CO2_FUG,0.318001264,MTC
+USA,crude oil,crude oil,crude oil,1990,N2O,3.974234688e-06,Tg
+USA,natural gas,natural gas,natural gas,1990,CH4,0.2756601238,Tg
+USA,natural gas,natural gas,natural gas,1990,CO2_FUG,0.318001264,MTC
+USA,natural gas,natural gas,natural gas,1990,N2O,3.974234688e-06,Tg
+USA,coal,coal,coal,2005,CH4,0.1198405733,Tg
+USA,coal,coal,coal,2005,CO2_FUG,0.2187174823,MTC
+USA,coal,coal,coal,2005,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,2005,CH4,0.3006388018,Tg
+USA,crude oil,crude oil,crude oil,2005,CO2_FUG,0.3227367493,MTC
+USA,crude oil,crude oil,crude oil,2005,N2O,5.3449412e-06,Tg
+USA,natural gas,natural gas,natural gas,2005,CH4,0.3006388018,Tg
+USA,natural gas,natural gas,natural gas,2005,CO2_FUG,0.3227367493,MTC
+USA,natural gas,natural gas,natural gas,2005,N2O,5.3449412e-06,Tg
+USA,coal,coal,coal,2010,CH4,0.16229552,Tg
+USA,coal,coal,coal,2010,CO2_FUG,0.2273036368,MTC
+USA,coal,coal,coal,2010,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,2010,CH4,0.2596954377,Tg
+USA,crude oil,crude oil,crude oil,2010,CO2_FUG,0.3134823374,MTC
+USA,crude oil,crude oil,crude oil,2010,N2O,5.238766268e-06,Tg
+USA,natural gas,natural gas,natural gas,2010,CH4,0.2596954377,Tg
+USA,natural gas,natural gas,natural gas,2010,CO2_FUG,0.3134823374,MTC
+USA,natural gas,natural gas,natural gas,2010,N2O,5.238766268e-06,Tg
+USA,coal,coal,coal,2015,CH4,0.1512919566,Tg
+USA,coal,coal,coal,2015,CO2_FUG,0.3477708216,MTC
+USA,coal,coal,coal,2015,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,2015,CH4,0.2348910196,Tg
+USA,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3284919687,MTC
+USA,crude oil,crude oil,crude oil,2015,N2O,4.825242064e-06,Tg
+USA,natural gas,natural gas,natural gas,2015,CH4,0.2348910196,Tg
+USA,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3284919687,MTC
+USA,natural gas,natural gas,natural gas,2015,N2O,4.825242064e-06,Tg
+USA,coal,coal,coal,2021,CH4,0.1585610519,Tg
+USA,coal,coal,coal,2021,CO2_FUG,0.3697860963,MTC
+USA,coal,coal,coal,2021,N2O,0,Tg
+USA,crude oil,crude oil,crude oil,2021,CH4,0.1775263299,Tg
+USA,crude oil,crude oil,crude oil,2021,CO2_FUG,0.2755113708,MTC
+USA,crude oil,crude oil,crude oil,2021,N2O,3.59994184e-06,Tg
+USA,natural gas,natural gas,natural gas,2021,CH4,0.1775263299,Tg
+USA,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2755113708,MTC
+USA,natural gas,natural gas,natural gas,2021,N2O,3.59994184e-06,Tg
+Africa_Eastern,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Africa_Eastern,coal,coal,coal,1975,CO2_FUG,1.245093454,MTC
+Africa_Eastern,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,1975,CH4,0.3357078142,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4768641847,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,1975,N2O,2.714461555e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,1975,CH4,0.3548284482,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,1975,N2O,1.591344855e-05,Tg
+Africa_Eastern,coal,coal,coal,1990,CH4,0.3298866461,Tg
+Africa_Eastern,coal,coal,coal,1990,CO2_FUG,0,MTC
+Africa_Eastern,coal,coal,coal,1990,N2O,5.361541866e-07,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,1990,CH4,0.3788745976,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3265117344,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,1990,N2O,1.752284462e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,1990,CH4,0.3893016102,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,1990,CO2_FUG,0.3189809136,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,1990,N2O,1.389235051e-05,Tg
+Africa_Eastern,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Africa_Eastern,coal,coal,coal,2005,CO2_FUG,0,MTC
+Africa_Eastern,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2005,CH4,0.09926733172,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2067458296,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,2005,N2O,1.133530315e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2005,CH4,0.3558697797,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2830269973,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,2005,N2O,1.051819443e-05,Tg
+Africa_Eastern,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Africa_Eastern,coal,coal,coal,2010,CO2_FUG,0.06885792498,MTC
+Africa_Eastern,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2010,CH4,0.09845665817,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1949192595,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,2010,N2O,1.076466532e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2010,CH4,0.09845665817,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1949192595,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,2010,N2O,1.076466532e-05,Tg
+Africa_Eastern,coal,coal,coal,2015,CH4,0.214307434,Tg
+Africa_Eastern,coal,coal,coal,2015,CO2_FUG,0,MTC
+Africa_Eastern,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2015,CH4,0.08533319505,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2015,CO2_FUG,0.457416457,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,2015,N2O,2.392077412e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2015,CH4,0.08533319505,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2015,CO2_FUG,0.457416457,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,2015,N2O,2.392077412e-05,Tg
+Africa_Eastern,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Africa_Eastern,coal,coal,coal,2021,CO2_FUG,0.008435626685,MTC
+Africa_Eastern,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2021,CH4,0.09662483828,Tg
+Africa_Eastern,crude oil,crude oil,crude oil,2021,CO2_FUG,0.2593854505,MTC
+Africa_Eastern,crude oil,crude oil,crude oil,2021,N2O,1.999706925e-05,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2021,CH4,0.09662483828,Tg
+Africa_Eastern,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2593854505,MTC
+Africa_Eastern,natural gas,natural gas,natural gas,2021,N2O,1.999706925e-05,Tg
+Africa_Northern,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Africa_Northern,coal,coal,coal,1975,CO2_FUG,0.5773899209,MTC
+Africa_Northern,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Africa_Northern,crude oil,crude oil,crude oil,1975,CH4,1.649881992,Tg
+Africa_Northern,crude oil,crude oil,crude oil,1975,CO2_FUG,1.370964197,MTC
+Africa_Northern,crude oil,crude oil,crude oil,1975,N2O,6.999232253e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,1975,CH4,1.649881992,Tg
+Africa_Northern,natural gas,natural gas,natural gas,1975,CO2_FUG,1.370964197,MTC
+Africa_Northern,natural gas,natural gas,natural gas,1975,N2O,6.999232253e-05,Tg
+Africa_Northern,coal,coal,coal,1990,CH4,0.3298866461,Tg
+Africa_Northern,coal,coal,coal,1990,CO2_FUG,8.34562076,MTC
+Africa_Northern,coal,coal,coal,1990,N2O,5.361541866e-07,Tg
+Africa_Northern,crude oil,crude oil,crude oil,1990,CH4,0.7822557333,Tg
+Africa_Northern,crude oil,crude oil,crude oil,1990,CO2_FUG,0.660862509,MTC
+Africa_Northern,crude oil,crude oil,crude oil,1990,N2O,3.407404264e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,1990,CH4,0.7822557333,Tg
+Africa_Northern,natural gas,natural gas,natural gas,1990,CO2_FUG,0.660862509,MTC
+Africa_Northern,natural gas,natural gas,natural gas,1990,N2O,3.407404264e-05,Tg
+Africa_Northern,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Africa_Northern,coal,coal,coal,2005,CO2_FUG,0.5606894241,MTC
+Africa_Northern,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2005,CH4,0.68410574,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2005,CO2_FUG,0.474349822,MTC
+Africa_Northern,crude oil,crude oil,crude oil,2005,N2O,2.45261347e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2005,CH4,0.68410574,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2005,CO2_FUG,0.474349822,MTC
+Africa_Northern,natural gas,natural gas,natural gas,2005,N2O,2.45261347e-05,Tg
+Africa_Northern,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Africa_Northern,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Africa_Northern,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2010,CH4,0.5738534855,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2010,CO2_FUG,0.4207844562,MTC
+Africa_Northern,crude oil,crude oil,crude oil,2010,N2O,2.180159753e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2010,CH4,0.5738534855,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2010,CO2_FUG,0.4207844562,MTC
+Africa_Northern,natural gas,natural gas,natural gas,2010,N2O,2.180159753e-05,Tg
+Africa_Northern,coal,coal,coal,2015,CH4,0.214307434,Tg
+Africa_Northern,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Africa_Northern,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2015,CH4,0.4909893946,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2015,CO2_FUG,0.7698905588,MTC
+Africa_Northern,crude oil,crude oil,crude oil,2015,N2O,3.92944011e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2015,CH4,0.4909893946,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2015,CO2_FUG,0.7698905588,MTC
+Africa_Northern,natural gas,natural gas,natural gas,2015,N2O,3.92944011e-05,Tg
+Africa_Northern,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Africa_Northern,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+Africa_Northern,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2021,CH4,0.4076247975,Tg
+Africa_Northern,crude oil,crude oil,crude oil,2021,CO2_FUG,0.6683011993,MTC
+Africa_Northern,crude oil,crude oil,crude oil,2021,N2O,3.31047993e-05,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2021,CH4,0.4076247975,Tg
+Africa_Northern,natural gas,natural gas,natural gas,2021,CO2_FUG,0.6683011993,MTC
+Africa_Northern,natural gas,natural gas,natural gas,2021,N2O,3.31047993e-05,Tg
+Africa_Southern,coal,coal,coal,1975,CH4,2.021387963,Tg
+Africa_Southern,coal,coal,coal,1975,CO2_FUG,1.318596177,MTC
+Africa_Southern,coal,coal,coal,1975,N2O,0.002232847862,Tg
+Africa_Southern,crude oil,crude oil,crude oil,1975,CH4,0.4135566573,Tg
+Africa_Southern,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4768641847,MTC
+Africa_Southern,crude oil,crude oil,crude oil,1975,N2O,0.0003540682782,Tg
+Africa_Southern,natural gas,natural gas,natural gas,1975,CH4,0.4135566573,Tg
+Africa_Southern,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+Africa_Southern,natural gas,natural gas,natural gas,1975,N2O,0.0003540682782,Tg
+Africa_Southern,coal,coal,coal,1990,CH4,1.521732461,Tg
+Africa_Southern,coal,coal,coal,1990,CO2_FUG,0.04747589675,MTC
+Africa_Southern,coal,coal,coal,1990,N2O,0.001659083493,Tg
+Africa_Southern,crude oil,crude oil,crude oil,1990,CH4,0.4049097557,Tg
+Africa_Southern,crude oil,crude oil,crude oil,1990,CO2_FUG,1.922678112,MTC
+Africa_Southern,crude oil,crude oil,crude oil,1990,N2O,9.789949717e-05,Tg
+Africa_Southern,natural gas,natural gas,natural gas,1990,CH4,0.4049097557,Tg
+Africa_Southern,natural gas,natural gas,natural gas,1990,CO2_FUG,1.922678112,MTC
+Africa_Southern,natural gas,natural gas,natural gas,1990,N2O,9.789949717e-05,Tg
+Africa_Southern,coal,coal,coal,2005,CH4,2.976805635,Tg
+Africa_Southern,coal,coal,coal,2005,CO2_FUG,0.9593303065,MTC
+Africa_Southern,coal,coal,coal,2005,N2O,0.003548778791,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2005,CH4,0.4440995283,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2005,CO2_FUG,0.8830708739,MTC
+Africa_Southern,crude oil,crude oil,crude oil,2005,N2O,4.542500099e-05,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2005,CH4,0.4440995283,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2005,CO2_FUG,0.8830708739,MTC
+Africa_Southern,natural gas,natural gas,natural gas,2005,N2O,4.542500099e-05,Tg
+Africa_Southern,coal,coal,coal,2010,CH4,4.136516474,Tg
+Africa_Southern,coal,coal,coal,2010,CO2_FUG,0.5066000271,MTC
+Africa_Southern,coal,coal,coal,2010,N2O,0.005067791443,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2010,CH4,0.3036493999,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2010,CO2_FUG,0.5359610053,MTC
+Africa_Southern,crude oil,crude oil,crude oil,2010,N2O,2.793796714e-05,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2010,CH4,0.3036493999,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2010,CO2_FUG,0.5359610053,MTC
+Africa_Southern,natural gas,natural gas,natural gas,2010,N2O,2.793796714e-05,Tg
+Africa_Southern,coal,coal,coal,2015,CH4,2.046154349,Tg
+Africa_Southern,coal,coal,coal,2015,CO2_FUG,0.2450773016,MTC
+Africa_Southern,coal,coal,coal,2015,N2O,0.002096262704,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2015,CH4,0.3000383526,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2015,CO2_FUG,0.5542580943,MTC
+Africa_Southern,crude oil,crude oil,crude oil,2015,N2O,2.88557659e-05,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2015,CH4,0.3000383526,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2015,CO2_FUG,0.5542580943,MTC
+Africa_Southern,natural gas,natural gas,natural gas,2015,N2O,2.88557659e-05,Tg
+Africa_Southern,coal,coal,coal,2021,CH4,1.821665138,Tg
+Africa_Southern,coal,coal,coal,2021,CO2_FUG,0.197394243,MTC
+Africa_Southern,coal,coal,coal,2021,N2O,0.001807774598,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2021,CH4,0.3692264782,Tg
+Africa_Southern,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3423568088,MTC
+Africa_Southern,crude oil,crude oil,crude oil,2021,N2O,2.771893991e-05,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2021,CH4,0.3692264782,Tg
+Africa_Southern,natural gas,natural gas,natural gas,2021,CO2_FUG,0.3423568088,MTC
+Africa_Southern,natural gas,natural gas,natural gas,2021,N2O,2.771893991e-05,Tg
+Africa_Western,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Africa_Western,coal,coal,coal,1975,CO2_FUG,0.0685835725,MTC
+Africa_Western,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Africa_Western,crude oil,crude oil,crude oil,1975,CH4,1.14074822,Tg
+Africa_Western,crude oil,crude oil,crude oil,1975,CO2_FUG,4.109265035,MTC
+Africa_Western,crude oil,crude oil,crude oil,1975,N2O,0.0002078789117,Tg
+Africa_Western,natural gas,natural gas,natural gas,1975,CH4,1.14074822,Tg
+Africa_Western,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+Africa_Western,natural gas,natural gas,natural gas,1975,N2O,0.0002078789117,Tg
+Africa_Western,coal,coal,coal,1990,CH4,0.3298866461,Tg
+Africa_Western,coal,coal,coal,1990,CO2_FUG,0.04576662408,MTC
+Africa_Western,coal,coal,coal,1990,N2O,5.361541866e-07,Tg
+Africa_Western,crude oil,crude oil,crude oil,1990,CH4,1.128453443,Tg
+Africa_Western,crude oil,crude oil,crude oil,1990,CO2_FUG,2.7881857,MTC
+Africa_Western,crude oil,crude oil,crude oil,1990,N2O,0.0001413635189,Tg
+Africa_Western,natural gas,natural gas,natural gas,1990,CH4,1.128453443,Tg
+Africa_Western,natural gas,natural gas,natural gas,1990,CO2_FUG,2.7881857,MTC
+Africa_Western,natural gas,natural gas,natural gas,1990,N2O,0.0001413635189,Tg
+Africa_Western,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Africa_Western,coal,coal,coal,2005,CO2_FUG,0.03131080194,MTC
+Africa_Western,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Africa_Western,crude oil,crude oil,crude oil,2005,CH4,0.933098458,Tg
+Africa_Western,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2830269973,MTC
+Africa_Western,crude oil,crude oil,crude oil,2005,N2O,1.210207708e-05,Tg
+Africa_Western,natural gas,natural gas,natural gas,2005,CH4,0.933098458,Tg
+Africa_Western,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2830269973,MTC
+Africa_Western,natural gas,natural gas,natural gas,2005,N2O,1.051819443e-05,Tg
+Africa_Western,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Africa_Western,coal,coal,coal,2010,CO2_FUG,0.1803316653,MTC
+Africa_Western,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Africa_Western,crude oil,crude oil,crude oil,2010,CH4,0.6939433275,Tg
+Africa_Western,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2603445266,MTC
+Africa_Western,crude oil,crude oil,crude oil,2010,N2O,1.252957621e-05,Tg
+Africa_Western,natural gas,natural gas,natural gas,2010,CH4,0.6939433275,Tg
+Africa_Western,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2506400207,MTC
+Africa_Western,natural gas,natural gas,natural gas,2010,N2O,1.117974118e-05,Tg
+Africa_Western,coal,coal,coal,2015,CH4,0.214307434,Tg
+Africa_Western,coal,coal,coal,2015,CO2_FUG,0.00135400594,MTC
+Africa_Western,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Africa_Western,crude oil,crude oil,crude oil,2015,CH4,0.7194200545,Tg
+Africa_Western,crude oil,crude oil,crude oil,2015,CO2_FUG,0.7930871788,MTC
+Africa_Western,crude oil,crude oil,crude oil,2015,N2O,4.076534189e-05,Tg
+Africa_Western,natural gas,natural gas,natural gas,2015,CH4,0.7194200545,Tg
+Africa_Western,natural gas,natural gas,natural gas,2015,CO2_FUG,0.7930871788,MTC
+Africa_Western,natural gas,natural gas,natural gas,2015,N2O,4.076534189e-05,Tg
+Africa_Western,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Africa_Western,coal,coal,coal,2021,CO2_FUG,0.02403827704,MTC
+Africa_Western,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Africa_Western,crude oil,crude oil,crude oil,2021,CH4,0.8679225003,Tg
+Africa_Western,crude oil,crude oil,crude oil,2021,CO2_FUG,0.8839630232,MTC
+Africa_Western,crude oil,crude oil,crude oil,2021,N2O,4.909447898e-05,Tg
+Africa_Western,natural gas,natural gas,natural gas,2021,CH4,0.8679225003,Tg
+Africa_Western,natural gas,natural gas,natural gas,2021,CO2_FUG,0.8839630232,MTC
+Africa_Western,natural gas,natural gas,natural gas,2021,N2O,4.909447898e-05,Tg
+Australia_NZ,coal,coal,coal,1975,CH4,0.3638137108,Tg
+Australia_NZ,coal,coal,coal,1975,CO2_FUG,0.6309162377,MTC
+Australia_NZ,coal,coal,coal,1975,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,1975,CH4,0.1756604915,Tg
+Australia_NZ,crude oil,crude oil,crude oil,1975,CO2_FUG,1.373752302,MTC
+Australia_NZ,crude oil,crude oil,crude oil,1975,N2O,8.435978639e-06,Tg
+Australia_NZ,natural gas,natural gas,natural gas,1975,CH4,0.1756604915,Tg
+Australia_NZ,natural gas,natural gas,natural gas,1975,CO2_FUG,1.373752302,MTC
+Australia_NZ,natural gas,natural gas,natural gas,1975,N2O,8.435978639e-06,Tg
+Australia_NZ,coal,coal,coal,1990,CH4,0.1988692041,Tg
+Australia_NZ,coal,coal,coal,1990,CO2_FUG,0.1903784442,MTC
+Australia_NZ,coal,coal,coal,1990,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,1990,CH4,0.1531734473,Tg
+Australia_NZ,crude oil,crude oil,crude oil,1990,CO2_FUG,0.8197479377,MTC
+Australia_NZ,crude oil,crude oil,crude oil,1990,N2O,6.345770779e-05,Tg
+Australia_NZ,natural gas,natural gas,natural gas,1990,CH4,0.1531734473,Tg
+Australia_NZ,natural gas,natural gas,natural gas,1990,CO2_FUG,0.8197479377,MTC
+Australia_NZ,natural gas,natural gas,natural gas,1990,N2O,6.345770779e-05,Tg
+Australia_NZ,coal,coal,coal,2005,CH4,0.1265275795,Tg
+Australia_NZ,coal,coal,coal,2005,CO2_FUG,0.0749344362,MTC
+Australia_NZ,coal,coal,coal,2005,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2005,CH4,0.09364944899,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2005,CO2_FUG,0.6917260388,MTC
+Australia_NZ,crude oil,crude oil,crude oil,2005,N2O,3.184492574e-05,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2005,CH4,0.09364944899,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2005,CO2_FUG,0.6917260388,MTC
+Australia_NZ,natural gas,natural gas,natural gas,2005,N2O,3.184492574e-05,Tg
+Australia_NZ,coal,coal,coal,2010,CH4,0.1094131626,Tg
+Australia_NZ,coal,coal,coal,2010,CO2_FUG,0.1312730772,MTC
+Australia_NZ,coal,coal,coal,2010,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2010,CH4,0.07809129913,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2010,CO2_FUG,0.700454672,MTC
+Australia_NZ,crude oil,crude oil,crude oil,2010,N2O,3.306691387e-05,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2010,CH4,0.07809129913,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2010,CO2_FUG,0.700454672,MTC
+Australia_NZ,natural gas,natural gas,natural gas,2010,N2O,3.306691387e-05,Tg
+Australia_NZ,coal,coal,coal,2015,CH4,0.08885956443,Tg
+Australia_NZ,coal,coal,coal,2015,CO2_FUG,0.05929909286,MTC
+Australia_NZ,coal,coal,coal,2015,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2015,CH4,0.07659818508,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2015,CO2_FUG,0.8149901455,MTC
+Australia_NZ,crude oil,crude oil,crude oil,2015,N2O,4.741518139e-05,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2015,CH4,0.07659818508,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3113449567,MTC
+Australia_NZ,natural gas,natural gas,natural gas,2015,N2O,4.741518139e-05,Tg
+Australia_NZ,coal,coal,coal,2021,CH4,0.0777552383,Tg
+Australia_NZ,coal,coal,coal,2021,CO2_FUG,0.1092042752,MTC
+Australia_NZ,coal,coal,coal,2021,N2O,0,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2021,CH4,0.05039273483,Tg
+Australia_NZ,crude oil,crude oil,crude oil,2021,CO2_FUG,0.7150175697,MTC
+Australia_NZ,crude oil,crude oil,crude oil,2021,N2O,3.791252918e-05,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2021,CH4,0.05039273483,Tg
+Australia_NZ,natural gas,natural gas,natural gas,2021,CO2_FUG,0.7150175697,MTC
+Australia_NZ,natural gas,natural gas,natural gas,2021,N2O,3.791252918e-05,Tg
+Brazil,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Brazil,coal,coal,coal,1975,CO2_FUG,7.718287885,MTC
+Brazil,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Brazil,crude oil,crude oil,crude oil,1975,CH4,0.2248834578,Tg
+Brazil,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4571086766,MTC
+Brazil,crude oil,crude oil,crude oil,1975,N2O,2.402409207e-05,Tg
+Brazil,natural gas,natural gas,natural gas,1975,CH4,0.2248834578,Tg
+Brazil,natural gas,natural gas,natural gas,1975,CO2_FUG,0.4571086766,MTC
+Brazil,natural gas,natural gas,natural gas,1975,N2O,2.402409207e-05,Tg
+Brazil,coal,coal,coal,1990,CH4,8.784938151,Tg
+Brazil,coal,coal,coal,1990,CO2_FUG,11.15429836,MTC
+Brazil,coal,coal,coal,1990,N2O,0.01118882518,Tg
+Brazil,crude oil,crude oil,crude oil,1990,CH4,0.1715404514,Tg
+Brazil,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3199605632,MTC
+Brazil,crude oil,crude oil,crude oil,1990,N2O,1.704895777e-05,Tg
+Brazil,natural gas,natural gas,natural gas,1990,CH4,0.1715404514,Tg
+Brazil,natural gas,natural gas,natural gas,1990,CO2_FUG,0.3199605632,MTC
+Brazil,natural gas,natural gas,natural gas,1990,N2O,1.704895777e-05,Tg
+Brazil,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Brazil,coal,coal,coal,2005,CO2_FUG,3.104601324,MTC
+Brazil,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Brazil,crude oil,crude oil,crude oil,2005,CH4,0.1494462316,Tg
+Brazil,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2289307825,MTC
+Brazil,crude oil,crude oil,crude oil,2005,N2O,1.245961395e-05,Tg
+Brazil,natural gas,natural gas,natural gas,2005,CH4,0.1494462316,Tg
+Brazil,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2289307825,MTC
+Brazil,natural gas,natural gas,natural gas,2005,N2O,1.245961395e-05,Tg
+Brazil,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Brazil,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Brazil,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Brazil,crude oil,crude oil,crude oil,2010,CH4,0.121198611,Tg
+Brazil,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1286790924,MTC
+Brazil,crude oil,crude oil,crude oil,2010,N2O,7.384056187e-06,Tg
+Brazil,natural gas,natural gas,natural gas,2010,CH4,0.121198611,Tg
+Brazil,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1286790924,MTC
+Brazil,natural gas,natural gas,natural gas,2010,N2O,7.384056187e-06,Tg
+Brazil,coal,coal,coal,2015,CH4,0.214307434,Tg
+Brazil,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Brazil,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Brazil,crude oil,crude oil,crude oil,2015,CH4,0.1306968582,Tg
+Brazil,crude oil,crude oil,crude oil,2015,CO2_FUG,0.1263677759,MTC
+Brazil,crude oil,crude oil,crude oil,2015,N2O,7.248824682e-06,Tg
+Brazil,natural gas,natural gas,natural gas,2015,CH4,0.1306968582,Tg
+Brazil,natural gas,natural gas,natural gas,2015,CO2_FUG,0.1263677759,MTC
+Brazil,natural gas,natural gas,natural gas,2015,N2O,7.248824682e-06,Tg
+Brazil,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Brazil,coal,coal,coal,2021,CO2_FUG,3.919326709,MTC
+Brazil,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Brazil,crude oil,crude oil,crude oil,2021,CH4,0.1149848169,Tg
+Brazil,crude oil,crude oil,crude oil,2021,CO2_FUG,0.07814581345,MTC
+Brazil,crude oil,crude oil,crude oil,2021,N2O,5.027108057e-06,Tg
+Brazil,natural gas,natural gas,natural gas,2021,CH4,0.1149848169,Tg
+Brazil,natural gas,natural gas,natural gas,2021,CO2_FUG,0.07814581345,MTC
+Brazil,natural gas,natural gas,natural gas,2021,N2O,5.027108057e-06,Tg
+Canada,coal,coal,coal,1975,CH4,0.09780074705,Tg
+Canada,coal,coal,coal,1975,CO2_FUG,0.6177173586,MTC
+Canada,coal,coal,coal,1975,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,1975,CH4,0.2010251656,Tg
+Canada,crude oil,crude oil,crude oil,1975,CO2_FUG,0.3357138859,MTC
+Canada,crude oil,crude oil,crude oil,1975,N2O,1.17106598e-05,Tg
+Canada,natural gas,natural gas,natural gas,1975,CH4,0.2010251656,Tg
+Canada,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3357138859,MTC
+Canada,natural gas,natural gas,natural gas,1975,N2O,1.17106598e-05,Tg
+Canada,coal,coal,coal,1990,CH4,0.07201401543,Tg
+Canada,coal,coal,coal,1990,CO2_FUG,0.1669423712,MTC
+Canada,coal,coal,coal,1990,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,1990,CH4,0.2215168997,Tg
+Canada,crude oil,crude oil,crude oil,1990,CO2_FUG,0.5194639725,MTC
+Canada,crude oil,crude oil,crude oil,1990,N2O,1.737312158e-05,Tg
+Canada,natural gas,natural gas,natural gas,1990,CH4,0.1818652595,Tg
+Canada,natural gas,natural gas,natural gas,1990,CO2_FUG,0.4265814339,MTC
+Canada,natural gas,natural gas,natural gas,1990,N2O,1.412866484e-05,Tg
+Canada,coal,coal,coal,2005,CH4,0.0385094227,Tg
+Canada,coal,coal,coal,2005,CO2_FUG,0.1254904527,MTC
+Canada,coal,coal,coal,2005,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,2005,CH4,0.2867343351,Tg
+Canada,crude oil,crude oil,crude oil,2005,CO2_FUG,0.5473694283,MTC
+Canada,crude oil,crude oil,crude oil,2005,N2O,4.487024985e-05,Tg
+Canada,natural gas,natural gas,natural gas,2005,CH4,0.1779785181,Tg
+Canada,natural gas,natural gas,natural gas,2005,CO2_FUG,0.3435868297,MTC
+Canada,natural gas,natural gas,natural gas,2005,N2O,2.6924587e-05,Tg
+Canada,coal,coal,coal,2010,CH4,0.03947212246,Tg
+Canada,coal,coal,coal,2010,CO2_FUG,0.3097592644,MTC
+Canada,coal,coal,coal,2010,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,2010,CH4,0.2853005809,Tg
+Canada,crude oil,crude oil,crude oil,2010,CO2_FUG,0.5094335664,MTC
+Canada,crude oil,crude oil,crude oil,2010,N2O,4.503391432e-05,Tg
+Canada,natural gas,natural gas,natural gas,2010,CH4,0.1741560313,Tg
+Canada,natural gas,natural gas,natural gas,2010,CO2_FUG,0.3159607394,MTC
+Canada,natural gas,natural gas,natural gas,2010,N2O,2.652620229e-05,Tg
+Canada,coal,coal,coal,2015,CH4,0.03573467132,Tg
+Canada,coal,coal,coal,2015,CO2_FUG,0.0755792578,MTC
+Canada,coal,coal,coal,2015,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,2015,CH4,0.3010534772,Tg
+Canada,crude oil,crude oil,crude oil,2015,CO2_FUG,0.5730552995,MTC
+Canada,crude oil,crude oil,crude oil,2015,N2O,4.997939024e-05,Tg
+Canada,natural gas,natural gas,natural gas,2015,CH4,0.1472079606,Tg
+Canada,natural gas,natural gas,natural gas,2015,CO2_FUG,0.2854126909,MTC
+Canada,natural gas,natural gas,natural gas,2015,N2O,2.308843993e-05,Tg
+Canada,coal,coal,coal,2021,CH4,0.04320933468,Tg
+Canada,coal,coal,coal,2021,CO2_FUG,0.1847629036,MTC
+Canada,coal,coal,coal,2021,N2O,0,Tg
+Canada,crude oil,crude oil,crude oil,2021,CH4,0.1306061525,Tg
+Canada,crude oil,crude oil,crude oil,2021,CO2_FUG,0.4724652813,MTC
+Canada,crude oil,crude oil,crude oil,2021,N2O,3.880889134e-05,Tg
+Canada,natural gas,natural gas,natural gas,2021,CH4,0.06857648935,Tg
+Canada,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2338135348,MTC
+Canada,natural gas,natural gas,natural gas,2021,N2O,1.749167112e-05,Tg
+Central America and Caribbean,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Central America and Caribbean,coal,coal,coal,1975,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,1975,CH4,0.1581078253,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4966196927,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,1975,N2O,2.594929667e-05,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,1975,CH4,0.1581078253,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,1975,CO2_FUG,0.4966196927,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,1975,N2O,2.594929667e-05,Tg
+Central America and Caribbean,coal,coal,coal,1990,CH4,0.3298866461,Tg
+Central America and Caribbean,coal,coal,coal,1990,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,1990,N2O,5.361541866e-07,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,1990,CH4,0.4649599836,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,1990,CO2_FUG,0.9103614971,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,1990,N2O,4.649962214e-05,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,1990,CH4,0.4649599836,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,1990,CO2_FUG,0.9103614971,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,1990,N2O,4.649962214e-05,Tg
+Central America and Caribbean,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Central America and Caribbean,coal,coal,coal,2005,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2005,CH4,0.3084651489,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2005,CO2_FUG,0.08772802509,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,2005,N2O,4.749585595e-06,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2005,CH4,0.3084651489,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2005,CO2_FUG,0.08772802509,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,2005,N2O,4.749585595e-06,Tg
+Central America and Caribbean,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Central America and Caribbean,coal,coal,coal,2010,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2010,CH4,0.2950750862,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2010,CO2_FUG,0.0347928405,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,2010,N2O,1.985644157e-06,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2010,CH4,0.2950750862,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2010,CO2_FUG,0.0347928405,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,2010,N2O,1.985644157e-06,Tg
+Central America and Caribbean,coal,coal,coal,2015,CH4,0.214307434,Tg
+Central America and Caribbean,coal,coal,coal,2015,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2015,CH4,0.3053361727,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2015,CO2_FUG,0.1096960155,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,2015,N2O,5.743852496e-06,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2015,CH4,0.3053361727,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2015,CO2_FUG,0.1096960155,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,2015,N2O,5.743852496e-06,Tg
+Central America and Caribbean,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Central America and Caribbean,coal,coal,coal,2021,CO2_FUG,0,MTC
+Central America and Caribbean,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2021,CH4,0.4056442599,Tg
+Central America and Caribbean,crude oil,crude oil,crude oil,2021,CO2_FUG,0.1082648133,MTC
+Central America and Caribbean,crude oil,crude oil,crude oil,2021,N2O,6.40312848e-06,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2021,CH4,0.4056442599,Tg
+Central America and Caribbean,natural gas,natural gas,natural gas,2021,CO2_FUG,0.1082648133,MTC
+Central America and Caribbean,natural gas,natural gas,natural gas,2021,N2O,6.40312848e-06,Tg
+Central Asia,coal,coal,coal,1975,CH4,1.247745344,Tg
+Central Asia,coal,coal,coal,1975,CO2_FUG,0.7687424304,MTC
+Central Asia,coal,coal,coal,1975,N2O,1.976493293e-07,Tg
+Central Asia,crude oil,crude oil,crude oil,1975,CH4,0.5225344461,Tg
+Central Asia,crude oil,crude oil,crude oil,1975,CO2_FUG,0.007700875688,MTC
+Central Asia,crude oil,crude oil,crude oil,1975,N2O,8.790337071e-07,Tg
+Central Asia,natural gas,natural gas,natural gas,1975,CH4,0.5225344461,Tg
+Central Asia,natural gas,natural gas,natural gas,1975,CO2_FUG,0.007700875688,MTC
+Central Asia,natural gas,natural gas,natural gas,1975,N2O,8.790337071e-07,Tg
+Central Asia,coal,coal,coal,1990,CH4,0.514131405,Tg
+Central Asia,coal,coal,coal,1990,CO2_FUG,0.07458976718,MTC
+Central Asia,coal,coal,coal,1990,N2O,5.263143931e-07,Tg
+Central Asia,crude oil,crude oil,crude oil,1990,CH4,0.4098737756,Tg
+Central Asia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.05011114484,MTC
+Central Asia,crude oil,crude oil,crude oil,1990,N2O,2.825066488e-06,Tg
+Central Asia,natural gas,natural gas,natural gas,1990,CH4,0.4098737756,Tg
+Central Asia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.05011114484,MTC
+Central Asia,natural gas,natural gas,natural gas,1990,N2O,2.825066488e-06,Tg
+Central Asia,coal,coal,coal,2005,CH4,0.3671030541,Tg
+Central Asia,coal,coal,coal,2005,CO2_FUG,0.6916725438,MTC
+Central Asia,coal,coal,coal,2005,N2O,2.005265505e-06,Tg
+Central Asia,crude oil,crude oil,crude oil,2005,CH4,0.402740799,Tg
+Central Asia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.6111969263,MTC
+Central Asia,crude oil,crude oil,crude oil,2005,N2O,3.124969139e-05,Tg
+Central Asia,natural gas,natural gas,natural gas,2005,CH4,0.402740799,Tg
+Central Asia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.6111969263,MTC
+Central Asia,natural gas,natural gas,natural gas,2005,N2O,3.124969139e-05,Tg
+Central Asia,coal,coal,coal,2010,CH4,0.4125840468,Tg
+Central Asia,coal,coal,coal,2010,CO2_FUG,0.4775509432,MTC
+Central Asia,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Central Asia,crude oil,crude oil,crude oil,2010,CH4,0.2937586229,Tg
+Central Asia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.3279690432,MTC
+Central Asia,crude oil,crude oil,crude oil,2010,N2O,1.706855812e-05,Tg
+Central Asia,natural gas,natural gas,natural gas,2010,CH4,0.2937586229,Tg
+Central Asia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.3279690432,MTC
+Central Asia,natural gas,natural gas,natural gas,2010,N2O,1.706855812e-05,Tg
+Central Asia,coal,coal,coal,2015,CH4,0.4044470754,Tg
+Central Asia,coal,coal,coal,2015,CO2_FUG,0.07734511735,MTC
+Central Asia,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Central Asia,crude oil,crude oil,crude oil,2015,CH4,0.2900605219,Tg
+Central Asia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3103543361,MTC
+Central Asia,crude oil,crude oil,crude oil,2015,N2O,1.613100201e-05,Tg
+Central Asia,natural gas,natural gas,natural gas,2015,CH4,0.2900605219,Tg
+Central Asia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3103543361,MTC
+Central Asia,natural gas,natural gas,natural gas,2015,N2O,1.613100201e-05,Tg
+Central Asia,coal,coal,coal,2021,CH4,0.3579165855,Tg
+Central Asia,coal,coal,coal,2021,CO2_FUG,0.05150957124,MTC
+Central Asia,coal,coal,coal,2021,N2O,1.358729499e-06,Tg
+Central Asia,crude oil,crude oil,crude oil,2021,CH4,0.2913145836,Tg
+Central Asia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.1453047776,MTC
+Central Asia,crude oil,crude oil,crude oil,2021,N2O,1.053760544e-05,Tg
+Central Asia,natural gas,natural gas,natural gas,2021,CH4,0.2913145836,Tg
+Central Asia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.1453047776,MTC
+Central Asia,natural gas,natural gas,natural gas,2021,N2O,1.053760544e-05,Tg
+China,coal,coal,coal,1975,CH4,0.3362591321,Tg
+China,coal,coal,coal,1975,CO2_FUG,0.507790098,MTC
+China,coal,coal,coal,1975,N2O,1.28946158e-08,Tg
+China,crude oil,crude oil,crude oil,1975,CH4,0.2663205959,Tg
+China,crude oil,crude oil,crude oil,1975,CO2_FUG,0.1978639425,MTC
+China,crude oil,crude oil,crude oil,1975,N2O,0.0001376442162,Tg
+China,natural gas,natural gas,natural gas,1975,CH4,0.2663205959,Tg
+China,natural gas,natural gas,natural gas,1975,CO2_FUG,0.1978639425,MTC
+China,natural gas,natural gas,natural gas,1975,N2O,0.0001376442162,Tg
+China,coal,coal,coal,1990,CH4,0.2739513089,Tg
+China,coal,coal,coal,1990,CO2_FUG,0.4044360929,MTC
+China,coal,coal,coal,1990,N2O,4.309631078e-09,Tg
+China,crude oil,crude oil,crude oil,1990,CH4,0.2278159323,Tg
+China,crude oil,crude oil,crude oil,1990,CO2_FUG,0.1995018645,MTC
+China,crude oil,crude oil,crude oil,1990,N2O,8.168366764e-05,Tg
+China,natural gas,natural gas,natural gas,1990,CH4,0.2278159323,Tg
+China,natural gas,natural gas,natural gas,1990,CO2_FUG,0.1995018645,MTC
+China,natural gas,natural gas,natural gas,1990,N2O,8.168366764e-05,Tg
+China,coal,coal,coal,2005,CH4,0.2217097403,Tg
+China,coal,coal,coal,2005,CO2_FUG,0.3607148954,MTC
+China,coal,coal,coal,2005,N2O,2.133297718e-09,Tg
+China,crude oil,crude oil,crude oil,2005,CH4,0.2047691749,Tg
+China,crude oil,crude oil,crude oil,2005,CO2_FUG,0.1913884915,MTC
+China,crude oil,crude oil,crude oil,2005,N2O,5.848577259e-05,Tg
+China,natural gas,natural gas,natural gas,2005,CH4,0.2047691749,Tg
+China,natural gas,natural gas,natural gas,2005,CO2_FUG,0.1913884915,MTC
+China,natural gas,natural gas,natural gas,2005,N2O,5.848577259e-05,Tg
+China,coal,coal,coal,2010,CH4,0.209873045,Tg
+China,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+China,coal,coal,coal,2010,N2O,1.634065219e-09,Tg
+China,crude oil,crude oil,crude oil,2010,CH4,0.1949637479,Tg
+China,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1212167094,MTC
+China,crude oil,crude oil,crude oil,2010,N2O,4.37299484e-05,Tg
+China,natural gas,natural gas,natural gas,2010,CH4,0.1949637479,Tg
+China,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1212167094,MTC
+China,natural gas,natural gas,natural gas,2010,N2O,4.37299484e-05,Tg
+China,coal,coal,coal,2015,CH4,0.214307434,Tg
+China,coal,coal,coal,2015,CO2_FUG,0.8156333294,MTC
+China,coal,coal,coal,2015,N2O,1.409888089e-09,Tg
+China,crude oil,crude oil,crude oil,2015,CH4,0.2158576362,Tg
+China,crude oil,crude oil,crude oil,2015,CO2_FUG,0.09104057945,MTC
+China,crude oil,crude oil,crude oil,2015,N2O,3.778111469e-05,Tg
+China,natural gas,natural gas,natural gas,2015,CH4,0.2158576362,Tg
+China,natural gas,natural gas,natural gas,2015,CO2_FUG,0.09104057945,MTC
+China,natural gas,natural gas,natural gas,2015,N2O,3.778111469e-05,Tg
+China,coal,coal,coal,2021,CH4,0.2065607736,Tg
+China,coal,coal,coal,2021,CO2_FUG,1.130859577,MTC
+China,coal,coal,coal,2021,N2O,1.149452536e-09,Tg
+China,crude oil,crude oil,crude oil,2021,CH4,0.2038912819,Tg
+China,crude oil,crude oil,crude oil,2021,CO2_FUG,0.09482792702,MTC
+China,crude oil,crude oil,crude oil,2021,N2O,3.227993015e-05,Tg
+China,natural gas,natural gas,natural gas,2021,CH4,0.2038912819,Tg
+China,natural gas,natural gas,natural gas,2021,CO2_FUG,0.09482792702,MTC
+China,natural gas,natural gas,natural gas,2021,N2O,3.227993015e-05,Tg
+EU-12,coal,coal,coal,1975,CH4,0.3021869069,Tg
+EU-12,coal,coal,coal,1975,CO2_FUG,0.9686472287,MTC
+EU-12,coal,coal,coal,1975,N2O,2.134052406e-08,Tg
+EU-12,crude oil,crude oil,crude oil,1975,CH4,0.5633555141,Tg
+EU-12,crude oil,crude oil,crude oil,1975,CO2_FUG,0.1600046727,MTC
+EU-12,crude oil,crude oil,crude oil,1975,N2O,9.974557056e-06,Tg
+EU-12,natural gas,natural gas,natural gas,1975,CH4,0.5633555141,Tg
+EU-12,natural gas,natural gas,natural gas,1975,CO2_FUG,0.1600046727,MTC
+EU-12,natural gas,natural gas,natural gas,1975,N2O,9.974557056e-06,Tg
+EU-12,coal,coal,coal,1990,CH4,0.2157124715,Tg
+EU-12,coal,coal,coal,1990,CO2_FUG,0.6447604144,MTC
+EU-12,coal,coal,coal,1990,N2O,1.933693981e-08,Tg
+EU-12,crude oil,crude oil,crude oil,1990,CH4,0.7053724784,Tg
+EU-12,crude oil,crude oil,crude oil,1990,CO2_FUG,0.2829267756,MTC
+EU-12,crude oil,crude oil,crude oil,1990,N2O,9.416266882e-06,Tg
+EU-12,natural gas,natural gas,natural gas,1990,CH4,0.7053724784,Tg
+EU-12,natural gas,natural gas,natural gas,1990,CO2_FUG,0.2829267756,MTC
+EU-12,natural gas,natural gas,natural gas,1990,N2O,9.416266882e-06,Tg
+EU-12,coal,coal,coal,2005,CH4,0.2919523833,Tg
+EU-12,coal,coal,coal,2005,CO2_FUG,0.5064479527,MTC
+EU-12,coal,coal,coal,2005,N2O,3.050778482e-07,Tg
+EU-12,crude oil,crude oil,crude oil,2005,CH4,0.4161356473,Tg
+EU-12,crude oil,crude oil,crude oil,2005,CO2_FUG,0.3698304643,MTC
+EU-12,crude oil,crude oil,crude oil,2005,N2O,7.198231561e-06,Tg
+EU-12,natural gas,natural gas,natural gas,2005,CH4,0.4161356473,Tg
+EU-12,natural gas,natural gas,natural gas,2005,CO2_FUG,0.3698304643,MTC
+EU-12,natural gas,natural gas,natural gas,2005,N2O,7.198231561e-06,Tg
+EU-12,coal,coal,coal,2010,CH4,0.286374777,Tg
+EU-12,coal,coal,coal,2010,CO2_FUG,0.6481091424,MTC
+EU-12,coal,coal,coal,2010,N2O,8.694598167e-07,Tg
+EU-12,crude oil,crude oil,crude oil,2010,CH4,0.3955003538,Tg
+EU-12,crude oil,crude oil,crude oil,2010,CO2_FUG,0.3965939805,MTC
+EU-12,crude oil,crude oil,crude oil,2010,N2O,6.724261841e-06,Tg
+EU-12,natural gas,natural gas,natural gas,2010,CH4,0.3955003538,Tg
+EU-12,natural gas,natural gas,natural gas,2010,CO2_FUG,0.3965939805,MTC
+EU-12,natural gas,natural gas,natural gas,2010,N2O,6.724261841e-06,Tg
+EU-12,coal,coal,coal,2015,CH4,0.2962916862,Tg
+EU-12,coal,coal,coal,2015,CO2_FUG,0.8909028338,MTC
+EU-12,coal,coal,coal,2015,N2O,6.446746069e-07,Tg
+EU-12,crude oil,crude oil,crude oil,2015,CH4,0.3984012574,Tg
+EU-12,crude oil,crude oil,crude oil,2015,CO2_FUG,0.5403424568,MTC
+EU-12,crude oil,crude oil,crude oil,2015,N2O,7.053304061e-06,Tg
+EU-12,natural gas,natural gas,natural gas,2015,CH4,0.3984012574,Tg
+EU-12,natural gas,natural gas,natural gas,2015,CO2_FUG,0.5403424568,MTC
+EU-12,natural gas,natural gas,natural gas,2015,N2O,7.053304061e-06,Tg
+EU-12,coal,coal,coal,2021,CH4,0.3683243596,Tg
+EU-12,coal,coal,coal,2021,CO2_FUG,1.022035304,MTC
+EU-12,coal,coal,coal,2021,N2O,5.615599332e-07,Tg
+EU-12,crude oil,crude oil,crude oil,2021,CH4,0.4522939103,Tg
+EU-12,crude oil,crude oil,crude oil,2021,CO2_FUG,0.6364623382,MTC
+EU-12,crude oil,crude oil,crude oil,2021,N2O,7.85780604e-06,Tg
+EU-12,natural gas,natural gas,natural gas,2021,CH4,0.4522939103,Tg
+EU-12,natural gas,natural gas,natural gas,2021,CO2_FUG,0.6364623382,MTC
+EU-12,natural gas,natural gas,natural gas,2021,N2O,7.85780604e-06,Tg
+EU-15,coal,coal,coal,1975,CH4,0.4049244653,Tg
+EU-15,coal,coal,coal,1975,CO2_FUG,1.17159073,MTC
+EU-15,coal,coal,coal,1975,N2O,6.27631279e-10,Tg
+EU-15,crude oil,crude oil,crude oil,1975,CH4,0.1404826555,Tg
+EU-15,crude oil,crude oil,crude oil,1975,CO2_FUG,0.8015565365,MTC
+EU-15,crude oil,crude oil,crude oil,1975,N2O,0.001134753726,Tg
+EU-15,natural gas,natural gas,natural gas,1975,CH4,0.1404826555,Tg
+EU-15,natural gas,natural gas,natural gas,1975,CO2_FUG,0.8015565365,MTC
+EU-15,natural gas,natural gas,natural gas,1975,N2O,0.001134753726,Tg
+EU-15,coal,coal,coal,1990,CH4,0.2605569144,Tg
+EU-15,coal,coal,coal,1990,CO2_FUG,1.060179591,MTC
+EU-15,coal,coal,coal,1990,N2O,5.4599398e-07,Tg
+EU-15,crude oil,crude oil,crude oil,1990,CH4,0.1307265414,Tg
+EU-15,crude oil,crude oil,crude oil,1990,CO2_FUG,0.4902526436,MTC
+EU-15,crude oil,crude oil,crude oil,1990,N2O,3.769220205e-05,Tg
+EU-15,natural gas,natural gas,natural gas,1990,CH4,0.1307265414,Tg
+EU-15,natural gas,natural gas,natural gas,1990,CO2_FUG,0.4902526436,MTC
+EU-15,natural gas,natural gas,natural gas,1990,N2O,3.769220205e-05,Tg
+EU-15,coal,coal,coal,2005,CH4,0.1562591129,Tg
+EU-15,coal,coal,coal,2005,CO2_FUG,0.6614821392,MTC
+EU-15,coal,coal,coal,2005,N2O,1.947734961e-06,Tg
+EU-15,crude oil,crude oil,crude oil,2005,CH4,0.07568584645,Tg
+EU-15,crude oil,crude oil,crude oil,2005,CO2_FUG,0.4323692826,MTC
+EU-15,crude oil,crude oil,crude oil,2005,N2O,4.071587359e-05,Tg
+EU-15,natural gas,natural gas,natural gas,2005,CH4,0.07568584645,Tg
+EU-15,natural gas,natural gas,natural gas,2005,CO2_FUG,0.4323692826,MTC
+EU-15,natural gas,natural gas,natural gas,2005,N2O,4.071587359e-05,Tg
+EU-15,coal,coal,coal,2010,CH4,0.1075942298,Tg
+EU-15,coal,coal,coal,2010,CO2_FUG,1.187177725,MTC
+EU-15,coal,coal,coal,2010,N2O,3.102987048e-06,Tg
+EU-15,crude oil,crude oil,crude oil,2010,CH4,0.08672031751,Tg
+EU-15,crude oil,crude oil,crude oil,2010,CO2_FUG,0.5019301116,MTC
+EU-15,crude oil,crude oil,crude oil,2010,N2O,3.744911336e-05,Tg
+EU-15,natural gas,natural gas,natural gas,2010,CH4,0.08672031751,Tg
+EU-15,natural gas,natural gas,natural gas,2010,CO2_FUG,0.5019301116,MTC
+EU-15,natural gas,natural gas,natural gas,2010,N2O,3.744911336e-05,Tg
+EU-15,coal,coal,coal,2015,CH4,0.09907845624,Tg
+EU-15,coal,coal,coal,2015,CO2_FUG,1.224018223,MTC
+EU-15,coal,coal,coal,2015,N2O,3.956707371e-06,Tg
+EU-15,crude oil,crude oil,crude oil,2015,CH4,0.1103378111,Tg
+EU-15,crude oil,crude oil,crude oil,2015,CO2_FUG,0.7540646507,MTC
+EU-15,crude oil,crude oil,crude oil,2015,N2O,1.910091702e-05,Tg
+EU-15,natural gas,natural gas,natural gas,2015,CH4,0.1103378111,Tg
+EU-15,natural gas,natural gas,natural gas,2015,CO2_FUG,0.7540646507,MTC
+EU-15,natural gas,natural gas,natural gas,2015,N2O,1.613100201e-05,Tg
+EU-15,coal,coal,coal,2021,CH4,0.03352989484,Tg
+EU-15,coal,coal,coal,2021,CO2_FUG,1.667524678,MTC
+EU-15,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+EU-15,crude oil,crude oil,crude oil,2021,CH4,0.131071674,Tg
+EU-15,crude oil,crude oil,crude oil,2021,CO2_FUG,0.8767409449,MTC
+EU-15,crude oil,crude oil,crude oil,2021,N2O,5.043864542e-05,Tg
+EU-15,natural gas,natural gas,natural gas,2021,CH4,0.131071674,Tg
+EU-15,natural gas,natural gas,natural gas,2021,CO2_FUG,0.8767409449,MTC
+EU-15,natural gas,natural gas,natural gas,2021,N2O,5.043864542e-05,Tg
+Ukraine,coal,coal,coal,1975,CH4,0.6786994829,Tg
+Ukraine,coal,coal,coal,1975,CO2_FUG,1.245093454,MTC
+Ukraine,coal,coal,coal,1975,N2O,0,Tg
+Ukraine,crude oil,crude oil,crude oil,1975,CH4,0.5049111554,Tg
+Ukraine,crude oil,crude oil,crude oil,1975,CO2_FUG,0.1914683038,MTC
+Ukraine,crude oil,crude oil,crude oil,1975,N2O,1.549252613e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,1975,CH4,0.5049111554,Tg
+Ukraine,natural gas,natural gas,natural gas,1975,CO2_FUG,0.1914683038,MTC
+Ukraine,natural gas,natural gas,natural gas,1975,N2O,1.549252613e-06,Tg
+Ukraine,coal,coal,coal,1990,CH4,0.6899445961,Tg
+Ukraine,coal,coal,coal,1990,CO2_FUG,2.672408436,MTC
+Ukraine,coal,coal,coal,1990,N2O,1.15305358e-06,Tg
+Ukraine,crude oil,crude oil,crude oil,1990,CH4,0.3788745976,Tg
+Ukraine,crude oil,crude oil,crude oil,1990,CO2_FUG,0.7107892359,MTC
+Ukraine,crude oil,crude oil,crude oil,1990,N2O,6.748924693e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,1990,CH4,2.139773524,Tg
+Ukraine,natural gas,natural gas,natural gas,1990,CO2_FUG,0.7107892359,MTC
+Ukraine,natural gas,natural gas,natural gas,1990,N2O,6.748924693e-06,Tg
+Ukraine,coal,coal,coal,2005,CH4,0.7090514319,Tg
+Ukraine,coal,coal,coal,2005,CO2_FUG,4.682924876,MTC
+Ukraine,coal,coal,coal,2005,N2O,2.317431959e-06,Tg
+Ukraine,crude oil,crude oil,crude oil,2005,CH4,0.3297787443,Tg
+Ukraine,crude oil,crude oil,crude oil,2005,CO2_FUG,0.7343409711,MTC
+Ukraine,crude oil,crude oil,crude oil,2005,N2O,7.141215658e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,2005,CH4,0.3558697797,Tg
+Ukraine,natural gas,natural gas,natural gas,2005,CO2_FUG,0.7343409711,MTC
+Ukraine,natural gas,natural gas,natural gas,2005,N2O,7.141215658e-06,Tg
+Ukraine,coal,coal,coal,2010,CH4,0.6715711106,Tg
+Ukraine,coal,coal,coal,2010,CO2_FUG,2.869845765,MTC
+Ukraine,coal,coal,coal,2010,N2O,1.129716856e-05,Tg
+Ukraine,crude oil,crude oil,crude oil,2010,CH4,0.2950750862,Tg
+Ukraine,crude oil,crude oil,crude oil,2010,CO2_FUG,0.7227830704,MTC
+Ukraine,crude oil,crude oil,crude oil,2010,N2O,6.248409366e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,2010,CH4,0.3033928591,Tg
+Ukraine,natural gas,natural gas,natural gas,2010,CO2_FUG,0.7227830704,MTC
+Ukraine,natural gas,natural gas,natural gas,2010,N2O,6.248409366e-06,Tg
+Ukraine,coal,coal,coal,2015,CH4,0.6737357228,Tg
+Ukraine,coal,coal,coal,2015,CO2_FUG,3.176660826,MTC
+Ukraine,coal,coal,coal,2015,N2O,2.507826309e-05,Tg
+Ukraine,crude oil,crude oil,crude oil,2015,CH4,1.357159292,Tg
+Ukraine,crude oil,crude oil,crude oil,2015,CO2_FUG,0.8023425733,MTC
+Ukraine,crude oil,crude oil,crude oil,2015,N2O,5.477842085e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,2015,CH4,1.357159292,Tg
+Ukraine,natural gas,natural gas,natural gas,2015,CO2_FUG,0.8023425733,MTC
+Ukraine,natural gas,natural gas,natural gas,2015,N2O,5.477842085e-06,Tg
+Ukraine,coal,coal,coal,2021,CH4,0.7571329902,Tg
+Ukraine,coal,coal,coal,2021,CO2_FUG,5.253997788,MTC
+Ukraine,coal,coal,coal,2021,N2O,7.629224863e-05,Tg
+Ukraine,crude oil,crude oil,crude oil,2021,CH4,0.2913145836,Tg
+Ukraine,crude oil,crude oil,crude oil,2021,CO2_FUG,0.7786908981,MTC
+Ukraine,crude oil,crude oil,crude oil,2021,N2O,4.926286193e-06,Tg
+Ukraine,natural gas,natural gas,natural gas,2021,CH4,0.3520987884,Tg
+Ukraine,natural gas,natural gas,natural gas,2021,CO2_FUG,0.7786908981,MTC
+Ukraine,natural gas,natural gas,natural gas,2021,N2O,4.926286193e-06,Tg
+Europe_Non_EU,coal,coal,coal,1975,CH4,0.2555612454,Tg
+Europe_Non_EU,coal,coal,coal,1975,CO2_FUG,1.791788291,MTC
+Europe_Non_EU,coal,coal,coal,1975,N2O,0,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,1975,CH4,0.07633656847,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,1975,CO2_FUG,0.1256149602,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,1975,N2O,2.089999455e-05,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,1975,CH4,0.07633656847,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,1975,CO2_FUG,0.1256149602,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,1975,N2O,2.089999455e-05,Tg
+Europe_Non_EU,coal,coal,coal,1990,CH4,0.2427452275,Tg
+Europe_Non_EU,coal,coal,coal,1990,CO2_FUG,0.8268363467,MTC
+Europe_Non_EU,coal,coal,coal,1990,N2O,0,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,1990,CH4,0.3649630106,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,1990,CO2_FUG,0.4051910593,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,1990,N2O,1.039378271e-05,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,1990,CH4,0.3649630106,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,1990,CO2_FUG,0.4051910593,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,1990,N2O,1.039378271e-05,Tg
+Europe_Non_EU,coal,coal,coal,2005,CH4,0.2163971673,Tg
+Europe_Non_EU,coal,coal,coal,2005,CO2_FUG,0.6653235757,MTC
+Europe_Non_EU,coal,coal,coal,2005,N2O,1.26925633e-07,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2005,CH4,0.5399536061,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2005,CO2_FUG,0.6390111347,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,2005,N2O,7.385759929e-06,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2005,CH4,0.5399536061,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2005,CO2_FUG,0.6390111347,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,2005,N2O,7.385759929e-06,Tg
+Europe_Non_EU,coal,coal,coal,2010,CH4,0.2477637795,Tg
+Europe_Non_EU,coal,coal,coal,2010,CO2_FUG,0.5216384316,MTC
+Europe_Non_EU,coal,coal,coal,2010,N2O,8.03098731e-07,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2010,CH4,0.5175321077,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2010,CO2_FUG,0.4419522109,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,2010,N2O,6.716466507e-06,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2010,CH4,0.5175321077,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2010,CO2_FUG,0.4419522109,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,2010,N2O,6.716466507e-06,Tg
+Europe_Non_EU,coal,coal,coal,2015,CH4,0.2002449528,Tg
+Europe_Non_EU,coal,coal,coal,2015,CO2_FUG,0.773132248,MTC
+Europe_Non_EU,coal,coal,coal,2015,N2O,6.559782789e-06,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2015,CH4,0.5896999861,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2015,CO2_FUG,0.2924630914,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,2015,N2O,7.967134294e-06,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2015,CH4,0.5896999861,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2015,CO2_FUG,0.2924630914,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,2015,N2O,7.967134294e-06,Tg
+Europe_Non_EU,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Europe_Non_EU,coal,coal,coal,2021,CO2_FUG,0.6876435575,MTC
+Europe_Non_EU,coal,coal,coal,2021,N2O,5.995401382e-06,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2021,CH4,0.6581146287,Tg
+Europe_Non_EU,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3410434174,MTC
+Europe_Non_EU,crude oil,crude oil,crude oil,2021,N2O,8.81607331e-06,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2021,CH4,0.6581146287,Tg
+Europe_Non_EU,natural gas,natural gas,natural gas,2021,CO2_FUG,0.3410434174,MTC
+Europe_Non_EU,natural gas,natural gas,natural gas,2021,N2O,8.81607331e-06,Tg
+European Free Trade Association,coal,coal,coal,1975,CH4,0.7275102859,Tg
+European Free Trade Association,coal,coal,coal,1975,CO2_FUG,6.138817763,MTC
+European Free Trade Association,coal,coal,coal,1975,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,1975,CH4,0.02752790273,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,1975,CO2_FUG,1.942875112,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,1975,N2O,2.833993443e-05,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,1975,CH4,0.02752790273,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,1975,CO2_FUG,1.942875112,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,1975,N2O,2.833993443e-05,Tg
+European Free Trade Association,coal,coal,coal,1990,CH4,0.7786497505,Tg
+European Free Trade Association,coal,coal,coal,1990,CO2_FUG,0.3222317726,MTC
+European Free Trade Association,coal,coal,coal,1990,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,1990,CH4,0.006183884761,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,1990,CO2_FUG,0.1736133895,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,1990,N2O,3.639990058e-06,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,1990,CH4,0.006183884761,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,1990,CO2_FUG,0.1736133895,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,1990,N2O,3.639990058e-06,Tg
+European Free Trade Association,coal,coal,coal,2005,CH4,0.1041431725,Tg
+European Free Trade Association,coal,coal,coal,2005,CO2_FUG,0.1279908273,MTC
+European Free Trade Association,coal,coal,coal,2005,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2005,CH4,0.004283340881,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2005,CO2_FUG,0.08087570341,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,2005,N2O,1.145064895e-06,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2005,CH4,0.004283340881,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2005,CO2_FUG,0.08087570341,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,2005,N2O,1.145064895e-06,Tg
+European Free Trade Association,coal,coal,coal,2010,CH4,0.06778668173,Tg
+European Free Trade Association,coal,coal,coal,2010,CO2_FUG,0.1037141433,MTC
+European Free Trade Association,coal,coal,coal,2010,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2010,CH4,0.00417049041,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2010,CO2_FUG,0.08697237433,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,2010,N2O,1.455586253e-06,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2010,CH4,0.00417049041,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2010,CO2_FUG,0.08697237433,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,2010,N2O,1.455586253e-06,Tg
+European Free Trade Association,coal,coal,coal,2015,CH4,0.1142669147,Tg
+European Free Trade Association,coal,coal,coal,2015,CO2_FUG,0.1031878176,MTC
+European Free Trade Association,coal,coal,coal,2015,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2015,CH4,0.003651268478,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2015,CO2_FUG,0.08463116174,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,2015,N2O,1.159995391e-06,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2015,CH4,0.003651268478,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2015,CO2_FUG,0.08463116174,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,2015,N2O,1.159995391e-06,Tg
+European Free Trade Association,coal,coal,coal,2021,CH4,1.199027732,Tg
+European Free Trade Association,coal,coal,coal,2021,CO2_FUG,0.1047795613,MTC
+European Free Trade Association,coal,coal,coal,2021,N2O,0,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2021,CH4,0.003018229463,Tg
+European Free Trade Association,crude oil,crude oil,crude oil,2021,CO2_FUG,0.05008808402,MTC
+European Free Trade Association,crude oil,crude oil,crude oil,2021,N2O,7.035161797e-07,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2021,CH4,0.003018229463,Tg
+European Free Trade Association,natural gas,natural gas,natural gas,2021,CO2_FUG,0.05008808402,MTC
+European Free Trade Association,natural gas,natural gas,natural gas,2021,N2O,7.035161797e-07,Tg
+India,coal,coal,coal,1975,CH4,0.6404639978,Tg
+India,coal,coal,coal,1975,CO2_FUG,0.08903584833,MTC
+India,coal,coal,coal,1975,N2O,0.000152896038,Tg
+India,crude oil,crude oil,crude oil,1975,CH4,0.4642755657,Tg
+India,crude oil,crude oil,crude oil,1975,CO2_FUG,0.01496786883,MTC
+India,crude oil,crude oil,crude oil,1975,N2O,0.0005229201176,Tg
+India,natural gas,natural gas,natural gas,1975,CH4,0.4642755657,Tg
+India,natural gas,natural gas,natural gas,1975,CO2_FUG,0.01496786883,MTC
+India,natural gas,natural gas,natural gas,1975,N2O,0.0005229201176,Tg
+India,coal,coal,coal,1990,CH4,0.3115710134,Tg
+India,coal,coal,coal,1990,CO2_FUG,0.09531619679,MTC
+India,coal,coal,coal,1990,N2O,7.720965248e-05,Tg
+India,crude oil,crude oil,crude oil,1990,CH4,0.3956458612,Tg
+India,crude oil,crude oil,crude oil,1990,CO2_FUG,0.01255785557,MTC
+India,crude oil,crude oil,crude oil,1990,N2O,0.0001181464996,Tg
+India,natural gas,natural gas,natural gas,1990,CH4,0.3956458612,Tg
+India,natural gas,natural gas,natural gas,1990,CO2_FUG,0.01255785557,MTC
+India,natural gas,natural gas,natural gas,1990,N2O,0.0001181464996,Tg
+India,coal,coal,coal,2005,CH4,0.2876906598,Tg
+India,coal,coal,coal,2005,CO2_FUG,0.6149308956,MTC
+India,coal,coal,coal,2005,N2O,5.446226591e-05,Tg
+India,crude oil,crude oil,crude oil,2005,CH4,0.2614960954,Tg
+India,crude oil,crude oil,crude oil,2005,CO2_FUG,0.01215361609,MTC
+India,crude oil,crude oil,crude oil,2005,N2O,1.210207708e-05,Tg
+India,natural gas,natural gas,natural gas,2005,CH4,0.2614960954,Tg
+India,natural gas,natural gas,natural gas,2005,CO2_FUG,0.01215361609,MTC
+India,natural gas,natural gas,natural gas,2005,N2O,1.051819443e-05,Tg
+India,coal,coal,coal,2010,CH4,0.2852583975,Tg
+India,coal,coal,coal,2010,CO2_FUG,0.2099577363,MTC
+India,coal,coal,coal,2010,N2O,4.856506804e-05,Tg
+India,crude oil,crude oil,crude oil,2010,CH4,0.2668791182,Tg
+India,crude oil,crude oil,crude oil,2010,CO2_FUG,0.01196433441,MTC
+India,crude oil,crude oil,crude oil,2010,N2O,1.252957621e-05,Tg
+India,natural gas,natural gas,natural gas,2010,CH4,0.2668791182,Tg
+India,natural gas,natural gas,natural gas,2010,CO2_FUG,0.01196433441,MTC
+India,natural gas,natural gas,natural gas,2010,N2O,1.117974118e-05,Tg
+India,coal,coal,coal,2015,CH4,0.1762264279,Tg
+India,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+India,coal,coal,coal,2015,N2O,3.488809963e-05,Tg
+India,crude oil,crude oil,crude oil,2015,CH4,0.2619479262,Tg
+India,crude oil,crude oil,crude oil,2015,CO2_FUG,0.4204093273,MTC
+India,crude oil,crude oil,crude oil,2015,N2O,1.910091702e-05,Tg
+India,natural gas,natural gas,natural gas,2015,CH4,0.2619479262,Tg
+India,natural gas,natural gas,natural gas,2015,CO2_FUG,0.4204093273,MTC
+India,natural gas,natural gas,natural gas,2015,N2O,1.613100201e-05,Tg
+India,coal,coal,coal,2021,CH4,0.1855939131,Tg
+India,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+India,coal,coal,coal,2021,N2O,2.71892528e-05,Tg
+India,crude oil,crude oil,crude oil,2021,CH4,0.2882382312,Tg
+India,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3051747891,MTC
+India,crude oil,crude oil,crude oil,2021,N2O,9.914501439e-05,Tg
+India,natural gas,natural gas,natural gas,2021,CH4,0.2882382312,Tg
+India,natural gas,natural gas,natural gas,2021,CO2_FUG,0.3051747891,MTC
+India,natural gas,natural gas,natural gas,2021,N2O,9.914501439e-05,Tg
+Indonesia,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Indonesia,coal,coal,coal,1975,CO2_FUG,0.05321465454,MTC
+Indonesia,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Indonesia,crude oil,crude oil,crude oil,1975,CH4,0.3994002978,Tg
+Indonesia,crude oil,crude oil,crude oil,1975,CO2_FUG,0.8600251415,MTC
+Indonesia,crude oil,crude oil,crude oil,1975,N2O,4.433461777e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,1975,CH4,0.3994002978,Tg
+Indonesia,natural gas,natural gas,natural gas,1975,CO2_FUG,0.8600251415,MTC
+Indonesia,natural gas,natural gas,natural gas,1975,N2O,4.433461777e-05,Tg
+Indonesia,coal,coal,coal,1990,CH4,0.8436359334,Tg
+Indonesia,coal,coal,coal,1990,CO2_FUG,0.05230624693,MTC
+Indonesia,coal,coal,coal,1990,N2O,0.0007386701453,Tg
+Indonesia,crude oil,crude oil,crude oil,1990,CH4,0.3747918358,Tg
+Indonesia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.6269692123,MTC
+Indonesia,crude oil,crude oil,crude oil,1990,N2O,3.222298954e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,1990,CH4,0.3747918358,Tg
+Indonesia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.6269692123,MTC
+Indonesia,natural gas,natural gas,natural gas,1990,N2O,3.222298954e-05,Tg
+Indonesia,coal,coal,coal,2005,CH4,0.2955303249,Tg
+Indonesia,coal,coal,coal,2005,CO2_FUG,0.04918400154,MTC
+Indonesia,coal,coal,coal,2005,N2O,2.221423053e-05,Tg
+Indonesia,crude oil,crude oil,crude oil,2005,CH4,0.3607925457,Tg
+Indonesia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.3446363588,MTC
+Indonesia,crude oil,crude oil,crude oil,2005,N2O,1.781447856e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,2005,CH4,0.3607925457,Tg
+Indonesia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.3446363588,MTC
+Indonesia,natural gas,natural gas,natural gas,2005,N2O,1.781447856e-05,Tg
+Indonesia,coal,coal,coal,2010,CH4,0.3053926957,Tg
+Indonesia,coal,coal,coal,2010,CO2_FUG,0.05483644066,MTC
+Indonesia,coal,coal,coal,2010,N2O,1.132356729e-05,Tg
+Indonesia,crude oil,crude oil,crude oil,2010,CH4,0.3334981518,Tg
+Indonesia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2409355148,MTC
+Indonesia,crude oil,crude oil,crude oil,2010,N2O,1.252957621e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,2010,CH4,0.3334981518,Tg
+Indonesia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2409355148,MTC
+Indonesia,natural gas,natural gas,natural gas,2010,N2O,1.252957621e-05,Tg
+Indonesia,coal,coal,coal,2015,CH4,0.4068810958,Tg
+Indonesia,coal,coal,coal,2015,CO2_FUG,0.07143277463,MTC
+Indonesia,coal,coal,coal,2015,N2O,1.08743879e-05,Tg
+Indonesia,crude oil,crude oil,crude oil,2015,CH4,0.343420671,Tg
+Indonesia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3726616823,MTC
+Indonesia,crude oil,crude oil,crude oil,2015,N2O,1.915555371e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,2015,CH4,0.343420671,Tg
+Indonesia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3726616823,MTC
+Indonesia,natural gas,natural gas,natural gas,2015,N2O,1.915555371e-05,Tg
+Indonesia,coal,coal,coal,2021,CH4,0.4942959963,Tg
+Indonesia,coal,coal,coal,2021,CO2_FUG,0.08862516562,MTC
+Indonesia,coal,coal,coal,2021,N2O,8.547922233e-06,Tg
+Indonesia,crude oil,crude oil,crude oil,2021,CH4,0.4125018037,Tg
+Indonesia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.2686436081,MTC
+Indonesia,crude oil,crude oil,crude oil,2021,N2O,1.739612985e-05,Tg
+Indonesia,natural gas,natural gas,natural gas,2021,CH4,0.4125018037,Tg
+Indonesia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2686436081,MTC
+Indonesia,natural gas,natural gas,natural gas,2021,N2O,1.739612985e-05,Tg
+Japan,coal,coal,coal,1975,CH4,0.9365272241,Tg
+Japan,coal,coal,coal,1975,CO2_FUG,8.657172817,MTC
+Japan,coal,coal,coal,1975,N2O,0,Tg
+Japan,crude oil,crude oil,crude oil,1975,CH4,0.05501444025,Tg
+Japan,crude oil,crude oil,crude oil,1975,CO2_FUG,0.3921115224,MTC
+Japan,crude oil,crude oil,crude oil,1975,N2O,3.60126442e-06,Tg
+Japan,natural gas,natural gas,natural gas,1975,CH4,0.05501444025,Tg
+Japan,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+Japan,natural gas,natural gas,natural gas,1975,N2O,3.60126442e-06,Tg
+Japan,coal,coal,coal,1990,CH4,1.059354876,Tg
+Japan,coal,coal,coal,1990,CO2_FUG,0.6408276453,MTC
+Japan,coal,coal,coal,1990,N2O,3.602447769e-05,Tg
+Japan,crude oil,crude oil,crude oil,1990,CH4,0.08283581148,Tg
+Japan,crude oil,crude oil,crude oil,1990,CO2_FUG,0.4943725007,MTC
+Japan,crude oil,crude oil,crude oil,1990,N2O,3.546499042e-06,Tg
+Japan,natural gas,natural gas,natural gas,1990,CH4,0.08283581148,Tg
+Japan,natural gas,natural gas,natural gas,1990,CO2_FUG,0.4943725007,MTC
+Japan,natural gas,natural gas,natural gas,1990,N2O,3.546499042e-06,Tg
+Japan,coal,coal,coal,2005,CH4,1.037848012,Tg
+Japan,coal,coal,coal,2005,CO2_FUG,0.5606894241,MTC
+Japan,coal,coal,coal,2005,N2O,0.0001325013234,Tg
+Japan,crude oil,crude oil,crude oil,2005,CH4,0.08456260381,Tg
+Japan,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2830269973,MTC
+Japan,crude oil,crude oil,crude oil,2005,N2O,2.509021772e-06,Tg
+Japan,natural gas,natural gas,natural gas,2005,CH4,0.08456260381,Tg
+Japan,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2830269973,MTC
+Japan,natural gas,natural gas,natural gas,2005,N2O,2.509021772e-06,Tg
+Japan,coal,coal,coal,2010,CH4,0.9800625642,Tg
+Japan,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Japan,coal,coal,coal,2010,N2O,0.0001114435532,Tg
+Japan,crude oil,crude oil,crude oil,2010,CH4,0.07735378248,Tg
+Japan,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2603445266,MTC
+Japan,crude oil,crude oil,crude oil,2010,N2O,2.057913937e-06,Tg
+Japan,natural gas,natural gas,natural gas,2010,CH4,0.07735378248,Tg
+Japan,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2506400207,MTC
+Japan,natural gas,natural gas,natural gas,2010,N2O,2.057913937e-06,Tg
+Japan,coal,coal,coal,2015,CH4,0.7187499451,Tg
+Japan,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Japan,coal,coal,coal,2015,N2O,6.774940211e-05,Tg
+Japan,crude oil,crude oil,crude oil,2015,CH4,0.0902346202,Tg
+Japan,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3714865849,MTC
+Japan,crude oil,crude oil,crude oil,2015,N2O,2.354785327e-06,Tg
+Japan,natural gas,natural gas,natural gas,2015,CH4,0.0902346202,Tg
+Japan,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3113449567,MTC
+Japan,natural gas,natural gas,natural gas,2015,N2O,2.354785327e-06,Tg
+Japan,coal,coal,coal,2021,CH4,1.195273442,Tg
+Japan,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+Japan,coal,coal,coal,2021,N2O,9.637124186e-05,Tg
+Japan,crude oil,crude oil,crude oil,2021,CH4,0.09317392655,Tg
+Japan,crude oil,crude oil,crude oil,2021,CO2_FUG,0.9779378733,MTC
+Japan,crude oil,crude oil,crude oil,2021,N2O,2.802768404e-06,Tg
+Japan,natural gas,natural gas,natural gas,2021,CH4,0.09317392655,Tg
+Japan,natural gas,natural gas,natural gas,2021,CO2_FUG,0.9779378733,MTC
+Japan,natural gas,natural gas,natural gas,2021,N2O,2.802768404e-06,Tg
+Mexico,coal,coal,coal,1975,CH4,0.6105440849,Tg
+Mexico,coal,coal,coal,1975,CO2_FUG,7.119390257,MTC
+Mexico,coal,coal,coal,1975,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,1975,CH4,0.1350328387,Tg
+Mexico,crude oil,crude oil,crude oil,1975,CO2_FUG,1.55469112,MTC
+Mexico,crude oil,crude oil,crude oil,1975,N2O,7.908129442e-05,Tg
+Mexico,natural gas,natural gas,natural gas,1975,CH4,0.1350328387,Tg
+Mexico,natural gas,natural gas,natural gas,1975,CO2_FUG,1.55469112,MTC
+Mexico,natural gas,natural gas,natural gas,1975,N2O,7.908129442e-05,Tg
+Mexico,coal,coal,coal,1990,CH4,0.3482022788,Tg
+Mexico,coal,coal,coal,1990,CO2_FUG,1.293851589,MTC
+Mexico,coal,coal,coal,1990,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,1990,CH4,0.1051559721,Tg
+Mexico,crude oil,crude oil,crude oil,1990,CO2_FUG,0.09493288478,MTC
+Mexico,crude oil,crude oil,crude oil,1990,N2O,5.686811755e-06,Tg
+Mexico,natural gas,natural gas,natural gas,1990,CH4,0.1051559721,Tg
+Mexico,natural gas,natural gas,natural gas,1990,CO2_FUG,0.09493288478,MTC
+Mexico,natural gas,natural gas,natural gas,1990,N2O,5.686811755e-06,Tg
+Mexico,coal,coal,coal,2005,CH4,0.2379825992,Tg
+Mexico,coal,coal,coal,2005,CO2_FUG,0.6907639356,MTC
+Mexico,coal,coal,coal,2005,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,2005,CH4,0.114210976,Tg
+Mexico,crude oil,crude oil,crude oil,2005,CO2_FUG,0.1130900597,MTC
+Mexico,crude oil,crude oil,crude oil,2005,N2O,6.563439928e-06,Tg
+Mexico,natural gas,natural gas,natural gas,2005,CH4,0.114210976,Tg
+Mexico,natural gas,natural gas,natural gas,2005,CO2_FUG,0.1130900597,MTC
+Mexico,natural gas,natural gas,natural gas,2005,N2O,6.563439928e-06,Tg
+Mexico,coal,coal,coal,2010,CH4,0.2428309577,Tg
+Mexico,coal,coal,coal,2010,CO2_FUG,0.6645301031,MTC
+Mexico,coal,coal,coal,2010,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,2010,CH4,0.1457027213,Tg
+Mexico,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1888746357,MTC
+Mexico,crude oil,crude oil,crude oil,2010,N2O,1.030394136e-05,Tg
+Mexico,natural gas,natural gas,natural gas,2010,CH4,0.1457027213,Tg
+Mexico,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1888746357,MTC
+Mexico,natural gas,natural gas,natural gas,2010,N2O,1.030394136e-05,Tg
+Mexico,coal,coal,coal,2015,CH4,0.1504500439,Tg
+Mexico,coal,coal,coal,2015,CO2_FUG,0.5465649395,MTC
+Mexico,coal,coal,coal,2015,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,2015,CH4,0.1477843337,Tg
+Mexico,crude oil,crude oil,crude oil,2015,CO2_FUG,0.4075635672,MTC
+Mexico,crude oil,crude oil,crude oil,2015,N2O,2.132978492e-05,Tg
+Mexico,natural gas,natural gas,natural gas,2015,CH4,0.1477843337,Tg
+Mexico,natural gas,natural gas,natural gas,2015,CO2_FUG,0.4075635672,MTC
+Mexico,natural gas,natural gas,natural gas,2015,N2O,2.132978492e-05,Tg
+Mexico,coal,coal,coal,2021,CH4,0.4040689843,Tg
+Mexico,coal,coal,coal,2021,CO2_FUG,4.059825103,MTC
+Mexico,coal,coal,coal,2021,N2O,0,Tg
+Mexico,crude oil,crude oil,crude oil,2021,CH4,0.1499692391,Tg
+Mexico,crude oil,crude oil,crude oil,2021,CO2_FUG,0.649470424,MTC
+Mexico,crude oil,crude oil,crude oil,2021,N2O,2.076043518e-05,Tg
+Mexico,natural gas,natural gas,natural gas,2021,CH4,0.1499692391,Tg
+Mexico,natural gas,natural gas,natural gas,2021,CO2_FUG,0.649470424,MTC
+Mexico,natural gas,natural gas,natural gas,2021,N2O,2.076043518e-05,Tg
+Middle East,coal,coal,coal,1975,CH4,1.217188431,Tg
+Middle East,coal,coal,coal,1975,CO2_FUG,8.763550785,MTC
+Middle East,coal,coal,coal,1975,N2O,0.0005318356077,Tg
+Middle East,crude oil,crude oil,crude oil,1975,CH4,0.3165871801,Tg
+Middle East,crude oil,crude oil,crude oil,1975,CO2_FUG,1.374241997,MTC
+Middle East,crude oil,crude oil,crude oil,1975,N2O,7.019911522e-05,Tg
+Middle East,natural gas,natural gas,natural gas,1975,CH4,0.3165871801,Tg
+Middle East,natural gas,natural gas,natural gas,1975,CO2_FUG,1.374241997,MTC
+Middle East,natural gas,natural gas,natural gas,1975,N2O,7.019911522e-05,Tg
+Middle East,coal,coal,coal,1990,CH4,1.29383406,Tg
+Middle East,coal,coal,coal,1990,CO2_FUG,4.788926512,MTC
+Middle East,coal,coal,coal,1990,N2O,0.0005456415984,Tg
+Middle East,crude oil,crude oil,crude oil,1990,CH4,0.2854755411,Tg
+Middle East,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3972021107,MTC
+Middle East,crude oil,crude oil,crude oil,1990,N2O,2.13739255e-05,Tg
+Middle East,natural gas,natural gas,natural gas,1990,CH4,0.2854755411,Tg
+Middle East,natural gas,natural gas,natural gas,1990,CO2_FUG,0.3972021107,MTC
+Middle East,natural gas,natural gas,natural gas,1990,N2O,2.13739255e-05,Tg
+Middle East,coal,coal,coal,2005,CH4,0.9405791162,Tg
+Middle East,coal,coal,coal,2005,CO2_FUG,3.084311562,MTC
+Middle East,coal,coal,coal,2005,N2O,0.0002432322589,Tg
+Middle East,crude oil,crude oil,crude oil,2005,CH4,0.2551022942,Tg
+Middle East,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2919474986,MTC
+Middle East,crude oil,crude oil,crude oil,2005,N2O,1.556232186e-05,Tg
+Middle East,natural gas,natural gas,natural gas,2005,CH4,0.2551022942,Tg
+Middle East,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2919474986,MTC
+Middle East,natural gas,natural gas,natural gas,2005,N2O,1.556232186e-05,Tg
+Middle East,coal,coal,coal,2010,CH4,1.088972618,Tg
+Middle East,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Middle East,coal,coal,coal,2010,N2O,0.0003313442443,Tg
+Middle East,crude oil,crude oil,crude oil,2010,CH4,0.2564885108,Tg
+Middle East,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2603445266,MTC
+Middle East,crude oil,crude oil,crude oil,2010,N2O,1.387610588e-05,Tg
+Middle East,natural gas,natural gas,natural gas,2010,CH4,0.2564885108,Tg
+Middle East,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2603445266,MTC
+Middle East,natural gas,natural gas,natural gas,2010,N2O,1.387610588e-05,Tg
+Middle East,coal,coal,coal,2015,CH4,1.074474778,Tg
+Middle East,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Middle East,coal,coal,coal,2015,N2O,0.0003320794524,Tg
+Middle East,crude oil,crude oil,crude oil,2015,CH4,0.2471191728,Tg
+Middle East,crude oil,crude oil,crude oil,2015,CO2_FUG,0.260173179,MTC
+Middle East,crude oil,crude oil,crude oil,2015,N2O,1.386073134e-05,Tg
+Middle East,natural gas,natural gas,natural gas,2015,CH4,0.2471191728,Tg
+Middle East,natural gas,natural gas,natural gas,2015,CO2_FUG,0.260173179,MTC
+Middle East,natural gas,natural gas,natural gas,2015,N2O,1.386073134e-05,Tg
+Middle East,coal,coal,coal,2021,CH4,0.9291096484,Tg
+Middle East,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+Middle East,coal,coal,coal,2021,N2O,0.0003364280816,Tg
+Middle East,crude oil,crude oil,crude oil,2021,CH4,0.270978588,Tg
+Middle East,crude oil,crude oil,crude oil,2021,CO2_FUG,0.300473807,MTC
+Middle East,crude oil,crude oil,crude oil,2021,N2O,1.588689694e-05,Tg
+Middle East,natural gas,natural gas,natural gas,2021,CH4,0.270978588,Tg
+Middle East,natural gas,natural gas,natural gas,2021,CO2_FUG,0.300473807,MTC
+Middle East,natural gas,natural gas,natural gas,2021,N2O,1.588689694e-05,Tg
+Pakistan,coal,coal,coal,1975,CH4,1.093663169,Tg
+Pakistan,coal,coal,coal,1975,CO2_FUG,0.1993048117,MTC
+Pakistan,coal,coal,coal,1975,N2O,0.0005914977545,Tg
+Pakistan,crude oil,crude oil,crude oil,1975,CH4,0.553719899,Tg
+Pakistan,crude oil,crude oil,crude oil,1975,CO2_FUG,0.00145325945,MTC
+Pakistan,crude oil,crude oil,crude oil,1975,N2O,1.659081046e-07,Tg
+Pakistan,natural gas,natural gas,natural gas,1975,CH4,0.553719899,Tg
+Pakistan,natural gas,natural gas,natural gas,1975,CO2_FUG,0.00145325945,MTC
+Pakistan,natural gas,natural gas,natural gas,1975,N2O,1.659081046e-07,Tg
+Pakistan,coal,coal,coal,1990,CH4,0.8548241155,Tg
+Pakistan,coal,coal,coal,1990,CO2_FUG,3.36007116,MTC
+Pakistan,coal,coal,coal,1990,N2O,0.0004163038897,Tg
+Pakistan,crude oil,crude oil,crude oil,1990,CH4,0.7771551379,Tg
+Pakistan,crude oil,crude oil,crude oil,1990,CO2_FUG,0.003430697773,MTC
+Pakistan,crude oil,crude oil,crude oil,1990,N2O,3.92388892e-07,Tg
+Pakistan,natural gas,natural gas,natural gas,1990,CH4,0.7771551379,Tg
+Pakistan,natural gas,natural gas,natural gas,1990,CO2_FUG,0.003430697773,MTC
+Pakistan,natural gas,natural gas,natural gas,1990,N2O,3.92388892e-07,Tg
+Pakistan,coal,coal,coal,2005,CH4,0.7760073264,Tg
+Pakistan,coal,coal,coal,2005,CO2_FUG,1.046883701,MTC
+Pakistan,coal,coal,coal,2005,N2O,0.0004080029234,Tg
+Pakistan,crude oil,crude oil,crude oil,2005,CH4,0.5483722507,Tg
+Pakistan,crude oil,crude oil,crude oil,2005,CO2_FUG,0.002001390685,MTC
+Pakistan,crude oil,crude oil,crude oil,2005,N2O,2.288627841e-07,Tg
+Pakistan,natural gas,natural gas,natural gas,2005,CH4,0.5483722507,Tg
+Pakistan,natural gas,natural gas,natural gas,2005,CO2_FUG,0.002001390685,MTC
+Pakistan,natural gas,natural gas,natural gas,2005,N2O,2.288627841e-07,Tg
+Pakistan,coal,coal,coal,2010,CH4,0.9912902867,Tg
+Pakistan,coal,coal,coal,2010,CO2_FUG,1.109903661,MTC
+Pakistan,coal,coal,coal,2010,N2O,0.0006306504248,Tg
+Pakistan,crude oil,crude oil,crude oil,2010,CH4,0.5150324196,Tg
+Pakistan,crude oil,crude oil,crude oil,2010,CO2_FUG,0.001848727641,MTC
+Pakistan,crude oil,crude oil,crude oil,2010,N2O,2.114172065e-07,Tg
+Pakistan,natural gas,natural gas,natural gas,2010,CH4,0.5150324196,Tg
+Pakistan,natural gas,natural gas,natural gas,2010,CO2_FUG,0.001848727641,MTC
+Pakistan,natural gas,natural gas,natural gas,2010,N2O,2.114172065e-07,Tg
+Pakistan,coal,coal,coal,2015,CH4,0.9783544556,Tg
+Pakistan,coal,coal,coal,2015,CO2_FUG,0.09135965051,MTC
+Pakistan,coal,coal,coal,2015,N2O,0.0005481135177,Tg
+Pakistan,crude oil,crude oil,crude oil,2015,CH4,0.532079782,Tg
+Pakistan,crude oil,crude oil,crude oil,2015,CO2_FUG,0.1786246557,MTC
+Pakistan,crude oil,crude oil,crude oil,2015,N2O,9.161969999e-06,Tg
+Pakistan,natural gas,natural gas,natural gas,2015,CH4,0.532079782,Tg
+Pakistan,natural gas,natural gas,natural gas,2015,CO2_FUG,0.1786246557,MTC
+Pakistan,natural gas,natural gas,natural gas,2015,N2O,9.161969999e-06,Tg
+Pakistan,coal,coal,coal,2021,CH4,0.6172403084,Tg
+Pakistan,coal,coal,coal,2021,CO2_FUG,0.06018269443,MTC
+Pakistan,coal,coal,coal,2021,N2O,0.000308372766,Tg
+Pakistan,crude oil,crude oil,crude oil,2021,CH4,0.5487841667,Tg
+Pakistan,crude oil,crude oil,crude oil,2021,CO2_FUG,0.08953191089,MTC
+Pakistan,crude oil,crude oil,crude oil,2021,N2O,6.033500329e-06,Tg
+Pakistan,natural gas,natural gas,natural gas,2021,CH4,0.5487841667,Tg
+Pakistan,natural gas,natural gas,natural gas,2021,CO2_FUG,0.08953191089,MTC
+Pakistan,natural gas,natural gas,natural gas,2021,N2O,6.033500329e-06,Tg
+Russia,coal,coal,coal,1975,CH4,0.4799711504,Tg
+Russia,coal,coal,coal,1975,CO2_FUG,4.421413838,MTC
+Russia,coal,coal,coal,1975,N2O,0,Tg
+Russia,crude oil,crude oil,crude oil,1975,CH4,1.175353086,Tg
+Russia,crude oil,crude oil,crude oil,1975,CO2_FUG,0.410696068,MTC
+Russia,crude oil,crude oil,crude oil,1975,N2O,1.136796577e-05,Tg
+Russia,natural gas,natural gas,natural gas,1975,CH4,1.175353086,Tg
+Russia,natural gas,natural gas,natural gas,1975,CO2_FUG,0.410696068,MTC
+Russia,natural gas,natural gas,natural gas,1975,N2O,1.136796577e-05,Tg
+Russia,coal,coal,coal,1990,CH4,0.3904506918,Tg
+Russia,coal,coal,coal,1990,CO2_FUG,0.9004125309,MTC
+Russia,coal,coal,coal,1990,N2O,0,Tg
+Russia,crude oil,crude oil,crude oil,1990,CH4,0.518387426,Tg
+Russia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.2076426763,MTC
+Russia,crude oil,crude oil,crude oil,1990,N2O,6.773687466e-06,Tg
+Russia,natural gas,natural gas,natural gas,1990,CH4,0.518387426,Tg
+Russia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.2076426763,MTC
+Russia,natural gas,natural gas,natural gas,1990,N2O,6.773687466e-06,Tg
+Russia,coal,coal,coal,2005,CH4,0.3425452158,Tg
+Russia,coal,coal,coal,2005,CO2_FUG,1.051624003,MTC
+Russia,coal,coal,coal,2005,N2O,0,Tg
+Russia,crude oil,crude oil,crude oil,2005,CH4,0.3758510687,Tg
+Russia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2741064961,MTC
+Russia,crude oil,crude oil,crude oil,2005,N2O,8.841066726e-06,Tg
+Russia,natural gas,natural gas,natural gas,2005,CH4,0.3758510687,Tg
+Russia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2741064961,MTC
+Russia,natural gas,natural gas,natural gas,2005,N2O,8.841066726e-06,Tg
+Russia,coal,coal,coal,2010,CH4,0.3364324925,Tg
+Russia,coal,coal,coal,2010,CO2_FUG,0.8267052629,MTC
+Russia,coal,coal,coal,2010,N2O,0,Tg
+Russia,crude oil,crude oil,crude oil,2010,CH4,0.3398295534,Tg
+Russia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2913587761,MTC
+Russia,crude oil,crude oil,crude oil,2010,N2O,9.281716012e-06,Tg
+Russia,natural gas,natural gas,natural gas,2010,CH4,0.3398295534,Tg
+Russia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2913587761,MTC
+Russia,natural gas,natural gas,natural gas,2010,N2O,9.281716012e-06,Tg
+Russia,coal,coal,coal,2015,CH4,0.342435561,Tg
+Russia,coal,coal,coal,2015,CO2_FUG,1.405022264,MTC
+Russia,coal,coal,coal,2015,N2O,9.819630442e-07,Tg
+Russia,crude oil,crude oil,crude oil,2015,CH4,0.3234970228,Tg
+Russia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.2020677692,MTC
+Russia,crude oil,crude oil,crude oil,2015,N2O,6.553696918e-06,Tg
+Russia,natural gas,natural gas,natural gas,2015,CH4,0.3234970228,Tg
+Russia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.2020677692,MTC
+Russia,natural gas,natural gas,natural gas,2015,N2O,6.553696918e-06,Tg
+Russia,coal,coal,coal,2021,CH4,0.3535492087,Tg
+Russia,coal,coal,coal,2021,CO2_FUG,1.239514752,MTC
+Russia,coal,coal,coal,2021,N2O,6.932581572e-07,Tg
+Russia,crude oil,crude oil,crude oil,2021,CH4,0.2404022917,Tg
+Russia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3195607324,MTC
+Russia,crude oil,crude oil,crude oil,2021,N2O,1.015809937e-05,Tg
+Russia,natural gas,natural gas,natural gas,2021,CH4,0.2404022917,Tg
+Russia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.3195607324,MTC
+Russia,natural gas,natural gas,natural gas,2021,N2O,1.015809937e-05,Tg
+South Africa,coal,coal,coal,1975,CH4,0.3240998816,Tg
+South Africa,coal,coal,coal,1975,CO2_FUG,2.09303108,MTC
+South Africa,coal,coal,coal,1975,N2O,6.423405938e-06,Tg
+South Africa,crude oil,crude oil,crude oil,1975,CH4,0.3357078142,Tg
+South Africa,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4768641847,MTC
+South Africa,crude oil,crude oil,crude oil,1975,N2O,2.714461555e-05,Tg
+South Africa,natural gas,natural gas,natural gas,1975,CH4,0.3548284482,Tg
+South Africa,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+South Africa,natural gas,natural gas,natural gas,1975,N2O,1.591344855e-05,Tg
+South Africa,coal,coal,coal,1990,CH4,0.2910698227,Tg
+South Africa,coal,coal,coal,1990,CO2_FUG,3.903288301,MTC
+South Africa,coal,coal,coal,1990,N2O,3.853648431e-05,Tg
+South Africa,crude oil,crude oil,crude oil,1990,CH4,0.3788745976,Tg
+South Africa,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3265117344,MTC
+South Africa,crude oil,crude oil,crude oil,1990,N2O,1.752284462e-05,Tg
+South Africa,natural gas,natural gas,natural gas,1990,CH4,1.029520557,Tg
+South Africa,natural gas,natural gas,natural gas,1990,CO2_FUG,7.810861115e-05,MTC
+South Africa,natural gas,natural gas,natural gas,1990,N2O,4.677706778e-07,Tg
+South Africa,coal,coal,coal,2005,CH4,0.2457825844,Tg
+South Africa,coal,coal,coal,2005,CO2_FUG,2.125309769,MTC
+South Africa,coal,coal,coal,2005,N2O,1.485492831e-05,Tg
+South Africa,crude oil,crude oil,crude oil,2005,CH4,0.6537541237,Tg
+South Africa,crude oil,crude oil,crude oil,2005,CO2_FUG,0.6868188002,MTC
+South Africa,crude oil,crude oil,crude oil,2005,N2O,3.490119238e-05,Tg
+South Africa,natural gas,natural gas,natural gas,2005,CH4,0.6537541237,Tg
+South Africa,natural gas,natural gas,natural gas,2005,CO2_FUG,0.6868188002,MTC
+South Africa,natural gas,natural gas,natural gas,2005,N2O,3.490119238e-05,Tg
+South Africa,coal,coal,coal,2010,CH4,0.2492187169,Tg
+South Africa,coal,coal,coal,2010,CO2_FUG,1.128248376,MTC
+South Africa,coal,coal,coal,2010,N2O,1.311744382e-05,Tg
+South Africa,crude oil,crude oil,crude oil,2010,CH4,0.720187602,Tg
+South Africa,crude oil,crude oil,crude oil,2010,CO2_FUG,0.7130951395,MTC
+South Africa,crude oil,crude oil,crude oil,2010,N2O,3.617408138e-05,Tg
+South Africa,natural gas,natural gas,natural gas,2010,CH4,0.720187602,Tg
+South Africa,natural gas,natural gas,natural gas,2010,CO2_FUG,0.7130951395,MTC
+South Africa,natural gas,natural gas,natural gas,2010,N2O,3.617408138e-05,Tg
+South Africa,coal,coal,coal,2015,CH4,0.2457853604,Tg
+South Africa,coal,coal,coal,2015,CO2_FUG,0.9463246197,MTC
+South Africa,coal,coal,coal,2015,N2O,9.199917201e-06,Tg
+South Africa,crude oil,crude oil,crude oil,2015,CH4,1.220536366,Tg
+South Africa,crude oil,crude oil,crude oil,2015,CO2_FUG,0.229312926,MTC
+South Africa,crude oil,crude oil,crude oil,2015,N2O,1.184195547e-05,Tg
+South Africa,natural gas,natural gas,natural gas,2015,CH4,1.220536366,Tg
+South Africa,natural gas,natural gas,natural gas,2015,CO2_FUG,0.229312926,MTC
+South Africa,natural gas,natural gas,natural gas,2015,N2O,1.184195547e-05,Tg
+South Africa,coal,coal,coal,2021,CH4,0.249068791,Tg
+South Africa,coal,coal,coal,2021,CO2_FUG,0.7055926624,MTC
+South Africa,coal,coal,coal,2021,N2O,1.054332631e-05,Tg
+South Africa,crude oil,crude oil,crude oil,2021,CH4,0.2913145836,Tg
+South Africa,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3051747891,MTC
+South Africa,crude oil,crude oil,crude oil,2021,N2O,1.588689694e-05,Tg
+South Africa,natural gas,natural gas,natural gas,2021,CH4,0.3520987884,Tg
+South Africa,natural gas,natural gas,natural gas,2021,CO2_FUG,0.300473807,MTC
+South Africa,natural gas,natural gas,natural gas,2021,N2O,1.464392226e-05,Tg
+South America_Northern,coal,coal,coal,1975,CH4,1.436139052,Tg
+South America_Northern,coal,coal,coal,1975,CO2_FUG,0.1036873547,MTC
+South America_Northern,coal,coal,coal,1975,N2O,0.001069039644,Tg
+South America_Northern,crude oil,crude oil,crude oil,1975,CH4,1.401826347,Tg
+South America_Northern,crude oil,crude oil,crude oil,1975,CO2_FUG,0.07660212822,MTC
+South America_Northern,crude oil,crude oil,crude oil,1975,N2O,4.85418639e-06,Tg
+South America_Northern,natural gas,natural gas,natural gas,1975,CH4,1.401826347,Tg
+South America_Northern,natural gas,natural gas,natural gas,1975,CO2_FUG,0.07660212822,MTC
+South America_Northern,natural gas,natural gas,natural gas,1975,N2O,4.85418639e-06,Tg
+South America_Northern,coal,coal,coal,1990,CH4,0.6749646731,Tg
+South America_Northern,coal,coal,coal,1990,CO2_FUG,0.2094972308,MTC
+South America_Northern,coal,coal,coal,1990,N2O,4.373908445e-05,Tg
+South America_Northern,crude oil,crude oil,crude oil,1990,CH4,1.319771858,Tg
+South America_Northern,crude oil,crude oil,crude oil,1990,CO2_FUG,0.09659472321,MTC
+South America_Northern,crude oil,crude oil,crude oil,1990,N2O,5.780144856e-06,Tg
+South America_Northern,natural gas,natural gas,natural gas,1990,CH4,1.319771858,Tg
+South America_Northern,natural gas,natural gas,natural gas,1990,CO2_FUG,0.09659472321,MTC
+South America_Northern,natural gas,natural gas,natural gas,1990,N2O,5.780144856e-06,Tg
+South America_Northern,coal,coal,coal,2005,CH4,0.6476431924,Tg
+South America_Northern,coal,coal,coal,2005,CO2_FUG,0.1021220691,MTC
+South America_Northern,coal,coal,coal,2005,N2O,1.207670483e-05,Tg
+South America_Northern,crude oil,crude oil,crude oil,2005,CH4,0.3297787443,Tg
+South America_Northern,crude oil,crude oil,crude oil,2005,CO2_FUG,0.1873798112,MTC
+South America_Northern,crude oil,crude oil,crude oil,2005,N2O,1.086515909e-05,Tg
+South America_Northern,natural gas,natural gas,natural gas,2005,CH4,0.3558697797,Tg
+South America_Northern,natural gas,natural gas,natural gas,2005,CO2_FUG,0.16438476,MTC
+South America_Northern,natural gas,natural gas,natural gas,2005,N2O,9.220690342e-06,Tg
+South America_Northern,coal,coal,coal,2010,CH4,0.6805172475,Tg
+South America_Northern,coal,coal,coal,2010,CO2_FUG,0.1036907353,MTC
+South America_Northern,coal,coal,coal,2010,N2O,3.444997468e-05,Tg
+South America_Northern,crude oil,crude oil,crude oil,2010,CH4,0.2950750862,Tg
+South America_Northern,crude oil,crude oil,crude oil,2010,CO2_FUG,0.2590085033,MTC
+South America_Northern,crude oil,crude oil,crude oil,2010,N2O,1.447848614e-05,Tg
+South America_Northern,natural gas,natural gas,natural gas,2010,CH4,1.353720393,Tg
+South America_Northern,natural gas,natural gas,natural gas,2010,CO2_FUG,0.2213591562,MTC
+South America_Northern,natural gas,natural gas,natural gas,2010,N2O,1.2055541e-05,Tg
+South America_Northern,coal,coal,coal,2015,CH4,0.6852346182,Tg
+South America_Northern,coal,coal,coal,2015,CO2_FUG,0.09225780103,MTC
+South America_Northern,coal,coal,coal,2015,N2O,0.0001070205619,Tg
+South America_Northern,crude oil,crude oil,crude oil,2015,CH4,0.3010534772,Tg
+South America_Northern,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3714865849,MTC
+South America_Northern,crude oil,crude oil,crude oil,2015,N2O,4.938657972e-05,Tg
+South America_Northern,natural gas,natural gas,natural gas,2015,CH4,1.354950878,Tg
+South America_Northern,natural gas,natural gas,natural gas,2015,CO2_FUG,0.7707075239,MTC
+South America_Northern,natural gas,natural gas,natural gas,2015,N2O,3.970250763e-05,Tg
+South America_Northern,coal,coal,coal,2021,CH4,0.7951834388,Tg
+South America_Northern,coal,coal,coal,2021,CO2_FUG,0.0685455533,MTC
+South America_Northern,coal,coal,coal,2021,N2O,0.0003350627051,Tg
+South America_Northern,crude oil,crude oil,crude oil,2021,CH4,1.505963204,Tg
+South America_Northern,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3051747891,MTC
+South America_Northern,crude oil,crude oil,crude oil,2021,N2O,1.588689694e-05,Tg
+South America_Northern,natural gas,natural gas,natural gas,2021,CH4,1.023468548,Tg
+South America_Northern,natural gas,natural gas,natural gas,2021,CO2_FUG,0.300473807,MTC
+South America_Northern,natural gas,natural gas,natural gas,2021,N2O,1.464392226e-05,Tg
+South America_Southern,coal,coal,coal,1975,CH4,1.176907449,Tg
+South America_Southern,coal,coal,coal,1975,CO2_FUG,2.91903514,MTC
+South America_Southern,coal,coal,coal,1975,N2O,0.0008151780076,Tg
+South America_Southern,crude oil,crude oil,crude oil,1975,CH4,1.93421095,Tg
+South America_Southern,crude oil,crude oil,crude oil,1975,CO2_FUG,3.515225925,MTC
+South America_Southern,crude oil,crude oil,crude oil,1975,N2O,0.0001778144565,Tg
+South America_Southern,natural gas,natural gas,natural gas,1975,CH4,1.93421095,Tg
+South America_Southern,natural gas,natural gas,natural gas,1975,CO2_FUG,3.515225925,MTC
+South America_Southern,natural gas,natural gas,natural gas,1975,N2O,0.0001778144565,Tg
+South America_Southern,coal,coal,coal,1990,CH4,1.37107329,Tg
+South America_Southern,coal,coal,coal,1990,CO2_FUG,0.9903177164,MTC
+South America_Southern,coal,coal,coal,1990,N2O,0.001071335564,Tg
+South America_Southern,crude oil,crude oil,crude oil,1990,CH4,1.319866129,Tg
+South America_Southern,crude oil,crude oil,crude oil,1990,CO2_FUG,1.22612845,MTC
+South America_Southern,crude oil,crude oil,crude oil,1990,N2O,6.25843879e-05,Tg
+South America_Southern,natural gas,natural gas,natural gas,1990,CH4,1.319866129,Tg
+South America_Southern,natural gas,natural gas,natural gas,1990,CO2_FUG,1.22612845,MTC
+South America_Southern,natural gas,natural gas,natural gas,1990,N2O,6.25843879e-05,Tg
+South America_Southern,coal,coal,coal,2005,CH4,0.2667366221,Tg
+South America_Southern,coal,coal,coal,2005,CO2_FUG,4.612376245,MTC
+South America_Southern,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+South America_Southern,crude oil,crude oil,crude oil,2005,CH4,0.8645833379,Tg
+South America_Southern,crude oil,crude oil,crude oil,2005,CO2_FUG,0.4907713689,MTC
+South America_Southern,crude oil,crude oil,crude oil,2005,N2O,2.545831701e-05,Tg
+South America_Southern,natural gas,natural gas,natural gas,2005,CH4,0.8645833379,Tg
+South America_Southern,natural gas,natural gas,natural gas,2005,CO2_FUG,0.4907713689,MTC
+South America_Southern,natural gas,natural gas,natural gas,2005,N2O,2.545831701e-05,Tg
+South America_Southern,coal,coal,coal,2010,CH4,0.2492187169,Tg
+South America_Southern,coal,coal,coal,2010,CO2_FUG,2.185435584,MTC
+South America_Southern,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+South America_Southern,crude oil,crude oil,crude oil,2010,CH4,0.651986451,Tg
+South America_Southern,crude oil,crude oil,crude oil,2010,CO2_FUG,0.4438554624,MTC
+South America_Southern,crude oil,crude oil,crude oil,2010,N2O,2.297030085e-05,Tg
+South America_Southern,natural gas,natural gas,natural gas,2010,CH4,0.651986451,Tg
+South America_Southern,natural gas,natural gas,natural gas,2010,CO2_FUG,0.4438554624,MTC
+South America_Southern,natural gas,natural gas,natural gas,2010,N2O,2.297030085e-05,Tg
+South America_Southern,coal,coal,coal,2015,CH4,1.708364653,Tg
+South America_Southern,coal,coal,coal,2015,CO2_FUG,0.3761646447,MTC
+South America_Southern,coal,coal,coal,2015,N2O,0.001516586169,Tg
+South America_Southern,crude oil,crude oil,crude oil,2015,CH4,0.6075843073,Tg
+South America_Southern,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3113449567,MTC
+South America_Southern,crude oil,crude oil,crude oil,2015,N2O,1.623764414e-05,Tg
+South America_Southern,natural gas,natural gas,natural gas,2015,CH4,0.6075843073,Tg
+South America_Southern,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3113449567,MTC
+South America_Southern,natural gas,natural gas,natural gas,2015,N2O,1.623764414e-05,Tg
+South America_Southern,coal,coal,coal,2021,CH4,0.2969543632,Tg
+South America_Southern,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+South America_Southern,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+South America_Southern,crude oil,crude oil,crude oil,2021,CH4,0.5910758001,Tg
+South America_Southern,crude oil,crude oil,crude oil,2021,CO2_FUG,0.3592743119,MTC
+South America_Southern,crude oil,crude oil,crude oil,2021,N2O,1.464392226e-05,Tg
+South America_Southern,natural gas,natural gas,natural gas,2021,CH4,0.5910758001,Tg
+South America_Southern,natural gas,natural gas,natural gas,2021,CO2_FUG,0.3592743119,MTC
+South America_Southern,natural gas,natural gas,natural gas,2021,N2O,1.464392226e-05,Tg
+South Asia,coal,coal,coal,1975,CH4,0.2372251949,Tg
+South Asia,coal,coal,coal,1975,CO2_FUG,0.0006481189383,MTC
+South Asia,coal,coal,coal,1975,N2O,8.563088135e-05,Tg
+South Asia,crude oil,crude oil,crude oil,1975,CH4,0.3357078142,Tg
+South Asia,crude oil,crude oil,crude oil,1975,CO2_FUG,1.106403993,MTC
+South Asia,crude oil,crude oil,crude oil,1975,N2O,5.568414377e-05,Tg
+South Asia,natural gas,natural gas,natural gas,1975,CH4,6.987803798,Tg
+South Asia,natural gas,natural gas,natural gas,1975,CO2_FUG,1.106403993,MTC
+South Asia,natural gas,natural gas,natural gas,1975,N2O,5.568414377e-05,Tg
+South Asia,coal,coal,coal,1990,CH4,0.3298866461,Tg
+South Asia,coal,coal,coal,1990,CO2_FUG,0.1577775314,MTC
+South Asia,coal,coal,coal,1990,N2O,0.007329942946,Tg
+South Asia,crude oil,crude oil,crude oil,1990,CH4,0.3788745976,Tg
+South Asia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.02812413945,MTC
+South Asia,crude oil,crude oil,crude oil,1990,N2O,1.429879337e-06,Tg
+South Asia,natural gas,natural gas,natural gas,1990,CH4,2.099589215,Tg
+South Asia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.02812413945,MTC
+South Asia,natural gas,natural gas,natural gas,1990,N2O,1.429879337e-06,Tg
+South Asia,coal,coal,coal,2005,CH4,0.2667366221,Tg
+South Asia,coal,coal,coal,2005,CO2_FUG,0.1164662927,MTC
+South Asia,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+South Asia,crude oil,crude oil,crude oil,2005,CH4,0.5810693691,Tg
+South Asia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.0001136256285,MTC
+South Asia,crude oil,crude oil,crude oil,2005,N2O,6.118289693e-07,Tg
+South Asia,natural gas,natural gas,natural gas,2005,CH4,0.5810693691,Tg
+South Asia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.0001136256285,MTC
+South Asia,natural gas,natural gas,natural gas,2005,N2O,6.118289693e-07,Tg
+South Asia,coal,coal,coal,2010,CH4,1.770689885,Tg
+South Asia,coal,coal,coal,2010,CO2_FUG,0.2287188453,MTC
+South Asia,coal,coal,coal,2010,N2O,0.001125804973,Tg
+South Asia,crude oil,crude oil,crude oil,2010,CH4,1.068442679,Tg
+South Asia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.0001620886803,MTC
+South Asia,crude oil,crude oil,crude oil,2010,N2O,4.689814288e-07,Tg
+South Asia,natural gas,natural gas,natural gas,2010,CH4,1.068442679,Tg
+South Asia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.0001620886803,MTC
+South Asia,natural gas,natural gas,natural gas,2010,N2O,4.689814288e-07,Tg
+South Asia,coal,coal,coal,2015,CH4,1.490463936,Tg
+South Asia,coal,coal,coal,2015,CO2_FUG,0.2158995375,MTC
+South Asia,coal,coal,coal,2015,N2O,0.0007826123238,Tg
+South Asia,crude oil,crude oil,crude oil,2015,CH4,0.7299475112,Tg
+South Asia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.01093704485,MTC
+South Asia,crude oil,crude oil,crude oil,2015,N2O,9.204783152e-07,Tg
+South Asia,natural gas,natural gas,natural gas,2015,CH4,0.7299475112,Tg
+South Asia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.01093704485,MTC
+South Asia,natural gas,natural gas,natural gas,2015,N2O,9.204783152e-07,Tg
+South Asia,coal,coal,coal,2021,CH4,1.236232775,Tg
+South Asia,coal,coal,coal,2021,CO2_FUG,0.2063000189,MTC
+South Asia,coal,coal,coal,2021,N2O,0.0005594829577,Tg
+South Asia,crude oil,crude oil,crude oil,2021,CH4,0.4836528605,Tg
+South Asia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.009667443913,MTC
+South Asia,crude oil,crude oil,crude oil,2021,N2O,6.38998405e-07,Tg
+South Asia,natural gas,natural gas,natural gas,2021,CH4,0.4836528605,Tg
+South Asia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.009667443913,MTC
+South Asia,natural gas,natural gas,natural gas,2021,N2O,6.38998405e-07,Tg
+South Korea,coal,coal,coal,1975,CH4,0.8560769922,Tg
+South Korea,coal,coal,coal,1975,CO2_FUG,3.124762913,MTC
+South Korea,coal,coal,coal,1975,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,1975,CH4,0.3357078142,Tg
+South Korea,crude oil,crude oil,crude oil,1975,CO2_FUG,0.4768641847,MTC
+South Korea,crude oil,crude oil,crude oil,1975,N2O,2.714461555e-05,Tg
+South Korea,natural gas,natural gas,natural gas,1975,CH4,0.3548284482,Tg
+South Korea,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3921115224,MTC
+South Korea,natural gas,natural gas,natural gas,1975,N2O,1.591344855e-05,Tg
+South Korea,coal,coal,coal,1990,CH4,0.8775384427,Tg
+South Korea,coal,coal,coal,1990,CO2_FUG,12.14327703,MTC
+South Korea,coal,coal,coal,1990,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,1990,CH4,0.3788745976,Tg
+South Korea,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3265117344,MTC
+South Korea,crude oil,crude oil,crude oil,1990,N2O,1.752284462e-05,Tg
+South Korea,natural gas,natural gas,natural gas,1990,CH4,0.3893016102,Tg
+South Korea,natural gas,natural gas,natural gas,1990,CO2_FUG,0.3189809136,MTC
+South Korea,natural gas,natural gas,natural gas,1990,N2O,1.389235051e-05,Tg
+South Korea,coal,coal,coal,2005,CH4,1.068689156,Tg
+South Korea,coal,coal,coal,2005,CO2_FUG,0.5606894241,MTC
+South Korea,coal,coal,coal,2005,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,2005,CH4,1.183847607,Tg
+South Korea,crude oil,crude oil,crude oil,2005,CO2_FUG,0.001405782212,MTC
+South Korea,crude oil,crude oil,crude oil,2005,N2O,1.054901657e-07,Tg
+South Korea,natural gas,natural gas,natural gas,2005,CH4,1.183847607,Tg
+South Korea,natural gas,natural gas,natural gas,2005,CO2_FUG,0.001405782212,MTC
+South Korea,natural gas,natural gas,natural gas,2005,N2O,1.054901657e-07,Tg
+South Korea,coal,coal,coal,2010,CH4,1.339292421,Tg
+South Korea,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+South Korea,coal,coal,coal,2010,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,2010,CH4,1.112052921,Tg
+South Korea,crude oil,crude oil,crude oil,2010,CO2_FUG,0.001184888895,MTC
+South Korea,crude oil,crude oil,crude oil,2010,N2O,8.351181001e-08,Tg
+South Korea,natural gas,natural gas,natural gas,2010,CH4,1.112052921,Tg
+South Korea,natural gas,natural gas,natural gas,2010,CO2_FUG,0.001184888895,MTC
+South Korea,natural gas,natural gas,natural gas,2010,N2O,8.351181001e-08,Tg
+South Korea,coal,coal,coal,2015,CH4,1.594164736,Tg
+South Korea,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+South Korea,coal,coal,coal,2015,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,2015,CH4,0.3010534772,Tg
+South Korea,crude oil,crude oil,crude oil,2015,CO2_FUG,0.00116632778,MTC
+South Korea,crude oil,crude oil,crude oil,2015,N2O,3.647837012e-08,Tg
+South Korea,natural gas,natural gas,natural gas,2015,CH4,0.3133701653,Tg
+South Korea,natural gas,natural gas,natural gas,2015,CO2_FUG,0.00116632778,MTC
+South Korea,natural gas,natural gas,natural gas,2015,N2O,3.647837012e-08,Tg
+South Korea,coal,coal,coal,2021,CH4,0.2969543632,Tg
+South Korea,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+South Korea,coal,coal,coal,2021,N2O,0,Tg
+South Korea,crude oil,crude oil,crude oil,2021,CH4,0.2913145836,Tg
+South Korea,crude oil,crude oil,crude oil,2021,CO2_FUG,0.0005933442956,MTC
+South Korea,crude oil,crude oil,crude oil,2021,N2O,3.942455099e-08,Tg
+South Korea,natural gas,natural gas,natural gas,2021,CH4,1.609233132,Tg
+South Korea,natural gas,natural gas,natural gas,2021,CO2_FUG,0.0005933442956,MTC
+South Korea,natural gas,natural gas,natural gas,2021,N2O,3.942455099e-08,Tg
+Southeast Asia,coal,coal,coal,1975,CH4,0.9439230577,Tg
+Southeast Asia,coal,coal,coal,1975,CO2_FUG,0.7302498957,MTC
+Southeast Asia,coal,coal,coal,1975,N2O,0.0007043723399,Tg
+Southeast Asia,crude oil,crude oil,crude oil,1975,CH4,0.2386005693,Tg
+Southeast Asia,crude oil,crude oil,crude oil,1975,CO2_FUG,0.8443988246,MTC
+Southeast Asia,crude oil,crude oil,crude oil,1975,N2O,4.344090419e-05,Tg
+Southeast Asia,natural gas,natural gas,natural gas,1975,CH4,0.2386005693,Tg
+Southeast Asia,natural gas,natural gas,natural gas,1975,CO2_FUG,0.8443988246,MTC
+Southeast Asia,natural gas,natural gas,natural gas,1975,N2O,4.344090419e-05,Tg
+Southeast Asia,coal,coal,coal,1990,CH4,0.9660141092,Tg
+Southeast Asia,coal,coal,coal,1990,CO2_FUG,0.6368948762,MTC
+Southeast Asia,coal,coal,coal,1990,N2O,0.0006735684114,Tg
+Southeast Asia,crude oil,crude oil,crude oil,1990,CH4,0.2973048066,Tg
+Southeast Asia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.1549762363,MTC
+Southeast Asia,crude oil,crude oil,crude oil,1990,N2O,8.487896556e-06,Tg
+Southeast Asia,natural gas,natural gas,natural gas,1990,CH4,0.2973048066,Tg
+Southeast Asia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.1549762363,MTC
+Southeast Asia,natural gas,natural gas,natural gas,1990,N2O,8.487896556e-06,Tg
+Southeast Asia,coal,coal,coal,2005,CH4,0.8609979521,Tg
+Southeast Asia,coal,coal,coal,2005,CO2_FUG,0.09077404871,MTC
+Southeast Asia,coal,coal,coal,2005,N2O,0.0004073892117,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2005,CH4,0.3086104749,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.2237310327,MTC
+Southeast Asia,crude oil,crude oil,crude oil,2005,N2O,1.174454021e-05,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2005,CH4,0.3086104749,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.2237310327,MTC
+Southeast Asia,natural gas,natural gas,natural gas,2005,N2O,1.174454021e-05,Tg
+Southeast Asia,coal,coal,coal,2010,CH4,0.8469811308,Tg
+Southeast Asia,coal,coal,coal,2010,CO2_FUG,0.08676979097,MTC
+Southeast Asia,coal,coal,coal,2010,N2O,0.0004207000276,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2010,CH4,0.3031363182,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1743022106,MTC
+Southeast Asia,crude oil,crude oil,crude oil,2010,N2O,9.206705368e-06,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2010,CH4,0.3031363182,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1743022106,MTC
+Southeast Asia,natural gas,natural gas,natural gas,2010,N2O,9.206705368e-06,Tg
+Southeast Asia,coal,coal,coal,2015,CH4,0.8504304383,Tg
+Southeast Asia,coal,coal,coal,2015,CO2_FUG,0.09129825801,MTC
+Southeast Asia,coal,coal,coal,2015,N2O,0.0004062720159,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2015,CH4,0.3133701653,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.3714865849,MTC
+Southeast Asia,crude oil,crude oil,crude oil,2015,N2O,1.910091702e-05,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2015,CH4,0.3133701653,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.3714865849,MTC
+Southeast Asia,natural gas,natural gas,natural gas,2015,N2O,1.910091702e-05,Tg
+Southeast Asia,coal,coal,coal,2021,CH4,0.7567355568,Tg
+Southeast Asia,coal,coal,coal,2021,CO2_FUG,0.1064347936,MTC
+Southeast Asia,coal,coal,coal,2021,N2O,0.0002255405991,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2021,CH4,0.3520987884,Tg
+Southeast Asia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.2452333752,MTC
+Southeast Asia,crude oil,crude oil,crude oil,2021,N2O,1.420399247e-05,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2021,CH4,0.3520987884,Tg
+Southeast Asia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2452333752,MTC
+Southeast Asia,natural gas,natural gas,natural gas,2021,N2O,1.420399247e-05,Tg
+Taiwan,coal,coal,coal,1975,CH4,0.6392091018,Tg
+Taiwan,coal,coal,coal,1975,CO2_FUG,0.3923109979,MTC
+Taiwan,coal,coal,coal,1975,N2O,0,Tg
+Taiwan,crude oil,crude oil,crude oil,1975,CH4,0.3706127151,Tg
+Taiwan,crude oil,crude oil,crude oil,1975,CO2_FUG,0.002197829317,MTC
+Taiwan,crude oil,crude oil,crude oil,1975,N2O,2.487009711e-07,Tg
+Taiwan,natural gas,natural gas,natural gas,1975,CH4,0.3706127151,Tg
+Taiwan,natural gas,natural gas,natural gas,1975,CO2_FUG,0.002197829317,MTC
+Taiwan,natural gas,natural gas,natural gas,1975,N2O,2.487009711e-07,Tg
+Taiwan,coal,coal,coal,1990,CH4,1.338740341,Tg
+Taiwan,coal,coal,coal,1990,CO2_FUG,11.0023533,MTC
+Taiwan,coal,coal,coal,1990,N2O,0,Tg
+Taiwan,crude oil,crude oil,crude oil,1990,CH4,0.4001271611,Tg
+Taiwan,crude oil,crude oil,crude oil,1990,CO2_FUG,0.002064183857,MTC
+Taiwan,crude oil,crude oil,crude oil,1990,N2O,2.280780323e-07,Tg
+Taiwan,natural gas,natural gas,natural gas,1990,CH4,0.4001271611,Tg
+Taiwan,natural gas,natural gas,natural gas,1990,CO2_FUG,0.002064183857,MTC
+Taiwan,natural gas,natural gas,natural gas,1990,N2O,2.280780323e-07,Tg
+Taiwan,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Taiwan,coal,coal,coal,2005,CO2_FUG,0.5606894241,MTC
+Taiwan,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Taiwan,crude oil,crude oil,crude oil,2005,CH4,1.050194367,Tg
+Taiwan,crude oil,crude oil,crude oil,2005,CO2_FUG,0.001424337967,MTC
+Taiwan,crude oil,crude oil,crude oil,2005,N2O,1.047597669e-07,Tg
+Taiwan,natural gas,natural gas,natural gas,2005,CH4,1.050194367,Tg
+Taiwan,natural gas,natural gas,natural gas,2005,CO2_FUG,0.001424337967,MTC
+Taiwan,natural gas,natural gas,natural gas,2005,N2O,1.047597669e-07,Tg
+Taiwan,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Taiwan,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Taiwan,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Taiwan,crude oil,crude oil,crude oil,2010,CH4,1.525200086,Tg
+Taiwan,crude oil,crude oil,crude oil,2010,CO2_FUG,0.001652596556,MTC
+Taiwan,crude oil,crude oil,crude oil,2010,N2O,8.682034526e-08,Tg
+Taiwan,natural gas,natural gas,natural gas,2010,CH4,0.3033928591,Tg
+Taiwan,natural gas,natural gas,natural gas,2010,CO2_FUG,0.001652596556,MTC
+Taiwan,natural gas,natural gas,natural gas,2010,N2O,8.682034526e-08,Tg
+Taiwan,coal,coal,coal,2015,CH4,0.214307434,Tg
+Taiwan,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Taiwan,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Taiwan,crude oil,crude oil,crude oil,2015,CH4,1.544857418,Tg
+Taiwan,crude oil,crude oil,crude oil,2015,CO2_FUG,0.001164609166,MTC
+Taiwan,crude oil,crude oil,crude oil,2015,N2O,4.446635615e-08,Tg
+Taiwan,natural gas,natural gas,natural gas,2015,CH4,0.3133701653,Tg
+Taiwan,natural gas,natural gas,natural gas,2015,CO2_FUG,0.001164609166,MTC
+Taiwan,natural gas,natural gas,natural gas,2015,N2O,4.446635615e-08,Tg
+Taiwan,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Taiwan,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+Taiwan,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Taiwan,crude oil,crude oil,crude oil,2021,CH4,0.6055757901,Tg
+Taiwan,crude oil,crude oil,crude oil,2021,CO2_FUG,0.00030419071,MTC
+Taiwan,crude oil,crude oil,crude oil,2021,N2O,9.809759477e-09,Tg
+Taiwan,natural gas,natural gas,natural gas,2021,CH4,0.6055757901,Tg
+Taiwan,natural gas,natural gas,natural gas,2021,CO2_FUG,0.00030419071,MTC
+Taiwan,natural gas,natural gas,natural gas,2021,N2O,9.809759477e-09,Tg
+Argentina,coal,coal,coal,1975,CH4,0.5452576177,Tg
+Argentina,coal,coal,coal,1975,CO2_FUG,1.245093454,MTC
+Argentina,coal,coal,coal,1975,N2O,3.138156395e-10,Tg
+Argentina,crude oil,crude oil,crude oil,1975,CH4,0.3548284482,Tg
+Argentina,crude oil,crude oil,crude oil,1975,CO2_FUG,0.3001435436,MTC
+Argentina,crude oil,crude oil,crude oil,1975,N2O,1.591344855e-05,Tg
+Argentina,natural gas,natural gas,natural gas,1975,CH4,0.3548284482,Tg
+Argentina,natural gas,natural gas,natural gas,1975,CO2_FUG,0.3001435436,MTC
+Argentina,natural gas,natural gas,natural gas,1975,N2O,1.591344855e-05,Tg
+Argentina,coal,coal,coal,1990,CH4,3.896379533,Tg
+Argentina,coal,coal,coal,1990,CO2_FUG,0.6408276453,MTC
+Argentina,coal,coal,coal,1990,N2O,0.00395437266,Tg
+Argentina,crude oil,crude oil,crude oil,1990,CH4,0.3829573593,Tg
+Argentina,crude oil,crude oil,crude oil,1990,CO2_FUG,0.2582676955,MTC
+Argentina,crude oil,crude oil,crude oil,1990,N2O,1.365603619e-05,Tg
+Argentina,natural gas,natural gas,natural gas,1990,CH4,0.3829573593,Tg
+Argentina,natural gas,natural gas,natural gas,1990,CO2_FUG,0.2582676955,MTC
+Argentina,natural gas,natural gas,natural gas,1990,N2O,1.365603619e-05,Tg
+Argentina,coal,coal,coal,2005,CH4,0.2667366221,Tg
+Argentina,coal,coal,coal,2005,CO2_FUG,0.5606894241,MTC
+Argentina,coal,coal,coal,2005,N2O,1.976500233e-06,Tg
+Argentina,crude oil,crude oil,crude oil,2005,CH4,0.3509470136,Tg
+Argentina,crude oil,crude oil,crude oil,2005,CO2_FUG,0.08796483092,MTC
+Argentina,crude oil,crude oil,crude oil,2005,N2O,4.934270918e-06,Tg
+Argentina,natural gas,natural gas,natural gas,2005,CH4,0.3509470136,Tg
+Argentina,natural gas,natural gas,natural gas,2005,CO2_FUG,0.08796483092,MTC
+Argentina,natural gas,natural gas,natural gas,2005,N2O,4.934270918e-06,Tg
+Argentina,coal,coal,coal,2010,CH4,0.2492187169,Tg
+Argentina,coal,coal,coal,2010,CO2_FUG,0.4930783068,MTC
+Argentina,coal,coal,coal,2010,N2O,1.441280136e-06,Tg
+Argentina,crude oil,crude oil,crude oil,2010,CH4,0.37406061,Tg
+Argentina,crude oil,crude oil,crude oil,2010,CO2_FUG,0.06443367755,MTC
+Argentina,crude oil,crude oil,crude oil,2010,N2O,3.754461236e-06,Tg
+Argentina,natural gas,natural gas,natural gas,2010,CH4,0.37406061,Tg
+Argentina,natural gas,natural gas,natural gas,2010,CO2_FUG,0.06443367755,MTC
+Argentina,natural gas,natural gas,natural gas,2010,N2O,3.754461236e-06,Tg
+Argentina,coal,coal,coal,2015,CH4,0.214307434,Tg
+Argentina,coal,coal,coal,2015,CO2_FUG,0.3624295042,MTC
+Argentina,coal,coal,coal,2015,N2O,1.645681447e-06,Tg
+Argentina,crude oil,crude oil,crude oil,2015,CH4,0.3953757961,Tg
+Argentina,crude oil,crude oil,crude oil,2015,CO2_FUG,0.1354424962,MTC
+Argentina,crude oil,crude oil,crude oil,2015,N2O,7.317222375e-06,Tg
+Argentina,natural gas,natural gas,natural gas,2015,CH4,0.3953757961,Tg
+Argentina,natural gas,natural gas,natural gas,2015,CO2_FUG,0.1354424962,MTC
+Argentina,natural gas,natural gas,natural gas,2015,N2O,7.317222375e-06,Tg
+Argentina,coal,coal,coal,2021,CH4,0.2969543632,Tg
+Argentina,coal,coal,coal,2021,CO2_FUG,0.3674417488,MTC
+Argentina,coal,coal,coal,2021,N2O,5.899794e-06,Tg
+Argentina,crude oil,crude oil,crude oil,2021,CH4,0.4000447224,Tg
+Argentina,crude oil,crude oil,crude oil,2021,CO2_FUG,0.2454828499,MTC
+Argentina,crude oil,crude oil,crude oil,2021,N2O,7.821811016e-06,Tg
+Argentina,natural gas,natural gas,natural gas,2021,CH4,0.4000447224,Tg
+Argentina,natural gas,natural gas,natural gas,2021,CO2_FUG,0.2454828499,MTC
+Argentina,natural gas,natural gas,natural gas,2021,N2O,7.821811016e-06,Tg
+Colombia,coal,coal,coal,1975,CH4,0.3758251833,Tg
+Colombia,coal,coal,coal,1975,CO2_FUG,2.076703511,MTC
+Colombia,coal,coal,coal,1975,N2O,0.0001147043238,Tg
+Colombia,crude oil,crude oil,crude oil,1975,CH4,1.196945074,Tg
+Colombia,crude oil,crude oil,crude oil,1975,CO2_FUG,1.610986611,MTC
+Colombia,crude oil,crude oil,crude oil,1975,N2O,8.199595106e-05,Tg
+Colombia,natural gas,natural gas,natural gas,1975,CH4,1.196945074,Tg
+Colombia,natural gas,natural gas,natural gas,1975,CO2_FUG,1.610986611,MTC
+Colombia,natural gas,natural gas,natural gas,1975,N2O,8.199595106e-05,Tg
+Colombia,coal,coal,coal,1990,CH4,0.105292696,Tg
+Colombia,coal,coal,coal,1990,CO2_FUG,0.3301452578,MTC
+Colombia,coal,coal,coal,1990,N2O,2.130196596e-05,Tg
+Colombia,crude oil,crude oil,crude oil,1990,CH4,1.040683085,Tg
+Colombia,crude oil,crude oil,crude oil,1990,CO2_FUG,0.3330629055,MTC
+Colombia,crude oil,crude oil,crude oil,1990,N2O,1.767256766e-05,Tg
+Colombia,natural gas,natural gas,natural gas,1990,CH4,1.040683085,Tg
+Colombia,natural gas,natural gas,natural gas,1990,CO2_FUG,0.3330629055,MTC
+Colombia,natural gas,natural gas,natural gas,1990,N2O,1.767256766e-05,Tg
+Colombia,coal,coal,coal,2005,CH4,0.1147070135,Tg
+Colombia,coal,coal,coal,2005,CO2_FUG,0.06918749061,MTC
+Colombia,coal,coal,coal,2005,N2O,3.633761157e-05,Tg
+Colombia,crude oil,crude oil,crude oil,2005,CH4,0.8304164212,Tg
+Colombia,crude oil,crude oil,crude oil,2005,CO2_FUG,0.1676708638,MTC
+Colombia,crude oil,crude oil,crude oil,2005,N2O,9.291848649e-06,Tg
+Colombia,natural gas,natural gas,natural gas,2005,CH4,0.8304164212,Tg
+Colombia,natural gas,natural gas,natural gas,2005,CO2_FUG,0.1676708638,MTC
+Colombia,natural gas,natural gas,natural gas,2005,N2O,9.291848649e-06,Tg
+Colombia,coal,coal,coal,2010,CH4,0.111736675,Tg
+Colombia,coal,coal,coal,2010,CO2_FUG,0.1231838308,MTC
+Colombia,coal,coal,coal,2010,N2O,2.956739884e-05,Tg
+Colombia,crude oil,crude oil,crude oil,2010,CH4,0.7571600382,Tg
+Colombia,crude oil,crude oil,crude oil,2010,CO2_FUG,0.1741973388,MTC
+Colombia,crude oil,crude oil,crude oil,2010,N2O,9.595026225e-06,Tg
+Colombia,natural gas,natural gas,natural gas,2010,CH4,0.7571600382,Tg
+Colombia,natural gas,natural gas,natural gas,2010,CO2_FUG,0.1741973388,MTC
+Colombia,natural gas,natural gas,natural gas,2010,N2O,9.595026225e-06,Tg
+Colombia,coal,coal,coal,2015,CH4,0.09022392012,Tg
+Colombia,coal,coal,coal,2015,CO2_FUG,0.1281521837,MTC
+Colombia,coal,coal,coal,2015,N2O,1.062384142e-06,Tg
+Colombia,crude oil,crude oil,crude oil,2015,CH4,0.7352083541,Tg
+Colombia,crude oil,crude oil,crude oil,2015,CO2_FUG,0.1597228948,MTC
+Colombia,crude oil,crude oil,crude oil,2015,N2O,8.901854642e-06,Tg
+Colombia,natural gas,natural gas,natural gas,2015,CH4,0.7352083541,Tg
+Colombia,natural gas,natural gas,natural gas,2015,CO2_FUG,0.1597228948,MTC
+Colombia,natural gas,natural gas,natural gas,2015,N2O,8.901854642e-06,Tg
+Colombia,coal,coal,coal,2021,CH4,0.08717258122,Tg
+Colombia,coal,coal,coal,2021,CO2_FUG,0.2474760802,MTC
+Colombia,coal,coal,coal,2021,N2O,3.561422526e-08,Tg
+Colombia,crude oil,crude oil,crude oil,2021,CH4,0.6315710301,Tg
+Colombia,crude oil,crude oil,crude oil,2021,CO2_FUG,0.08563298174,MTC
+Colombia,crude oil,crude oil,crude oil,2021,N2O,7.898264895e-06,Tg
+Colombia,natural gas,natural gas,natural gas,2021,CH4,0.6315710301,Tg
+Colombia,natural gas,natural gas,natural gas,2021,CO2_FUG,0.08563298174,MTC
+Colombia,natural gas,natural gas,natural gas,2021,N2O,7.898264895e-06,Tg

@@ -1,0 +1,465 @@
+# Non-intermittent technologies from L113.globaltech_capital_ATB and values interpolated from assumptions
+# Values determined by an exponential function with terms for minimum achievable cost and pace of reduction
+sector.name,subsector.name,technology,year,input.capital,capital.overnight,interest.rate,payback.years
+electricity,biomass,biomass (conv CCS),1975,capital,1602,0.127,30
+electricity,biomass,biomass (conv CCS),1990,capital,1602,0.127,30
+electricity,biomass,biomass (conv CCS),2005,capital,1602,0.127,30
+electricity,biomass,biomass (conv CCS),2010,capital,1602,0.127,30
+electricity,biomass,biomass (conv CCS),2015,capital,1602,0.127,30
+electricity,biomass,biomass (conv CCS),2021,capital,1586,0.127,30
+electricity,biomass,biomass (conv CCS),2025,capital,1523,0.127,30
+electricity,biomass,biomass (conv CCS),2030,capital,1412,0.127,30
+electricity,biomass,biomass (conv CCS),2035,capital,1310,0.127,30
+electricity,biomass,biomass (conv CCS),2040,capital,1214,0.127,30
+electricity,biomass,biomass (conv CCS),2045,capital,1126,0.127,30
+electricity,biomass,biomass (conv CCS),2050,capital,1044,0.127,30
+electricity,biomass,biomass (conv CCS),2055,capital,1039,0.127,30
+electricity,biomass,biomass (conv CCS),2060,capital,1034,0.127,30
+electricity,biomass,biomass (conv CCS),2065,capital,1028,0.127,30
+electricity,biomass,biomass (conv CCS),2070,capital,1023,0.127,30
+electricity,biomass,biomass (conv CCS),2075,capital,1018,0.127,30
+electricity,biomass,biomass (conv CCS),2080,capital,1013,0.127,30
+electricity,biomass,biomass (conv CCS),2085,capital,1008,0.127,30
+electricity,biomass,biomass (conv CCS),2090,capital,1003,0.127,30
+electricity,biomass,biomass (conv CCS),2095,capital,998,0.127,30
+electricity,biomass,biomass (conv CCS),2100,capital,993,0.127,30
+electricity,biomass,biomass (conv),1975,capital,1114,0.127,30
+electricity,biomass,biomass (conv),1990,capital,1114,0.127,30
+electricity,biomass,biomass (conv),2005,capital,1114,0.127,30
+electricity,biomass,biomass (conv),2010,capital,1114,0.127,30
+electricity,biomass,biomass (conv),2015,capital,1097,0.127,30
+electricity,biomass,biomass (conv),2021,capital,1222,0.127,30
+electricity,biomass,biomass (conv),2025,capital,1028,0.127,30
+electricity,biomass,biomass (conv),2030,capital,981,0.127,30
+electricity,biomass,biomass (conv),2035,capital,948,0.127,30
+electricity,biomass,biomass (conv),2040,capital,914,0.127,30
+electricity,biomass,biomass (conv),2045,capital,883,0.127,30
+electricity,biomass,biomass (conv),2050,capital,845,0.127,30
+electricity,biomass,biomass (conv),2055,capital,841,0.127,30
+electricity,biomass,biomass (conv),2060,capital,837,0.127,30
+electricity,biomass,biomass (conv),2065,capital,833,0.127,30
+electricity,biomass,biomass (conv),2070,capital,829,0.127,30
+electricity,biomass,biomass (conv),2075,capital,825,0.127,30
+electricity,biomass,biomass (conv),2080,capital,820,0.127,30
+electricity,biomass,biomass (conv),2085,capital,816,0.127,30
+electricity,biomass,biomass (conv),2090,capital,812,0.127,30
+electricity,biomass,biomass (conv),2095,capital,808,0.127,30
+electricity,biomass,biomass (conv),2100,capital,804,0.127,30
+electricity,biomass,biomass (IGCC CCS),1975,capital,2282,0.127,30
+electricity,biomass,biomass (IGCC CCS),1990,capital,2282,0.127,30
+electricity,biomass,biomass (IGCC CCS),2005,capital,2282,0.127,30
+electricity,biomass,biomass (IGCC CCS),2010,capital,2282,0.127,30
+electricity,biomass,biomass (IGCC CCS),2015,capital,2282,0.127,30
+electricity,biomass,biomass (IGCC CCS),2021,capital,2266,0.127,30
+electricity,biomass,biomass (IGCC CCS),2025,capital,2182,0.127,30
+electricity,biomass,biomass (IGCC CCS),2030,capital,2109,0.127,30
+electricity,biomass,biomass (IGCC CCS),2035,capital,2043,0.127,30
+electricity,biomass,biomass (IGCC CCS),2040,capital,1970,0.127,30
+electricity,biomass,biomass (IGCC CCS),2045,capital,1903,0.127,30
+electricity,biomass,biomass (IGCC CCS),2050,capital,1843,0.127,30
+electricity,biomass,biomass (IGCC CCS),2055,capital,1834,0.127,30
+electricity,biomass,biomass (IGCC CCS),2060,capital,1825,0.127,30
+electricity,biomass,biomass (IGCC CCS),2065,capital,1816,0.127,30
+electricity,biomass,biomass (IGCC CCS),2070,capital,1807,0.127,30
+electricity,biomass,biomass (IGCC CCS),2075,capital,1798,0.127,30
+electricity,biomass,biomass (IGCC CCS),2080,capital,1789,0.127,30
+electricity,biomass,biomass (IGCC CCS),2085,capital,1780,0.127,30
+electricity,biomass,biomass (IGCC CCS),2090,capital,1771,0.127,30
+electricity,biomass,biomass (IGCC CCS),2095,capital,1762,0.127,30
+electricity,biomass,biomass (IGCC CCS),2100,capital,1753,0.127,30
+electricity,biomass,biomass (IGCC),1975,capital,1770,0.127,30
+electricity,biomass,biomass (IGCC),1990,capital,1770,0.127,30
+electricity,biomass,biomass (IGCC),2005,capital,1770,0.127,30
+electricity,biomass,biomass (IGCC),2010,capital,1770,0.127,30
+electricity,biomass,biomass (IGCC),2015,capital,1708,0.127,30
+electricity,biomass,biomass (IGCC),2021,capital,1768,0.127,30
+electricity,biomass,biomass (IGCC),2025,capital,1592,0.127,30
+electricity,biomass,biomass (IGCC),2030,capital,1540,0.127,30
+electricity,biomass,biomass (IGCC),2035,capital,1503,0.127,30
+electricity,biomass,biomass (IGCC),2040,capital,1478,0.127,30
+electricity,biomass,biomass (IGCC),2045,capital,1455,0.127,30
+electricity,biomass,biomass (IGCC),2050,capital,1426,0.127,30
+electricity,biomass,biomass (IGCC),2055,capital,1419,0.127,30
+electricity,biomass,biomass (IGCC),2060,capital,1412,0.127,30
+electricity,biomass,biomass (IGCC),2065,capital,1405,0.127,30
+electricity,biomass,biomass (IGCC),2070,capital,1398,0.127,30
+electricity,biomass,biomass (IGCC),2075,capital,1391,0.127,30
+electricity,biomass,biomass (IGCC),2080,capital,1384,0.127,30
+electricity,biomass,biomass (IGCC),2085,capital,1377,0.127,30
+electricity,biomass,biomass (IGCC),2090,capital,1370,0.127,30
+electricity,biomass,biomass (IGCC),2095,capital,1364,0.127,30
+electricity,biomass,biomass (IGCC),2100,capital,1357,0.127,30
+electricity,coal,coal (conv pul CCS),1975,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),1990,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2005,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2010,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2015,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2021,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2025,capital,1208,0.127,30
+electricity,coal,coal (conv pul CCS),2030,capital,1134,0.127,30
+electricity,coal,coal (conv pul CCS),2035,capital,1060,0.127,30
+electricity,coal,coal (conv pul CCS),2040,capital,1002,0.127,30
+electricity,coal,coal (conv pul CCS),2045,capital,944,0.127,30
+electricity,coal,coal (conv pul CCS),2050,capital,887,0.127,30
+electricity,coal,coal (conv pul CCS),2055,capital,882,0.127,30
+electricity,coal,coal (conv pul CCS),2060,capital,878,0.127,30
+electricity,coal,coal (conv pul CCS),2065,capital,873,0.127,30
+electricity,coal,coal (conv pul CCS),2070,capital,869,0.127,30
+electricity,coal,coal (conv pul CCS),2075,capital,865,0.127,30
+electricity,coal,coal (conv pul CCS),2080,capital,860,0.127,30
+electricity,coal,coal (conv pul CCS),2085,capital,856,0.127,30
+electricity,coal,coal (conv pul CCS),2090,capital,852,0.127,30
+electricity,coal,coal (conv pul CCS),2095,capital,847,0.127,30
+electricity,coal,coal (conv pul CCS),2100,capital,843,0.127,30
+electricity,coal,coal (conv pul),1975,capital,723,0.127,30
+electricity,coal,coal (conv pul),1990,capital,723,0.127,30
+electricity,coal,coal (conv pul),2005,capital,723,0.127,30
+electricity,coal,coal (conv pul),2010,capital,723,0.127,30
+electricity,coal,coal (conv pul),2015,capital,712,0.127,30
+electricity,coal,coal (conv pul),2021,capital,727,0.127,30
+electricity,coal,coal (conv pul),2025,capital,742,0.127,30
+electricity,coal,coal (conv pul),2030,capital,721,0.127,30
+electricity,coal,coal (conv pul),2035,capital,701,0.127,30
+electricity,coal,coal (conv pul),2040,capital,667,0.127,30
+electricity,coal,coal (conv pul),2045,capital,633,0.127,30
+electricity,coal,coal (conv pul),2050,capital,600,0.127,30
+electricity,coal,coal (conv pul),2055,capital,597,0.127,30
+electricity,coal,coal (conv pul),2060,capital,594,0.127,30
+electricity,coal,coal (conv pul),2065,capital,591,0.127,30
+electricity,coal,coal (conv pul),2070,capital,588,0.127,30
+electricity,coal,coal (conv pul),2075,capital,585,0.127,30
+electricity,coal,coal (conv pul),2080,capital,582,0.127,30
+electricity,coal,coal (conv pul),2085,capital,579,0.127,30
+electricity,coal,coal (conv pul),2090,capital,576,0.127,30
+electricity,coal,coal (conv pul),2095,capital,573,0.127,30
+electricity,coal,coal (conv pul),2100,capital,571,0.127,30
+electricity,coal,coal (IGCC CCS),1975,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),1990,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),2005,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),2010,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),2015,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),2021,capital,1888,0.127,30
+electricity,coal,coal (IGCC CCS),2025,capital,1866,0.127,30
+electricity,coal,coal (IGCC CCS),2030,capital,1830,0.127,30
+electricity,coal,coal (IGCC CCS),2035,capital,1794,0.127,30
+electricity,coal,coal (IGCC CCS),2040,capital,1758,0.127,30
+electricity,coal,coal (IGCC CCS),2045,capital,1722,0.127,30
+electricity,coal,coal (IGCC CCS),2050,capital,1686,0.127,30
+electricity,coal,coal (IGCC CCS),2055,capital,1677,0.127,30
+electricity,coal,coal (IGCC CCS),2060,capital,1669,0.127,30
+electricity,coal,coal (IGCC CCS),2065,capital,1661,0.127,30
+electricity,coal,coal (IGCC CCS),2070,capital,1652,0.127,30
+electricity,coal,coal (IGCC CCS),2075,capital,1644,0.127,30
+electricity,coal,coal (IGCC CCS),2080,capital,1636,0.127,30
+electricity,coal,coal (IGCC CCS),2085,capital,1628,0.127,30
+electricity,coal,coal (IGCC CCS),2090,capital,1620,0.127,30
+electricity,coal,coal (IGCC CCS),2095,capital,1611,0.127,30
+electricity,coal,coal (IGCC CCS),2100,capital,1603,0.127,30
+electricity,coal,coal (IGCC),1975,capital,1379,0.127,30
+electricity,coal,coal (IGCC),1990,capital,1379,0.127,30
+electricity,coal,coal (IGCC),2005,capital,1379,0.127,30
+electricity,coal,coal (IGCC),2010,capital,1379,0.127,30
+electricity,coal,coal (IGCC),2015,capital,1322,0.127,30
+electricity,coal,coal (IGCC),2021,capital,1273,0.127,30
+electricity,coal,coal (IGCC),2025,capital,1305,0.127,30
+electricity,coal,coal (IGCC),2030,capital,1280,0.127,30
+electricity,coal,coal (IGCC),2035,capital,1256,0.127,30
+electricity,coal,coal (IGCC),2040,capital,1231,0.127,30
+electricity,coal,coal (IGCC),2045,capital,1206,0.127,30
+electricity,coal,coal (IGCC),2050,capital,1181,0.127,30
+electricity,coal,coal (IGCC),2055,capital,1175,0.127,30
+electricity,coal,coal (IGCC),2060,capital,1169,0.127,30
+electricity,coal,coal (IGCC),2065,capital,1163,0.127,30
+electricity,coal,coal (IGCC),2070,capital,1157,0.127,30
+electricity,coal,coal (IGCC),2075,capital,1152,0.127,30
+electricity,coal,coal (IGCC),2080,capital,1146,0.127,30
+electricity,coal,coal (IGCC),2085,capital,1140,0.127,30
+electricity,coal,coal (IGCC),2090,capital,1134,0.127,30
+electricity,coal,coal (IGCC),2095,capital,1129,0.127,30
+electricity,coal,coal (IGCC),2100,capital,1123,0.127,30
+electricity,solar,CSP_storage,1975,capital,2126,0.127,30
+electricity,solar,CSP_storage,1990,capital,2126,0.127,30
+electricity,solar,CSP_storage,2005,capital,2126,0.127,30
+electricity,solar,CSP_storage,2010,capital,2126,0.127,30
+electricity,solar,CSP_storage,2015,capital,2126,0.127,30
+electricity,solar,CSP_storage,2021,capital,1736,0.127,30
+electricity,solar,CSP_storage,2025,capital,1504,0.127,30
+electricity,solar,CSP_storage,2030,capital,1125,0.127,30
+electricity,solar,CSP_storage,2035,capital,1085,0.127,30
+electricity,solar,CSP_storage,2040,capital,1045,0.127,30
+electricity,solar,CSP_storage,2045,capital,1005,0.127,30
+electricity,solar,CSP_storage,2050,capital,965,0.127,30
+electricity,solar,CSP_storage,2055,capital,960,0.127,30
+electricity,solar,CSP_storage,2060,capital,955,0.127,30
+electricity,solar,CSP_storage,2065,capital,950,0.127,30
+electricity,solar,CSP_storage,2070,capital,945,0.127,30
+electricity,solar,CSP_storage,2075,capital,941,0.127,30
+electricity,solar,CSP_storage,2080,capital,936,0.127,30
+electricity,solar,CSP_storage,2085,capital,931,0.127,30
+electricity,solar,CSP_storage,2090,capital,927,0.127,30
+electricity,solar,CSP_storage,2095,capital,922,0.127,30
+electricity,solar,CSP_storage,2100,capital,917,0.127,30
+electricity,gas,gas (CC CCS),1975,capital,606,0.127,30
+electricity,gas,gas (CC CCS),1990,capital,606,0.127,30
+electricity,gas,gas (CC CCS),2005,capital,606,0.127,30
+electricity,gas,gas (CC CCS),2010,capital,606,0.127,30
+electricity,gas,gas (CC CCS),2015,capital,606,0.127,30
+electricity,gas,gas (CC CCS),2021,capital,606,0.127,30
+electricity,gas,gas (CC CCS),2025,capital,590,0.127,30
+electricity,gas,gas (CC CCS),2030,capital,530,0.127,30
+electricity,gas,gas (CC CCS),2035,capital,471,0.127,30
+electricity,gas,gas (CC CCS),2040,capital,444,0.127,30
+electricity,gas,gas (CC CCS),2045,capital,417,0.127,30
+electricity,gas,gas (CC CCS),2050,capital,390,0.127,30
+electricity,gas,gas (CC CCS),2055,capital,388,0.127,30
+electricity,gas,gas (CC CCS),2060,capital,386,0.127,30
+electricity,gas,gas (CC CCS),2065,capital,384,0.127,30
+electricity,gas,gas (CC CCS),2070,capital,382,0.127,30
+electricity,gas,gas (CC CCS),2075,capital,380,0.127,30
+electricity,gas,gas (CC CCS),2080,capital,378,0.127,30
+electricity,gas,gas (CC CCS),2085,capital,377,0.127,30
+electricity,gas,gas (CC CCS),2090,capital,375,0.127,30
+electricity,gas,gas (CC CCS),2095,capital,373,0.127,30
+electricity,gas,gas (CC CCS),2100,capital,371,0.127,30
+electricity,gas,gas (CC),1975,capital,269,0.127,30
+electricity,gas,gas (CC),1990,capital,269,0.127,30
+electricity,gas,gas (CC),2005,capital,269,0.127,30
+electricity,gas,gas (CC),2010,capital,269,0.127,30
+electricity,gas,gas (CC),2015,capital,264,0.127,30
+electricity,gas,gas (CC),2021,capital,284,0.127,30
+electricity,gas,gas (CC),2025,capital,286,0.127,30
+electricity,gas,gas (CC),2030,capital,273,0.127,30
+electricity,gas,gas (CC),2035,capital,261,0.127,30
+electricity,gas,gas (CC),2040,capital,250,0.127,30
+electricity,gas,gas (CC),2045,capital,239,0.127,30
+electricity,gas,gas (CC),2050,capital,228,0.127,30
+electricity,gas,gas (CC),2055,capital,227,0.127,30
+electricity,gas,gas (CC),2060,capital,226,0.127,30
+electricity,gas,gas (CC),2065,capital,225,0.127,30
+electricity,gas,gas (CC),2070,capital,224,0.127,30
+electricity,gas,gas (CC),2075,capital,223,0.127,30
+electricity,gas,gas (CC),2080,capital,222,0.127,30
+electricity,gas,gas (CC),2085,capital,220,0.127,30
+electricity,gas,gas (CC),2090,capital,219,0.127,30
+electricity,gas,gas (CC),2095,capital,218,0.127,30
+electricity,gas,gas (CC),2100,capital,217,0.127,30
+electricity,gas,gas (steam/CT),1975,capital,250,0.127,30
+electricity,gas,gas (steam/CT),1990,capital,250,0.127,30
+electricity,gas,gas (steam/CT),2005,capital,250,0.127,30
+electricity,gas,gas (steam/CT),2010,capital,250,0.127,30
+electricity,gas,gas (steam/CT),2015,capital,239,0.127,30
+electricity,gas,gas (steam/CT),2021,capital,255,0.127,30
+electricity,gas,gas (steam/CT),2025,capital,255,0.127,30
+electricity,gas,gas (steam/CT),2030,capital,245,0.127,30
+electricity,gas,gas (steam/CT),2035,capital,235,0.127,30
+electricity,gas,gas (steam/CT),2040,capital,224,0.127,30
+electricity,gas,gas (steam/CT),2045,capital,214,0.127,30
+electricity,gas,gas (steam/CT),2050,capital,204,0.127,30
+electricity,gas,gas (steam/CT),2055,capital,203,0.127,30
+electricity,gas,gas (steam/CT),2060,capital,202,0.127,30
+electricity,gas,gas (steam/CT),2065,capital,201,0.127,30
+electricity,gas,gas (steam/CT),2070,capital,200,0.127,30
+electricity,gas,gas (steam/CT),2075,capital,199,0.127,30
+electricity,gas,gas (steam/CT),2080,capital,198,0.127,30
+electricity,gas,gas (steam/CT),2085,capital,197,0.127,30
+electricity,gas,gas (steam/CT),2090,capital,196,0.127,30
+electricity,gas,gas (steam/CT),2095,capital,195,0.127,30
+electricity,gas,gas (steam/CT),2100,capital,194,0.127,30
+electricity,nuclear,Gen_II_LWR,1975,capital,1811,0.127,30
+electricity,nuclear,Gen_II_LWR,1990,capital,1811,0.127,30
+electricity,nuclear,Gen_II_LWR,2005,capital,1811,0.127,30
+electricity,nuclear,Gen_II_LWR,2010,capital,1811,0.127,30
+electricity,nuclear,Gen_II_LWR,2015,capital,1749,0.127,30
+electricity,nuclear,Gen_II_LWR,2021,capital,1901,0.127,30
+electricity,nuclear,Gen_II_LWR,2025,capital,1355,0.127,30
+electricity,nuclear,Gen_II_LWR,2030,capital,1355,0.127,30
+electricity,nuclear,Gen_II_LWR,2035,capital,1296,0.127,30
+electricity,nuclear,Gen_II_LWR,2040,capital,1119,0.127,30
+electricity,nuclear,Gen_II_LWR,2045,capital,1002,0.127,30
+electricity,nuclear,Gen_II_LWR,2050,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2055,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2060,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2065,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2070,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2075,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2080,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2085,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2090,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2095,capital,884,0.127,30
+electricity,nuclear,Gen_II_LWR,2100,capital,884,0.127,30
+electricity,geothermal,geothermal,1975,capital,1127,0.127,30
+electricity,geothermal,geothermal,1990,capital,1127,0.127,30
+electricity,geothermal,geothermal,2005,capital,1127,0.127,30
+electricity,geothermal,geothermal,2010,capital,1127,0.127,30
+electricity,geothermal,geothermal,2015,capital,1127,0.127,30
+electricity,geothermal,geothermal,2021,capital,1127,0.127,30
+electricity,geothermal,geothermal,2025,capital,1074,0.127,30
+electricity,geothermal,geothermal,2030,capital,1016,0.127,30
+electricity,geothermal,geothermal,2035,capital,973,0.127,30
+electricity,geothermal,geothermal,2040,capital,948,0.127,30
+electricity,geothermal,geothermal,2045,capital,925,0.127,30
+electricity,geothermal,geothermal,2050,capital,902,0.127,30
+electricity,geothermal,geothermal,2055,capital,898,0.127,30
+electricity,geothermal,geothermal,2060,capital,893,0.127,30
+electricity,geothermal,geothermal,2065,capital,889,0.127,30
+electricity,geothermal,geothermal,2070,capital,884,0.127,30
+electricity,geothermal,geothermal,2075,capital,880,0.127,30
+electricity,geothermal,geothermal,2080,capital,875,0.127,30
+electricity,geothermal,geothermal,2085,capital,871,0.127,30
+electricity,geothermal,geothermal,2090,capital,867,0.127,30
+electricity,geothermal,geothermal,2095,capital,862,0.127,30
+electricity,geothermal,geothermal,2100,capital,858,0.127,30
+electricity,nuclear,large reactor,1975,capital,1811,0.127,30
+electricity,nuclear,large reactor,1990,capital,1811,0.127,30
+electricity,nuclear,large reactor,2005,capital,1811,0.127,30
+electricity,nuclear,large reactor,2010,capital,1811,0.127,30
+electricity,nuclear,large reactor,2015,capital,1749,0.127,30
+electricity,nuclear,large reactor,2021,capital,1901,0.127,30
+electricity,nuclear,large reactor,2025,capital,1355,0.127,30
+electricity,nuclear,large reactor,2030,capital,1355,0.127,30
+electricity,nuclear,large reactor,2035,capital,1296,0.127,30
+electricity,nuclear,large reactor,2040,capital,1119,0.127,30
+electricity,nuclear,large reactor,2045,capital,1002,0.127,30
+electricity,nuclear,large reactor,2050,capital,884,0.127,30
+electricity,nuclear,large reactor,2055,capital,879,0.127,30
+electricity,nuclear,large reactor,2060,capital,875,0.127,30
+electricity,nuclear,large reactor,2065,capital,871,0.127,30
+electricity,nuclear,large reactor,2070,capital,866,0.127,30
+electricity,nuclear,large reactor,2075,capital,862,0.127,30
+electricity,nuclear,large reactor,2080,capital,858,0.127,30
+electricity,nuclear,large reactor,2085,capital,853,0.127,30
+electricity,nuclear,large reactor,2090,capital,849,0.127,30
+electricity,nuclear,large reactor,2095,capital,845,0.127,30
+electricity,nuclear,large reactor,2100,capital,841,0.127,30
+electricity,solar,PV_storage,1975,capital,3043,0.127,30
+electricity,solar,PV_storage,1990,capital,3043,0.127,30
+electricity,solar,PV_storage,2005,capital,3043,0.127,30
+electricity,solar,PV_storage,2010,capital,3043,0.127,30
+electricity,solar,PV_storage,2015,capital,2114,0.127,30
+electricity,solar,PV_storage,2021,capital,1679,0.127,30
+electricity,solar,PV_storage,2025,capital,1408,0.127,30
+electricity,solar,PV_storage,2030,capital,1165,0.127,30
+electricity,solar,PV_storage,2035,capital,1028,0.127,30
+electricity,solar,PV_storage,2040,capital,941,0.127,30
+electricity,solar,PV_storage,2045,capital,854,0.127,30
+electricity,solar,PV_storage,2050,capital,768,0.127,30
+electricity,solar,PV_storage,2055,capital,764,0.127,30
+electricity,solar,PV_storage,2060,capital,760,0.127,30
+electricity,solar,PV_storage,2065,capital,756,0.127,30
+electricity,solar,PV_storage,2070,capital,752,0.127,30
+electricity,solar,PV_storage,2075,capital,749,0.127,30
+electricity,solar,PV_storage,2080,capital,745,0.127,30
+electricity,solar,PV_storage,2085,capital,741,0.127,30
+electricity,solar,PV_storage,2090,capital,737,0.127,30
+electricity,solar,PV_storage,2095,capital,734,0.127,30
+electricity,solar,PV_storage,2100,capital,730,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),1975,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),1990,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2005,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2010,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2015,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2021,capital,606,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2025,capital,590,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2030,capital,530,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2035,capital,471,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2040,capital,444,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2045,capital,417,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2050,capital,390,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2055,capital,388,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2060,capital,386,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2065,capital,384,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2070,capital,382,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2075,capital,380,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2080,capital,378,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2085,capital,377,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2090,capital,375,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2095,capital,373,0.127,30
+electricity,refined liquids,refined liquids (CC CCS),2100,capital,371,0.127,30
+electricity,refined liquids,refined liquids (CC),1975,capital,269,0.127,30
+electricity,refined liquids,refined liquids (CC),1990,capital,269,0.127,30
+electricity,refined liquids,refined liquids (CC),2005,capital,269,0.127,30
+electricity,refined liquids,refined liquids (CC),2010,capital,269,0.127,30
+electricity,refined liquids,refined liquids (CC),2015,capital,264,0.127,30
+electricity,refined liquids,refined liquids (CC),2021,capital,284,0.127,30
+electricity,refined liquids,refined liquids (CC),2025,capital,286,0.127,30
+electricity,refined liquids,refined liquids (CC),2030,capital,273,0.127,30
+electricity,refined liquids,refined liquids (CC),2035,capital,261,0.127,30
+electricity,refined liquids,refined liquids (CC),2040,capital,250,0.127,30
+electricity,refined liquids,refined liquids (CC),2045,capital,239,0.127,30
+electricity,refined liquids,refined liquids (CC),2050,capital,228,0.127,30
+electricity,refined liquids,refined liquids (CC),2055,capital,227,0.127,30
+electricity,refined liquids,refined liquids (CC),2060,capital,226,0.127,30
+electricity,refined liquids,refined liquids (CC),2065,capital,225,0.127,30
+electricity,refined liquids,refined liquids (CC),2070,capital,224,0.127,30
+electricity,refined liquids,refined liquids (CC),2075,capital,223,0.127,30
+electricity,refined liquids,refined liquids (CC),2080,capital,222,0.127,30
+electricity,refined liquids,refined liquids (CC),2085,capital,220,0.127,30
+electricity,refined liquids,refined liquids (CC),2090,capital,219,0.127,30
+electricity,refined liquids,refined liquids (CC),2095,capital,218,0.127,30
+electricity,refined liquids,refined liquids (CC),2100,capital,217,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),1975,capital,250,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),1990,capital,250,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2005,capital,250,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2010,capital,250,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2015,capital,239,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2021,capital,255,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2025,capital,255,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2030,capital,245,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2035,capital,235,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2040,capital,224,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2045,capital,214,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2050,capital,204,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2055,capital,203,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2060,capital,202,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2065,capital,201,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2070,capital,200,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2075,capital,199,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2080,capital,198,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2085,capital,197,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2090,capital,196,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2095,capital,195,0.127,30
+electricity,refined liquids,refined liquids (steam/CT),2100,capital,194,0.127,30
+electricity,nuclear,SMR,1975,capital,1885,0.127,30
+electricity,nuclear,SMR,1990,capital,1885,0.127,30
+electricity,nuclear,SMR,2005,capital,1885,0.127,30
+electricity,nuclear,SMR,2010,capital,1885,0.127,30
+electricity,nuclear,SMR,2015,capital,1885,0.127,30
+electricity,nuclear,SMR,2021,capital,1885,0.127,30
+electricity,nuclear,SMR,2025,capital,1885,0.127,30
+electricity,nuclear,SMR,2030,capital,1885,0.127,30
+electricity,nuclear,SMR,2035,capital,1532,0.127,30
+electricity,nuclear,SMR,2040,capital,1237,0.127,30
+electricity,nuclear,SMR,2045,capital,1060,0.127,30
+electricity,nuclear,SMR,2050,capital,943,0.127,30
+electricity,nuclear,SMR,2055,capital,938,0.127,30
+electricity,nuclear,SMR,2060,capital,933,0.127,30
+electricity,nuclear,SMR,2065,capital,929,0.127,30
+electricity,nuclear,SMR,2070,capital,924,0.127,30
+electricity,nuclear,SMR,2075,capital,919,0.127,30
+electricity,nuclear,SMR,2080,capital,915,0.127,30
+electricity,nuclear,SMR,2085,capital,910,0.127,30
+electricity,nuclear,SMR,2090,capital,906,0.127,30
+electricity,nuclear,SMR,2095,capital,901,0.127,30
+electricity,nuclear,SMR,2100,capital,897,0.127,30
+electricity,wind,wind_storage,1975,capital,1984,0.127,30
+electricity,wind,wind_storage,1990,capital,1984,0.127,30
+electricity,wind,wind_storage,2005,capital,1984,0.127,30
+electricity,wind,wind_storage,2010,capital,1984,0.127,30
+electricity,wind,wind_storage,2015,capital,1812,0.127,30
+electricity,wind,wind_storage,2021,capital,1689,0.127,30
+electricity,wind,wind_storage,2025,capital,1422,0.127,30
+electricity,wind,wind_storage,2030,capital,1209,0.127,30
+electricity,wind,wind_storage,2035,capital,1121,0.127,30
+electricity,wind,wind_storage,2040,capital,1034,0.127,30
+electricity,wind,wind_storage,2045,capital,947,0.127,30
+electricity,wind,wind_storage,2050,capital,860,0.127,30
+electricity,wind,wind_storage,2055,capital,856,0.127,30
+electricity,wind,wind_storage,2060,capital,851,0.127,30
+electricity,wind,wind_storage,2065,capital,847,0.127,30
+electricity,wind,wind_storage,2070,capital,843,0.127,30
+electricity,wind,wind_storage,2075,capital,839,0.127,30
+electricity,wind,wind_storage,2080,capital,835,0.127,30
+electricity,wind,wind_storage,2085,capital,830,0.127,30
+electricity,wind,wind_storage,2090,capital,826,0.127,30
+electricity,wind,wind_storage,2095,capital,822,0.127,30
+electricity,wind,wind_storage,2100,capital,818,0.127,30
