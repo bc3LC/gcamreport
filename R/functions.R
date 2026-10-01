@@ -5051,7 +5051,6 @@ get_gov_revenue <- function(GCAM_version = 'v8.2') {
   check_queries("gov_revenue_clean", GCAM_version)
 
   gov_revenue_clean <-
-    gov_revenue_sector <-
     co2_emiss %>%
     dplyr::mutate(
       sector = ifelse(var == "Emissions|CO2|Energy|Demand|Industry", "Carbon|Demand|Industry", NA),
@@ -6751,36 +6750,33 @@ do_bind_results <- function(GCAM_version = 'v8.2', all_tier1 = F) {
     dplyr::filter(!is.na(Region)) %>%
     dplyr::filter(Variable %in% unique(get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['Variable']]))
 
-  # Add "Other" category when variables present as reportable (Internal_variable column not empty in the template)
-  missing_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
-    dplyr::filter(!Variable %in% unique(report$Variable),
-                  grepl('Other', Variable),
-                  !is.na(Internal_variable))
-  year_cols <- names(report)[sapply(names(report), function(x) grepl("^\\d{4}$", x))]
-  zero_df <- as.data.frame(matrix(0, nrow = 1, ncol = length(year_cols)))
-  year_cols -> colnames(zero_df)
-
-  report <- report %>%
-    rbind(missing_var %>%
-            dplyr::distinct(Variable, Unit) %>%
-            dplyr::mutate(Model = unique(report$Model)[1],
-                          Scenario = unique(report$Scenario)[1],
-                          Region = unique(report$Region)[1]) %>%
-            tidyr::complete(tidyr::nesting(Variable, Unit),
-                            Model = unique(report$Model),
-                            Scenario = unique(report$Scenario),
-                            Region = unique(report$Region)) %>%
-            cbind(zero_df))
-
-  # Filter user selected variables
-  if (!(length(desired_variables.global) == 1 && desired_variables.global == "All")) {
-    report <- report %>%
-      dplyr::filter(Variable %in% desired_variables.global)
-  }
 
   # Add all Tier 1 variables; if not present, set them as 0. Set also to 0 the
   # missing region-variable combinations
   if (all_tier1) {
+    # Add "Other" category when variables present as reportable (Internal_variable column not empty in the template)
+    missing_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+      dplyr::filter(!Variable %in% unique(report$Variable),
+                    grepl('Other', Variable),
+                    !is.na(Internal_variable))
+    year_cols <- names(report)[sapply(names(report), function(x) grepl("^\\d{4}$", x))]
+    zero_df <- as.data.frame(matrix(0, nrow = 1, ncol = length(year_cols)))
+    year_cols -> colnames(zero_df)
+
+    report <- report %>%
+      rbind(missing_var %>%
+              dplyr::distinct(Variable, Unit) %>%
+              dplyr::mutate(Model = unique(report$Model)[1],
+                            Scenario = unique(report$Scenario)[1],
+                            Region = unique(report$Region)[1]) %>%
+              tidyr::complete(tidyr::nesting(Variable, Unit),
+                              Model = unique(report$Model),
+                              Scenario = unique(report$Scenario),
+                              Region = unique(report$Region)) %>%
+              cbind(zero_df))
+
+
+    # Add other Tier1 variables
     tier1_variables <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
       # only Tier 1 variables
       dplyr::filter(Tier == 1)
@@ -6824,7 +6820,13 @@ do_bind_results <- function(GCAM_version = 'v8.2', all_tier1 = F) {
       report <- report_complete
 
     }
+
+  # Filter user selected variables
+  } else if (!(length(desired_variables.global) == 1 && desired_variables.global == "All")) {
+    report <- report %>%
+      dplyr::filter(Variable %in% desired_variables.global)
   }
+
 
 
   report <<- report
