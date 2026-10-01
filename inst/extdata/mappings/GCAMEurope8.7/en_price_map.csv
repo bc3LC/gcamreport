@@ -308,7 +308,7 @@ GuineaGulfGuineaGulf_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
 GuineaGulfGuineaGulf_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
 GuineaGulf_desalinated water,NoReported,,,,,,,,,,,,,,,,,,1
 H2 central production,Price|Secondary Energy|Hydrogen,,,,,,,,,,,,,,,,,,1
-H2 industrial,Price|Final Energy|Industry|Hydrogen,Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Price|Final Energy|Industry|Iron and Steel|Hydrogen,Price|Final Energy|Industry|Other Sector|Hydrogen,,,,,,,,,,,,,,,1
+H2 industrial,Price|Final Energy|Industry|Hydrogen,Price|Final Energy|Industry|Chemicals|Ammonia|Hydrogen,Price|Final Energy|Industry|Iron and Steel|Hydrogen,Price|Final Energy|Industry|Other Sector|Hydrogen,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Hydrogen,Price|Final Energy|Industry|Non-Metallic Minerals|Hydrogen,,,,,,,,,,,,,1
 H2 liquid truck,NoReported,,,,,,,,,,,,,,,,,,1
 H2 pipeline,NoReported,,,,,,,,,,,,,,,,,,1
 H2 retail delivery,Price|Final Energy|Residential and Commercial|Hydrogen,Price|Final Energy|Residential|Hydrogen,Price|Final Energy|Commercial|Hydrogen,,,,,,,,,,,,,,,,1
@@ -827,10 +827,10 @@ consumer durable,NoReported,,,,,,,,,,,,,,,,,,1
 crude oil,NoReported,,,,,,,,,,,,,,,,,,1
 csp_backup,NoReported,,,,,,,,,,,,,,,,,,1
 delivered biomass,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Biomass,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Biomass,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Biomass,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Biomass,,,Price|Final Energy|Solids,Price|Final Energy|Solids|Biomass,,,,,,,1
-delivered biomass industry,,,,,,,,,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Biomass,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Biomass,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Biomass,1
+delivered biomass industry,,,,,,,Price|Final Energy|Industry|Non-Metallic Minerals|Solids,Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Biomass,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Biomass,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Biomass,1
 delivered coal,Price|Final Energy|Agriculture|Solids,Price|Final Energy|Agriculture|Solids|Coal,Price|Final Energy|Residential and Commercial|Solids,Price|Final Energy|Residential and Commercial|Solids|Coal,Price|Final Energy|Residential|Solids,Price|Final Energy|Residential|Solids|Coal,Price|Final Energy|Commercial|Solids,Price|Final Energy|Commercial|Solids|Coal,,,Price|Final Energy|Solids,Price|Final Energy|Solids|Coal,,,,,,,1
 delivered coal feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
-delivered coal industry,,,,,,,,,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Coal,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Coal,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Coal,1
+delivered coal industry,,,,,,,Price|Final Energy|Industry|Non-Metallic Minerals|Solids,Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Coal,Price|Final Energy|Industry|Solids,Price|Final Energy|Industry|Solids|Coal,,,Price|Final Energy|Industry|Chemicals|Solids,Price|Final Energy|Industry|Chemicals|Solids|Coal,Price|Final Energy|Industry|Iron and Steel|Solids,Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Price|Final Energy|Industry|Other Sector|Solids,Price|Final Energy|Industry|Other Sector|Solids|Coal,1
 delivered gas,Price|Final Energy|Residential and Commercial|Gases,Price|Final Energy|Residential|Gases,Price|Final Energy|Commercial|Gases,,,,,,,,,,,,,,,,1
 delivered gas h2,NoReported,,,,,,,,,,,,,,,,,,1
 delivered gas transport,,,,Price|Final Energy|Transportation|Gases,Price|Final Energy|Transportation|Bus|Gases,Price|Final Energy|Transportation|Light-Duty Vehicle|Gases,,,,,,,,,,,,,1
@@ -876,7 +876,7 @@ elec_refined liquids (CC)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
 elec_refined liquids (steam/CT),NoReported,,,,,,,,,,,,,,,,,,1
 elec_refined liquids (steam/CT)-fixed-output,NoReported,,,,,,,,,,,,,,,,,,1
 elect_td_bld,Price|Final Energy|Residential and Commercial|Electricity,,Price|Final Energy|Residential|Electricity,Price|Final Energy|Commercial|Electricity,,,,,,,,,,,,,,,1
-elect_td_ind,Price|Final Energy|Agriculture|Electricity,,Price|Final Energy|Electricity,Price|Final Energy|Industry|Electricity,Price|Final Energy|Industry|Chemicals|Electricity,Price|Final Energy|Industry|Iron and Steel|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Price|Final Energy|Industry|Other Sector|Electricity,Price|Final Energy|Industry|Pulp and Paper|Electricity,,,,,,,,,,1
+elect_td_ind,Price|Final Energy|Agriculture|Electricity,,Price|Final Energy|Electricity,Price|Final Energy|Industry|Electricity,Price|Final Energy|Industry|Chemicals|Electricity,Price|Final Energy|Industry|Iron and Steel|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Price|Final Energy|Industry|Other Sector|Electricity,Price|Final Energy|Industry|Pulp and Paper|Electricity,Price|Final Energy|Industry|Non-Metallic Minerals|Electricity,,,,,,,,,1
 elect_td_trn,Price|Final Energy|Bunkers|Electricity,,Price|Final Energy|Transportation (w/ bunkers)|Electricity,Price|Final Energy|Transportation|Electricity,Price|Final Energy|Transportation|Truck|Electricity,Price|Final Energy|Transportation|Rail|Electricity,Price|Final Energy|Transportation|Passenger|Electricity,Price|Final Energy|Transportation|Light-Duty Vehicle|Electricity,Price|Final Energy|Transportation|Freight|Electricity,Price|Final Energy|Transportation|Domestic Shipping|Electricity,Price|Final Energy|Transportation|Domestic Aviation|Electricity,Price|Final Energy|Transportation|Bus|Electricity,,,,,,,1
 elect_td_en,NoReported,,,,,,,,,,,,,,,,,,1
 elect_td_h2,NoReported,,,,,,,,,,,,,,,,,,1
@@ -940,7 +940,7 @@ process heat dac,NoReported,,,,,,,,,,,,,,,,,,1
 process heat food processing,NoReported,,,,,,,,,,,,,,,,,,1
 process heat paper,NoReported,,,,,,,,,,,,,,,,,,1
 refined liquids enduse,Price|Final Energy|Bunkers|Liquids,,,Price|Final Energy|Residential and Commercial|Liquids,Price|Final Energy|Residential|Liquids,Price|Final Energy|Commercial|Liquids,Price|Final Energy|Liquids,,,,,,,,,,,,1
-refined liquids industrial,Price|Final Energy|Agriculture|Liquids,,Price|Final Energy|Industry|Liquids,Price|Final Energy|Industry|Chemicals|Liquids,Price|Final Energy|Industry|Iron and Steel|Liquids,Price|Final Energy|Industry|Other Sector|Liquids,,,,,,,,,,,,,1
+refined liquids industrial,Price|Final Energy|Agriculture|Liquids,,Price|Final Energy|Industry|Liquids,Price|Final Energy|Industry|Chemicals|Liquids,Price|Final Energy|Industry|Iron and Steel|Liquids,Price|Final Energy|Industry|Other Sector|Liquids,Price|Final Energy|Industry|Non-Metallic Minerals|Liquids,Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Liquids,,,,,,,,,,,1
 refined liquids feedstocks,NoReported,,,,,,,,,,,,,,,,,,1
 refined liquids transport,Price|Final Energy|Transportation (w/ bunkers)|Liquids,,,,,,,,,,,,,,,,,,1
 refined liquids bunkers,NoReported,,,,,,,,,,,,,,,,,,1

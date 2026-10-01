@@ -728,10 +728,11 @@ local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
          <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and (@name='refining')]//
     output-primary[@type='output']/physical-output/node()</xPath>
          <comments/>
-     </supplyDemandQuery>   </aQuery>
+     </supplyDemandQuery>   
+   </aQuery>
    <aQuery>
       <all-regions />
-			<supplyDemandQuery title="refined liquids production by tech">
+	<supplyDemandQuery title="refined liquids production by tech">
             <axis1 name="technology">technology</axis1>
             <axis2 name="Year">physical-output[@vintage]</axis2>
             <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' and contains(@name,'refining')]/*[@type='subsector']//
@@ -914,6 +915,15 @@ output-primary/physical-output/node()</xPath>
             <comments/>
       </supplyDemandQuery>
   </aQuery>
+   <aQuery>
+      <all-regions />
+      <supplyDemandQuery title="ag regional prices (current consumer prices)">
+            <axis1 name="sector">sector</axis1>
+            <axis2 name="Year">cost</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and contains(@name, 'regional')]/cost[@unit='1975$/kg' or @unit='1975$/m3']/text()</xPath>
+            <comments/>
+      </supplyDemandQuery>
+   </aQuery>
    <aQuery>
       <all-regions />
       <supplyDemandQuery title="meat and dairy production by type">
@@ -1555,6 +1565,7 @@ A user can adjust the query to search for any of:
          <comments/>
      </supplyDemandQuery>
    </aQuery>
+
 
    <aQuery>
       <all-regions />

@@ -238,6 +238,11 @@ buildings_en_service_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "ins
 ) %>% gather_map()
 use_data(buildings_en_service_vEurope7.2, overwrite = T)
 
+hdd_cdd_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "hdd_cdd.csv"),
+                                      comment = "#"
+) %>% gather_map()
+use_data(hdd_cdd_vEurope7.2, overwrite = T)
+
 
 # capital updates
 capital_gcam_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L223.GlobalIntTechCapital_elec.csv"),
