@@ -238,6 +238,10 @@ buildings_en_service_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "ins
 ) %>% gather_map()
 use_data(buildings_en_service_vEurope8.7, overwrite = T)
 
+hdd_cdd_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope8.7", "hdd_cdd.csv"),
+                                             comment = "#"
+) %>% gather_map()
+use_data(hdd_cdd_vEurope8.7, overwrite = T)
 
 # capital updates
 capital_gcam_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope8.7", "L223.GlobalIntTechCapital_elec.csv"),
@@ -337,9 +341,11 @@ convert_vEurope8.7 <- list(
   # These values are taken from GDP inflator in the GCAM R package
   conv_05USD_10USD = 1.100372,
   conv_90USD_10USD = 1.515897,
+  conv_10USD_25USD = 1.492, # source: internet
   conv_75USD_10USD = 3.227608,
   conv_15USD_10USD = 0.91863,
   conv_19USD_75USD = 0.2658798,
+  conv_17USD_90USD = 0.5880752,
   conv_C_CO2 = 44 / 12,
   # Elec related conversions
   hr_per_yr = 8760,

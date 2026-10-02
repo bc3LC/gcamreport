@@ -44,7 +44,6 @@ Price|Final Energy|Industry|Iron and Steel|Solids,Final Energy|Industry|Iron and
 Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Final Energy|Industry|Iron and Steel|Solids|Biomass
 Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Final Energy|Industry|Iron and Steel|Solids|Coal
 Price|Final Energy|Industry|Liquids,Final Energy|Industry|Liquids
-Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity
 Price|Final Energy|Industry|Other Sector|Electricity,Final Energy|Industry|Other Sector|Electricity
 Price|Final Energy|Industry|Other Sector|Gases,Final Energy|Industry|Other Sector|Gases
 Price|Final Energy|Industry|Other Sector|Hydrogen,Final Energy|Industry|Other Sector|Hydrogen
@@ -56,6 +55,20 @@ Price|Final Energy|Industry|Pulp and Paper|Electricity,Final Energy|Industry|Pul
 Price|Final Energy|Industry|Solids,Final Energy|Industry|Solids
 Price|Final Energy|Industry|Solids|Biomass,Final Energy|Industry|Solids|Biomass
 Price|Final Energy|Industry|Solids|Coal,Final Energy|Industry|Solids|Coal
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Gases,Final Energy|Industry|Non-Metallic Minerals|Cement|Gases
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Liquids,Final Energy|Industry|Non-Metallic Minerals|Cement|Liquids
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Hydrogen,Final Energy|Industry|Non-Metallic Minerals|Cement|Hydrogen
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Biomass,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Biomass
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Coal,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Coal
+Price|Final Energy|Industry|Non-Metallic Minerals|Electricity,Final Energy|Industry|Non-Metallic Minerals|Electricity
+Price|Final Energy|Industry|Non-Metallic Minerals|Gases,Final Energy|Industry|Non-Metallic Minerals|Gases
+Price|Final Energy|Industry|Non-Metallic Minerals|Liquids,Final Energy|Industry|Non-Metallic Minerals|Liquids
+Price|Final Energy|Industry|Non-Metallic Minerals|Hydrogen,Final Energy|Industry|Non-Metallic Minerals|Hydrogen
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids,Final Energy|Industry|Non-Metallic Minerals|Solids
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass,Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Coal,Final Energy|Industry|Non-Metallic Minerals|Solids|Coal
 Price|Final Energy|Liquids,Final Energy|Liquids
 Price|Final Energy|Residential and Commercial|Electricity,Final Energy|Residential and Commercial|Electricity
 Price|Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Gases
