@@ -2207,7 +2207,7 @@ get_forestry <- function(GCAM_version = 'v8.2') {
 
   # join M3 and EJ to compute ratio and apply to future periods
   ResidueBio_R_Y %>%
-    dplyr::left_join(WoodFuel_m3) %>%
+    dplyr::left_join(WoodFuel_m3, by = c("region", "year")) %>%
     dplyr::mutate(WoodFuel_Mm3 = WoodFuel_m3 / 10^6) %>%
     dplyr::mutate(Ratio_M3_EJ = WoodFuel_Mm3 / WoodFuel_EJ) %>%
     dplyr::group_by(region) %>%
@@ -4717,6 +4717,7 @@ get_ag_price <- function(GCAM_version = 'v8.2') {
                        filter_variables() %>%
                        dplyr::select(-sector) %>%
                        dplyr::rename(sector = item),
+                     by = c('sector','var','year','region','scenario'),
                      by_message = c('sector','var','year','region')) %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables() %>%
