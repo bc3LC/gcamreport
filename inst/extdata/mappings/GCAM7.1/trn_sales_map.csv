@@ -12,7 +12,7 @@ trn_pass_road_LDV_4W,Large Car and Truck,NG,Sales|Transportation|Light-Duty Vehi
 trn_pass_road_LDV_4W,Mini Car,NG,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Internal Combustion,,,1
 trn_pass_road_LDV_4W,Car,Hybrid Liquids,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Internal Combustion,,,1
 trn_pass_road_LDV,2W and 3W,BEV,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Battery-Electric,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler|Battery-Electric,1
-trn_pass_road_LDV,2W and 3W,LA-BEV,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Plug-in Hybrid,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler|Plug-in Hybrid,1
+trn_pass_road_LDV,2W and 3W,LA-BEV,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Battery-Electric,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler|Battery-Electric,1
 trn_pass_road_LDV,2W and 3W,NG,Sales|Transportation|Light-Duty Vehicle,Sales|Transportation|Light-Duty Vehicle|Internal Combustion,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler,Sales|Transportation|Light-Duty Vehicle|Two-Wheeler|Internal Combustion,1
 trn_freight_road,Light truck,NG,Sales|Transportation|Truck,Sales|Transportation|Truck|Internal Combustion,,,1
 trn_freight_road,Heavy truck,NG,Sales|Transportation|Truck,Sales|Transportation|Truck|Internal Combustion,,,1
