@@ -49,9 +49,10 @@ is currently compatible with GCAM-core versions
 [7.0](https://zenodo.org/records/8010145),
 [7.1](https://zenodo.org/records/11481167),
 [7.2](https://zenodo.org/records/13946379),
-[8.2](https://zenodo.org/records/15581174), and the [ScenarioMIP
-project](https://wcrp-cmip.org/mips/scenariomip/); and GCAM-Europe
-versions [7.2](https://zenodo.org/records/15655568) and
+[8.2](https://zenodo.org/records/15581174),
+[9.1](https://github.com/JGCRI/gcam-core/releases/tag/gcam-v9.1), and
+the [ScenarioMIP project](https://wcrp-cmip.org/mips/scenariomip/); and
+GCAM-Europe versions [7.2](https://zenodo.org/records/15655568) and
 [8.7](https://github.com/bc3LC-GCAMEurope/gcam-core/releases/tag/gcam-europe-v8.7.0).
 Moreover, we support the 2015 and 2021 GCAM base years. Check the
 [version
