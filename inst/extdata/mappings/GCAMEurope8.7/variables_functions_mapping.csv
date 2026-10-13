@@ -46,6 +46,7 @@ fe_transportation_raw;get_fe_transportation_tmp;;transport final energy by mode 
 fe_sector_clean;get_fe_sector;fe_sector,fe_transportation;
 energy_service_transportation_clean;get_energy_service_transportation;;transport service output by tech and vintage
 floor_space_clean;get_floor_space;;building floorspace
+hdd_cdd_clean;get_hdd_cdd;;
 industry_production_clean;get_industry_production;;industry primary output by sector
 ag_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity,regional biomass consumption
 ag_wld_weights;get_ag_weights;;demand balances by crop commodity,demand balances by meat and dairy commodity,regional biomass consumption

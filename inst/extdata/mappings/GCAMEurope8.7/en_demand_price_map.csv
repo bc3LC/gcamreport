@@ -11,6 +11,18 @@ Price|Final Energy|Agriculture|Solids|Coal,Final Energy|Agriculture|Solids|Coal
 Price|Final Energy|Bunkers|Electricity,Final Energy|Transportation (w/ bunkers)|Electricity
 Price|Final Energy|Bunkers|Hydrogen,Final Energy|Transportation (w/ bunkers)|Hydrogen
 Price|Final Energy|Bunkers|Liquids,Final Energy|Transportation (w/ bunkers)|Liquids
+Price|Final Energy|Commercial|Appliances|Electricity,Final Energy|Commercial|Appliances|Electricity
+Price|Final Energy|Commercial|Appliances|Hydrogen,Final Energy|Commercial|Appliances|Hydrogen
+Price|Final Energy|Commercial|Appliances|Liquids,Final Energy|Commercial|Appliances|Liquids
+Price|Final Energy|Commercial|Appliances|Solids,Final Energy|Commercial|Appliances|Solids
+Price|Final Energy|Commercial|Appliances|Solids|Biomass,Final Energy|Commercial|Appliances|Solids|Biomass
+Price|Final Energy|Commercial|Appliances|Solids|Coal,Final Energy|Commercial|Appliances|Solids|Coal
+Price|Final Energy|Commercial|Cooking|Electricity,Final Energy|Commercial|Cooking|Electricity
+Price|Final Energy|Commercial|Cooking|Hydrogen,Final Energy|Commercial|Cooking|Hydrogen
+Price|Final Energy|Commercial|Cooking|Liquids,Final Energy|Commercial|Cooking|Liquids
+Price|Final Energy|Commercial|Cooking|Solids,Final Energy|Commercial|Cooking|Solids
+Price|Final Energy|Commercial|Cooking|Solids|Biomass,Final Energy|Commercial|Cooking|Solids|Biomass
+Price|Final Energy|Commercial|Cooking|Solids|Coal,Final Energy|Commercial|Cooking|Solids|Coal
 Price|Final Energy|Commercial|Electricity,Final Energy|Commercial|Electricity
 Price|Final Energy|Commercial|Gases,Final Energy|Commercial|Gases
 Price|Final Energy|Commercial|Heat,Final Energy|Commercial|Heat
@@ -19,6 +31,24 @@ Price|Final Energy|Commercial|Liquids,Final Energy|Commercial|Liquids
 Price|Final Energy|Commercial|Solids,Final Energy|Commercial|Solids
 Price|Final Energy|Commercial|Solids|Biomass,Final Energy|Commercial|Solids|Biomass
 Price|Final Energy|Commercial|Solids|Coal,Final Energy|Commercial|Solids|Coal
+Price|Final Energy|Commercial|Space Cooling|Electricity,Final Energy|Commercial|Space Cooling|Electricity
+Price|Final Energy|Commercial|Space Cooling|Hydrogen,Final Energy|Commercial|Space Cooling|Hydrogen
+Price|Final Energy|Commercial|Space Cooling|Liquids,Final Energy|Commercial|Space Cooling|Liquids
+Price|Final Energy|Commercial|Space Cooling|Solids,Final Energy|Commercial|Space Cooling|Solids
+Price|Final Energy|Commercial|Space Cooling|Solids|Biomass,Final Energy|Commercial|Space Cooling|Solids|Biomass
+Price|Final Energy|Commercial|Space Cooling|Solids|Coal,Final Energy|Commercial|Space Cooling|Solids|Coal
+Price|Final Energy|Commercial|Space Heating|Electricity,Final Energy|Commercial|Space Heating|Electricity
+Price|Final Energy|Commercial|Space Heating|Hydrogen,Final Energy|Commercial|Space Heating|Hydrogen
+Price|Final Energy|Commercial|Space Heating|Liquids,Final Energy|Commercial|Space Heating|Liquids
+Price|Final Energy|Commercial|Space Heating|Solids,Final Energy|Commercial|Space Heating|Solids
+Price|Final Energy|Commercial|Space Heating|Solids|Biomass,Final Energy|Commercial|Space Heating|Solids|Biomass
+Price|Final Energy|Commercial|Space Heating|Solids|Coal,Final Energy|Commercial|Space Heating|Solids|Coal
+Price|Final Energy|Commercial|Water Heating|Electricity,Final Energy|Commercial|Water Heating|Electricity
+Price|Final Energy|Commercial|Water Heating|Hydrogen,Final Energy|Commercial|Water Heating|Hydrogen
+Price|Final Energy|Commercial|Water Heating|Liquids,Final Energy|Commercial|Water Heating|Liquids
+Price|Final Energy|Commercial|Water Heating|Solids,Final Energy|Commercial|Water Heating|Solids
+Price|Final Energy|Commercial|Water Heating|Solids|Biomass,Final Energy|Commercial|Water Heating|Solids|Biomass
+Price|Final Energy|Commercial|Water Heating|Solids|Coal,Final Energy|Commercial|Water Heating|Solids|Coal
 Price|Final Energy|Electricity,Final Energy|Electricity
 Price|Final Energy|Gases,Final Energy|Gases
 Price|Final Energy|Heat,Final Energy|Heat
@@ -45,6 +75,19 @@ Price|Final Energy|Industry|Iron and Steel|Solids|Biomass,Final Energy|Industry|
 Price|Final Energy|Industry|Iron and Steel|Solids|Coal,Final Energy|Industry|Iron and Steel|Solids|Coal
 Price|Final Energy|Industry|Liquids,Final Energy|Industry|Liquids
 Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity,Final Energy|Industry|Non-Metallic Minerals|Cement|Electricity
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Gases,Final Energy|Industry|Non-Metallic Minerals|Cement|Gases
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Hydrogen,Final Energy|Industry|Non-Metallic Minerals|Cement|Hydrogen
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Liquids,Final Energy|Industry|Non-Metallic Minerals|Cement|Liquids
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Biomass,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Biomass
+Price|Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Coal,Final Energy|Industry|Non-Metallic Minerals|Cement|Solids|Coal
+Price|Final Energy|Industry|Non-Metallic Minerals|Electricity,Final Energy|Industry|Non-Metallic Minerals|Electricity
+Price|Final Energy|Industry|Non-Metallic Minerals|Gases,Final Energy|Industry|Non-Metallic Minerals|Gases
+Price|Final Energy|Industry|Non-Metallic Minerals|Hydrogen,Final Energy|Industry|Non-Metallic Minerals|Hydrogen
+Price|Final Energy|Industry|Non-Metallic Minerals|Liquids,Final Energy|Industry|Non-Metallic Minerals|Liquids
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids,Final Energy|Industry|Non-Metallic Minerals|Solids
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass,Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass
+Price|Final Energy|Industry|Non-Metallic Minerals|Solids|Coal,Final Energy|Industry|Non-Metallic Minerals|Solids|Coal
 Price|Final Energy|Industry|Other Sector|Electricity,Final Energy|Industry|Other Sector|Electricity
 Price|Final Energy|Industry|Other Sector|Gases,Final Energy|Industry|Other Sector|Gases
 Price|Final Energy|Industry|Other Sector|Hydrogen,Final Energy|Industry|Other Sector|Hydrogen
@@ -57,6 +100,18 @@ Price|Final Energy|Industry|Solids,Final Energy|Industry|Solids
 Price|Final Energy|Industry|Solids|Biomass,Final Energy|Industry|Solids|Biomass
 Price|Final Energy|Industry|Solids|Coal,Final Energy|Industry|Solids|Coal
 Price|Final Energy|Liquids,Final Energy|Liquids
+Price|Final Energy|Residential and Commercial|Appliances|Electricity,Final Energy|Residential and Commercial|Appliances|Electricity
+Price|Final Energy|Residential and Commercial|Appliances|Hydrogen,Final Energy|Residential and Commercial|Appliances|Hydrogen
+Price|Final Energy|Residential and Commercial|Appliances|Liquids,Final Energy|Residential and Commercial|Appliances|Liquids
+Price|Final Energy|Residential and Commercial|Appliances|Solids,Final Energy|Residential and Commercial|Appliances|Solids
+Price|Final Energy|Residential and Commercial|Appliances|Solids|Biomass,Final Energy|Residential and Commercial|Appliances|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Appliances|Solids|Coal,Final Energy|Residential and Commercial|Appliances|Solids|Coal
+Price|Final Energy|Residential and Commercial|Cooking|Electricity,Final Energy|Residential and Commercial|Cooking|Electricity
+Price|Final Energy|Residential and Commercial|Cooking|Hydrogen,Final Energy|Residential and Commercial|Cooking|Hydrogen
+Price|Final Energy|Residential and Commercial|Cooking|Liquids,Final Energy|Residential and Commercial|Cooking|Liquids
+Price|Final Energy|Residential and Commercial|Cooking|Solids,Final Energy|Residential and Commercial|Cooking|Solids
+Price|Final Energy|Residential and Commercial|Cooking|Solids|Biomass,Final Energy|Residential and Commercial|Cooking|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Cooking|Solids|Coal,Final Energy|Residential and Commercial|Cooking|Solids|Coal
 Price|Final Energy|Residential and Commercial|Electricity,Final Energy|Residential and Commercial|Electricity
 Price|Final Energy|Residential and Commercial|Gases,Final Energy|Residential and Commercial|Gases
 Price|Final Energy|Residential and Commercial|Heat,Final Energy|Residential and Commercial|Heat
@@ -65,6 +120,36 @@ Price|Final Energy|Residential and Commercial|Liquids,Final Energy|Residential a
 Price|Final Energy|Residential and Commercial|Solids,Final Energy|Residential and Commercial|Solids
 Price|Final Energy|Residential and Commercial|Solids|Biomass,Final Energy|Residential and Commercial|Solids|Biomass
 Price|Final Energy|Residential and Commercial|Solids|Coal,Final Energy|Residential and Commercial|Solids|Coal
+Price|Final Energy|Residential and Commercial|Space Cooling|Electricity,Final Energy|Residential and Commercial|Space Cooling|Electricity
+Price|Final Energy|Residential and Commercial|Space Cooling|Hydrogen,Final Energy|Residential and Commercial|Space Cooling|Hydrogen
+Price|Final Energy|Residential and Commercial|Space Cooling|Liquids,Final Energy|Residential and Commercial|Space Cooling|Liquids
+Price|Final Energy|Residential and Commercial|Space Cooling|Solids,Final Energy|Residential and Commercial|Space Cooling|Solids
+Price|Final Energy|Residential and Commercial|Space Cooling|Solids|Biomass,Final Energy|Residential and Commercial|Space Cooling|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Space Cooling|Solids|Coal,Final Energy|Residential and Commercial|Space Cooling|Solids|Coal
+Price|Final Energy|Residential and Commercial|Space Heating|Electricity,Final Energy|Residential and Commercial|Space Heating|Electricity
+Price|Final Energy|Residential and Commercial|Space Heating|Hydrogen,Final Energy|Residential and Commercial|Space Heating|Hydrogen
+Price|Final Energy|Residential and Commercial|Space Heating|Liquids,Final Energy|Residential and Commercial|Space Heating|Liquids
+Price|Final Energy|Residential and Commercial|Space Heating|Solids,Final Energy|Residential and Commercial|Space Heating|Solids
+Price|Final Energy|Residential and Commercial|Space Heating|Solids|Biomass,Final Energy|Residential and Commercial|Space Heating|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Space Heating|Solids|Coal,Final Energy|Residential and Commercial|Space Heating|Solids|Coal
+Price|Final Energy|Residential and Commercial|Water Heating|Electricity,Final Energy|Residential and Commercial|Water Heating|Electricity
+Price|Final Energy|Residential and Commercial|Water Heating|Hydrogen,Final Energy|Residential and Commercial|Water Heating|Hydrogen
+Price|Final Energy|Residential and Commercial|Water Heating|Liquids,Final Energy|Residential and Commercial|Water Heating|Liquids
+Price|Final Energy|Residential and Commercial|Water Heating|Solids,Final Energy|Residential and Commercial|Water Heating|Solids
+Price|Final Energy|Residential and Commercial|Water Heating|Solids|Biomass,Final Energy|Residential and Commercial|Water Heating|Solids|Biomass
+Price|Final Energy|Residential and Commercial|Water Heating|Solids|Coal,Final Energy|Residential and Commercial|Water Heating|Solids|Coal
+Price|Final Energy|Residential|Appliances|Electricity,Final Energy|Residential|Appliances|Electricity
+Price|Final Energy|Residential|Appliances|Hydrogen,Final Energy|Residential|Appliances|Hydrogen
+Price|Final Energy|Residential|Appliances|Liquids,Final Energy|Residential|Appliances|Liquids
+Price|Final Energy|Residential|Appliances|Solids,Final Energy|Residential|Appliances|Solids
+Price|Final Energy|Residential|Appliances|Solids|Biomass,Final Energy|Residential|Appliances|Solids|Biomass
+Price|Final Energy|Residential|Appliances|Solids|Coal,Final Energy|Residential|Appliances|Solids|Coal
+Price|Final Energy|Residential|Cooking|Electricity,Final Energy|Residential|Cooking|Electricity
+Price|Final Energy|Residential|Cooking|Hydrogen,Final Energy|Residential|Cooking|Hydrogen
+Price|Final Energy|Residential|Cooking|Liquids,Final Energy|Residential|Cooking|Liquids
+Price|Final Energy|Residential|Cooking|Solids,Final Energy|Residential|Cooking|Solids
+Price|Final Energy|Residential|Cooking|Solids|Biomass,Final Energy|Residential|Cooking|Solids|Biomass
+Price|Final Energy|Residential|Cooking|Solids|Coal,Final Energy|Residential|Cooking|Solids|Coal
 Price|Final Energy|Residential|Electricity,Final Energy|Residential|Electricity
 Price|Final Energy|Residential|Gases,Final Energy|Residential|Gases
 Price|Final Energy|Residential|Heat,Final Energy|Residential|Heat
@@ -73,6 +158,24 @@ Price|Final Energy|Residential|Liquids,Final Energy|Residential|Liquids
 Price|Final Energy|Residential|Solids,Final Energy|Residential|Solids
 Price|Final Energy|Residential|Solids|Biomass,Final Energy|Residential|Solids|Biomass
 Price|Final Energy|Residential|Solids|Coal,Final Energy|Residential|Solids|Coal
+Price|Final Energy|Residential|Space Cooling|Electricity,Final Energy|Residential|Space Cooling|Electricity
+Price|Final Energy|Residential|Space Cooling|Hydrogen,Final Energy|Residential|Space Cooling|Hydrogen
+Price|Final Energy|Residential|Space Cooling|Liquids,Final Energy|Residential|Space Cooling|Liquids
+Price|Final Energy|Residential|Space Cooling|Solids,Final Energy|Residential|Space Cooling|Solids
+Price|Final Energy|Residential|Space Cooling|Solids|Biomass,Final Energy|Residential|Space Cooling|Solids|Biomass
+Price|Final Energy|Residential|Space Cooling|Solids|Coal,Final Energy|Residential|Space Cooling|Solids|Coal
+Price|Final Energy|Residential|Space Heating|Electricity,Final Energy|Residential|Space Heating|Electricity
+Price|Final Energy|Residential|Space Heating|Hydrogen,Final Energy|Residential|Space Heating|Hydrogen
+Price|Final Energy|Residential|Space Heating|Liquids,Final Energy|Residential|Space Heating|Liquids
+Price|Final Energy|Residential|Space Heating|Solids,Final Energy|Residential|Space Heating|Solids
+Price|Final Energy|Residential|Space Heating|Solids|Biomass,Final Energy|Residential|Space Heating|Solids|Biomass
+Price|Final Energy|Residential|Space Heating|Solids|Coal,Final Energy|Residential|Space Heating|Solids|Coal
+Price|Final Energy|Residential|Water Heating|Electricity,Final Energy|Residential|Water Heating|Electricity
+Price|Final Energy|Residential|Water Heating|Hydrogen,Final Energy|Residential|Water Heating|Hydrogen
+Price|Final Energy|Residential|Water Heating|Liquids,Final Energy|Residential|Water Heating|Liquids
+Price|Final Energy|Residential|Water Heating|Solids,Final Energy|Residential|Water Heating|Solids
+Price|Final Energy|Residential|Water Heating|Solids|Biomass,Final Energy|Residential|Water Heating|Solids|Biomass
+Price|Final Energy|Residential|Water Heating|Solids|Coal,Final Energy|Residential|Water Heating|Solids|Coal
 Price|Final Energy|Solids,Final Energy|Solids
 Price|Final Energy|Solids|Biomass,Final Energy|Solids|Biomass
 Price|Final Energy|Solids|Coal,Final Energy|Solids|Coal

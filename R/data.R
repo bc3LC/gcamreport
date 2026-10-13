@@ -575,6 +575,18 @@
 #' }
 "buildings_en_service_vEurope8.7"
 
+#' hdd_cdd_vEurope8.7
+#'
+#' @source github
+#' @format .csv
+#' @description buildings energy services compatible with GCAMEurope8.7.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::hdd_cdd_vEurope8.7
+#' }
+"hdd_cdd_vEurope8.7"
+
 #' capital_gcam_vEurope8.7
 #'
 #' @source github
@@ -1278,6 +1290,18 @@
 #' gcamreport::buildings_en_service_vEurope7.2
 #' }
 "buildings_en_service_vEurope7.2"
+
+#' hdd_cdd_vEurope7.2
+#'
+#' @source github
+#' @format .csv
+#' @description buildings energy services compatible with GCAMEurope7.2.
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::hdd_cdd_vEurope7.2
+#' }
+"hdd_cdd_vEurope7.2"
 
 #' capital_gcam_vEurope7.2
 #'
