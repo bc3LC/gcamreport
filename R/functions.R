@@ -4717,6 +4717,7 @@ get_ag_price <- function(GCAM_version = 'v8.2') {
                        filter_variables() %>%
                        dplyr::select(-sector) %>%
                        dplyr::rename(sector = item),
+                     by = c('sector','var','year','region','scenario'),
                      by_message = c('sector','var','year','region')) %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables() %>%
