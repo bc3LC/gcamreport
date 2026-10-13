@@ -962,6 +962,10 @@ with all the information to reproduce the crash.
   : hdd_cdd_v8.2
 - [`hdd_cdd_v9.1`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_v9.1.md)
   : hdd_cdd_v9.1
+- [`hdd_cdd_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vEurope7.2.md)
+  : hdd_cdd_vEurope7.2
+- [`hdd_cdd_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vEurope8.7.md)
+  : hdd_cdd_vEurope8.7
 - [`hdd_cdd_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/hdd_cdd_vScenarioMIPCMIP7.md)
   : hdd_cdd_vScenarioMIPCMIP7
 - [`iea_capacity_v7.0`](https://bc3lc.github.io/gcamreport/reference/iea_capacity_v7.0.md)
