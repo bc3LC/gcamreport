@@ -15,6 +15,7 @@ electricity,coal,coal (IGCC CCS),0.8,0.8
 electricity,gas,gas (steam/CT),0.8,0.8
 electricity,gas,gas (CC),0.85,0.85
 electricity,gas,gas (CC CCS),0.8,0.8
+electricity,refined liquids,refined liquids (steam/CT),0.8,0.8
 electricity,refined liquids,refined liquids (CC),0.85,0.85
 electricity,refined liquids,refined liquids (CC CCS),0.8,0.8
 electricity,biomass,biomass (conv),0.85,0.85
