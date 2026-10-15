@@ -4033,6 +4033,17 @@ get_elec_gen_tech <- function(GCAM_version = 'v8.2') {
   # grid region for the market name
   elec_gen_tmp <- check_inf(rgcam::getQuery(prj, "elec gen by gen tech"),
                             dataset_name = "elec gen by gen tech")
+
+  if (grep('Europe',GCAM_version)) {
+    elec_gen_tmp_EUR <- check_inf(rgcam::getQuery(prj, "elec gen by gen tech and cooling tech (onlyEUR)"),
+                                  dataset_name = "elec gen by gen tech") %>%
+      dplyr::filter(output != 'N/A',
+                    region %in% unique(gcam32_to_eu %>%
+                                         dplyr::filter(GCAMEU_region != GCAM32_region))) %>%
+      dplyr::select(Units,scenario,region,subsector=`subsector...4`,technology,year,value) %>%
+      dplyr::filter(!grepl('generation', subsector))
+  }
+
   if (any(grepl("generation", unique(elec_gen_tmp$subsector)))) {
     elec_gen_grids <- elec_gen_tmp %>%
       dplyr::filter(grepl('generation', subsector)) %>%
@@ -4047,6 +4058,14 @@ get_elec_gen_tech <- function(GCAM_version = 'v8.2') {
                       technology=`technology...5`,year,value),
       elec_gen_grids
     )
+
+    if (exists('elec_gen_tmp_EUR')) {
+      elec_gen_tmp <- rbind(
+        elec_gen_tmp_EUR %>%
+          dplyr::filter(region %in% unique(elec_gen_tmp$region)),
+        elec_gen_tmp
+      )
+    }
   }
 
   secondary_energy_raw1 <- rbind(
@@ -4067,7 +4086,7 @@ get_elec_gen_tech <- function(GCAM_version = 'v8.2') {
     ) %>%
       dplyr::rename(output = sector)
   ) %>%
-    left_join_strict(get(paste('secondary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
+    left_join_strict(secondary_energy_map_vEurope8.7,
                      by = c("output", "subsector", "technology"), mapping = paste('secondary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     dplyr::mutate(value = value * unit_conv)
