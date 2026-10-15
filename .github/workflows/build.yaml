@@ -65,17 +65,29 @@ jobs:
       # 3. Run tests per-file so memory clears, with live stdout monitoring
       - name: Run tests and monitor memory
         run: |
-          # Start background monitor (prints to the live log every 15 seconds)
+          # Start background monitor
           (while true; do echo "[MEM] $(date +%H:%M:%S) $(free -m | awk 'NR==2{print $3"/"$2" MB used"}')"; sleep 15; done) &
           MON=$!
+
+          # Initialize failure tracker
+          HAS_FAILURES=0
 
           # Loop through each test file in a fresh R process
           for f in tests/testthat/test*.R; do
             echo "=== $f ==="
-            Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)" || echo "FAILED: $f"
+            if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
+              echo "FAILED: $f"
+              HAS_FAILURES=1
+            fi
             free -m | awk 'NR==2{print "[MEM after] "$3"/"$2" MB"}'
           done
 
           # Clean up monitor when done
           kill $MON
+
+          # Force the action to fail if any test failed
+          if [ $HAS_FAILURES -ne 0 ]; then
+            echo "❌ Workflow failed: One or more tests failed."
+            exit 1
+          fi
         shell: bash
