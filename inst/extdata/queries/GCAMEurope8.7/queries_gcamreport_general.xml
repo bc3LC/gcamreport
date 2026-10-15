@@ -655,9 +655,28 @@ local:run-input-by-primary((:scenarios:), (:regions:), (:collection:))
             @name='base load generation' or @name='intermediate generation' or @name='subpeak generation' or @name='peak generation' or 
             @name='elect_td_bld' or @name='industrial energy use')]/
             *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
-            *[@type='output' (:collapse:) and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
+            *[@type='output' and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
             @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
             physical-output/node()</xPath>
+         <comments/>
+     </supplyDemandQuery>
+   </aQuery>
+   <aQuery>
+      <all-regions />
+       <supplyDemandQuery title="elec gen by gen tech and cooling tech (onlyEUR)">
+         <axis1 name="technology">region</axis1>
+         <axis2 name="Year">physical-output[@vintage]</axis2>
+         <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector']//
+                        *[@type='subsector' and not (@name='elect_td_bld')]//
+                        *[@type='technology' and not(contains(@name, 'cogen_grid')) and not(@name='biomass (conv)' or @name='biomass (conv CCS)' or @name='biomass (IGCC)' or @name='biomass (IGCC CCS)'
+                                   or @name='coal (conv pul)' or @name='coal (conv pul CCS)' or @name='coal (IGCC)' or @name='coal (IGCC CCS)'
+                                   or @name='gas (steam/CT)' or @name='gas (CC)' or @name='gas (CC CCS)'
+                                   or @name='refined liquids (steam/CT)' or @name='refined liquids (CC)' or @name='refined liquids (CC CCS)'
+                                   or @name='geothermal' or @name='Gen_II_LWR' or @name='Gen_III'
+                                   or @name='CSP' or @name='CSP_storage')]/
+                        *[@type='output' and (@name='electricity' or @name='base load generation' or @name='intermediate generation' or 
+                        @name='subpeak generation' or @name='peak generation' or @name='elect_td_bld')]/
+                        physical-output/node()</xPath>
          <comments/>
      </supplyDemandQuery>
    </aQuery>
