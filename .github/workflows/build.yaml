@@ -56,6 +56,8 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("pak")
+          # readxl 1.6.0 (October 2026) needs R >= 4.2, while this job tests on R 4.1: keep the last version that supports it
+          pak::pkg_install("readxl@1.5.0.1")
           # Install everything needed for the package and its tests
           pak::local_install_dev_deps()
           # Install specific extra tools and GitHub packages
