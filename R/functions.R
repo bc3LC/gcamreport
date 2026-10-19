@@ -4537,11 +4537,11 @@ get_industry_production <- function(GCAM_version = 'v8.2') {
   check_queries("industry_production_clean", GCAM_version)
 
   industry_production_clean <-
-    check_inf(rgcam::getQuery(prj, "industry primary output by sector"),
-              dataset_name = "industry primary output by sector") %>%
+    check_inf(rgcam::getQuery(prj, "industry primary output by tech"),
+              dataset_name = "industry primary output by tech") %>%
     dplyr::mutate(sector = dplyr::if_else(grepl('chemical',sector), 'chemical', sector)) %>%
     left_join_strict(get(paste('production_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                     by = c("sector"), mapping = paste('production_map',GCAM_version,sep='_')) %>%
+                     by = c("sector","technology"), mapping = paste('production_map',GCAM_version,sep='_')) %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables() %>%
     dplyr::group_by(scenario, region, var, year) %>%

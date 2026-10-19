@@ -1,0 +1,10 @@
+# Production mapping of iron and steel by technology
+sector,technology,var1,var2,var3,GCAM output unit
+iron and steel,BLASTFUR,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,BLASTFUR CCS,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,BLASTFUR with hydrogen,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,Biomass-based,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,Hydrogen-based DRI,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,EAF with DRI CCS,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,EAF with DRI,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Primary,,Mt
+iron and steel,EAF with scrap,Production|Iron and Steel|Steel,Production|Iron and Steel|Steel|Secondary,,Mt
