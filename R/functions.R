@@ -3553,6 +3553,11 @@ get_ag_weights <- function(GCAM_version = 'v8.2') {
 
   check_queries("ag_weights", GCAM_version)
   check_queries("ag_wld_weights", GCAM_version)
+  ag_demand_price_map <- get(paste('ag_demand_price_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  req_items <- ag_demand_price_map$ag_demand_variable[ag_demand_price_map$ag_price_variable %in%
+                                                        grep("^Price\\|Agriculture",
+                                                             desired_variables.global,
+                                                             value = TRUE)]
 
   ag_demand_tmp <-
     dplyr::bind_rows(
@@ -3569,10 +3574,10 @@ get_ag_weights <- function(GCAM_version = 'v8.2') {
     left_join_strict(get(paste('ag_demand_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                      by = c("input","sector"), mapping = paste('ag_demand_map',GCAM_version,sep='_'), multiple = "all", relationship = "many-to-many") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    filter_variables() %>%
+    filter_variables(extra = req_items) %>%
     dplyr::mutate(value = value * unit_conv) %>%
     # select variables whose price will be computed
-    dplyr::right_join(get(paste('ag_demand_price_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+    dplyr::right_join(ag_demand_price_map %>%
                         dplyr::filter(ag_price_variable != 'NoReported', ag_price_variable != ""),
                       by = c('var' = 'ag_demand_variable'), relationship = "many-to-many") %>%
     dplyr::distinct() %>%
@@ -3839,7 +3844,7 @@ get_primary_energy <- function(GCAM_version = 'v8.2') {
                          dplyr::filter(!grepl('CCS',var)),
                        by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
       dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-      filter_variables() %>%
+      filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Primary Energy", desired_variables.global, value = TRUE))) %>%
       dplyr::mutate(value = value * unit_conv) %>%
       dplyr::group_by(scenario, region, year, var) %>%
       dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -3864,7 +3869,7 @@ get_primary_energy <- function(GCAM_version = 'v8.2') {
                          dplyr::filter(!grepl('CCS',var)),
                        by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
       dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-      filter_variables() %>%
+      filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Primary Energy", desired_variables.global, value = TRUE))) %>%
       dplyr::mutate(value = value * unit_conv) %>%
       dplyr::group_by(scenario, region, year, var) %>%
       dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -3890,7 +3895,7 @@ get_primary_energy <- function(GCAM_version = 'v8.2') {
       left_join_strict(get(paste('primary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                        by = c("fuel"), mapping = paste('primary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
       dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-      filter_variables() %>%
+      filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Primary Energy", desired_variables.global, value = TRUE))) %>%
       dplyr::mutate(value = value * unit_conv) %>%
       dplyr::group_by(scenario, region, year, var) %>%
       dplyr::summarise(value = sum(value, na.rm = T)) %>%
@@ -4090,6 +4095,7 @@ get_elec_gen_tech <- function(GCAM_version = 'v8.2') {
     left_join_strict(get(paste('secondary_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                      by = c("output", "subsector", "technology"), mapping = paste('secondary_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
+    filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Secondary Energy", desired_variables.global, value = TRUE))) %>%
     dplyr::mutate(value = value * unit_conv)
 
   if (!any(grepl('Trade|Investment|Capacity|All',desired_variables.global))) {
@@ -4252,7 +4258,7 @@ get_fe_sector_tmp <- function(GCAM_version = 'v8.2') {
     left_join_strict(get(paste('final_energy_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                      by = c("sector", "input"), mapping = paste('final_energy_map',GCAM_version,sep='_'), multiple = "all") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    filter_variables() %>%
+    filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Final Energy", desired_variables.global, value = TRUE))) %>%
     dplyr::mutate(value = value * unit_conv)
 
   fe_sector <- fe_sector_raw %>%
@@ -4291,7 +4297,7 @@ get_fe_transportation_tmp <- function(GCAM_version = 'v8.2') {
     left_join_strict(get(paste('transport_final_en_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                      by = c("sector", "input", "mode"), mapping = paste('transport_final_en_map',GCAM_version,sep='_'), multiple = "all") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    filter_variables() %>%
+    filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Final Energy", desired_variables.global, value = TRUE))) %>%
     dplyr::mutate(value = value * unit_conv)
 
   fe_transportation <- fe_transportation_raw %>%
@@ -4714,7 +4720,8 @@ get_ag_price <- function(GCAM_version = 'v8.2') {
     dplyr::filter(Units == "1975$/kg" | sector == 'biomass') %>%
     dplyr::filter(!grepl('CO2', sector)) %>%
     left_join_strict(get(paste('ag_price_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                     by = c("sector"), mapping = paste('ag_price_map',GCAM_version,sep='_')) %>%
+                     by = c("sector"), mapping = paste('ag_price_map',GCAM_version,sep='_'),
+                     relationship = "many-to-many") %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables() %>%
     interpolateGCAMdata(year_to_appear = 2020) %>%
@@ -5457,22 +5464,26 @@ get_energy_price <- function(GCAM_version = 'v8.2') {
                        # add weights
                        left_join_strict(en_demand_price_map,
                                         mapping = paste('en_demand_price_map',GCAM_version,sep='_'),
-                                        by = 'en_price_var') %>%
-                       filter_variables(),
+                                        by = 'en_price_var'),
                      by = c('scenario', 'region', 'year', 'en_consumption_var'),
                      relationship = "many-to-many") %>%
-    filter_variables() %>%
+    filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Primary Energy|
+                                                       ^Price\\|Secondary Energy|
+                                                       ^Price\\|Final Energy",
+                                                       desired_variables.global, value = TRUE))) %>%
     dplyr::mutate(value = value * reg_sec_weight) %>%
     # compute Global values
     dplyr::group_by(scenario, var = en_price_var, year) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(region = "World")
+    dplyr::mutate(region = "World") %>%
+    # remove NA variables (0 price reported)
+    dplyr::filter(!is.na(var))
 
 
   energy_price_clean <-
     rbind(energy_price %>%
-            dplyr::filter(var %in% unique(weights_sec_reg$var)),
+            dplyr::filter(var %in% paste0('Price|',unique(weights_sec_reg$var))),
           energy_price_w)
 
   energy_price_clean <<- energy_price_clean
@@ -5529,7 +5540,8 @@ get_production_price <- function(GCAM_version = 'v8.2') {
     left_join_strict(get(paste('production_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
                      by = 'sector') %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
-    filter_variables() %>%
+    filter_variables(extra = sub("^Price\\|", "", grep("^Price\\|Production",
+                                                       desired_variables.global, value = TRUE))) %>%
     # 1e3 $/kg = 1 $/Mt
     dplyr::mutate(value = dplyr::if_else(grepl('kg',Units),
                                          value * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['kg_to_Mt']],
