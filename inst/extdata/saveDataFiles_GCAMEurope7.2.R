@@ -42,37 +42,37 @@ use_data(reg_cont_vEurope7.2, overwrite = T)
 
 # emissions maps
 co2_ets_sector_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "CO2_ETS_sector_map.csv"),
-                                    comment = "#", na = ""
+                                    comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(co2_ets_sector_map_vEurope7.2, overwrite = T)
 
 co2_tech_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "CO2_tech_map.csv"),
-                              comment = "#", na = ""
+                              comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(co2_tech_map_vEurope7.2, overwrite = T)
 
 co2_resource_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "CO2_resource_map.csv"),
-                                  comment = "#", na = ""
+                                  comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(co2_resource_map_vEurope7.2, overwrite = T)
 
 kyoto_sector_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "kyotogas_sector.csv"),
-                                  comment = "#", na = ""
+                                  comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(kyoto_sector_map_vEurope7.2, overwrite = T)
 
 nonco2_emis_sector_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "nonCO2_emissions_sector_map.csv"),
-                                        comment = "#", na = ""
+                                        comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(nonco2_emis_sector_map_vEurope7.2, overwrite = T)
 
 nonco2_emis_resource_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "nonCO2_emissions_resource_map.csv"),
-                                          comment = "#", na = ""
+                                          comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(nonco2_emis_resource_map_vEurope7.2, overwrite = T)
 
 carbon_seq_tech_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "carbon_seq_tech_map.csv"),
-                                     comment = "#", na = ""
+                                     comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(carbon_seq_tech_map_vEurope7.2, overwrite = T)
 
@@ -182,12 +182,12 @@ capacity_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdat
 use_data(capacity_map_vEurope7.2, overwrite = T)
 
 cf_gcam_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "A23.globaltech_capacity_factor.csv"),
-                         comment = "#", na = ""
+                         comment = "#", na = "", guess_max = Inf
 )
 use_data(cf_gcam_vEurope7.2, overwrite = T)
 
 cf_rgn_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L223.StubTechCapFactor_elec.csv"),
-                        comment = "#", na = ""
+                        comment = "#", na = "", guess_max = Inf
 )
 use_data(cf_rgn_vEurope7.2, overwrite = T)
 
@@ -207,17 +207,17 @@ res_extraction_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/
 use_data(res_extraction_map_vEurope7.2, overwrite = T)
 
 transport_final_en_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "transport_final_en_map.csv"),
-                                        comment = "#", na = ""
+                                        comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(transport_final_en_map_vEurope7.2, overwrite = T)
 
 energy_price_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "en_price_map.csv"),
-                                  comment = "#", na = ""
+                                  comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(energy_price_map_vEurope7.2, overwrite = T)
 
 en_demand_price_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "en_demand_price_map.csv"),
-                                     comment = "#", na = ""
+                                     comment = "#", na = "", guess_max = Inf
 )
 use_data(en_demand_price_map_vEurope7.2, overwrite = T)
 
@@ -246,17 +246,17 @@ use_data(hdd_cdd_vEurope7.2, overwrite = T)
 
 # capital updates
 capital_gcam_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L223.GlobalIntTechCapital_elec.csv"),
-                              comment = "#", na = ""
+                              comment = "#", na = "", guess_max = Inf
 ) %>%
   dplyr::rename(technology = intermittent.technology) %>%
   dplyr::bind_rows(readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L223.GlobalTechCapital_elec.csv"),
-                            comment = "#", na = ""
+                            comment = "#", na = "", guess_max = Inf
   )) %>%
   dplyr::select(sector = sector.name, subsector = subsector.name, technology, year, capital.overnight)
 use_data(capital_gcam_vEurope7.2, overwrite = T)
 
 investment_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "investment.csv"),
-                            na = ""
+                            na = "", guess_max = Inf
 ) %>%
   tidyr::gather(year, value, `2015`:`2100`) %>%
   dplyr::mutate(year = as.integer(sub("X", "", year))) %>%
@@ -265,17 +265,17 @@ investment_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/
 use_data(investment_vEurope7.2, overwrite = T)
 
 nonelec_investment_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "nonelec_investment_map.csv"),
-                                                            comment = "#", na = ""
+                                                            comment = "#", na = "", guess_max = Inf
 ) %>% gather_map()
 use_data(nonelec_investment_map_vEurope7.2, overwrite = T)
 
 carbon_content_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L202.CarbonCoef.csv"),
-                                comment = "#", na = ""
+                                comment = "#", na = "", guess_max = Inf
 )
 use_data(carbon_content_vEurope7.2, overwrite = T)
 
 nonco2_content_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "L201.ghg_res.csv"),
-                                comment = "#", na = ""
+                                comment = "#", na = "", guess_max = Inf
 )
 use_data(nonco2_content_vEurope7.2, overwrite = T)
 
