@@ -4547,7 +4547,7 @@ get_industry_production <- function(GCAM_version = 'v8.2') {
               dataset_name = "industry primary output by sector") %>%
     dplyr::mutate(sector = dplyr::if_else(grepl('chemical',sector), 'chemical', sector)) %>%
     left_join_strict(get(paste('production_map',GCAM_version,sep='_'), envir = asNamespace("gcamreport")),
-                     by = c("sector","technology"), mapping = paste('production_map',GCAM_version,sep='_')) %>%
+                     by = c("sector"), mapping = paste('production_map',GCAM_version,sep='_')) %>%
     dplyr::filter(var != 'NoReported', !is.na(var)) %>%
     filter_variables() %>%
     dplyr::group_by(scenario, region, var, year) %>%
