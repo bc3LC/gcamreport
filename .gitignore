@@ -276,3 +276,4 @@ queries_*
 !tests/testthat/testInputs/v_9.1/*.dat
 !data/queries_*.rda
 changes.patch
+*.patch
