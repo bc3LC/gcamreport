@@ -73,7 +73,7 @@ jobs:
           HAS_FAILURES=0
 
           # Loop through SPECIFIC test files in a fresh R process
-          for f in tests/testthat/test_ui_v7p0.R tests/testthat/test_v7p0.R tests/testthat/test_v8p2.R tests/testthat/test_vScenarioMIPCMIP7.R; do
+          for f in tests/testthat/test_ui_v7p0.R tests/testthat/test_reporter_v7p0.R tests/testthat/test_reporter_v8p2.R tests/testthat/test_reporter_vScenarioMIPCMIP7.R; do
             echo "=== $f ==="
             if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
               echo "FAILED: $f"
