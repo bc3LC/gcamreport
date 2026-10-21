@@ -6,7 +6,9 @@
 [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml)
 [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) 
 [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml)
-[![build](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build.yaml)
+[![build_runs](https://github.com/bc3LC/gcamreport/actions/workflows/build_runs.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_runs.yaml)
+[![build_functionality](https://github.com/bc3LC/gcamreport/actions/workflows/build_functionality.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_functionality.yaml)
+[![build_data](https://github.com/bc3LC/gcamreport/actions/workflows/build_data.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_data.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13711003.svg)](https://doi.org/10.5281/zenodo.13711003)
 [![draft-pdf](https://github.com/bc3LC/gcamreport/actions/workflows/draft-pdf.yml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/draft-pdf.yml)
 [![status](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19/status.svg)](https://joss.theoj.org/papers/816fd8765945cd5f6fe6d8d1fefdde19)
@@ -23,16 +25,17 @@
 
 <!-- ------------------------>
 
-- [Contents](#contents)
-- [Introduction](#introduction)
-- [Installation Guide](#installation-guide)
-  - [With R](#with-r)
-    - [Light mode installation](#light-mode-installation)
-    - [Full mode installation](#full-mode-installation)
-  - [With Docker](#with-docker)
-- [Getting Started](#getting-started)
-- [How to contribute?](#contribute)
-- [Top common Warnings and Error Messages](#top-common-warnings-and-error-messages)
+- [gcamreport](#gcamreport)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Installation Guide](#installation-guide)
+    - [With R](#with-r)
+      - [Light mode installation](#light-mode-installation)
+      - [Full mode installation](#full-mode-installation)
+    - [With Docker](#with-docker)
+  - [Getting Started](#getting-started)
+  - [How to contribute?](#how-to-contribute)
+  - [Top common Warnings and Error Messages](#top-common-warnings-and-error-messages)
 
 
 <br>

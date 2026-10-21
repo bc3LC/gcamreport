@@ -1,11 +1,9 @@
-name: build
+name: build_run
 
 on:
   push:
     branches:
-      - gcam-core
-      - gcam-iamcompact
-      - dev_commdef
+      - main
   pull_request:
     branches: [ '**' ]
 
@@ -74,8 +72,8 @@ jobs:
           # Initialize failure tracker
           HAS_FAILURES=0
 
-          # Loop through each test file in a fresh R process
-          for f in tests/testthat/test*.R; do
+          # Loop through SPECIFIC test files in a fresh R process
+          for f in tests/testthat/test_reporter_runs.R; do
             echo "=== $f ==="
             if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
               echo "FAILED: $f"
