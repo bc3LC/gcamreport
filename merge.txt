@@ -1,0 +1,12 @@
+Merge PR #98 - EUR queries
+
+Co-authored-by: klau506 <klau506@users.noreply.github.com>
+
+Reviewed-by: @klau506 <klau506@users.noreply.github.com>
+
+Commits: 
+* EUR secondary energy queries and mappings 24169425509f4a00f32be622a7e7c6341d3d8859
+* Merge branch 'gcam-core' into pr-EURqueries c4d705f6d550594c473a52b9122eabb4d8bc03d2
+* generalise secondary energy function 2a6fe91ebf078023ac4aea46523e32fd62b2b281
+* update build.yaml 9b902ac2f662340a6b5b9644d3757ecf13dc1920
+* update tests 02399948490440fff45c29c887cca7ec7a262f6e

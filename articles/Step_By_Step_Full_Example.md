@@ -73,7 +73,7 @@ section](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial
     click the last started port.
 
 ![UI
-error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
+error](https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
 
 **Note**: Remember that the user interface can only be launched through
 the [full R
@@ -160,7 +160,7 @@ section](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial
     click the last started port.
 
 ![UI
-error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
+error](https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
 
 **Note**: Remember that the user interface can only be launched through
 the [full R
@@ -235,7 +235,7 @@ section](https://bc3lc.github.io/gcamreport/articles/Interactive_UI_Tutorial.htm
     click the last started port.
 
 ![UI
-error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
+error](https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
 
 6.  If you just ran [Example 1](#example1) or [Example 2](#example2),
     you should have a variable called `report` in the environment. You

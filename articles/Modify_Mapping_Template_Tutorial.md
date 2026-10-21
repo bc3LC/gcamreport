@@ -25,7 +25,7 @@ Before performing modifications on the package, please ensure that:
     to learn how to properly trace and document your custom version.
 4.  **You follow the contribution guidelines \[if applicable\]:** Read
     the [How to contribute
-    guideline](https://github.com/bc3LC/gcamreport/tree/gcam-core#contribute)
+    guideline](https://github.com/bc3LC/gcamreport/tree/main#contribute)
     to know the best way to proceed if you would like to incorporate
     your developments to the core `gcamreport` package.
 

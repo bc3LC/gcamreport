@@ -194,7 +194,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
                                                                                                                                                                                                    **Note**:exclamation:: If you followed the [Docker installation](#with-Docker), to open the user interface (UI) once it has been launched, either go to the Docker Desktop and type the last port started, or type <http://localhost:4000> in your browser.
 
-                                                                                                                                                                                                     <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"/>
+                                                                                                                                                                                                     <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="60%" height="60%"/>
 
 
                                                                                                                                                                                                        **Note**:boom:: If you want to install previous `gcamreport` versions, indicate the tag or branch name when cloning the repository (step 2). For instance:
@@ -304,7 +304,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
                                                                                                                                                                                                                            This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
 
-                                                                                                                                                                                                                         <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
+                                                                                                                                                                                                                         <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
 
                                                                                                                                                                                                                            or open this url <http://localhost:4000> in your favourite browser.
 
@@ -316,7 +316,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 
                                                                                                                                                                                                                          When oppening your *localhost*, you might see this error:
 
-                                                                                                                                                                                                                           <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
+                                                                                                                                                                                                                           <img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
 
                                                                                                                                                                                                                            <details>
 

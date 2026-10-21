@@ -1,0 +1,35 @@
+Dear @FanWu1020 ,
+
+Thank you for posting the issue! I'll answer to each item independently:
+
+1.  Final Energy example question:
+
+> Error in generate_report(db_path = dbpath, db_name = dbname, prj_name = prjname,  :  The prj (considering only the selected regions and variables) is empty. Please, check that it is the expected behaviour and/or add more regions/variables to the desired output.
+
+Doing some debug, we detected a small error. It has been fixed and now it should run smoothly! Thanks for reporting it!!
+
+Nevertheless, keep in mind that when creating a GCAM project, you decide which queries do you load. If you did it with `gcamreport`, the package automatically selected the necessary queries for the desired variables at that point. If you load a project through the package, there is a function that automatically drops all the non-required queries and regions, so reduce the data weight and make it more manageable. Thus, if you want to standardize other variables (than the once indicated when creating the project) and the necessary queries are not there, you might result in an empty project. 
+
+
+2. Capital Cost example question: 
+
+> Error in rgcam::saveProject(prj, file = file.path(db_path, paste(db_name,  :  saveProject:  invalid project data object, stat=1
+
+I would need more info to answer this question, but might it be that the project is empty or opened somewhere else and thus, can not be overwritten?
+
+
+3. To debug:
+I strongly suggest you clone the repo, open the Rproject, and give values to the variables required to run `generate_report`. Then, go to `R/main.R` and find the `generate report` function. You can run line by line, as well as considering to run some chunks of the `R/functions.R` script. It might be good to have a look at [this documentation](https://bc3lc.github.io/gcamreport/articles/Package_Internals.html) to know how the package is structured.
+
+4. Primary Energy example question:
+
+> Stopped at C:/Users/admin/AppData/Local/Temp/RtmpwTQWy4/file71a4180a5755, 1/88:
+[XPST0003] Expecting function argument, found ','
+
+To try to reproduce your error, I downloaded this [reference GCAM7.0 database](https://zenodo.org/records/14192906), unzipped, and executed the following:
+
+generate_report(db_path = 'path/to/downloads', db_name = 'database_basexdb_ref',
+                prj_name = 'issue69.dat', final_year = 2030,
+                desired_variables = 'Primary Energy*', GCAM_version = 'v7.0')
+
+It ran smoothly. Thus, it seems it might be a problem of your database. If you want me to have a deeper look, I'd require more info.

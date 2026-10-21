@@ -172,7 +172,7 @@ This is not an error! You simply need to either go to your Docker
 Desktop program and click the last started port
 
 ![UI
-error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
+error](https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png "Click the last started docker port")
 
 or open this url <http://localhost:4000> in your favourite browser.
 
@@ -181,7 +181,7 @@ or open this url <http://localhost:4000> in your favourite browser.
 When opening your *localhost*, you might see this error:
 
 ![UI
-error](https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error2.png "UI error")
+error](https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error2.png "UI error")
 
 **Possible solution**: your UI is not running. Try to either use the
 [`generate_report()`](https://bc3lc.github.io/gcamreport/reference/generate_report.md)
