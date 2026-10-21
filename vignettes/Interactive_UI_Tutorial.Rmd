@@ -159,7 +159,7 @@ After using the functions `generate_report()` or `launch_gcamreport_ui()` to lau
 
 This is not an error! You simply need to either go to your Docker Desktop program and click the last started port
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="50%" height="50%"/>
 
 or open this url <http://localhost:4000> in your favourite browser.
 
@@ -170,7 +170,7 @@ or open this url <http://localhost:4000> in your favourite browser.
 
 When opening your *localhost*, you might see this error:
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error2.png" title="UI error" alt="UI error" width="40%" height="40%"/>
 
 </summary>
 
