@@ -452,9 +452,9 @@ load_query <- function(var, base_data, final_queries) {
 #'
 #' @export
 available_regions <- function(print = TRUE, GCAM_version) {
-  continent <- region <- NULL
+  region <- NULL
 
-  av_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+  av_reg <- get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
     dplyr::pull(GCAM_region) %>%
     unique()
 
@@ -482,10 +482,10 @@ available_regions <- function(print = TRUE, GCAM_version) {
 #' @return A character vector containing the names of all available aggregated regions.
 #' @export
 available_agg_regions <- function(print = TRUE, GCAM_version) {
-  continent <- region <- NULL
+  region <- NULL
 
   av_cont <- c('World',
-               get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+               get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
                  dplyr::select(-GCAM_region) %>%
                  tidyr::pivot_longer(cols = everything(), names_to = "level", values_to = "agg_region") %>%
                  dplyr::distinct() %>%
@@ -518,9 +518,9 @@ available_agg_regions <- function(print = TRUE, GCAM_version) {
 #' @return A character vector representing the native GCAM regions defined under the specified `agg_region`.
 #' @export
 show_GCAMregions_in_agg_region <- function(print = TRUE, agg_region, GCAM_version) {
-  continent <- region <- NULL
+  region <- NULL
 
-  av_agg_regions <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+  av_agg_regions <- get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
     tidyr::pivot_longer(cols = -GCAM_region, names_to = "level", values_to = "agg_region_name") %>%
     dplyr::select(-level) %>%
     dplyr::distinct()
@@ -623,7 +623,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
                             GCAM_version = 'v8.2', GWP_version = 'AR6',
                             queries_general_file = NULL, queries_nonCO2_file = NULL,
                             all_tier1 = F) {
-  continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
+  region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
 
   # boolean variable
   prj_loaded <- FALSE
@@ -1003,8 +1003,8 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = '
   cols.global <<- unique(sdata[, grepl("col", names(sdata))])
   tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
 
-  reg_cont <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
-  tree_reg <<- do_mount_tree(reg_cont, names(reg_cont), selec = TRUE)
+  reg_agg <- get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))
+  tree_reg <<- do_mount_tree(reg_agg, names(reg_agg), selec = TRUE)
 
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)

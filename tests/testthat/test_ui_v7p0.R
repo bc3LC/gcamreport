@@ -19,12 +19,12 @@ test_that("Test1. test tree functions", {
   # develop a nested list of the variables and regions for launching the ui
   cols.global <<- unique(sdata[, grepl("col", names(sdata))])
   tree_vars <<- do_mount_tree(cols.global, names(cols.global), selec = TRUE)
-  tree_reg <<- do_mount_tree(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
+  tree_reg <<- do_mount_tree(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
   # save a list of all variables
   all_varss <<- do_collapse_df(cols.global)
 
   # do_mount_tree with regions
-  testResult1 <- do_mount_tree(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
+  testResult1 <- do_mount_tree(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport")), names(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))), selec = TRUE)
   testExpect1 <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/test_ui_1.RData")))
   testthat::expect_equal(testResult1, testExpect1)
 
