@@ -200,7 +200,7 @@ check_queries <- function(var, GCAM_version = 'v8.2') {
 #' @return A subset of the original data containing only the specified regions.
 #' @importFrom magrittr %>%
 #' @export
-filter_data_regions <- function(data, GCAM_version = 'v8.2') {
+filter_data_regions <- function(data, GCAM_version) {
   region <- NULL
 
   if (!(identical(desired_regions.global, "All"))) {
@@ -208,7 +208,7 @@ filter_data_regions <- function(data, GCAM_version = 'v8.2') {
       dplyr::filter(region %in% desired_regions.global)
   }
   data <- data %>%
-    dplyr::filter(region %in% c('All',na.omit(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])))
+    dplyr::filter(region %in% c('All',na.omit(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['GCAM_region']])))
 
 
   return(data)

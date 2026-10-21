@@ -451,38 +451,48 @@ load_query <- function(var, base_data, final_queries) {
 #' @return A vector of character strings representing the names of all available regions. If `print` is TRUE, the function also prints this list to the console.
 #'
 #' @export
-available_regions <- function(print = TRUE, GCAM_version = 'v8.2') {
+available_regions <- function(print = TRUE, GCAM_version) {
   continent <- region <- NULL
 
   av_reg <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
-    dplyr::mutate(region = dplyr::if_else(continent == "World", "World", region))
+    dplyr::pull(GCAM_region) %>%
+    unique()
 
   if (print) {
-    for (it in unique(av_reg$region)) {
+    for (it in av_reg) {
       print(it)
     }
   }
 
-  return(invisible(unique(av_reg$region)))
+  return(invisible(av_reg))
 }
 
 
-#' available_continents
+#' Get available aggregated regions
 #'
-#' Retrieves and optionally prints a list of all available continents/regions' groups for the IAMC reporting dataset.
+#' Retrieves a list of all aggregated region categories available for IAMC reporting.
 #'
-#' This function provides a list of regions' groups that are available for use in IAMC reporting. By default, it prints this list, but it can also be used to obtain the list programmatically.
+#' This function returns the names of all supported regional aggregations (e.g., R5, R9, R10).
+#' To view the native GCAM regions that make up a specific aggregated group, pass the group name
+#' to `show_GCAMregions_in_agg_region()`.
 #'
-#' @param print Logical. If TRUE (default), prints the list of available regions' groups. to the console. If FALSE, suppresses the printing and only returns the list.
-#' @param GCAM_version Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.
+#' @param print Logical. If `TRUE` (default), prints the list of available aggregated regions to the console.
+#' @param GCAM_version Character string. The compatible GCAM version. Run `available_GCAM_versions()` to view supported options.
 #'
-#' @return A vector of character strings representing the names of all available regions' groups. If `print` is TRUE, the function also prints this list to the console.
-#'
+#' @return A character vector containing the names of all available aggregated regions.
 #' @export
-available_continents <- function(print = TRUE, GCAM_version = 'v8.2') {
+available_agg_regions <- function(print = TRUE, GCAM_version) {
   continent <- region <- NULL
 
-  av_cont <- unique(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['continent']])
+  av_cont <- c('World',
+               get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+                 dplyr::select(-GCAM_region) %>%
+                 tidyr::pivot_longer(cols = everything(), names_to = "level", values_to = "agg_region") %>%
+                 dplyr::distinct() %>%
+                 tidyr::drop_na(agg_region) %>%
+                 dplyr::mutate(level = factor(level, levels = c("R10", "R9", "R5"))) %>%
+                 dplyr::arrange(level, agg_region) %>%
+                 dplyr::pull(agg_region))
 
   if (print) {
     for (it in av_cont) {
@@ -491,6 +501,50 @@ available_continents <- function(print = TRUE, GCAM_version = 'v8.2') {
   }
 
   return(invisible(av_cont))
+}
+
+
+#' Get native GCAM regions within an aggregated region
+#'
+#' Retrieves the specific underlying GCAM regions that comprise a selected aggregated region group.
+#'
+#' This function is useful for mapping high-level reporting regions back to their constituent
+#' native GCAM regions (e.g., mapping "European Union (R9)" to its individual countries/basins).
+#'
+#' @param agg_region Character string or vector. The name of the aggregated region(s) to query. Run `available_agg_regions()` to view supported options.
+#' @param GCAM_version Character string. The compatible GCAM version. Run `available_GCAM_versions()` to view supported options.
+#' @param print Logical. If `TRUE` (default), prints the list of native GCAM regions to the console.
+#'
+#' @return A character vector representing the native GCAM regions defined under the specified `agg_region`.
+#' @export
+show_GCAMregions_in_agg_region <- function(print = TRUE, agg_region, GCAM_version) {
+  continent <- region <- NULL
+
+  av_agg_regions <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
+    tidyr::pivot_longer(cols = -GCAM_region, names_to = "level", values_to = "agg_region_name") %>%
+    dplyr::select(-level) %>%
+    dplyr::distinct()
+
+  missing_agg_region <- agg_region[!agg_region %in% unique(av_agg_regions$agg_region_name)]
+  if (length(missing_agg_region) > 1) {
+    stop(sprintf(
+      "Invalid `agg_region`: '%s'. Available aggregated regions are: %s. Please choose one of these items",
+      paste(unique(agg_region), collapse = ", "), paste(unique(av_agg_regions$agg_region_name), collapse = ", ")
+    ))
+  }
+
+  av_regions <- av_agg_regions %>%
+    dplyr::filter(agg_region_name %in% agg_region) %>%
+    dplyr::pull(GCAM_region) %>%
+    unique()
+
+  if (print) {
+    for (it in av_regions) {
+      print(it)
+    }
+  }
+
+  return(invisible(av_regions))
 }
 
 
@@ -506,7 +560,7 @@ available_continents <- function(print = TRUE, GCAM_version = 'v8.2') {
 #' @return A vector of character strings representing the names of all available variables. If `print` is TRUE, the function also prints this list to the console.
 #'
 #' @export
-available_variables <- function(print = TRUE, GCAM_version = 'v8.2') {
+available_variables <- function(print = TRUE, GCAM_version) {
   Internal_variable <- NULL
 
   av_var <- get(paste('template',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
@@ -549,12 +603,12 @@ available_variables <- function(print = TRUE, GCAM_version = 'v8.2') {
 #' @param inverse_desired_variables If `TRUE` (not default), consider all but the detailed variables in the `desired_variables` parameter.
 #' @param ignore Policy names introduced by the user to ignore during gcamreport processing of physical quantities, since otherwise they will be flagged as names missing from mapping files and cause an error. Note: Currently having one of the specified name patterns in any column of the query results, such as sector, subsector, input, etc. will cause the error to be disregarded. Same behavior than adding the policy names to the corresponding mappings indicating `NoReported`.
 #' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
-#' @param desired_continents Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".
+#' @param desired_agg_regions Region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_agg_regions()`. Note: The dataset will include only the specified groups, which will make up "World".
 #' @param save_output If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.
 #' @param output_file File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.
 #' @param launch_ui If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.
 #' @param GCAM_version Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.
-#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
+#' @param GWP_version Global Warming Potential (GWP) version: 'AR6' (default), 'AR5', or 'AR4'.
 #' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
 #' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
 #' @param interactive If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.
@@ -564,9 +618,9 @@ available_variables <- function(print = TRUE, GCAM_version = 'v8.2') {
 #' @export
 generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios = NULL, final_year = 2100,
                             desired_variables = "All", inverse_desired_variables = FALSE,
-                            ignore = NULL, desired_regions = "All", desired_continents = "All",
+                            ignore = NULL, desired_regions = "All", desired_agg_regions = "All",
                             save_output = TRUE, output_file = NULL, launch_ui = TRUE, interactive = F,
-                            GCAM_version = 'v8.2', GWP_version = 'AR5',
+                            GCAM_version = 'v8.2', GWP_version = 'AR6',
                             queries_general_file = NULL, queries_nonCO2_file = NULL,
                             all_tier1 = F) {
   continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
@@ -606,9 +660,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     ))
   }
 
-  # check that desired_regions and desired_continents are not specified at the same time
-  if (!identical(desired_regions, "All") && !identical(desired_continents, "All")) {
-    stop("You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time.\n")
+  # check that desired_regions and desired_agg_regions are not specified at the same time
+  if (!identical(desired_regions, "All") && !identical(desired_agg_regions, "All")) {
+    stop("You specified both 'desired_regions' and 'desired_agg_regions'. Only one can be specified at a time.\n")
   }
 
   # check that the desired_regions are available
@@ -623,22 +677,22 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
       }
     }
   }
-  # check that the desired_continents are available
-  if (!(length(desired_continents) == 1 && desired_continents == "All")) {
-    check_cont <- dplyr::setdiff(desired_continents, available_continents(print = FALSE, GCAM_version = GCAM_version))
+  # check that the desired_agg_regions are available
+  if (!(length(desired_agg_regions) == 1 && desired_agg_regions == "All")) {
+    check_cont <- dplyr::setdiff(desired_agg_regions, available_agg_regions(print = FALSE, GCAM_version = GCAM_version))
     if (length(check_cont) > 0) {
       tmp <- paste(check_cont, collapse = ", ")
       if (length(check_cont) > 1) {
-        stop(sprintf("The desired continent/region groups %s are not available for reporting. Please check the available continent/region groups by running `available_continents()` in your console.\n
+        stop(sprintf("The desired aggregated regions %s are not available for reporting. Please check the available aggregated regions by running `available_agg_regions()` in your console.\n
                      Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
       } else if (length(check_cont) == 1) {
-        stop(sprintf("The desired continent/region group %s is not available for reporting. Please check the available continent/region groups by running `available_continents()` in your console.\n
+        stop(sprintf("The desired aggregated region %s is not available for reporting. Please check the available aggregated regions by running `available_agg_regions()` in your console.\n
                      Further information at https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-4-specify-the-regions-or-regions-groups.", tmp))
       }
     }
-    desired_regions <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport")) %>%
-      dplyr::filter(continent %in% desired_continents) %>%
-      dplyr::pull(region)
+    desired_regions <- show_GCAMregions_in_agg_region(print = F,
+                                                      agg_region = desired_agg_regions,
+                                                      GCAM_version = GCAM_version)
   }
   # check that the desired_variables are available
   if (!(length(desired_variables) == 1 && desired_variables == "All")) {
