@@ -200,7 +200,7 @@ check_queries <- function(var, GCAM_version = 'v8.2') {
 #' @return A subset of the original data containing only the specified regions.
 #' @importFrom magrittr %>%
 #' @export
-filter_data_regions <- function(data, GCAM_version = 'v8.2') {
+filter_data_regions <- function(data, GCAM_version) {
   region <- NULL
 
   if (!(identical(desired_regions.global, "All"))) {
@@ -208,7 +208,7 @@ filter_data_regions <- function(data, GCAM_version = 'v8.2') {
       dplyr::filter(region %in% desired_regions.global)
   }
   data <- data %>%
-    dplyr::filter(region %in% c('All',na.omit(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])))
+    dplyr::filter(region %in% c('All',na.omit(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['GCAM_region']])))
 
 
   return(data)
@@ -626,7 +626,7 @@ filter_loading_regions <- function(data, desired_regions = "All", variable, GCAM
     )) & ('market' %in% colnames(data))) {
       # check the desired regions are available in the data
       avail_markets <- unique(data$market)
-      default_regions <- get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
+      default_regions <- get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]
       default_regions <- default_regions[!is.na(default_regions)]
       default_regions <- c(default_regions, 'global')
       pattern <- paste0("(", paste(default_regions, collapse = "|"), ")")
@@ -3146,7 +3146,7 @@ get_co2_sequestration <- function(GCAM_version = 'v8.2') {
       # add refliq_bioshare (share of biomass of refined liquids production. Only used in Carbon Removal)
       left_join_strict(refliq_bioshare %>%
                          tidyr::complete(tidyr::nesting(scenario, year),
-                                         region = unique(na.omit(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])),
+                                         region = unique(na.omit(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])),
                                          fill = list(share = 0)
                          ),
                        by = c('scenario','region','year')) %>%
@@ -3205,7 +3205,7 @@ get_co2_sequestration <- function(GCAM_version = 'v8.2') {
       # add refliq_bioshare (share of biomass of refined liquids production. Only used in Carbon Removal)
       left_join_strict(refliq_bioshare %>%
                          tidyr::complete(tidyr::nesting(scenario, year),
-                                         region = unique(na.omit(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])),
+                                         region = unique(na.omit(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']])),
                                          fill = list(share = 0)
                          ),
                        by = c('scenario','region','year')) %>%
@@ -5274,8 +5274,8 @@ get_energy_price_tmp <- function(GCAM_version = 'v8.2') {
   prices_subsector_pre1 <-
     check_inf(rgcam::getQuery(prj, "prices of all markets"),
               dataset_name = "prices of all markets") %>%
-    dplyr::mutate(region = stringr::str_extract(market, paste(as.character(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]), collapse = '|')),
-                  market = stringr::str_replace(market, paste(as.character(get(paste('reg_cont',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]), collapse = '|'), "")) %>%
+    dplyr::mutate(region = stringr::str_extract(market, paste(as.character(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]), collapse = '|')),
+                  market = stringr::str_replace(market, paste(as.character(get(paste('reg_agg',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['region']]), collapse = '|'), "")) %>%
     dplyr::select(-Units) %>%
     dplyr::mutate(region = dplyr::if_else(region == 'NA', NA, region))
 

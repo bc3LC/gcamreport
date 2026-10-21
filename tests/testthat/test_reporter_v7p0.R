@@ -22,7 +22,7 @@ test_that("Test5_v7. run - dataset saved with default output_file", {
 })
 
 
-test_that("Test7_v7.0 specify variables, regions, continents", {
+test_that("Test7_v7.0 specify variables, regions, agg_regions", {
   test_regions <- available_regions(T, GCAM_version = 'v7.0')
   testResult_regions <- c(
     "Africa_Eastern", "Africa_Northern", "Africa_Southern",
@@ -35,13 +35,18 @@ test_that("Test7_v7.0 specify variables, regions, continents", {
     "Middle East", "Pakistan", "Russia",
     "South Africa", "South America_Northern", "South America_Southern",
     "South Asia", "South Korea", "Southeast Asia",
-    "Taiwan", "USA", "World"
+    "Taiwan", "USA"
   )
-  testthat::expect_equal(test_regions, testResult_regions)
+  testthat::expect_equal(sort(test_regions), sort(testResult_regions))
 
-  test_continents <- available_continents(T)
-  testResult_continents <- c("MAF", "LAM", "OECD90", "REF", "ASIA", "World")
-  testthat::expect_equal(test_continents, testResult_continents)
+  test_agg_regions <- available_agg_regions(print = T, GCAM_version = 'v7.0')
+  testResult_agg_regions <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test7.0.RData")))
+  testthat::expect_equal(test_agg_regions, testResult_agg_regions)
+
+  test_agg_regions <- show_GCAMregions_in_agg_region(print = T, agg_region = 'Middle East & Africa (R5)', GCAM_version = 'v7.0')
+  testResult_agg_regions <- c("Africa_Eastern", "Africa_Northern", "Africa_Southern",
+                              "Africa_Western", "Middle East", "South Africa")
+  testthat::expect_equal(test_agg_regions, testResult_agg_regions)
 
   test_variables <- available_variables(T, GCAM_version = 'v7.0')
   testResult_variables <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test7.1.RData")))
@@ -52,7 +57,7 @@ test_that("Test7_v7.0 specify variables, regions, continents", {
     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
     scenarios = "Reference",
     final_year = 2050,
-    desired_continents = "OECD90",
+    desired_agg_regions = "OECD & EU (R5)",
     desired_variables = available_variables(F, GCAM_version = 'v7.0')[c(28)],
     launch_ui = FALSE,
     GCAM_version = 'v7.0'
@@ -70,7 +75,7 @@ test_that("Test7_v7.0 specify variables, regions, continents", {
     prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/test7.dat"),
     scenarios = "Reference",
     final_year = 2050,
-    desired_continents = "OECD90",
+    desired_agg_regions = "OECD & EU (R5)",
     desired_variables = "Emissions*",
     launch_ui = FALSE,
     GCAM_version = 'v7.0'
@@ -173,17 +178,17 @@ test_that("Test8_v7.0 error messages", {
     "The desired regions dummy1, dummy2 are not available for reporting."
   )
 
-  expect_error(
+  testthat::expect_error(
     generate_report(
       db_path = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs/v_7.0/"),
       db_name = "database_basexdb_ref",
       prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
-      desired_continents = "dummy continent",
+      desired_agg_regions = "dummy agg region",
       launch_ui = FALSE,
       GCAM_version = 'v7.0'
     ),
-    "The desired continent/region group dummy continent is not available for reporting."
+    regexp = "The desired aggregated region dummy agg region is not available for reporting\\."
   )
 
   expect_error(
@@ -192,11 +197,11 @@ test_that("Test8_v7.0 error messages", {
       db_name = "database_basexdb_ref",
       prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
-      desired_continents = c("dummy1", "dummy2"),
+      desired_agg_regions = c("dummy1", "dummy2"),
       launch_ui = FALSE,
       GCAM_version = 'v7.0'
     ),
-    "The desired continent/region groups dummy1, dummy2 are not available for reporting."
+    regexp = "The desired aggregated regions dummy1, dummy2 are not available for reporting\\."
   )
 
   expect_error(
@@ -236,10 +241,10 @@ test_that("Test8_v7.0 error messages", {
       prj_name = "gcamv7.8_p1.dat",
       scenarios = "Reference",
       desired_regions = "dummy region",
-      desired_continents = "dummy continent",
+      desired_agg_regions = "dummy agg region",
       launch_ui = FALSE
     ),
-    "You specified both 'desired_regions' and 'desired_continents'. Only one can be specified at a time."
+    "You specified both 'desired_regions' and 'desired_agg_regions'. Only one can be specified at a time."
   )
 
   expect_error(

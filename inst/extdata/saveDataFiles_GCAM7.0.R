@@ -20,11 +20,11 @@ use_data(nonco2_emissions_list_v7.0, overwrite = T)
 
 
 
-# regions_continents_map
-reg_cont_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "regions_continents_map.csv"),
+# regions_agg_map
+reg_agg_v7.0 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAM7.0", "regions_agg_map.csv"),
                           comment = "#"
 )
-use_data(reg_cont_v7.0, overwrite = T)
+use_data(reg_agg_v7.0, overwrite = T)
 
 
 # emissions maps

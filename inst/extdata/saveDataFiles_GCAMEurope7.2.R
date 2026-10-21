@@ -34,11 +34,11 @@ use_data(nonco2_emissions_list_vEurope7.2, overwrite = T)
 
 
 
-# regions_continents_map
-reg_cont_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "regions_continents_map.csv"),
-                                       comment = "#"
+# regions_agg_map
+reg_agg_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "regions_agg_map.csv"),
+                                comment = "#"
 )
-use_data(reg_cont_vEurope7.2, overwrite = T)
+use_data(reg_agg_vEurope7.2, overwrite = T)
 
 # emissions maps
 co2_ets_sector_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "CO2_ETS_sector_map.csv"),
