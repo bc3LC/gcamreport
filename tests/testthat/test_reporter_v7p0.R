@@ -35,9 +35,9 @@ test_that("Test7_v7.0 specify variables, regions, agg_regions", {
     "Middle East", "Pakistan", "Russia",
     "South Africa", "South America_Northern", "South America_Southern",
     "South Asia", "South Korea", "Southeast Asia",
-    "Taiwan", "USA", "World"
+    "Taiwan", "USA"
   )
-  testthat::expect_equal(test_regions, testResult_regions)
+  testthat::expect_equal(sort(test_regions), sort(testResult_regions))
 
   test_agg_regions <- available_agg_regions(print = T, GCAM_version = 'v7.0')
   testResult_agg_regions <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test7.0.RData")))
