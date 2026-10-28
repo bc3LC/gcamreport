@@ -123,9 +123,15 @@ Price|Final Energy|Residential|Space Cooling|Electricity,Final Energy|Residentia
 Price|Final Energy|Residential|Space Heating|Electricity,Final Energy|Residential|Space Heating|Electricity
 Price|Final Energy|Residential|Space Heating|Gases,Final Energy|Residential|Space Heating|Gases
 Price|Final Energy|Residential|Space Heating|Liquids,Final Energy|Residential|Space Heating|Liquids
+Price|Final Energy|Residential|Space Heating|Solids,Final Energy|Residential|Space Heating|Solids
+Price|Final Energy|Residential|Space Heating|Solids|Biomass,Final Energy|Residential|Space Heating|Solids|Biomass
+Price|Final Energy|Residential|Space Heating|Solids|Coal,Final Energy|Residential|Space Heating|Solids|Coal
 Price|Final Energy|Residential|Water Heating|Electricity,Final Energy|Residential|Water Heating|Electricity
 Price|Final Energy|Residential|Water Heating|Gases,Final Energy|Residential|Water Heating|Gases
 Price|Final Energy|Residential|Water Heating|Liquids,Final Energy|Residential|Water Heating|Liquids
+Price|Final Energy|Residential|Water Heating|Solids,Final Energy|Residential|Water Heating|Solids
+Price|Final Energy|Residential|Water Heating|Solids|Biomass,Final Energy|Residential|Water Heating|Solids|Biomass
+Price|Final Energy|Residential|Water Heating|Solids|Coal,Final Energy|Residential|Water Heating|Solids|Coal
 Price|Final Energy|Solids,Final Energy|Solids
 Price|Final Energy|Solids|Biomass,Final Energy|Solids|Biomass
 Price|Final Energy|Solids|Coal,Final Energy|Solids|Coal
@@ -144,6 +150,7 @@ Price|Final Energy|Transportation|Domestic Shipping|Hydrogen,Final Energy|Transp
 Price|Final Energy|Transportation|Domestic Shipping|Liquids,Final Energy|Transportation|Domestic Shipping|Liquids
 Price|Final Energy|Transportation|Electricity,Final Energy|Transportation|Electricity
 Price|Final Energy|Transportation|Freight|Electricity,Final Energy|Transportation|Freight|Electricity
+Price|Final Energy|Transportation|Freight|Gases,Final Energy|Transportation|Freight|Gases
 Price|Final Energy|Transportation|Freight|Hydrogen,Final Energy|Transportation|Freight|Hydrogen
 Price|Final Energy|Transportation|Freight|Liquids,Final Energy|Transportation|Freight|Liquids
 Price|Final Energy|Transportation|Gases,Final Energy|Transportation|Gases
@@ -154,12 +161,15 @@ Price|Final Energy|Transportation|Light-Duty Vehicle|Hydrogen,Final Energy|Trans
 Price|Final Energy|Transportation|Light-Duty Vehicle|Liquids,Final Energy|Transportation|Light-Duty Vehicle|Liquids
 Price|Final Energy|Transportation|Liquids,Final Energy|Transportation|Liquids
 Price|Final Energy|Transportation|Passenger|Electricity,Final Energy|Transportation|Passenger|Electricity
+Price|Final Energy|Transportation|Passenger|Gases,Final Energy|Transportation|Passenger|Gases
 Price|Final Energy|Transportation|Passenger|Hydrogen,Final Energy|Transportation|Passenger|Hydrogen
 Price|Final Energy|Transportation|Passenger|Liquids,Final Energy|Transportation|Passenger|Liquids
 Price|Final Energy|Transportation|Rail|Electricity,Final Energy|Transportation|Rail|Electricity
 Price|Final Energy|Transportation|Rail|Hydrogen,Final Energy|Transportation|Rail|Hydrogen
 Price|Final Energy|Transportation|Rail|Liquids,Final Energy|Transportation|Rail|Liquids
+Price|Final Energy|Transportation|Road|Gases,Final Energy|Transportation|Road|Gases
 Price|Final Energy|Transportation|Truck|Electricity,Final Energy|Transportation|Truck|Electricity
+Price|Final Energy|Transportation|Truck|Gases,Final Energy|Transportation|Truck|Gases
 Price|Final Energy|Transportation|Truck|Hydrogen,Final Energy|Transportation|Truck|Hydrogen
 Price|Final Energy|Transportation|Truck|Liquids,Final Energy|Transportation|Truck|Liquids
 Price|Primary Energy|Biomass,Primary Energy|Biomass

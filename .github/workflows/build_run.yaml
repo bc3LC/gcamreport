@@ -1,11 +1,9 @@
-name: build
+name: build_run
 
 on:
   push:
     branches:
-      - gcam-core
-      - gcam-iamcompact
-      - dev_commdef
+      - main
   pull_request:
     branches: [ '**' ]
 
@@ -56,6 +54,8 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("pak")
+          # readxl 1.6.0 (October 2026) needs R >= 4.2, while this job tests on R 4.1: keep the last version that supports it
+          pak::pkg_install("readxl@1.5.0.1")
           # Install everything needed for the package and its tests
           pak::local_install_dev_deps()
           # Install specific extra tools and GitHub packages
@@ -65,17 +65,29 @@ jobs:
       # 3. Run tests per-file so memory clears, with live stdout monitoring
       - name: Run tests and monitor memory
         run: |
-          # Start background monitor (prints to the live log every 15 seconds)
+          # Start background monitor
           (while true; do echo "[MEM] $(date +%H:%M:%S) $(free -m | awk 'NR==2{print $3"/"$2" MB used"}')"; sleep 15; done) &
           MON=$!
 
-          # Loop through each test file in a fresh R process
-          for f in tests/testthat/test*.R; do
+          # Initialize failure tracker
+          HAS_FAILURES=0
+
+          # Loop through SPECIFIC test files in a fresh R process
+          for f in tests/testthat/test_reporter_runs.R; do
             echo "=== $f ==="
-            Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)" || echo "FAILED: $f"
+            if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
+              echo "FAILED: $f"
+              HAS_FAILURES=1
+            fi
             free -m | awk 'NR==2{print "[MEM after] "$3"/"$2" MB"}'
           done
 
           # Clean up monitor when done
           kill $MON
+
+          # Force the action to fail if any test failed
+          if [ $HAS_FAILURES -ne 0 ]; then
+            echo "❌ Workflow failed: One or more tests failed."
+            exit 1
+          fi
         shell: bash

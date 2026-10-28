@@ -275,3 +275,5 @@ queries_*
 !inst/extdata/queries/GCAM9.1/queries_gcamreport_*.xml
 !tests/testthat/testInputs/v_9.1/*.dat
 !data/queries_*.rda
+changes.patch
+*.patch

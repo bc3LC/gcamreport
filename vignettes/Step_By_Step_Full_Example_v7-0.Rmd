@@ -76,7 +76,7 @@ In case you experience some trouble, check this [troubleshooting section](https:
 
 5) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using Rstudio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
 
 **Note**: Remember that the user interface can only be launched through the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 
@@ -132,7 +132,7 @@ In case you experience some trouble, check this [troubleshooting section](https:
 
 5) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using Rstudio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
 
 **Note**: Remember that the user interface can only be launched through the [full R installation](https://bc3lc.github.io/gcamreport/index.html#with-r-full-mode-installation) or the [Docker installation](https://bc3lc.github.io/gcamreport/index.html#with-docker).
 
@@ -182,7 +182,7 @@ In case you experience some trouble, check this [troubleshooting section](https:
 
 5) Once the project has been generated and the standardized dataset created, the user interface will prompt. If you are using Rstudio, it will automatically open. For a better experience, click the `open in browser` button. If you are using Docker, either type <http://localhost:4000> in the browser or go to Docker Desktop and click the last started port.
 
-<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/gcam-core/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
+<img src="https://raw.githubusercontent.com/bc3LC/gcamreport/main/vignettes/readme_fig/shiny_error1.png" title="Click the last started docker port" alt="UI error" width="80%" height="80%"/>
 
 6) If you just ran [Example 1](#example1) or [Example 2](#example2), you should have a variable called `report` in the environment. You can also use it to launch the user interface:
 

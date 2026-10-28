@@ -1,0 +1,93 @@
+name: build_functionality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ '**' ]
+
+jobs:
+  R-CMD:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    name: ubuntu-latest (4.1)
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      GITHUB_PAT: ${{ secrets.GH_GCAMREPORT_TOKEN }}
+      RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # 1. Strip out unused runner software to free up system resources
+      - name: Free disk and memory
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache
+          docker system prune -af || true
+        shell: bash
+
+      # 2. Add 8GB of swap space to prevent hard Out-Of-Memory (OOM) kills
+      - name: Increase swap
+        run: |
+          sudo swapoff -a
+          sudo fallocate -l 8G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          free -h
+        shell: bash
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.1'
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libxml2-dev libssl-dev
+
+      - name: Install dependencies
+        run: |
+          install.packages("pak")
+          # readxl 1.6.0 (October 2026) needs R >= 4.2, while this job tests on R 4.1: keep the last version that supports it
+          pak::pkg_install("readxl@1.5.0.1")
+          # Install everything needed for the package and its tests
+          pak::local_install_dev_deps()
+          # Install specific extra tools and GitHub packages
+          pak::pkg_install(c("devtools", "rcmdcheck", "JGCRI/rpackageutils", "shinyTree/shinyTree"))
+        shell: Rscript {0}
+
+      # 3. Run tests per-file so memory clears, with live stdout monitoring
+      - name: Run tests and monitor memory
+        run: |
+          # Start background monitor
+          (while true; do echo "[MEM] $(date +%H:%M:%S) $(free -m | awk 'NR==2{print $3"/"$2" MB used"}')"; sleep 15; done) &
+          MON=$!
+
+          # Initialize failure tracker
+          HAS_FAILURES=0
+
+          # Loop through SPECIFIC test files in a fresh R process
+          for f in tests/testthat/test_ui_v7p0.R tests/testthat/test_reporter_v7p0.R tests/testthat/test_reporter_v8p2.R tests/testthat/test_reporter_vScenarioMIPCMIP7.R; do
+            echo "=== $f ==="
+            if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
+              echo "FAILED: $f"
+              HAS_FAILURES=1
+            fi
+            free -m | awk 'NR==2{print "[MEM after] "$3"/"$2" MB"}'
+          done
+
+          # Clean up monitor when done
+          kill $MON
+
+          # Force the action to fail if any test failed
+          if [ $HAS_FAILURES -ne 0 ]; then
+            echo "❌ Workflow failed: One or more tests failed."
+            exit 1
+          fi
+        shell: bash
