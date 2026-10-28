@@ -2,9 +2,9 @@
 ghg,resource,var1,var2,var3,var4,var5,var6,var7,var8,unit_conv
 BC,crude oil,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Supply,Emissions|BC|Energy|Supply|Fugitive,,,,Emissions|BC|Energy and Industrial Processes,1
 BC,natural gas,Emissions|BC,Emissions|BC|Energy,Emissions|BC|Energy|Supply,Emissions|BC|Energy|Supply|Fugitive,,,,Emissions|BC|Energy and Industrial Processes,1
-CH4,coal,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,,,,Emissions|CH4|Energy and Industrial Processes,1
-CH4,crude oil,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,,,,Emissions|CH4|Energy and Industrial Processes,1
-CH4,natural gas,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,,,,Emissions|CH4|Energy and Industrial Processes,1
+CH4,coal,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,Emissions|CH4|Energy|Supply|Fugitive|Coal,,,Emissions|CH4|Energy and Industrial Processes,1
+CH4,crude oil,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,Emissions|CH4|Energy|Supply|Fugitive|Oil,,,Emissions|CH4|Energy and Industrial Processes,1
+CH4,natural gas,Emissions|CH4,Emissions|CH4|Energy,Emissions|CH4|Energy|Supply,Emissions|CH4|Energy|Supply|Fugitive,Emissions|CH4|Energy|Supply|Fugitive|Gas,,,Emissions|CH4|Energy and Industrial Processes,1
 OC,crude oil,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Supply,Emissions|OC|Energy|Supply|Fugitive,,,,Emissions|OC|Energy and Industrial Processes,1
 OC,natural gas,Emissions|OC,Emissions|OC|Energy,Emissions|OC|Energy|Supply,Emissions|OC|Energy|Supply|Fugitive,,,,Emissions|OC|Energy and Industrial Processes,1
 CO,coal,Emissions|CO,Emissions|CO|Energy,Emissions|CO|Energy|Supply,Emissions|CO|Energy|Supply|Fugitive,,,,Emissions|CO|Energy and Industrial Processes,1
