@@ -6,7 +6,7 @@
 [![test_coverage](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/test_coverage.yml)
 [![codecov](https://codecov.io/gh/bc3LC/gcamreport/branch/gcam-v7.0/graph/badge.svg?token=GHV4F7TGFG)](https://codecov.io/gh/bc3LC/gcamreport) 
 [![docker](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/docker_impl.yaml)
-[![build_runs](https://github.com/bc3LC/gcamreport/actions/workflows/build_runs.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_runs.yaml)
+[![build_runs](https://github.com/bc3LC/gcamreport/actions/workflows/build_run.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_run.yaml)
 [![build_functionality](https://github.com/bc3LC/gcamreport/actions/workflows/build_functionality.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_functionality.yaml)
 [![build_data](https://github.com/bc3LC/gcamreport/actions/workflows/build_data.yaml/badge.svg)](https://github.com/bc3LC/gcamreport/actions/workflows/build_data.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13711003.svg)](https://doi.org/10.5281/zenodo.13711003)
