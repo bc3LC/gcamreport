@@ -1,0 +1,68 @@
+# mapping file for GCAM-Europe regions following the https://github.com/IAMconsortium/common-definitions/blob/main/mappings/GCAM/GCAM-Europe_7.2.0.yaml conventions
+GCAM_region,R5,R9,R10,Other
+Africa_Eastern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Northern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Southern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Western,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Albania,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Argentina,Latin America (R5),Latin America (R9),Latin America (R10),
+Australia_NZ,OECD & EU (R5),Other OECD (R9),Pacific OECD (R10),
+Austria,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Belarus,Reforming Economies (R5),Reforming Economies (R9),Europe (R10),
+Belgium,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Bosnia and Herzegovina,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Brazil,Latin America (R5),Latin America (R9),Latin America (R10),
+Bulgaria,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Canada,OECD & EU (R5),Other OECD (R9),North America (R10),
+Central America and Caribbean,Latin America (R5),Latin America (R9),Latin America (R10),
+Central Asia,Reforming Economies (R5),Reforming Economies (R9),Reforming Economies (R10),
+China,Asia (R5),China (R9),China+ (R10),
+Colombia,Latin America (R5),Latin America (R9),Latin America (R10),
+Croatia,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Cyprus,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Czech Republic,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Denmark,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Estonia,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Finland,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+France,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Germany,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Greece,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Hungary,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Iceland,OECD & EU (R5),Other OECD (R9),Europe (R10),
+India,Asia (R5),India (R9),India+ (R10),
+Indonesia,Asia (R5),Other Asia (R9),Rest of Asia (R10),
+Ireland,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Italy,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Japan,OECD & EU (R5),Other OECD (R9),Pacific OECD (R10),
+Latvia,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Lithuania,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Luxembourg,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Macedonia,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Malta,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Mexico,Latin America (R5),Latin America (R9),Latin America (R10),
+Middle East,Middle East & Africa (R5),Middle East & Africa (R9),Middle East (R10),
+Moldova,Reforming Economies (R5),Reforming Economies (R9),Europe (R10),
+Netherlands,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Norway,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Pakistan,Asia (R5),Other Asia (R9),Rest of Asia (R10),
+Poland,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Portugal,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Romania,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Russia,Reforming Economies (R5),Reforming Economies (R9),Reforming Economies (R10),
+Serbia and Montenegro,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Slovakia,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Slovenia,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+South Africa,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),
+South America_Northern,Latin America (R5),Latin America (R9),Latin America (R10),
+South America_Southern,Latin America (R5),Latin America (R9),Latin America (R10),
+South Asia,Asia (R5),Other Asia (R9),Rest of Asia (R10),
+South Korea,Asia (R5),Other Asia (R9),China+ (R10),
+Southeast Asia,Asia (R5),Other Asia (R9),Rest of Asia (R10),
+Spain,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Sweden,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Switzerland,OECD & EU (R5),Other OECD (R9),Europe (R10),
+Taiwan,Asia (R5),Other Asia (R9),Rest of Asia (R10),
+Turkey,OECD & EU (R5),Other OECD (R9),Europe (R10),
+UK,OECD & EU (R5),Other OECD (R9),Europe (R10),European Union and United Kingdom
+USA,OECD & EU (R5),USA (R9),North America (R10),United States
+Ukraine,Reforming Economies (R5),Reforming Economies (R9),Europe (R10),

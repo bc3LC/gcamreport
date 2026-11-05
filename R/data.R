@@ -817,17 +817,17 @@
 #' }
 "last_historical_year_vEurope8.7"
 
-#' reg_cont_vEurope8.7
+#' reg_agg_vEurope8.7
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM Europe 8.7 version
+#' @description mapping between regions and aggregated regions compatible with GCAM Europe 8.7 version
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_vEurope8.7
+#' gcamreport::reg_agg_vEurope8.7
 #' }
-"reg_cont_vEurope8.7"
+"reg_agg_vEurope8.7"
 
 
 
@@ -1533,17 +1533,17 @@
 #' }
 "last_historical_year_vEurope7.2"
 
-#' reg_cont_vEurope7.2
+#' reg_agg_vEurope7.2
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM Europe 7.2 version
+#' @description mapping between regions and aggregated regions compatible with GCAM Europe 7.2 version
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_vEurope7.2
+#' gcamreport::reg_agg_vEurope7.2
 #' }
-"reg_cont_vEurope7.2"
+"reg_agg_vEurope7.2"
 
 
 #' queries_general_v8.2
@@ -2237,17 +2237,17 @@
 #' }
 "last_historical_year_v8.2"
 
-#' reg_cont_v8.2
+#' reg_agg_v8.2
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM8.2
+#' @description mapping between regions and aggregated regions compatible with GCAM8.2
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_v8.2
+#' gcamreport::reg_agg_v8.2
 #' }
-"reg_cont_v8.2"
+"reg_agg_v8.2"
 
 #' queries_general_vScenarioMIPCMIP7
 #'
@@ -2964,17 +2964,17 @@
 #' }
 "last_historical_year_vScenarioMIPCMIP7"
 
-#' reg_cont_vScenarioMIPCMIP7
+#' reg_agg_vScenarioMIPCMIP7
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAMScenarioMIPCMIP7
+#' @description mapping between regions and aggregated regions compatible with GCAMScenarioMIPCMIP7
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_vScenarioMIPCMIP7
+#' gcamreport::reg_agg_vScenarioMIPCMIP7
 #' }
-"reg_cont_vScenarioMIPCMIP7"
+"reg_agg_vScenarioMIPCMIP7"
 
 
 #' queries_general_v9.1
@@ -3692,17 +3692,17 @@
 #' }
 "last_historical_year_v9.1"
 
-#' reg_cont_v9.1
+#' reg_agg_v9.1
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM9.1
+#' @description mapping between regions and aggregated regions compatible with GCAM9.1
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_v9.1
+#' gcamreport::reg_agg_v9.1
 #' }
-"reg_cont_v9.1"
+"reg_agg_v9.1"
 
 
 #' queries_general_v7.2
@@ -4396,17 +4396,17 @@
 #' }
 "last_historical_year_v7.2"
 
-#' reg_cont_v7.2
+#' reg_agg_v7.2
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM7.2
+#' @description mapping between regions and aggregated regions compatible with GCAM7.2
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_v7.2
+#' gcamreport::reg_agg_v7.2
 #' }
-"reg_cont_v7.2"
+"reg_agg_v7.2"
 
 
 #' queries_general_v7.1
@@ -5100,17 +5100,17 @@
 #' }
 "last_historical_year_v7.1"
 
-#' reg_cont_v7.1
+#' reg_agg_v7.1
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM7.1
+#' @description mapping between regions and aggregated regions compatible with GCAM7.1
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_v7.1
+#' gcamreport::reg_agg_v7.1
 #' }
-"reg_cont_v7.1"
+"reg_agg_v7.1"
 
 
 #' queries_general_v7.0
@@ -5757,14 +5757,14 @@
 #' }
 "last_historical_year_v7.0"
 
-#' reg_cont_v7.0
+#' reg_agg_v7.0
 #'
 #' @source local
 #' @format .csv
-#' @description mapping between regions and continents compatible with GCAM7.0
+#' @description mapping between regions and aggregated regions compatible with GCAM7.0
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
-#' gcamreport::reg_cont_v7.0
+#' gcamreport::reg_agg_v7.0
 #' }
-"reg_cont_v7.0"
+"reg_agg_v7.0"

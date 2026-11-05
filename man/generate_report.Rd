@@ -14,13 +14,13 @@ generate_report(
   inverse_desired_variables = FALSE,
   ignore = NULL,
   desired_regions = "All",
-  desired_continents = "All",
+  desired_agg_regions = "All",
   save_output = TRUE,
   output_file = NULL,
   launch_ui = TRUE,
   interactive = F,
   GCAM_version = "v8.2",
-  GWP_version = "AR5",
+  GWP_version = "AR6",
   queries_general_file = NULL,
   queries_nonCO2_file = NULL,
   all_tier1 = F
@@ -47,7 +47,7 @@ Note2: Global variables like "Emissions" will only account for selected variable
 
 \item{desired_regions}{Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".}
 
-\item{desired_continents}{Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".}
+\item{desired_agg_regions}{Region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_agg_regions()`. Note: The dataset will include only the specified groups, which will make up "World".}
 
 \item{save_output}{If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.}
 
@@ -59,7 +59,7 @@ Note2: Global variables like "Emissions" will only account for selected variable
 
 \item{GCAM_version}{Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.}
 
-\item{GWP_version}{Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.}
+\item{GWP_version}{Global Warming Potential (GWP) version: 'AR6' (default), 'AR5', or 'AR4'.}
 
 \item{queries_general_file}{Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.}
 

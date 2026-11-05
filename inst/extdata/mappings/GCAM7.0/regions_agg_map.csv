@@ -1,0 +1,34 @@
+# mapping file for GCAM regions following the https://github.com/IAMconsortium/common-definitions/blob/main/mappings/GCAM/GCAM_7.0.yaml conventions
+GCAM_region,R5,R9,R10,Other
+Africa_Eastern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Northern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Southern,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Africa_Western,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),African Union
+Argentina,Latin America (R5),Latin America (R9),Latin America (R10),NA
+Australia_NZ,OECD & EU (R5),Other OECD (R9),Pacific OECD (R10),NA
+Brazil,Latin America (R5),Latin America (R9),Latin America (R10),NA
+Canada,OECD & EU (R5),Other OECD (R9),North America (R10),NA
+Central America and Caribbean,Latin America (R5),Latin America (R9),Latin America (R10),NA
+Central Asia,Reforming Economies (R5),Reforming Economies (R9),Reforming Economies (R10),NA
+China,Asia (R5),China (R9),China+ (R10),NA
+Colombia,Latin America (R5),Latin America (R9),Latin America (R10),NA
+EU-12,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+EU-15,OECD & EU (R5),European Union (R9),Europe (R10),European Union and United Kingdom
+Europe_Eastern,Reforming Economies (R5),Reforming Economies (R9),Europe (R10),NA
+Europe_Non_EU,OECD & EU (R5),Other OECD (R9),Europe (R10),NA
+European Free Trade Association,OECD & EU (R5),Other OECD (R9),Europe (R10),NA
+India,Asia (R5),India (R9),India+ (R10),NA
+Indonesia,Asia (R5),Other Asia (R9),Rest of Asia (R10),NA
+Japan,OECD & EU (R5),Other OECD (R9),Pacific OECD (R10),NA
+Mexico,Latin America (R5),Latin America (R9),Latin America (R10),NA
+Middle East,Middle East & Africa (R5),Middle East & Africa (R9),Middle East (R10),NA
+Pakistan,Asia (R5),Other Asia (R9),Rest of Asia (R10),NA
+Russia,Reforming Economies (R5),Reforming Economies (R9),Reforming Economies (R10),NA
+South Africa,Middle East & Africa (R5),Middle East & Africa (R9),Africa (R10),NA
+South America_Northern,Latin America (R5),Latin America (R9),Latin America (R10),NA
+South America_Southern,Latin America (R5),Latin America (R9),Latin America (R10),NA
+South Asia,Asia (R5),Other Asia (R9),Rest of Asia (R10),NA
+South Korea,Asia (R5),Other Asia (R9),China+ (R10),NA
+Southeast Asia,Asia (R5),Other Asia (R9),Rest of Asia (R10),NA
+Taiwan,Asia (R5),Other Asia (R9),Rest of Asia (R10),NA
+USA,OECD & EU (R5),USA (R9),North America (R10),United States

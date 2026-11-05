@@ -184,7 +184,7 @@ generate_report(..., output_file = '/desired/directory/awesomeOutput')
 
 
 
-## Example 4: specify the regions or regions' group/s
+## Example 4: specify the GCAM regions or regions' group/s
 
 Suppose you are in one of the previous situations, but you want to consider a standardized dataset with only some regions. You have two ways to select them: you can directly specify the desired regions to be considered, or you can specify the group(s) of regions to be considered. In either case, the desired regions will form *World*. Then, for example, the total arable land of the world will be the sum of the arable land of **only** the selected regions. 
 
@@ -206,25 +206,30 @@ library(gcamreport)
 3) Check which are the available regions or regions' groups for reporting. The following commands will print a list with all the possibilities.
 
 ``` r
-available_regions()
-available_continents()
+available_regions(GCAM_version = <yourGCAMversion>)
+available_agg_regions(GCAM_version = <yourGCAMversion>)
 ```
 In case you want to store them in a vector, you can simply assign the output. You can also skip the console printing by setting `print = FALSE`.
 
 ``` r
-avail_reg <- available_regions(print = FALSE)
-avail_cont <- available_continents()
+avail_reg <- available_regions(print = FALSE, GCAM_version = <yourGCAMversion>)
+avail_agg_reg <- available_agg_regions(print = FALSE, GCAM_version = <yourGCAMversion>)
 ```
 
+To see which native GCAM regions make up a specific aggregated group, use the `show_GCAMregions_in_agg_region()` function. For example, to list the exact GCAM regions included in the 'African Union', run the following command:
 
-4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function (e.g., final final, desired scenarios...). Specify the regions through the `desired_regions` parameter or the `desired_continents` parameter. Notice that not both can be specified at the same time.
+``` r
+show_GCAMregions_in_agg_region(agg_region = 'African Union', GCAM_version = <yourGCAMversion>)
+```
+
+4) Use [example1](#example1) database or [example2](#example2) project description and add all the extra parameters that you consider in the `generate_report` function (e.g., final final, desired scenarios...). Specify the regions through the `desired_regions` parameter or the `desired_agg_regions` parameter. Notice that not both can be specified at the same time.
 
 ```r
 ## -- specify the desired regions
 generate_report(..., desired_regions = c('EU-15','EU-12'))
 
 ## -- specify the desired regions' group/s
-generate_report(..., desired_continents = c('ASIA','REF'))
+generate_report(..., desired_agg_regions = c('European Union (R9)','Other OECD (R9)'))
 ```
 
 <span style="color:white">newline</span>
