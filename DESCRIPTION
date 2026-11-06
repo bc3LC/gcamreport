@@ -50,7 +50,7 @@ Suggests:
     remotes
 Remotes: 
     github::JGCRI/rgcam,
-    github::JGCRI/rpackageutils
+    github::JGCRI/rpackageutils,
     github::IAMconsortium/scenario-evaluation-criteria@2026-update
 VignetteBuilder: 
     knitr

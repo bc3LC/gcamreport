@@ -117,12 +117,3 @@ test_that("Test_historical_values", {
   }
 })
 
-
-
-
-
-
-
-
-
-
