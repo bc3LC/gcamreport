@@ -298,7 +298,8 @@ test_that("Test10v_7.0 vetting", {
     desired_regions = "All",
     desired_variables = c("Emissions|CH4*"),
     launch_ui = FALSE,
-    GCAM_version = 'v7.0'
+    GCAM_version = 'v7.0',
+    GWP_version = 'AR5'
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.1.RData")))
   testthat::expect_equal(standardization_checker, testResult)
@@ -311,7 +312,8 @@ test_that("Test10v_7.0 vetting", {
     desired_regions = "All",
     desired_variables = c("Emissions|Sulfur*"),
     launch_ui = FALSE,
-    GCAM_version = 'v7.0'
+    GCAM_version = 'v7.0',
+    GWP_version = 'AR5'
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.2.RData")))
   testthat::expect_equal(standardization_checker, testResult)
@@ -324,7 +326,8 @@ test_that("Test10v_7.0 vetting", {
     desired_regions = "South Africa",
     desired_variables = c("Final Energy*"),
     launch_ui = FALSE,
-    GCAM_version = 'v7.0'
+    GCAM_version = 'v7.0',
+    GWP_version = 'AR5'
   )
   testthat::expect(!exists("standardization_checker$`Vetting variables`"), "Vetting performed when not all regions were selected")
 })
