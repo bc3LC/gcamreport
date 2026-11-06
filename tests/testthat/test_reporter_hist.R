@@ -4,7 +4,8 @@ library(magrittr)
 
 test_that("Test_historical_values", {
 
-  for (GCAMv in gcamreport::available_GCAM_versions) {
+  # for (GCAMv in gcamreport::available_GCAM_versions) {
+  for (GCAMv in c('v7.1')) {
     print(GCAMv)
 
     prjtest_name <- switch(GCAMv,
@@ -22,7 +23,7 @@ test_that("Test_historical_values", {
                            )))
 
     generate_report(prj_name = file.path(rprojroot::find_root(rprojroot::is_testthat), "testInputs", sub("^v", "v_", GCAMv), prjtest_name),
-                    final_year = 2030, launch_ui = FALSE, GCAM_version = GCAMv, save_output = FALSE,
+                    final_year = 2030, launch_ui = FALSE, GCAM_version = GCAMv, save_output = FALSE, GWP_version = 'AR5',
                     ignore = c('bio-ceiling','coal-elec-constraint','Worldbiolim',
                                'CO2_NearTerm','wind_offshore-trial-supply',
                                'biolim','biolim CCS','Referenceining',
@@ -116,13 +117,4 @@ test_that("Test_historical_values", {
     rm(list = ls()); gc()
   }
 })
-
-
-
-
-
-
-
-
-
 

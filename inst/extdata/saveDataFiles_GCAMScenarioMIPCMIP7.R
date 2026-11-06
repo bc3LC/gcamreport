@@ -26,6 +26,14 @@ reg_cont_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/ext
 )
 use_data(reg_cont_vScenarioMIPCMIP7, overwrite = T)
 
+iso_to_gcam_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMScenarioMIPCMIP7", "GCAM32_to_EU.csv"),
+                                          comment = "#"
+) %>%
+  dplyr::select(iso, GCAM_region_ID, GCAM_region) %>%
+  dplyr::distinct()
+use_data(iso_to_gcam_vScenarioMIPCMIP7, overwrite = T)
+
+
 # emissions maps
 co2_ets_sector_map_vScenarioMIPCMIP7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMScenarioMIPCMIP7", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = "", guess_max = Inf

@@ -59,7 +59,7 @@ jobs:
           # Install everything needed for the package and its tests
           pak::local_install_dev_deps()
           # Install specific extra tools and GitHub packages
-          pak::pkg_install(c("devtools", "rcmdcheck", "JGCRI/rpackageutils", "shinyTree/shinyTree"))
+          pak::pkg_install(c("devtools", "rcmdcheck", "JGCRI/rpackageutils", "shinyTree/shinyTree", "IAMconsortium/scenario-evaluation-criteria@2026-update"))
         shell: Rscript {0}
 
       # 3. Run tests per-file so memory clears, with live stdout monitoring
@@ -73,7 +73,7 @@ jobs:
           HAS_FAILURES=0
 
           # Loop through SPECIFIC test files in a fresh R process
-          for f in tests/testthat/test_ui_v7p0.R tests/testthat/test_reporter_v7p0.R tests/testthat/test_reporter_v8p2.R tests/testthat/test_reporter_vScenarioMIPCMIP7.R; do
+          for f in tests/testthat/test_ui_v7p0.R tests/testthat/test_reporter_v7p0.R tests/testthat/test_reporter_v8p2.R tests/testthat/test_sci_evaluator.R tests/testthat/test_reporter_vScenarioMIPCMIP7.R; do
             echo "=== $f ==="
             if ! Rscript -e "devtools::load_all('.'); testthat::test_file('$f', stop_on_failure = TRUE)"; then
               echo "FAILED: $f"

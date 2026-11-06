@@ -538,35 +538,91 @@ available_variables <- function(print = TRUE, GCAM_version = 'v8.2') {
 #'
 #' The resulting RData output can be used to manually call `launch_gcamreport_ui`.
 #'
-#' @param db_path Full path to the GCAM database. Required if creating a new project.
-#' @param db_name Name of the GCAM database. Required if creating a new project.
-#' @param prj_name Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.
-#' @param scenarios Names of the scenarios to consider. Defaults to all scenarios in the project or database.
-#' @param final_year Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025 and must align with available 5-year intervals, such as 2025, 2030, 2035, 2040, etc.
-#' @param desired_variables Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`.
-#'    Note1: You can use the `*` notation as detailed in [this](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables) tutorial to select multiple variables from the same family.
-#'    Note2: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".
-#' @param inverse_desired_variables If `TRUE` (not default), consider all but the detailed variables in the `desired_variables` parameter.
-#' @param ignore Policy names introduced by the user to ignore during gcamreport processing of physical quantities, since otherwise they will be flagged as names missing from mapping files and cause an error. Note: Currently having one of the specified name patterns in any column of the query results, such as sector, subsector, input, etc. will cause the error to be disregarded. Same behavior than adding the policy names to the corresponding mappings indicating `NoReported`.
-#' @param desired_regions Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".
-#' @param desired_continents Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".
-#' @param save_output If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.
-#' @param output_file File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.
-#' @param launch_ui If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.
-#' @param GCAM_version Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.
-#' @param GWP_version Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.
-#' @param queries_general_file Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.
-#' @param queries_nonCO2_file Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.
-#' @param interactive If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.
-#' @param all_tier1 If `TRUE` (not default), introduce all Tier 1 Variables (as 0) in the standardized report.
-#'
-#' @return Saves RData, CSV, and XLSX files with standardized variables, launches the user interface, and saves the GCAM project file if created.
+#' @param db_path A character string specifying the full path to the GCAM database.
+#'   Required if creating a new project.
+#' @param db_name A character string specifying the name of the GCAM database.
+#'   Required if creating a new project.
+#' @param prj_name A character string specifying the name of the GCAM project.
+#'   Can be an existing project name (loads the project) or a new project name
+#'   (creates a new project). Accepts `.dat` extensions.
+#' @param scenarios A character vector of specific scenarios to consider.
+#'   If `NULL` (default), all scenarios present in the project or database are evaluated.
+#' @param final_year A numeric value specifying the final reporting year.
+#'   Defaults to `2100`. Note: `final_year` must be at least `2025` and must align
+#'   with available 5-year intervals (e.g., 2025, 2030, 2035).
+#' @param desired_variables A character vector of variables to include in the report.
+#'   Defaults to `'All'`. Run `available_variables()` to view all possibilities.
+#'   Note 1: You can use the `*` notation (as detailed in the
+#'   [Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables))
+#'   to select multiple variables from the same family.
+#'   Note 2: Global variables like `"Emissions"` will only aggregate the selected sub-variables.
+#'   For example, if you select `"Emissions"` and `"Emissions|CO2"`, `"Emissions"` will
+#'   only account for CO2 and will ignore missing variables like `"Emissions|CH4"`.
+#'   Note 3: Specify `'SCI'` to automatically include all variables required for the
+#'   Scenario Compass evaluation (see the `scenariocompass_evaluation` parameter).
+#' @param inverse_desired_variables Logical (`TRUE`/`FALSE`). If `TRUE`, the report will
+#'   include all available variables *except* those explicitly listed in `desired_variables`.
+#'   Defaults to `FALSE`.
+#' @param ignore A character vector of user-introduced policy names to ignore during
+#'   processing of physical quantities. Otherwise, unmapped policies will trigger an error.
+#'   Note: This mimics the behavior of adding the policy names or residual outputs to
+#'   mapping files as `NoReported`.
+#' @param desired_regions A character vector of specific regions to include in the report.
+#'   Defaults to `'All'`. Run `available_regions()` to view all possibilities.
+#'   Note: The generated dataset will restrict `"World"` totals to only include these specified regions.
+#' @param desired_continents A character vector of continent/region groups to include in the report.
+#'   Defaults to `'All'`. Run `available_continents()` to view all possibilities.
+#'   Note: The generated dataset will restrict `"World"` totals to only include these specified regional groups.
+#' @param save_output Logical (`TRUE`/`FALSE`) or a character string (`'csv'`, `'xlsx'`).
+#'   Determines whether the resulting dataset should be saved to disk. If `'csv'` or `'xlsx'`,
+#'   the data is saved exclusively in that format. Defaults to `TRUE` (saves both).
+#' @param output_file A character string specifying the full file path and name for the saved data.
+#'   If `NULL`, it defaults to the directory of the database or project file, appending
+#'   `'standardized'` to the filename. Extension will be automatically added.
+#' @param GCAM_version A character string specifying the GCAM version used for regional
+#'   mappings and queries (e.g., `'v8.2'`). Run `available_GCAM_versions()` to see supported options.
+#'   Defaults to `'v8.2'`.
+#' @param GWP_version A character string specifying the Global Warming Potential (GWP) version.
+#'   Supported options are `'AR4'`, `'AR5'`, or `'AR6'`. Defaults to `'AR6'`.
+#' @param scenariocompass_evaluation Logical (`TRUE`/`FALSE`). Determines whether to
+#'   evaluate the standardized output against the Scenario Compass criteria.
+#'   Defaults to `FALSE`.
+#' @param scenariocompass_regions A character vector of specific regions to assess
+#'   during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+#'   is `TRUE`. If `NULL` (the default), it evaluates all regions present in the
+#'   standardized dataset. You can provide `'World'`, `'Regional'`, or specific
+#'   GCAM region names.
+#' @param scenariocompass_scenarios A character vector of specific scenarios to assess
+#'   during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+#'   is `TRUE`. If `NULL` (the default), all scenarios present in the standardized dataset
+#'   are evaluated.
+#' @param queries_general_file A character string specifying the full path to a general XML
+#'   query file (including name and extension). If `NULL` (the default), it uses a default
+#'   query file compatible with the specified `GCAM_version` to report all standardized variables.
+#' @param queries_nonCO2_file A character string specifying the full path to an XML query
+#'   file (including name and extension) for non-CO2 long queries.
+#'   If `NULL` (the default), it uses a default non-CO2 query file compatible with the specified `GCAM_version`.
+#' @param launch_ui Logical (`TRUE`/`FALSE`). Determines whether to automatically launch
+#'   the User Interface upon completion. Defaults to `TRUE`.
+#' @param interactive Logical (`TRUE`/`FALSE`). If `TRUE`, the console will pause and ask
+#'   for user input when warnings appear. If `FALSE`, warnings are collected and displayed
+#'   silently at the end of the script execution. Defaults to `FALSE`.
+#' @param all_tier1 Logical (`TRUE`/`FALSE`). If `TRUE`, forces all Tier 1 Variables to be
+#'   introduced into the standardized report with a value of `0`. Defaults to `FALSE`.
+#' @return A data frame containing the standardized GCAM reporting dataset,
+#'   filtered and processed according to the specified variables, regions, and
+#'   scenarios. If `scenariocompass_evaluation` is `TRUE`, another dataset will
+#'   be produced to include the evaluation criteria outcomes. Notice the function
+#'   may save the dataset to disk (if `save_output` is enabled) and launch the
+#'   interactive User Interface (if `launch_ui` is `TRUE`).
 #' @export
 generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios = NULL, final_year = 2100,
                             desired_variables = "All", inverse_desired_variables = FALSE,
                             ignore = NULL, desired_regions = "All", desired_continents = "All",
                             save_output = TRUE, output_file = NULL, launch_ui = TRUE, interactive = F,
-                            GCAM_version = 'v8.2', GWP_version = 'AR5',
+                            GCAM_version = 'v8.2', GWP_version = 'AR6',
+                            scenariocompass_evaluation = FALSE,
+                            scenariocompass_regions = NULL, scenariocompass_scenarios = NULL,
                             queries_general_file = NULL, queries_nonCO2_file = NULL,
                             all_tier1 = F) {
   continent <- region <- name <- Variable <- Internal_variable <- required <- prj_loaded <- NULL
@@ -644,6 +700,12 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   if (!(length(desired_variables) == 1 && desired_variables == "All")) {
     original_desired_variables <- desired_variables
 
+    # append the SCI selection
+    if ('sci' %in% tolower(desired_variables)) {
+      desired_variables <- union(setdiff(desired_variables, "SCI"),
+                                 unique(scenarioevaluationcriteria::load_criteria("reference-data")$variable))
+    }
+
     # consider the * symbol
     contains_star <- grepl("\\*", desired_variables)
     if (sum(contains_star) > 0) {
@@ -675,6 +737,9 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
       # remove elements containing '*'
       contains_star <- grepl("\\*", desired_variables)
       desired_variables <- dplyr::setdiff(desired_variables, desired_variables[contains_star])
+
+      # clean
+      desired_variables <- sort(unique(desired_variables))
     }
 
     # check if inverse of desired variables
@@ -834,61 +899,53 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     } else {
       output_file <- file.path(db_path, paste0(gsub("\\.dat$", "", prj_name), "_standardized"))
     }
+  } else {
+    output_file <- tools::file_path_sans_ext(output_file)
   }
 
   # bind and save results
   do_bind_results(GCAM_version, all_tier1)
   save(report, file = paste0(output_file, ".RData"))
 
-  if (save_output == TRUE || save_output %in% c("CSV", "XLSX")) {
-    if (save_output == TRUE || "CSV" %in% save_output) {
+  if (save_output == TRUE || tolower(save_output) %in% c("CSV", "XLSX")) {
+    if (save_output == TRUE || "csv" %in% tolower(save_output)) {
       write.csv(report, file.path(paste0(output_file, ".csv")), row.names = FALSE)
       rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".csv"))))
     }
-    if (save_output == TRUE || "XLSX" %in% save_output) {
+    if (save_output == TRUE || "xlsx" %in% tolower(save_output)) {
       writexl::write_xlsx(report, file.path(paste0(output_file, ".xlsx")))
       rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".xlsx"))))
     }
   }
 
   # checks, vetting, and errors summary
-  vetting_summary <- list()
+  standardization_checker <- list()
   vet <- do_check_inf()
-  vetting_summary[[stringr::str_sub(as.character(vet$message),
+  standardization_checker[[stringr::str_sub(as.character(vet$message),
                                     end = stringr::str_locate(as.character(vet$message), ":") - 1
   )[1]]] <- vet
   vet <- do_check_na()
-  vetting_summary[[stringr::str_sub(as.character(vet$message),
+  standardization_checker[[stringr::str_sub(as.character(vet$message),
                                     end = stringr::str_locate(as.character(vet$message), ":") - 1
   )[1]]] <- vet
 
-  if (identical(desired_regions, "All") || length(desired_regions) == gcamreport::GCAM_regions_number) {
-    vet <- do_check_vetting()
-    vetting_summary[[stringr::str_sub(as.character(vet$message),
-                                      end = stringr::str_locate(as.character(vet$message), ":") - 1
-    )[1]]] <- vet
-    rlang::inform("Vetting summary:")
-    for (e in vetting_summary) {
-      print(e$message)
-    }
-    vetting_summary <<- vetting_summary
-    cat("To view the summary details, type:\n")
-    cat('  - `vetting_summary$`Inf variables` to check for Inf values\n')
-    cat('  - `vetting_summary$`NA variables` to check for NA values\n')
-    cat('  - `vetting_summary$`Vetting variables` to check with historical values\n')
-    cat("\nYou can find a supporting vetting figure in: `output/figure/vetting.tiff`\n")
-    cat("==============================================================\n")
-  } else {
-    rlang::inform("Vetting summary:")
-    for (e in vetting_summary) {
-      print(e$message)
-    }
-    vetting_summary <<- vetting_summary
-    cat("To view the summary details, type:\n")
-    cat('  - `vetting_summary$`NA variables` to check for NA values\n')
-    cat('  - `vetting_summary$`Inf variables` to check for Inf values\n')
-    cat('Since not all regions were selected, there is no vetting related to historical values\n')
-    cat("==============================================================\n")
+  rlang::inform("Running Standardization process checker")
+  for (e in standardization_checker) {
+    print(e$message)
+  }
+  standardization_checker <<- standardization_checker
+  rlang::inform("To view the standardization checker summary details, type `'standardization_checker'`:\n")
+  rlang::inform("==============================================================\n")
+
+  if (scenariocompass_evaluation) {
+    scenariocompass_checker(
+      report = report,
+      desired_scenarios = scenariocompass_scenarios,
+      desired_regions = scenariocompass_regions,
+      GCAM_version = GCAM_version,
+      save_output = save_output,
+      output_file = output_file
+    )
   }
 
   # remove internal variables from the environment
@@ -901,7 +958,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     rlang::inform("Launching UI...")
 
     # launch ui
-    launch_gcamreport_ui(data = report, GCAM_version = GCAM_version)
+    launch_gcamreport_ui(data = report, GCAM_version = GCAM_version,
+                         .through_generate_report = T)
   }
 }
 
@@ -919,7 +977,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 #' @return Launches the Shiny interactive UI. This function does not return a value but starts the Shiny application for user interaction.
 #'
 #' @export
-launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = 'v8.2') {
+launch_gcamreport_ui <- function(data_path = NULL, data = NULL,
+                                 GCAM_version = 'v8.2', .through_generate_report = F) {
   # check the user input
   if (is.null(data_path) && is.null(data)) {
     stop("Error: Neither 'data_path' nor 'data' has been provided. Please specify at least one of these: 'data_path' to point to the location of the dataset file or 'data' to provide the dataset directly.")
@@ -934,7 +993,7 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = '
 
   # make the requested GCAM version visible to the Shiny server/UI code, which
   # looks up the bare global `GCAM_version` (e.g. reset_first_load(), server.R)
-  GCAM_version <<- GCAM_version
+  if (!.through_generate_report) GCAM_version <<- GCAM_version
 
   # define the dataset for launching the ui
   sdata <<- suppressWarnings(
