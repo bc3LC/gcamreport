@@ -919,25 +919,23 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   }
 
   # checks, vetting, and errors summary
-  vetting_summary <- list()
+  standardization_checker <- list()
   vet <- do_check_inf()
-  vetting_summary[[stringr::str_sub(as.character(vet$message),
+  standardization_checker[[stringr::str_sub(as.character(vet$message),
                                     end = stringr::str_locate(as.character(vet$message), ":") - 1
   )[1]]] <- vet
   vet <- do_check_na()
-  vetting_summary[[stringr::str_sub(as.character(vet$message),
+  standardization_checker[[stringr::str_sub(as.character(vet$message),
                                     end = stringr::str_locate(as.character(vet$message), ":") - 1
   )[1]]] <- vet
 
-  rlang::inform("Standarization vetting summary:")
-  for (e in vetting_summary) {
+  rlang::inform("Running Standardization process checker")
+  for (e in standardization_checker) {
     print(e$message)
   }
-  vetting_summary <<- vetting_summary
-  cat("To view the summary details, type:\n")
-  cat('  - `vetting_summary$`NA variables` to check for NA values\n')
-  cat('  - `vetting_summary$`Inf variables` to check for Inf values\n')
-  cat("==============================================================\n")
+  standardization_checker <<- standardization_checker
+  rlang::inform("To view the standardization checker summary details, type `'standardization_checker'`:\n")
+  rlang::inform("==============================================================\n")
 
   if (scenariocompass_evaluation) {
     scenariocompass_checker(

@@ -279,6 +279,7 @@ scenariocompass_checker <- function(report,
   } else {
     rlang::inform(paste0("Scenariocompass evaluation done, available typing `scencompass_checker` in your console."))
   }
+  rlang::inform("==============================================================\n")
 
   scencompass_checker <<- scencompass_checker
   return(invisible(scencompass_checker))

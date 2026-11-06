@@ -301,7 +301,7 @@ test_that("Test10v_7.0 vetting", {
     GCAM_version = 'v7.0'
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.1.RData")))
-  testthat::expect_equal(vetting_summary, testResult)
+  testthat::expect_equal(standardization_checker, testResult)
 
   rm(list = ls())
   generate_report(
@@ -314,7 +314,7 @@ test_that("Test10v_7.0 vetting", {
     GCAM_version = 'v7.0'
   )
   testResult <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test10.2.RData")))
-  testthat::expect_equal(vetting_summary, testResult)
+  testthat::expect_equal(standardization_checker, testResult)
 
   rm(list = ls())
   generate_report(
@@ -326,7 +326,7 @@ test_that("Test10v_7.0 vetting", {
     launch_ui = FALSE,
     GCAM_version = 'v7.0'
   )
-  testthat::expect(!exists("vetting_summary$`Vetting variables`"), "Vetting performed when not all regions were selected")
+  testthat::expect(!exists("standardization_checker$`Vetting variables`"), "Vetting performed when not all regions were selected")
 })
 
 test_that("Test11v_7.0 scenarios", {
