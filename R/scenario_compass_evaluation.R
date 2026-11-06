@@ -12,6 +12,11 @@
 #'   report. Supported file extensions: `.csv`, `.xlsx`, and `.RData`.
 #' @param desired_scenarios A character vector of specific scenarios to assess.
 #'   If `NULL` (the default), all scenarios present in `report` are evaluated.
+#' @param desired_regions A character vector of specific regions to assess.
+#'   If `NULL` (the default), all regions present in the report are evaluated.
+#'   You can provide `'World'` for a global assessment, `'Regional'` to evaluate
+#'   all sub-regions, or explicitly list specific GCAM region names. Run
+#'   `available_regions()` to see the complete list of supported options.
 #' @param GCAM_version A character string specifying the GCAM version used for
 #'   regional mappings and reference datasets (e.g., `'v8.2'`). Run
 #'   `available_GCAM_versions()` to see the complete list of supported options.
@@ -27,9 +32,12 @@
 #' @export
 scenariocompass_checker <- function(report,
                                     desired_scenarios = NULL,
+                                    desired_regions = NULL,
                                     GCAM_version = 'v8.2',
                                     save_output = TRUE,
                                     output_file = NULL) {
+
+  rlang::inform("Running Scenario Compass vetting")
 
   #### `report` loading, format checker and dplyr::filtering ==========================
   # load `report` if a file path is provided
@@ -95,14 +103,7 @@ scenariocompass_checker <- function(report,
     output_file <- paste0(here::here(), "dataset_scenariocompass_assessment")
   }
 
-  #### required data loading and arragement ====================================
-  # load scenariocompass reference data
-  reference <- scenarioevaluationcriteria::load_criteria(c('reference-data'))
-
-  # store ISO codes
-  all_iso <- unique(reference$region)
-  all_iso <- all_iso[nchar(all_iso) == 3]
-
+  #### required data loading and arrangement ====================================
   # load GCAMregion - iso mapping according to the GCAM version
   if (grep('Europe', GCAM_version)) {
     gcam_regions <- get(paste('iso_to_gcam',GCAM_version,sep='_'),
@@ -114,7 +115,56 @@ scenariocompass_checker <- function(report,
       dplyr::select(region = iso, GCAM_region)
   }
 
+  # load scenariocompass reference data
+  reference <- scenarioevaluationcriteria::load_criteria(c('reference-data'))
 
+  if (!is.null(desired_regions)) {
+    desired_regions <- unique(tolower(desired_regions),
+                              report %>% dplyr::pull(Region) %>% unique() %>% tolower())
+    if (length(desired_regions) == 'world') {
+      reference <- reference %>%
+        dplyr::filter(region == 'World')
+    } else if (length(desired_regions) == 'regional|region') {
+      reference <- reference %>%
+        dplyr::filter(region != 'World')
+    } else {
+      # checker
+      invalid_regions <- setdiff(desired_regions, tolower(available_regions(print = FALSE, GCAM_version = GCAM_version)))
+      if (length(invalid_regions) > 0) {
+        stop(
+          sprintf(
+            "The following desired regions are not available in GCAM version '%s': %s",
+            GCAM_version,
+            paste(invalid_regions, collapse = ", ")
+          ),
+          call. = FALSE
+        )
+      }
+      # filtering
+      req_regions <- gcam_regions %>%
+        dplyr::filter(tolower(GCAM_region) %in% desired_regions) %>%
+        dplyr::pull(region)
+      if ('world' %in% desired_regions) req_regions <- c(req_regions,'world')
+      reference <- reference %>%
+        dplyr::filter(tolower(region) %in% req_regions)
+    }
+  } else {
+    # select available regions in reporting
+    desired_regions <- report %>% dplyr::pull(Region) %>% unique() %>% tolower()
+    req_regions <- gcam_regions %>%
+      dplyr::filter(tolower(GCAM_region) %in% desired_regions) %>%
+      dplyr::pull(region)
+    if ('world' %in% desired_regions) req_regions <- c(req_regions,'world')
+    reference <- reference %>%
+      dplyr::filter(tolower(region) %in% req_regions)
+  }
+
+  # store ISO codes
+  all_iso <- unique(reference$region)
+  all_iso <- all_iso[nchar(all_iso) == 3]
+
+
+  #### perform the assessment ==================================================
   criteria <- scenarioevaluationcriteria::load_criteria(c('criteria-thresholds')) %>%
     # remove the cummulative variables
     dplyr::filter(!grepl('cumulative',year)) %>%
@@ -202,7 +252,9 @@ scenariocompass_checker <- function(report,
     criteria %>%
       dplyr::filter(unit != 'dimensionless'),
     criteria_dimless
-  )
+  ) %>%
+    # select only regions available in the `report`
+    dplyr::filter(region %in% unique(report$Region))
 
   scencompass_checker <- criteria_full %>%
     tidyr::pivot_wider(
