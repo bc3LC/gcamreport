@@ -960,7 +960,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
     rlang::inform("Launching UI...")
 
     # launch ui
-    launch_gcamreport_ui(data = report, GCAM_version = GCAM_version)
+    launch_gcamreport_ui(data = report, GCAM_version = GCAM_version,
+                         .through_generate_report = T)
   }
 }
 
@@ -978,7 +979,8 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
 #' @return Launches the Shiny interactive UI. This function does not return a value but starts the Shiny application for user interaction.
 #'
 #' @export
-launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = 'v8.2') {
+launch_gcamreport_ui <- function(data_path = NULL, data = NULL,
+                                 GCAM_version = 'v8.2', .through_generate_report = F) {
   # check the user input
   if (is.null(data_path) && is.null(data)) {
     stop("Error: Neither 'data_path' nor 'data' has been provided. Please specify at least one of these: 'data_path' to point to the location of the dataset file or 'data' to provide the dataset directly.")
@@ -993,7 +995,7 @@ launch_gcamreport_ui <- function(data_path = NULL, data = NULL, GCAM_version = '
 
   # make the requested GCAM version visible to the Shiny server/UI code, which
   # looks up the bare global `GCAM_version` (e.g. reset_first_load(), server.R)
-  GCAM_version <<- GCAM_version
+  if (!.through_generate_report) GCAM_version <<- GCAM_version
 
   # define the dataset for launching the ui
   sdata <<- suppressWarnings(

@@ -29,6 +29,7 @@
 #' @return A data frame containing the evaluation outcomes (`ok`, `medium`, `high`,
 #'   `failed`, or `not_assigned`) for the assessed variables and regions. If `save_output`
 #'   is enabled, the dataset is also saved to disk.
+#' @import data.table
 #' @export
 scenariocompass_checker <- function(report,
                                     desired_scenarios = NULL,
@@ -50,8 +51,8 @@ scenariocompass_checker <- function(report,
     ext <- tolower(tools::file_ext(report))
 
     report <- switch(ext,
-                     "csv"   = read.csv(report),
-                     "xlsx"  = readxl::read_excel(report),
+                     "csv"   = read.csv(report, check.names = F),
+                     "xlsx"  = as.data.frame(readxl::read_excel(report)),
                      "rdata" = get(load(report)),
                      stop("Unsupported file format. Please provide a CSV, XLSX, or RData file.", call. = FALSE)
     )
@@ -105,7 +106,7 @@ scenariocompass_checker <- function(report,
 
   #### required data loading and arrangement ====================================
   # load GCAMregion - iso mapping according to the GCAM version
-  if (grep('Europe', GCAM_version)) {
+  if (grepl('Europe', GCAM_version)) {
     gcam_regions <- get(paste('iso_to_gcam',GCAM_version,sep='_'),
                         envir = asNamespace("gcamreport")) %>%
       dplyr::select(region = iso, GCAM_region = GCAMEU_region)
@@ -260,7 +261,6 @@ scenariocompass_checker <- function(report,
     tidyr::pivot_wider(
       names_from = evaluation_outcome,
       values_from = c(lower, upper)) %>%
-    # dplyr::filter(variable == 'Emissions|CO2|AFOLU', region == 'Austria') %>%
     dplyr::left_join(report %>%
                 tidyr::pivot_longer(cols = matches("^\\d{4}$"), names_to = 'year', values_to = 'value') %>%
                 dplyr::mutate(year = as.integer(year)),
@@ -275,7 +275,7 @@ scenariocompass_checker <- function(report,
   if (save_output) {
     write.csv(scencompass_checker, file.path(paste0(output_file, "_scenariocompass_criteria.csv")), row.names = FALSE)
     rlang::inform(paste0("Scenariocompass evaluation saved in ",file.path(paste0(output_file, "_scenariocompass_criteria.csv")),
-                         "and also available typing `scencompass_checker` in your console."))
+                         " and also available typing `scencompass_checker` in your console."))
   } else {
     rlang::inform(paste0("Scenariocompass evaluation done, available typing `scencompass_checker` in your console."))
   }
@@ -283,14 +283,6 @@ scenariocompass_checker <- function(report,
   scencompass_checker <<- scencompass_checker
   return(invisible(scencompass_checker))
 }
-
-
-
-
-
-
-
-
 
 
 #' evaluate_outcome
@@ -305,21 +297,19 @@ evaluate_outcome <- function(data) {
   data %>%
     dplyr::mutate(
       outcome = dplyr::case_when(
-        # 1. if no value exists, it's not assigned
+        # if no value exists, it's not assigned
         is.na(value) ~ "not_assigned",
 
-        # 2. check MEDIUM: At least one bound must exist, AND value must be within bounds
+        # check MEDIUM: At least one bound must exist, AND value must be within bounds
         (!is.na(lower_medium) | !is.na(upper_medium)) &
           value >= dplyr::coalesce(lower_medium, -Inf) & value <= dplyr::coalesce(upper_medium, Inf) ~ "medium",
 
-        # 3. check HIGH: At least one bound must exist, AND value must be within bounds
+        # check HIGH: At least one bound must exist, AND value must be within bounds
         (!is.na(lower_high) | !is.na(upper_high)) &
           value >= dplyr::coalesce(lower_high, -Inf) & value <= dplyr::coalesce(upper_high, Inf) ~ "high",
 
-        # 4. if it fails all defined brackets, it fails
+        # if it fails all defined brackets, it fails
         TRUE ~ "failed"
       )
     )
 }
-
-
