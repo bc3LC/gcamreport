@@ -7,6 +7,7 @@
 scenariocompass_checker(
   report,
   desired_scenarios = NULL,
+  desired_regions = NULL,
   GCAM_version = "v8.2",
   save_output = TRUE,
   output_file = NULL
@@ -19,6 +20,12 @@ report. Supported file extensions: `.csv`, `.xlsx`, and `.RData`.}
 
 \item{desired_scenarios}{A character vector of specific scenarios to assess.
 If `NULL` (the default), all scenarios present in `report` are evaluated.}
+
+\item{desired_regions}{A character vector of specific regions to assess.
+If `NULL` (the default), all regions present in the report are evaluated.
+You can provide `'World'` for a global assessment, `'Regional'` to evaluate
+all sub-regions, or explicitly list specific GCAM region names. Run
+`available_regions()` to see the complete list of supported options.}
 
 \item{GCAM_version}{A character string specifying the GCAM version used for
 regional mappings and reference datasets (e.g., `'v8.2'`). Run
