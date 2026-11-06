@@ -381,7 +381,8 @@ test_that("Test12v_7.0 other functions", {
     desired_regions = "USA",
     desired_variables = "Emissions|Kyoto Gases*",
     launch_ui = FALSE,
-    GCAM_version = 'v7.0'
+    GCAM_version = 'v7.0',
+    GWP_version = 'AR5'
   )
   testExpect <- get(load(file.path(rprojroot::find_root(rprojroot::is_testthat), "testOutputs/v_7.0/result_test12.3.RData")))
   testthat::expect_equal(report, testExpect)
