@@ -61,8 +61,25 @@ scenariocompass_checker <- function(report,
       dplyr::filter(Scenario %in% desired_scenarios)
   }
 
+  # expand to the year 2020 if not present in the dataset
+  data.table::setDT(report)
+  year_cols <- grep("^[0-9]{4}$", names(report), value = TRUE)
+  report_long <- data.table::melt(report,
+                                  id.vars = req_cols,
+                                  measure.vars = year_cols,
+                                  variable.name = "year",
+                                  value.name = "value")
+  report_long[, year := as.numeric(as.character(year))]
+  report_long <- report_long[!is.na(value)]
+  report_2020 <- report_long[, .(
+    `2020` = if (.N >= 2) approx(x = year, y = value, xout = 2020, rule = 2)$y else NA_real_
+  ), by = req_cols]
+  # join to "base" report
+  report <- left_join_error_no_match(report, report_2020, by = req_cols)
+
   # store the reported years
-  all_report_years <- as.numeric(grep("^[0-9]+$", colnames(report), value = TRUE))
+  all_report_years <- sort(as.numeric(grep("^[0-9]+$", colnames(report),
+                                           value = TRUE)))
 
 
   #### saving options checker and refining =====================================
@@ -181,13 +198,13 @@ scenariocompass_checker <- function(report,
     dplyr::rename(region = GCAM_region)
 
 
-  criteria2 <- rbind(
+  criteria_full <- rbind(
     criteria %>%
       dplyr::filter(unit != 'dimensionless'),
     criteria_dimless
   )
 
-  scencompass_checker <- criteria2 %>%
+  scencompass_checker <- criteria_full %>%
     tidyr::pivot_wider(
       names_from = evaluation_outcome,
       values_from = c(lower, upper)) %>%
