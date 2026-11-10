@@ -19,6 +19,13 @@ gcam32_to_eu <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/
   dplyr::distinct()
 use_data(gcam32_to_eu, overwrite = T)
 
+iso_to_gcam_vEurope8.7 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope8.7", "GCAM32_to_EU.csv"),
+                                       comment = "#"
+) %>%
+  dplyr::select(iso, GCAM_region_ID, GCAMEU_region, GCAM32_region_ID, GCAM32_region) %>%
+  dplyr::distinct()
+use_data(iso_to_gcam_vEurope8.7, overwrite = T)
+
 
 # nonCO2 emissions considered
 nonco2_emissions_list_vEurope8.7 <- c(

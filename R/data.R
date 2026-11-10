@@ -829,6 +829,17 @@
 #' }
 "reg_cont_vEurope8.7"
 
+#' iso_to_gcam_vEurope8.7
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAMEurope regions, compatible with GCAMEurope8.7
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_vEurope8.7
+#' }
+"iso_to_gcam_vEurope8.7"
 
 
 
@@ -994,7 +1005,7 @@
 #'
 #' @source github
 #' @format .csv
-#' @description ag maps compatible with Europe 7.2 version.
+#' @description ag maps compatible with GCAM Europe 7.2 version.
 #' @examples
 #' \dontrun{
 #' library(gcamreport)
@@ -1545,6 +1556,17 @@
 #' }
 "reg_cont_vEurope7.2"
 
+#' iso_to_gcam_vEurope7.2
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAMEurope regions, compatible with GCAMEurope 7.2
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_vEurope7.2
+#' }
+"iso_to_gcam_vEurope7.2"
 
 #' queries_general_v8.2
 #'
@@ -2248,6 +2270,18 @@
 #' gcamreport::reg_cont_v8.2
 #' }
 "reg_cont_v8.2"
+
+#' iso_to_gcam_v8.2
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAM 8.2 version
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_v8.2
+#' }
+"iso_to_gcam_v8.2"
 
 #' queries_general_vScenarioMIPCMIP7
 #'
@@ -2976,6 +3010,17 @@
 #' }
 "reg_cont_vScenarioMIPCMIP7"
 
+#' iso_to_gcam_vScenarioMIPCMIP7
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAMScenarioMIPCMIP7 version
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_vScenarioMIPCMIP7
+#' }
+"iso_to_gcam_vScenarioMIPCMIP7"
 
 #' queries_general_v9.1
 #'
@@ -3704,6 +3749,18 @@
 #' }
 "reg_cont_v9.1"
 
+#' iso_to_gcam_v9.1
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAM9.1
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_v9.1
+#' }
+"iso_to_gcam_v9.1"
+
 
 #' queries_general_v7.2
 #'
@@ -4408,6 +4465,17 @@
 #' }
 "reg_cont_v7.2"
 
+#' iso_to_gcam_v7.2
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAM7.2
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_v7.2
+#' }
+"iso_to_gcam_v7.2"
 
 #' queries_general_v7.1
 #'
@@ -5112,6 +5180,17 @@
 #' }
 "reg_cont_v7.1"
 
+#' iso_to_gcam_v7.1
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAM7.1
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_v7.1
+#' }
+"iso_to_gcam_v7.1"
 
 #' queries_general_v7.0
 #'
@@ -5768,3 +5847,16 @@
 #' gcamreport::reg_cont_v7.0
 #' }
 "reg_cont_v7.0"
+
+#' iso_to_gcam_v7.0
+#'
+#' @source local
+#' @format .csv
+#' @description mapping between iso codes and GCAM regions, compatible with GCAM7.0
+#' @examples
+#' \dontrun{
+#' library(gcamreport)
+#' gcamreport::iso_to_gcam_v7.0
+#' }
+"iso_to_gcam_v7.0"
+

@@ -20,55 +20,116 @@ generate_report(
   launch_ui = TRUE,
   interactive = F,
   GCAM_version = "v8.2",
-  GWP_version = "AR5",
+  GWP_version = "AR6",
+  scenariocompass_evaluation = FALSE,
+  scenariocompass_regions = NULL,
+  scenariocompass_scenarios = NULL,
   queries_general_file = NULL,
   queries_nonCO2_file = NULL,
   all_tier1 = F
 )
 }
 \arguments{
-\item{db_path}{Full path to the GCAM database. Required if creating a new project.}
+\item{db_path}{A character string specifying the full path to the GCAM database.
+Required if creating a new project.}
 
-\item{db_name}{Name of the GCAM database. Required if creating a new project.}
+\item{db_name}{A character string specifying the name of the GCAM database.
+Required if creating a new project.}
 
-\item{prj_name}{Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.}
+\item{prj_name}{A character string specifying the name of the GCAM project.
+Can be an existing project name (loads the project) or a new project name
+(creates a new project). Accepts `.dat` extensions.}
 
-\item{scenarios}{Names of the scenarios to consider. Defaults to all scenarios in the project or database.}
+\item{scenarios}{A character vector of specific scenarios to consider.
+If `NULL` (default), all scenarios present in the project or database are evaluated.}
 
-\item{final_year}{Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025 and must align with available 5-year intervals, such as 2025, 2030, 2035, 2040, etc.}
+\item{final_year}{A numeric value specifying the final reporting year.
+Defaults to `2100`. Note: `final_year` must be at least `2025` and must align
+with available 5-year intervals (e.g., 2025, 2030, 2035).}
 
-\item{desired_variables}{Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`.
-Note1: You can use the `*` notation as detailed in [this](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables) tutorial to select multiple variables from the same family.
-Note2: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".}
+\item{desired_variables}{A character vector of variables to include in the report.
+Defaults to `'All'`. Run `available_variables()` to view all possibilities.
+Note 1: You can use the `*` notation (as detailed in the
+[Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables))
+to select multiple variables from the same family.
+Note 2: Global variables like `"Emissions"` will only aggregate the selected sub-variables.
+For example, if you select `"Emissions"` and `"Emissions|CO2"`, `"Emissions"` will
+only account for CO2 and will ignore missing variables like `"Emissions|CH4"`.
+Note 3: Specify `'SCI'` to automatically include all variables required for the
+Scenario Compass evaluation (see the `scenariocompass_evaluation` parameter).}
 
-\item{inverse_desired_variables}{If `TRUE` (not default), consider all but the detailed variables in the `desired_variables` parameter.}
+\item{inverse_desired_variables}{Logical (`TRUE`/`FALSE`). If `TRUE`, the report will
+include all available variables *except* those explicitly listed in `desired_variables`.
+Defaults to `FALSE`.}
 
-\item{ignore}{Policy names introduced by the user to ignore during gcamreport processing of physical quantities, since otherwise they will be flagged as names missing from mapping files and cause an error. Note: Currently having one of the specified name patterns in any column of the query results, such as sector, subsector, input, etc. will cause the error to be disregarded. Same behavior than adding the policy names to the corresponding mappings indicating `NoReported`.}
+\item{ignore}{A character vector of user-introduced policy names to ignore during
+processing of physical quantities. Otherwise, unmapped policies will trigger an error.
+Note: This mimics the behavior of adding the policy names or residual outputs to
+mapping files as `NoReported`.}
 
-\item{desired_regions}{Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".}
+\item{desired_regions}{A character vector of specific regions to include in the report.
+Defaults to `'All'`. Run `available_regions()` to view all possibilities.
+Note: The generated dataset will restrict `"World"` totals to only include these specified regions.}
 
-\item{desired_continents}{Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".}
+\item{desired_continents}{A character vector of continent/region groups to include in the report.
+Defaults to `'All'`. Run `available_continents()` to view all possibilities.
+Note: The generated dataset will restrict `"World"` totals to only include these specified regional groups.}
 
-\item{save_output}{If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.}
+\item{save_output}{Logical (`TRUE`/`FALSE`) or a character string (`'csv'`, `'xlsx'`).
+Determines whether the resulting dataset should be saved to disk. If `'csv'` or `'xlsx'`,
+the data is saved exclusively in that format. Defaults to `TRUE` (saves both).}
 
-\item{output_file}{File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.}
+\item{output_file}{A character string specifying the full file path and name for the saved data.
+If `NULL`, it defaults to the directory of the database or project file, appending
+`'standardized'` to the filename. Extension will be automatically added.}
 
-\item{launch_ui}{If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.}
+\item{launch_ui}{Logical (`TRUE`/`FALSE`). Determines whether to automatically launch
+the User Interface upon completion. Defaults to `TRUE`.}
 
-\item{interactive}{If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.}
+\item{interactive}{Logical (`TRUE`/`FALSE`). If `TRUE`, the console will pause and ask
+for user input when warnings appear. If `FALSE`, warnings are collected and displayed
+silently at the end of the script execution. Defaults to `FALSE`.}
 
-\item{GCAM_version}{Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.}
+\item{GCAM_version}{A character string specifying the GCAM version used for regional
+mappings and queries (e.g., `'v8.2'`). Run `available_GCAM_versions()` to see supported options.
+Defaults to `'v8.2'`.}
 
-\item{GWP_version}{Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.}
+\item{GWP_version}{A character string specifying the Global Warming Potential (GWP) version.
+Supported options are `'AR4'`, `'AR5'`, or `'AR6'`. Defaults to `'AR6'`.}
 
-\item{queries_general_file}{Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.}
+\item{scenariocompass_evaluation}{Logical (`TRUE`/`FALSE`). Determines whether to
+evaluate the standardized output against the Scenario Compass criteria.
+Defaults to `FALSE`.}
 
-\item{queries_nonCO2_file}{Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.}
+\item{scenariocompass_regions}{A character vector of specific regions to assess
+during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+is `TRUE`. If `NULL` (the default), it evaluates all regions present in the
+standardized dataset. You can provide `'World'`, `'Regional'`, or specific
+GCAM region names.}
 
-\item{all_tier1}{If `TRUE` (not default), introduce all Tier 1 Variables (as 0) in the standardized report.}
+\item{scenariocompass_scenarios}{A character vector of specific scenarios to assess
+during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+is `TRUE`. If `NULL` (the default), all scenarios present in the standardized dataset
+are evaluated.}
+
+\item{queries_general_file}{A character string specifying the full path to a general XML
+query file (including name and extension). If `NULL` (the default), it uses a default
+query file compatible with the specified `GCAM_version` to report all standardized variables.}
+
+\item{queries_nonCO2_file}{A character string specifying the full path to an XML query
+file (including name and extension) for non-CO2 long queries.
+If `NULL` (the default), it uses a default non-CO2 query file compatible with the specified `GCAM_version`.}
+
+\item{all_tier1}{Logical (`TRUE`/`FALSE`). If `TRUE`, forces all Tier 1 Variables to be
+introduced into the standardized report with a value of `0`. Defaults to `FALSE`.}
 }
 \value{
-Saves RData, CSV, and XLSX files with standardized variables, launches the user interface, and saves the GCAM project file if created.
+A data frame containing the standardized GCAM reporting dataset,
+  filtered and processed according to the specified variables, regions, and
+  scenarios. If `scenariocompass_evaluation` is `TRUE`, another dataset will
+  be produced to include the evaluation criteria outcomes. Notice the function
+  may save the dataset to disk (if `save_output` is enabled) and launch the
+  interactive User Interface (if `launch_ui` is `TRUE`).
 }
 \description{
 Main function for generating a GCAM project report. This function handles:

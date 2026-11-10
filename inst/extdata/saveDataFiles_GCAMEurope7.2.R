@@ -40,6 +40,13 @@ reg_cont_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/ma
 )
 use_data(reg_cont_vEurope7.2, overwrite = T)
 
+iso_to_gcam_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "GCAM32_to_EU.csv"),
+                                          comment = "#"
+) %>%
+  dplyr::select(iso, GCAM_region_ID, GCAMEU_region, GCAM32_region_ID, GCAM32_region) %>%
+  dplyr::distinct()
+use_data(iso_to_gcam_vEurope7.2, overwrite = T)
+
 # emissions maps
 co2_ets_sector_map_vEurope7.2 <- readr::read_csv(file.path(rawDataFolder, "inst/extdata/mappings/GCAMEurope7.2", "CO2_ETS_sector_map.csv"),
                                     comment = "#", na = "", guess_max = Inf
