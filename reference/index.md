@@ -366,6 +366,8 @@
   : en_multiplier_vEurope8.7
 - [`en_multiplier_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.md)
   : en_multiplier_vScenarioMIPCMIP7
+- [`evaluate_outcome()`](https://bc3lc.github.io/gcamreport/reference/evaluate_outcome.md)
+  : evaluate_outcome
 - [`fertilizer_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.0.md)
   : fertilizer_map_v7.0
 - [`fertilizer_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.1.md)
@@ -578,6 +580,22 @@
   : iron_steel_trade_map_vEurope8.7
 - [`iron_steel_trade_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vScenarioMIPCMIP7.md)
   : iron_steel_trade_map_vScenarioMIPCMIP7
+- [`iso_to_gcam_v7.0`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.0.md)
+  : iso_to_gcam_v7.0
+- [`iso_to_gcam_v7.1`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.1.md)
+  : iso_to_gcam_v7.1
+- [`iso_to_gcam_v7.2`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.2.md)
+  : iso_to_gcam_v7.2
+- [`iso_to_gcam_v8.2`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v8.2.md)
+  : iso_to_gcam_v8.2
+- [`iso_to_gcam_v9.1`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v9.1.md)
+  : iso_to_gcam_v9.1
+- [`iso_to_gcam_vEurope7.2`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vEurope7.2.md)
+  : iso_to_gcam_vEurope7.2
+- [`iso_to_gcam_vEurope8.7`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vEurope8.7.md)
+  : iso_to_gcam_vEurope8.7
+- [`iso_to_gcam_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vScenarioMIPCMIP7.md)
+  : iso_to_gcam_vScenarioMIPCMIP7
 - [`kyoto_sector_map_v7.0`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.0.md)
   : kyoto_sector_map_v7.0
 - [`kyoto_sector_map_v7.1`](https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.1.md)
@@ -830,6 +848,8 @@
   : res_extraction_map_vEurope8.7
 - [`res_extraction_map_vScenarioMIPCMIP7`](https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vScenarioMIPCMIP7.md)
   : res_extraction_map_vScenarioMIPCMIP7
+- [`scenariocompass_checker()`](https://bc3lc.github.io/gcamreport/reference/scenariocompass_checker.md)
+  : scenariocompass_checker
 - [`template_v7.0`](https://bc3lc.github.io/gcamreport/reference/template_v7.0.md)
   : template_v7.0
 - [`template_v7.1`](https://bc3lc.github.io/gcamreport/reference/template_v7.1.md)

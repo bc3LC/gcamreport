@@ -15,6 +15,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/articles/README_v6-0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/articles/README_v7-0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/articles/Reporting_Variables.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/articles/Scenario_Compass_Evaluation.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v6-0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example_v7-0.html</loc></url>
@@ -220,6 +221,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_vEurope7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_vEurope8.7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/en_multiplier_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/evaluate_outcome.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.1.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/fertilizer_map_v7.2.html</loc></url>
@@ -425,6 +427,14 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vEurope7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vEurope8.7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/iron_steel_trade_map_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.0.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v8.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_v9.1.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vEurope7.2.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vEurope8.7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/iso_to_gcam_vScenarioMIPCMIP7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/is_leaf.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/kyoto_sector_map_v7.1.html</loc></url>
@@ -555,6 +565,7 @@
 <url><loc>https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vEurope7.2.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vEurope8.7.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/res_extraction_map_vScenarioMIPCMIP7.html</loc></url>
+<url><loc>https://bc3lc.github.io/gcamreport/reference/scenariocompass_checker.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/start_with_pattern.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.0.html</loc></url>
 <url><loc>https://bc3lc.github.io/gcamreport/reference/template_v7.1.html</loc></url>

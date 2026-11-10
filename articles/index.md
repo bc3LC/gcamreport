@@ -29,6 +29,8 @@
   TITLE](https://bc3lc.github.io/gcamreport/articles/README_v7-0.md):
 - [Reporting
   Variables](https://bc3lc.github.io/gcamreport/articles/Reporting_Variables.md):
+- [Scenario Compass
+  Evaluation](https://bc3lc.github.io/gcamreport/articles/Scenario_Compass_Evaluation.md):
 - [Step-by-step full
   example](https://bc3lc.github.io/gcamreport/articles/Step_By_Step_Full_Example.md):
 - [Step By Step Full Example for gcamreport

@@ -1,6 +1,6 @@
 # fertilizer_map_vEurope7.2
 
-ag maps compatible with Europe 7.2 version.
+ag maps compatible with GCAM Europe 7.2 version.
 
 ## Usage
 

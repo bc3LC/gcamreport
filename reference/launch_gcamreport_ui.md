@@ -6,7 +6,12 @@ data.
 ## Usage
 
 ``` r
-launch_gcamreport_ui(data_path = NULL, data = NULL, GCAM_version = "v8.2")
+launch_gcamreport_ui(
+  data_path = NULL,
+  data = NULL,
+  GCAM_version = "v8.2",
+  .through_generate_report = F
+)
 ```
 
 ## Arguments

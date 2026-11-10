@@ -30,6 +30,8 @@
     <li><a class="dropdown-item" href="../articles/Dataset_Generation_Tutorial.html">Dataset Generation Tutorial</a></li>
     <li><a class="dropdown-item" href="../articles/Interactive_UI_Tutorial.html">Interactive UI Tutorial</a></li>
     <li><a class="dropdown-item" href="../articles/Modify_Mapping_Template_Tutorial.html">Modify Mappings and Template Tutorial</a></li>
+    <li><a class="dropdown-item" href="../articles/Scenario_Compass_Evaluation.html">Scenario Compass Evaluation</a></li>
+    <li><a class="dropdown-item" href="../articles/GCAMEurope.html">GCAM-Europe Particularities</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../articles/gcamreport_v7-0.html">Depracted documentation and tutorials for gcamreport v7.0*</a></li>
     <li><a class="dropdown-item" href="../articles/gcamreport_v6-0.html">Depracted documentation and tutorials for gcamreport v6.0*</a></li>
@@ -78,7 +80,10 @@
 <span>  launch_ui <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  interactive <span class="op">=</span> <span class="cn">F</span>,</span>
 <span>  GCAM_version <span class="op">=</span> <span class="st">"v8.2"</span>,</span>
-<span>  GWP_version <span class="op">=</span> <span class="st">"AR5"</span>,</span>
+<span>  GWP_version <span class="op">=</span> <span class="st">"AR6"</span>,</span>
+<span>  scenariocompass_evaluation <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  scenariocompass_regions <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scenariocompass_scenarios <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  queries_general_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  queries_nonCO2_file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  all_tier1 <span class="op">=</span> <span class="cn">F</span></span>
@@ -90,86 +95,150 @@
 
 
 <dl><dt id="arg-db-path">db_path<a class="anchor" aria-label="anchor" href="#arg-db-path"></a></dt>
-<dd><p>Full path to the GCAM database. Required if creating a new project.</p></dd>
+<dd><p>A character string specifying the full path to the GCAM database.
+Required if creating a new project.</p></dd>
 
 
 <dt id="arg-db-name">db_name<a class="anchor" aria-label="anchor" href="#arg-db-name"></a></dt>
-<dd><p>Name of the GCAM database. Required if creating a new project.</p></dd>
+<dd><p>A character string specifying the name of the GCAM database.
+Required if creating a new project.</p></dd>
 
 
 <dt id="arg-prj-name">prj_name<a class="anchor" aria-label="anchor" href="#arg-prj-name"></a></dt>
-<dd><p>Name of the GCAM project. Can be an existing project name (loads the project) or a new project name (creates a new project). Accepts extensions: .dat and .proj.</p></dd>
+<dd><p>A character string specifying the name of the GCAM project.
+Can be an existing project name (loads the project) or a new project name
+(creates a new project). Accepts `.dat` extensions.</p></dd>
 
 
 <dt id="arg-scenarios">scenarios<a class="anchor" aria-label="anchor" href="#arg-scenarios"></a></dt>
-<dd><p>Names of the scenarios to consider. Defaults to all scenarios in the project or database.</p></dd>
+<dd><p>A character vector of specific scenarios to consider.
+If `NULL` (default), all scenarios present in the project or database are evaluated.</p></dd>
 
 
 <dt id="arg-final-year">final_year<a class="anchor" aria-label="anchor" href="#arg-final-year"></a></dt>
-<dd><p>Final year of the data. Defaults to 2100. Note: `final_year` must be at least 2025 and must align with available 5-year intervals, such as 2025, 2030, 2035, 2040, etc.</p></dd>
+<dd><p>A numeric value specifying the final reporting year.
+Defaults to `2100`. Note: `final_year` must be at least `2025` and must align
+with available 5-year intervals (e.g., 2025, 2030, 2035).</p></dd>
 
 
 <dt id="arg-desired-variables">desired_variables<a class="anchor" aria-label="anchor" href="#arg-desired-variables"></a></dt>
-<dd><p>Variables to include in the report. Defaults to 'All'. Specify a vector for specific variables. To view available options, run `available_variables()`.
-Note1: You can use the `*` notation as detailed in [this](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables) tutorial to select multiple variables from the same family.
-Note2: Global variables like "Emissions" will only account for selected variables. E.g., if you select "Emissions" and "Emissions|CO2", "Emissions" will only account for "Emissions|CO2", and will not account for other variables such as "Emissions|CH4" or "Emissions|NH3".</p></dd>
+<dd><p>A character vector of variables to include in the report.
+Defaults to `'All'`. Run `available_variables()` to view all possibilities.
+Note 1: You can use the `*` notation (as detailed in the
+[Dataset Generation Tutorial](https://bc3lc.github.io/gcamreport/articles/Dataset_Generation_Tutorial.html#example-5-specify-the-variables))
+to select multiple variables from the same family.
+Note 2: Global variables like `"Emissions"` will only aggregate the selected sub-variables.
+For example, if you select `"Emissions"` and `"Emissions|CO2"`, `"Emissions"` will
+only account for CO2 and will ignore missing variables like `"Emissions|CH4"`.
+Note 3: Specify `'SCI'` to automatically include all variables required for the
+Scenario Compass evaluation (see the `scenariocompass_evaluation` parameter).</p></dd>
 
 
 <dt id="arg-inverse-desired-variables">inverse_desired_variables<a class="anchor" aria-label="anchor" href="#arg-inverse-desired-variables"></a></dt>
-<dd><p>If `TRUE` (not default), consider all but the detailed variables in the `desired_variables` parameter.</p></dd>
+<dd><p>Logical (`TRUE`/`FALSE`). If `TRUE`, the report will
+include all available variables *except* those explicitly listed in `desired_variables`.
+Defaults to `FALSE`.</p></dd>
 
 
 <dt id="arg-ignore">ignore<a class="anchor" aria-label="anchor" href="#arg-ignore"></a></dt>
-<dd><p>Policy names introduced by the user to ignore during gcamreport processing of physical quantities, since otherwise they will be flagged as names missing from mapping files and cause an error. Note: Currently having one of the specified name patterns in any column of the query results, such as sector, subsector, input, etc. will cause the error to be disregarded. Same behavior than adding the policy names to the corresponding mappings indicating `NoReported`.</p></dd>
+<dd><p>A character vector of user-introduced policy names to ignore during
+processing of physical quantities. Otherwise, unmapped policies will trigger an error.
+Note: This mimics the behavior of adding the policy names or residual outputs to
+mapping files as `NoReported`.</p></dd>
 
 
 <dt id="arg-desired-regions">desired_regions<a class="anchor" aria-label="anchor" href="#arg-desired-regions"></a></dt>
-<dd><p>Regions to include in the report. Defaults to 'All'. Specify a vector for specific regions. To view available options, run `available_regions()`. Note: The dataset will include only the specified regions, which will make up "World".</p></dd>
+<dd><p>A character vector of specific regions to include in the report.
+Defaults to `'All'`. Run `available_regions()` to view all possibilities.
+Note: The generated dataset will restrict `"World"` totals to only include these specified regions.</p></dd>
 
 
 <dt id="arg-desired-continents">desired_continents<a class="anchor" aria-label="anchor" href="#arg-desired-continents"></a></dt>
-<dd><p>Continent/region groups to include in the report. Defaults to 'All'. Specify a vector for specific groups. To view available options, run `available_continents()`. Note: The dataset will include only the specified groups, which will make up "World".</p></dd>
+<dd><p>A character vector of continent/region groups to include in the report.
+Defaults to `'All'`. Run `available_continents()` to view all possibilities.
+Note: The generated dataset will restrict `"World"` totals to only include these specified regional groups.</p></dd>
 
 
 <dt id="arg-save-output">save_output<a class="anchor" aria-label="anchor" href="#arg-save-output"></a></dt>
-<dd><p>If `TRUE` (default), saves reporting data in CSV and XLSX formats. If `FALSE`, data is not saved. If 'CSV' or 'XLSX', data will be saved only in the specified format.</p></dd>
+<dd><p>Logical (`TRUE`/`FALSE`) or a character string (`'csv'`, `'xlsx'`).
+Determines whether the resulting dataset should be saved to disk. If `'csv'` or `'xlsx'`,
+the data is saved exclusively in that format. Defaults to `TRUE` (saves both).</p></dd>
 
 
 <dt id="arg-output-file">output_file<a class="anchor" aria-label="anchor" href="#arg-output-file"></a></dt>
-<dd><p>File path and name for saving the data. If not specified, defaults to the directory of the database or project file with a default name containing 'standardized'. Provide a full path without an extension, which will be automatically added.</p></dd>
+<dd><p>A character string specifying the full file path and name for the saved data.
+If `NULL`, it defaults to the directory of the database or project file, appending
+`'standardized'` to the filename. Extension will be automatically added.</p></dd>
 
 
 <dt id="arg-launch-ui">launch_ui<a class="anchor" aria-label="anchor" href="#arg-launch-ui"></a></dt>
-<dd><p>If `TRUE` (default), launches the User Interface. If `FALSE`, does not launch the UI.</p></dd>
+<dd><p>Logical (`TRUE`/`FALSE`). Determines whether to automatically launch
+the User Interface upon completion. Defaults to `TRUE`.</p></dd>
 
 
 <dt id="arg-interactive">interactive<a class="anchor" aria-label="anchor" href="#arg-interactive"></a></dt>
-<dd><p>If `TRUE` (not default), asks the user what to do when Warnings appear. Otherwise, the Warnings are displayed at the end of the script.</p></dd>
+<dd><p>Logical (`TRUE`/`FALSE`). If `TRUE`, the console will pause and ask
+for user input when warnings appear. If `FALSE`, warnings are collected and displayed
+silently at the end of the script execution. Defaults to `FALSE`.</p></dd>
 
 
 <dt id="arg-gcam-version">GCAM_version<a class="anchor" aria-label="anchor" href="#arg-gcam-version"></a></dt>
-<dd><p>Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.</p></dd>
+<dd><p>A character string specifying the GCAM version used for regional
+mappings and queries (e.g., `'v8.2'`). Run `available_GCAM_versions()` to see supported options.
+Defaults to `'v8.2'`.</p></dd>
 
 
 <dt id="arg-gwp-version">GWP_version<a class="anchor" aria-label="anchor" href="#arg-gwp-version"></a></dt>
-<dd><p>Global Warming Potential (GWP) version: 'AR5' (default), 'AR6', or 'AR4'.</p></dd>
+<dd><p>A character string specifying the Global Warming Potential (GWP) version.
+Supported options are `'AR4'`, `'AR5'`, or `'AR6'`. Defaults to `'AR6'`.</p></dd>
+
+
+<dt id="arg-scenariocompass-evaluation">scenariocompass_evaluation<a class="anchor" aria-label="anchor" href="#arg-scenariocompass-evaluation"></a></dt>
+<dd><p>Logical (`TRUE`/`FALSE`). Determines whether to
+evaluate the standardized output against the Scenario Compass criteria.
+Defaults to `FALSE`.</p></dd>
+
+
+<dt id="arg-scenariocompass-regions">scenariocompass_regions<a class="anchor" aria-label="anchor" href="#arg-scenariocompass-regions"></a></dt>
+<dd><p>A character vector of specific regions to assess
+during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+is `TRUE`. If `NULL` (the default), it evaluates all regions present in the
+standardized dataset. You can provide `'World'`, `'Regional'`, or specific
+GCAM region names.</p></dd>
+
+
+<dt id="arg-scenariocompass-scenarios">scenariocompass_scenarios<a class="anchor" aria-label="anchor" href="#arg-scenariocompass-scenarios"></a></dt>
+<dd><p>A character vector of specific scenarios to assess
+during the Scenario Compass evaluation. Only used if `scenariocompass_evaluation`
+is `TRUE`. If `NULL` (the default), all scenarios present in the standardized dataset
+are evaluated.</p></dd>
 
 
 <dt id="arg-queries-general-file">queries_general_file<a class="anchor" aria-label="anchor" href="#arg-queries-general-file"></a></dt>
-<dd><p>Optional. Full path to a general XML query file (including file name and extension). Defaults to a general query file compatible with the specified `GCAM_version` that reports all standardized variables.</p></dd>
+<dd><p>A character string specifying the full path to a general XML
+query file (including name and extension). If `NULL` (the default), it uses a default
+query file compatible with the specified `GCAM_version` to report all standardized variables.</p></dd>
 
 
 <dt id="arg-queries-nonco-file">queries_nonCO2_file<a class="anchor" aria-label="anchor" href="#arg-queries-nonco-file"></a></dt>
-<dd><p>Optional. Full path to an XML query file (including file name and extension) for non-CO2 queries, such as "nonCO2 emissions by subsector (excluding resource production)" and "nonCO2 emissions by region". Defaults to a non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
+<dd><p>A character string specifying the full path to an XML query
+file (including name and extension) for non-CO2 long queries.
+If `NULL` (the default), it uses a default non-CO2 query file compatible with the specified `GCAM_version`.</p></dd>
 
 
 <dt id="arg-all-tier-">all_tier1<a class="anchor" aria-label="anchor" href="#arg-all-tier-"></a></dt>
-<dd><p>If `TRUE` (not default), introduce all Tier 1 Variables (as 0) in the standardized report.</p></dd>
+<dd><p>Logical (`TRUE`/`FALSE`). If `TRUE`, forces all Tier 1 Variables to be
+introduced into the standardized report with a value of `0`. Defaults to `FALSE`.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Saves RData, CSV, and XLSX files with standardized variables, launches the user interface, and saves the GCAM project file if created.</p>
+    <p>A data frame containing the standardized GCAM reporting dataset,
+  filtered and processed according to the specified variables, regions, and
+  scenarios. If `scenariocompass_evaluation` is `TRUE`, another dataset will
+  be produced to include the evaluation criteria outcomes. Notice the function
+  may save the dataset to disk (if `save_output` is enabled) and launch the
+  interactive User Interface (if `launch_ui` is `TRUE`).</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
