@@ -908,7 +908,7 @@ generate_report <- function(db_path = NULL, db_name = NULL, prj_name, scenarios 
   do_bind_results(GCAM_version, all_tier1)
   save(report, file = paste0(output_file, ".RData"))
 
-  if (save_output == TRUE || tolower(save_output) %in% c("CSV", "XLSX")) {
+  if (save_output == TRUE || tolower(save_output) %in% c("csv", "xlsx")) {
     if (save_output == TRUE || "csv" %in% tolower(save_output)) {
       write.csv(report, file.path(paste0(output_file, ".csv")), row.names = FALSE)
       rlang::inform(paste0("Standardized dataset saved in ",file.path(paste0(output_file, ".csv"))))
