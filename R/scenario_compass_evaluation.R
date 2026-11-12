@@ -80,11 +80,13 @@ scenariocompass_checker <- function(report,
                                   value.name = "value")
   report_long[, year := as.numeric(as.character(year))]
   report_long <- report_long[!is.na(value)]
-  report_2020 <- report_long[, .(
-    `2020` = if (.N >= 2) approx(x = year, y = value, xout = 2020, rule = 2)$y else NA_real_
-  ), by = req_cols]
-  # join to "base" report
-  report <- left_join_error_no_match(report, report_2020, by = req_cols)
+  if (!2020 %in% year_cols) {
+    report_2020 <- report_long[, .(
+      `2020` = if (.N >= 2) approx(x = year, y = value, xout = 2020, rule = 2)$y else NA_real_
+    ), by = req_cols]
+    # join to "base" report
+    report <- left_join_error_no_match(report, report_2020, by = req_cols)
+  }
 
   # store the reported years
   all_report_years <- sort(as.numeric(grep("^[0-9]+$", colnames(report),
