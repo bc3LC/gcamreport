@@ -34,6 +34,12 @@ AfrIntSAfrIntS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 AfrIntS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AfrIntfrIntN_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AfrIntfrIntN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+AfrIntNAfrIntN_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+AfrIntNAfrIntN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+ArgCstNArgCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+ArgCstNArgCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+AusCstNAusCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+AusCstNAusCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AmazonRAmazonR_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AmazonRAmazonR_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AmazonR_desalinated water,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1

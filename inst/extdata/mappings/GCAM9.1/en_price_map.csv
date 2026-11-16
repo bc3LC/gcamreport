@@ -34,6 +34,12 @@ AfrIntN_desalinated water,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AfrIntS_desalinated water,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AfrIntSAfrIntS_water consumption,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 AfrIntSAfrIntS_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
+AfrIntNAfrIntN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AfrIntNAfrIntN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstNArgCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+ArgCstNArgCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstNAusCstN_water consumption,NoReported,,,,,,,,,,,,,,,,,,1
+AusCstNAusCstN_water withdrawals,NoReported,,,,,,,,,,,,,,,,,,1
 ag food service,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 ag service,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
 agricultural energy use,NoReported,,,,,,,,,,,,,,,,,,,,,,,,,,,,1
