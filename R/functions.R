@@ -2744,7 +2744,7 @@ get_gross_co2_emiss <- function(GCAM_version = 'v8.2') {
 #' Retrieves land use CO2 emissions data.
 #'
 #' @param GCAM_version Name of the GCAM compatible version. Run `available_GCAM_versions()` to see the list of supported options.
-#' @return `LUC_emiss` global variable.
+#' @return `LUC_emiss` and `LUC_emiss_raw` global variable.
 #' @keywords internal lu co2
 #' @importFrom magrittr %>%
 #' @export
@@ -2752,6 +2752,7 @@ get_lu_co2 <- function(GCAM_version = 'v8.2') {
   year <- scenario <- region <- value <- var <- LUC_emiss <- NULL
 
   check_queries("LUC_emiss", GCAM_version)
+  check_queries("LUC_emiss_raw", GCAM_version)
 
   LUC_emiss <-
     # Land use CO2
@@ -2776,6 +2777,23 @@ get_lu_co2 <- function(GCAM_version = 'v8.2') {
       dplyr::mutate(var = 'Emissions|CO2|AFOLU [NGHGI]')
   ) %>%
     filter_variables(extra = available_variables(F, GCAM_version)[grepl("^Gross Emissions", available_variables(F, GCAM_version))])
+
+
+  LUC_emiss_raw <-
+    # Land use CO2
+    check_inf(rgcam::getQuery(prj, "LUC emissions by LUT"),
+              dataset_name = "LUC emissions by LUT") %>%
+    dplyr::filter(year %in% gcam_years) %>%
+    dplyr::group_by(scenario, region, landlea, year) %>%
+    dplyr::summarise(value = sum(value, na.rm = T)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(
+      value = value * get(paste('convert',GCAM_version,sep='_'), envir = asNamespace("gcamreport"))[['conv_C_CO2']],
+    ) %>%
+    if value > 0, var = "Emissions|CO2|AFOLU" # TODO continue from here
+
+        dplyr::select(dplyr::all_of(gcamreport::long_columns))
+
 
   LUC_emiss <<- LUC_emiss
 }
