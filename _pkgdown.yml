@@ -25,6 +25,10 @@ navbar:
          href: articles/Interactive_UI_Tutorial.html
       -  text: Modify Mappings and Template Tutorial
          href: articles/Modify_Mapping_Template_Tutorial.html
+      -  text: Scenario Compass Evaluation
+         href: articles/Scenario_Compass_Evaluation.html
+      -  text: GCAM-Europe Particularities
+         href: articles/GCAMEurope.html
       -  text: -----
       -  text: Depracted documentation and tutorials for gcamreport v7.0*
          href: articles/gcamreport_v7-0.html

@@ -2702,6 +2702,9 @@ get_co2_emiss <- function(GCAM_version = 'v8.2') {
     }
   }
 
+  # Make CO2 resource emissions global, to be used in Kyoto Gases calculation
+  co2_emiss_resource <<- co2_emiss_resource
+
   co2_emiss <<- co2_emiss
 }
 
@@ -3060,6 +3063,10 @@ get_kyoto_gases <- function(GCAM_version = 'v8.2', GWP_version = 'AR5') {
         dplyr::mutate(var = "Emissions|Kyoto Gases|AFOLU") %>%
         filter_variables()
     ) %>%
+    dplyr::bind_rows(
+      co2_emiss_resource %>%
+        dplyr::mutate(var = gsub("CO2", "Kyoto Gases", var))
+      ) %>%
     dplyr::group_by(scenario, region, var, year) %>%
     dplyr::summarise(value = sum(value, na.rm = T)) %>%
     dplyr::ungroup()

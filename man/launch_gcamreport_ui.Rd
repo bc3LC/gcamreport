@@ -4,7 +4,12 @@
 \alias{launch_gcamreport_ui}
 \title{launch_gcamreport_ui}
 \usage{
-launch_gcamreport_ui(data_path = NULL, data = NULL, GCAM_version = "v8.2")
+launch_gcamreport_ui(
+  data_path = NULL,
+  data = NULL,
+  GCAM_version = "v8.2",
+  .through_generate_report = F
+)
 }
 \arguments{
 \item{data_path}{Optional. Path to an RData file containing the standardized data. If provided, this file will be used to load the data into the Shiny application. You can obtain this dataset using `gcamreport::generate_report`.}
