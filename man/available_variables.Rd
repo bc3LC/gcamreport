@@ -4,7 +4,7 @@
 \alias{available_variables}
 \title{available_variables}
 \usage{
-available_variables(print = TRUE, GCAM_version = "v8.2")
+available_variables(print = TRUE, GCAM_version)
 }
 \arguments{
 \item{print}{Logical. If TRUE (default), prints the list of available variables to the console. If FALSE, suppresses the printing and only returns the list.}

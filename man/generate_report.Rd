@@ -14,7 +14,7 @@ generate_report(
   inverse_desired_variables = FALSE,
   ignore = NULL,
   desired_regions = "All",
-  desired_continents = "All",
+  desired_agg_regions = "All",
   save_output = TRUE,
   output_file = NULL,
   launch_ui = TRUE,
@@ -71,8 +71,8 @@ mapping files as `NoReported`.}
 Defaults to `'All'`. Run `available_regions()` to view all possibilities.
 Note: The generated dataset will restrict `"World"` totals to only include these specified regions.}
 
-\item{desired_continents}{A character vector of continent/region groups to include in the report.
-Defaults to `'All'`. Run `available_continents()` to view all possibilities.
+\item{desired_agg_regions}{A character vector of continent/region groups to include in the report.
+Defaults to `'All'`. Run `available_agg_regions()` to view all possibilities.
 Note: The generated dataset will restrict `"World"` totals to only include these specified regional groups.}
 
 \item{save_output}{Logical (`TRUE`/`FALSE`) or a character string (`'csv'`, `'xlsx'`).

@@ -4,8 +4,7 @@ library(magrittr)
 
 test_that("Test_historical_values", {
 
-  # for (GCAMv in gcamreport::available_GCAM_versions) {
-  for (GCAMv in c('v7.1')) {
+  for (GCAMv in gcamreport::available_GCAM_versions) {
     print(GCAMv)
 
     prjtest_name <- switch(GCAMv,

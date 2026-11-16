@@ -4,7 +4,7 @@
 \alias{filter_data_regions}
 \title{Filter data by desired regions.}
 \usage{
-filter_data_regions(data, GCAM_version = "v8.2")
+filter_data_regions(data, GCAM_version)
 }
 \arguments{
 \item{data}{The dataset to be filtered.}

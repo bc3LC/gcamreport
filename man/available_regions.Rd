@@ -4,7 +4,7 @@
 \alias{available_regions}
 \title{available_regions}
 \usage{
-available_regions(print = TRUE, GCAM_version = "v8.2")
+available_regions(print = TRUE, GCAM_version)
 }
 \arguments{
 \item{print}{Logical. If TRUE (default), prints the list of available regions to the console. If FALSE, suppresses the printing and only returns the list.}
